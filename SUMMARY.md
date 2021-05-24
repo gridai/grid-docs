@@ -1,5 +1,5 @@
 # Table of contents
 
-* [grid-docs](README.md)
+* [Grid in 3 minutes](README.md)
 * [Test123](test123.md)
 
