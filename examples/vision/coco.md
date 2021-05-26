@@ -18,7 +18,7 @@ This example covers an object detection deep learning task
 
 **5 minutes**
 
-## Task: Object Detection? 
+## Task: Object Detection 
 
 _Object detection_ is the task of _detecting_ instances of _objects_ of a certain class within an image. 
 
