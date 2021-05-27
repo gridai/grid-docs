@@ -18,7 +18,7 @@ During the early access period, it does not. Once Grid is public, there will lik
 
 ## Is there a way to see what files are in a datastore?
 
-Create an interactive session with the datastore mounted, then you will be able to browse the data using Jupyter lab or SSH
+Create an interactive session with the datastore mounted, then you will be able to browse the data including folders and files using Jupyter lab or SSH
 
 ## How does Grid store/access my data?
 
