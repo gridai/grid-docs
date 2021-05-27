@@ -30,7 +30,7 @@ Session features:
 
 ![](../../.gitbook/assets/session.jpg)
 
-![](../../.gitbook/assets/sess_abc.gif)
+![](../../.gitbook/assets/sess.gif)
 
 The equivalent via the CLI command
 

@@ -74,6 +74,7 @@
 * [NLP](examples/nlp/README.md)
   * [GPT 10B+ params \(8 GPUs\)](examples/nlp/gpt-10b+-params-8-gpus.md)
   * [Text classification](examples/nlp/text-classification.md)
+* [Time Series](examples/time-series.md)
 * [Self-supervised learning](examples/self-supervised-learning-1/README.md)
   * [SIMCLR](examples/self-supervised-learning-1/self-supervised-learning.md)
 

@@ -12,7 +12,7 @@ description: Executes a python script on a cloud machine and handles hyperparame
 
 Basically... think about it like replacing `python` with `grid run` 
 
-![](../../../.gitbook/assets/image%20%28119%29.png)
+![](../../../.gitbook/assets/image%20%28119%29%20%281%29.png)
 
 {% hint style="info" %}
 Projects must be hosted on **Github** for now. [Reach out](mailto:luis@grid.ai) for other cases.
@@ -344,7 +344,7 @@ grid run --g_name my-fancy-name my_script.py
 
 Hyperparameter sweep strategy to use, either `grid_search` or `random_search`.  If `random_search`, use the `--trials` parameter. 
 
-![Grid search tries all combinations. Random search picks a few](../../../.gitbook/assets/search.jpg)
+![Grid search tries all combinations. Random search picks a few](../../../.gitbook/assets/search%20%281%29.jpg)
 
 Example: Grid search \(runs all 4 variations\)
 

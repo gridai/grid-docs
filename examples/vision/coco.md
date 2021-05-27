@@ -18,19 +18,19 @@ This example covers an object detection deep learning task
 
 **5 minutes**
 
-## Task: Object Detection 
+## Task: Object Detection
 
-_Object detection_ is the task of _detecting_ instances of _objects_ of a certain class within an image. 
+_Object detection_ is the task of _detecting_ instances of _objects_ of a certain class within an image.
 
 ## Dataset: COCO
 
-The COCO \(Common Objects in Context\) _dataset_  \([reference](https://cocodataset.org/)\) is a large-scale object detection dataset with 91 instance classes. 
+The COCO \(Common Objects in Context\) _dataset_ \([reference](https://cocodataset.org/)\) is a large-scale object detection dataset with 91 instance classes.
 
 ![Example CoCo Images](../../.gitbook/assets/image%20%28124%29.png)
 
 ## Step 1: Model
 
-[PyTorch Lightning Flash](https://lightning-flash.readthedocs.io/en/latest/reference/object_detection.html) enables the quick training, fine tuning,  and inferencing of SOTA object detection algorithms such as RetinaNet. 
+[PyTorch Lightning Flash](https://lightning-flash.readthedocs.io/en/latest/reference/object_detection.html) enables the quick training, fine tuning, and inferencing of SOTA object detection algorithms such as RetinaNet.
 
 For this demo, we're going to be using. [code here](https://github.com/aribornstein/CocoDemo/blob/main/train.py)
 
@@ -78,7 +78,7 @@ https://github.com/aribornstein/CocoDemo/blob/main/train.py
 * Select  1xT4 \(16 GB\) $0.68/h \(g4dn.xlarge\) as the Accelerator
 * Provide the  run arguments `--max_epochs 5` `--gpus 1` 
 
-{% embed url="https://www.loom.com/share/18765b8b4d794c88b93ccbcce6493884" %}
+{% embed url="https://www.loom.com/share/18765b8b4d794c88b93ccbcce6493884" caption="" %}
 
 You can add optional flags to this script:
 
@@ -96,7 +96,7 @@ In this step, we load the Grid weights in Flash and run the model to detect obje
 
 ![](../../.gitbook/assets/image%20%2883%29.png)
 
-2. Load model to our script and inference in 4 lines of code. 
+1. Load model to our script and inference in 4 lines of code. 
 
 ```python
 from flash.vision import ObjectDetector
@@ -109,7 +109,7 @@ predictions = detector.predict("path/to/image.png")
 print(predictions)
 ```
 
-Congratulations you have successfully trained and run inference for your first Object Detection Model with Grid. 
+Congratulations you have successfully trained and run inference for your first Object Detection Model with Grid.
 
 ## Bonus: CLI equivalent
 

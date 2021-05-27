@@ -263,7 +263,7 @@ First, launch VSCode.
 
 Install the Remote Development extension
 
-![](../.gitbook/assets/image%20%28150%29.png)
+![](../.gitbook/assets/image%20%2893%29%20%281%29.png)
 
 ssh into the interactive
 
