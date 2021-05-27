@@ -14,7 +14,7 @@ When you create a datastore, you certify that you have the rights to that data. 
 
 ## Does Grid charge for Data Storage?
 
-During the early access period, it does not. Once Grid is public, there will likely be a small charge for data beyond a certain \(generous\) limit. Currently, there is a limit of 25 datastores.
+Grid does not charge for storing data. However, there is a limit of 25 datastores.
 
 ## Is there a way to see what files are in a datastore?
 
