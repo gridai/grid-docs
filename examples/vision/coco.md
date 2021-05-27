@@ -14,6 +14,12 @@ This example covers an object detection deep learning task
 2. Training the model using `train.py` script
 3. Loading Grid Weights in Flash and Running Object Detector
 
+
+
+{% hint style="info" %}
+This tutorial uses **PyTorch Lightning**
+{% endhint %}
+
 ## Tutorial time
 
 **5 minutes**
