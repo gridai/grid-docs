@@ -158,14 +158,14 @@ Here's a summary of all the available grid flags \(all are optional\)
 
 
 
-### `--g_cpus`
+### `--cpus`
 
 Allocate a number of CPUs to each script call. This is perfect for distributed CPU workloads.
 
 Example:
 
 ```text
-grid run --g_instance_type t2.xlarge --g_cpus 2 my_script.py
+grid run --instance_type 2_cpu_8gb --cpus 2 my_script.py
 ```
 
 {% hint style="danger" %}
@@ -174,12 +174,12 @@ Leave 1 unused CPU for the Grid processes.
 
 
 
-### **`--g_config`** 
+### **`--config`** 
 
 Path to a YML configuration for your run.
 
 ```text
-grid run --g_config experiment.yml my_script.py 
+grid run --config experiment.yml my_script.py 
 ```
 
 {% hint style="info" %}
@@ -188,12 +188,12 @@ Refer to the [Grid YML Specification]() for YML details.
 
 
 
-### `--g_credential`
+### `--credential`
 
 Select the cloud credentials to use.
 
 ```text
-grid run --g_credential cc-4dcd my_script.py
+grid run --credential cc-4dcd my_script.py
 ```
 
 {% hint style="info" %}
@@ -202,65 +202,65 @@ grid run --g_credential cc-4dcd my_script.py
 
 
 
-### --g\_datastore\_name
+### --datastore\_name
 
 The name of the datastore
 
 ```text
-grid run --g_datastore_name imagenet my_script.py
+grid run --datastore_name imagenet my_script.py
 ```
 
 
 
-### --g\_datastore\_version
+### --datastore\_version
 
 The datastore version
 
 ```bash
-grid run --g_datastore_name imagenet --g_datastore_version 2 my_script.py
+grid run --datastore_name imagenet --datastore_version 2 my_script.py
 ```
 
 
 
-### --g\_datastore\_mount\_dir
+### --datastore\_mount\_dir
 
 The directory to mount a datastore
 
 ```bash
-grid run --g_datastore_name imagenet --g_datastore_mount_dir /my_data/
+grid run --datastore_name imagenet --datastore_mount_dir /my_data/
 my_script.py
 ```
 
 Make sure wherever your script loads data points to that path
 
 ```bash
-grid run --g_datastore_name imagenet --g_datastore_mount_dir /my_data/
+grid run --datastore_name imagenet --datastore_mount_dir /my_data/
 my_script.py --script_data_path /my_data/
 ```
 
 
 
-### `--g_description`
+### `--description`
 
 Optional description for a run
 
 ```text
-grid run --g_description "Trying Adam optimizer" my_script.py
+grid run --description "Trying Adam optimizer" my_script.py
 ```
 
 
 
-### `--g_disk_size`
+### `--disk_size`
 
 Disk size to be attached to every experiment node. Number indicates Gb.
 
 ```text
-grid run --grid_disk_size 300 --my_script.py
+grid run --disk_size 300 --my_script.py
 ```
 
 
 
-### **`--g_gpus`**
+### **`--gpus`**
 
 Allocate a subset of the GPUs on a machine to each script call. 
 
@@ -268,7 +268,7 @@ Example: Use 4 GPUs of a machine with 8 V100s.
 
 ```text
 # COMMAND
-grid run --g_instance_type p3dn.24xlarge --g_gpus 4 \
+grid run --instance_type 4_v100_16gb --gpus 4 \
 my_script.py --flag "[1, 2]"
 
 # Scripts share the same machine
@@ -288,12 +288,12 @@ PyTorch Lightning **automagically** detects available GPUs \(no --gpus flag need
 
 
 
-### **`--g_instance_type`**
+### **`--instance_type`**
 
 AWS instance type to use when creating Run. 
 
 ```text
-grid run --g_instance_type 8_v100_32gb my_script.py
+grid run --instance_type 8_v100_32gb my_script.py
 ```
 
 Here's a list of all the available machines 
@@ -302,18 +302,18 @@ Here's a list of all the available machines
 
 
 
-### `--g_max_nodes`
+### `--max_nodes`
 
 Max nodes your run will scale to. 
 
 
 
-### `--g_memory`
+### `--memory`
 
 Specify the CPU RAM for an experiment.
 
 ```text
-grid run --g_memory 10G my_script.py
+grid run --memory 10G my_script.py
 ```
 
 {% hint style="info" %}
@@ -322,7 +322,7 @@ The G is required in \(1G, 10G, 1000G\)
 
 
 
-### --g\_name
+### --name
 
 Optional name for a run.
 
@@ -335,12 +335,12 @@ A name must:
 **Example**:
 
 ```text
-grid run --g_name my-fancy-name my_script.py
+grid run --name my-fancy-name my_script.py
 ```
 
 
 
-### **`--g_strategy`**
+### **`--strategy`**
 
 Hyperparameter sweep strategy to use, either `grid_search` or `random_search`.  If `random_search`, use the `--trials` parameter. 
 
@@ -364,7 +364,7 @@ Random search only runs the number of trials specified
 
 ```text
 # COMMAND (random search)
-grid run --g_strategy random_search --g_trials 2 \ 
+grid run --strategy random_search --trials 2 \ 
 model.py --animal "['cat', 'dog']" --food '['pear', 'apple']' 
 
 
@@ -379,7 +379,7 @@ Grid is working on adding bayesian strategies. Random search performs just as we
 
 
 
-### `--g_trials`
+### `--trials`
 
 The number of trials to sample when. Only available when running `--strategy random_search`
 
