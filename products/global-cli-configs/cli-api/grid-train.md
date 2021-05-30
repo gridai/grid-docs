@@ -138,22 +138,22 @@ Here's a summary of all the available grid flags \(all are optional\)
 
 | Flag | Description | Default |
 | :--- | :--- | :--- |
-| --g\_cpus | number of CPUs per experiment | ? |
-| --g\_config | path to a yaml config file | - |
-| --g\_credential | specify the cloud credential to use | Grid Cloud |
-| --g\_datastore\_name | name of datastore to mount | - |
-| --g\_datastore\_version | version of datastore to mount | - |
-| --g\_datastore\_mount\_dir | directory where to mount datastore | /opt/datastore |
-| --g\_disk\_size | size of disk attached to machine | 200 GB |
-| --g\_description | additional context for this run | - |
-| --g\_framework | machine learning framework | - |
-| --g\_gpus | the number of GPUs per experiment | 0 |
-| --g\_instance\_type | defines number of GPUs and memory | ? |
-| --g\_max\_nodes | a fail-safe limit to avoid large workloads | 100 |
-| --g\_memory | machine RAM \(not GPU RAM\) | ? |
-| --g\_name | name of run | - |
-| --g\_strategy | grid search or random search | grid search |
-| --g\_trials | number of trials for random search | - |
+| --cpus | number of CPUs per experiment | ? |
+| --config | path to a yaml config file | - |
+| --credential | specify the cloud credential to use | Grid Cloud |
+| --datastore\_name | name of datastore to mount | - |
+| --datastore\_version | version of datastore to mount | - |
+| --datastore\_mount\_dir | directory where to mount datastore | /opt/datastore |
+| --disk\_size | size of disk attached to machine | 200 GB |
+| --description | additional context for this run | - |
+| --framework | machine learning framework | - |
+| --gpus | the number of GPUs per experiment | 0 |
+| --instance\_type | defines number of GPUs and memory | ? |
+| --max\_nodes | a fail-safe limit to avoid large workloads | 100 |
+| --memory | machine RAM \(not GPU RAM\) | ? |
+| --name | name of run | - |
+| --strategy | grid search or random search | grid search |
+| --trials | number of trials for random search | - |
 | --ignore\_warnings | skips all warning and prompts | false |
 
 
@@ -368,7 +368,7 @@ grid run --strategy random_search --trials 2 \
 model.py --animal "['cat', 'dog']" --food '['pear', 'apple']' 
 
 
-# Only 2 combinations chosen randomly (--g_trials 2)
+# Only 2 combinations chosen randomly (--trials 2)
 python model.py --animal 'cat' --food 'pear'
 python model.py --animal 'dog' --food 'apple'
 ```
