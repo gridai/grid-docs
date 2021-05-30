@@ -83,7 +83,7 @@ For prototyping/debugging/analyzing, sometimes you need a LIVE machine. We call 
 
 ```bash
 # session with 2 M60 GPUs
-grid interactive create --g_instance_type g3.8xlarge
+grid interactive create --instance_type 2_m60_8gb
 ```
 
 ## **RUN \(Sweep and train anything\)**
