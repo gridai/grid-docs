@@ -2,19 +2,19 @@
 description: 'Create a low-latency, highly-scalable auto-versioned dataset.'
 ---
 
-# grid datastores
+# grid datastore
 
 To create a low-latency, auto-versioned dataset, create a datastore
 
 ```bash
-grid datastores create --source ./my_dataset --name my_datastore_name
+grid datastore create --source ./my_dataset --name my_datastore_name
 ```
 
 Attach a datastore into a Run or Session with:
 
 ```bash
-grid train --grid_datastore_name my_datastore_name \
-           --grid_datastore_version 1 \
+grid run --datastore_name my_datastore_name \
+           --datastore_version 1 \
            my_script.py
            --my_data /opt/datastore
 ```
@@ -24,7 +24,7 @@ grid train --grid_datastore_name my_datastore_name \
 Creates a datastore. Datastores are directories that are compressed into and mounted into your experiment environment.
 
 ```bash
-grid datastores create --source path/to/data --name datastore_name
+grid datastore create --source path/to/data --name datastore_name
 ```
 
 ### --source
@@ -44,7 +44,7 @@ Cloud credential ID to use.
 Compresses datastores with GZIP when flag is passed.
 
 ```bash
-grid datastores create \ 
+grid datastore create \ 
     --source path/to/data \
     --name datastore_name \
     --compression
