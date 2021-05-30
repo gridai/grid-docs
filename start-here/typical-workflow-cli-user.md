@@ -193,10 +193,10 @@ Start a Session named _**resnet-debugging**_ ****with 2 M60 GPUs on it and attac
 
 ```yaml
 grid session create \
-  --g_instance_type g3.8xlarge \
-  --g_name resnet-debugging \
-  --g_datastore_name cifar5 \
-  --g_datastore_version 1
+  --instance_type g3.8xlarge \
+  --name resnet-debugging \
+  --datastore_name cifar5 \
+  --datastore_version 1
 ```
 
 See if it's ready
@@ -388,12 +388,12 @@ Now kick off the run with grid run
 
 ```bash
 grid run \
-  --g_datastore_name cifar5 \
-  --g_datastore_version 1 \
-  --g_datastore_mount_dir /cifar5 \
-  --g_instance_type 2_m60_8gb \
-  --g_framework lightning \
-  --g_gpus 2 \
+  --datastore_name cifar5 \
+  --datastore_version 1 \
+  --datastore_mount_dir /cifar5 \
+  --instance_type 2_m60_8gb \
+  --framework lightning \
+  --gpus 2 \
   lit_image_classifier.py \
   --backbone "['resnet50', 'resnet34', 'resnet18']" \
   --learning_rate "uniform(1e-5, 1e-1, 5)" \
