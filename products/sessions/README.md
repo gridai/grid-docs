@@ -32,7 +32,7 @@ Session features:
 
 ![](../../.gitbook/assets/sess.gif)
 
-The equivalent via the CLI command
+The equivalent via the CLI command:
 
 ```bash
 # session with 2 M60 GPUs
