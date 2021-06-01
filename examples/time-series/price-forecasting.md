@@ -101,7 +101,7 @@ That will generate 15 experiments with different learning rate combinations.
 
 ### Attribution
 
-This project relies heavily on the [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/latest/) package. The implementation herein adapts from their documentation and tutorials.
+This project relies heavily on the [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/latest/) package. The implementation adapts from their documentation and tutorials.
 
 The dataset used in this demo comes from [CoinMarketCap](https://coinmarketcap.com/), a cryptocurrency price-tracking service. We have downloaded a processed version of the data available on this [Kaggle page](https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory).
 
