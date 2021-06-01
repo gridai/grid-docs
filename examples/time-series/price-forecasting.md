@@ -1,5 +1,5 @@
 ---
-description: This is a test change
+description: This tutorial shows how to train a forecasting model with Grid
 ---
 
 # Coin Market Cap Price Forecasting
