@@ -1,4 +1,4 @@
-# Text classification
+# Text Classification
 
 ## Goal
 
