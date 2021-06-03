@@ -16,13 +16,21 @@
 
 {% page-ref page="grid-logs.md" %}
 
-{% page-ref page="grid-status.md" %}
+{% page-ref page="grid-login.md" %}
 
 {% page-ref page="grid-train.md" %}
+
+{% page-ref page="grid-status.md" %}
+
+{% page-ref page="grid-cancel.md" %}
 
 {% page-ref page="grid-version.md" %}
 
 {% page-ref page="grid-view.md" %}
+
+{% page-ref page="grid-ssh-keys.md" %}
+
+{% page-ref page="grid-sync-env.md" %}
 
 
 
