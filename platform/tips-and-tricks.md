@@ -22,9 +22,9 @@ grid run --g_use_spot train.py --checkpoint_path "Artifact URL "
 
 For more information check out 
 
-* [**Interruptible Pricing**](https://docs.grid.ai/platform/billing-rates)
-* [**Grid Artifacts**](https://docs.grid.ai/products/run-run-and-sweep-github-files/artifacts)
-* [**Lightning Loading Checkpoints**](https://pytorch-lightning.readthedocs.io/en/latest/common/weights_loading.html)
+* [Interruptible Pricing](https://docs.grid.ai/platform/billing-rates)
+* [Grid Artifacts](https://docs.grid.ai/products/run-run-and-sweep-github-files/artifacts)
+* [Lightning Loading Checkpoints](https://pytorch-lightning.readthedocs.io/en/latest/common/weights_loading.html)
 
 ### AutoStructuring Deep Learning Training
 
