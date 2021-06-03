@@ -19,10 +19,8 @@ This tutorial uses **PyTorch Lightning**
 There's a lot of waiting around for data downloads and uploads, but everything else takes just a few minutes.
 
 * **2 minutes**   if you have an ImageNet Datastore
-* + 2 hours    if you need to create an ImageNet datastore \(depends on the speed of your internet connection\)
+* * 2 hours    if you need to create an ImageNet datastore \(depends on the speed of your internet connection\)
 * +6 hours     if you need to download and process ImageNet
-
-
 
 ## ImageNet
 
@@ -46,7 +44,7 @@ Make sure you have permission to use ImageNet
 
 ### A: Start an Interactive Session
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/screen\_3.mp4" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/screen\_3.mp4" caption="" %}
 
 We'll use Jupyter Lab for simplicity but you can also directly link VSCode or ssh into the session from your laptop.
 
@@ -181,6 +179,5 @@ You can do hyperparameter sweep over different model backbones to find the best 
 
 The hardest part here is getting the data into the system. Using Lightning with Grid makes it trivial to scale up on ImageNet.
 
-Grid supports other machine learning frameworks as long as your code supports multi-GPU and multi-node training.
-Let us know if you would like to contribute sample code for Imagenet training
+Grid supports other machine learning frameworks as long as your code supports multi-GPU and multi-node training. Let us know if you would like to contribute sample code for Imagenet training
 

@@ -93,5 +93,6 @@
   * [Keeping track of costs](platform/supporting-workflows-1/monitoring-costs.md)
   * [Payments and credits](platform/supporting-workflows-1/billing-and-credits.md)
   * [Viewing login credentials](platform/supporting-workflows-1/your-login-credentials.md)
+* [Tips & Tricks](platform/tips-and-tricks.md)
 * [Changelog](platform/changelog.md)
 
