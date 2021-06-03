@@ -6,8 +6,6 @@ description: >-
 
 # XSum Text Summarization
 
-
-
 ## Goal
 
 This example covers an abstractive Text Summarization  deep learning task
