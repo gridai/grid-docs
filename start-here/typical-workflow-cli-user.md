@@ -123,16 +123,18 @@ In a realistic workflow, we would start here. The first thing you want to do is 
 Now create the datastore which will upload your dataset and optimize it
 
 ```bash
-grid datastores create --source cifar5/ --name cifar5
+grid datastore create --source cifar5/ --name cifar5
 ```
 
 make sure it was created
 
 ```bash
-grid datastores list
+grid datastore list
 ```
 
 ![Once it&apos;s succeeded, it&apos;s ready to be used](../.gitbook/assets/image%20%2836%29.png)
+
+Note: The datastore status moves through as series of statuses while it is being optimized. When it moves to "Succeeded" it's ready to be used. 
 
 **Periodic uploads**
 
