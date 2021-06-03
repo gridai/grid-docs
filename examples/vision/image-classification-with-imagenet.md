@@ -177,31 +177,10 @@ You can safely disconnect from the cluster \(make sure you are using screen\) wh
 
 ## The Model
 
-Now, we're going to do a hyperparameter sweep over different model backbones to find the best one for ImageNet.
+You can do hyperparameter sweep over different model backbones to find the best one for ImageNet.
 
-[Take a look at the script here](https://github.com/gridai/image_classification/blob/main/model.py)
-
-We'll try these 3 models:
-
-* resnet200d \([timm](https://github.com/rwightman/pytorch-image-models)\)
-* ViT \([timm](https://github.com/rwightman/pytorch-image-models)\)
-* ResNet-50 \([torchvision](https://pytorch.org/vision/stable/index.html)\)
-
-### Web run
-
-Start the run via web UI. This run will train models, each with a different learning rate and each on 8 GPUs. This run will use 32 total GPUs.
-
-{% hint style="info" %}
-In Grid: Each script call is called an experiment. A collection of experiments is called a RUN.
-{% endhint %}
-
-
-
-\[VIDEO of how to do this coming soon\]
-
-## That's it!
-
-Now sit back and let Grid do its magic. Notice that the hardest part here was getting the data into the system. Using Lightning with Grid made it trivial to scale up on ImageNet.
+The hardest part here is getting the data into the system. Using Lightning with Grid makes it trivial to scale up on ImageNet.
 
 Grid supports other machine learning frameworks as long as your code supports multi-GPU and multi-node training.
+Let us know if you would like to contribute sample code for Imagenet training
 
