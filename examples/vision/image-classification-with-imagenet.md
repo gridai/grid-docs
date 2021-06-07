@@ -19,10 +19,8 @@ This tutorial uses **PyTorch Lightning**
 There's a lot of waiting around for data downloads and uploads, but everything else takes just a few minutes.
 
 * **2 minutes**   if you have an ImageNet Datastore
-* + 2 hours    if you need to create an ImageNet datastore \(depends on the speed of your internet connection\)
+* * 2 hours    if you need to create an ImageNet datastore \(depends on the speed of your internet connection\)
 * +6 hours     if you need to download and process ImageNet
-
-
 
 ## ImageNet
 
@@ -46,7 +44,7 @@ Make sure you have permission to use ImageNet
 
 ### A: Start an Interactive Session
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/screen\_3.mp4" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/screen\_3.mp4" caption="" %}
 
 We'll use Jupyter Lab for simplicity but you can also directly link VSCode or ssh into the session from your laptop.
 
@@ -177,31 +175,9 @@ You can safely disconnect from the cluster \(make sure you are using screen\) wh
 
 ## The Model
 
-Now, we're going to do a hyperparameter sweep over different model backbones to find the best one for ImageNet.
+You can do hyperparameter sweep over different model backbones to find the best one for ImageNet.
 
-[Take a look at the script here](https://github.com/gridai/image_classification/blob/main/model.py)
+The hardest part here is getting the data into the system. Using Lightning with Grid makes it trivial to scale up on ImageNet.
 
-We'll try these 3 models:
-
-* resnet200d \([timm](https://github.com/rwightman/pytorch-image-models)\)
-* ViT \([timm](https://github.com/rwightman/pytorch-image-models)\)
-* ResNet-50 \([torchvision](https://pytorch.org/vision/stable/index.html)\)
-
-### Web run
-
-Start the run via web UI. This run will train models, each with a different learning rate and each on 8 GPUs. This run will use 32 total GPUs.
-
-{% hint style="info" %}
-In Grid: Each script call is called an experiment. A collection of experiments is called a RUN.
-{% endhint %}
-
-
-
-\[VIDEO of how to do this coming soon\]
-
-## That's it!
-
-Now sit back and let Grid do its magic. Notice that the hardest part here was getting the data into the system. Using Lightning with Grid made it trivial to scale up on ImageNet.
-
-Grid supports other machine learning frameworks as long as your code supports multi-GPU and multi-node training.
+Grid supports other machine learning frameworks as long as your code supports multi-GPU and multi-node training. Let us know if you would like to contribute sample code for Imagenet training
 

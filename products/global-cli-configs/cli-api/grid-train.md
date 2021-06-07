@@ -10,9 +10,9 @@ description: Executes a python script on a cloud machine and handles hyperparame
 
 `grid run` executes a script on one or more **cloud** machines from your laptop.
 
-Basically... think about it like replacing `python` with `grid run` 
+Basically... think about it like replacing `python` with `grid run`
 
-![](../../../.gitbook/assets/image%20%28119%29%20%281%29.png)
+![](../../../.gitbook/assets/image%20%28119%29%20%282%29.png)
 
 {% hint style="info" %}
 Projects must be hosted on **Github** for now. [Reach out](mailto:luis@grid.ai) for other cases.
@@ -20,7 +20,7 @@ Projects must be hosted on **Github** for now. [Reach out](mailto:luis@grid.ai) 
 
 ## Hyperparameter sweeps
 
-Grid run automates hyperparameter sweeps using our python-like syntax.  
+Grid run automates hyperparameter sweeps using our python-like syntax.
 
 grid train and grid run are the same, you can use either one.
 
@@ -41,8 +41,6 @@ Our syntax adds support for any numpy distribution, lists, and the range operato
 A grid run command has the following structure:
 
 ![](../../../.gitbook/assets/image%20%2838%29.png)
-
-
 
 Annotated Example 1: Run a script on 8 V100 GPUs
 
@@ -156,8 +154,6 @@ Here's a summary of all the available grid flags \(all are optional\)
 | --trials | number of trials for random search | - |
 | --ignore\_warnings | skips all warning and prompts | false |
 
-
-
 ### `--cpus`
 
 Allocate a number of CPUs to each script call. This is perfect for distributed CPU workloads.
@@ -172,21 +168,17 @@ grid run --instance_type 2_cpu_8gb --cpus 2 my_script.py
 Leave 1 unused CPU for the Grid processes.
 {% endhint %}
 
-
-
-### **`--config`** 
+### **`--config`**
 
 Path to a YML configuration for your run.
 
 ```text
-grid run --config experiment.yml my_script.py 
+grid run --config experiment.yml my_script.py
 ```
 
 {% hint style="info" %}
-Refer to the [Grid YML Specification]() for YML details.
+Refer to the [Grid YML Specification](grid-train.md) for YML details.
 {% endhint %}
-
-
 
 ### `--credential`
 
@@ -200,8 +192,6 @@ grid run --credential cc-4dcd my_script.py
 `View available credentials in`[Settings](https://987bcab01b929eb2c07877b224215c92.grid.ai/#/settings) or call `grid credential` in the CLI
 {% endhint %}
 
-
-
 ### --datastore\_name
 
 The name of the datastore
@@ -210,8 +200,6 @@ The name of the datastore
 grid run --datastore_name imagenet my_script.py
 ```
 
-
-
 ### --datastore\_version
 
 The datastore version
@@ -219,8 +207,6 @@ The datastore version
 ```bash
 grid run --datastore_name imagenet --datastore_version 2 my_script.py
 ```
-
-
 
 ### --datastore\_mount\_dir
 
@@ -238,8 +224,6 @@ grid run --datastore_name imagenet --datastore_mount_dir /my_data/
 my_script.py --script_data_path /my_data/
 ```
 
-
-
 ### `--description`
 
 Optional description for a run
@@ -247,8 +231,6 @@ Optional description for a run
 ```text
 grid run --description "Trying Adam optimizer" my_script.py
 ```
-
-
 
 ### `--disk_size`
 
@@ -258,11 +240,9 @@ Disk size to be attached to every experiment node. Number indicates Gb.
 grid run --disk_size 300 --my_script.py
 ```
 
-
-
 ### **`--gpus`**
 
-Allocate a subset of the GPUs on a machine to each script call. 
+Allocate a subset of the GPUs on a machine to each script call.
 
 Example: Use 4 GPUs of a machine with 8 V100s.
 
@@ -286,17 +266,15 @@ Note a few things:
 PyTorch Lightning **automagically** detects available GPUs \(no --gpus flag needed\)
 {% endhint %}
 
-
-
 ### **`--instance_type`**
 
-AWS instance type to use when creating Run. 
+AWS instance type to use when creating Run.
 
 ```text
 grid run --instance_type 8_v100_32gb my_script.py
 ```
 
-Here's a list of all the available machines 
+Here's a list of all the available machines
 
 {% page-ref page="../../run-run-and-sweep-github-files/machines.md" %} 
 
@@ -314,8 +292,6 @@ grid run --memory 10G my_script.py
 The G is required in \(1G, 10G, 1000G\)
 {% endhint %}
 
-
-
 ### --name
 
 Optional name for a run.
@@ -332,11 +308,9 @@ A name must:
 grid run --name my-fancy-name my_script.py
 ```
 
-
-
 ### **`--strategy`**
 
-Hyperparameter sweep strategy to use, either `grid_search` or `random_search`.  If `random_search`, use the `--trials` parameter. 
+Hyperparameter sweep strategy to use, either `grid_search` or `random_search`. If `random_search`, use the `--trials` parameter.
 
 ![Grid search tries all combinations. Random search picks a few](../../../.gitbook/assets/search%20%281%29.jpg)
 
@@ -368,18 +342,12 @@ python model.py --animal 'dog' --food 'apple'
 ```
 
 {% hint style="info" %}
-Grid is working on adding bayesian strategies. Random search performs just as well most of the time. 
+Grid is working on adding bayesian strategies. Random search performs just as well most of the time.
 {% endhint %}
-
-
 
 ### `--trials`
 
 The number of trials to sample when. Only available when running `--strategy random_search`
-
-
-
-
 
 ### `--ignore_warnings`
 
@@ -388,8 +356,4 @@ Disables all warnings and prompts when starting runs.
 {% hint style="info" %}
 Only disable this if you know what you are doing
 {% endhint %}
-
-
-
-
 
