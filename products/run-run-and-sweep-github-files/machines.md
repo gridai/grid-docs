@@ -3,7 +3,7 @@
 These are the options of available machines
 
 ```bash
-grid train --g_instance_type 8_v100_32gb hello.py --gpus 8
+grid train --instance_type 8_v100_32gb hello.py --gpus 8
 ```
 
 | Name | Accelerator type |

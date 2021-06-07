@@ -3,7 +3,7 @@
 Here are the machines you can use to start up sessions
 
 ```text
-grid interactive create --g_instance_type 8_v100_32gb 
+grid interactive create --instance_type 8_v100_32gb 
 ```
 
 | Name | Accelerator type |

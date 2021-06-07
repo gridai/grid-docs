@@ -36,7 +36,7 @@ The equivalent via the CLI command:
 
 ```bash
 # session with 2 M60 GPUs
-grid interactive create --g_instance_type 2_m60_8gb
+grid interactive create --instance_type 2_m60_8gb
 ```
 
 ## Delete a Session

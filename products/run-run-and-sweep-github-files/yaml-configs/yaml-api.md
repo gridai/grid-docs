@@ -28,7 +28,6 @@ compute:
     disk_size: 200                # Disk size
     gpus: 0                       # Number of GPUs
     instance: t2.xlarge           # AWS instance type
-    max_nodes: 10                 # Max nodes to scale to
     memory: null                  # RAM memory
     nodes: 0                      # Nodes to start with
     scale_down_seconds: 1800      # Second in between every scaling down evaluation
@@ -78,7 +77,6 @@ compute:
     disk_size: 200
     gpus: 0
     instance: t2.xlarge
-    max_nodes: 10
     memory: null
     nodes: 0
     scale_down_seconds: 1800
@@ -107,6 +105,6 @@ As you can see, you can pass one command per line. You can pass as many commands
 You can create a Run with a config file instead of passing CLI arguments. For example:
 
 ```text
-grid train --g_config my_config.yml script.py
+grid train --config my_config.yml script.py
 ```
 

@@ -21,7 +21,7 @@ grid run main.py
 If your jobs can be interrupted and you want to save $$$$ then enable spot. Whenever the cloud provider needs that machine, the job will be killed automatically
 
 ```text
-grid run --g_use_spot main.py
+grid run --use_spot main.py
 ```
 
 {% hint style="info" %}

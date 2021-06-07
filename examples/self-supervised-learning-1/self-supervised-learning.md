@@ -62,8 +62,8 @@ Run same example with 8 V100, notice how fast model trains
 
 ```text
 grid run \
-    --g_instance_type 1_v100_16gb \
-    --g_gpus 8 \
+    --instance_type 1_v100_16gb \
+    --gpus 8 \
     src/train.py \
     --gpus 8 \
     --batch_size 256 \

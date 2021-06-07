@@ -51,14 +51,14 @@ locally (`.grid/config.yml`) that you can use as reference instead of passing al
 the CLI manually.
 
 ```shell
-$ grid run --grid_config .grid/config.yml \
+$ grid run --config .grid/config.yml \
            train.py \
            --max_epochs 100 \
            --data_path /dataset/cryptocurrency_prices.csv \
            --learning_rate "uniform(0,0.03,5)" \
            --hidden_size "[16,32,64]"
 
-No --grid_name passed, naming your run glossy-manatee-255
+No --name passed, naming your run glossy-manatee-255
 Using default cloud credentials cc-bwhth to run on AWS.
 
                 Run submitted!
@@ -86,7 +86,7 @@ Grid AI makes it trivial to run a [hyperparameter sweep](https://docs.grid.ai/pr
 without having to change anything in your scripts. Let's experiment with a number of different learning rates for our model:
 
 ```shell
-$ grid run --grid_config .grid/config.yml \
+$ grid run --config .grid/config.yml \
            train.py --max_epochs 100 \
            --data_path /dataset/cryptocurrency_prices.csv \
            --learning_rate "uniform(0,0.03,5)" \

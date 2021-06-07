@@ -76,9 +76,9 @@ cd grid-text-classification
 
 ```bash
 grid run \
-    --g_gpus 1 \
-    --g_instance_type 1_v100_16gb \
-    --g_datastore_name imdb-ds \
+    --gpus 1 \
+    --instance_type 1_v100_16gb \
+    --datastore_name imdb-ds \
       train.py \
     --gpus 1  \
     --train_file /opt/datastore/train.csv \
