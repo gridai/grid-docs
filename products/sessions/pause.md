@@ -13,7 +13,7 @@ You will NOT be charged for paused Sessions.
 The equivalent via the CLI
 
 ```bash
-grid interactive pause the-interactive-name
+grid session pause the-interactive-name
 ```
 
 ## Restart a Session
@@ -25,6 +25,6 @@ When you're ready to rebuild your session environment, press restart.
 The equivalent via the CLI
 
 ```bash
-grid interactive resume the-interactive-name
+grid session resume the-interactive-name
 ```
 

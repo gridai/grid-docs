@@ -53,6 +53,6 @@ Cons:
 Once you have created a datastore, simply pass in its name to your script and Grid will auto-resolve the path. Assume you have a datastore named _cats_ and you want to use version 1:
 
 ```bash
-grid train main.py --data_dir grid:cats:1
+grid run main.py --data_dir grid:cats:1
 ```
 

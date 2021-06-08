@@ -53,7 +53,7 @@ hyper_params:
 ```
 
 {% hint style="info" %}
-Flags in grid YML files have a 1-to-1 mapping with `grid train` flags
+Flags in grid YML files have a 1-to-1 mapping with `grid run` flags
 {% endhint %}
 
 In addition to the parameters above, you can also run arbitrary commands on different stages of you training operation. 
@@ -105,6 +105,6 @@ As you can see, you can pass one command per line. You can pass as many commands
 You can create a Run with a config file instead of passing CLI arguments. For example:
 
 ```text
-grid train --config my_config.yml script.py
+grid run --config my_config.yml script.py
 ```
 

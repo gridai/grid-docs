@@ -222,7 +222,7 @@ Once the session is ready, you have three options to interact with it:
 Let's login to the Session via SSH. 
 
 ```yaml
-grid interactive ssh resnet-debugging
+grid session ssh resnet-debugging
 ```
 
 Now you're on the cloud machine! See how many GPUs you have
@@ -270,13 +270,13 @@ Install the Remote Development extension
 ssh into the interactive
 
 ```yaml
-grid interactive ssh resnet-debugging
+grid session ssh resnet-debugging
 ```
 
 Now link up VSCode with the Session
 
 ```yaml
-grid interactive ssh vscode
+grid session ssh vscode
 ```
 
 **The model**
@@ -345,7 +345,7 @@ git push
 Great! now that our model is ready to run at scale, we can pause the session. 
 
 ```bash
-grid interactive pause resnet-debugging
+grid session pause resnet-debugging
 ```
 
 ![](../.gitbook/assets/image%20%2879%29.png)

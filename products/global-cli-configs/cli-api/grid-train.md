@@ -22,7 +22,7 @@ Projects must be hosted on **Github** for now. [Reach out](mailto:luis@grid.ai) 
 
 Grid run automates hyperparameter sweeps using our python-like syntax.
 
-grid train and grid run are the same, you can use either one.
+grid run and grid run are the same, you can use either one.
 
 This command:
 
