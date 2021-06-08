@@ -210,8 +210,8 @@ grid run main.py --alpha 0.05200016 --beta 4
 Using [Random Search](https://jmlr.csail.mit.edu/papers/volume13/bergstra12a/bergstra12a.pdf) you can get close to optimal performance without needing to run all possible combinations. To use random search with Grid, simply choose that option
 
 ```text
-grid run --g_strategy random_search \
-         --g_trials 3 \
+grid run --strategy random_search \
+         --trials 3 \
          main.py \
          --alpha "uniform(1e-5, 1e-1, 3)" \
          --beta "[1, 2, 3, 4]"

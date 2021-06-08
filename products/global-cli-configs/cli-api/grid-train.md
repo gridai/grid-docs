@@ -22,7 +22,7 @@ Projects must be hosted on **Github** for now. [Reach out](mailto:luis@grid.ai) 
 
 Grid run automates hyperparameter sweeps using our python-like syntax.
 
-grid train and grid run are the same, you can use either one.
+grid run and grid run are the same, you can use either one.
 
 This command:
 
@@ -276,11 +276,9 @@ grid run --instance_type 8_v100_32gb my_script.py
 
 Here's a list of all the available machines
 
-{% page-ref page="../../run-run-and-sweep-github-files/machines.md" %}
+{% page-ref page="../../run-run-and-sweep-github-files/machines.md" %} 
 
-### `--max_nodes`
 
-Max nodes your run will scale to.
 
 ### `--memory`
 

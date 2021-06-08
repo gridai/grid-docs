@@ -17,7 +17,7 @@ Cloud machines are normally expensive. However, if your job can support being in
 ### Enable via the CLI
 
 ```bash
-grid run --g_use_spot pl_mnist.py
+grid run --use_spot pl_mnist.py
 ```
 
 ## Prepare code for interruptible
@@ -38,6 +38,6 @@ Once the machine is interrupted, your job on Grid will stop. If you want to cont
 For example, assume your script has an argument called **--ck\_path**
 
 ```bash
-grid run --g_use_spot main.py --ck_path https://grid.ai/url/to/checkpoint.ckpt
+grid run --use_spot main.py --ck_path https://grid.ai/url/to/checkpoint.ckpt
 ```
 

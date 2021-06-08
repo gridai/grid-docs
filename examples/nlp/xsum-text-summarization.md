@@ -153,9 +153,9 @@ Start run
 
 ```python
 grid run \
---g_instance_type 1_v100_16gb \
---g_framework lightning \
---g_gpus 1 \
+--instance_type 1_v100_16gb \
+--framework lightning \
+--gpus 1 \
 train.py \
 --max_epochs 5 \
 --gpus 1

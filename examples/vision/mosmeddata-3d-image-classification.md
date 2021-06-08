@@ -73,17 +73,17 @@ cd Keras-3D-Image-Classification
 
 ```text
 grid run train.py 
---g_instance_type g4dn.xlarge 
---g_framework tensorflow 
---g_gpus 1 
+--instance_type g4dn.xlarge 
+--framework tensorflow 
+--gpus 1 
 --max_epochs 5‌
 ```
 
 This command tells grid to run our train script with the following configurations
 
-* A 1xT4 \(16 GB\) $0.68/h \(g4dn.xlarge\) Accelerator `--g_instance_type g4dn.xlarge`
-* Use the built-in GPU on the Accelerator`--g_gpus 1`
-* Tensorflow as the grid framework `--g_framework tensorflow`
+* A 1xT4 \(16 GB\) $0.68/h \(g4dn.xlarge\) Accelerator `--instance_type g4dn.xlarge`
+* Use the built-in GPU on the Accelerator`--gpus 1`
+* Tensorflow as the grid framework `--framework tensorflow`
 * Provide the run arguments `--max_epochs 5`
 
 After running the CLI command above you should see this message.‌
@@ -136,7 +136,6 @@ compute:
     disk_size: 200                 # Disk size
     gpus: 1                        # Number of GPUs
     instance: g4dn.xlarge          # AWS instance type
-    max_nodes: 10                  # Max nodes to scale to
     memory: null                   # RAM memory
     nodes: 0                       # Nodes to start with
     scale_down_seconds: 1800       # Second in between every scaling down evaluation
@@ -161,7 +160,7 @@ Be sure to specify the following parameters in the Yaml Config above
 ### 3. Pass the YAML Config to the Grid Run Command
 
 ```bash
-grid run train.py --g_config config.yml
+grid run train.py --config config.yml
 ```
 
 

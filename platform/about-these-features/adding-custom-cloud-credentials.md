@@ -272,14 +272,14 @@ You now need to create the following roles:
 5. Search for "**RKE-worker**" and select the corresponding policy, then click on "**Next: Tags**" &gt; "**Next: Review**"
 6. Name the role `RKE-worker-role` and click on "**Create role**"
 
-#### Grid Interactive Node \(**`GridInteractiveNode`**\)
+#### Grid Interactive Session \(**`GridInteractiveSession`**\)
 
 1. First, log in to AWS and navigate to IAM
 2. Click on "**Roles**" &gt; "**Create role**"
 3. Click on "**AWS service**"
 4. Under "**Choose a use case**", click on "**EC2**" then "**Next: Permissions**"
 5. Search for "**RKE-worker**" and select the corresponding policy and also search for "**AmazonS3FullAccess**" and select the policy, then click on "**Next: Tags**" &gt; "**Next: Review**"
-6. Name the role `GridInteractiveNode` and click on "**Create role**"
+6. Name the role `GridInteractiveSession` and click on "**Create role**"
 
 ### C: Add Policies to Your Account
 

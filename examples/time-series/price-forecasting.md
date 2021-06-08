@@ -56,14 +56,14 @@ You are now ready to train your model on Grid.
 We'll be using the CLI but you can do the same thing by using the web UI. We have placed a configuration file locally \(`.grid/config.yml`\) that you can use as reference instead of passing all the parameters to the CLI manually.
 
 ```text
-$ grid run --grid_config .grid/config.yml \
+$ grid run --config .grid/config.yml \
            train.py \
            --max_epochs 100 \
            --data_path /dataset/cryptocurrency_prices.csv \
            --learning_rate "uniform(0,0.03,5)" \
            --hidden_size "[16,32,64]"
 
-No --grid_name passed, naming your run glossy-manatee-255
+No --name passed, naming your run glossy-manatee-255
 Using default cloud credentials cc-bwhth to run on AWS.
 
                 Run submitted!
@@ -90,7 +90,7 @@ Using default cloud credentials cc-bwhth to run on AWS.
 Grid AI makes it trivial to run a [hyperparameter sweep](https://docs.grid.ai/products/global-cli-configs/cli-api/grid-train#hyperparameter-sweeps) without having to change anything in your scripts. Let's experiment with a number of different learning rates for our model:
 
 ```text
-$ grid run --grid_config .grid/config.yml \
+$ grid run --config .grid/config.yml \
            train.py --max_epochs 100 \
            --data_path /dataset/cryptocurrency_prices.csv \
            --learning_rate "uniform(0,0.03,5)" \

@@ -22,13 +22,13 @@ grid ssh-keys add lit_key ~/.ssh/id_ed25519.pub
 ## Step 2: launch the session
 
 ```bash
-grid interactive create --g_name fun-bear-259
+grid session create --name fun-bear-259
 ```
 
 ## Step 3: login to the interactive session
 
 ```bash
-grid interactive ssh fun-bear-259
+grid session ssh fun-bear-259
 ```
 
 ## Step 4: Install remote ssh extension

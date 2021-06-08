@@ -56,7 +56,6 @@ compute:
     disk_size: 200                # Disk size
     gpus: 0                       # Number of GPUs
     instance: t2.xlarge           # AWS instance type
-    max_nodes: 10                 # Max nodes to scale to
     memory: null                  # RAM memory
     nodes: 0                      # Nodes to start with
     scale_down_seconds: 1800      # Second in between every scaling down evaluation

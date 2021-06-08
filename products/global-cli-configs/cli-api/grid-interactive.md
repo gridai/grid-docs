@@ -25,7 +25,7 @@ Allowed parameters:
 | --g\_datastore\_mount\_dir | Absolute path to mount Datastore in interactive node | yes |
 
 ```text
-grid session create --grid_instance_type 2_cpu_4gb
+grid session create --instance_type 2_cpu_4gb
 ```
 
 {% hint style="warning" %}

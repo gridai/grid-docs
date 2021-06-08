@@ -77,7 +77,6 @@ compute:
     disk_size: 200
     gpus: 0
     instance: t2.xlarge
-    max_nodes: 10
     memory: null
     nodes: 0
     scale_down_seconds: 1800

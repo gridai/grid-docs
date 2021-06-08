@@ -37,13 +37,13 @@ If you go to [settings](https://platform.grid.ai/#/settings?tabId=ssh), you'll s
 Use the CLI or Web interface to create and launch session
 
 ```bash
-grid interactive create --g_instance_type 2_m60_8gb --g_name happy-owl-123
+grid session create --instance_type 2_m60_8gb --name happy-owl-123
 ```
 
 ## Step 3: Login to the interactive session
 
 ```bash
-grid interactive ssh happy-owl-123
+grid session ssh happy-owl-123
 ```
 
 ![](../../.gitbook/assets/cde.gif)

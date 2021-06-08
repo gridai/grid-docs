@@ -59,9 +59,9 @@ cd minGPT
 For 1.7 B params, run this command:
 
 ```text
-grid train \
---g_instance_type 8_K80_12gb \
---g_gpus 8 \
+grid run \
+--instance_type 8_K80_12gb \
+--gpus 8 \
 train.py \
 --n_layer 15 \
 --n_head 16 \
@@ -74,9 +74,9 @@ train.py \
 ## 1.7B params
 
 ```bash
-grid train \
---g_instance_type 8_K80_12gb \
---g_gpus 8 \
+grid run \
+--instance_type 8_K80_12gb \
+--gpus 8 \
 train.py \
 --n_layer 15 \
 --n_head 16 \
@@ -89,9 +89,9 @@ train.py \
 ## **10B params** 
 
 ```bash
-grid train \
---g_instance_type 8_v100_32gb \
---g_gpus 8 \
+grid run \
+--instance_type 8_v100_32gb \
+--gpus 8 \
 train.py \
 --n_layer 15 \
 --n_head 16 \
@@ -104,9 +104,9 @@ train.py \
 ## **20B params**
 
 ```bash
-grid train \
---g_instance_type 8_v100_32gb \
---g_gpus 8 \
+grid run \
+--instance_type 8_v100_32gb \
+--gpus 8 \
 train.py \
 --n_layer 25 \
 --n_head 16 \
