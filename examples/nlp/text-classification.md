@@ -33,7 +33,8 @@ It is fastest to upload zipped datasets from the Web UI.
 https://pl-flash-data.s3.amazonaws.com/imdb.zip
 ```
 
-![](../../.gitbook/assets/screen-shot-2021-04-10-at-2.49.59-pm.png)
+![new-datastore](https://user-images.githubusercontent.com/13732925/121347438-319f5380-c8f5-11eb-9b61-be571f8aab1f.png)
+
 
 ## Step 2: Start a new Run 
 
@@ -43,7 +44,8 @@ Paste the link to file in the New Run page.
 
 Make sure to select the datastore created above. Notice that mount directory is /opt/datastore. Make sure to add the flags to your script.
 
-![](../../.gitbook/assets/screen-shot-2021-04-10-at-9.10.24-pm.png)
+![new run 1](https://user-images.githubusercontent.com/13732925/121347549-5398d600-c8f5-11eb-91a5-f0ac3706b9d2.png)
+
 
 Add the following flags to the script, then Run
 
@@ -55,7 +57,8 @@ Add the following flags to the script, then Run
 --max_epochs 1
 ```
 
-![](../../.gitbook/assets/screen-shot-2021-04-10-at-8.56.40-pm.png)
+![new run 2](https://user-images.githubusercontent.com/13732925/121347592-5f849800-c8f5-11eb-89ce-7271227a0802.png)
+
 
 ## Step 3: Visualize Metrics
 
@@ -63,7 +66,8 @@ As the model starts to train, metrics appear in the metrics section, make sure t
 
 Tensorboard is also accessible 
 
-![](../../.gitbook/assets/screen-shot-2021-04-10-at-8.58.52-pm.png)
+<img width="1779" alt="metrics" src="https://user-images.githubusercontent.com/13732925/121348103-edf91980-c8f5-11eb-840c-e865892886a5.png">
+
 
 ## Step 4: Download Artifacts 
 
