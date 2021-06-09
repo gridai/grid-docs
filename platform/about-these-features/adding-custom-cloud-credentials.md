@@ -83,7 +83,7 @@ For the next step you're going to create role we're going to assume into. For th
 For quick start clone the repo:
 
 ```text
-https://github.com/gridai/terraform-aws-gridbyoc.git
+git clone https://github.com/gridai/terraform-aws-gridbyoc.git
 cd terraform-aws-gridbyoc
 # Make sure your AWS CLI is properly configures
 # Run `aws configure` before this command. Enter access key
