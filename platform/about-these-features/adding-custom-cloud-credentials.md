@@ -14,8 +14,6 @@ Using your own AWS credentials with Grid is currently in closed early access.
 
 [REQUEST early access to this feature](https://forms.gle/CDk9yajbA5MWSRKM8)
 
-This Documentation is currently heavy work in progress
-
 ## Step 1: Get AWS credentials
 
 ### A: Login to AWS and search for IAM
