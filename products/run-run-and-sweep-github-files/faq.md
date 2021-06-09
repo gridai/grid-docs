@@ -12,6 +12,8 @@ Cloud machines are configured in a simple way with only what is needed to run th
 
 Grid is optimized for PyTorch Lightning. It also supports Tensorflow, Keras any framework built on top of PyTorch.
 
+Try this repository for running Keras example: [https://github.com/gridai/hello\_mnists/blob/443d9522/keras.py](https://github.com/gridai/hello_mnists/blob/443d9522/keras.py)
+
 Grid can also run non-deep learning focused workloads such as plain numpy, sklearn, etc..
 
 ## I'm using an in-house ML library. Can I use it with Grid?
