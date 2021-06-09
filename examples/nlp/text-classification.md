@@ -52,13 +52,14 @@ Add the following flags to the script, then Run
 
 ```
 --gpus 1 \
---train_file /datastores/imdb-ds/train.csv \
---valid_file /datastores/imdb-ds/valid.csv \
---test_file /datastores/imdb-ds/test.csv \
+--train_file /datastores/imdb-ds/imdb/train.csv \
+--valid_file /datastores/imdb-ds/imdb/valid.csv \
+--test_file /datastores/imdb-ds/imdb/test.csv \
 --max_epochs 1
 ```
 
-![new run full 2](https://user-images.githubusercontent.com/13732925/121349872-00745280-c8f8-11eb-80c7-8bdee51c4a00.png)
+<img width="1775" alt="new run full 3" src="https://user-images.githubusercontent.com/13732925/121355055-7dee9180-c8fd-11eb-80bd-8e6f7add679a.png">
+
 
 
 ## Step 3: Visualize Metrics
