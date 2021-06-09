@@ -45,7 +45,15 @@ Make sure to select the datastore created above. Notice that mount directory is 
 
 ![](../../.gitbook/assets/screen-shot-2021-04-10-at-9.10.24-pm.png)
 
-Add flags to the script then Run
+Add the following flags to the script, then Run
+
+```
+--gpus 1 \
+--train_file /datastores/imdb-ds/train.csv \
+--valid_file /datastores/imdb-ds/valid.csv \
+--test_file /datastores/{imdb-ds/test.csv \
+--max_epochs 1
+```
 
 ![](../../.gitbook/assets/screen-shot-2021-04-10-at-8.56.40-pm.png)
 
@@ -81,9 +89,9 @@ grid run \
     --datastore_name imdb-ds \
       train.py \
     --gpus 1  \
-    --train_file /opt/datastore/train.csv \
-    --valid_file /opt/datastore/valid.csv  \
-    --test_file /opt/datastore/test.csv \
+    --train_file /datastores/imdb-ds/train.csv \
+    --valid_file /datastores/imdb-ds/valid.csv  \
+    --test_file /datastores/imdb-ds/test.csv \
     --max_epochs 1
 ```
 
