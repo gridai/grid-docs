@@ -44,7 +44,8 @@ Paste the link to file in the New Run page.
 
 Make sure to select the datastore created above. Notice that mount directory is /opt/datastore. Make sure to add the flags to your script.
 
-![new run 1](https://user-images.githubusercontent.com/13732925/121347549-5398d600-c8f5-11eb-91a5-f0ac3706b9d2.png)
+![new run full 1](https://user-images.githubusercontent.com/13732925/121349841-f81c1780-c8f7-11eb-9dd6-3fe54d77c32a.png)
+
 
 
 Add the following flags to the script, then Run
@@ -53,11 +54,11 @@ Add the following flags to the script, then Run
 --gpus 1 \
 --train_file /datastores/imdb-ds/train.csv \
 --valid_file /datastores/imdb-ds/valid.csv \
---test_file /datastores/{imdb-ds/test.csv \
+--test_file /datastores/imdb-ds/test.csv \
 --max_epochs 1
 ```
 
-![new run 2](https://user-images.githubusercontent.com/13732925/121347592-5f849800-c8f5-11eb-89ce-7271227a0802.png)
+![new run full 2](https://user-images.githubusercontent.com/13732925/121349872-00745280-c8f8-11eb-80c7-8bdee51c4a00.png)
 
 
 ## Step 3: Visualize Metrics
@@ -66,14 +67,16 @@ As the model starts to train, metrics appear in the metrics section, make sure t
 
 Tensorboard is also accessible 
 
-<img width="1779" alt="metrics" src="https://user-images.githubusercontent.com/13732925/121348103-edf91980-c8f5-11eb-840c-e865892886a5.png">
+<img width="1771" alt="train  loss" src="https://user-images.githubusercontent.com/13732925/121350065-33b6e180-c8f8-11eb-9aba-bc836748c663.png">
+
 
 
 ## Step 4: Download Artifacts 
 
 Artifacts are available to download as well. You can choose to train for many epochs, create multiple checkpoints.
 
-![](../../.gitbook/assets/textclassify2.gif)
+![artifacts](https://user-images.githubusercontent.com/13732925/121350135-48937500-c8f8-11eb-8703-999161076d09.gif)
+
 
 
 
