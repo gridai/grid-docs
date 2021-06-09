@@ -108,6 +108,12 @@ In this step, we log into the Grid Web Account to see our Metrics and Download t
 
 Congratulations you have successfully run your first Tensorflow/Keras script with Grid.
 
+{% hint style="info" %}
+If using the Web UI to run this tutorial, simply copy and paste the [github script](https://github.com/aribornstein/Keras-3D-Image-Classification/blob/main/train.py) and choose "tensorflow" in the framework selection drop down
+{% endhint %}
+
+
+
 ## Advanced Keras/TF Cuda Version Configuration <a id="bonus-cli-equivalent"></a>
 
 Grid currently supports native Cuda integration for TensorFlow version 2.2.0. Support for more versions is on the roadmap however if you need to train with a different version of TensorFlow or Keras and use Cuda you can configure your run as follows using an [Actions](../../products/run-run-and-sweep-github-files/actions.md) YAML configuration as follows.
