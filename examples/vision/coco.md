@@ -14,8 +14,6 @@ This example covers an object detection deep learning task
 2. Training the model using `train.py` script
 3. Loading Grid Weights in Flash and Running Object Detector
 
-
-
 {% hint style="info" %}
 This tutorial uses **PyTorch Lightning**
 {% endhint %}
@@ -38,7 +36,7 @@ The COCO \(Common Objects in Context\) _dataset_ \([reference](https://cocodatas
 
 [PyTorch Lightning Flash](https://lightning-flash.readthedocs.io/en/latest/reference/object_detection.html) enables the quick training, fine tuning, and inferencing of SOTA object detection algorithms such as RetinaNet.
 
-For this demo, we're going to be using this  [code here](https://github.com/aribornstein/CocoDemo/blob/main/train.py)
+For this demo, we're going to be using this [code here](https://github.com/aribornstein/CocoDemo/blob/main/train.py)
 
 Here's a preview of this code.
 

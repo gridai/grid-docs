@@ -18,19 +18,19 @@ This example covers a video classification deep learning task
 
 **5 minutes**
 
-## Task: Video Classification 
+## Task: Video Classification
 
-_Video Classification_ is the task of _classifying_ _videos_ based on _classes_ of content. _Video_ _Classification_ enables computers to recognize actions, objects, and events in videos. From Retail, Health Care to Agriculture, Video Understanding enables automation of [countless industry use cases](https://www.cio.com/article/3431138/ai-gets-the-picture-streamlining-business-processes-with-image-and-video-classification.html). __
+_Video Classification_ is the task of _classifying_ _videos_ based on _classes_ of content. _Video_ _Classification_ enables computers to recognize actions, objects, and events in videos. From Retail, Health Care to Agriculture, Video Understanding enables automation of [countless industry use cases](https://www.cio.com/article/3431138/ai-gets-the-picture-streamlining-business-processes-with-image-and-video-classification.html). \_\_
 
 ## Dataset: Kinetics
 
-The Kinetics Human Action Video Dataset released by DeepMind \([reference](https://deepmind.com/research/open-source/kinetics)\) is a large-scale video understanding dataset comprised of annotated~10s video clips sourced from YouTube. 
+The Kinetics Human Action Video Dataset released by DeepMind \([reference](https://deepmind.com/research/open-source/kinetics)\) is a large-scale video understanding dataset comprised of annotated~10s video clips sourced from YouTube.
 
 ![Example Kinetics Video Thumbnails](../../.gitbook/assets/image%20%28137%29.png)
 
 ## Step 1: Model
 
-[PyTorch Lightning Flash](https://lightning-flash.readthedocs.io/en/latest/reference/object_detection.html) enables quick training, fine tuning,  and inferencing of SOTA video classification. 
+[PyTorch Lightning Flash](https://lightning-flash.readthedocs.io/en/latest/reference/object_detection.html) enables quick training, fine tuning, and inferencing of SOTA video classification.
 
 For this demo, we're going to be using the [code here](https://github.com/aribornstein/KineticsDemo)
 
@@ -60,11 +60,11 @@ You can add optional flags to this script:
 
 In this step, we load the Grid weights in Flash and run the model to classify videos.
 
-1.Download Artifacts from Grid Run 
+1.Download Artifacts from Grid Run
 
 ![](../../.gitbook/assets/image%20%2834%29.png)
 
-2. Load model to our script and inference in 4 lines of code. 
+1. Load model to our script and inference in 4 lines of code. 
 
 ```python
 from flash.core.utilities.imports import _KORNIA_AVAILABLE, _PYTORCHVIDEO_AVAILABLE
@@ -78,7 +78,7 @@ predictions = model.predict("path/to/video.png")
 print(predictions)
 ```
 
-Congratulations you have successfully trained and run inference for your first Video Classification Model with Grid. 
+Congratulations you have successfully trained and run inference for your first Video Classification Model with Grid.
 
 ## Bonus: CLI equivalent
 

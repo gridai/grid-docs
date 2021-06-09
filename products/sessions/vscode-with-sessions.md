@@ -7,7 +7,7 @@ description: >-
 
 # VSCode with Sessions
 
-## Step 1: Create and add the SSH Key 
+## Step 1: Create and add the SSH Key
 
 Create an ssh key from the computer you'd like to connect from \(skip this step if you already have a key\)
 
@@ -35,13 +35,9 @@ grid session ssh fun-bear-259
 
 ![](../../.gitbook/assets/image%20%2893%29.png)
 
-
-
 ## Step 5: Click the remote tab and find your session
 
 ![](../../.gitbook/assets/vscode%20%281%29.gif)
-
-
 
 ## Step 6: Ready
 

@@ -23,5 +23,5 @@ grid run --instance_type 8_v100_32gb hello.py --gpus 8
 | 2\_CPU\_8gb | CPU |
 | 2\_CPU\_4gb | CPU |
 
-**Note: A credit card needs to be added to use GPU machines** 
+**Note: A credit card needs to be added to use GPU machines**
 

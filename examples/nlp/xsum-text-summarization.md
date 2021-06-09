@@ -8,13 +8,11 @@ description: >-
 
 ## Goal
 
-This example covers an abstractive Text Summarization  deep learning task
+This example covers an abstractive Text Summarization deep learning task
 
 1. What is Text Summarization  
 2. Training the model using `train.py` script
 3. Loading Grid Weights in Flash and Running Summarization Model
-
-
 
 {% hint style="info" %}
 This tutorial uses **PyTorch Lightning**
@@ -24,19 +22,15 @@ This tutorial uses **PyTorch Lightning**
 
 **5 minutes**
 
-## Task: Text Summarization 
+## Task: Text Summarization
 
 _Text Summarization_ is the task of generating a consise overview of a text's main point into a short sentence/description. For example, taking a web article and describing the topic in a short sentence.
 
 ## Dataset: XSum
 
-The [Extreme Summarization \(**XSum**\)](https://paperswithcode.com/paper/dont-give-me-the-details-just-the-summary) dataset is a dataset for evaluation of abstractive single-document summarization systems consisting of 226,711 news articles collected from BBC  \(2010 to 2017\) accompanied with a one-sentence summary. The articles cover a wide variety of subjects \(e.g., News, Politics, Sports, Weather, Business, Technology, Science, Health, Family, Education, Entertainment and Arts\)
+The [Extreme Summarization \(**XSum**\)](https://paperswithcode.com/paper/dont-give-me-the-details-just-the-summary) dataset is a dataset for evaluation of abstractive single-document summarization systems consisting of 226,711 news articles collected from BBC \(2010 to 2017\) accompanied with a one-sentence summary. The articles cover a wide variety of subjects \(e.g., News, Politics, Sports, Weather, Business, Technology, Science, Health, Family, Education, Entertainment and Arts\)
 
 ![Source: https://arxiv.org/pdf/1808.08745.pdf](../../.gitbook/assets/image%20%2818%29.png)
-
-
-
-
 
 ## Step 1: Model
 
@@ -74,7 +68,7 @@ trainer.save_checkpoint("summarization_model_xsum.pt")
 
 ## Step 2: Start a RUN
 
-You can reproduce with this button 
+You can reproduce with this button
 
 [![Grid](https://camo.githubusercontent.com/1b39d1721301ebc3d08db0971e6d4dd96db28d8028daff32eb3918e22cd1fbe0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7269645f41492d72756e2d3738464639362e7376673f6c6162656c436f6c6f723d626c61636b266c6f676f3d646174613a696d6167652f737667253262786d6c3b6261736536342c50484e325a79423361575230614430694e4467694947686c6157646f644430694e44676949475a7062477739496d3576626d5569494868746247357a50534a6f644852774f693876643364334c6e637a4c6d39795a7938794d4441774c334e325a79492b50484268644767675a443069545445674d5452324d6a42684d5451674d5451674d4341774d4445304944453061446c574d7a59754f4567784d693432566a4578614449794c6a56324e3267784d533479566a45305154453049444530494441674d44417a4d693430494442494d5456424d5451674d5451674d4341774d4445674d5452364969426d615778735053496a5a6d5a6d4969382b50484268644767675a44306954544d314c6a49674e44686f4d5445754d6c59794e5334315344497a4c6a6c324d5445754d3267784d53347a566a5134656949675a6d6c736244306949325a6d5a694976506a777663335a6e50673d3d)](https://platform.grid.ai/#/runs?script=https://github.com/aribornstein/T5-Summarization-Demo/blob/05d348b4/train.py&cloud=grid&use_spot&instance=g4dn.xlarge&accelerators=1&disk_size=200&framework=lightning&script_args=--grid_name%20silent-iguana-136%20%5C%0A--grid_strategy%20grid_search%20%5C%0A--grid_disk_size%20200%20%5C%0A--grid_max_nodes%2010%20%5C%0A--grid_instance_type%20g4dn.xlarge%20%5C%0A--use_spot%20true%20%5C%0A--grid_framework%20lightning%20%5C%0A--grid_credential%20cc-vnpnm%20%5C%0A--grid_gpus%201%20%5C%0Atrain.py%20--gpus%201%20--max_epochs%203)
 
@@ -108,10 +102,9 @@ In this step, we load the Grid weights in Flash and run the model to detect obje
 
 ![](../../.gitbook/assets/image%20%288%29.png)
 
-2. Load model to our script and inference in 2 lines of code. 
+1. Load model to our script and inference in 2 lines of code. 
 
 ```python
-
 from flash.text import SummarizationTask
 
 

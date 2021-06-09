@@ -18,9 +18,9 @@ The TL;DR of using Grid is this:
 
 This 3-minute video shows you how to execute code on cloud instances with zero code changes and how to debug/prototype and develop models with multi-GPU cloud instances.
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/intro\_video\_mp42.mp4" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/intro\_video\_mp42.mp4" caption="" %}
 
-Here is a quick overview of 
+Here is a quick overview of
 
 \*\*\*\*[**Datastores**](products/add-data-to-grid-datastores/#datastores-scalable-datasets)\*\*\*\*
 
@@ -30,7 +30,7 @@ Here is a quick overview of
 
 ## **Infrastructure is gone**
 
-Grid allocates all the machines and GPUs you need on demand, so you only pay for what you need when you need it. 
+Grid allocates all the machines and GPUs you need on demand, so you only pay for what you need when you need it.
 
 Grid lets you focus on your work, NOT on the infrastructure
 
@@ -47,7 +47,7 @@ Just run your files and watch the magic happen
 
 ## Experiment managers
 
-Grid works with the experiment manager of your choice!!🔥🔥  
+Grid works with the experiment manager of your choice!!🔥🔥
 
 No need to change your code!
 
@@ -59,7 +59,7 @@ In Grid, we've introduced _Datastores_, high-performance, low-latency, versioned
 
 The UI supports creating Datastores of &lt; 1 GB
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/datastore.mp4" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/datastore.mp4" caption="" %}
 
 Use the CLI for larger datastores
 
@@ -75,7 +75,7 @@ For prototyping/debugging/analyzing, sometimes you need a LIVE machine. We call 
 
 ![](.gitbook/assets/session.jpg)
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/session\_3.mp4" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/session\_3.mp4" caption="" %}
 
 \*\*\*\*
 
@@ -94,7 +94,7 @@ RUN **any** public or private repository with Grid in 5 steps:
 
 This 1-minute video shows how to RUN from the web app:
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/run.mp4" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/run.mp4" caption="" %}
 
 If you prefer to use the CLI simply replace python with grid run.
 

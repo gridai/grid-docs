@@ -2,7 +2,7 @@
 
 ## Pause a Session
 
-You've spent hours configuring a Session with all your code, dependencies etc, but now you want to pause so you don't get charged without losing your state. 
+You've spent hours configuring a Session with all your code, dependencies etc, but now you want to pause so you don't get charged without losing your state.
 
 Use the **pause** feature for this.
 

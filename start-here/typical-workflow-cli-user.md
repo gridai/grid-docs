@@ -2,7 +2,7 @@
 
 ## Goal
 
-The goal of this tutorial is to walk through a typical workflow using the Grid command-line \(CLI\) package. 
+The goal of this tutorial is to walk through a typical workflow using the Grid command-line \(CLI\) package.
 
 For users who prefer the web app [this is the mirror tutorial for the web app.](typical-workflow-web-user.md)
 
@@ -10,7 +10,7 @@ For users who prefer the web app [this is the mirror tutorial for the web app.](
 Grid has a 1:1 match in functionality with the Web app.
 {% endhint %}
 
-We'll use image classification as the example to illustrate the key ideas.  The typical workflow goes like this:
+We'll use image classification as the example to illustrate the key ideas. The typical workflow goes like this:
 
 ![](../.gitbook/assets/image%20%28135%29.png)
 
@@ -33,8 +33,6 @@ Note a few things:
 | 1 minute | Run \(hyperparameter sweep\) |
 | 3 minutes | Bonus: Become a power user |
 
-
-
 ## Terminology Glossary
 
 | Term | Description |
@@ -46,8 +44,6 @@ Note a few things:
 | An experiment | A single model with a given configuration |
 | A run | A collection of experiments |
 | ssh | A way to connect from a local machine to a remote machine |
-
-
 
 ## The dataset
 
@@ -61,7 +57,7 @@ The goal is to teach a small neural network to classify these 5 sets of classes.
 
 \(Time: **1 minute**\)
 
-It's recommended to use a virtual environment to run with Grid.   
+It's recommended to use a virtual environment to run with Grid.  
 You can use [conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands) or [venv](https://docs.python.org/3/library/venv.html) \(If you're using MacOS, we recommend using venv\).
 
 ```yaml
@@ -134,7 +130,7 @@ grid datastore list
 
 ![Once it&apos;s succeeded, it&apos;s ready to be used](../.gitbook/assets/image%20%2836%29.png)
 
-Note: The datastore status moves through as series of statuses while it is being optimized. When it moves to "Succeeded" it's ready to be used. 
+Note: The datastore status moves through as series of statuses while it is being optimized. When it moves to "Succeeded" it's ready to be used.
 
 **Periodic uploads**
 
@@ -156,7 +152,7 @@ rm mycron
 
 \(Time: **1 minute**\)
 
-This is optional, but enables you to 
+This is optional, but enables you to
 
 * ssh from your local
 * ssh + VSCode
@@ -187,9 +183,9 @@ Now that your data has been uploaded the next step in a real workflow is to spen
 * Using the model for analysis, which might require GPUs
 * Exploring and visualize the model
 
-This is exactly what _Sessions_ were created for. 
+This is exactly what _Sessions_ were created for.
 
-Start a Session named _**resnet-debugging**_ ****with 2 M60 GPUs on it and attach our **CIFAR-5** dataset.
+Start a Session named _**resnet-debugging**_ **\*\*with 2 M60 GPUs on it and attach our** CIFAR-5\*\* dataset.
 
 **Note: A credit card needs to be added to use GPU machines**
 
@@ -219,7 +215,7 @@ Once the session is ready, you have three options to interact with it:
 * ssh from your local
 * ssh + VSCode
 
-Let's login to the Session via SSH. 
+Let's login to the Session via SSH.
 
 ```yaml
 grid session ssh resnet-debugging
@@ -329,7 +325,7 @@ DATALOADER:0 TEST RESULTS
 --------------------------------------------------------------------------------
 ```
 
-At this step \(in a real workflow\) you would code the model, debug, etc... using the remote GPUs from your local VSCode :\) 
+At this step \(in a real workflow\) you would code the model, debug, etc... using the remote GPUs from your local VSCode :\)
 
 Once you're ready, commit your changes so we can train at scale
 
@@ -342,7 +338,7 @@ git push
 
 \(Time: **1 minute**\)
 
-Great! now that our model is ready to run at scale, we can pause the session. 
+Great! now that our model is ready to run at scale, we can pause the session.
 
 ```bash
 grid session pause resnet-debugging
@@ -409,9 +405,7 @@ You can do this from the Session or your local machine \(but you'll need to clon
 
 ## **Bonus: Use a YAML for common runs**
 
-When your runs get repetitive or if they have a lot of hyperparameters,  use a YAML to save the run configuration.
+When your runs get repetitive or if they have a lot of hyperparameters, use a YAML to save the run configuration.
 
 Check out the [YML documentation](../products/run-run-and-sweep-github-files/yaml-configs/)
-
-
 

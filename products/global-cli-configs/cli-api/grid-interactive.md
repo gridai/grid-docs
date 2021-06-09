@@ -4,7 +4,7 @@ Launch an interactive Session with the hardware and data of your choice.
 
 ## create
 
-Creates an interactive Session. 
+Creates an interactive Session.
 
 ```text
 grid session create
@@ -20,7 +20,7 @@ Allowed parameters:
 | --g\_name | Name of the Session | yes |
 | --g\_config | Points to a YAML config file | yes |
 | --g\_description | Description of the interactive session | yes |
-| --g\_datastore_\__name | Name of datastore to be mounted in interactive session | yes |
+| --g\_datastore\_\_\_name | Name of datastore to be mounted in interactive session | yes |
 | --g\_datastore\_version | Version of datastore to be mounted in interactive session | yes |
 | --g\_datastore\_mount\_dir | Absolute path to mount Datastore in interactive node | yes |
 
@@ -29,7 +29,7 @@ grid session create --instance_type 2_cpu_4gb
 ```
 
 {% hint style="warning" %}
-Interactive nodes are currently not re-usable, even after deletion. 
+Interactive nodes are currently not re-usable, even after deletion.
 {% endhint %}
 
 ## delete
@@ -67,8 +67,6 @@ grid session mount bluberry-122:~/data ./data
 fusermount3 -u mountpoint # Linux
 umount mountpoint # OS X, FreeBSD
 ```
-
-
 
 ## pause
 
@@ -110,7 +108,6 @@ grid session ssh happy-owl-123
 
 ## sync-ssh-config
 
-  
 Sync interactive node's ssh config to the local ssh config.
 
 It manages a section within the ssh config file for all interactive nodes ssh config details.
@@ -118,6 +115,4 @@ It manages a section within the ssh config file for all interactive nodes ssh co
 Afterwards you can use the system's ssh & related utilities \(sshfs, rsync, ansible, etc\) with interactive sessions directly.
 
 The default file is `~/.ssh/config` and can be changed via envvar `GRID_SSH_CONFIG`
-
-
 

@@ -13,14 +13,14 @@ Make sure to place your cloud credential ID in the `credentials` field, replacin
 ```text
 # Main compute configuration.
 compute:
-  
+
   # Add cloud configuration here.
   provider:
-  
+
     credentials: XXXXXX           # Cloud key ID
     region: us-east-1             # Cloud region
     vendor: aws                   # Vendor, only aws
-  
+
   # Training configuration.
   train:
 
@@ -37,7 +37,7 @@ compute:
     use_spot: false               # If we should use spot instances
     framework: "lightning"        # Which framework to use 
     distributed: false            # Experimental support for multi-node training 
-    
+
     # Pass in environment variables
     environment:                
       MY_ENVIRONMENT_VARIABLE: "example"
@@ -56,7 +56,7 @@ hyper_params:
 Flags in grid YML files have a 1-to-1 mapping with `grid run` flags
 {% endhint %}
 
-In addition to the parameters above, you can also run arbitrary commands on different stages of you training operation. 
+In addition to the parameters above, you can also run arbitrary commands on different stages of you training operation.
 
 ## Configuring Actions
 
@@ -82,14 +82,14 @@ compute:
     scale_down_seconds: 1800
     distributed: false
     framework: "lightning"
-    
+
     # Actions need to be passed as one command
     # per line.
     actions:
       on_image_build:
         - apt-get install wget -y
         - pip install tqdm
-        
+
       on_before_training_start:
         - bash download_dataset.sh
 

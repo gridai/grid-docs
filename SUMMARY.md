@@ -84,7 +84,7 @@
 
 * [Billing rates](platform/billing-rates.md)
 * [Early Access Features](platform/about-these-features/README.md)
-  * [Add custom cloud credentials](platform/about-these-features/adding-custom-cloud-credentials.md)
+  * [Add custom cloud credential](platform/about-these-features/adding-custom-cloud-credentials.md)
   * [Multi-node training](platform/about-these-features/multi-node.md)
   * [Teams features](platform/about-these-features/teams-features.md)
 * [Feature Requests](platform/feature-requests.md)

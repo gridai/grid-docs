@@ -276,9 +276,7 @@ grid run --instance_type 8_v100_32gb my_script.py
 
 Here's a list of all the available machines
 
-{% page-ref page="../../run-run-and-sweep-github-files/machines.md" %} 
-
-
+{% page-ref page="../../run-run-and-sweep-github-files/machines.md" %}
 
 ### `--memory`
 

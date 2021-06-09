@@ -13,7 +13,7 @@ Tutorial time: 5 minutes
 
 ## Overview
 
-Classifying text is a deep learning task that represents a class of problems such as sentiment analysis: predicting the sentiment of tweets and movie reviews or customer sentiment regarding a product as well as classifying email as spam or not. 
+Classifying text is a deep learning task that represents a class of problems such as sentiment analysis: predicting the sentiment of tweets and movie reviews or customer sentiment regarding a product as well as classifying email as spam or not.
 
 This example uses the Transformers model \(bert-base-uncased\) from [huggingface repository](https://huggingface.co/bert-base-uncased), it is adapted to use PyTorch Lightning, [https://github.com/gridai/grid-text-classification](https://github.com/gridai/grid-text-classification) and [Lightning Flash](https://github.com/PyTorchLightning/lightning-flash)
 
@@ -27,15 +27,15 @@ BERT\([Bidirectional Encoder Representations from Transformers](https://arxiv.or
 
 ## Step 1: Create Datastore
 
-It is fastest to upload zipped datasets from the Web UI.  
+It is fastest to upload zipped datasets from the Web UI.
 
-```
+```text
 https://pl-flash-data.s3.amazonaws.com/imdb.zip
 ```
 
 ![](../../.gitbook/assets/screen-shot-2021-04-10-at-2.49.59-pm.png)
 
-## Step 2: Start a new Run 
+## Step 2: Start a new Run
 
 Take a look at this file if you are curious about the model. [https://github.com/gridai/grid-text-classification/blob/main/train.py](https://github.com/gridai/grid-text-classification/blob/main/train.py)
 
@@ -53,19 +53,17 @@ Add flags to the script then Run
 
 As the model starts to train, metrics appear in the metrics section, make sure to select the Experiments to see metrics.
 
-Tensorboard is also accessible 
+Tensorboard is also accessible
 
 ![](../../.gitbook/assets/screen-shot-2021-04-10-at-8.58.52-pm.png)
 
-## Step 4: Download Artifacts 
+## Step 4: Download Artifacts
 
 Artifacts are available to download as well. You can choose to train for many epochs, create multiple checkpoints.
 
 ![](../../.gitbook/assets/textclassify2.gif)
 
-
-
-## Bonus: Run in CLI 
+## Bonus: Run in CLI
 
 If you prefer to use CLI, use this command below
 

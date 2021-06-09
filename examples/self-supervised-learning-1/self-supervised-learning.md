@@ -23,7 +23,7 @@ The dataset used is [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html), col
 
 ### Model
 
-A Simple Framework for Contrastive Learning of Visual Representations \([SimCLR](https://arxiv.org/abs/2002.05709)\) is used for this example.  If you are interested to see the code it is [here](https://github.com/gridai/lightning-simclr) 
+A Simple Framework for Contrastive Learning of Visual Representations \([SimCLR](https://arxiv.org/abs/2002.05709)\) is used for this example. If you are interested to see the code it is [here](https://github.com/gridai/lightning-simclr)
 
 ## Step 1: Start a new Run
 

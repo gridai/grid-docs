@@ -1,4 +1,4 @@
-# Add custom cloud credentials
+# Add custom cloud credential
 
 ## Custom cloud credentials
 
@@ -9,10 +9,12 @@ Grid can orchestrate infrastructure on your own AWS account by simply adding you
 ## Early access
 
 {% hint style="danger" %}
-Using your own AWS credentials with Grid is currently in closed early access. 
+Using your own AWS credentials with Grid is currently in closed early access.
 {% endhint %}
 
 [REQUEST early access to this feature](https://forms.gle/CDk9yajbA5MWSRKM8)
+
+This Documentation is currently heavy work in progress
 
 ## Step 1: Get AWS credentials
 
@@ -30,7 +32,7 @@ Click on the "Users" panel. You will be able to see a list of users. If you alre
 
 ### C: Create New User \(optional\)
 
-If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\). 
+If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
 
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
@@ -45,241 +47,18 @@ Click on "Next: tags" &gt; "Next: review" &gt; "Create user".
 5. Copy both the "Access key ID" and the "Secret access key" values
 
 {% hint style="danger" %}
-The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location. 
+The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
 {% endhint %}
 
-Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles]() for more details. 
+Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md) for more details.
 
-## Step 2: Create AWS Policies & Roles
+## Step 2: Add IAM permission to your account
 
-Grid requires 3 IAM policies and 3 IAM roles in order to orchestrate resources in your AWS account. This section walks you through a step-by-step on how to create those in AWS.
+The user you just created, and fetched credentials for should have IAMAdministrator privileges.
 
 {% hint style="info" %}
 Reach out to us via Slack or email if you have any issues creating the following AWS roles and policies. We're happy to help!
 {% endhint %}
-
-### A: Create Policies
-
-We will be creating the following 3 policies in AWS:
-
-* grid-policy
-* RKE-controlplane
-* RKE-worker
-
-Use the following steps to create those:
-
-1. First, log in to AWS and navigate to IAM.
-2. Click on "Policies" &gt; "Create policy"
-3. Click on the "JSON" tab
-
-![JSON tab in the &quot;Create policy&quot; section.](../../.gitbook/assets/image%20%2822%29.png)
-
-    4. Now, copy and paste the JSON from the next sections \(_**replace variables as indicated**_\). You will need to repeat the process for each of the three policies.
-
-#### Overall Grid Policy
-
-This policy allows Grid to control certain aspects of AWS. Namely, to manage EC2 instances, manage S3 buckets, and manage shared EC2 instance keys \(KMS\).
-
-This policy has to be named: **`grid-policy`**
-
-Use the JSON below to create a new IAM Policy. Replace the following variables in the JSON:
-
-* **REGION**: the AWS region where you want policies implemented. This value can be any of the AWS regions \(e.g. `us-east-1`\).
-* **AWS\_ACCOUNT\_ID:** your AWS account ID. Please refer to the [AWS Account Identifiers page](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) to identify where you can find those.
-
-```javascript
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:Describe*",
-                "ec2:ImportKeyPair",
-                "ec2:CreateKeyPair",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateTags",
-                "ec2:DeleteKeyPair",
-                "kms:*",
-                "s3:*"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": [
-                "iam:PassRole",
-                "ec2:RunInstances"
-            ],
-            "Resource": [
-                "arn:aws:ec2:REGION::image/ami-*",
-                "arn:aws:ec2:REGION:AWS_ACCOUNT_ID:instance/*",
-                "arn:aws:ec2:REGION:AWS_ACCOUNT_ID:placement-group/*",
-                "arn:aws:ec2:REGION:AWS_ACCOUNT_ID:volume/*",
-                "arn:aws:ec2:REGION:AWS_ACCOUNT_ID:subnet/*",
-                "arn:aws:ec2:REGION:AWS_ACCOUNT_ID:key-pair/*",
-                "arn:aws:ec2:REGION:AWS_ACCOUNT_ID:network-interface/*",
-                "arn:aws:ec2:REGION:AWS_ACCOUNT_ID:security-group/*",
-                "arn:aws:iam::AWS_ACCOUNT_ID:role/*"
-            ]
-        },
-        {
-            "Sid": "VisualEditor2",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:RebootInstances",
-                "ec2:TerminateInstances",
-                "ec2:StartInstances",
-                "ec2:StopInstances"
-            ],
-            "Resource": "arn:aws:ec2:REGION:AWS_ACCOUNT_ID:instance/*"
-        }
-    ]
-}
-```
-
-#### Kubernetes Control Plane Policy
-
-We create Kubernetes clusters in your infrastructure. The Kubernetes control plane needs policies to create a number of AWS resources including creating & managing EC2 nodes and controlling AWS load balancers.
-
-This policy needs to be named **`RKE-controlplane`**. 
-
-```javascript
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "autoscaling:DescribeAutoScalingGroups",
-                "autoscaling:DescribeLaunchConfigurations",
-                "autoscaling:DescribeTags",
-                "ec2:DescribeInstances",
-                "ec2:DescribeRegions",
-                "ec2:DescribeRouteTables",
-                "ec2:DescribeSecurityGroups",
-                "ec2:DescribeSubnets",
-                "ec2:DescribeVolumes",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateTags",
-                "ec2:CreateVolume",
-                "ec2:ModifyInstanceAttribute",
-                "ec2:ModifyVolume",
-                "ec2:AttachVolume",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:CreateRoute",
-                "ec2:DeleteRoute",
-                "ec2:DeleteSecurityGroup",
-                "ec2:DeleteVolume",
-                "ec2:DetachVolume",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:DescribeVpcs",
-                "elasticloadbalancing:AddTags",
-                "elasticloadbalancing:AttachLoadBalancerToSubnets",
-                "elasticloadbalancing:ApplySecurityGroupsToLoadBalancer",
-                "elasticloadbalancing:CreateLoadBalancer",
-                "elasticloadbalancing:CreateLoadBalancerPolicy",
-                "elasticloadbalancing:CreateLoadBalancerListeners",
-                "elasticloadbalancing:ConfigureHealthCheck",
-                "elasticloadbalancing:DeleteLoadBalancer",
-                "elasticloadbalancing:DeleteLoadBalancerListeners",
-                "elasticloadbalancing:DescribeLoadBalancers",
-                "elasticloadbalancing:DescribeLoadBalancerAttributes",
-                "elasticloadbalancing:DetachLoadBalancerFromSubnets",
-                "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
-                "elasticloadbalancing:ModifyLoadBalancerAttributes",
-                "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
-                "elasticloadbalancing:SetLoadBalancerPoliciesForBackendServer",
-                "elasticloadbalancing:AddTags",
-                "elasticloadbalancing:CreateListener",
-                "elasticloadbalancing:CreateTargetGroup",
-                "elasticloadbalancing:DeleteListener",
-                "elasticloadbalancing:DeleteTargetGroup",
-                "elasticloadbalancing:DescribeListeners",
-                "elasticloadbalancing:DescribeLoadBalancerPolicies",
-                "elasticloadbalancing:DescribeTargetGroups",
-                "elasticloadbalancing:DescribeTargetHealth",
-                "elasticloadbalancing:ModifyListener",
-                "elasticloadbalancing:ModifyTargetGroup",
-                "elasticloadbalancing:RegisterTargets",
-                "elasticloadbalancing:SetLoadBalancerPoliciesOfListener",
-                "iam:CreateServiceLinkedRole",
-                "kms:DescribeKey"
-            ],
-            "Resource": [
-                "*"
-            ]
-        }
-    ]
-}
-```
-
-#### Kubernetes Worked Node Policy
-
-The Kubernetes worker nodes also need specific policies, this time with the ability to perform operations against EC2 and ECR.
-
-This policy needs to be named **`RKE-worker`**.
-
-```javascript
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ec2:DescribeInstances",
-                "ec2:DescribeRegions",
-                "ecr:GetAuthorizationToken",
-                "ecr:BatchCheckLayerAvailability",
-                "ecr:GetDownloadUrlForLayer",
-                "ecr:GetRepositoryPolicy",
-                "ecr:DescribeRepositories",
-                "ecr:ListImages",
-                "ecr:BatchGetImage"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-```
-
-### B: Create Roles
-
-You now need to create the following roles:
-
-* RKE-controlplane-role
-* RKE-worker-role
-* GridInteractiveNode
-
-#### Kubernetes Control Plane Role \(**`RKE-controlplane-role`**\)
-
-1. First, log in to AWS and navigate to IAM.
-2. Click on "**Roles**" &gt; "Create role"
-3. Click on "**AWS service**"
-4. Under "**Choose a use case**", click on "**EC2**" then "**Next: Permissions**"
-5. Search for "**RKE-controlplane**" and select the corresponding policy, then click on "**Next: Tags**" &gt; "**Next: Review**"
-6. Name the role `RKE-controlplane-role` and click on "**Create role**"
-
-#### Kubernetes Worker Role \(`RKE-worker-role`\)
-
-1. First, log in to AWS and navigate to IAM
-2. Click on "**Roles**" &gt; "**Create role**"
-3. Click on "**AWS service**"
-4. Under "**Choose a use case**", click on "**EC2**" then "**Next: Permissions**"
-5. Search for "**RKE-worker**" and select the corresponding policy, then click on "**Next: Tags**" &gt; "**Next: Review**"
-6. Name the role `RKE-worker-role` and click on "**Create role**"
-
-#### Grid Interactive Session \(**`GridInteractiveSession`**\)
-
-1. First, log in to AWS and navigate to IAM
-2. Click on "**Roles**" &gt; "**Create role**"
-3. Click on "**AWS service**"
-4. Under "**Choose a use case**", click on "**EC2**" then "**Next: Permissions**"
-5. Search for "**RKE-worker**" and select the corresponding policy and also search for "**AmazonS3FullAccess**" and select the policy, then click on "**Next: Tags**" &gt; "**Next: Review**"
-6. Name the role `GridInteractiveSession` and click on "**Create role**"
 
 ### C: Add Policies to Your Account
 
@@ -292,9 +71,87 @@ The final step is to add all the Grid policies to your account. That means that 
 
 ![Granting permissions to an user.](../../.gitbook/assets/image%20%2813%29.png)
 
-    5. Search for the 3 policies that we created above: `grid-policy` , `RKE-controlplane`, and `RKE-worker`. Select those 3 policies and click on "Next: Review".
-
-    6. Click on "Add permissions"
+1. Search for the policy IAMFullAccess:  
+2. Click on "Add permissions"
 
 Now that you have added the right permissions to your user name, you can use the user's AWS API keys with Grid.
+
+## Step 3: Create Role & Policy grid requires
+
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform` and `jq` installed on your machine. If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc)  This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest) 
+
+For quick start clone the repo:
+
+```text
+https://github.com/gridai/terraform-aws-gridbyoc.git
+cd terraform-aws-gridbyoc
+# Make sure your AWS CLI is properly configures
+# Run `aws configure` before this command. Enter access key
+# id & secret you created in step 1. 
+# This are not shared with grid
+terraform apply
+
+# Get the output from terraform. By default terraform hides 
+# the sensitive secret output
+terraform output -o json | jq
+```
+
+From the last command you'll get the following output:
+
+```text
+{
+  "external_id": {
+    "sensitive": true,
+    "type": "string",
+    "value": "<example-id>"
+  },
+  "role_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "<arn:aws:iam::000000000000:role/example-role>"
+  },
+  "role_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "example-role"
+  }
+}
+
+```
+
+## Step 4: Register your role in grid
+
+```text
+grid cluster aws --role-arn <arn:aws:iam::000000000000:role/example-role> --external-id <example-id> <name>
+```
+
+## Step 5: Wait for cluster to be provisioned
+
+```text
+grid clusters
+```
+
+And wait for your cluster status be `running`:
+
+```text
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ id                 ┃ name               ┃ status  ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ grid-cloud-prod    │ grid-cloud-prod    │ running │
+│ <name>             │ <name>             │ running │
+└────────────────────┴────────────────────┴─────────┘
+```
+
+It can take some time to provision a new cluster, ~20-30 minutes
+
+## Step 6: Run your workloads in your new cluster
+
+```text
+grid run --cluster <name>
+grid session --cluster <name>  create
+```
+
+Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
+
+## Step 7: Enjoy
 

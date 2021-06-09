@@ -238,7 +238,7 @@ grid run main.py --alpha 0.05200016 --beta 4
 
 ## Bayesian optimization
 
-There are alternative algorithms to random search that attempt to search the space more efficiently. 
+There are alternative algorithms to random search that attempt to search the space more efficiently.
 
 In practice, random search is hard to beat with random search. In certain applications/models, bayesian can give you a slight advantage. However, these cases are rare.
 

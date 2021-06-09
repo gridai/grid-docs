@@ -1,6 +1,6 @@
 # GPT 10B+ params \(8 GPUs\)
 
-## GPT 
+## GPT
 
 In this tutorial, we'll train the [Min-GPT by Andrej Karpathy](https://github.com/karpathy/minGPT) across 8 GPUs. This model uses PyTorch Lightning + Deepspeed to scale the model up.
 
@@ -8,26 +8,22 @@ This model was adapted by [Sean Naren](https://github.com/SeanNaren) to use PyTo
 
 Time: **2 minutes**
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/min\_gpt.mp4" %}
-
-
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/min\_gpt.mp4" caption="" %}
 
 ## Run via the UI
 
-The tutorial is extremely simple... 
+The tutorial is extremely simple...
 
 1. Find the path of the file we want to train \([https://github.com/SeanNaren/minGPT/blob/stage3/train.py](https://github.com/SeanNaren/minGPT/blob/stage3/train.py)\)
 2. Paste it into the run dialog on the UI
 
 ![](../../.gitbook/assets/image%20%2810%29.png)
 
-3. Choose a machine with 8 GPUs \(and make sure you are using all 8 GPUs per experiment\)
+1. Choose a machine with 8 GPUs \(and make sure you are using all 8 GPUs per experiment\)
 
 ![](../../.gitbook/assets/image%20%2874%29.png)
 
-
-
-4. Paste the script arguments 
+1. Paste the script arguments 
 
 ```bash
 --n_layer 15 \
@@ -86,7 +82,7 @@ train.py \
 --batch_size 1
 ```
 
-## **10B params** 
+## **10B params**
 
 ```bash
 grid run \
@@ -115,6 +111,4 @@ train.py \
 --precision 16 \
 --batch_size 1
 ```
-
-
 

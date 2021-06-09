@@ -10,7 +10,7 @@ To use GPU machines, a temporary hold of $1 is placed on credit card, this expir
 
 ## List pricing
 
-If you need to run jobs for a long time and they cannot be interrupted, then use the default way of running. This will use list pricing 
+If you need to run jobs for a long time and they cannot be interrupted, then use the default way of running. This will use list pricing
 
 ```text
 grid run main.py
@@ -32,7 +32,7 @@ Interruptible only available for runs at the moment \(Sessions coming soon\)
 
 Here are the prices by machine type _per hour_ when running on Grid cloud \(Built on top of AWS\).
 
-_\*_Prices will vary slightly.
+\_\*\_Prices will vary slightly.
 
 | Accelerators | Machine specs | List  price \(p/h\) | Interruptible  price \(p/h\) |
 | :--- | :--- | :--- | :--- |
@@ -55,7 +55,7 @@ _\*_Prices will vary slightly.
 | 8xK80 \(12 GB\) | [p2.8xlarge](https://aws.amazon.com/ec2/instance-types/p2/) | ~ $7.56 | ~ $2.27 |
 | 8xT4 \(16 GB\) | [g4dn.metal](https://aws.amazon.com/ec2/instance-types/g4/) | ~ $8.22 | ~ $2.46 |
 | 4xV100 \(16 GB\) | [p3.8xlarge](https://aws.amazon.com/ec2/instance-types/p3/) | ~ $12.85 | ~ $3.86 |
-| 16xK80 \(12 GB\) |  [p2.16xlarge](https://aws.amazon.com/ec2/instance-types/p2/) | ~ $15.12 | ~ $4.54 |
+| 16xK80 \(12 GB\) | [p2.16xlarge](https://aws.amazon.com/ec2/instance-types/p2/) | ~ $15.12 | ~ $4.54 |
 | 8xV100 \(16 GB\) | [p3.16xlarge](https://aws.amazon.com/ec2/instance-types/p3/) | ~ $25.70 | ~ $7.71 |
 | 8xV100 \(32 GB\) | [p3dn.24xlarge](https://aws.amazon.com/ec2/instance-types/p3/) | ~ $32.77 | ~ $11.11 |
 

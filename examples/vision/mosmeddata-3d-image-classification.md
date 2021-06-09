@@ -16,7 +16,7 @@ This example covers a 3D Image Classification task using Keras‌
 3. View Artifacts and Grid Weights in Keras and Inference Model
 
 {% hint style="info" %}
-This tutorial shows how to perform a Grid Run with the [**Tensorflow 2.2.2**](https://github.com/tensorflow/tensorflow/releases/tag/v2.2.2) ****library from the Grid CLI. **** 
+This tutorial shows how to perform a Grid Run with the [**Tensorflow 2.2.2**](https://github.com/tensorflow/tensorflow/releases/tag/v2.2.2) **library from the Grid CLI.** 
 {% endhint %}
 
 ## Tutorial time <a id="tutorial-time"></a>
@@ -25,9 +25,9 @@ This tutorial shows how to perform a Grid Run with the [**Tensorflow 2.2.2**](ht
 
 ## Task: 3D Image Classification <a id="task-3d-image-classification"></a>
 
-‌_3D Image Classification_ is the task of classifying volumetric data such as 3D Models or Medical CT Scans from collections of 2D images.  
-  
-The example shows the steps needed to build a 3D convolutional neural network \(CNN\) to predict the presence of viral pneumonia in computer tomography \(CT\) scans. 2D CNNs are commonly used to process RGB images \(3 channels\). A 3D CNN is simply the 3D equivalent: it takes as input a 3D volume or a sequence of 2D frames \(e.g. slices in a CT scan\), 3D CNNs are a powerful model for learning representations for volumetric data. It uses a subset of the [MosMedData: Chest CT Scans with COVID-19 Related Findings](https://arxiv.org/abs/2005.06465). This dataset consists of lung CT scans with COVID-19 related findings, as well as without such findings. 
+‌_3D Image Classification_ is the task of classifying volumetric data such as 3D Models or Medical CT Scans from collections of 2D images.
+
+The example shows the steps needed to build a 3D convolutional neural network \(CNN\) to predict the presence of viral pneumonia in computer tomography \(CT\) scans. 2D CNNs are commonly used to process RGB images \(3 channels\). A 3D CNN is simply the 3D equivalent: it takes as input a 3D volume or a sequence of 2D frames \(e.g. slices in a CT scan\), 3D CNNs are a powerful model for learning representations for volumetric data. It uses a subset of the [MosMedData: Chest CT Scans with COVID-19 Related Findings](https://arxiv.org/abs/2005.06465). This dataset consists of lung CT scans with COVID-19 related findings, as well as without such findings.
 
 {% hint style="info" %}
 For more information please see the [original Keras tutorial](https://keras.io/examples/vision/3D_image_classification/).‌
@@ -62,14 +62,14 @@ pip install -U lightning-grid
 grid login
 ```
 
-### 2. Clone the repo 
+### 2. Clone the repo
 
 ```text
 ‌git clone https://github.com/aribornstein/Keras-3D-Image-Classification.git
 cd Keras-3D-Image-Classification
 ```
 
-### 3. Use the CLI to start a Grid Run 
+### 3. Use the CLI to start a Grid Run
 
 ```text
 grid run train.py 
@@ -92,13 +92,13 @@ After running the CLI command above you should see this message.‌
 
 ## Step 3: View Model Run Metrics and Artifacts in Grid Web <a id="step-3-use-the-model-for-predictions"></a>
 
-In this step, we log into the Grid Web Account to see our Metrics and Download the Grid weights 
+In this step, we log into the Grid Web Account to see our Metrics and Download the Grid weights
 
 ### 1. Login to [Grid.ai](https://www.grid.ai/) and Click "Get Started with Grid"
 
 ![](../../.gitbook/assets/image%20%28117%29%20%282%29%20%282%29%20%282%29.png)
 
-###  2. Select our Run and view Experiment Metrics 
+### 2. Select our Run and view Experiment Metrics
 
 ![](../../.gitbook/assets/image%20%28110%29.png)
 
@@ -108,27 +108,27 @@ In this step, we log into the Grid Web Account to see our Metrics and Download t
 
 Congratulations you have successfully run your first Tensorflow/Keras script with Grid.
 
-## Advanced Keras/TF Cuda Version Configuration  <a id="bonus-cli-equivalent"></a>
+## Advanced Keras/TF Cuda Version Configuration <a id="bonus-cli-equivalent"></a>
 
 Grid currently supports native Cuda integration for TensorFlow version 2.2.0. Support for more versions is on the roadmap however if you need to train with a different version of TensorFlow or Keras and use Cuda you can configure your run as follows using an [Actions](../../products/run-run-and-sweep-github-files/actions.md) YAML configuration as follows.
 
-### 1. Identify the Corresponding Compatible Tensorflow/Keras Cuda Version 
+### 1. Identify the Corresponding Compatible Tensorflow/Keras Cuda Version
 
 You can look at the updated table maintained by google [here](https://www.tensorflow.org/install/source#gpu).
 
-### 2. Create a YAML Action Config in the same directory as your Train Script 
+### 2. Create a YAML Action Config in the same directory as your Train Script
 
 ```yaml
 # Main compute configuration.
 compute:
-  
+
   # Add cloud configuration here.
   provider:
-  
+
     credentials: PUT-GRID-KEY-HERE # Cloud key ID
     region: us-east-1              # Cloud region
     vendor: aws                    # Vendor, only aws
-  
+
   # Training configuration.
   train:
 
@@ -146,7 +146,7 @@ compute:
     actions:
       on_before_training_start:
         - conda install tensorflow-gpu==tensorflow-version-number cudatoolkit=corresponding-cuda-version-number -c anaconda -y 
-        - pip install tensorflow-gpu==tensorflow-version-number 
+        - pip install tensorflow-gpu==tensorflow-version-number
 ```
 
 {% hint style="warning" %}
@@ -162,8 +162,4 @@ Be sure to specify the following parameters in the Yaml Config above
 ```bash
 grid run train.py --config config.yml
 ```
-
-
-
-
 

@@ -3,7 +3,7 @@
 Here are the machines you can use to start up sessions
 
 ```text
-grid session create --instance_type 8_v100_32gb 
+grid session create --instance_type 8_v100_32gb
 ```
 
 | Name | Accelerator type |
@@ -22,6 +22,4 @@ grid session create --instance_type 8_v100_32gb
 | 1\_M60\_8gb | M60 |
 | 2\_CPU\_8gb | CPU |
 | 2\_CPU\_4gb | CPU |
-
-             
 

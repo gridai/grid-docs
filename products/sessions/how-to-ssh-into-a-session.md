@@ -4,7 +4,7 @@ description: 'ssh to an interactive session to carry out prototyping, debugging 
 
 # SSH into a Session
 
-## Step 0: Create an SSH Key 
+## Step 0: Create an SSH Key
 
 Create an ssh key from the computer you'd like to connect from \(skip this step if you already have a key\)
 

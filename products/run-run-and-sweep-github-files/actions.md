@@ -20,7 +20,7 @@ These are executed as your project image is built. We cache these commands on ev
 ```text
 compute:
   train:
-  
+
     actions:
       on_image_build:
         - apt-get install wget -y
@@ -38,7 +38,7 @@ Arbitrary commands that run just before your training process starts. This is us
 ```text
 compute:
   train:
-  
+
     actions:
       on_before_training_start:
         - bash download_dataset.sh
@@ -51,7 +51,7 @@ Runs after your script stops. This is useful for post-processing data, sending a
 ```text
 compute:
   train:
-  
+
     actions:
       on_after_training_end:
         - apt-get install curl -y
@@ -80,14 +80,14 @@ compute:
     memory: null
     nodes: 0
     scale_down_seconds: 1800
-    
+
     # Actions need to be passed as one command
     # per line.
     actions:
       on_image_build:
         - apt-get install wget -y
         - pip install tqdm
-        
+
       on_before_training_start:
         - bash download_dataset.sh
 
