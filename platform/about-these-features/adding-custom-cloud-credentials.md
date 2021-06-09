@@ -52,15 +52,15 @@ The "Secret access key" value will only be shown once. Make sure you copy that v
 
 Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md) for more details.
 
-## Step 2: Add IAM permission to your account
+## Step 2: Add IAM permissions to your account
 
-The user you just created, and fetched credentials for should have IAMAdministrator privileges.
+The user you just created, and fetched credentials for should have IAMFullAccess privileges.
 
 {% hint style="info" %}
 Reach out to us via Slack or email if you have any issues creating the following AWS roles and policies. We're happy to help!
 {% endhint %}
 
-### C: Add Policies to Your Account
+### A: Add Policies to Your Account
 
 The final step is to add all the Grid policies to your account. That means that your AWS keys will now be able to perform the operations required by Grid.
 
