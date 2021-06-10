@@ -90,7 +90,7 @@ git clone https://github.com/gridai/terraform-aws-gridbyoc.git
 cd terraform-aws-gridbyoc
 ```
 
-- Make sure your AWS CLI is properly configured with [id & secret you created](#d-create-new-aws-keys).  This are not shared with Grid.
+- Make sure your AWS CLI is properly configured with [id & secret you created](#d-create-new-aws-keys).  These are not shared with Grid.
 
 ```bash
 aws configure
@@ -104,6 +104,7 @@ Default output format [None]:
 ```
 
 - Run the Terraform script and enter the AWS Region when prompted
+  
 ```bash
 terraform init
 terraform apply
@@ -118,13 +119,13 @@ provider.aws.region
 ```
 - Get the output from terraform. By default terraform hides the sensitive secret output
 
-``` bash
+```bash
 terraform output -o json | jq
 ```
 
 From the last command you'll get the following output:
 
-```text
+```json
 {
   "external_id": {
     "sensitive": true,
@@ -142,12 +143,11 @@ From the last command you'll get the following output:
     "value": "example-role"
   }
 }
-
 ```
 
 ## Step 4: Register your role in grid
 
-```text
+```bash
 grid cluster aws --role-arn <arn:aws:iam::000000000000:role/example-role> --external-id <example-id> <cluster name>
 ```
 
