@@ -170,11 +170,31 @@ From the last command you'll get the following output:
   }
 }
 ```
+- Save `EXTERNAL_ID` and `ROLE_ARN` for use in later steps
+  
+```bash
+EXTERNAL_ID=$(terraform output --json | jq -r '.external_id.value')
+ROLE_ARN=$(terraform output --json | jq -r '.role_arn.value')
+```
 
 ## Step 4: Register your role in grid
 
+- Create cluster in default region with default instance types
+
 ```bash
-grid clusters aws --role-arn <arn:aws:iam::000000000000:role/example-role> --external-id <example-id> <cluster name>
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID <cluster name>
+```
+
+- Create cluster in `us-west-2` region with default instance types
+
+```bash
+grid clusters aws--role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 <cluster name>
+```
+
+- Create cluster in `eu-west-2` region with `t2.medium` and `t2.xlarge` instance types
+
+```bash
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.xlarge <cluster name>
 ```
 
 ## Step 5: Wait for cluster to be provisioned
