@@ -93,6 +93,10 @@ cd terraform-aws-gridbyoc
 - Make sure your AWS CLI is properly configured with [id & secret you created](#d-create-new-aws-keys).  These are not shared with Grid.
 
 ```bash
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+
 aws configure
 
 # prompt and example entries below
@@ -102,10 +106,23 @@ AWS Secret Access Key [None]: xxxxxxxxx
 Default region name [None]:
 Default output format [None]:
 ```
+- Verify AWS Access Key 
+  
+```bash
+aws sts get-caller-identity
+
+# example entries below should match the above steps
+{
+    "UserId": "xxxxxxxxx",
+    "Account": "xxxxxxxxx",
+    "Arn": "arn:aws:iam::xxxxxxxxx:user/xxxxxxxxx"
+}
+```
 
 - Run the Terraform script and enter the AWS Region when prompted
   
 ```bash
+cd quick-start
 terraform init
 terraform apply
 
@@ -116,11 +133,20 @@ provider.aws.region
   are us-east-1, us-west-2, etc.
 
   Enter a value: <us-east-1>
+
+# long list of actions truncated and the final prompt
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
 ```
 - Get the output from terraform. By default terraform hides the sensitive secret output
 
 ```bash
-terraform output -o json | jq
+terraform output --json | jq
 ```
 
 From the last command you'll get the following output:
@@ -148,7 +174,7 @@ From the last command you'll get the following output:
 ## Step 4: Register your role in grid
 
 ```bash
-grid cluster aws --role-arn <arn:aws:iam::000000000000:role/example-role> --external-id <example-id> <cluster name>
+grid clusters aws --role-arn <arn:aws:iam::000000000000:role/example-role> --external-id <example-id> <cluster name>
 ```
 
 ## Step 5: Wait for cluster to be provisioned
