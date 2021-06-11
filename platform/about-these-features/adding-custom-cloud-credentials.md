@@ -179,6 +179,8 @@ ROLE_ARN=$(terraform output --json | jq -r '.role_arn.value')
 
 ## Step 4: Register your role in grid
 
+By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently.  Specify only the AWS region and not the AZ in the `--region` argument. 
+
 - Create cluster in default region with default instance types
 
 ```bash
