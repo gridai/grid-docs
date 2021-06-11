@@ -119,7 +119,7 @@ aws sts get-caller-identity
 }
 ```
 
-- Run the Terraform script and enter the AWS Region when prompted
+- Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](#step-4-register-your-role-in-grid)
   
 ```bash
 cd quick-start
