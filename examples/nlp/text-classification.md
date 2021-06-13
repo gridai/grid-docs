@@ -33,7 +33,8 @@ It is fastest to upload zipped datasets from the Web UI.
 https://pl-flash-data.s3.amazonaws.com/imdb.zip
 ```
 
-![](../../.gitbook/assets/screen-shot-2021-04-10-at-2.49.59-pm.png)
+![new-datastore](https://user-images.githubusercontent.com/13732925/121347438-319f5380-c8f5-11eb-9b61-be571f8aab1f.png)
+
 
 ## Step 2: Start a new Run
 
@@ -43,11 +44,23 @@ Paste the link to file in the New Run page.
 
 Make sure to select the datastore created above. Notice that mount directory is /opt/datastore. Make sure to add the flags to your script.
 
-![](../../.gitbook/assets/screen-shot-2021-04-10-at-9.10.24-pm.png)
+![new run full 1](https://user-images.githubusercontent.com/13732925/121349841-f81c1780-c8f7-11eb-9dd6-3fe54d77c32a.png)
 
-Add flags to the script then Run
 
-![](../../.gitbook/assets/screen-shot-2021-04-10-at-8.56.40-pm.png)
+
+Add the following flags to the script, then Run
+
+```
+--gpus 1 \
+--train_file /datastores/imdb-ds/imdb/train.csv \
+--valid_file /datastores/imdb-ds/imdb/valid.csv \
+--test_file /datastores/imdb-ds/imdb/test.csv \
+--max_epochs 1
+```
+
+<img width="1775" alt="new run full 3" src="https://user-images.githubusercontent.com/13732925/121355055-7dee9180-c8fd-11eb-80bd-8e6f7add679a.png">
+
+
 
 ## Step 3: Visualize Metrics
 
@@ -55,13 +68,16 @@ As the model starts to train, metrics appear in the metrics section, make sure t
 
 Tensorboard is also accessible
 
-![](../../.gitbook/assets/screen-shot-2021-04-10-at-8.58.52-pm.png)
+<img width="1771" alt="train  loss" src="https://user-images.githubusercontent.com/13732925/121350065-33b6e180-c8f8-11eb-9aba-bc836748c663.png">
+
+
 
 ## Step 4: Download Artifacts
 
 Artifacts are available to download as well. You can choose to train for many epochs, create multiple checkpoints.
 
-![](../../.gitbook/assets/textclassify2.gif)
+![artifacts](https://user-images.githubusercontent.com/13732925/121350135-48937500-c8f8-11eb-8703-999161076d09.gif)
+
 
 ## Bonus: Run in CLI
 
@@ -79,9 +95,9 @@ grid run \
     --datastore_name imdb-ds \
       train.py \
     --gpus 1  \
-    --train_file /opt/datastore/train.csv \
-    --valid_file /opt/datastore/valid.csv  \
-    --test_file /opt/datastore/test.csv \
+    --train_file /datastores/imdb-ds/train.csv \
+    --valid_file /datastores/imdb-ds/valid.csv  \
+    --test_file /datastores/imdb-ds/test.csv \
     --max_epochs 1
 ```
 
