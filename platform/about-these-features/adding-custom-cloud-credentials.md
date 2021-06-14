@@ -14,7 +14,7 @@ Using your own AWS credentials with Grid is currently in closed early access.
 
 [REQUEST early access to this feature](https://forms.gle/CDk9yajbA5MWSRKM8)
 
-This Documentation is currently heavy work in progress
+Note: This documentation is currently a heavy work in progress...
 
 ## Step 1: Get AWS credentials
 
@@ -36,7 +36,11 @@ If you don't have a user available and would like to create one, on the "Users" 
 
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
-Click on "Next: tags" &gt; "Next: review" &gt; "Create user".
+Click on "Next: Permissions" &gt; 
+
+The user should have IAMFullAccess privileges.
+
+Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
 
 ### D: Create New AWS Keys
 
@@ -50,7 +54,7 @@ Click on "Next: tags" &gt; "Next: review" &gt; "Create user".
 The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
 {% endhint %}
 
-Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md) for more details.
+Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](https://docs.grid.ai/platform/about-these-features/adding-custom-cloud-credentials#step-2-add-iam-permissions-to-your-account) for more details.
 
 ## Step 2: Add IAM permissions to your account
 
@@ -67,12 +71,13 @@ The final step is to add all the Grid policies to your account. That means that 
 1. First, log in to AWS and navigate to IAM
 2. Click on "Users"
 3. On the user's page, find your user name and click on it
-4. Click on "Attach existing policies directly"
+4. Click on "Add permissions"
+5. Click on "Attach existing policies directly"
 
 ![Granting permissions to an user.](../../.gitbook/assets/image%20%2813%29.png)
 
-1. Search for the policy IAMFullAccess:  
-2. Click on "Add permissions"
+1. Search for and select the policy IAMFullAccess  
+2. Click on "Next:Review" and then "Add permissions"
 
 Now that you have added the right permissions to your user name, you can use the user's AWS API keys with Grid.
 
