@@ -172,11 +172,11 @@ From the last command you'll get the following output:
   }
 }
 ```
-- Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](#step-4-register-your-role-in-grid)
+- Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](#step-4-register-your-role-in-grid). 
   
 ```bash
-EXTERNAL_ID=$(terraform output --json | jq -r '.external_id.value')
-ROLE_ARN=$(terraform output --json | jq -r '.role_arn.value')
+EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
+ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 
 ```
 
