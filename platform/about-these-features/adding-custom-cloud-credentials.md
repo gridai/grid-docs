@@ -128,13 +128,13 @@ aws sts get-caller-identity
 terraform init
 terraform apply
 
-
-  \`\`\`bash
-
-  terraform init
+# enter provider.aws.region
+provider.aws.region
+  The region where AWS operations will take place. Examples
+  are us-east-1, us-west-2, etc.
 
   Enter a value: <us-east-1>
-
+  
 # long list of actions truncated and the final prompt
 
 Do you want to perform these actions?
