@@ -98,7 +98,7 @@ This 1-minute video shows how to RUN from the web app:
 
 If you prefer to use the CLI simply replace python with grid run.
 
-![](.gitbook/assets/image%20%28119%29.png)
+![](.gitbook/assets/image%20%28119%29%20%282%29%20%282%29%20%282%29.png)
 
 First, install Grid and login
 
