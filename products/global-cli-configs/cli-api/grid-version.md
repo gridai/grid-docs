@@ -4,7 +4,7 @@ description: Shows the Grid version.
 
 # grid version
 
-Use grid version to print the CLI version 
+Use `grid version` to view the CLI version being used.
 
 ```text
 $ grid version
