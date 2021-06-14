@@ -184,6 +184,13 @@ ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently.  Only specify the AWS region and not the AZ in the `--region` argument. 
 
+- Login to Grid.  Please reference the detailed [steps](https://docs.grid.ai/products/global-cli-configs#install-the-cli) as required. 
+
+```bash
+pip install --user --upgrade lightning_grid
+grid login --username <Grid user name> --key <Grid API Key>
+```
+
 - Create cluster in default region with default instance types
 
 ```bash
