@@ -112,7 +112,9 @@ Congratulations you have successfully run your first Tensorflow/Keras script wit
 If using the Web UI to run this tutorial, simply copy and paste the [github script](https://github.com/aribornstein/Keras-3D-Image-Classification/blob/main/train.py) and choose "tensorflow" in the framework selection drop down
 {% endhint %}
 
+Here's a video of using Keras/TF example in Web UI
 
+[https://www.loom.com/share/f00e6b67df9a49709886bc9beebff3dd](https://www.loom.com/share/f00e6b67df9a49709886bc9beebff3dd)
 
 ## Advanced Keras/TF Cuda Version Configuration <a id="bonus-cli-equivalent"></a>
 
