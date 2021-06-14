@@ -96,7 +96,7 @@ In this step, we log into the Grid Web Account to see our Metrics and Download t
 
 ### 1. Login to [Grid.ai](https://www.grid.ai/) and Click "Get Started with Grid"
 
-![](../../.gitbook/assets/image%20%28117%29%20%282%29%20%282%29%20%282%29.png)
+![](../../.gitbook/assets/image%20%28117%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%283%29.png)
 
 ### 2. Select our Run and view Experiment Metrics
 
@@ -107,6 +107,12 @@ In this step, we log into the Grid Web Account to see our Metrics and Download t
 ![](../../.gitbook/assets/image%20%283%29.png)
 
 Congratulations you have successfully run your first Tensorflow/Keras script with Grid.
+
+{% hint style="info" %}
+If using the Web UI to run this tutorial, simply copy and paste the [github script](https://github.com/aribornstein/Keras-3D-Image-Classification/blob/main/train.py) and choose "tensorflow" in the framework selection drop down
+{% endhint %}
+
+
 
 ## Advanced Keras/TF Cuda Version Configuration <a id="bonus-cli-equivalent"></a>
 
