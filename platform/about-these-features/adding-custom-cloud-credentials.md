@@ -1,12 +1,14 @@
 # Add custom cloud credential
 
-## Custom cloud credentials
+## Add custom cloud credential
+
+### Custom cloud credentials
 
 Grid can orchestrate infrastructure on your own AWS account by simply adding your own AWS credentials.
 
 ![](../../.gitbook/assets/own_creds.gif)
 
-## Early access
+### Early access
 
 {% hint style="danger" %}
 Using your own AWS credentials with Grid is currently in closed early access.
@@ -14,21 +16,21 @@ Using your own AWS credentials with Grid is currently in closed early access.
 
 [REQUEST early access to this feature](https://forms.gle/CDk9yajbA5MWSRKM8)
 
-## Step 1: Get AWS credentials
+### Step 1: Get AWS credentials
 
-### A: Login to AWS and search for IAM
+#### A: Login to AWS and search for IAM
 
 Login into your AWS account. You will then use the search bar to find "IAM" \(user management\).
 
 ![](../../.gitbook/assets/image%20%28156%29.png)
 
-### B: Click on "Users"
+#### B: Click on "Users"
 
 Click on the "Users" panel. You will be able to see a list of users. If you already have a user, click on your user name. If you don't, move to the next step to create a new user.
 
 ![](../../.gitbook/assets/image%20%2859%29.png)
 
-### C: Create New User \(optional\)
+#### C: Create New User \(optional\)
 
 If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
 
@@ -36,7 +38,7 @@ If you don't have a user available and would like to create one, on the "Users" 
 
 Click on "Next: tags" &gt; "Next: review" &gt; "Create user".
 
-### D: Create New AWS Keys
+#### D: Create New AWS Keys
 
 1. Navigate to the "Users" page
 2. Click on your user name
@@ -50,7 +52,7 @@ The "Secret access key" value will only be shown once. Make sure you copy that v
 
 Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md) for more details.
 
-## Step 2: Add IAM permissions to your account
+### Step 2: Add IAM permissions to your account
 
 The user you just created, and fetched credentials for should have IAMFullAccess privileges.
 
@@ -58,7 +60,7 @@ The user you just created, and fetched credentials for should have IAMFullAccess
 Reach out to us via Slack or email if you have any issues creating the following AWS roles and policies. We're happy to help!
 {% endhint %}
 
-### A: Add Policies to Your Account
+#### A: Add Policies to Your Account
 
 The final step is to add all the Grid policies to your account. That means that your AWS keys will now be able to perform the operations required by Grid.
 
@@ -77,13 +79,13 @@ The final step is to add all the Grid policies to your account. That means that 
 
 Now that you have added the right permissions to your user name, you can use the user's AWS API keys with Grid.
 
-## Step 3: Create Role & Policy grid requires
+### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc)  This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest) 
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
 
-For quick start 
+For quick start
 
-- Clone the repo
+* Clone the repo
 
 ```bash
 git clone https://github.com/gridai/terraform-aws-gridbyoc.git
@@ -91,6 +93,7 @@ cd terraform-aws-gridbyoc/quick-start
 ```
 
 - Make sure your AWS CLI is properly configured with [id & secret you created](#d-create-new-aws-keys).  These are not shared with Grid.
+
 
 ```bash
 unset AWS_ACCESS_KEY_ID
@@ -125,11 +128,10 @@ aws sts get-caller-identity
 terraform init
 terraform apply
 
-# prompt and example entry <us-east-1> below
 
-provider.aws.region
-  The region where AWS operations will take place. Examples
-  are us-east-1, us-west-2, etc.
+  \`\`\`bash
+
+  terraform init
 
   Enter a value: <us-east-1>
 
@@ -142,6 +144,7 @@ Do you want to perform these actions?
   Enter a value: yes
 
 ```
+
 - Get the output from terraform. By default terraform hides the sensitive secret output
 
 ```bash
@@ -174,9 +177,10 @@ From the last command you'll get the following output:
 ```bash
 EXTERNAL_ID=$(terraform output --json | jq -r '.external_id.value')
 ROLE_ARN=$(terraform output --json | jq -r '.role_arn.value')
+
 ```
 
-## Step 4: Register your role in grid
+### Step 4: Register your role in grid
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently.  Only specify the AWS region and not the AZ in the `--region` argument. 
 
@@ -198,7 +202,7 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.xlarge <cluster name>
 ```
 
-## Step 5: Wait for cluster to be provisioned
+### Step 5: Wait for cluster to be provisioned
 
 ```text
 grid clusters
@@ -217,7 +221,7 @@ And wait for your cluster status be `running`:
 
 It can take some time to provision a new cluster, ~20-30 minutes
 
-## Step 6: Run your workloads in your new cluster
+### Step 6: Run your workloads in your new cluster
 
 ```text
 grid run --cluster <cluster name>
@@ -226,5 +230,5 @@ grid session --cluster <cluster name>  create
 
 Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
-## Step 7: Enjoy
+### Step 7: Enjoy
 

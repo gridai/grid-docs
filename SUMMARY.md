@@ -20,7 +20,6 @@
     * [grid session](products/global-cli-configs/cli-api/grid-interactive.md)
     * [grid logs](products/global-cli-configs/cli-api/grid-logs.md)
     * [grid login](products/global-cli-configs/cli-api/grid-login.md)
-    * [grid metrics](products/global-cli-configs/cli-api/grid-metrics.md)
     * [grid run](products/global-cli-configs/cli-api/grid-train.md)
     * [grid status](products/global-cli-configs/cli-api/grid-status.md)
     * [grid stop](products/global-cli-configs/cli-api/grid-cancel.md)
