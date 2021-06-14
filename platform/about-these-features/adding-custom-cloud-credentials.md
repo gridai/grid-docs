@@ -36,7 +36,7 @@ If you don't have a user available and would like to create one, on the "Users" 
 
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
-Click on "Next: Permissions" &gt; 
+Click on "Next: Permissions" &gt;
 
 The user should have IAMFullAccess privileges.
 
@@ -121,7 +121,7 @@ Default output format [None]:
 
 provider.aws.region The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
 
-Enter a value: 
+Enter a value:
 
 ```text
 - Get the output from terraform. By default terraform hides the sensitive secret output
