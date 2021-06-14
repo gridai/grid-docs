@@ -87,7 +87,7 @@ For quick start
 
 ```bash
 git clone https://github.com/gridai/terraform-aws-gridbyoc.git
-cd terraform-aws-gridbyoc
+cd terraform-aws-gridbyoc/quick-start
 ```
 
 - Make sure your AWS CLI is properly configured with [id & secret you created](#d-create-new-aws-keys).  These are not shared with Grid.
@@ -122,7 +122,6 @@ aws sts get-caller-identity
 - Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](#step-4-register-your-role-in-grid)
   
 ```bash
-cd quick-start
 terraform init
 terraform apply
 
@@ -170,7 +169,7 @@ From the last command you'll get the following output:
   }
 }
 ```
-- Save `EXTERNAL_ID` and `ROLE_ARN` for use in later steps
+- Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](#step-4-register-your-role-in-grid)
   
 ```bash
 EXTERNAL_ID=$(terraform output --json | jq -r '.external_id.value')
@@ -179,7 +178,7 @@ ROLE_ARN=$(terraform output --json | jq -r '.role_arn.value')
 
 ## Step 4: Register your role in grid
 
-By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently.  Specify only the AWS region and not the AZ in the `--region` argument. 
+By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently.  Only specify the AWS region and not the AZ in the `--region` argument. 
 
 - Create cluster in default region with default instance types
 
@@ -190,7 +189,7 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID <cluster name>
 - Create cluster in `us-west-2` region with default instance types
 
 ```bash
-grid clusters aws--role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 <cluster name>
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 <cluster name>
 ```
 
 - Create cluster in `eu-west-2` region with `t2.medium` and `t2.xlarge` instance types
