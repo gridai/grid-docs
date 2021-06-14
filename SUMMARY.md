@@ -38,6 +38,7 @@
   * [Metrics](products/mobile/metrics.md)
   * [Stop experiments](products/mobile/stop-experiments.md)
 * [⚡Sessions](products/sessions/README.md)
+  * [Using Julia and R languages in Sessions](products/sessions/using-julia-and-r-languages-in-sessions.md)
   * [Attaching Datastores](products/sessions/attaching-datastores.md)
   * [Github login](products/sessions/github-login.md)
   * [JupyterLab with Sessions](products/sessions/jupyterlab-with-sessions.md)
