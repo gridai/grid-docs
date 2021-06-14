@@ -15,7 +15,7 @@ Make sure to update CLI to the latest
 ### Added
 
 * Sessions now support Julia and R languages within JupyterLab.
-* Utilities added to jupyterlab enviornments `tree`, `tmux`, and `gpustat`
+* Utilities added to jupyterlab environments `tree`, `tmux`, and `gpustat`
 * The `grid stop` command can be used to stop a session, run, or experiment. Note that using this command for a session will delete the session entirely. To pause a session, continue using `grid session pause`.
 * Use the `grid user` command to show information of the logged in user.
 
@@ -56,17 +56,13 @@ Make sure to update CLI to the latest
 
 ## May 6, 2021
 
-### Bug fixes patch
+### Bug fixes patch release
 
 ## May 4, 2021
 
 ### Interruptible Machines\(Spot Instances\)
 
 {% page-ref page="../products/run-run-and-sweep-github-files/interruptible-machines.md" %}
-
-
-
-### 
 
 ## April 28, 2021
 
