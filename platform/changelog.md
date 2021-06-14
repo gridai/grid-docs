@@ -4,6 +4,100 @@ description: What's new and improved in Grid.
 
 # Changelog
 
+## Keep up with the Product updates on Github!
+
+Make sure to update CLI to the latest
+
+{% embed url="https://github.com/gridai/gridai/discussions" %}
+
+## June 14, 2021
+
+### Added
+
+* Sessions now support Julia and R languages within JupyterLab.
+* Utilities added to jupyterlab enviornments `tree`, `tmux`, and `gpustat`
+* The `grid stop` command can be used to stop a session, run, or experiment. Note that using this command for a session will delete the session entirely. To pause a session, continue using `grid session pause`.
+* Use the `grid user` command to show information of the logged in user.
+
+### Changed
+
+* Deprecated `grid train` in favor of `grid run`.
+* Deprecated `grid interactive` in favor of `grid session`.
+* Deprecated `grid cancel` in favor of `grid stop`.
+
+### Fixed
+
+* Fixes an issue with generating ssh keys with whitespace in the ssh comments [\#50](https://github.com/gridai/gridai/issues/50)
+* Prevents users from being stuck in a phone verification loop if verification fails initially.
+* Improvements to cloning runs - a clone of a spot instance is automatically a spot instance run.
+* Fixes live streaming of logs
+* Several improvements to documentation, especially to the CLI API reference and training examples
+
+## June 4, 2021
+
+### Added
+
+* New style formatting to CLI help text. Check it out with `grid --help` !
+* The `interactive` command is deprecated and will be removed in a later release. Use `session` instead. Example: `grid session pause prudent-ara-859`
+
+### Fixed
+
+* Fixed a bug where in certain cases where spot runs would be killed and restarted
+* Fixed a bug with certain disappearing artifacts at the end of trainin
+
+## May 28, 2021
+
+### **Added CLI updates**
+
+* Parameters prefixed with "grid\_" or "g\_" are deprecated and will be removed in a later release. Use their non-prefixed variants instead. For example, `grid run --g_instance_type` is now `grid run --instance_type`
+* The CLI command for grid datastores has been updated to `grid datastore {option}`. Ex: Use `grid datastore` to list all existing datastores.
+* Use `grid sync-env` to synchronize the requirements file with packages and versions from the currently active environment.
+* To open up the CLI docs directly from the terminal, use `grid docs`
+
+## May 6, 2021
+
+### Bug fixes patch
+
+## May 4, 2021
+
+### Interruptible Machines\(Spot Instances\)
+
+{% page-ref page="../products/run-run-and-sweep-github-files/interruptible-machines.md" %}
+
+
+
+### 
+
+## April 28, 2021
+
+### Sessions
+
+* Jupyterlab images includes less
+* Improved status change updates in UI and CLI
+* "Connect via SSH" includes full session name
+
+### Datastores
+
+* Mount directory is optional when creating datastores
+* Other bug fixes
+
+## April 16, 2021
+
+### Added
+
+* More accurate estimated costs.
+* Share button, Github badge and cloning of experiments/runs.
+* Dark mode
+* Build logs now show up on the details page
+* Stdout logs can now be downloaded
+
+### Fixed
+
+* Certain cases where runs would stay queued for a while
+* Delays in getting metrics
+* Saving large files on Sessions
+* Charts not refreshing [\#29](https://github.com/gridai/gridai/issues/29)
+
 ## April 13, 2021
 
 We are now live! Grid platform is accessible via our new website: [https://www.grid.ai/](https://www.grid.ai/)
