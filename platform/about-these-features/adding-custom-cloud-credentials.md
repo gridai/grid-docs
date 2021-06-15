@@ -85,7 +85,7 @@ Now that you have added the right permissions to your user name, you can use the
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#installing-3rd-party-tools).  If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
 
 For quick start
 
@@ -179,8 +179,8 @@ From the last command you'll get the following output:
 * Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid). 
 
 ```bash
-EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
-ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
+export EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
+export ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 ```
 
 ### Step 4: Register your role in grid
@@ -209,7 +209,7 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 * Create cluster in `eu-west-2` region with `t2.medium` and `t2.xlarge` instance types
 
 ```bash
-grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.xlarge <cluster name>
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.large <cluster name>
 ```
 
 ### Step 5: Wait for cluster to be provisioned
@@ -241,4 +241,43 @@ grid session --cluster <cluster name>  create
 Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
 ### Step 7: Enjoy
+
+
+# Installing 3rd Party Tools
+
+Installation steps of the following tools are covered.
+
+- git
+- [jq](https://stedolan.github.io/jq/)
+- [terraform](https://www.terraform.io/) 
+- [AWS CLI](https://aws.amazon.com/cli/) 
+
+## OSX 
+
+[brew](https://brew.sh/) and [pip3](https://packaging.python.org/guides/tool-recommendations/) are used in this example. 
+
+```bash
+brew install git
+brew install terraform 
+brew install jq
+pip3 install awscli --upgrade --user
+```
+
+## Linux (Debian/Ubuntu)
+
+[Grid Session SSH](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session) can be used to run the below example. [apt-get](http://manpages.ubuntu.com/manpages/cosmic/man8/apt-get.8.html) and [repository configuration](https://www.terraform.io/docs/cli/install/apt.html#repository-configuration) are used in this example.  
+
+```bash
+# add hashicorp repo
+sudo apt-get install gpg
+sudo apt-get install software-properties-common
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+# install the tools
+sudo apt-get install git
+sudo apt-get install terraform 
+sudo apt-get install jq
+sudo apt-get install awscli
+```
 
