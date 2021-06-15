@@ -153,7 +153,7 @@ Do you want to perform these actions?
 - Get the output from terraform. By default terraform hides the sensitive secret output
 
 ```bash
-terraform output --json | jq
+terraform output -json | jq
 ```
 
 From the last command you'll get the following output:
@@ -243,4 +243,3 @@ grid session --cluster <cluster name>  create
 Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
 ### Step 7: Enjoy
-
