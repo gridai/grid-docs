@@ -14,27 +14,27 @@ Allowed parameters:
 
 | flag | description | optional |
 | :--- | :--- | :--- |
-| --g\_credential | The cloud credential to use with the session | yes |
-| --g\_disk\_size | Disk size of the session | yes |
-| --g\_instance\_type | Cloud machine type | yes |
-| --g\_name | Name of the Session | yes |
-| --g\_config | Points to a YAML config file | yes |
-| --g\_description | Description of the interactive session | yes |
-| --g\_datastore\_\_\_name | Name of datastore to be mounted in interactive session | yes |
-| --g\_datastore\_version | Version of datastore to be mounted in interactive session | yes |
-| --g\_datastore\_mount\_dir | Absolute path to mount Datastore in interactive node | yes |
+| --credential | The cloud credential to use with the session | yes |
+| --disk\_size | Disk size of the session | yes |
+| --instance\_type | Cloud machine type | yes |
+| --name | Name of the Session | yes |
+| --config | Points to a YAML config file | yes |
+| --description | Description of the interactive session | yes |
+| --datastore\_\_\_name | Name of datastore to be mounted in interactive session | yes |
+| --datastore\_version | Version of datastore to be mounted in interactive session | yes |
+| --datastore\_mount\_dir | Absolute path to mount Datastore in interactive node | yes |
 
 ```text
 grid session create --instance_type 2_cpu_4gb
 ```
 
 {% hint style="warning" %}
-Interactive nodes are currently not re-usable, even after deletion.
+Interactive sessions cannot be re-used after deletion.
 {% endhint %}
 
 ## delete
 
-Deletes an interactive node.
+Deletes an interactive session.
 
 ```bash
 grid session delete the-session-name
@@ -86,7 +86,7 @@ grid session resume bluberry-122
 
 ## ssh
 
-SSH to interactive nodes.
+SSH to interactive session.
 
 First, create an ssh key
 
@@ -108,9 +108,9 @@ grid session ssh happy-owl-123
 
 ## sync-ssh-config
 
-Sync interactive node's ssh config to the local ssh config.
+Sync interactive session's ssh config to the local ssh config.
 
-It manages a section within the ssh config file for all interactive nodes ssh config details.
+It manages a section within the ssh config file for all sessions ssh config details.
 
 Afterwards you can use the system's ssh & related utilities \(sshfs, rsync, ansible, etc\) with interactive sessions directly.
 
