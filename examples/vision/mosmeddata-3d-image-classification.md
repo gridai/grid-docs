@@ -41,7 +41,7 @@ The MosMedData: Chest CT Scans with COVID-19 Related Findings Dataset \([_refere
 
 ## Step 1: Keras/Tensorflow Model Script <a id="step-1-model"></a>
 
-Grid supports Keras/Tensorflow runs from the CLI. For this demo, we're going to be using the code [here](https://github.com/aribornstein/gridDemos/blob/main/flash/train_object_detection.py) sourced from the Keras 3D Image Classification from CT Scans demo by [Hasib Zunair](https://hasibzunair.github.io/) from the Keras IO examples [repo](https://github.com/keras-team/keras-io/tree/master/examples) with minor modifications for [TensorBoard](https://www.tensorflow.org/tensorboard) integration. \[[Reference](https://keras.io/examples/vision/3D_image_classification/)\]
+Grid supports Keras/Tensorflow runs from the CLI. For this demo, we're going to be using the code [here](https://github.com/aribornstein/Keras-3D-Image-Classification/blob/main/train.py) sourced from the Keras 3D Image Classification from CT Scans demo by [Hasib Zunair](https://hasibzunair.github.io/) from the Keras IO examples [repo](https://github.com/keras-team/keras-io/tree/master/examples) with minor modifications for [TensorBoard](https://www.tensorflow.org/tensorboard) integration. \[[Reference](https://keras.io/examples/vision/3D_image_classification/)\]
 
 {% hint style="info" %}
 When using the Keras Tensorboard callback make sure to set the log\_dir to './lightning\_logs/keras'
@@ -112,7 +112,9 @@ Congratulations you have successfully run your first Tensorflow/Keras script wit
 If using the Web UI to run this tutorial, simply copy and paste the [github script](https://github.com/aribornstein/Keras-3D-Image-Classification/blob/main/train.py) and choose "tensorflow" in the framework selection drop down
 {% endhint %}
 
+Here's a video of using Keras/TF example in Web UI
 
+[https://www.loom.com/share/f00e6b67df9a49709886bc9beebff3dd](https://www.loom.com/share/f00e6b67df9a49709886bc9beebff3dd)
 
 ## Advanced Keras/TF Cuda Version Configuration <a id="bonus-cli-equivalent"></a>
 

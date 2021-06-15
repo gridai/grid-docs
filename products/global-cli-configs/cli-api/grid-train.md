@@ -12,7 +12,7 @@ description: Executes a python script on a cloud machine and handles hyperparame
 
 Basically... think about it like replacing `python` with `grid run`
 
-![](../../../.gitbook/assets/image%20%28119%29%20%282%29%20%282%29%20%283%29.png)
+![](../../../.gitbook/assets/carbon-1-.png)
 
 {% hint style="info" %}
 Projects must be hosted on **Github** for now. [Reach out](mailto:luis@grid.ai) for other cases.
@@ -26,25 +26,25 @@ grid run and grid run are the same, you can use either one.
 
 This command:
 
-![](../../../.gitbook/assets/image%20%28104%29.png)
+![](../../../.gitbook/assets/carbon2.png)
 
 Is equivalent to these commands:
 
-![](../../../.gitbook/assets/image%20%2844%29.png)
+![](../../../.gitbook/assets/carbon3.png)
 
 Our syntax adds support for any numpy distribution, lists, and the range operator:
 
-![](../../../.gitbook/assets/image%20%28114%29.png)
+![](../../../.gitbook/assets/carbon5-2-.png)
 
 ## Command structure
 
 A grid run command has the following structure:
 
-![](../../../.gitbook/assets/image%20%2838%29.png)
+![](../../../.gitbook/assets/carbon6.png)
 
 Annotated Example 1: Run a script on 8 V100 GPUs
 
-![](../../../.gitbook/assets/image%20%2881%29.png)
+![](../../../.gitbook/assets/carbon7.png)
 
 Example 2: Run 8 variations of this script, each on 8 GPUs
 
