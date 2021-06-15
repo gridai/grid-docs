@@ -265,7 +265,7 @@ pip3 install awscli --upgrade --user
 
 ## Linux (Debian/Ubuntu)
 
-[Grid Session SSH](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session#step-3-login-to-the-interactive-session) can be used to run the below example. [apt-get](http://manpages.ubuntu.com/manpages/cosmic/man8/apt-get.8.html) and [repository configuration](https://www.terraform.io/docs/cli/install/apt.html#repository-configuration) are used in this example.  
+[Grid Session SSH](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session) can be used to run the below example. [apt-get](http://manpages.ubuntu.com/manpages/cosmic/man8/apt-get.8.html) and [repository configuration](https://www.terraform.io/docs/cli/install/apt.html#repository-configuration) are used in this example.  
 
 ```bash
 # add hashicorp repo
