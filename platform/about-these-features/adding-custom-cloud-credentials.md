@@ -93,12 +93,17 @@ For quick start
 
 ```bash
 git clone https://github.com/gridai/terraform-aws-gridbyoc.git
-cd terraform-aws-gridbyoc
+cd terraform-aws-gridbyoc/quick-start
 ```
 
-* Make sure your AWS CLI is properly configured with [id & secret you created](adding-custom-cloud-credentials.md#d-create-new-aws-keys).  This are not shared with Grid.
+- Make sure your AWS CLI is properly configured with [id & secret you created](#d-create-new-aws-keys).  These are not shared with Grid.
+
 
 ```bash
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+
 aws configure
 
 # prompt and example entries below
@@ -108,31 +113,52 @@ AWS Secret Access Key [None]: xxxxxxxxx
 Default region name [None]:
 Default output format [None]:
 ```
+- Verify AWS Access Key 
+  
+```bash
+aws sts get-caller-identity
 
-* Run the Terraform script and enter the AWS Region when prompted
+# example entries below should match the above steps
+{
+    "UserId": "xxxxxxxxx",
+    "Account": "xxxxxxxxx",
+    "Arn": "arn:aws:iam::xxxxxxxxx:user/xxxxxxxxx"
+}
+```
 
-  \`\`\`bash
+- Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](#step-4-register-your-role-in-grid)
+  
+```bash
+terraform init
+terraform apply
 
-  terraform init
+# enter provider.aws.region
+provider.aws.region
+  The region where AWS operations will take place. Examples
+  are us-east-1, us-west-2, etc.
 
-  terraform apply
+  Enter a value: <us-east-1>
+  
+# long list of actions truncated and the final prompt
 
-## prompt and example entry  below
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
 
-provider.aws.region The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
+  Enter a value: yes
 
-Enter a value:
+```
 
-```text
+
 - Get the output from terraform. By default terraform hides the sensitive secret output
 
-``` bash
-terraform output -o json | jq
+```bash
+terraform output -json | jq
 ```
 
 From the last command you'll get the following output:
 
-```text
+```json
 {
   "external_id": {
     "sensitive": true,
@@ -151,11 +177,41 @@ From the last command you'll get the following output:
   }
 }
 ```
+- Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](#step-4-register-your-role-in-grid). 
+  
+```bash
+EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
+ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
+
+```
 
 ### Step 4: Register your role in grid
 
-```text
-grid cluster aws --role-arn <arn:aws:iam::000000000000:role/example-role> --external-id <example-id> <cluster name>
+By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently.  Only specify the AWS region and not the AZ in the `--region` argument. 
+
+- Login to Grid.  Please reference the detailed [steps](https://docs.grid.ai/products/global-cli-configs#install-the-cli) as required. 
+
+```bash
+pip install lightning_grid --upgrade 
+grid login --username <Grid user name> --key <Grid API Key>
+```
+
+- Create cluster in default region with default instance types
+
+```bash
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID <cluster name>
+```
+
+- Create cluster in `us-west-2` region with default instance types
+
+```bash
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 <cluster name>
+```
+
+- Create cluster in `eu-west-2` region with `t2.medium` and `t2.xlarge` instance types
+
+```bash
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.xlarge <cluster name>
 ```
 
 ### Step 5: Wait for cluster to be provisioned
@@ -187,4 +243,3 @@ grid session --cluster <cluster name>  create
 Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
 ### Step 7: Enjoy
-
