@@ -192,7 +192,7 @@ By default, Grid Sessions and Runs are spun up in Availability Zone `a` currentl
 - Login to Grid.  Please reference the detailed [steps](https://docs.grid.ai/products/global-cli-configs#install-the-cli) as required. 
 
 ```bash
-pip install --user --upgrade lightning_grid
+pip install lightning_grid --upgrade 
 grid login --username <Grid user name> --key <Grid API Key>
 ```
 
