@@ -50,7 +50,7 @@ Example 2: Run 8 variations of this script, each on 8 GPUs
 
 ```bash
 grid run \
--g_instance_type 8_v100_32gb \
+--instance_type 8_v100_32gb \
 model.py --learning_rate "uniform(1e-5, 1e-1, 4)" --layers "[2, 4]"
 ```
 
