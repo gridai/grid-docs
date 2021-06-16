@@ -4,7 +4,7 @@
 
 - Make sure to follow the workflows, examples, products sections
 - Make sure to follow heading, paragraph, and hint conventions
-- When adding code snippets, add as bash format so that it can be copied and pasted from Gitbook
+- When adding code snippets, use the bash format so that it can be copied and pasted from Gitbook
 - When adding code snippets for illustration, use carbon
 
 **When updating the docs make sure to create a private branch and test locally and visually inspect the files for formatting errors.**
