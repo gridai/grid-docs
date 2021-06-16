@@ -22,14 +22,17 @@ Allowed parameters:
 | --description | Description of the interactive session | yes |
 | --datastore\_\_\_name | Name of datastore to be mounted in interactive session | yes |
 | --datastore\_version | Version of datastore to be mounted in interactive session | yes |
-| --datastore\_mount\_dir | Absolute path to mount Datastore in interactive node | yes |
+
+| --datastore\_mount\_dir | Absolute path to mount Datastore in interactive session | yes |
 
 ```text
 grid session create --instance_type 2_cpu_4gb
 ```
 
 {% hint style="warning" %}
+
 Interactive sessions cannot be re-used after deletion.
+
 {% endhint %}
 
 ## delete
@@ -49,13 +52,13 @@ Deleting a session deletes all files on that machine. To keep the files consider
 Mount interactive session directory to local.  
 To mount a filesystem use: `ixSession:[dir] mountpoint`
 
-**Example 1:** Mounts the home directory on the interactive node in dir `data`
+**Example 1:** Mounts the home directory on the interactive session in dir `data`
 
 ```bash
 grid session mount bluberry-122 ./data
 ```
 
-**Example 2:** Mounts `~/data` directory on the interactive node to `./data`
+**Example 2:** Mounts `~/data` directory on the interactive session to `./data`
 
 ```bash
 grid session mount bluberry-122:~/data ./data
@@ -110,7 +113,9 @@ grid session ssh happy-owl-123
 
 Sync interactive session's ssh config to the local ssh config.
 
-It manages a section within the ssh config file for all sessions ssh config details.
+
+It manages a section within the ssh config file for all interactive sessions ssh config details.
+
 
 Afterwards you can use the system's ssh & related utilities \(sshfs, rsync, ansible, etc\) with interactive sessions directly.
 
