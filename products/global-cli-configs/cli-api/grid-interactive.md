@@ -22,6 +22,7 @@ Allowed parameters:
 | --description | Description of the interactive session | yes |
 | --datastore\_\_\_name | Name of datastore to be mounted in interactive session | yes |
 | --datastore\_version | Version of datastore to be mounted in interactive session | yes |
+
 | --datastore\_mount\_dir | Absolute path to mount Datastore in interactive session | yes |
 
 ```text
@@ -29,7 +30,9 @@ grid session create --instance_type 2_cpu_4gb
 ```
 
 {% hint style="warning" %}
-Interactive session are currently not re-usable, even after deletion.
+
+Interactive sessions cannot be re-used after deletion.
+
 {% endhint %}
 
 ## delete
@@ -110,7 +113,9 @@ grid session ssh happy-owl-123
 
 Sync interactive session's ssh config to the local ssh config.
 
+
 It manages a section within the ssh config file for all interactive sessions ssh config details.
+
 
 Afterwards you can use the system's ssh & related utilities \(sshfs, rsync, ansible, etc\) with interactive sessions directly.
 

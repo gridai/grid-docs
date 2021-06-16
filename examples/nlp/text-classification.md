@@ -35,7 +35,6 @@ https://pl-flash-data.s3.amazonaws.com/imdb.zip
 
 ![new-datastore](https://user-images.githubusercontent.com/13732925/121347438-319f5380-c8f5-11eb-9b61-be571f8aab1f.png)
 
-
 ## Step 2: Start a new Run
 
 Take a look at this file if you are curious about the model. [https://github.com/gridai/grid-text-classification/blob/main/train.py](https://github.com/gridai/grid-text-classification/blob/main/train.py)
@@ -46,11 +45,9 @@ Make sure to select the datastore created above. Notice that mount directory is 
 
 ![new run full 1](https://user-images.githubusercontent.com/13732925/121349841-f81c1780-c8f7-11eb-9dd6-3fe54d77c32a.png)
 
-
-
 Add the following flags to the script, then Run
 
-```
+```text
 --gpus 1 \
 --train_file /datastores/imdb-ds/imdb/train.csv \
 --valid_file /datastores/imdb-ds/imdb/valid.csv \
@@ -58,9 +55,7 @@ Add the following flags to the script, then Run
 --max_epochs 1
 ```
 
-<img width="1775" alt="new run full 3" src="https://user-images.githubusercontent.com/13732925/121355055-7dee9180-c8fd-11eb-80bd-8e6f7add679a.png">
-
-
+![new run full 3](https://user-images.githubusercontent.com/13732925/121355055-7dee9180-c8fd-11eb-80bd-8e6f7add679a.png)
 
 ## Step 3: Visualize Metrics
 
@@ -68,16 +63,13 @@ As the model starts to train, metrics appear in the metrics section, make sure t
 
 Tensorboard is also accessible
 
-<img width="1771" alt="train  loss" src="https://user-images.githubusercontent.com/13732925/121350065-33b6e180-c8f8-11eb-9aba-bc836748c663.png">
-
-
+![train loss](https://user-images.githubusercontent.com/13732925/121350065-33b6e180-c8f8-11eb-9aba-bc836748c663.png)
 
 ## Step 4: Download Artifacts
 
 Artifacts are available to download as well. You can choose to train for many epochs, create multiple checkpoints.
 
 ![artifacts](https://user-images.githubusercontent.com/13732925/121350135-48937500-c8f8-11eb-8703-999161076d09.gif)
-
 
 ## Bonus: Run in CLI
 
