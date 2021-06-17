@@ -1,4 +1,4 @@
-# Using Julia and R languages in Sessions
+# Julia and R languages in Sessions
 
 ## Julia and R languages in addition to Python
 

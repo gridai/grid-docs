@@ -44,7 +44,7 @@
   * [Machines](products/sessions/machines.md)
   * [Pause](products/sessions/pause.md)
   * [SSH into a Session](products/sessions/how-to-ssh-into-a-session.md)
-  * [Using Julia and R languages in Sessions](products/sessions/using-julia-and-r-languages-in-sessions.md)
+  * [Julia and R languages in Sessions](products/sessions/using-julia-and-r-languages-in-sessions.md)
   * [VSCode with Sessions](products/sessions/vscode-with-sessions.md)
 * [⚡Serverless Runs](products/run-run-and-sweep-github-files/README.md)
   * [Actions](products/run-run-and-sweep-github-files/actions.md)
