@@ -23,7 +23,7 @@ lightning_flash
 ## Steps to create `requirements.txt`
 
 Create `requirements.txt` as suggested.
-Note `touch requirements.txt` is required if it does not already exist. 
+Note `touch requirements.txt` is required if the file does not already exist. 
 
 ```bash
 touch requirements.txt
