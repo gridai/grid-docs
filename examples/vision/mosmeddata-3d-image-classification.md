@@ -16,7 +16,7 @@ This example covers a 3D Image Classification task using Keras‌
 3. View Artifacts and Grid Weights in Keras and Inference Model
 
 {% hint style="info" %}
-This tutorial shows how to perform a Grid Run with the [**Tensorflow 2.2.2**](https://github.com/tensorflow/tensorflow/releases/tag/v2.2.2) **library from the Grid CLI.** 
+This tutorial shows how to perform a Grid Run with the [**Tensorflow 2.2.2**](https://github.com/tensorflow/tensorflow/releases/tag/v2.2.2) **library from the Grid CLI.**
 {% endhint %}
 
 ## Tutorial time <a id="tutorial-time"></a>
@@ -96,7 +96,7 @@ In this step, we log into the Grid Web Account to see our Metrics and Download t
 
 ### 1. Login to [Grid.ai](https://www.grid.ai/) and Click "Get Started with Grid"
 
-![](../../.gitbook/assets/image%20%28117%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%283%29.png)
+![](../../.gitbook/assets/image%20%28117%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%281%29.png)
 
 ### 2. Select our Run and view Experiment Metrics
 

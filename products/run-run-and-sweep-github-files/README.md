@@ -6,7 +6,7 @@ description: Run (and sweep) any private or public Github repository.
 
 ## Runs
 
-Run \(**and sweep**\) any private or public Github repository on the cloud.  
+Run \(**and sweep**\) any private or public Github repository on the cloud.
 
 ```bash
 # clone repo
@@ -25,7 +25,7 @@ Runs are serverless which means you only pay for the time your scripts are actua
 
 In this video we're going to run an arbitrary model \(from the pytorch examples github repo\) across 4 GPUs \(4 experiments each on 2 GPUs\)
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/intro\_video\_docs\_run.mp4" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/intro\_video\_docs\_run.mp4" caption="" %}
 
 ## Product Tour
 
@@ -74,6 +74,4 @@ A RUN is a collection of experiments \(the run has 4 experiments in this example
 ## **Option 2: Start via the web UI**
 
 ![](../../.gitbook/assets/run_start.gif)
-
-
 

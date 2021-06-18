@@ -24,5 +24,3 @@ If the balance goes below $10, Grid will warn you about "low balance remaining"
 
 Zero balance will prompt a shut down of interactive sessions as well as active runs.
 
-
-

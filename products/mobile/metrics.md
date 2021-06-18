@@ -6,8 +6,6 @@ While your jobs are running, use the mobile app to view metrics
 
 ![](../../.gitbook/assets/metrics.gif)
 
-
-
 ## Tensorboard
 
 In case you need to access Tensorboard:

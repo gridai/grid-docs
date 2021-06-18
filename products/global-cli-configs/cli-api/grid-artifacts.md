@@ -26,10 +26,10 @@ grid artifacts the-run-name-exp0
 
 ### --download\_dir
 
-Download all artifacts to a directory, following command  will download to the specified directory
+Download all artifacts to a directory, following command will download to the specified directory
 
 ```text
-grid artifacts --download_dir the-directory 
+grid artifacts --download_dir the-directory
 ```
 
 For example, the command below will download to "dbrun"
@@ -37,6 +37,4 @@ For example, the command below will download to "dbrun"
 ```text
 grid artifacts imdb-demo2-exp0 --download_dir dbrun
 ```
-
-
 

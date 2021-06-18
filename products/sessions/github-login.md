@@ -24,7 +24,7 @@ By default you can only access public Github repositories on Grid. To grant acce
 
 ## About authorization
 
-When you grant access to private repositories in Github, the organizations that you have granted private access to will appear in [https://github.com/settings/applications](https://github.com/settings/applications) .  When you want to use a script from a private repository in Grid, make sure that the organization shows up in the Applications section of Github settings
+When you grant access to private repositories in Github, the organizations that you have granted private access to will appear in [https://github.com/settings/applications](https://github.com/settings/applications) . When you want to use a script from a private repository in Grid, make sure that the organization shows up in the Applications section of Github settings
 
 ![Settings-&amp;gt;Applications](../../.gitbook/assets/screen-shot-2021-05-20-at-4.16.45-pm.png)
 
@@ -39,8 +39,4 @@ Make sure that Organization access above shows that permissions are granted to t
 Grid does not save your code, look at it or compromise its privacy in any way.
 
 When receiving support, you will not have to share any code to help debug. If you choose to share code, make sure you have the rights to and share non-critical parts of the code.
-
-
-
-
 

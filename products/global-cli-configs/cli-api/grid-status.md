@@ -32,7 +32,7 @@ grid status the-run-name --details
 
 ### `--export`
 
-Exports all active runs or experiments in select format, either `csv` or `json`. This is useful if you would like to store the CLI output and refer to it later. 
+Exports all active runs or experiments in select format, either `csv` or `json`. This is useful if you would like to store the CLI output and refer to it later.
 
 ```text
 grid status --export csv

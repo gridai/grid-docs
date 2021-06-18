@@ -8,7 +8,7 @@ description: What's new and improved in Grid.
 
 Make sure to update CLI to the latest
 
-{% embed url="https://github.com/gridai/gridai/discussions" %}
+{% embed url="https://github.com/gridai/gridai/discussions" caption="" %}
 
 ## June 14, 2021
 
@@ -104,13 +104,13 @@ Sign in via Github or gmail and get started!
 
 ### UI Enhancements
 
-When you log in to Grid, you will be asked for phone verification. This is for security reasons. You will  be doing this only once.
+When you log in to Grid, you will be asked for phone verification. This is for security reasons. You will be doing this only once.
 
 New Run workflow is simplified with less steps, three frameworks to choose from.
 
 Hyper parameter values have better visualization with rounding of precision
 
-### Support for Mobile 
+### Support for Mobile
 
 Web Interface now has minimal functionality on a mobile device
 
@@ -118,24 +118,20 @@ Web Interface now has minimal functionality on a mobile device
 
 New version v0.3.60. And many other fixes
 
-
-
-
-
 ## April 7, 2021
 
-### **Clone your runs in the UI** 
+### **Clone your runs in the UI**
 
 We've added lots of new features to the UI including cloning a run! Lot of times, you may want to re-run with minor modifications or maybe run on a different GPU. You can do that now by simply going to the run and click Clone Run, then populate with your choice of parameters etc and done!
 
 ![](../.gitbook/assets/clone%20%281%29.gif)
 
-Downloading artifacts all together just got easier in the CLI 
+Downloading artifacts all together just got easier in the CLI
 
 Download all artifacts to a directory using --download\_dir
 
 ```text
-grid artifacts --download_dir  DIRECTORY  Download directory that will host all artifact files
+grid artifacts --download_dir  DIRECTORY  Download directory that will host all artifact files
 ```
 
 ### CSV table
@@ -143,8 +139,6 @@ grid artifacts --download_dir  DIRECTORY  Download directory that will host all
 You can now download a CSV showing the contents of the experiments table
 
 ![](../.gitbook/assets/image%20%28141%29.png)
-
-
 
 ### Charts
 
@@ -182,7 +176,7 @@ We've added lots of new features to the UI including a new view for experiment m
 
 ## March 19, 2021
 
-**Dashboard UI now shows a list of Active runs and sessions.** 
+**Dashboard UI now shows a list of Active runs and sessions.**
 
 The “Runs” page is improved for usability, showing the Runs panel on a column instead of a whole page table. The experiments section has many enhancements including scalars charts, hyperparameter columns. Tensorboard invocation and refresh are located just above the Experiments table area.
 
@@ -197,10 +191,4 @@ The “Runs” page is improved for usability, showing the Runs panel on a colum
 **Datastores upload user interactions are improved;** you can now see a progress bar showing datastore upload percentage and ability to cancel.
 
 **Datastore uploads from the CLI are more reliant to network interruptions.** The web UI now remembers preferences for instance type used for each project and script
-
-  
-  
-
-
-
 

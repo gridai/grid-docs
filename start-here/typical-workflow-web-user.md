@@ -4,13 +4,13 @@
 
 The goal of this tutorial is to walk through a typical workflow using the Grid Web app.
 
-For users who prefer the command-line \(CLI\)  [this is the mirror tutorial for the CLI](typical-workflow-cli-user.md)
+For users who prefer the command-line \(CLI\) [this is the mirror tutorial for the CLI](typical-workflow-cli-user.md)
 
 {% hint style="info" %}
-Grid has a 1:1 match in functionality with the CLI. 
+Grid has a 1:1 match in functionality with the CLI.
 {% endhint %}
 
-We'll use image classification as an example to illustrate the key ideas.  The typical workflow goes like this:
+We'll use image classification as an example to illustrate the key ideas. The typical workflow goes like this:
 
 ![](../.gitbook/assets/image%20%28135%29.png)
 
@@ -31,8 +31,6 @@ Note a few things:
 | 1 minute | Run \(hyperparameter sweep\) |
 | 3 minutes | Bonus: Become a power user |
 
-
-
 ## Terminology Glossary
 
 | Term | Description |
@@ -44,8 +42,6 @@ Note a few things:
 | An experiment | A single model with a given configuration |
 | A run | A collection of experiments |
 | ssh | A way to connect from a local machine to a remote machine |
-
-
 
 ## The dataset
 
@@ -104,18 +100,18 @@ Now that your data has been uploaded the next step in a real workflow is to spen
 * Using the model for analysis, which might require GPUs
 * Explore and visualize the model
 
-This is exactly what _Sessions_ were created for. 
+This is exactly what _Sessions_ were created for.
 
 Start a Session named _resnet-debugging_ with 2 M60 GPUs on it and attach our **CIFAR-5** dataset.
 
 **Note: A credit card needs to be added to use GPU machines**
 
-![](../.gitbook/assets/sess_2%20%281%29.gif)
+![](../.gitbook/assets/sess_2%20%282%29.gif)
 
 Sessions really shine with **huge datasets**. The automatic mounting feature means you can jump straight to work without waiting a long time for your data to be available.
 
 {% hint style="info" %}
-TIP: If you prefer to ssh directly or use VSCode \(instead of using Jupyter lab\), the other icons have setup instructions. 
+TIP: If you prefer to ssh directly or use VSCode \(instead of using Jupyter lab\), the other icons have setup instructions.
 {% endhint %}
 
 ![](../.gitbook/assets/image%20%2864%29.png)
@@ -187,7 +183,7 @@ DATALOADER:0 TEST RESULTS
 --------------------------------------------------------------------------------
 ```
 
-At this step \(in a real workflow\) you would code the model, debug, tune batch size, etc... 
+At this step \(in a real workflow\) you would code the model, debug, tune batch size, etc...
 
 Grid even lets you do this from your local VSCode \([read this guide to set that up](../products/sessions/vscode-with-sessions.md)\).
 
@@ -247,9 +243,7 @@ Add the following args to spin up 10 different experiments
 --backbone "['resnet18', 'resnet50']"
 ```
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/run\_cifar5.mp4" %}
-
-
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/run\_cifar5.mp4" caption="" %}
 
 ## Bonus: Becoming a power user
 
@@ -262,8 +256,6 @@ Here are some tricks to get you beyond the basic user status.
 Let's say you want to start a run again but only change a few arguments. Use the clone button
 
 ![](../.gitbook/assets/clone%20%282%29.gif)
-
-
 
 ### Log to tensorboard
 
@@ -279,9 +271,7 @@ Anything your model produces can be viewed on Grid.
 
 ### CLI
 
-Finally... there is a really amazing experience with interactive sessions and run submission via the CLI. 
+Finally... there is a really amazing experience with interactive sessions and run submission via the CLI.
 
 {% page-ref page="typical-workflow-cli-user.md" %}
-
-
 

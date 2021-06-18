@@ -14,8 +14,6 @@ To re-run a run or experiment you have already ran once, use the **clone icon.**
 
 ![](../../.gitbook/assets/cloning.png)
 
-
-
 ## Use cases
 
 Cloning is helpful if:

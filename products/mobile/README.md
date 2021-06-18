@@ -1,6 +1,6 @@
 # ⚡️Mobile
 
-Grid works on mobile! 
+Grid works on mobile!
 
 Make sure to save the app on your home screen!
 
