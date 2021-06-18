@@ -6,6 +6,8 @@ description: >-
 
 # Grid in 3 minutes
 
+![Focus on machine learning, NOT infrastructure. From the creators of PyTorch Lightning.](.gitbook/assets/grid_logo_rgb_black.svg)
+
 ## Introduction
 
 Grid is designed for developing and training deep learning models at scale.
