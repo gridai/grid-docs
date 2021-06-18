@@ -10,4 +10,6 @@
 
 **When updating the docs make sure to create a private branch and test locally and visually inspect the files for formatting errors.**
 
-We are working hard, but still reviewing and merging your pull requests may take 1 or 2 days
+We are working hard, but still reviewing and merging your pull requests may take 1 or 2 days.
+
+For Terms of Service visit https://www.grid.ai/ 
