@@ -30,3 +30,4 @@
 
 {% page-ref page="grid-ssh-keys.md" %}
 
+{% page-ref page="grid-sync-env.md" %}
