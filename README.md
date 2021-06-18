@@ -1,12 +1,10 @@
 ---
 description: >-
-  Grid is a platform for developing and training machine learning models at
-  scale.
+  Focus on machine learning, NOT infrastructure.From the creators of PyTorch
+  Lightning.
 ---
 
 # Grid in 3 minutes
-
-![Focus on machine learning, NOT infrastructure. From the creators of PyTorch Lightning.](.gitbook/assets/grid_logo_rgb_black.svg)
 
 ## Introduction
 
