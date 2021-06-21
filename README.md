@@ -77,7 +77,7 @@ For prototyping/debugging/analyzing, sometimes you need a LIVE machine. We call 
 
 {% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/session\_3.mp4" caption="" %}
 
-\*\*\*\*
+
 
 **CLI: Starting a new session**
 
