@@ -194,7 +194,8 @@ pip install lightning_grid --upgrade
 grid login --username <Grid user name> --key <Grid API Key>
 ```
 
-* Create cluster in default region with default instance types
+* Create cluster in default region with default instance types.
+* Cluster name must be lower case alphanumeric characters, '-' or '.' is allowed but not '_', and must start and end with an alphanumeric character
 
 ```bash
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID <cluster name>
