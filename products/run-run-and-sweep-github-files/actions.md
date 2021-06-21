@@ -17,7 +17,7 @@ Example uses of actions:
 
 These are executed as your project image is built. We cache these commands on every git SHA. This is useful for installing dependencies and other system setup tasks.
 
-```text
+```yaml
 compute:
   train:
 
@@ -35,7 +35,7 @@ Commands automatically run as sudo
 
 Arbitrary commands that run just before your training process starts. This is useful for downloading and preparing data, etc.
 
-```text
+```yaml
 compute:
   train:
 
@@ -48,7 +48,7 @@ compute:
 
 Runs after your script stops. This is useful for post-processing data, sending alerts and notifications to your systems, etc.
 
-```text
+```yaml
 compute:
   train:
 
@@ -64,17 +64,14 @@ You can configure Grid Actions by using a Grid YAML file \(see details on [Grid 
 
 The Grid YML spec supports three actions:
 
-`on_image_build` commands passed to the image builder which are interpreted as RUN commands in a Dockerfile
-
-`on_before_training_start` which allows users to specify commands that need to be executed sequentially before the main experiment process starts
-
-`on_after_training_end` same as above, but executed after the main process ends
+* `on_image_build` commands passed to the image builder which are interpreted as RUN commands in a Dockerfile.
+* `on_before_training_start` which allows users to specify commands that need to be executed sequentially before the main experiment process starts.
+* `on_after_training_end` same as above, but executed after the main process ends. 
 
 Here's a full example of a Grid config YML using actions:
 
-```text
+```yaml
 compute:
-
   provider:
     credentials: cc-wv4l9
     region: us-east-1
@@ -82,12 +79,8 @@ compute:
 
   train:
     cpus: 1
-    disk_size: 200
     gpus: 0
     instance: t2.xlarge
-    memory: null
-    nodes: 0
-    scale_down_seconds: 1800
 
     # Actions need to be passed as one command
     # per line.
@@ -105,4 +98,81 @@ compute:
 ```
 
 As you can see, you can pass one command per line. You can pass as many commands as you'd like.
+
+### Environment variable substitution
+
+Grid allows environment variable substitution for `on_before_training_start` and `on_before_training_start` actions. All declared environment variables for the run are available in the substitution \(as well as some Grid predefined variables\). Example config:
+
+```yaml
+compute:
+
+  train:
+    cpus: 1
+    gpus: 0
+    instance: t2.medium
+    framework: lightning
+
+    environment:
+      WEBHOOK_URL: https://hooks.example.com/grid
+
+    # Actions need to be passed as one command
+    # per line.
+    actions:
+      on_image_build:
+        - apt-get update
+        - apt-get install curl -y
+      on_before_training_start:
+        - bash before.sh
+
+      on_after_training_end:        
+        - |
+            curl -X POST -d '{"name": "${GRID_EXPERIMENT_ID}", "instance_type": "${GRID_INSTANCE_TYPE}", "status": "status", "step": "after"}' ${WEBHOOK_URL}
+            
+```
+
+### Default environment variables
+
+Grid sets several environment variables by default for all experiments:
+
+* **GRID\_EXPERIMENT\_ID** - experiment's ID
+* **GRID\_EXPERIMENT\_NAME** - experiment name
+* **GRID\_USER\_ID** - ID of the user who created the experiment
+* **GRID\_CLUSTER\_ID** - ID of the cluster where experiment is running
+* **GRID\_INSTANCE\_TYPE** - machine type \(_t2.medium,_ _g4dn.xlarge,_ etc.\)
+
+### String operations
+
+Grid provides partial emulation for bash string operations. This can be used to manipulate string values prior to substitution.
+
+* Example variable substitution with substring:
+
+```yaml
+on_after_training_end:        
+- |
+    echo ${GRID_EXPERIMENT_ID:0:4} # Getting first 4 symbols
+            
+```
+
+Grid emulates the below string operations:
+
+```text
+${parameter^}
+${parameter^^}
+${parameter,}
+${parameter,,}
+${parameter:position}
+${parameter:position:length}
+${parameter#substring}
+${parameter##substring}
+${parameter%substring}
+${parameter%%substring}
+${parameter/substring/replacement}
+${parameter//substring/replacement}
+${parameter/#substring/replacement}
+${parameter/%substring/replacement}
+${#parameter}
+${parameter=default}
+${parameter:=default}
+${parameter:-default}
+```
 
