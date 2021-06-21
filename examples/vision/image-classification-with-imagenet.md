@@ -1,3 +1,7 @@
+---
+description: Tutorial shows example of using Datastores and Sessions
+---
+
 # ImageNet classification
 
 ## Goal

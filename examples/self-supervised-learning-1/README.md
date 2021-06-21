@@ -1,4 +1,8 @@
 # Self-supervised learning
 
-Here are a few examples that train self-supervised learning models across different frameworks.
+Here is an example of training self-supervised learning model in Grid 
+
+{% page-ref page="self-supervised-learning.md" %}
+
+
 

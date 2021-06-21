@@ -1,6 +1,6 @@
 ---
 description: >-
-  This tutorial shows how to train Video Classification Models on Grid using
+  Tutorial shows how to train Video Classification Models on Grid using
   Lightning Flash
 ---
 

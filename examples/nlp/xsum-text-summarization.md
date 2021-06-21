@@ -1,7 +1,7 @@
 ---
 description: >-
-  This tutorial shows how to train Text Summarization Models on Grid using
-  Lightning Flash on the XSum Dataset.
+  Tutorial shows how to train Text Summarization Models using Lightning Flash on
+  the XSum Dataset
 ---
 
 # XSum Text Summarization

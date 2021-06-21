@@ -1,3 +1,9 @@
+---
+description: >-
+  Tutorial shows how to use Runs to train large models using PyTorch Lightning
+  and Grid
+---
+
 # GPT 10B+ params \(8 GPUs\)
 
 ## GPT

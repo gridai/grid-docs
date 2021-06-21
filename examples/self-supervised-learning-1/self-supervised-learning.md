@@ -1,3 +1,9 @@
+---
+description: >-
+  Tutorial shows how to train self supervised learning model using Grid, PyTorch
+  Lightning
+---
+
 # SIMCLR
 
 ## Goal

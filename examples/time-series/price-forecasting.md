@@ -1,5 +1,5 @@
 ---
-description: This tutorial shows how to train a forecasting model with Grid
+description: This tutorial shows how to train a forecasting model in PyTorch
 ---
 
 # Coin Market Cap Price Forecasting

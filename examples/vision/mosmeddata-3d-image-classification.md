@@ -1,8 +1,7 @@
 ---
 description: >-
-  This tutorial shows how to train 3D Image Classification Models on Grid using
-  the Keras API in the TensorFlow 2.2.2 Library and the MosMedData CT Scan
-  Dataset.
+  Tutorial shows how to train 3D Image Classification Models using the Keras API
+  in the TensorFlow 2.2.2 Library and the MosMedData CT Scan Dataset.
 ---
 
 # MosMedData 3D Image Classification

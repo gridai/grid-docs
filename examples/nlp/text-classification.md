@@ -1,3 +1,9 @@
+---
+description: >-
+  Tutorial shows how to train a sentiment analysis model using Grid and
+  Lightning Flash
+---
+
 # Text Classification
 
 ## Goal
