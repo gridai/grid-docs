@@ -147,7 +147,7 @@ Here's a summary of all the available grid flags \(all are optional\)
 | --framework | machine learning framework | - |
 | --gpus | the number of GPUs per experiment | 0 |
 | --instance\_type | defines number of GPUs and memory | ? |
-| --max\_nodes | a fail-safe limit to avoid large workloads | 100 |
+| --use\_spot | use interruptible machines\(spot instances\) |  |
 | --memory | machine RAM \(not GPU RAM\) | ? |
 | --name | name of run | - |
 | --strategy | grid search or random search | grid search |
@@ -277,6 +277,14 @@ grid run --instance_type 8_v100_32gb my_script.py
 Here's a list of all the available machines
 
 {% page-ref page="../../run-run-and-sweep-github-files/machines.md" %}
+
+### `--use_spot`
+
+Ask to use interruptible machines or spot instances. It is cheaper to use them but they can be shutdown at will
+
+```text
+grid run --use_spot myscript.py
+```
 
 ### `--memory`
 
