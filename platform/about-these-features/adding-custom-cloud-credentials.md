@@ -1,8 +1,6 @@
 # Add custom cloud credential
 
-## Add custom cloud credential
-
-### Add custom cloud credential
+## Adding custom cloud credential
 
 #### Custom cloud credentials
 
@@ -13,12 +11,12 @@ Grid can orchestrate infrastructure on your own AWS account by simply adding you
 #### Early access
 
 {% hint style="danger" %}
-Using your own AWS credentials with Grid is currently in closed early access.
+Using your own AWS credentials with Grid is currently in early access.
 {% endhint %}
 
 REQUEST early access to this feature; message on community slack: gridai-community.slack.com
 
-#### Step 1: Get AWS credentials
+### Step 1: Get AWS credentials
 
 **A: Login to AWS and search for IAM**
 
@@ -58,7 +56,7 @@ The "Secret access key" value will only be shown once. Make sure you copy that v
 
 Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](https://docs.grid.ai/platform/about-these-features/adding-custom-cloud-credentials#step-2-add-iam-permissions-to-your-account) for more details.
 
-#### Step 2: Add IAM permissions to your account
+### Step 2: Add IAM permissions to your account
 
 The user you just created, and fetched credentials for should have IAMFullAccess privileges.
 
@@ -85,7 +83,7 @@ The final step is to add all the Grid policies to your account. That means that 
 
 Now that you have added the right permissions to your user name, you can use the user's AWS API keys with Grid.
 
-#### Step 3: Create Role & Policy grid requires
+### Step 3: Create Role & Policy grid requires
 
 For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
 
@@ -185,7 +183,7 @@ export EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
 export ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 ```
 
-#### Step 4: Register your role in grid
+### Step 4: Register your role in grid
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
 
@@ -214,7 +212,7 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.large <cluster name>
 ```
 
-#### Step 5: Wait for cluster to be provisioned
+### Step 5: Wait for cluster to be provisioned
 
 ```text
 grid clusters
@@ -233,16 +231,16 @@ And wait for your cluster status be `running`:
 
 It can take some time to provision a new cluster, ~20-30 minutes
 
-#### Step 6: Run your workloads in your new cluster
+### Step 6: Run your workloads in your new cluster
 
 ```text
 grid run --cluster <cluster name>
-grid session --cluster <cluster name>  create
+grid session create --cluster <cluster name>
 ```
 
 Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
-#### Step 7: Enjoy
+### Step 7: Enjoy
 
 ## Installing 3rd Party Tools
 
