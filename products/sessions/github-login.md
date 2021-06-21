@@ -18,7 +18,7 @@ If you signed up to Grid with Google, you'll have to link a Github account under
 
 ## Access Private Github Repos
 
-By default you can only access public Github repositories on Grid. To grant access to your private code navigate to Settings &gt; Integrations &gt; Grant access.
+By default you can only access public Github repositories on Grid. To grant access to your private code navigate to Settings &gt; Integrations &gt; Grant access. Make sure to grant access to any private repositories you intend to use before using Session
 
 ![](../../.gitbook/assets/github.gif)
 
