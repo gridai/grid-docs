@@ -8,5 +8,5 @@ Team features at Grid allow you to work with others. These features allow:
 
 Request early access to test them out
 
-REQUEST early access to teams by messaging us on community slack channel: gridai-community.slack.com
+REQUEST early access to teams by messaging us on community slack channel: gridai-community.slack.com or contact us via the website [Grid.ai](www.grid.ai)
 
