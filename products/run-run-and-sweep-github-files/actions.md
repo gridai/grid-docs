@@ -60,15 +60,15 @@ compute:
 
 ## Configuring Actions
 
-You can configure Grid Actions by using a Grid YAML file \(see details on [Grid YML\)](yaml-configs/).
+You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](yaml-configs/).
 
-The Grid YML spec supports three actions:
+The Grid YAML spec supports three actions:
 
-* `on_image_build` commands passed to the image builder which are interpreted as RUN commands in a Dockerfile.
+* `on_image_build` commands passed to the image builder which are interpreted as RUN commands in a [Dockerfile](https://docs.docker.com/engine/reference/builder/).
 * `on_before_training_start` which allows users to specify commands that need to be executed sequentially before the main experiment process starts.
 * `on_after_training_end` same as above, but executed after the main process ends. 
 
-Here's a full example of a Grid config YML using actions:
+Here's a full example of a Grid configuration using actions:
 
 ```yaml
 compute:
