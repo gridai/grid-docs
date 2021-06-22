@@ -47,7 +47,7 @@ Script arguments: --num\_samples "\[10,100,1000,10000\]"
 
 ```bash
 grid run \
---grid_name nifty-tanuki-650 \
+fit.jl
 --grid_strategy grid_search \
 --grid_disk_size 200 \
 --grid_instance_type t2.medium \
