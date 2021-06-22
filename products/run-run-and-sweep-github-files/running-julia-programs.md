@@ -53,7 +53,7 @@ grid run \
 --grid_max_nodes 10 \
 --grid_instance_type t2.medium \
 --grid_framework julia \
---grid_credential cc-4nd5b \
+--grid_credential cc-4nb \
 --grid_cpus 1 \
 fit.jl \
 --num_samples 100
