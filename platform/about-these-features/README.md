@@ -12,5 +12,7 @@ We want to make sure you have the best experience possible, so if you don't mind
 * [Teams features](teams-features.md)
 * [Bring your own AWS credentials](adding-custom-cloud-credentials.md)
 
-REQUEST ACCESS BY MESSAGING US ON SLACK: gridai-community.slack.com or contact us via the website [Grid.ai](www.grid.ai)
+REQUEST ACCESS BY MESSAGING US ON SLACK: gridai-community.slack.com or contact us at support@grid.ai.
+
+Website [Grid.ai](www.grid.ai)
 
