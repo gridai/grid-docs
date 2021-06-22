@@ -50,7 +50,6 @@ grid run \
 --grid_name nifty-tanuki-650 \
 --grid_strategy grid_search \
 --grid_disk_size 200 \
---grid_max_nodes 10 \
 --grid_instance_type t2.medium \
 --grid_framework julia \
 --grid_credential cc-4nb \
