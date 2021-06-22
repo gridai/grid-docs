@@ -63,6 +63,7 @@
   * [YAML configs](products/run-run-and-sweep-github-files/yaml-configs/README.md)
     * [YAML API](products/run-run-and-sweep-github-files/yaml-configs/yaml-api.md)
   * [FAQ](products/run-run-and-sweep-github-files/faq.md)
+  * [Running Julia programs](products/run-run-and-sweep-github-files/running-julia-programs.md)
 
 ## Examples
 

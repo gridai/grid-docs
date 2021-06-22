@@ -30,7 +30,7 @@ grid ssh-keys add key_1 ~/.ssh/id_rsa.pub
 
 If you go to [settings](https://platform.grid.ai/#/settings?tabId=ssh), you'll see the key
 
-![](../../.gitbook/assets/image%20%2824%29%20%281%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%285%29.png)
+![](../../.gitbook/assets/image%20%2824%29%20%281%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%285%29.png)
 
 ## Step 2: Launch the session
 

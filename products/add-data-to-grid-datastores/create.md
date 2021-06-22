@@ -10,7 +10,7 @@ You can use the UI to create datastores for datasets smaller than 1GB \(files or
 
 Select the file or folder and click upload.
 
-![](../../.gitbook/assets/ds_upload%20%283%29%20%281%29%20%283%29.gif)
+![](../../.gitbook/assets/ds_upload%20%283%29%20%281%29%20%283%29%20%283%29.gif)
 
 {% hint style="info" %}
 You can still use the CLI for these datastores!

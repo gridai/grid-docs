@@ -12,7 +12,7 @@ description: Executes a python script on a cloud machine and handles hyperparame
 
 Basically... think about it like replacing `python` with `grid run`
 
-![](../../../.gitbook/assets/carbon-1-%20%281%29.png)
+![](../../../.gitbook/assets/carbon-1-%20%281%29%20%283%29.png)
 
 {% hint style="info" %}
 Projects must be hosted on **Github** for now. [Reach out](mailto:luis@grid.ai) for other cases.
