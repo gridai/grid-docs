@@ -2,7 +2,7 @@
 
 ## Hyperparameter Sweeps
 
-Grid allows running hyperparameter sweeps without changing a single line of code! Just make sure your script can take arguments:
+Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning/) without changing a single line of code! Just make sure your script can take arguments:
 
 ```bash
 python main.py --layers 32 --learning_rate 0.01
