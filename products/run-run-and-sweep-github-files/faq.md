@@ -20,3 +20,7 @@ Grid can also run non-deep learning focused workloads such as plain numpy, sklea
 
 Grid can run arbitrary python scripts. You're free to run whatever you want inside a script. However, Grid is optimized for Pytorch, Pytorch Lightning, Tensorflow, Keras, numpy and sklearn.
 
+## I am getting lot of errors using CLI
+
+Grid supports Linux based operating systems. We recommend using virtual environment when using CLI. Please see the guidance [here](../global-cli-configs/virtual-environments.md)
+
