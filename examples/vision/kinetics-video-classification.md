@@ -20,7 +20,7 @@ This example covers a video classification deep learning task
 
 ## Task: Video Classification
 
-_Video Classification_ is the task of _classifying_ _videos_ based on _classes_ of content. _Video_ _Classification_ enables computers to recognize actions, objects, and events in videos. From Retail, Health Care to Agriculture, Video Understanding enables automation of [countless industry use cases](https://www.cio.com/article/3431138/ai-gets-the-picture-streamlining-business-processes-with-image-and-video-classification.html). \_\_
+Video Classification is the task of classifying videos based on classes of content. Video Classification enables computers to recognize actions, objects, and events in videos. From Retail, Health Care to Agriculture, Video Understanding enables automation of [countless industry use cases](https://www.cio.com/article/3431138/ai-gets-the-picture-streamlining-business-processes-with-image-and-video-classification.html). 
 
 ## Dataset: Kinetics
 

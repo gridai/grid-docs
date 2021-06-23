@@ -70,9 +70,9 @@
 ## Examples
 
 * [Vision](examples/vision/README.md)
-  * [Kinetics Video Classification](examples/vision/kinetics-video-classification.md)
-  * [ImageNet classification](examples/vision/image-classification-with-imagenet.md)
   * [Coco Object Detection](examples/vision/coco.md)
+  * [ImageNet classification](examples/vision/image-classification-with-imagenet.md)
+  * [Kinetics Video Classification](examples/vision/kinetics-video-classification.md)
   * [MosMedData 3D Image Classification](examples/vision/mosmeddata-3d-image-classification.md)
 * [NLP](examples/nlp/README.md)
   * [GPT 10B+ params \(8 GPUs\)](examples/nlp/gpt-10b+-params-8-gpus.md)
