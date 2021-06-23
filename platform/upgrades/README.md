@@ -10,7 +10,7 @@ Website link for upgrade plan information is [here](https://www.grid.ai/pricing/
 
 This feature is  now [Available](adding-custom-cloud-credentials.md)! 
 
-Grid can orchestrate infrastructure on your own Cloud account by simply adding your own cloud credentials and provide the same functionality. This is part of our Teams and Enterprise plans. Please contact us via the website or [support@grid.ai ](mailto:support@grid.ai)to get access and set up.
+Grid can orchestrate infrastructure on your own Cloud account by simply adding your own cloud credentials to carry out your machine learning jobs. This is part of our Teams and Enterprise plans. Please contact us via the website or [support@grid.ai ](mailto:support@grid.ai)to get access and set up.
 
 | Cloud | Availability |
 | :--- | :--- |
