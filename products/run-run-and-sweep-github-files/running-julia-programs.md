@@ -46,15 +46,10 @@ Script2: [https://github.com/rlizzo/TuringCLIExample/blob/main/fit.jl](https://g
 Script arguments: --num\_samples "\[10,100,1000,10000\]"
 
 ```bash
-grid run \
-fit.jl
---grid_strategy grid_search \
---grid_disk_size 200 \
---grid_instance_type t2.medium \
---grid_framework julia \
---grid_credential cc-4nb \
---grid_cpus 1 \
-fit.jl \
+grid run fit.jl \
+--instance_type t2.medium \
+--framework julia \
+--cpus 1 \
 --num_samples 100
 ```
 

@@ -63,6 +63,8 @@
   * [YAML configs](products/run-run-and-sweep-github-files/yaml-configs/README.md)
     * [YAML API](products/run-run-and-sweep-github-files/yaml-configs/yaml-api.md)
   * [FAQ](products/run-run-and-sweep-github-files/faq.md)
+  * [Running PyTorch Lightning](products/run-run-and-sweep-github-files/running-pytorch-lightning.md)
+  * [Running Tensorflow or Keras](products/run-run-and-sweep-github-files/running-tensorflow-or-keras.md)
   * [Running Julia programs](products/run-run-and-sweep-github-files/running-julia-programs.md)
 
 ## Examples
