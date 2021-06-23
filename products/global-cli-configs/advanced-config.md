@@ -1,3 +1,7 @@
+---
+description: Advanced command line configuration lets you have more control
+---
+
 # Advanced config
 
 ## Global config

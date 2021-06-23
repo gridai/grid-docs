@@ -1,3 +1,7 @@
+---
+description: Artifacts generated when executing runs are saved and accessible
+---
+
 # grid artifacts
 
 Downloading artifacts using CLI is straightforward. you can download one specifying the experiment id or run id

@@ -13,16 +13,17 @@ Make sure to update CLI to the latest: pip install lightning-grid --upgrade
 ## June 23, 2021
 
 ### Added
-- Early access for Team Collaboration! Express your interest in our community Slack. 
-- Early access for Multi-node training! Express your interest in our community Slack. 
-- Support for Julia Language #26 
-- Added support for [custom AWS credentials](https://docs.grid.ai/platform/upgrades/adding-custom-cloud-credentials#adding-custom-cloud-credential) (contact us via support@grid.ai)
-- Documentation is now open source, contribute! https://github.com/gridai/grid-docs
- 
-### Fixed
-- Issues with Session costs not updating properly have been resolved
-- Fixes an issue where deleting a run in the UI would lead to a page error  
 
+* Early access for Team Collaboration! Express your interest in our community Slack. 
+* Early access for Multi-node training! Express your interest in our community Slack. 
+* Support for Julia Language \#26 
+* Added support for [custom AWS credentials](https://docs.grid.ai/platform/upgrades/adding-custom-cloud-credentials#adding-custom-cloud-credential) \(contact us via support@grid.ai\)
+* Documentation is now open source, contribute! [https://github.com/gridai/grid-docs](https://github.com/gridai/grid-docs)
+
+### Fixed
+
+* Issues with Session costs not updating properly have been resolved
+* Fixes an issue where deleting a run in the UI would lead to a page error  
 
 ## June 14, 2021
 

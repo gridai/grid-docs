@@ -4,7 +4,7 @@ description: Grid offers a fully featured CLI
 
 # ⚡CLI
 
-Grid comes with a fully-featured CLI. It provides a 1:1 matching experience to the web UI.
+Grid comes with a fully-featured Command Line Interface CLI. It provides a 1:1 matching experience to the web UI.
 
 ## Install the CLI
 
@@ -19,6 +19,4 @@ Once you've installed the CLI, login using this command.
 ```javascript
 grid login
 ```
-
-
 

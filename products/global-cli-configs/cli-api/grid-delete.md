@@ -1,3 +1,7 @@
+---
+description: Delete a run or experiment
+---
+
 # grid delete
 
 ## delete a run
