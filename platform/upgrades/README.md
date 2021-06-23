@@ -1,5 +1,5 @@
 ---
-description: Teams and Enterprise
+description: Teams and Enterprise Plans
 ---
 
 # Upgrades
