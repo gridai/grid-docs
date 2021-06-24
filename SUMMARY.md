@@ -24,6 +24,7 @@
     * [grid run](products/global-cli-configs/cli-api/grid-train.md)
     * [grid status](products/global-cli-configs/cli-api/grid-status.md)
     * [grid stop](products/global-cli-configs/cli-api/grid-cancel.md)
+    * [grid user](products/global-cli-configs/cli-api/grid-user.md)
     * [grid version](products/global-cli-configs/cli-api/grid-version.md)
     * [grid view](products/global-cli-configs/cli-api/grid-view.md)
     * [grid ssh-keys](products/global-cli-configs/cli-api/grid-ssh-keys.md)
