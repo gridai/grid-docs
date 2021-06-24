@@ -6,7 +6,7 @@ description: Some cool Tips and Tricks using Grid Platform
 
 ### Interruptible Runs
 
-Interruptible Runs powered by spot instances are **50-90%** cheaper but a machine can be interrupted at anytime. If you are using PyTorch Lightning and a job gets interrupted you can load the checkpoints. 
+[Interruptible Runs](../products/run-run-and-sweep-github-files/interruptible-machines.md) powered by spot instances are **50-90%** cheaper but a machine can be interrupted at anytime. If you are using PyTorch Lightning and a job gets interrupted you can load the checkpoints. 
 
 Grid helps you directly continue your Runs where you left off as follows.
 
