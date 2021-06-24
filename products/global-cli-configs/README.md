@@ -8,7 +8,7 @@ Grid comes with a fully-featured Command Line Interface CLI. It provides a 1:1 m
 
 ## Install the CLI
 
-```javascript
+```bash
 pip install lightning-grid --upgrade
 ```
 
@@ -16,7 +16,7 @@ pip install lightning-grid --upgrade
 
 Once you've installed the CLI, login using this command.
 
-```javascript
+```bash
 grid login
 ```
 

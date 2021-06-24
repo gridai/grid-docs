@@ -6,7 +6,9 @@ description: Refer to this if you are using CLI
 
 {% page-ref page="grid-artifacts.md" %}
 
-{% page-ref page="grid-cancel.md" %}
+{% page-ref page="grid-docs.md" %}
+
+
 
 {% page-ref page="grid-credentials.md" %}
 

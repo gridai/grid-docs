@@ -15,6 +15,7 @@
     * [grid artifacts](products/global-cli-configs/cli-api/grid-artifacts.md)
     * [grid credentials](products/global-cli-configs/cli-api/grid-credentials.md)
     * [grid datastore](products/global-cli-configs/cli-api/grid-datastores.md)
+    * [grid docs](products/global-cli-configs/cli-api/grid-docs.md)
     * [grid delete](products/global-cli-configs/cli-api/grid-delete.md)
     * [grid history](products/global-cli-configs/cli-api/grid-history.md)
     * [grid session](products/global-cli-configs/cli-api/grid-interactive.md)
