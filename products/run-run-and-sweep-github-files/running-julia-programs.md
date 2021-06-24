@@ -23,7 +23,7 @@ description: Grid supports running Julia scripts
 * Add any script arguments
   * If the script accepts command line arguments, you can submit a hyperparameter sweep in the same way you do for a python based run
 
-![](https://lh3.googleusercontent.com/aP5tZCI5BtNjhCorLAx6lHrs_ECMyUfN9dk6HjUDIlZ_68vc2Hz-fNikoBXnUfC-_dgKnTDBAC1swRnICHgzbQxTg72ZRpHNQns8o4XSEn3HyxK8Qt03RgyNGCmDDE6dkK0g3iBx)
+![](../../.gitbook/assets/juli.gif)
 
 ## **Step 2 See results**
 
