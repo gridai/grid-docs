@@ -1,3 +1,7 @@
+---
+description: Login to start using Grid
+---
+
 # grid login
 
 This allows you to login to Grid from the Command Line Interface

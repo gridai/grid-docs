@@ -1,3 +1,7 @@
+---
+description: How to use Grid on a Mobile device
+---
+
 # ⚡️Mobile
 
 Grid works on mobile!

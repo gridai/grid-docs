@@ -1,3 +1,7 @@
+---
+description: Upload datasets from within a session into Datastore
+---
+
 # Create from a Session
 
 ## Upload via Interactive Session

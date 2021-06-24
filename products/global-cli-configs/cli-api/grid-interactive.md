@@ -1,3 +1,7 @@
+---
+description: Start a live machine
+---
+
 # grid session
 
 Launch an interactive Session with the hardware and data of your choice.

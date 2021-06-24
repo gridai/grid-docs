@@ -1,3 +1,7 @@
+---
+description: Frequently asked questions regarding Datastores
+---
+
 # FAQ
 
 ## Data is private

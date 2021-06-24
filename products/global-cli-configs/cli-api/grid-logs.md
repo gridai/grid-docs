@@ -1,3 +1,7 @@
+---
+description: Get logs when running experiments
+---
+
 # grid logs
 
 To view logs for an experiment use:

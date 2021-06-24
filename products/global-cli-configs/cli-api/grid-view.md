@@ -1,3 +1,7 @@
+---
+description: Launch Web UI to view experiments or runs
+---
+
 # grid view
 
 Grid view opens the experiment or run on the Web UI.

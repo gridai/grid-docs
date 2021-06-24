@@ -1,3 +1,7 @@
+---
+description: Stop a run or experiment from running
+---
+
 # grid stop
 
 `grid stop {RUN_OR_EXPERIMENT}` cancels a run or experiments. 

@@ -1,3 +1,7 @@
+---
+description: Grid CLI runs on Linux based operating systems
+---
+
 # Virtual Environments
 
 ## Conda

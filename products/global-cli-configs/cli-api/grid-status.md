@@ -1,3 +1,7 @@
+---
+description: See status of a runs or sessions
+---
+
 # grid status
 
 ## Status of Runs and Sessions

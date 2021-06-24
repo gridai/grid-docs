@@ -1,3 +1,7 @@
+---
+description: Create ssh keys and add them to Grid
+---
+
 # grid ssh-keys
 
 This allows you to create ssh keys and add them to Grid.

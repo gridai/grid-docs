@@ -1,3 +1,7 @@
+---
+description: Grid CLI support for Windows operating system
+---
+
 # Windows support
 
 ## Official support
