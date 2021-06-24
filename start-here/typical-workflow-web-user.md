@@ -1,3 +1,7 @@
+---
+description: Using the web based application platform.grid.ai
+---
+
 # Typical workflow \(web user\)
 
 ## Goal

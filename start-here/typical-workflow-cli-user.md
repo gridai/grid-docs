@@ -1,3 +1,7 @@
+---
+description: Using the command line interface
+---
+
 # Typical workflow \(CLI user\)
 
 ## Goal
