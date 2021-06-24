@@ -57,3 +57,7 @@ The link will be downloaded, extracted and automatically mounted for you. You ca
 You can still use the CLI for these datastores!
 {% endhint %}
 
+Datastores go through a number of statuses such as optimizing, processing uploading. These are internal and a status of "succeeded" indicates that datastore is ready to be used
+
+On the CLI, grid datastore command shows which Datastores are available to be used. 
+

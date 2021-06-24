@@ -78,5 +78,7 @@ grid datastore list
 
 Resumes uploading a datastore
 
-
+{% hint style="info" %}
+grid datastore command lists all available datastores
+{% endhint %}
 
