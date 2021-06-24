@@ -1,3 +1,7 @@
+---
+description: Pause a live session
+---
+
 # Pause
 
 ## Pause a Session

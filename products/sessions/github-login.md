@@ -1,3 +1,7 @@
+---
+description: Automatic login to Github in a Session
+---
+
 # Github login
 
 Interactive Sessions automatically login into Github for you. You can clone any repositories into a Session using the [HTTPS cloning method](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-using-the-command-line) \(SSH will not work\).

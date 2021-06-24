@@ -1,3 +1,7 @@
+---
+description: Mount a datastore before starting the Session
+---
+
 # Attaching Datastores
 
 ## Attach to a Session

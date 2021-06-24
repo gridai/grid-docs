@@ -1,3 +1,7 @@
+---
+description: Stopping experiments on mobile device
+---
+
 # Stop experiments
 
 The mobile app allows you to stop experiments that aren't working out from your phone!

@@ -1,3 +1,7 @@
+---
+description: Choice of machines  for Sessions
+---
+
 # Machines
 
 Here are the machines you can use to start up sessions
