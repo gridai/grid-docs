@@ -25,7 +25,7 @@ grid run --use_spot main.py
 ```
 
 {% hint style="info" %}
-Interruptible only available for runs at the moment \(Sessions coming soon\)
+Interruptible machines are only available for Runs at the moment \(Sessions coming soon\)
 {% endhint %}
 
 ## Individual Tier hourly rates
@@ -65,7 +65,7 @@ Read more about interruptible machines here
 
 ## Machine specs
 
-If you're curious about the machine spec, here's the list.
+If you're curious about the machine specs, here's the list.
 
 ### P2 instance types
 
@@ -93,5 +93,5 @@ Please note: Costs seen in the various screens in product are an estimation
 
 To use GPU machines you must authenticate your account with a credit card. A temporary $1 hold on the card will be placed. The hold expires after 7 days.
 
-All our credit card information and processing is handled by [Stripe](https://stripe.com/).
+Credit card information and processing is handled by [Stripe](https://stripe.com/).
 
