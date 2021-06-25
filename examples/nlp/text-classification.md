@@ -47,7 +47,7 @@ Take a look at this file if you are curious about the model. [https://github.com
 
 Paste the link to file in the New Run page.
 
-Make sure to select the datastore created above. Notice that mount directory is /opt/datastore. Make sure to add the flags to your script.
+Make sure to select the datastore created above. Note the mount directory. Make sure to add flags to your script.
 
 ![new run full 1](https://user-images.githubusercontent.com/13732925/121349841-f81c1780-c8f7-11eb-9dd6-3fe54d77c32a.png)
 

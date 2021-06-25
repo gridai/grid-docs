@@ -14,5 +14,5 @@ Grid accepts payment via credit card at this time. Add credits and pay for what 
 
 ![](../../.gitbook/assets/image%20%2852%29.png)
 
-This feature is still in early access. [See this section](../about-these-features/).
+This feature is in an upgraded plan. See [this section](../upgrades/adding-custom-cloud-credentials.md).
 
