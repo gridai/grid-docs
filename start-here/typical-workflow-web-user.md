@@ -1,8 +1,8 @@
 ---
-description: Using the web based application platform.grid.ai
+description: 'Using the web based application https://platform.grid.ai'
 ---
 
-# Typical workflow \(web user\)
+# Typical workflow \(Web user\)
 
 ## Goal
 

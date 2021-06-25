@@ -4,7 +4,7 @@
 
 ## Start Here
 
-* [Typical workflow \(web user\)](start-here/typical-workflow-web-user.md)
+* [Typical workflow \(Web user\)](start-here/typical-workflow-web-user.md)
 * [Typical workflow \(CLI user\)](start-here/typical-workflow-cli-user.md)
 
 ## Products
