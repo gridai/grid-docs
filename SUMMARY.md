@@ -102,3 +102,10 @@
 * [Tips & Tricks](platform/tips-and-tricks.md)
 * [Changelog](platform/changelog.md)
 
+## LINKS
+
+---
+
+* [Grid.ai Website](https://grid.ai)
+* [Platform](https://platform.grid.ai)
+
