@@ -1,6 +1,6 @@
 ---
 description: >-
-  Focus on machine learning, NOT infrastructure.From the creators of PyTorch
+  Focus on machine learning, NOT infrastructure. From the creators of PyTorch
   Lightning.
 ---
 
