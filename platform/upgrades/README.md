@@ -4,13 +4,13 @@ description: Teams and Enterprise Plans
 
 # Upgrades
 
-Website link for upgrade plan information is [here](https://www.grid.ai/pricing/)
+Upgrade plan information is [here](https://www.grid.ai/pricing/)
 
-## Bring your own Credentials Feature
+## Bring your own Credentials
 
 This feature is  now [Available](adding-custom-cloud-credentials.md)! 
 
-Grid can orchestrate infrastructure on your own Cloud account by simply adding your own cloud credentials to carry out your machine learning jobs. This is part of our Teams and Enterprise plans. Please contact us via the website or [support@grid.ai ](mailto:support@grid.ai)to get access and set up.
+Grid can orchestrate infrastructure on your Cloud account by simply adding your own cloud credentials. This is part of our Teams and Enterprise plans. Please contact us via the website or [support@grid.ai ](mailto:support@grid.ai)to get access and set up.
 
 | Cloud | Availability |
 | :--- | :--- |
@@ -18,7 +18,7 @@ Grid can orchestrate infrastructure on your own Cloud account by simply adding y
 | Azure | Not supported yet |
 | GCP | Not supported yet |
 
-## Teams Collaboration Feature
+## Teams Collaboration
 
 This feature is in [Early Access](../about-these-features/teams-features.md)! Contact us at [support@grid.ai ](mailto:support@grid.ai)to participate
 
