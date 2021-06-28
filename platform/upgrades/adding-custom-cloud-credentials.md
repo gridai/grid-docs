@@ -8,13 +8,13 @@ Grid can orchestrate infrastructure on your own AWS account by simply adding you
 
 ![](../../.gitbook/assets/own_creds.gif)
 
-#### Early access
+#### Request access
+
+REQUEST access to this feature! message on community slack: gridai-community.slack.com or send email to [support@grid.ai](mailto:support@grid.ai)
 
 {% hint style="danger" %}
-Using your own AWS credentials with Grid is currently in early access.
+Using your own AWS credentials with Grid is currently not available in the Web UI;  see below for CLI instructions.
 {% endhint %}
-
-REQUEST access to this feature; message on community slack: gridai-community.slack.com
 
 ### Step 1: Get AWS credentials
 
