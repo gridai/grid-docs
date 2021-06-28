@@ -87,6 +87,24 @@ Now that you have added the right permissions to your user name, you can use the
 
 For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
 
+{% hint style="info" %}
+The script need following list of permissions: 
+{% endhint %}
+
+{% hint style="info" %}
+* "eks:\*",
+* "ecr:\*",
+* "arn:aws:iam::aws:policy/AmazonEC2FullAccess",
+* "arn:aws:iam::aws:policy/AmazonGuardDutyFullAccess",
+* "arn:aws:iam::aws:policy/AmazonRoute53ResolverFullAccess",
+* "arn:aws:iam::aws:policy/AmazonS3FullAccess",
+* "arn:aws:iam::aws:policy/AmazonSNSFullAccess",
+* "arn:aws:iam::aws:policy/AmazonSQSFullAccess",
+* "arn:aws:iam::aws:policy/AmazonVPCFullAccess",
+* "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess",
+* "arn:aws:iam::aws:policy/IAMFullAccess",
+{% endhint %}
+
 For quick start
 
 * Clone the repo
