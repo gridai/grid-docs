@@ -6,6 +6,8 @@ By default you can only access public Github repositories on Grid. To grant acce
 
 ![](../../.gitbook/assets/github.gif)
 
+![Make sure the Integrations tab in settings shows private repos are connected](../../.gitbook/assets/screen-shot-2021-06-28-at-6.42.25-pm.png)
+
 ## About private code
 
 Grid does not save your code, look at it or compromise its privacy in any way.
