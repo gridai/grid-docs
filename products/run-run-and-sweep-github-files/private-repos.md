@@ -2,7 +2,7 @@
 
 ## Access Private Github Repos
 
-By default you can only access public Github repositories on Grid. To grant access to your private code navigate to Settings &gt; Integrations &gt; Grant access.
+By default you can only access public Github repositories on Grid. To grant read access to your private code navigate to Settings &gt; Integrations &gt; Grant access.
 
 ![](../../.gitbook/assets/github.gif)
 
