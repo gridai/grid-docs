@@ -55,6 +55,8 @@ You are now ready to train your model on Grid.
 
 We'll be using the CLI but you can do the same thing by using the web UI. We have placed a configuration file locally \(`.grid/config.yml`\) that you can use as reference instead of passing all the parameters to the CLI manually.
 
+This is the script we will be using: [https://github.com/gridai/gridai-timeseries-forecasting-demo](https://github.com/gridai/gridai-timeseries-forecasting-demo)
+
 ```text
 $ grid run --config .grid/config.yml \
            train.py \

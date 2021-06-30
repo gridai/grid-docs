@@ -110,7 +110,7 @@ Start a Session named _resnet-debugging_ with 2 M60 GPUs on it and attach our **
 
 **Note: A credit card needs to be added to use GPU machines**
 
-![](../.gitbook/assets/sess_2%20%284%29%20%283%29%20%281%29%20%282%29.gif)
+![](../.gitbook/assets/sess_2%20%284%29%20%283%29%20%281%29%20%281%29%20%282%29.gif)
 
 Sessions really shine with **huge datasets**. The automatic mounting feature means you can jump straight to work without waiting a long time for your data to be available.
 

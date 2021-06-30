@@ -104,8 +104,6 @@
 
 ## LINKS
 
----
-
 * [Grid.ai Website](https://grid.ai)
 * [Platform](https://platform.grid.ai)
 
