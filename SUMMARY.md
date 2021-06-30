@@ -28,6 +28,7 @@
     * [grid version](products/global-cli-configs/cli-api/grid-version.md)
     * [grid view](products/global-cli-configs/cli-api/grid-view.md)
     * [grid ssh-keys](products/global-cli-configs/cli-api/grid-ssh-keys.md)
+    * [grid sync-env](products/global-cli-configs/cli-api/grid-sync-env.md)
   * [Virtual Environments](products/global-cli-configs/virtual-environments.md)
   * [Windows support](products/global-cli-configs/using-grid-with-windows-subsystem-for-linux-wsl.md)
 * [⚡Datastores](products/add-data-to-grid-datastores/README.md)
