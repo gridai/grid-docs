@@ -28,3 +28,6 @@ Grid can run arbitrary python scripts. You're free to run whatever you want insi
 
 Grid supports Linux based operating systems. We recommend using virtual environment when using CLI. Please see the guidance [here](../global-cli-configs/virtual-environments.md)
 
+## Experiments are queued for a long time
+
+If experiments are queued for a long time it could be a sign that instance type requested is not in the availability zone; reach out on slack or open a github issue if you see this: https://github.com/gridai/gridai/issues
