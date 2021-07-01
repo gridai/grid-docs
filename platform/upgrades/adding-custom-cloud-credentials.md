@@ -259,19 +259,21 @@ grid session create --cluster <cluster name>
 
 Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
+### Step 7: Enjoy
+
+## Edit and Delete Functions
+
 Use grid edit to see instance types available and update as necessary
 
 ```bash
 grid edit cluster <cluster name>
 ```
 
-Use grid delete to delete cluster; use this with care
+Use grid delete to delete cluster; use with care!
 
 ```bash
 grid delete cluster <cluster name>
 ```
-
-### Step 7: Enjoy
 
 ## Installing 3rd Party Tools
 
