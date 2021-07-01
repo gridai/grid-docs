@@ -13,7 +13,7 @@ Grid can orchestrate infrastructure on your own AWS account by simply adding you
 REQUEST access to this feature! message on community slack: gridai-community.slack.com or send email to [support@grid.ai](mailto:support@grid.ai)
 
 {% hint style="danger" %}
-Using your own AWS credentials with Grid is currently not available in the Web UI;  see below for CLI instructions.
+Using your own AWS credentials with Grid is currently not available in the Web UI; see below for CLI instructions.
 {% endhint %}
 
 ### Step 1: Get AWS credentials
@@ -88,7 +88,7 @@ Now that you have added the right permissions to your user name, you can use the
 For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
 
 {% hint style="info" %}
-The script needs following list of permissions: 
+The script needs following list of permissions:
 {% endhint %}
 
 {% hint style="info" %}
@@ -261,8 +261,15 @@ Or if you're using config file set the `.compute.provider.cluster` field to the 
 
 Use grid edit to see instance types available and update as necessary
 
-Use grid delete to delete cluster
+```bash
+grid edit cluster <cluster name>
+```
 
+Use grid delete to delete cluster; use this with care
+
+```bash
+grid delete cluster <cluster name>
+```
 
 ### Step 7: Enjoy
 
