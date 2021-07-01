@@ -88,7 +88,7 @@ Now that you have added the right permissions to your user name, you can use the
 For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
 
 {% hint style="info" %}
-The script need following list of permissions: 
+The script needs following list of permissions: 
 {% endhint %}
 
 {% hint style="info" %}
@@ -258,6 +258,11 @@ grid session create --cluster <cluster name>
 ```
 
 Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
+
+Use grid edit to see instance types available and update as necessary
+
+Use grid delete to delete cluster
+
 
 ### Step 7: Enjoy
 
