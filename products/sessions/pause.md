@@ -31,4 +31,9 @@ The equivalent via the CLI
 ```bash
 grid session resume the-interactive-name
 ```
+## New Automatic Pausing!
+We pause your session automatically if balance available goes to zero.
 
+This is so that you don't lose your work! 
+
+When you have added credits, just resume the session and carry on with your work. The left navigation bar always shows credits remaining.
