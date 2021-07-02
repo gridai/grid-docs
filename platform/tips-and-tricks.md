@@ -116,11 +116,11 @@ With this trick you can better manage your training budget and invest it into mo
 
 Have you ever wanted to share or reproduce the results of your run? Grid Runs make it simple to reproduce, share and embed run configurations as badges for GitHub and or Medium. Here is how to create your own exportable Grid Run badge that you can use to embed and share your work.
 
-Start a Run n Grid. Once it is completed, just go to the Run details, click on the Grid Run button and copy and paste that url inside any Github repository markdown file so your friends run the same configuration
+Start a Run on Grid. Once it is completed, just go to the Run details, click on the Grid Run button and copy and paste that url inside any Github repository markdown file so your friends run the same configuration
 
 ![](../.gitbook/assets/image%20%2814%29.png)
 
-Here is a [video of how to do that](../products/run-run-and-sweep-github-files/sharing-runs.md#generate-a-run-badge-for-github)
+Here is a [video of how to create a Grid Run badge for a reproducible run](../products/run-run-and-sweep-github-files/sharing-runs.md#generate-a-run-badge-for-github)
 
 ### Periodic Uploads of Datasets to Datastores
 
@@ -130,15 +130,15 @@ The machine learning data is dynamic. If a ML model was trained on data from 201
 
 Here is an example of how you can quickly configure this functionality.
 
-## write out current crontab
+#### write out current crontab
 
 crontab -l &gt; mycron
 
-## run datastore upload every hour every day
+#### run datastore upload every hour every day
 
 echo "0  __  __ grid datastores create --source data/path --name dataset" &gt;&gt; mycron
 
-## install new cron file
+#### install new cron file
 
 crontab mycron rm mycron
 
