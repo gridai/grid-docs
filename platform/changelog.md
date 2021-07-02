@@ -10,6 +10,39 @@ Make sure to update CLI to the latest: pip install lightning-grid --upgrade
 
 {% embed url="https://github.com/gridai/gridai/discussions" caption="" %}
 
+## July 2, 2021
+
+### Added
+
+- Datastores can be mounted for runs and sessions in Collaboration Early Access
+- Support for multiple availability zones when using custom AWS credentials
+
+### Fixed
+
+- Improvements to front-end logs(streaming logs)
+- Fixes for Grid Badges
+- Fixes for cloning runs
+- Better navigation of runs table
+
+### Known issues
+
+- Julia programs may not work consistently in this release, addressing next week
+- Datastores last updated field does not populate in the UI
+
+
+## June 30, 2021
+
+### Added
+
+- Automatic pausing of interactive session if credits are low
+- New CLI commands `grid edit` and `grid delete` for custom AWS credentials
+ 
+### Fixed
+- Improved logs
+- Grid Actions are fixed
+- Better support for adding your own credentials
+- Improved Datastores in Collaboration: (Enterprise and Early Access participants only)
+
 ## June 23, 2021
 
 ### Added
