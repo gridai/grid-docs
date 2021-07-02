@@ -110,3 +110,28 @@ With this trick you can better manage your training budget and invest it  into m
 * [Grid Run Docs](https://bit.ly/3fyBRgT)
 * [Max Time Docs](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html?utm_source=social&utm_medium=slack&utm_campaign=tip_of_week#max-time)
 
+### Reproducible Runs
+
+Have you ever wanted to share or reproduce the results of your run?
+Grid Runs make it simple to reproduce, share and embed run configurations as badges for GitHub and or Medium. Here is how to create your own exportable Grid Run badge that you can use to embed and share your work.
+
+Once you have a completed run in Grid, just go to the Run details, click on the Grid Run button and copy and paste that url
+Here is a video of how to do that
+
+
+### Periodic Uploads of Datasets to Datastores
+
+Did you know the you can schedule periodic uploading Datasets to Datastores ?
+
+The machine learning data is dynamic.  If a ML model was trained on data from 2018 it might model a term such as, “corona” differently than a model that was continuously kept up to date.
+To help make pipelining easier Grid supports periodic uploading of data from its source to a Datastore.
+
+Here is an example of how you can quickly configure this functionality.
+
+#write out current crontab
+crontab -l > mycron
+#run datastore upload every hour every day
+echo "0 * * * * grid datastores create --source data/path --name dataset" >> mycron    
+#install new cron file
+crontab mycron
+rm mycron
