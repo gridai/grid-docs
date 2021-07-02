@@ -4,9 +4,11 @@ description: Some cool Tips and Tricks using Grid Platform
 
 # Tips & Tricks
 
+## Tips & Tricks
+
 ### Interruptible Runs
 
-[Interruptible Runs](../products/run-run-and-sweep-github-files/interruptible-machines.md) powered by spot instances are **50-90%** cheaper but a machine can be interrupted at anytime. If you are using PyTorch Lightning and a job gets interrupted you can load the checkpoints. 
+[Interruptible Runs](../products/run-run-and-sweep-github-files/interruptible-machines.md) powered by spot instances are **50-90%** cheaper but a machine can be interrupted at anytime. If you are using PyTorch Lightning and a job gets interrupted you can load the checkpoints.
 
 Grid helps you directly continue your Runs where you left off as follows.
 
@@ -20,7 +22,7 @@ if __name__ == '__main__':
 grid run --g_use_spot train.py --checkpoint_path "Artifact URL "
 ```
 
-For more information check out 
+For more information check out
 
 * [Interruptible Pricing](https://docs.grid.ai/platform/billing-rates)
 * [Grid Artifacts](https://docs.grid.ai/products/run-run-and-sweep-github-files/artifacts)
@@ -35,7 +37,7 @@ from pytorch_lightning.utilities.cli import LightningCLI
 LightningCLI(MyModel, MyData, trainer_defaults={'max_epochs': 10})
 ```
 
-When combined with Grid, the Lightning CLI enhances  your train scripts, enabling you quickly take advantage of any hardware configuration and perform Grid Data, Model and Trainer sweeps without having to integrate external libraries or add extra code. For more information check out:
+When combined with Grid, the Lightning CLI enhances your train scripts, enabling you quickly take advantage of any hardware configuration and perform Grid Data, Model and Trainer sweeps without having to integrate external libraries or add extra code. For more information check out:
 
 * [Auto Structuring Deep Learning Projects with the Lightning CLI](https://devblog.pytorchlightning.ai/auto-structuring-deep-learning-projects-with-the-lightning-cli-9f40f1ef8b36)
 * [Configuring Grid Hyper Parameter Sweeps](https://docs.grid.ai/products/run-run-and-sweep-github-files/sweep-syntax)
@@ -45,7 +47,7 @@ When combined with Grid, the Lightning CLI enhances  your train scripts, enablin
 
 The recent 1.3 Release of PyTorch Lightning provides 3 New Thresholds for Early Stopping \(Stopping, Divergence, and Check Finite\) that can save you significant money on your Grid Runs.
 
-The [EarlyStopping](https://pytorch-lightning.readthedocs.io/en/latest/common/early_stopping.html) Callback in Lightning allows the Trainer to automatically stop when a given metric stops improving. You can define your own custom metrics or take advantage of our [TorchMetrics package](https://bit.ly/2RxOvVp) to select common metrics to log and monitor. Early Stopping is perfect for  [Grid Runs](https://docs.grid.ai/products/run-run-and-sweep-github-files#runs) because it limits the time spent on experiments that lead to poor convergence or overfitting. 
+The [EarlyStopping](https://pytorch-lightning.readthedocs.io/en/latest/common/early_stopping.html) Callback in Lightning allows the Trainer to automatically stop when a given metric stops improving. You can define your own custom metrics or take advantage of our [TorchMetrics package](https://bit.ly/2RxOvVp) to select common metrics to log and monitor. Early Stopping is perfect for [Grid Runs](https://docs.grid.ai/products/run-run-and-sweep-github-files#runs) because it limits the time spent on experiments that lead to poor convergence or overfitting.
 
 Using EarlyStopping Thresholds into your PL Runs is a simple as adding the following few lines to your code.
 
@@ -60,7 +62,7 @@ from pytorch_lightning import Trainerearly_stopping = EarlyStopping(
 trainer = Trainer(callbacks=[early_stopping])
 ```
 
-You can then pocket the savings or reinvest  them into more promising configurations to take your model performance and convergence to the next level. For more information check out:
+You can then pocket the savings or reinvest them into more promising configurations to take your model performance and convergence to the next level. For more information check out:
 
 * [Grid Run Docs](https://bit.ly/3fyBRgT)
 * [Early Stopping Docs](https://bit.ly/3fnIUZu)
@@ -78,9 +80,9 @@ Once you’ve configured [SSH with the Grid CLI](https://docs.grid.ai/products/s
 scp local_file grid_session_name:~path_to_copy_to/
 ```
 
- **Using** [**Jupyter Lab**](https://docs.grid.ai/products/sessions/jupyterlab-with-sessions?utm_source=slack&utm_medium=social&utm_campaign=tip-of-week)\*\*\*\*
+**Using** [**Jupyter Lab**](https://docs.grid.ai/products/sessions/jupyterlab-with-sessions?utm_source=slack&utm_medium=social&utm_campaign=tip-of-week)\*\*\*\*
 
-If the CLI is not your thing;  you can also upload files using jupyter hub
+If the CLI is not your thing; you can also upload files using jupyter hub
 
 [This video](https://www.youtube.com/watch?time_continue=14&v=1bd2QHqQSH4&feature=emb_title) shows you how to do that. For more information check out:
 
@@ -94,7 +96,7 @@ If the CLI is not your thing;  you can also upload files using jupyter hub
 
 Have you ever wanted to estimate exactly how much a cloud training run will cost you.Well with PyTorch Lightning and Grid now you can.
 
-The recent 1.3 Release of PyTorch Lightning provides a new trainer flag called [max\_time](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html?utm_source=social&utm_medium=slack&utm_campaign=tip_of_week#max-time) that can enable you to stop your  [Grid Run](https://docs.grid.ai/products/run-run-and-sweep-github-files#runs) and save a checkpoint when you’ve reached the max allotted time. 
+The recent 1.3 Release of PyTorch Lightning provides a new trainer flag called [max\_time](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html?utm_source=social&utm_medium=slack&utm_campaign=tip_of_week#max-time) that can enable you to stop your [Grid Run](https://docs.grid.ai/products/run-run-and-sweep-github-files#runs) and save a checkpoint when you’ve reached the max allotted time.
 
 Combined with Grid's ability to estimate how much a run will cost you per an hour you can use this flag to better budget your experiments.
 
@@ -105,33 +107,38 @@ trainer = Trainer(max_time="00:12:00:00", max_epochs=10)# Stop after 1 day and 5
 trainer = Trainer(max_time={"days": 1, "hours": 5})
 ```
 
-With this trick you can better manage your training budget and invest it  into more promising configurations to take your model performance and convergence to the next level.For more information check out:
+With this trick you can better manage your training budget and invest it into more promising configurations to take your model performance and convergence to the next level.For more information check out:
 
 * [Grid Run Docs](https://bit.ly/3fyBRgT)
 * [Max Time Docs](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html?utm_source=social&utm_medium=slack&utm_campaign=tip_of_week#max-time)
 
 ### Reproducible Runs
 
-Have you ever wanted to share or reproduce the results of your run?
-Grid Runs make it simple to reproduce, share and embed run configurations as badges for GitHub and or Medium. Here is how to create your own exportable Grid Run badge that you can use to embed and share your work.
+Have you ever wanted to share or reproduce the results of your run? Grid Runs make it simple to reproduce, share and embed run configurations as badges for GitHub and or Medium. Here is how to create your own exportable Grid Run badge that you can use to embed and share your work.
 
-Once you have a completed run in Grid, just go to the Run details, click on the Grid Run button and copy and paste that url
-Here is a video of how to do that
+Start a Run n Grid. Once it is completed, just go to the Run details, click on the Grid Run button and copy and paste that url inside any Github repository markdown file so your friends run the same configuration
 
+![](../.gitbook/assets/image%20%2814%29.png)
+
+Here is a [video of how to do that](../products/run-run-and-sweep-github-files/sharing-runs.md#generate-a-run-badge-for-github)
 
 ### Periodic Uploads of Datasets to Datastores
 
 Did you know the you can schedule periodic uploading Datasets to Datastores ?
 
-The machine learning data is dynamic.  If a ML model was trained on data from 2018 it might model a term such as, “corona” differently than a model that was continuously kept up to date.
-To help make pipelining easier Grid supports periodic uploading of data from its source to a Datastore.
+The machine learning data is dynamic. If a ML model was trained on data from 2018 it might model a term such as, “corona” differently than a model that was continuously kept up to date. To help make pipelining easier Grid supports periodic uploading of data from its source to a Datastore.
 
 Here is an example of how you can quickly configure this functionality.
 
-#write out current crontab
-crontab -l > mycron
-#run datastore upload every hour every day
-echo "0 * * * * grid datastores create --source data/path --name dataset" >> mycron    
-#install new cron file
-crontab mycron
-rm mycron
+## write out current crontab
+
+crontab -l &gt; mycron
+
+## run datastore upload every hour every day
+
+echo "0  __  __ grid datastores create --source data/path --name dataset" &gt;&gt; mycron
+
+## install new cron file
+
+crontab mycron rm mycron
+
