@@ -2,7 +2,7 @@
 description: Run (and sweep) any private or public Github repository.
 ---
 
-# ⚡Serverless Runs
+# ⚡Runs
 
 ## Runs
 
