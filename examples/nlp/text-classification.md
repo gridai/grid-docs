@@ -93,9 +93,9 @@ grid run \
     --datastore_name imdb-ds \
       train.py \
     --gpus 1  \
-    --train_file /datastores/imdb-ds/train.csv \
-    --valid_file /datastores/imdb-ds/valid.csv  \
-    --test_file /datastores/imdb-ds/test.csv \
+    --train_file /datastores/imdb-ds/imdb/train.csv \
+    --valid_file /datastores/imdb-ds/imdb/valid.csv  \
+    --test_file /datastores/imdb-ds/imdb/test.csv \
     --max_epochs 1
 ```
 
