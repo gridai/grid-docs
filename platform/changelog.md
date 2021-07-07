@@ -10,6 +10,14 @@ Make sure to update CLI to the latest: pip install lightning-grid --upgrade
 
 {% embed url="https://github.com/gridai/gridai/discussions" caption="" %}
 
+## July 7, 2021
+
+### Fixed
+
+* Files not being listed in Run dialog when choosing script
+* Fixes related to mounting shared datastores when using collaboration
+
+
 ## July 2, 2021
 
 ### Added
