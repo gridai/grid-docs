@@ -2,9 +2,9 @@
 description: Run (and sweep) any private or public Github repository.
 ---
 
-# ⚡Serverless Runs
+# ⚡Runs
 
-## Runs and sweep
+## Runs and sweeps
 
 Run \(**and sweep**\) any private or public Github repository on the cloud.
 
@@ -19,7 +19,7 @@ grid run hello.py --number "[1, 2]" --food_item "['pizza', 'hotdog']"
 
 **⚡️⚡️Forget about infrastructure ⚡️⚡️**
 
-Runs are serverless which means you only pay for the time your scripts are actually running. When running on your own infrastructure this amounts to massive cost savings as well.
+Runs are "serverless" which means you only pay for the time your scripts are actually running. When running on your own infrastructure this amounts to massive cost savings as well.
 
 ## 1 minute overview
 
