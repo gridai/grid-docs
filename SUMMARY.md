@@ -42,6 +42,7 @@
   * [Stop experiments](products/mobile/stop-experiments.md)
 * [⚡Sessions](products/sessions/README.md)
   * [Attaching Datastores](products/sessions/attaching-datastores.md)
+  * [Automatic Pausing](products/sessions/automatic-pausing.md)
   * [Github login](products/sessions/github-login.md)
   * [JupyterLab with Sessions](products/sessions/jupyterlab-with-sessions.md)
   * [Machines](products/sessions/machines.md)

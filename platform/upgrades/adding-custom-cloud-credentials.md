@@ -16,8 +16,7 @@ REQUEST access to this feature! message on community slack: gridai-community.sla
 Using your own AWS credentials with Grid is currently not available in the Web UI; see below for CLI instructions.
 {% endhint %}
 
-An Amazon EC2 [Auto Scaling group (ASG)]("https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html") contains a collection of machines that share similar characteristics and are treated as a logical grouping for the purposes of fleet management and dynamic scaling.
-Request Autoscaling quota beforehand; Launch template quotas, Instance profile quotas, Launch configuration quotas and EC2 instance quotas need to be requested. Our recommendation is to request 1000. This is based on assumptions of 6 per region, 2 each for sessions and runs for spot instances and non-spot instances and 29 instance(machine) types.
+An Amazon EC2 \[Auto Scaling group \(ASG\)\]\("[https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html)"\) contains a collection of machines that share similar characteristics and are treated as a logical grouping for the purposes of fleet management and dynamic scaling. Request Autoscaling quota beforehand; Launch template quotas, Instance profile quotas, Launch configuration quotas and EC2 instance quotas need to be requested. Our recommendation is to request 1000. This is based on assumptions of 6 per region, 2 each for sessions and runs for spot instances and non-spot instances and 29 instance\(machine\) types.
 
 ### Step 1: Get AWS credentials
 

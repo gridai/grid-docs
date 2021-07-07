@@ -2,7 +2,7 @@
 description: Run (and sweep) any private or public Github repository.
 ---
 
-# ⚡Runs
+# ⚡Serverless Runs
 
 ## Runs and sweep
 
@@ -74,3 +74,4 @@ A RUN is a collection of experiments \(the run has 4 experiments in this example
 ## **Option 2: Start via the web UI**
 
 ![](../../.gitbook/assets/run_start.gif)
+
