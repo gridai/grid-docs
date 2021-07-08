@@ -22,7 +22,7 @@ Grid does not charge for storing data. However, there is a limit of 25 datastore
 
 ## Does Grid have a limit on DataStore size?
 
-Yes Grid DataStore max size is 1.5 TB. In addition, for security reasons we only allow you to upload data for 24 hours. If your data is too big to upload in 24 hours you will need to manually resume the upload every 24 hours.
+Yes Grid DataStore max size is 1.5 TB. For security reasons, we only allow you to upload data for 24 hours continuously. If your data is too big to upload in a 24 hour period, it will stop uploading. Initiating `grid datastore create <args...>` again will resume the upload.
 
 ## Is there a way to see what files are in a datastore?
 
