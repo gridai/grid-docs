@@ -33,7 +33,7 @@ BERT\([Bidirectional Encoder Representations from Transformers](https://arxiv.or
 
 ## Step 1: Create Datastore
 
-It is fastest to upload zipped datasets from the Web UI.
+It is fastest to upload zipped datasets from the Web UI. Grid supports the following formats of zipped files: .zip, .tar or tar.gz
 
 ```text
 https://pl-flash-data.s3.amazonaws.com/imdb.zip
