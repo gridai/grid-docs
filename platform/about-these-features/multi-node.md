@@ -34,7 +34,7 @@ grid run --instance_type 4_v100_16gb --framework lightning --gpus 32 torch_elast
 
 Start a new run
 
-Paste the script in Run dialog as you would normally
+Paste the Github script in Run dialog as you would normally
 
 Select the machine and specify GPUs per experiment
 
