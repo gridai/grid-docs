@@ -4,7 +4,7 @@
 
 View the metrics of experiments by choosing Run then experiments
 
-![](../../.gitbook/assets/metrics2%20%281%29%20%281%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%281%29.gif)
+![](../../.gitbook/assets/metrics2%20%281%29%20%281%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%282%29%20%281%29.gif)
 
 ## Tensorboard
 

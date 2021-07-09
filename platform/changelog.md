@@ -17,7 +17,6 @@ Make sure to update CLI to the latest: pip install lightning-grid --upgrade
 * Files not being listed in Run dialog when choosing script
 * Fixes related to mounting shared datastores when using collaboration
 
-
 ## July 2, 2021
 
 ### Added

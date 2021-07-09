@@ -6,7 +6,7 @@ description: Frequently asked questions regarding Datastores
 
 ## Data is private
 
-Any datastore you upload to Grid can only be accessed **by you**. Grid does not look at or manipulate your data in anyway. 
+Any datastore you upload to Grid can only be accessed **by you**. Grid does not look at or manipulate your data in anyway.
 
 ## Data retention
 
