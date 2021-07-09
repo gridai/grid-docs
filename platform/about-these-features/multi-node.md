@@ -8,7 +8,7 @@ description: >-
 
 Multi-node or distributed training allows you to train a single model across more than one machine.
 
-REQUEST early access to multi-node by messaging us on community slack: gridai-community.slack.com or email at support@grid.ai
+Early access to multi-node is now available, send us a message on community slack: gridai-community.slack.com or email at support@grid.ai with feedback
 
 We are continuing to improve this beta feature feedback is greatly appreciated. 
 Grid support for distributed training is for Torch-based frameworks only at this time. If 4 GPUs are requested, then 4 images with 2 CPUs and 1 GPU each will run in a distributed manner.  
