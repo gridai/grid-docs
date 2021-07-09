@@ -26,7 +26,7 @@ Click the link to the right of the artifact to copy the link
 ![](../../.gitbook/assets/im.png)
 
 {% hint style="info" %}
-Artifact links have an expiration of 24 hours.
+Artifact links have an expiration of 24 hours, new link is generated every 24 hours
 {% endhint %}
 
 ## Access artifacts via the CLI
