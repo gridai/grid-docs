@@ -16,7 +16,7 @@ Failures at this stage can happen because:
 
 ## Script failures
 
-If the build completes but your script has a failure \(ie: bug that causes exception\) view the logs here
+If the build completes but your script has a failure \(ie: bug that causes exception\) view the Stdout logs here
 
 ![](../../.gitbook/assets/stdout_logs.gif)
 
@@ -27,3 +27,10 @@ Failures here can happen with:
 * Issue accessing the data
 * A bug in your script that throws an exception
 
+## Using the CLI to get logs
+
+To view logs for an experiment use:
+
+```text
+grid logs the-experiment-name
+```
