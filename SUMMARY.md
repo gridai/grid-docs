@@ -65,7 +65,7 @@
   * [Script dependencies](products/run-run-and-sweep-github-files/script-dependencies.md)
   * [Viewing logs](products/run-run-and-sweep-github-files/viewing-logs.md)
   * [YAML configs](products/run-run-and-sweep-github-files/yaml-configs/README.md)
-    * [YAML API](products/run-run-and-sweep-github-files/yaml-configs/yaml-api.md)
+    * [Using YAML](products/run-run-and-sweep-github-files/yaml-configs/yaml-api.md)
   * [FAQ](products/run-run-and-sweep-github-files/faq.md)
   * [Running PyTorch Lightning](products/run-run-and-sweep-github-files/running-pytorch-lightning.md)
   * [Running Tensorflow or Keras](products/run-run-and-sweep-github-files/running-tensorflow-or-keras.md)
