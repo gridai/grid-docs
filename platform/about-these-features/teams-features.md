@@ -1,6 +1,6 @@
 # Teams features
 
-Team features at Grid allow you to work with others. These features allow:
+Teams features allow you to work with others. These  allow:
 
 * Sharing
 * Shared billing
