@@ -89,7 +89,7 @@ Let's create the datastore:
 ![](../.gitbook/assets/untitled-2.gif)
 
 {% hint style="info" %}
-For datasets 1 GB or larger, use the [CLI](../products/global-cli-configs/cli-api/grid-datastores.md)
+For datasets 1 GB or larger, use the [CLI](../products/add-data-to-grid-datastores/global-cli-configs/cli-api/grid-datastores.md)
 {% endhint %}
 
 ## Step 2: Start a session
