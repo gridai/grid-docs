@@ -48,5 +48,5 @@ In the same way as you would for a single node run. If tensorboard logs are avai
 
 Verify how many GPUs were run in the Experiment Details
 
-![](https://lh5.googleusercontent.com/q99Qq42msaCo5nx5QWfH9JXySUnPv_v3LurXTeKFH1S_tfIgO-EwBAcrPo8g8q_80PslPaDIaAKPcKZJChDJ6vQ_BYnYYE-mvw3E21EKIvWuNvUYJuHwWv-oOkePArF5EF0lfOJp)
+![](../../.gitbook/assets/multinode.png)
 
