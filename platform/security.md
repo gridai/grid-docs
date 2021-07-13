@@ -1,6 +1,6 @@
 # Security & Privacy
 
-## Data Privacy
+## Data Privacy. 
 
 Any data you upload to Grid or generate while using the platform such as logs, model checkpoints, configuration files, metrics is private to you. You can choose to save, export or delete your data at any time. Grid does not see your code or compromise its privacy in any way. When receiving support, you will not have to share any code to help debug. If you choose to share code, make sure you have the rights to and share non-critical parts of the code. We treat your data as private and confidential in accordance with our [Terms of Service](https://www.grid.ai/terms-of-service/) and [Privacy policy](https://www.grid.ai/privacy-policy/). 
 
