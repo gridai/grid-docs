@@ -10,6 +10,35 @@ Make sure to update CLI to the latest: pip install lightning-grid --upgrade
 
 {% embed url="https://github.com/gridai/gridai/discussions" caption="" %}
 
+
+
+
+## July 9, 2021
+
+![multinode](https://user-images.githubusercontent.com/13732925/125199122-c2d65280-e232-11eb-95ce-c80204b47096.gif)
+
+### Multinode Training (BETA)
+
+Multi-node training is now publicly available to Grid community members for Early Access. You can submit multi-node training runs through the UI and CLI. Documentation for multi-node training can be found here.
+Please submit feedback for the multi-node experience through Slack or support@grid.ai.
+
+
+## New Features:
+- [Examples](https://docs.grid.ai/products/run-run-and-sweep-github-files/running-julia-programs#step-3-bonus-cli-examples) for running Julia programs on Grid
+
+
+## Improvements
+- Build Logs and Stdout Logs can now be viewed in full screen
+
+
+## Fixes
+- Fix for users being stuck in phone validation loop
+- Issues with metrics display have been resolved
+- Fixes a UI issue with listing files from a  github repo during run creation
+
+## Known Issues
+- Runs may take a little longer than usual to start - this is an issue we are addressing for our next release
+
 ## July 7, 2021
 
 ### Fixed
