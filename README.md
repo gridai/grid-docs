@@ -32,7 +32,7 @@ Here is a quick overview of
 
 Grid allocates all the machines and GPUs you need on demand, so you only pay for what you need when you need it.
 
-Grid lets you focus on your work, NOT on the infrastructure
+Grid lets you focus on your work, NOT on the infrastructure. Create an account [here](https://platform.grid.ai/) to get free credits and get started!
 
 ## Artifacts, logs, etc...
 
@@ -141,5 +141,5 @@ That's all you need to know about Grid!
 
 ## Next!
 
-Now try our [first tutorial](start-here/typical-workflow-web-user.md)
+Now try our [first tutorial](start-here/typical-workflow-web-user.md) 
 
