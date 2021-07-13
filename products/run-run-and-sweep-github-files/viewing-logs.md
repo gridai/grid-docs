@@ -39,7 +39,7 @@ grid logs enlightened-bullfinch-868-exp0 --use_pager
 
 See the CLI command for more information
 
-{% page-ref page="../add-data-to-grid-datastores/global-cli-configs/cli-api/grid-logs.md" %}
+{% page-ref page="../global-cli-configs/cli-api/grid-logs.md" %}
 
 ## New Streaming Logs on UI
 

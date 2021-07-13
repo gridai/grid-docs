@@ -26,7 +26,7 @@ Grid can run arbitrary python scripts. You're free to run whatever you want insi
 
 ## I am getting lot of errors using CLI
 
-Grid supports Linux based operating systems. We recommend using virtual environment when using CLI. Please see the guidance [here](../add-data-to-grid-datastores/global-cli-configs/virtual-environments.md)
+Grid supports Linux based operating systems. We recommend using virtual environment when using CLI. Please see the guidance [here](../global-cli-configs/virtual-environments.md)
 
 ## Experiments are queued for a long time
 
