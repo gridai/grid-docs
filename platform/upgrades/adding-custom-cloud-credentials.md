@@ -96,6 +96,7 @@ The script needs following list of permissions:
 {% hint style="info" %}
 * "eks:\*",
 * "ecr:\*",
+* **"**events**:\*",**
 * "arn:aws:iam::aws:policy/AmazonEC2FullAccess",
 * "arn:aws:iam::aws:policy/AmazonGuardDutyFullAccess",
 * "arn:aws:iam::aws:policy/AmazonRoute53ResolverFullAccess",
