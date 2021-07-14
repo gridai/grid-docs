@@ -103,6 +103,7 @@
   * [Viewing login credentials](platform/supporting-workflows-1/your-login-credentials.md)
 * [Tips & Tricks](platform/tips-and-tricks.md)
 * [Changelog](platform/changelog.md)
+* [Security & Privacy](platform/security-and-privacy.md)
 
 ## LINKS
 
