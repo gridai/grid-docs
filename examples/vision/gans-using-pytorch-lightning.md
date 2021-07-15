@@ -52,7 +52,7 @@ class GAN(LightningModule):
 
 ## Training 
 
-Training this model using Grid, we are going to use the Web application. Login to Grid and open up the Run dialog. Then paste the [script](https://github.com/PyTorchLightning/pytorch-lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). Choose V100 GPU, and lightning framework. Learning rate and dataset can be specified as a script argument.
+Training this model using Grid, we are going to use the Web application. Login to Grid and start new Run; in the Github repo box; paste the [script](https://github.com/PyTorchLightning/pytorch-lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). Choose any CPU or GPU and lightning framework. Learning rate and dataset can be specified as a script argument.
 
 ![](../../.gitbook/assets/gans.gif)
 
