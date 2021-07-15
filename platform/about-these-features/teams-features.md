@@ -15,8 +15,8 @@ Available features include and not limited to:
 | Download team member’s artifacts | Yes |
 | Visualize metrics of team member’s Run | Yes |
 | Clone or share a team member’s Run/Experiment | Yes |
-| View logs of team member’s runs | Yes |
-| View Tensorboard outputs of other's Run | Yes |
+| View logs of team member’s Runs | Yes |
+| View Tensorboard outputs of team member's Run | Yes |
 | View team member's Sessions | Yes |
 | View team member's Datastores | Yes |
 | Access Jupyterlab session created by a team member | Yes |
