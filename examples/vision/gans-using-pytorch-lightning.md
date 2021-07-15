@@ -95,5 +95,7 @@ def generator_loss(self, x):
 
 ![](../../.gitbook/assets/screen-shot-2021-07-14-at-10.18.39-pm.png)
 
-
+{% hint style="info" %}
+This model will train for a long time and is just an example; stop experiments at any time
+{% endhint %}
 
