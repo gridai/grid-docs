@@ -5,7 +5,7 @@ Teams features allow you to work with others. When using Teams, individual team 
 * Sharing Runs, Sessions, Datastores
 * Shared billing
 
-This is a premium feature; refer to our plans page here. REQUEST early access by messaging us on community slack channel: gridai-community.slack.com or contact us at support@grid.ai
+This is a premium feature; refer to our plans page [here](https://www.grid.ai/pricing/). REQUEST early access by messaging us on community slack channel: gridai-community.slack.com or contact us at [support@grid.ai](mailto:support@grid.ai)
 
 Available features include and not limited to:
 
