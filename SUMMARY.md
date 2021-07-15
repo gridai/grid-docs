@@ -78,6 +78,7 @@
   * [ImageNet classification](examples/vision/image-classification-with-imagenet.md)
   * [Kinetics Video Classification](examples/vision/kinetics-video-classification.md)
   * [MosMedData 3D Image Classification](examples/vision/mosmeddata-3d-image-classification.md)
+  * [GANs using PyTorch Lightning](examples/vision/gans-using-pytorch-lightning.md)
 * [NLP](examples/nlp/README.md)
   * [GPT 10B+ params \(8 GPUs\)](examples/nlp/gpt-10b+-params-8-gpus.md)
   * [XSum Text Summarization](examples/nlp/xsum-text-summarization.md)
