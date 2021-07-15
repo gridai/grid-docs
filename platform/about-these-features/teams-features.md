@@ -17,9 +17,9 @@ Available features include and not limited to:
 | Clone or share a team member’s Run/Experiment | Yes |
 | View logs of team member’s runs | Yes |
 | View Tensorboard outputs of other's Run | Yes |
-| View team member's Session | Yes |
-| View team member's Datastores |  |
-| Access a session Jupyterlab from team member | Yes |
+| View team member's Sessions | Yes |
+| View team member's Datastores | Yes |
+| Access Jupyterlab session created by a team member | Yes |
 | Run with a Datastore created by you or any team member | Yes |
 | Mount a Datastore created by team member when creating session | Yes |
 
