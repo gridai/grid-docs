@@ -6,7 +6,7 @@ description: Training Generative Adversarial Network using PyTorch Lightning
 
 ## Goal
 
-This example covers how to train a Generative Adversarial Network \(GAN\) using the cifar-10 images dataset 
+This example covers how to train a Generative Adversarial Network \(GAN\) using Pytorch Lightning; the dataset used is cifar-10 images
 
 1. What are GANs
 2. The model
@@ -52,7 +52,7 @@ class GAN(LightningModule):
 
 ## Training 
 
-Training this model using Grid, we are going to use the Web application. Login to Grid and open up the Run dialog. Then past the [script](https://github.com/PyTorchLightning/pytorch-lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). Choose V100 GPU, and lightning framework. Learning rate and dataset can be specified as a script argument.
+Training this model using Grid, we are going to use the Web application. Login to Grid and open up the Run dialog. Then paste the [script](https://github.com/PyTorchLightning/pytorch-lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). Choose V100 GPU, and lightning framework. Learning rate and dataset can be specified as a script argument.
 
 ![](../../.gitbook/assets/gans.gif)
 
