@@ -17,11 +17,11 @@ This example covers how to train a Generative Adversarial Network \(GAN\) using 
 
 Generative Adversarial Networks, or GANs are an approach to generative modeling using deep learning methods, such as convolutional neural networks. [https://arxiv.org/abs/1406.2661](https://arxiv.org/abs/1406.2661)
 
-In this approach, the generative model is pitted against an adversary or discriminative model that learns to determine whether a sample is from the model distribution or the data distribution.
+In this approach, the generative model is pitted against an adversary or discriminative model that learns to determine whether a sample image is from the model distribution or the data distribution.
 
 ## The model 
 
-[PyTorch Lightning Bolts](https://github.com/PyTorchLightning/lightning-bolts) contains many state of the art pre-trained model recipes. For this example we will use the Basic GAN script: basic\_gan\_module.py; check out the code [here](https://github.com/PyTorchLightning/lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). The dataset argument can train for any standard image dataset; in this example we choose cifar10
+[PyTorch Lightning Bolts](https://github.com/PyTorchLightning/lightning-bolts) contains many state of the art pre-trained model recipes. For this example we will use the basic gan script to train a basic generative adversarial network; check out the code [here](https://github.com/PyTorchLightning/lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). The dataset argument can train for any standard image dataset; in this example we choose cifar10
 
 ```text
 from argparse import ArgumentParser
@@ -64,7 +64,7 @@ Next, see the model training, generating metrics and artifacts; download as nece
 
 ## Visualizing results
 
-The basic gan model recipe generates metrics such as loss which can be visualized in the web interface
+The basic gan model recipe generates metrics such as loss which can be visualized in the web interface; here you see the generator loss and discriminator loss;
 
 ```text
 def generator_loss(self, x):
