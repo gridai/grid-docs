@@ -6,7 +6,7 @@ description: Training Generative Adversarial Network using PyTorch Lightning
 
 ## Goal
 
-This example covers how to train a Generative Adversarial Network \(GANs\) using the cifar-10 images dataset 
+This example covers how to train a Generative Adversarial Network \(GAN\) using the cifar-10 images dataset 
 
 1. What are GANs
 2. The model
@@ -21,7 +21,7 @@ In this approach, the generative model is pitted against an adversary or discrim
 
 ## The model 
 
-[PyTorch Lightning Bolts](https://github.com/PyTorchLightning/lightning-bolts) contains many state of the art pre-trained model recipes. For this example we will use the Basic GAN script: basic\_gan\_module.py; check out the code [here](https://github.com/PyTorchLightning/lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). It is very simple, the dataset argument can train for any standard image dataset
+[PyTorch Lightning Bolts](https://github.com/PyTorchLightning/lightning-bolts) contains many state of the art pre-trained model recipes. For this example we will use the Basic GAN script: basic\_gan\_module.py; check out the code [here](https://github.com/PyTorchLightning/lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). The dataset argument can train for any standard image dataset; in this example we choose cifar10
 
 ```text
 from argparse import ArgumentParser
@@ -52,7 +52,7 @@ class GAN(LightningModule):
 
 ## Training 
 
-Training this model using Grid, we are going to use the Web application. Login to Grid and open up the Run dialog. Then past the [script](https://github.com/PyTorchLightning/pytorch-lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). Choose V100 GPU, and lightning framework.
+Training this model using Grid, we are going to use the Web application. Login to Grid and open up the Run dialog. Then past the [script](https://github.com/PyTorchLightning/pytorch-lightning-bolts/blob/master/pl_bolts/models/gans/basic/basic_gan_module.py). Choose V100 GPU, and lightning framework. Learning rate and dataset can be specified as a script argument.
 
 ![](../../.gitbook/assets/gans.gif)
 
