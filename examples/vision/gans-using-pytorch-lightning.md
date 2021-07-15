@@ -56,7 +56,7 @@ Training this model using Grid, we are going to use the Web application. Login t
 
 ![](../../.gitbook/assets/gans.gif)
 
-Add script arguments**;** learning rate and dataset
+For this example, we used these values
 
 --learning\_rate "uniform\(1e-5, 1e-1, 3\)" and --dataset "\['cifar10'\]"
 
