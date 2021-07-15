@@ -6,7 +6,9 @@ Grid charges based on consumption of compute.
 Costs are **estimates** until experiments or Sessions have finished, then Grid reports the final costs
 {% endhint %}
 
-To use GPU machines, a temporary hold of $1 is placed on credit card, this expires within 7 days
+To use GPU machines, a temporary hold of $1 is placed on credit card, this expires within 7 days.
+
+This page describes community edition pricing; refer to plans [here](https://www.grid.ai/pricing/)
 
 ## List pricing
 
