@@ -18,7 +18,9 @@ Using your own AWS credentials with Grid is currently not available in the Web U
 
 An Amazon EC2 [Auto Scaling Group \(ASG\)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) contain a collection of machines that share similar characteristics and are treated as a logical grouping for the purposes of fleet management and dynamic scaling. We use ASGs to scale your cluster dynamically.
 
-Request Autoscaling quota beforehand adding a Grid cluster otherwise you may hit quota limits when attempting to scale and jobs will queued and / or cancelled. Launch template quotas, Instance profile quotas, Launch configuration quotas and EC2 instance quotas need to be requested. Our recommendation is to request 1000. This is based on assumptions of 6 per region, 2 each for sessions and runs for spot instances and non-spot instances and 29 instance\(machine\) types.
+Request Autoscaling quota beforehand adding a Grid cluster otherwise you may hit quota limits when attempting to scale and jobs will queued and / or cancelled. Launch template quotas, Instance profile quotas.
+
+You will also need to request quotas for Launch Configurations and EC2 Instances. Our recommendation is to request 1000 of each or more for each instance that you need to use. This is based on assumptions of 6 per region, 2 each for sessions and runs for spot instances and non-spot instances and 29 instance \(aka machine / VM\) types.
 
 ### Step 1: Get AWS credentials
 
