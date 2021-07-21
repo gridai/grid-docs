@@ -17,7 +17,7 @@ First, [install miniconda](https://docs.conda.io/en/latest/miniconda.html).
 Then create the conda environment
 
 ```bash
-conda create --name pick_a_name python=3.7
+conda create --name pick_a_name python=3.8
 ```
 
 ### Install Grid
