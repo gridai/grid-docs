@@ -11,7 +11,7 @@ The goal of this tutorial is to walk through a typical workflow using the Grid c
 For users who prefer the web app [this is the mirror tutorial for the web app.](typical-workflow-web-user.md)
 
 {% hint style="info" %}
-Grid has a 1:1 match in functionality with the Web app.
+The Grid CLI app has a 1:1 match in functionality with the Web app.
 {% endhint %}
 
 We'll use image classification as the example to illustrate the key ideas. The typical workflow goes like this:
