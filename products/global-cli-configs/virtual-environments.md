@@ -36,7 +36,7 @@ pip install lightning-grid
 
 An alternative to conda is to use virtual environment. In the machine learning world, the standard is conda. However, if you still want to use virtual environment, do the following:
 
-```
+```text
 python3 -m venv ~/gridai
 ```
 
