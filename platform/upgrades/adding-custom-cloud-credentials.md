@@ -4,21 +4,21 @@
 
 #### Custom cloud credentials
 
-Grid can orchestrate infrastructure on your own AWS account by simply adding your own AWS credentials.
+Grid can orchestrate infrastructure on your AWS account by simply adding your AWS credentials.
 
 ![](../../.gitbook/assets/own_creds.gif)
 
 #### Request Access
 
-REQUEST access to this feature! message on community slack: gridai-community.slack.com or send email to [support@grid.ai](mailto:support@grid.ai)
+REQUEST access to this feature! message on community slack: [gridai-community.slack.com ](https://join.slack.com/t/gridai-community/shared_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg) or send email to [support@grid.ai](mailto:support@grid.ai)
 
 {% hint style="danger" %}
-Using your own AWS credentials with Grid is currently not available in the Web UI; see below for CLI instructions.
+Using your AWS credentials with Grid is currently not available in the Web UI; see below for CLI instructions.
 {% endhint %}
 
-An Amazon EC2 [Auto Scaling Group \(ASG\)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) contain a collection of machines that share similar characteristics and are treated as a logical grouping for the purposes of fleet management and dynamic scaling. We use ASGs to scale your cluster dynamically.
+An Amazon EC2 [Auto Scaling Group \(ASG\)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) contain a collection of machines that share similar characteristics and are treated as a logical grouping for fleet management and dynamic scaling. We use ASGs to scale your cluster dynamically.
 
-Request Autoscaling quota beforehand adding a Grid cluster otherwise you may hit quota limits when attempting to scale and jobs will queued and / or cancelled. Launch template quotas, Instance profile quotas.
+Request Autoscaling quota beforehand adding a Grid cluster otherwise you may hit quota limits when attempting to scale and jobs will be queued and/or canceled. Launch template quotas, Instance profile quotas.
 
 You will also need to request quotas for Launch Configurations and EC2 Instances. Our recommendation is to request 1000 of each or more for each instance that you need to use. This is based on assumptions of 6 per region, 2 each for sessions and runs for spot instances and non-spot instances and 29 instance \(aka machine / VM\) types.
 
@@ -60,7 +60,7 @@ Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
 The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
 {% endhint %}
 
-Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](https://docs.grid.ai/platform/about-these-features/adding-custom-cloud-credentials#step-2-add-iam-permissions-to-your-account) for more details.
+Make sure that your user name has the right policies attached to use Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](https://docs.grid.ai/platform/about-these-features/adding-custom-cloud-credentials#step-2-add-iam-permissions-to-your-account) for more details.
 
 ### Step 2: Add IAM permissions to your account
 
@@ -80,21 +80,21 @@ The final step is to add all the Grid policies to your account. That means that 
 4. Click on "Add permissions"
 5. Click on "Attach existing policies directly"
 
-![Granting permissions to an user.](../../.gitbook/assets/image%20%2813%29.png)
+![Granting permissions to a user.](../../.gitbook/assets/image%20%2813%29.png)
 
 1. Search for the policy IAMFullAccess:  
 2. Click the Check Box to the left of `IAMFullAccess`
-3. Click on "Next:Review"
+3. Click on "Next: Review"
 4. Click on "Add permissions"
 
 Now that you have added the right permissions to your user name, you can use the user's AWS API keys with Grid.
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
+For the next step, you're going to create a role using terraform. Make sure you have `git`, `terraform`, `jq`, and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on the official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
 
 {% hint style="info" %}
-The script needs following list of permissions:
+The script needs the following list of permissions:
 {% endhint %}
 
 {% hint style="info" %}
@@ -219,14 +219,14 @@ pip install lightning_grid --upgrade
 grid login --username <Grid user name> --key <Grid API Key>
 ```
 
-* Create cluster in default region with default instance types.
+* Create a cluster in default region with default instance types.
 * Cluster name must be lower case alphanumeric characters, '-' or '.' is allowed but not '\_', and must start and end with an alphanumeric character
 
 ```bash
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID <cluster name>
 ```
 
-* Create cluster in `us-west-2` region with default instance types
+* Create a cluster in `us-west-2` region with default instance types
 
 ```bash
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 <cluster name>
@@ -238,13 +238,13 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.large <cluster name>
 ```
 
-### Step 5: Wait for cluster to be provisioned
+### Step 5: Wait for the cluster to be provisioned
 
 ```text
 grid clusters
 ```
 
-And wait for your cluster status be `running`:
+And wait for your cluster status to be `running`:
 
 ```text
 ┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
@@ -264,7 +264,7 @@ grid run --cluster <cluster name>
 grid session create --cluster <cluster name>
 ```
 
-Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
+Or if you're using a config file, set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
 ### Step 7: Enjoy
 
