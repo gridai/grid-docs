@@ -4,7 +4,7 @@
 
 #### Custom cloud credentials
 
-Grid can orchestrate infrastructure on your AWS account by simply adding your AWS credentials.
+Grid can orchestrate infrastructure on your own AWS account by simply adding your own AWS credentials.
 
 ![](../../.gitbook/assets/own_creds.gif)
 
@@ -13,7 +13,7 @@ Grid can orchestrate infrastructure on your AWS account by simply adding your AW
 REQUEST access to this feature! message on community slack: [gridai-community.slack.com ](https://join.slack.com/t/gridai-community/shared_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg) or send email to [support@grid.ai](mailto:support@grid.ai)
 
 {% hint style="danger" %}
-Using your AWS credentials with Grid is currently not available in the Web UI; see below for CLI instructions.
+Using your own AWS credentials with Grid is currently not available in the Web UI; see below for CLI instructions.
 {% endhint %}
 
 An Amazon EC2 [Auto Scaling Group \(ASG\)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) contain a collection of machines that share similar characteristics and are treated as a logical grouping for fleet management and dynamic scaling. We use ASGs to scale your cluster dynamically.
@@ -129,8 +129,10 @@ unset AWS_SECRET_ACCESS_KEY
 unset AWS_SESSION_TOKEN
 
 aws configure
+```
 
 # prompt and example entries below
+You will get the prompts below 
 
 AWS Access Key ID [None]: xxxxxxxxx
 AWS Secret Access Key [None]: xxxxxxxxx
