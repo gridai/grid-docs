@@ -228,20 +228,26 @@ grid login --username <Grid user name> --key <Grid API Key>
 * Create a cluster in default region with default instance types.
 * Cluster name must be lower case alphanumeric characters, '-' or '.' is allowed but not '\_', and must start and end with an alphanumeric character
 
+* Export `CLUSTER_NAME` to be used in later steps.
+
 ```bash
-grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID <cluster name>
+export CLUSTER_NAME=<cluster name>
+```
+
+```bash
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID $CLUSTER_NAME
 ```
 
 * Create a cluster in `us-west-2` region with default instance types
 
 ```bash
-grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 <cluster name>
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 $CLUSTER_NAME
 ```
 
 * Create cluster in `eu-west-2` region with `t2.medium` and `t2.xlarge` instance types
 
 ```bash
-grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.large <cluster name>
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.large $CLUSTER_NAME
 ```
 
 ### Step 5: Wait for the cluster to be provisioned
@@ -265,27 +271,27 @@ It can take some time to provision a new cluster, ~20-30 minutes
 
 ### Step 6: Run your workloads in your new cluster
 
-```text
-grid run --cluster <cluster name>
-grid session create --cluster <cluster name>
+```bash
+grid run --cluster $CLUSTER_NAME
+grid session create --cluster $CLUSTER_NAME
 ```
 
 Or if you're using a config file, set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
-### Step 7: Enjoy
+### Step 7: Enjoy!
 
 ## Edit and Delete Functions
 
 Use grid edit to see instance types available and update as necessary
 
 ```bash
-grid edit cluster <cluster name>
+grid edit cluster $CLUSTER_NAME
 ```
 
 Use grid delete to delete cluster; use with care!
 
 ```bash
-grid delete cluster <cluster name>
+grid delete cluster $CLUSTER_NAME
 ```
 
 ## Installing 3rd Party Tools
