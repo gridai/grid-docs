@@ -131,9 +131,9 @@ unset AWS_SESSION_TOKEN
 aws configure
 ```
 
-# prompt and example entries below
-You will get the prompts below 
+You will get the prompts mentioned below and enter the details.
 
+```bash
 AWS Access Key ID [None]: xxxxxxxxx
 AWS Secret Access Key [None]: xxxxxxxxx
 Default region name [None]:
@@ -144,7 +144,9 @@ Default output format [None]:
 
 ```bash
 aws sts get-caller-identity
+```
 
+```javascript
 # example entries below should match the above steps
 {
     "UserId": "xxxxxxxxx",
@@ -158,7 +160,9 @@ aws sts get-caller-identity
 ```bash
 terraform init
 terraform apply
+```
 
+```bash
 # enter provider.aws.region
 provider.aws.region
   The region where AWS operations will take place. Examples
