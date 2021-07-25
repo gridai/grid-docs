@@ -142,7 +142,6 @@ Here's a summary of all the available grid flags \(all are optional\)
 | --datastore\_name | name of datastore to mount | - |
 | --datastore\_version | version of datastore to mount | - |
 | --datastore\_mount\_dir | directory where to mount datastore | /opt/datastore |
-| --disk\_size | size of disk attached to machine | 200 GB |
 | --description | additional context for this run | - |
 | --framework | machine learning framework | - |
 | --gpus | the number of GPUs per experiment | 0 |
@@ -232,14 +231,6 @@ Optional description for a run
 
 ```text
 grid run --description "Trying Adam optimizer" my_script.py
-```
-
-### `--disk_size`
-
-Disk size to be attached to every experiment node. Number indicates Gb.
-
-```text
-grid run --disk_size 300 --my_script.py
 ```
 
 ### **`--gpus`**
