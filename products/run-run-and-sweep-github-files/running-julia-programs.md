@@ -60,10 +60,10 @@ Script arguments: --num\_samples "\[10,100,1000,10000\]"
 ```bash
 git clone https://github.com/rlizzo/TuringCLIExample
 cd TuringCLIExample
-grid run fit.jl \
---instance_type t2.medium \
+grid run --instance_type t2.medium \
 --framework julia \
 --cpus 1 \
+fit.jl \
 --num_samples 100
 ```
 
