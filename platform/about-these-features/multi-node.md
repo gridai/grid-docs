@@ -12,6 +12,14 @@ Early access to multi-node is now available, send us a message on community slac
 
 We are continuing to improve this beta feature and feedback is greatly appreciated! Grid support for distributed training is for torch-based frameworks only at this time. If 4 GPUs are requested, then 4 images with 2 CPUs and 1 GPU each will run in a distributed manner.
 
+## When should you use multi-node?
+
+Multi-node training allows you to run an experiment across multiple machines, therefore leveraging more GPUs that a single machine can offer.
+
+However, running multi-node training doesn't always make your experiment run faster, as there is overhead of communicating and synchronizing between all the nodes to ensure a correct training output.
+
+We recommend you try out multi-node with a few epochs and see if the speed up is there before running a full training.
+
 ## Using CLI
 
 Starting a multi node run in CLI is the same as how you run any other script, Grid calculates number of gpus and nodes for you. simply specify how many GPUs you will use per experiment.
