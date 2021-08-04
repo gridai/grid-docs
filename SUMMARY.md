@@ -92,7 +92,7 @@
 
 * [Billing rates](platform/billing-rates.md)
 * [Upgrades](platform/upgrades/README.md)
-  * [Add custom cloud credential](platform/upgrades/adding-custom-cloud-credentials.md)
+  * [Creating a New Cluster](platform/upgrades/adding-custom-cloud-credentials.md)
 * [Early Access Features](platform/about-these-features/README.md)
   * [Multi-node training](platform/about-these-features/multi-node.md)
   * [Teams features](platform/about-these-features/teams-features.md)

@@ -1,19 +1,14 @@
-# Add custom cloud credential
+---
+description: >-
+  Grid allows you to create a cluster inside your own infrastructure. Using this
+  approach allows you to control where your data sits and keeping that data
+  secure.
+---
 
-## Adding custom cloud credential
+# Creating a New Cluster
 
-#### Custom cloud credentials
-
-Grid can orchestrate infrastructure on your own AWS account by simply adding your own AWS credentials.
-
-![](../../.gitbook/assets/own_creds.gif)
-
-#### Request Access
-
-REQUEST access to this feature! message on community slack: gridai-community.slack.com or send email to [support@grid.ai](mailto:support@grid.ai)
-
-{% hint style="danger" %}
-Using your own AWS credentials with Grid is currently not available in the Web UI; see below for CLI instructions.
+{% hint style="info" %}
+Request access to this feature! Send us a message to our [community Slack](https://gridai-community.slack.com) or send email to [support@grid.ai](mailto:support@grid.ai)
 {% endhint %}
 
 An Amazon EC2 [Auto Scaling Group \(ASG\)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) contain a collection of machines that share similar characteristics and are treated as a logical grouping for the purposes of fleet management and dynamic scaling. We use ASGs to scale your cluster dynamically.
