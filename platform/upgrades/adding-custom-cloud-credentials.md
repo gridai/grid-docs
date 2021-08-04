@@ -11,13 +11,34 @@ description: >-
 Request access to this feature! Send us a message to our [community Slack](https://gridai-community.slack.com) or send email to [support@grid.ai](mailto:support@grid.ai)
 {% endhint %}
 
-An Amazon EC2 [Auto Scaling Group \(ASG\)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) contain a collection of machines that share similar characteristics and are treated as a logical grouping for the purposes of fleet management and dynamic scaling. We use ASGs to scale your cluster dynamically.
+Grid creates clusters inside your own cloud account allowing you to keep complete control of the resources that you need. We'll guide you through the setup process for each of the supported cloud providers.
 
-Request Autoscaling quota beforehand adding a Grid cluster otherwise you may hit quota limits when attempting to scale and jobs will queued and / or cancelled. Launch template quotas, Instance profile quotas.
+## Amazon Web Services \(AWS\)
 
-You will also need to request quotas for Launch Configurations and EC2 Instances. Our recommendation is to request 1000 of each or more for each instance that you need to use. This is based on assumptions of 6 per region, 2 each for sessions and runs for spot instances and non-spot instances and 29 instance \(aka machine / VM\) types.
+### Requirements
 
-### Step 1: Get AWS credentials
+Grid will create clusters designed for large AI workloads. In order to do so, your AWS account needs to have the **right permissions** and **quotas**. We'll cover both optional and required configurations as follows.
+
+| Configuration | Recommendation |
+| :--- | :--- |
+| Auto Scaling groups per region | 800 |
+| Launch configurations per region | 600 |
+| EC2 Spot \(instance family you are interested in\) | 1000+ |
+| EC2 On-demand \(instance family you are interested in\) | 1000+ |
+
+#### Requesting Quotas
+
+All AWS accounts have "service quotas". These are limits for the utilization of service provided by AWS. In order to increase your quotas, you have to request a quota increase to a specific service. That will open a ticket with AWS support. You may need to follow-up on the ticket in order for the quota to be granted.
+
+You can request a quota by doing
+
+1. Login into your AWS console
+2. Search for "[Service Quotas](https://console.aws.amazon.com/servicequotas/home)" and click on the result
+3. Click on the area of the service \(e.g. "Amazon Elastic Compute Cloud \(Amazon EC2\)"\)
+4. Use the search filter to find the quota that you are looking for
+5. Make a quota request
+
+### Step 1: Get AWS Credentials
 
 **A: Login to AWS and search for IAM**
 
@@ -37,7 +58,7 @@ If you don't have a user available and would like to create one, on the "Users" 
 
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
-Click on "Next: Permissions" &gt;
+Click on "Next: Permissions".
 
 The user should have IAMFullAccess privileges.
 
@@ -203,7 +224,7 @@ export EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
 export ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 ```
 
-### Step 4: Register your role in grid
+### Step 4: Register Your Role in Grid
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
 
@@ -261,17 +282,23 @@ grid session create --cluster <cluster name>
 
 Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
 
-### Step 7: Enjoy
+### Step 7: Enjoy!
 
-## Edit and Delete Functions
+Your cluster will be available for use on Grid, so use it \(or any other cluster\) as you wish. 
 
-Use grid edit to see instance types available and update as necessary
+## Editing and Deleting Clusters
+
+Use `grid edit` to see instance types available and update as necessary.
 
 ```bash
 grid edit cluster <cluster name>
 ```
 
-Use grid delete to delete cluster; use with care!
+Use `grid delete` to delete cluster. Deleting a cluster will delete its resources, including runing resources. Use with care!
+
+{% hint style="warning" %}
+Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!
+{% endhint %}
 
 ```bash
 grid delete cluster <cluster name>
@@ -279,14 +306,14 @@ grid delete cluster <cluster name>
 
 ## Installing 3rd Party Tools
 
-Installation steps of the following tools are covered.
+Cluster setup requires the following tools, so make sure you have them installed.
 
-* git
+* [git](https://git-scm.com/)
 * [jq](https://stedolan.github.io/jq/)
 * [terraform](https://www.terraform.io/) 
 * [AWS CLI](https://aws.amazon.com/cli/) 
 
-### OSX
+### MacOS
 
 [brew](https://brew.sh/) and [pip3](https://packaging.python.org/guides/tool-recommendations/) are used in this example.
 
