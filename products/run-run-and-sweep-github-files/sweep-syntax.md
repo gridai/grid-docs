@@ -9,7 +9,7 @@ python main.py --layers 32 --learning_rate 0.01
 ```
 
 {% hint style="info" %}
-Note: This page provides a list of arguments specific to running hyperparameter sweeps. For the full Grid CLI API reference, visit [this page. ](https://app.gitbook.com/@grid-ai/s/grid-cli/~/drafts/-MgMzBw9WxGzuJ4O6u9L/products/global-cli-configs/cli-api)
+Note: This page provides a list of arguments specific to running hyperparameter sweeps. For the full Grid CLI API reference, visit [this page. ](../global-cli-configs/cli-api/)
 {% endhint %}
 
 ## Python flags
