@@ -14,11 +14,7 @@ Basically... think about it like replacing `python` with `grid run`
 
 ![](../../../.gitbook/assets/carbon-1-%20%281%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%282%29%20%281%29.png)
 
-{% hint style="info" %}
-Projects must be hosted on **Github** for now. [Reach out](mailto:luis@grid.ai) for other cases.
-{% endhint %}
-
-## Hyperparameter sweeps
+## Hyperparameter Sweeps
 
 Grid run automates hyperparameter sweeps using our python-like syntax.
 
