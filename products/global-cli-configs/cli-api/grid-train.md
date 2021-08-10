@@ -32,7 +32,11 @@ Our syntax adds support for any NumPy distribution, lists, and the range operato
 
 ![](../../../.gitbook/assets/carbon5-2-.png)
 
-## Command structure
+## Command Structure
+
+{% hint style="warning" %}
+`grid run` will convert arguments containing dashes \(`-`\) to underscores \(`_`\)_._ For example, `--data-dir` will be converted to `--data_dir`. Make sure to adjust your script to accept the latter version of parameters.
+{% endhint %}
 
 A grid run command has the following structure:
 
@@ -58,7 +62,7 @@ $$
 $$
 {% endhint %}
 
-## Hyperparameter sweep syntax
+## Hyperparameter Sweep Syntax
 
 In addition to the standard python syntax, use the following syntax to automatically generate combinations of hyperparameters.
 
