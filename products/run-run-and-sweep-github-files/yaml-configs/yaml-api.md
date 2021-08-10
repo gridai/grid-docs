@@ -36,7 +36,6 @@ compute:
     datastore_mount_dir: null     # Where to mount the datastore
     use_spot: false               # If we should use spot instances
     framework: "lightning"        # Which framework to use 
-    distributed: false            # Experimental support for multi-node training 
 
     # Pass in environment variables
     environment:                
@@ -88,7 +87,6 @@ compute:
     memory: null
     nodes: 0
     scale_down_seconds: 1800
-    distributed: false
     framework: "lightning"
 
     # Actions need to be passed as one command
