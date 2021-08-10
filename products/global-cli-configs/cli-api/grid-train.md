@@ -28,7 +28,7 @@ Is equivalent to these commands:
 
 ![](../../../.gitbook/assets/carbon3.png)
 
-Our syntax adds support for any numpy distribution, lists, and the range operator:
+Our syntax adds support for any NumPy distribution, lists, and the range operator:
 
 ![](../../../.gitbook/assets/carbon5-2-.png)
 
