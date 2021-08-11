@@ -51,6 +51,7 @@
   * [Julia and R languages in Sessions](products/sessions/using-julia-and-r-languages-in-sessions.md)
   * [VSCode with Sessions](products/sessions/vscode-with-sessions.md)
 * [⚡Runs](products/run-run-and-sweep-github-files/README.md)
+  * [Running Experiments With a Dockerfile](products/run-run-and-sweep-github-files/running-experiments-with-a-dockerfile.md)
   * [Actions](products/run-run-and-sweep-github-files/actions.md)
   * [Artifacts](products/run-run-and-sweep-github-files/artifacts.md)
   * [Attaching Datastores](products/run-run-and-sweep-github-files/attaching-datastores.md)
