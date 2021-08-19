@@ -20,10 +20,17 @@ grid run main.py
 
 ## Interruptible pricing
 
-If your jobs can be interrupted and you want to save $$$$ then enable spot. Whenever the cloud provider needs that machine, the job will be killed automatically
+If your jobs can be interrupted, and you want to save $$$$ then enable spot. Whenever the cloud provider needs that machine, the job will be killed automatically
 
 ```text
 grid run --use_spot main.py
+```
+
+## List instance price
+If you want to list the instance price (and other spec) for the machines configured in the cloud, use [instance-types](../products/global-cli-configs/cli-api/grid-instance-types.md) command
+
+```text
+grid instance-types
 ```
 
 {% hint style="info" %}
