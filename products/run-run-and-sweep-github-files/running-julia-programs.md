@@ -44,10 +44,11 @@ Script arguments: --num "\[10,100,1000,10000\]"
 ```bash
 git clone https://github.com/rlizzo/julia_binder_test
 cd julia_binder_test
-grid run demo.jl \
---instance_type t2.medium \
+grid run --instance_type t2.medium \
 --framework julia \
+--use_spot \
 --cpus 1 \
+demo.jl \
 --num "[10,100,1000,10000]"
 ```
 
@@ -60,10 +61,11 @@ Script arguments: --num\_samples "\[10,100,1000,10000\]"
 ```bash
 git clone https://github.com/rlizzo/TuringCLIExample
 cd TuringCLIExample
-grid run fit.jl \
---instance_type t2.medium \
+grid run --instance_type t2.medium \
 --framework julia \
+--use_spot \
 --cpus 1 \
+fit.jl \
 --num_samples 100
 ```
 
