@@ -53,7 +53,6 @@ compute:
   train:
 
     cpus: 1                       # Number of CPUs
-    disk_size: 200                # Disk size
     gpus: 0                       # Number of GPUs
     instance: t2.xlarge           # AWS instance type
     memory: null                  # RAM memory
