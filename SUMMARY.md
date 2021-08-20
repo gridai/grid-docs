@@ -12,6 +12,7 @@
 * [⚡CLI](products/global-cli-configs/README.md)
   * [Advanced config](products/global-cli-configs/advanced-config.md)
   * [API reference](products/global-cli-configs/cli-api/README.md)
+    * [grid instance-types](products/global-cli-configs/cli-api/grid-instance-types.md)
     * [grid artifacts](products/global-cli-configs/cli-api/grid-artifacts.md)
     * [grid credentials](products/global-cli-configs/cli-api/grid-credentials.md)
     * [grid datastore](products/global-cli-configs/cli-api/grid-datastores.md)
