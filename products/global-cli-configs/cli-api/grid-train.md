@@ -153,7 +153,7 @@ Here's a summary of all the available grid flags \(all are optional\)
 | --trials | number of trials for random search | - |
 | --ignore\_warnings | skips all warning and prompts | false |
 | --scratch\_size | size in GB scratch space allotted to experiment |  |
-| --scratch\__mount\__path | mount path to mount the scratch space |  |
+| --scratch\_\_mount\_\_path | mount path to mount the scratch space |  |
 
 ### `--cpus`
 

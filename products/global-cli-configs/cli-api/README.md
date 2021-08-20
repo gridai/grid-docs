@@ -8,8 +8,6 @@ description: Refer to this if you are using CLI
 
 {% page-ref page="grid-docs.md" %}
 
-
-
 {% page-ref page="grid-credentials.md" %}
 
 {% page-ref page="grid-datastores.md" %}
