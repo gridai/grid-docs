@@ -58,7 +58,7 @@
   * [Attaching Datastores](products/run-run-and-sweep-github-files/attaching-datastores.md)
   * [Clone Runs or Experiments](products/run-run-and-sweep-github-files/cloning-runs-or-experiments.md)
   * [Failed jobs](products/run-run-and-sweep-github-files/failed-jobs.md)
-  * [Hyperparameter sweeps](products/run-run-and-sweep-github-files/sweep-syntax.md)
+  * [Hyperparameter Sweeps](products/run-run-and-sweep-github-files/sweep-syntax.md)
   * [Lowering costs \(BETA\)](products/run-run-and-sweep-github-files/interruptible-machines.md)
   * [Machines](products/run-run-and-sweep-github-files/machines.md)
   * [Metrics \(charts\)](products/run-run-and-sweep-github-files/metrics-charts.md)

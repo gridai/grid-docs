@@ -1,6 +1,4 @@
-# Hyperparameter sweeps
-
-## Hyperparameter Sweeps
+# Hyperparameter Sweeps
 
 Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning/) without changing a single line of code! Just make sure your script can take arguments:
 
@@ -239,10 +237,4 @@ grid run main.py --alpha 0.05200016 --beta 2
 grid run main.py --alpha 0.05200016 --beta 3
 grid run main.py --alpha 0.05200016 --beta 4
 ```
-
-## Bayesian optimization
-
-There are alternatives to random search that attempt to search the space more efficiently.
-
-In certain applications/models, [Bayesian optimization](https://papers.nips.cc/paper/2012/file/05311655a15b75fab86956663e1819cd-Paper.pdf) may be better
 
