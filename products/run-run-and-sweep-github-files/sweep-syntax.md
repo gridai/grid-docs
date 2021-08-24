@@ -103,7 +103,7 @@ grid run main.py --layers 128
 Calls the script with each value in the range.
 
 ```text
-grid run main.py --layers "(1, 10, 2)"
+grid run main.py --layers "range(1, 10, 2)"
 ```
 
 Grid will submit 3 jobs here:
