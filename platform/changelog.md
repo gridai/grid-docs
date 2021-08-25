@@ -6,7 +6,7 @@ description: What's new and improved in Grid.
 
 ## Keep up with the Product updates on Github!
 
-Make sure to update CLI to the latest: pip install lightning-grid --upgrade
+Make sure to update CLI to the latest: `pip install lightning-grid --upgrade`
 
 {% embed url="https://github.com/gridai/gridai/discussions" caption="" %}
 
