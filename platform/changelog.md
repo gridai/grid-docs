@@ -8,14 +8,6 @@ description: What's new and improved in Grid.
 
 Make sure to update CLI to the latest: `pip install lightning-grid --upgrade`
 
-{% embed url="https://github.com/gridai/gridai/discussions" caption="" %}
-
-## August 27, 2021
-
-**Known Issues**
-
-We recently updated our datastore to the ****next datastores version \(`v2`\). This is more flexible and will unlock a number of new features. We identified a bug in our datastore\(v2\), in which many levels of nesting will cause **severe performance degradation of files being shown**. Files will eventually be there in your session but it'll take some time to appear. We are actively working on this. The work-around solution at this time is to "flatten" your dataset. That is, have fewer levels of nesting \(up to 2 ****levels to be safe\). [https://github.com/gridai/gridai/issues/113](https://github.com/gridai/gridai/issues/113)
-
 ## July 9, 2021
 
 ![multinode](https://user-images.githubusercontent.com/13732925/125199122-c2d65280-e232-11eb-95ce-c80204b47096.gif)
