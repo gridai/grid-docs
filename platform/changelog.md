@@ -12,11 +12,9 @@ Make sure to update CLI to the latest: `pip install lightning-grid --upgrade`
 
 ## August 27, 2021
 
-**Datastore**
+**Known Issues**
 
-We recently updated our datastore to the ****next datastores version \(`v2`\). This is more flexible and will unlock a number of new features
-
-We identified a bug in our datastore\(v2\), in which many levels of nesting will cause **severe performance degradation of files being shown**. Files will eventually be there in your session but it'll take some time to appear. We are actively working on this. The work-around solution at this time is to "flatten" your dataset. That is, have fewer levels of nesting \(up to 2 ****levels to be safe\).
+We recently updated our datastore to the ****next datastores version \(`v2`\). This is more flexible and will unlock a number of new features. We identified a bug in our datastore\(v2\), in which many levels of nesting will cause **severe performance degradation of files being shown**. Files will eventually be there in your session but it'll take some time to appear. We are actively working on this. The work-around solution at this time is to "flatten" your dataset. That is, have fewer levels of nesting \(up to 2 ****levels to be safe\). [https://github.com/gridai/gridai/issues/113](https://github.com/gridai/gridai/issues/113)
 
 ## July 9, 2021
 
