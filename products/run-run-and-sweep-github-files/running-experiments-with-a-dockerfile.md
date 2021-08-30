@@ -102,15 +102,23 @@ $ grid logs divergent-piculet-508-exp0 -l 10 --show-build-logs
 [experiment] [2021-06-30T22:12:07.252150+00:00] Loop 99
 ```
 
-## Build Your Dockerfile Locally
+## Testing Your Dockerfile Locally
 
 It is a good idea to test that your `Dockerfile` builds locally before sending it to Grid. This may allow you to iterate quickly over a set of configurations that work before submitting experiments.
 
 You can do that by building it with Docker:
 
 ```text
-docker build .
+docker build --tag test-image .
 ```
 
 If the image builds, your `Dockerfile` is correctly defined.
+
+After building your image, make sure to also test that your script works as expected inside of it. For example, if your script is called `model.py` then you would want to test your new image with:
+
+```text
+docker run test-image python model.py
+```
+
+Grid will be running a similar process in the backend, so if this works locally in our machine chances are that it will also run successfully on Grid.
 
