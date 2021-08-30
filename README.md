@@ -34,12 +34,6 @@ Grid allocates all the machines and GPUs you need on demand, so you only pay for
 
 Grid lets you focus on your work, NOT on the infrastructure. Create an account [here](https://platform.grid.ai/) to get free credits and get started!
 
-\*\*\*\*
-
-**Known Issues**
-
-We recently updated our datastore to the ****next datastores version \(`v2`\). This is more flexible and will unlock a number of new features. We identified a bug in our datastore\(v2\), in which many levels of nesting will cause **severe performance degradation of files being shown**. Files will eventually be there in your session but it'll take some time to appear. We are actively working on this. The work-around solution at this time is to "flatten" your dataset. That is, have fewer levels of nesting \(up to 2 ****levels to be safe\). [https://github.com/gridai/gridai/issues/113](https://github.com/gridai/gridai/issues/113)
-
 ## Artifacts, logs, etc...
 
 Grid handles all the other parts of developing and training at scale:
