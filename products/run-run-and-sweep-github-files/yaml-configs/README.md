@@ -76,6 +76,11 @@ compute:
     # Your environment variables
     environment:
       MY_ENVIRONMENT_VARIABLE: "example"
+      
+    # Dependency file specification
+    dependency_file_info:
+      package_manager: pip
+      path: ./requirements/requirements.txt # can have any name 
 
 hyper_params:
   settings:
