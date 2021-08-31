@@ -4,11 +4,19 @@
 
 Anytime you run a project with Grid, we attempt to resolve as many dependencies as we can automatically for you.
 
-However, we recommend that your projects have a requirements.txt file in the root
+However, we recommend that your projects have a `requirements.txt` file in the root. 
 
 ![](../../.gitbook/assets/image%20%2820%29.png)
 
-{% hint style="info" %}
-Grid does not \*yet support loading requirements.txt from a non-root locations
-{% endhint %}
+### Specifying a Dependency Location
+
+Sometimes you may want to keep different dependency in your project. For instance, you may want to place `requirements.txt` in a nested directory and have Grid use that to setup your environment.
+
+You can specify which dependency file you want to use to setup your environment using the `--dependency_file` flag. Example:
+
+```text
+grid run --dependency_file ./path/to/requirements.txt model.py
+```
+
+You can also use a [YAML config](yaml-configs/) file.
 
