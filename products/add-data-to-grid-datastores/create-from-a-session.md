@@ -41,7 +41,7 @@ bash process.sh
 when you're done, upload to Grid via the CLI \(on the Interactive Session\):
 
 ```bash
-grid datastores create --source imagenet_folder --name imagenet
+grid datastore create --source imagenet_folder --name imagenet
 ```
 
 {% hint style="info" %}
