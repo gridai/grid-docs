@@ -41,7 +41,7 @@ val = load(root + 'val')
 When you upload a datastore to Grid:
 
 ```bash
-grid datastores create --source my_dataset --name apples
+grid datastore create --source my_dataset --name apples
 ```
 
 it is available under this structure:
