@@ -56,54 +56,6 @@ Flags in grid YML files have a 1-to-1 mapping with `grid run` flags
 
 In addition to the parameters above, you can also run arbitrary commands on different stages of you training operation.
 
-## Configuring Actions
-
-You can configure Grid Actions using a Grid YAML file
-
-The Grid YML spec supports three actions:
-
-`on_image_build` commands passed to the image builder which are interpreted as RUN commands in a Dockerfile
-
-`on_before_training_start` which allows users to specify commands that need to be executed sequentially before the main experiment process starts
-
-`on_after_training_end` same as above, but executed after the main process ends
-
-Here's an example of a Grid config YML using actions:
-
-```text
-compute:
-
-  provider:
-    credentials: cc-wv4l9
-    region: us-east-1
-    vendor: aws
-
-  train:
-    cpus: 1
-    gpus: 0
-    instance: t2.xlarge
-    memory: null
-    nodes: 0
-    scale_down_seconds: 1800
-    framework: "lightning"
-
-    # Actions need to be passed as one command
-    # per line.
-    actions:
-      on_image_build:
-        - apt-get install wget -y
-        - pip install tqdm
-
-      on_before_training_start:
-        - bash download_dataset.sh
-
-      on_after_training_end:
-        - apt-get install curl -y
-        - curl -X GET http://webhook.com?success=true
-```
-
-As you can see, you can pass one command per line. You can pass as many commands as you'd like.
-
 ## Creating Runs With a Config File
 
 You can create a Run with a config file instead of passing CLI arguments. For example:
