@@ -42,7 +42,7 @@ Grid will automatically install dependencies into your project using either `pip
 
 If your dependencies live elsewhere, you can specify their location using the `dependency_file_info` attribute in the Grid YAML config.
 
-```yaml
+```text
 compute:
   train:
     dependency_file_info:
