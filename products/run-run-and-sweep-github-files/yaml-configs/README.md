@@ -27,7 +27,7 @@ That will generate 20 values for the `learning_rate`.
 
 You can pass in environment variables to be used by your experiment by using the **`environment`** key. Pass any values and those values will be available in your experiment context. For example:
 
-```text
+```yaml
 compute:
   train:
     environment:
@@ -42,7 +42,7 @@ Grid will automatically install dependencies into your project using either `pip
 
 If your dependencies live elsewhere, you can specify their location using the `dependency_file_info` attribute in the Grid YAML config.
 
-```text
+```yaml
 compute:
   train:
     dependency_file_info:
