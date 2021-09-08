@@ -64,7 +64,7 @@ compute:
 
 ## Configuring Actions
 
-You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](yaml-configs/).
+You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](../yaml-configs/).
 
 The Grid YAML spec supports three actions:
 
