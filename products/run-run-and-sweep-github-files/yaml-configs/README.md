@@ -9,11 +9,13 @@ You can run a hyper parameter sweep using the Grid YML file by passing the hyper
 
 You can pass any of the supported Python or NumPy expressions to each `params` key. For example, you can pass the following:
 
-```text
+```yaml
 hyper_params:
+
   settings:
     strategy: random_search     # either random_search or grid_search
     trials: 2                   # only used in random_search
+
   params:
     learning_rate: uniform(0.001, 0.008, 20)
     gamma: 0.234
