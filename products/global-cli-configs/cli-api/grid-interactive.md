@@ -24,17 +24,16 @@ Allowed parameters:
 | --name | Name of the Session | yes |
 | --config | Points to a YAML config file | yes |
 | --description | Description of the interactive session | yes |
-| --datastore\_\_\_name | Name of datastore to be mounted in interactive session | yes |
+| --datastore\_name | Name of datastore to be mounted in interactive session | yes |
 | --datastore\_version | Version of datastore to be mounted in interactive session | yes |
-
-\| --datastore\_mount\_dir \| Absolute path to mount Datastore in interactive session \| yes \|
+| --datastore\_mount\_dir | Absolute path to mount Datastore in interactive session | yes |
 
 ```text
 grid session create --instance_type 2_cpu_4gb
 ```
 
 {% hint style="warning" %}
-Interactive sessions cannot be re-used after deletion.
+Sessions are no longer recoverable after being deleted.
 {% endhint %}
 
 ## delete
