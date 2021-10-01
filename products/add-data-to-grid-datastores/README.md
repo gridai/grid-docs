@@ -48,10 +48,6 @@ Cons:
 * Downloads every time a job starts
 * Spends compute money on data downloading
 
-{% hint style="info" %}
-Datastores mount files in the file-system preserving their original folder structure. However, datastores with many nested directores \(3+\) suffer from much slower performance than its counterparts \(track discussion [here](https://github.com/gridai/gridai/issues/113)\). We suggest creating datastores with as many as 2 levels of nesting for now.
-{% endhint %}
-
 ## Datastore paths
 
 Once you have created a datastore, simply pass in its name to your script and Grid will auto-resolve the path. Assume you have a datastore named _cats_ and you want to use version 1:
