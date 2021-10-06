@@ -37,6 +37,8 @@ Next, use the datastores command to upload any folder:
 grid datastore create --source imagenet_folder --name imagenet
 ```
 
+Note that you will need at least as much free space as the size of your dataset on the disk hosting your home folder, for the internal preparation of the upload.
+
 This method can work from:
 
 * A laptop.
@@ -57,7 +59,7 @@ The link will be downloaded, extracted and automatically mounted for you. You ca
 You can still use the CLI for these datastores!
 {% endhint %}
 
-Datastores go through a number of statuses such as optimizing, processing uploading. These are internal and a status of "succeeded" indicates that datastore is ready to be used
+Datastores go through a number of statuses such as optimizing, processing uploading. These are internal and a status of "succeeded" indicates that datastore is ready to be used.
 
 On the CLI, grid datastore command shows which Datastores are available to be used. 
 
