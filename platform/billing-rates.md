@@ -39,7 +39,7 @@ Here are the prices by machine type _per hour_ when running on Grid cloud \(Buil
 | Accelerators | Machine specs | List  price \(p/h\) | Interruptible  price \(p/h\) |
 | :--- | :--- | :--- | :--- |
 | 2xCPU \(2 GB\) | [t2.medium](https://aws.amazon.com/blogs/aws/new-t2-xlarge-and-t2-2xlarge-instances/) | ~ $0.05 | ~ $0.02 |
-| 2xCPU \(2 GB\) | [t2.large](https://aws.amazon.com/blogs/aws/new-t2-xlarge-and-t2-2xlarge-instances/) | ~ $0.10 | ~ $0.04 |
+| 2xCPU \(4 GB\) | [t2.large](https://aws.amazon.com/blogs/aws/new-t2-xlarge-and-t2-2xlarge-instances/) | ~ $0.10 | ~ $0.04 |
 | 4xCPU \(4 GB\) | [t2.xlarge](https://aws.amazon.com/blogs/aws/new-t2-xlarge-and-t2-2xlarge-instances/) | ~ $0.19 | ~ $0.06 |
 | 8xCPU \(4 GB\) | [t2.2xlarge](https://aws.amazon.com/blogs/aws/new-t2-xlarge-and-t2-2xlarge-instances/) | ~ $0.39 | ~ $0.12 |
 | 1xT4 \(16 GB\) | [g4dn.xlarge](https://aws.amazon.com/ec2/instance-types/g4/) | ~ $0.55 | ~ $0.17 |
