@@ -347,12 +347,13 @@ Depending on the reagion these costs are around ~$10/day, compared to ~$50/day f
 
 ### Trade-offs
 
-* Experiments may start slower. Experiment execution speed is unaffected
-* Session start/pause/resume time is unaffected in both modes
-* Tensorboard may start slower
-* There's higher, small but non-neglible risk of cluster malfunction
-* Experiment logs are optimized for smaller query volumes compared to default mode
-* Maximum concurrent experiment/session count is smaller
+* Experiments may start slower. Experiment execution speed is unaffected.
+* Session start/pause/resume time is unaffected in both modes.
+* Tensorboard may start slower.
+* Datastores may take longer to be optimized.
+* There's higher, small but non-neglible risk of cluster malfunction.
+* Experiment logs are optimized for smaller query volumes compared to default mode.
+* Maximum concurrent experiment/session count is smaller.
 
 By the way, you can also overprovision certaion instance types that experiments & sessions start even faster for those instances:
 
@@ -368,6 +369,7 @@ By the way, you can also overprovision certaion instance types that experiments 
 ```
 
 Be warned you're paying for those spare capacity despite being unused most of the time. 
+Use `grid edit cluster <cluster name>` or `grid clusters aws --edit-before-creation <cluster name>` to access these advance options.
 
 ## Installing 3rd Party Tools
 
