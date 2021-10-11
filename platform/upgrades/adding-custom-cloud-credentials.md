@@ -254,13 +254,13 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.large <cluster name>
 ```
 
-* Lunch cluster in cost-saving mode, using the `--cost-savings` flag. See the later chapter what cost-saving actually implies.
+* Launch cluster in cost-savings mode, using the `--cost-savings` flag. See the later chapter what cost-savings actually implies.
 
 ```bash
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --cost-savings --instance-types t2.medium,t2.large <cluster name>
 ```
 
-* Lunch cluster and edit advance option before submitting it for creation.
+* Launch cluster and edit advance option before submitting it for creation.
 
 ```bash
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --edit-before-creation --instance-types t2.medium,t2.large <cluster name>
@@ -327,14 +327,14 @@ They are easily switched using the `--cost-savings` flag when creating the clust
   "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_DEFAULT",
 ```
 
-* cost saving:
+* cost-saving:
 
 ```
   "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_COST_SAVING",
 ```
 
 
-In the cost-saving mode you're trading latency for lower cost. Grid has some fixed overheads:
+In the cost-savings mode you're trading startup latency for lower cost. Grid has some fixed overheads:
 
 * VPC/EKS cluster/ELBs/CloudWatch Logs
 
@@ -342,20 +342,31 @@ which are the same in both modes. Some are variable:
 
 * EC2 instances types & count for the management/skeleton crew purposes.
 
-In the cost-saving mode we're provisioning fewer management EC2 instances, and weaker ones to save on cost. 
-Depending on the reagion these costs are around ~$10/day, compared to ~$50/day for default mode.
+In the cost-savings mode we're running management workloads on a single server, while some components are scaled down to 0 replicas, and only booted when needed. In a performance (default) we run management nodes in HA (highly available) configuration, and certain components are persistently running to improve start-up latency. 
+Depending on the region these costs are around ~$10/day, compared to ~$50/day for the default mode.
 
 ### Trade-offs
 
-* Experiments may start slower. Experiment execution speed is unaffected.
-* Session start/pause/resume time is unaffected in both modes.
+#### Equivalent
+
+* In both modes the session start time is equivalent
+* Experiment runtime speed is equivalent
+* Tensorboard runtime speed is equivalent
+* In both cases Kubernetes API control plane is being managed by AWS in an HA manner, thus unaffected
+
+#### Degraded performance
+
+* Experiments may start slower.
 * Tensorboard may start slower.
 * Datastores may take longer to be optimized.
-* There's higher, small but non-neglible risk of cluster malfunction.
 * Experiment logs are optimized for smaller query volumes compared to default mode.
-* Maximum concurrent experiment/session count is smaller.
 
-By the way, you can also overprovision certaion instance types that experiments & sessions start even faster for those instances:
+#### Operational risks
+
+* There's a higher, small but non-negligible risk of cluster malfunction. This is due to a  single point of failure concerning the single management node. This node runs gridlet agent & cluster-autoscaler responsible for dynamic scale up and down. 
+* Maximum concurrent experiment/session count is smaller. This means the cluster could experience issues with bigger node counts; especially with workload scheduling and scaling up & down the nodes. Mostly due to resource constraints imposed on gridlet & cluster-autoscaler.
+
+By the way, you can also overprovision certain instance types that experiments & sessions start even faster for those instances:
 
 ```
 "instance_types": [
@@ -368,7 +379,7 @@ By the way, you can also overprovision certaion instance types that experiments 
 ],
 ```
 
-Be warned you're paying for those spare capacity despite being unused most of the time. 
+Be warned you're paying for those spare capacities despite being unused most of the time. 
 Use `grid edit cluster <cluster name>` or `grid clusters aws --edit-before-creation <cluster name>` to access these advance options.
 
 ## Installing 3rd Party Tools
