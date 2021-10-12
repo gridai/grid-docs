@@ -327,14 +327,14 @@ They are easily switched using the `--cost-savings` flag when creating the clust
   "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_DEFAULT",
 ```
 
-* cost-saving:
+* cost saving:
 
 ```
   "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_COST_SAVING",
 ```
 
 
-In the cost-savings mode you're trading startup latency for lower cost. Grid has some fixed overheads:
+In the cost savings mode you're trading startup latency for lower cost. Grid has some background processes:
 
 * VPC/EKS cluster/ELBs/CloudWatch Logs
 
