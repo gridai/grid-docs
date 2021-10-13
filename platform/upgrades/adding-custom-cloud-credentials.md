@@ -17,12 +17,12 @@ Grid creates clusters inside your own cloud account allowing you to keep complet
 
 ### Requirements
 
-Grid will create clusters designed for large AI workloads. In order to do so, your AWS account needs to have the **right permissions** and **quotas**. We'll cover both optional and required configurations as follows.
+Grid will create clusters designed for large AI workloads. In order to do so, your AWS account needs to have the **right permissions** and **quotas**. We'll cover both optional and required configurations as follows. If your cluster is small, or you require only a few instance types default quotas should work for you. Still, we recommend asking AWS for extra quotas as your needs expand in the future. 
 
 | Configuration | Recommendation |
 | :--- | :--- |
 | Auto Scaling groups per region | 800 |
-| Launch configurations per region | 600 |
+| Launch configurations per region | 800 |
 | EC2 Spot \(instance family you are interested in\) | 1000+ |
 | EC2 On-demand \(instance family you are interested in\) | 1000+ |
 
@@ -242,7 +242,7 @@ grid login --username <Grid user name> --key <Grid API Key>
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID <cluster name>
 ```
 
-* Create cluster in `us-west-2` region with default instance types
+* Create cluster in `us-west-2` region with default instance types. These will give you broad selection of commonly used instance type, but if you know better which one you'll be using specify it.
 
 ```bash
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 <cluster name>
@@ -252,6 +252,18 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 
 ```bash
 grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --instance-types t2.medium,t2.large <cluster name>
+```
+
+* Launch cluster in cost-savings mode, using the `--cost-savings` flag. See the later chapter what cost-savings actually implies.
+
+```bash
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --cost-savings --instance-types t2.medium,t2.large <cluster name>
+```
+
+* Launch cluster and edit advance option before submitting it for creation.
+
+```bash
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --edit-before-creation --instance-types t2.medium,t2.large <cluster name>
 ```
 
 ### Step 5: Wait for cluster to be provisioned
@@ -288,7 +300,7 @@ Your cluster will be available for use on Grid, so use it \(or any other cluster
 
 ## Editing and Deleting Clusters
 
-Use `grid edit` to see instance types available and update as necessary.
+Use `grid edit` to see instance types available and update as necessary. You can also switch between cost-savings and default mode of operation. 
 
 ```bash
 grid edit cluster <cluster name>
@@ -303,6 +315,72 @@ Grid attempts to delete all cluster resources when a delete operation is initiat
 ```bash
 grid delete cluster <cluster name>
 ```
+
+## Cost saving mode
+
+There are two cluster management modes you can pick, depending on your expected cluster size and latency/cost preferences.
+They are easily switched using the `--cost-savings` flag when creating the cluster.
+
+* default(performance)
+
+```
+  "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_DEFAULT",
+```
+
+* cost saving:
+
+```
+  "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_COST_SAVING",
+```
+
+
+In the cost savings mode you're trading startup latency for lower cost. Grid has some background processes:
+
+* VPC/EKS cluster/ELBs/CloudWatch Logs
+
+which are the same in both modes. Some are variable:
+
+* EC2 instances types & count for the management/skeleton crew purposes.
+
+In the cost-savings mode we're running management workloads on a single server, while some components are scaled down to 0 replicas, and only booted when needed. In a performance (default) we run management nodes in HA (highly available) configuration, and certain components are persistently running to improve start-up latency. 
+Depending on the region these costs are around ~$10/day, compared to ~$50/day for the default mode.
+
+### Trade-offs
+
+#### Equivalent
+
+* In both modes the session start time is equivalent
+* Experiment runtime speed is equivalent
+* Tensorboard runtime speed is equivalent
+* In both cases Kubernetes API control plane is being managed by AWS in an HA manner, thus unaffected
+
+#### Degraded performance
+
+* Experiments may start slower.
+* Tensorboard may start slower.
+* Datastores may take longer to be optimized.
+* Experiment logs are optimized for smaller query volumes compared to default mode.
+
+#### Operational risks
+
+* There's a higher, small but non-negligible risk of cluster malfunction. This is due to a  single point of failure concerning the single management node. This node runs gridlet agent & cluster-autoscaler responsible for dynamic scale up and down. 
+* Maximum concurrent experiment/session count is smaller. This means the cluster could experience issues with bigger node counts; especially with workload scheduling and scaling up & down the nodes. Mostly due to resource constraints imposed on gridlet & cluster-autoscaler.
+
+By the way, you can also overprovision certain instance types that experiments & sessions start even faster for those instances:
+
+```
+"instance_types": [
+    {
+        "name": "t2.medium",
+
+        # Number of extra warm instances that should be available to speed things up
+        "overprovisioned_ondemand_count": 3
+    }
+],
+```
+
+Be warned you're paying for those spare capacities despite being unused most of the time. 
+Use `grid edit cluster <cluster name>` or `grid clusters aws --edit-before-creation <cluster name>` to access these advance options.
 
 ## Installing 3rd Party Tools
 
