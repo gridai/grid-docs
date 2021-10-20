@@ -318,32 +318,24 @@ grid delete cluster <cluster name>
 
 ## Cost saving mode
 
-There are two cluster management modes you can pick, depending on your expected cluster size and latency/cost preferences.
-They are easily switched using the `--cost-savings` flag when creating the cluster.
+You can turn on cost saving mode to lower the cluster cost, but it might affect start up latency. Depending on the region these costs are around ~$10/day, compared to ~$50/day for the default mode.
 
-* default(performance)
+You can use `--cost-saving` flag when starting a new cluster:
 
-```
-  "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_DEFAULT",
-```
-
-* cost saving:
-
-```
-  "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_COST_SAVING",
+```bash
+grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-west-2 --cost-savings --instance-types t2.medium,t2.large <cluster name>
 ```
 
+Or edit an existing cluster (note: you might need to switch smaller nodes)
 
-In the cost savings mode you're trading startup latency for lower cost. Grid has some background processes:
+```bash
+grid edit cluster <cluster name> --cost-savings --instance-types t2.medium,t2.large
+```
 
-* VPC/EKS cluster/ELBs/CloudWatch Logs
-
-which are the same in both modes. Some are variable:
-
-* EC2 instances types & count for the management/skeleton crew purposes.
+Setting this flag will switch the default performance profile used (from "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_DEFAULT" to "CLUSTER_PERFORMANCE_PROFILE_COST_SAVING").
+Grid has some background processes which are the same in both mode (VPC/EKS cluster/ELBs/CloudWatch Logs), and some are variable (EC2 instances types & count for the management/skeleton crew purposes).
 
 In the cost-savings mode we're running management workloads on a single server, while some components are scaled down to 0 replicas, and only booted when needed. In a performance (default) we run management nodes in HA (highly available) configuration, and certain components are persistently running to improve start-up latency. 
-Depending on the region these costs are around ~$10/day, compared to ~$50/day for the default mode.
 
 ### Trade-offs
 
