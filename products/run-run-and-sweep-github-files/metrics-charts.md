@@ -1,18 +1,17 @@
-# Metrics \(charts\)
+# Metrics (charts)
 
 ## Web Interface view
 
 View the metrics of experiments by choosing Run then experiments
 
-![](../../.gitbook/assets/metrics2%20%281%29%20%281%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%282%29%20%281%29%20%281%29%20%281%29.gif)
+![](<../../.gitbook/assets/metrics2 (1) (1) (3) (3) (3) (3) (3) (3) (3) (2) (1) (1) (3).gif>)
 
 ## Tensorboard
 
-Tensorboard can be launched in a new tab in the browser by selecting Tensorboard -&gt;refresh
+Tensorboard can be launched in a new tab in the browser by selecting Tensorboard ->refresh
 
-![](../../.gitbook/assets/tensorboard.gif)
+![](../../.gitbook/assets/Tensorboard.gif)
 
 In the Experiments table view, select hyper parameters used to run experiments
 
-![](../../.gitbook/assets/hyper%20%281%29.gif)
-
+![](<../../.gitbook/assets/hyper (1) (1).gif>)

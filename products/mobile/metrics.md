@@ -21,5 +21,4 @@ In case you need to access Tensorboard:
 
 You can compare any experiment across any run via Tensorboard.
 
-![](../../.gitbook/assets/tensorboard%20%282%29.gif)
-
+![](../../.gitbook/assets/tensorboard.gif)

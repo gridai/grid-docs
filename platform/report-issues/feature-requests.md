@@ -4,6 +4,4 @@ Feature requests are always appreciated. Use [https://github.com/gridai/gridai/i
 
 Feel free to send us messages in community slack!
 
-Join at [gridai-community.slack.com ](https://join.slack.com/t/gridai-community/shared_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg)  
-
-
+Join at [gridai-community.slack.com ](https://join.slack.com/t/gridai-community/shared\_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg)\

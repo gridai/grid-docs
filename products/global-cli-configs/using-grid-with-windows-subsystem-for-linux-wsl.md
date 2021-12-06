@@ -8,11 +8,11 @@ description: Grid CLI support for Windows operating system
 
 Support for Windows is coming! In the meantime use WSL as a work-around
 
-## WSL \(Windows subsystem for Linux\)
+## WSL (Windows subsystem for Linux)
 
-WSL allows Windows users to run Linux shells. 
+WSL allows Windows users to run Linux shells.&#x20;
 
-## Step 1: Install WSL 
+## Step 1: Install WSL&#x20;
 
 Click here to install it: [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
@@ -28,20 +28,20 @@ Enable the PowerShell VM
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-## Step 2 - Update the package 
+## Step 2 - Update the package&#x20;
 
-### Download the [WSL2 package](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 
+### Download the [WSL2 package](https://wslstorestorage.blob.core.windows.net/wslblob/wsl\_update\_x64.msi)&#x20;
 
 ### Configure the system
 
-Once you run the WSL Ubuntu will be able to access directory on your C drive. Access windows local drive:  
+Once you run the WSL Ubuntu will be able to access directory on your C drive. Access windows local drive:\
 
 
 ```bash
 /mnt/c/dev/myproj 
 ```
 
-Configure system with python and java: 
+Configure system with python and java:&#x20;
 
 ```bash
 sudo apt update && upgrade 
@@ -60,4 +60,3 @@ pip install lightning-grid --upgrade
 ```bash
 grid login
 ```
-

@@ -55,11 +55,11 @@ val/
 
 To run on this datastore, select the datastore from the dropdown
 
-![](../../.gitbook/assets/image%20%2812%29.png)
+![](<../../.gitbook/assets/image (130).png>)
 
 Now pass the name of the datastore to your command
 
-![](../../.gitbook/assets/image%20%2840%29.png)
+![](<../../.gitbook/assets/image (131).png>)
 
 which is equivalent to calling your script like so:
 
@@ -77,9 +77,8 @@ The datastore path has 3 parts:
 grid:[name]:[version]
 ```
 
-Example, datastore named elephant \(version 3\)
+Example, datastore named elephant (version 3)
 
 ```bash
 grid:elephant:3
 ```
-

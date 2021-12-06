@@ -6,17 +6,17 @@ description: How to create datastores.
 
 ## Small datasets
 
-You can use the UI to create datastores for datasets smaller than 1GB \(files or folder\).
+You can use the UI to create datastores for datasets smaller than 1GB (files or folder).
 
 Select the file or folder and click upload.
 
-![](../../.gitbook/assets/ds_upload%20%283%29%20%281%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%282%29%20%283%29.gif)
+![](<../../.gitbook/assets/ds\_upload (3) (1) (3) (3) (3) (3) (3) (3) (3) (3) (3) (3) (3) (3) (3) (2) (1) (3).gif>)
 
 {% hint style="info" %}
 You can still use the CLI for these datastores!
 {% endhint %}
 
-## Large datasets \(1 GB+\)
+## Large datasets (1 GB+)
 
 For datasets larger than 1 GB, use the CLI.
 
@@ -53,7 +53,7 @@ For any datasets from a .zip, .tar or tar.gz that DO NOT require any post-proces
 
 The link will be downloaded, extracted and automatically mounted for you. You can use an interactive Session to verify for yourself.
 
-![](../../.gitbook/assets/zip_ds%20%281%29.gif)
+![](<../../.gitbook/assets/zip\_ds (1).gif>)
 
 {% hint style="info" %}
 You can still use the CLI for these datastores!
@@ -61,5 +61,4 @@ You can still use the CLI for these datastores!
 
 Datastores go through a number of statuses such as optimizing, processing uploading. These are internal and a status of "succeeded" indicates that datastore is ready to be used.
 
-On the CLI, grid datastore command shows which Datastores are available to be used. 
-
+On the CLI, grid datastore command shows which Datastores are available to be used.

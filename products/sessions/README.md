@@ -22,15 +22,15 @@ Session features:
 
 ## Product Tour
 
-[Click here for the 1-minute tour of Sessions](https://platform.grid.ai/#/dashboard?product_tour_id=221973)
+[Click here for the 1-minute tour of Sessions](https://platform.grid.ai/#/dashboard?product\_tour\_id=221973)
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](<../../.gitbook/assets/image (84).png>)
 
 ## **Start a Session**
 
 ![](../../.gitbook/assets/session.jpg)
 
-![](../../.gitbook/assets/sess%20%282%29%20%281%29%20%282%29%20%282%29%20%282%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%282%29.gif)
+![](<../../.gitbook/assets/sess (2) (1) (2) (2) (2) (3) (3) (3) (3) (3) (3) (3) (6).gif>)
 
 The equivalent via the CLI command:
 
@@ -45,7 +45,6 @@ grid session create --instance_type 2_m60_8gb
 
 The equivalent CLI command:
 
-```text
+```
 grid session delete $INTERACTIVE_NODE_ID
 ```
-

@@ -12,7 +12,6 @@ Grid accepts payment via credit card at this time. Add credits and pay for what 
 
 ## Using AWS Credits with Grid
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](<../../.gitbook/assets/image (88).png>)
 
 This feature is in an upgraded plan. See [this section](../upgrades/adding-custom-cloud-credentials.md).
-

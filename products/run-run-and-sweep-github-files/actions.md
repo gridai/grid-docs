@@ -57,13 +57,13 @@ compute:
 
 ## Configuring Actions
 
-You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](yaml-configs/).
+You can configure Grid Actions by using a Grid config file (see details on [Grid YML)](https://app.gitbook.com/s/-M7yAKKHGMbxFDJpu-nX/products/run-run-and-sweep-github-files/yaml-configs/).
 
 The Grid YAML spec supports three actions:
 
 * `on_image_build` commands passed to the image builder which are interpreted as `RUN` commands in a [Dockerfile](https://docs.docker.com/engine/reference/builder/).
 * `on_before_training_start` which allows users to specify commands that need to be executed sequentially before the main experiment process starts.
-* `on_after_training_end` same as above, but executed after the main process ends. 
+* `on_after_training_end` same as above, but executed after the main process ends.&#x20;
 
 Here's a full example of a Grid configuration using actions:
 
@@ -98,7 +98,7 @@ As you can see, you can pass one command per line. You can pass as many commands
 
 ### Environment variable substitution
 
-Grid allows environment variable substitution for `on_before_training_start` and `on_before_training_start` actions. All declared environment variables for the run are available in the substitution \(as well as some Grid predefined variables\). Example config:
+Grid allows environment variable substitution for `on_before_training_start` and `on_before_training_start` actions. All declared environment variables for the run are available in the substitution (as well as some Grid predefined variables). Example config:
 
 ```yaml
 compute:
@@ -134,7 +134,7 @@ Grid sets several environment variables by default for all experiments:
 * **GRID\_EXPERIMENT\_NAME** - experiment name
 * **GRID\_USER\_ID** - ID of the user who created the experiment
 * **GRID\_CLUSTER\_ID** - ID of the cluster where experiment is running
-* **GRID\_INSTANCE\_TYPE** - machine type \(_t2.medium,_ _g4dn.xlarge,_ etc.\)
+* **GRID\_INSTANCE\_TYPE** - machine type (_t2.medium,_ _g4dn.xlarge,_ etc.)
 
 ## String operations
 
@@ -150,7 +150,7 @@ on_after_training_end:
 
 Grid emulates the below string operations:
 
-```text
+```
 ${parameter^}
 ${parameter^^}
 ${parameter,}
@@ -170,6 +170,4 @@ ${parameter=default}
 ${parameter:=default}
 ${parameter:-default}
 ```
-
-
 

@@ -9,7 +9,7 @@ description: >-
 
 ## Step 1: Create and add the SSH Key
 
-Create an ssh key from the computer you'd like to connect from \(skip this step if you already have a key\)
+Create an ssh key from the computer you'd like to connect from (skip this step if you already have a key)
 
 ```yaml
 # make the ssh key (if you don't have one)
@@ -33,11 +33,11 @@ grid session ssh fun-bear-259
 
 ## Step 4: Install remote ssh extension
 
-![](../../.gitbook/assets/image%20%2893%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%288%29%20%283%29%20%285%29.png)
+![](<../../.gitbook/assets/image (93) (2) (2) (2) (2) (2) (2) (2) (2) (8) (3) (7).png>)
 
 ## Step 5: Click the remote tab and find your session
 
-![](../../.gitbook/assets/vscode%20%281%29.gif)
+![](<../../.gitbook/assets/vscode (1).gif>)
 
 ## Step 6: Ready
 
@@ -46,6 +46,5 @@ Clicking on it will open VSCode in the remote IxNode. You can use VSCode with an
 ![](../../.gitbook/assets/vscode.gif)
 
 {% hint style="info" %}
-You can clone any Github repositories into a Session using the [HTTPS cloning method](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-using-the-command-line) \(SSH will not work\).
+You can clone any Github repositories into a Session using the [HTTPS cloning method](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-using-the-command-line) (SSH will not work).
 {% endhint %}
-

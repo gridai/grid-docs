@@ -26,11 +26,11 @@ For more information check out
 
 * [Interruptible Pricing](https://docs.grid.ai/platform/billing-rates)
 * [Grid Artifacts](https://docs.grid.ai/products/run-run-and-sweep-github-files/artifacts)
-* [Lightning Loading Checkpoints](https://pytorch-lightning.readthedocs.io/en/latest/common/weights_loading.html)
+* [Lightning Loading Checkpoints](https://pytorch-lightning.readthedocs.io/en/latest/common/weights\_loading.html)
 
 ### AutoStructuring Deep Learning Training
 
-The recent 1.3 Release of PyTorch Lightning provides a new Lightning CLI \[beta\] for [Auto Structuring Deep Learning Training](https://devblog.pytorchlightning.ai/auto-structuring-deep-learning-projects-with-the-lightning-cli-9f40f1ef8b36).
+The recent 1.3 Release of PyTorch Lightning provides a new Lightning CLI \[beta] for [Auto Structuring Deep Learning Training](https://devblog.pytorchlightning.ai/auto-structuring-deep-learning-projects-with-the-lightning-cli-9f40f1ef8b36).
 
 ```bash
 from pytorch_lightning.utilities.cli import LightningCLI
@@ -41,13 +41,13 @@ When combined with Grid, the Lightning CLI enhances your train scripts, enabling
 
 * [Auto Structuring Deep Learning Projects with the Lightning CLI](https://devblog.pytorchlightning.ai/auto-structuring-deep-learning-projects-with-the-lightning-cli-9f40f1ef8b36)
 * [Configuring Grid Hyper Parameter Sweeps](https://docs.grid.ai/products/run-run-and-sweep-github-files/sweep-syntax)
-* [PyTorch Lightning CLI Docs](https://pytorch-lightning.readthedocs.io/en/latest/common/lightning_cli.html)
+* [PyTorch Lightning CLI Docs](https://pytorch-lightning.readthedocs.io/en/latest/common/lightning\_cli.html)
 
 ### Early Stopping
 
-The recent 1.3 Release of PyTorch Lightning provides 3 New Thresholds for Early Stopping \(Stopping, Divergence, and Check Finite\) that can save you significant money on your Grid Runs.
+The recent 1.3 Release of PyTorch Lightning provides 3 New Thresholds for Early Stopping (Stopping, Divergence, and Check Finite) that can save you significant money on your Grid Runs.
 
-The [EarlyStopping](https://pytorch-lightning.readthedocs.io/en/latest/common/early_stopping.html) Callback in Lightning allows the Trainer to automatically stop when a given metric stops improving. You can define your own custom metrics or take advantage of our [TorchMetrics package](https://bit.ly/2RxOvVp) to select common metrics to log and monitor. Early Stopping is perfect for [Grid Runs](https://docs.grid.ai/products/run-run-and-sweep-github-files#runs) because it limits the time spent on experiments that lead to poor convergence or overfitting.
+The [EarlyStopping](https://pytorch-lightning.readthedocs.io/en/latest/common/early\_stopping.html) Callback in Lightning allows the Trainer to automatically stop when a given metric stops improving. You can define your own custom metrics or take advantage of our [TorchMetrics package](https://bit.ly/2RxOvVp) to select common metrics to log and monitor. Early Stopping is perfect for [Grid Runs](https://docs.grid.ai/products/run-run-and-sweep-github-files#runs) because it limits the time spent on experiments that lead to poor convergence or overfitting.
 
 Using EarlyStopping Thresholds into your PL Runs is a simple as adding the following few lines to your code.
 
@@ -74,29 +74,29 @@ Sometimes you need a quick way of copying files from your local machine to your 
 
 **Secure Copy SCP**
 
-Once you’ve configured [SSH with the Grid CLI](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session?utm_source=slack&utm_medium=social&utm_campaign=tip-of-week) you can quickly copy files to your session with the scp command as follows
+Once you’ve configured [SSH with the Grid CLI](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session) you can quickly copy files to your session with the scp command as follows
 
-```text
+```
 scp local_file grid_session_name:~path_to_copy_to/
 ```
 
-**Using** [**Jupyter Lab**](https://docs.grid.ai/products/sessions/jupyterlab-with-sessions?utm_source=slack&utm_medium=social&utm_campaign=tip-of-week)\*\*\*\*
+**Using** [**Jupyter Lab**](https://docs.grid.ai/products/sessions/jupyterlab-with-sessions)\*\*\*\*
 
 If the CLI is not your thing; you can also upload files using jupyter hub
 
-[This video](https://www.youtube.com/watch?time_continue=14&v=1bd2QHqQSH4&feature=emb_title) shows you how to do that. For more information check out:
+[This video](https://www.youtube.com/watch?time\_continue=14\&v=1bd2QHqQSH4\&feature=emb\_title) shows you how to do that. For more information check out:
 
-* [Grid Sessions Docs](https://docs.grid.ai/products/sessions?utm_source=slack&utm_medium=social&utm_campaign=tip-of-week)
-* [SSH into a Grid Session](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session?utm_source=slack&utm_medium=social&utm_campaign=tip-of-week)
+* [Grid Sessions Docs](https://docs.grid.ai/products/sessions)
+* [SSH into a Grid Session](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session)
 * [SCP Command](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/)
-* [JupyterLab with Sessions](https://docs.grid.ai/products/sessions/jupyterlab-with-sessions?utm_source=slack&utm_medium=social&utm_campaign=tip-of-week)
+* [JupyterLab with Sessions](https://docs.grid.ai/products/sessions/jupyterlab-with-sessions)
 * [JupyterLab Uploading and Downloading Files](https://jupyterlab.readthedocs.io/en/stable/user/files.html#uploading-and-downloading)
 
 ### Keeping track of costs
 
 Have you ever wanted to estimate exactly how much a cloud training run will cost you.Well with PyTorch Lightning and Grid now you can.
 
-The recent 1.3 Release of PyTorch Lightning provides a new trainer flag called [max\_time](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html?utm_source=social&utm_medium=slack&utm_campaign=tip_of_week#max-time) that can enable you to stop your [Grid Run](https://docs.grid.ai/products/run-run-and-sweep-github-files#runs) and save a checkpoint when you’ve reached the max allotted time.
+The recent 1.3 Release of PyTorch Lightning provides a new trainer flag called [max\_time](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html#max-time) that can enable you to stop your [Grid Run](https://docs.grid.ai/products/run-run-and-sweep-github-files#runs) and save a checkpoint when you’ve reached the max allotted time.
 
 Combined with Grid's ability to estimate how much a run will cost you per an hour you can use this flag to better budget your experiments.
 
@@ -110,7 +110,7 @@ trainer = Trainer(max_time={"days": 1, "hours": 5})
 With this trick you can better manage your training budget and invest it into more promising configurations to take your model performance and convergence to the next level.For more information check out:
 
 * [Grid Run Docs](https://bit.ly/3fyBRgT)
-* [Max Time Docs](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html?utm_source=social&utm_medium=slack&utm_campaign=tip_of_week#max-time)
+* [Max Time Docs](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html#max-time)
 
 ### Reproducible Runs
 
@@ -118,9 +118,9 @@ Have you ever wanted to share or reproduce the results of your run? Grid Runs ma
 
 Start a Run on Grid. Once it is completed, just go to the Run details, click on the Grid Run button and copy and paste that url inside any Github repository markdown file so your friends run the same configuration
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](<../.gitbook/assets/image (136).png>)
 
-Here is a [video of how to create a Grid Run badge for a reproducible run](../products/run-run-and-sweep-github-files/sharing-runs.md#generate-a-run-badge-for-github)
+Here is a [video of how to create a Grid Run badge for a reproducible run](broken-reference)
 
 ### Periodic Uploads of Datasets to Datastores
 
@@ -132,13 +132,12 @@ Here is an example of how you can quickly configure this functionality.
 
 #### write out current crontab
 
-crontab -l &gt; mycron
+crontab -l > mycron
 
 #### run datastore upload every hour every day
 
-echo "0  **** grid datastores create --source data/path --name dataset" &gt;&gt; mycron
+echo "0 **** grid datastores create --source data/path --name dataset" >> mycron
 
 #### install new cron file
 
 crontab mycron rm mycron
-

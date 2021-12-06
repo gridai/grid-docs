@@ -6,7 +6,7 @@ Anytime your script saves artifacts, Grid captures those for you. It does not ma
 
 Try [hello.py](https://github.com/williamFalcon/hello/blob/main/hello.py) for an example
 
-![](../../.gitbook/assets/image%20%2890%29.png)
+![](<../../.gitbook/assets/image (119).png>)
 
 ## Access artifacts via the UI
 
@@ -33,7 +33,7 @@ If you delete runs and experiments, then artifacts are deleted, Grid will never 
 
 ## Access artifacts via the CLI
 
-To get artifacts via the CLI, find the run name \(via the UI or CLI\)
+To get artifacts via the CLI, find the run name (via the UI or CLI)
 
 ```bash
 # if it's still running
@@ -65,4 +65,3 @@ get the artifacts
 # N in expN means the ith experiment (ie: exp0, exp1, exp3, ..., expN)
 grid artifacts runname-expN
 ```
-

@@ -8,12 +8,12 @@ description: Upload datasets from within a session into Datastore
 
 For huge datasets that need processing or a lot of manual work, we recommend this flow:
 
-* launch an Interactive Session 
+* launch an Interactive Session&#x20;
 * download the data
 * process it
 * upload
 
-![](../../.gitbook/assets/upload_session.gif)
+![](../../.gitbook/assets/upload\_session.gif)
 
 ## Screen
 
@@ -38,7 +38,7 @@ bash process.sh
 ...
 ```
 
-when you're done, upload to Grid via the CLI \(on the Interactive Session\):
+when you're done, upload to Grid via the CLI (on the Interactive Session):
 
 ```bash
 grid datastore create --source imagenet_folder --name imagenet
@@ -52,5 +52,6 @@ Grid CLI is auto-installed on sessions and logged in under your credentials.
 
 To see it in action, check out this tutorial
 
-{% page-ref page="../../examples/vision/image-classification-with-imagenet.md" %}
-
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}

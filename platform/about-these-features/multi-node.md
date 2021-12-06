@@ -9,7 +9,7 @@ description: >-
 Multi-node or distributed training allows you to train a single model across more than one machine.
 
 {% hint style="info" %}
-**Note:** At this time multi-node training is only supported for the Lightning framework. 
+**Note:** At this time multi-node training is only supported for the Lightning framework.&#x20;
 {% endhint %}
 
 Early access to multi-node is now available, send us a message on community slack: gridai-community.slack.com or email at support@grid.ai with feedback
@@ -50,7 +50,7 @@ Paste the Github script in Run dialog as you would normally
 
 Select the machine and specify GPUs per experiment
 
-![](https://lh5.googleusercontent.com/SFa4W_pTQZsnAevsho_gX8VxoH9qtKfcoTB-8hsR6QECZw-Q1R7TT0ecGMYTvwIwZN7Z1kFNd7OsAI1HmreacwMLOi994u74buj0BX6GOZfeqZ59yLmQ2pGIMJPqSJJACjTpa-Ny)
+![](https://lh5.googleusercontent.com/SFa4W\_pTQZsnAevsho\_gX8VxoH9qtKfcoTB-8hsR6QECZw-Q1R7TT0ecGMYTvwIwZN7Z1kFNd7OsAI1HmreacwMLOi994u74buj0BX6GOZfeqZ59yLmQ2pGIMJPqSJJACjTpa-Ny)
 
 ## Step 1: Visualize Results
 
@@ -58,5 +58,4 @@ In the same way as you would for a single node run. If tensorboard logs are avai
 
 Verify how many GPUs were run in the Experiment Details
 
-![](../../.gitbook/assets/multinode.png)
-
+![](../../.gitbook/assets/Multinode.png)

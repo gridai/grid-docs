@@ -10,6 +10,8 @@ description: >-
 
 Grid is designed for developing and training deep learning models at scale.
 
+
+
 The TL;DR of using Grid is this:
 
 * Create a **DATASTORE** with your dataset.
@@ -18,7 +20,7 @@ The TL;DR of using Grid is this:
 
 This 3-minute video shows you how to execute code on cloud instances with zero code changes and how to debug/prototype and develop models with multi-GPU cloud instances.
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/intro\_video\_mp42.mp4" caption="" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/intro_video_mp42.mp4" %}
 
 Here is a quick overview of
 
@@ -32,7 +34,7 @@ Here is a quick overview of
 
 Grid allocates all the machines and GPUs you need on demand, so you only pay for what you need when you need it.
 
-Grid lets you focus on your work, NOT on the infrastructure. Create an account [here](https://platform.grid.ai/) to get free credits and get started!
+Grid lets you focus on your work, NOT on the infrastructure. Create an account [here](https://platform.grid.ai) to get free credits and get started!
 
 ## Artifacts, logs, etc...
 
@@ -51,15 +53,15 @@ Grid works with the experiment manager of your choice!!🔥🔥
 
 No need to change your code!
 
-## Datastores: \(scalable datasets\)
+## Datastores: (scalable datasets)
 
 In Grid, we've introduced _Datastores_, high-performance, low-latency, versioned datasets.
 
-![](.gitbook/assets/jobs_2.jpg)
+![](.gitbook/assets/jobs\_2.jpg)
 
-The UI supports creating Datastores of &lt; 1 GB
+The UI supports creating Datastores of < 1 GB
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/datastore.mp4" caption="" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/datastore.mp4" %}
 
 Use the CLI for larger datastores
 
@@ -67,7 +69,7 @@ Use the CLI for larger datastores
 grid datastores create --source imagenet_folder --name imagenet
 ```
 
-## Sessions \(interactive machines\)
+## Sessions (interactive machines)
 
 For prototyping/debugging/analyzing, sometimes you need a LIVE machine. We call these _Sessions_.
 
@@ -75,7 +77,7 @@ For prototyping/debugging/analyzing, sometimes you need a LIVE machine. We call 
 
 ![](.gitbook/assets/session.jpg)
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/session\_3.mp4" caption="" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/session_3.mp4" %}
 
 
 
@@ -86,7 +88,7 @@ For prototyping/debugging/analyzing, sometimes you need a LIVE machine. We call 
 grid session create --instance_type 2_m60_8gb
 ```
 
-## **RUN \(Sweep and train anything\)**
+## **RUN (Sweep and train anything)**
 
 RUN **any** public or private repository with Grid in 5 steps:
 
@@ -94,11 +96,11 @@ RUN **any** public or private repository with Grid in 5 steps:
 
 This 1-minute video shows how to RUN from the web app:
 
-{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/run.mp4" caption="" %}
+{% embed url="https://grid-docs.s3.us-east-2.amazonaws.com/run.mp4" %}
 
 If you prefer to use the CLI simply replace python with grid run.
 
-![](.gitbook/assets/carbon-1-%20%281%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29%20%282%29%20%281%29%20%281%29.png)
+![](<.gitbook/assets/carbon-1- (1) (3) (3) (3) (3) (3) (3) (2) (1) (2).png>)
 
 First, install Grid and login
 
@@ -132,7 +134,7 @@ python hello.py --number 2 --food_item 'pear'
 
 We learned that:
 
-* **RUN** executes scripts on cloud machines \(and runs hyperparameter sweeps\)
+* **RUN** executes scripts on cloud machines (and runs hyperparameter sweeps)
 * **SESSION** starts an interactive machine with the CPU/GPUs of your choice
 * **DATASTORE** is an optimized, low-latency auto-versioned dataset.
 * Grid has a **Web app** and a **CLI** with similar functionality.
@@ -141,5 +143,4 @@ That's all you need to know about Grid!
 
 ## Next!
 
-Now try our [first tutorial](start-here/typical-workflow-web-user.md) 
-
+Now try our [first tutorial](start-here/typical-workflow-web-user.md)&#x20;

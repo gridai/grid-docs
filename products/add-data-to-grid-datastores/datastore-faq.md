@@ -22,7 +22,7 @@ Grid does not charge for storing data. However, there is a limit of 25 datastore
 
 ## Does Grid have a limit on DataStore size?
 
-Yes Grid DataStore max size is 1.5 TB. For security reasons, we only allow you to upload data for 24 hours continuously. If your data is too big to upload in a 24 hour period, it will stop uploading. Initiating `grid datastore create <args...>` again will resume the upload.
+Yes Grid DataStore max size is 1.5 TB. For security reasons, we only allow you to upload data for 12 hours continuously. If your data is too big to upload in a 12 hour period, it will stop uploading. Initiating `grid datastore create <args...>` again will resume the upload.
 
 ## Is there a way to see what files are in a datastore?
 
@@ -32,34 +32,8 @@ Create an interactive session with the datastore mounted, then you will be able 
 
 Grid will have access to your account data for operational purposes. If we do need access to your account for debugging purposes, we will notify you.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Data type</th>
-      <th style="text-align:left">Grid Access</th>
-      <th style="text-align:left">Storage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Datasets</td>
-      <td style="text-align:left">
-        <p>Only your account can access your data.</p>
-        <p>Grid and its service providers only access your data for operational purposes,
-          including providing the services and support to you.</p>
-      </td>
-      <td style="text-align:left">S3</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Artifacts</td>
-      <td style="text-align:left">Grid only reads metadata.</td>
-      <td style="text-align:left">S3</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Metadata</td>
-      <td style="text-align:left">Information about your jobs (no code, no data).</td>
-      <td style="text-align:left">Database</td>
-    </tr>
-  </tbody>
-</table>
-
+| Data type | Grid Access                                                                                                                                                                              | Storage  |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Datasets  | <p>Only your account can access your data.</p><p>Grid and its service providers only access your data for operational purposes, including providing the services and support to you.</p> | S3       |
+| Artifacts | Grid only reads metadata.                                                                                                                                                                | S3       |
+| Metadata  | Information about your jobs (no code, no data).                                                                                                                                          | Database |

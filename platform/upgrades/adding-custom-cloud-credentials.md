@@ -13,18 +13,18 @@ Request access to this feature! Send us a message to our [community Slack](https
 
 Grid creates clusters inside your own cloud account allowing you to keep complete control of the resources that you need. We'll guide you through the setup process for each of the supported cloud providers.
 
-## Amazon Web Services \(AWS\)
+## Amazon Web Services (AWS)
 
 ### Requirements
 
-Grid will create clusters designed for large AI workloads. In order to do so, your AWS account needs to have the **right permissions** and **quotas**. We'll cover both optional and required configurations as follows. If your cluster is small, or you require only a few instance types default quotas should work for you. Still, we recommend asking AWS for extra quotas as your needs expand in the future. 
+Grid will create clusters designed for large AI workloads. In order to do so, your AWS account needs to have the **right permissions** and **quotas**. We'll cover both optional and required configurations as follows. If your cluster is small, or you require only a few instance types default quotas should work for you. Still, we recommend asking AWS for extra quotas as your needs expand in the future.
 
-| Configuration | Recommendation |
-| :--- | :--- |
-| Auto Scaling groups per region | 800 |
-| Launch configurations per region | 800 |
-| EC2 Spot \(instance family you are interested in\) | 1000+ |
-| EC2 On-demand \(instance family you are interested in\) | 1000+ |
+| Configuration                                         | Recommendation |
+| ----------------------------------------------------- | -------------- |
+| Auto Scaling groups per region                        | 800            |
+| Launch configurations per region                      | 800            |
+| EC2 Spot (instance family you are interested in)      | 1000+          |
+| EC2 On-demand (instance family you are interested in) | 1000+          |
 
 #### Requesting Quotas
 
@@ -34,7 +34,7 @@ You can request a quota by doing
 
 1. Login into your AWS console
 2. Search for "[Service Quotas](https://console.aws.amazon.com/servicequotas/home)" and click on the result
-3. Click on the area of the service \(e.g. "Amazon Elastic Compute Cloud \(Amazon EC2\)"\)
+3. Click on the area of the service (e.g. "Amazon Elastic Compute Cloud (Amazon EC2)")
 4. Use the search filter to find the quota that you are looking for
 5. Make a quota request
 
@@ -42,27 +42,27 @@ You can request a quota by doing
 
 **A: Login to AWS and search for IAM**
 
-Login into your AWS account. You will then use the search bar to find "IAM" \(user management\).
+Login into your AWS account. You will then use the search bar to find "IAM" (user management).
 
-![](../../.gitbook/assets/image%20%28156%29.png)
+![](<../../.gitbook/assets/image (9).png>)
 
 **B: Click on "Users"**
 
 Click on the "Users" panel. You will be able to see a list of users. If you already have a user, click on your user name. If you don't, move to the next step to create a new user.
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](<../../.gitbook/assets/image (10).png>)
 
-**C: Create New User \(optional\)**
+**C: Create New User (optional)**
 
-If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
+If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" (this allows you to use AWS keys).
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](<../../.gitbook/assets/image (26).png>)
 
 Click on "Next: Permissions".
 
 The user should have IAMFullAccess privileges.
 
-Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
+Click on "Next: Tags" > "Next: Review" > "Create user".
 
 **D: Create New AWS Keys**
 
@@ -96,9 +96,9 @@ The final step is to add all the Grid policies to your account. That means that 
 4. Click on "Add permissions"
 5. Click on "Attach existing policies directly"
 
-![Granting permissions to an user.](../../.gitbook/assets/image%20%2813%29.png)
+![Granting permissions to an user.](<../../.gitbook/assets/image (25).png>)
 
-1. Search for the policy IAMFullAccess:  
+1. Search for the policy IAMFullAccess:
 2. Click the Check Box to the left of `IAMFullAccess`
 3. Click on "Next:Review"
 4. Click on "Add permissions"
@@ -116,7 +116,7 @@ The script needs following list of permissions:
 {% hint style="info" %}
 * "eks:\*",
 * "ecr:\*",
-* **"**events**:\*",**
+* **"events:\*",**
 * "arn:aws:iam::aws:policy/AmazonEC2FullAccess",
 * "arn:aws:iam::aws:policy/AmazonGuardDutyFullAccess",
 * "arn:aws:iam::aws:policy/AmazonRoute53ResolverFullAccess",
@@ -137,7 +137,7 @@ git clone https://github.com/gridai/terraform-aws-gridbyoc.git
 cd terraform-aws-gridbyoc/quick-start
 ```
 
-* Make sure your AWS CLI is properly configured with [id & secret you created](adding-custom-cloud-credentials.md#d-create-new-aws-keys).  These are not shared with Grid.
+* Make sure your AWS CLI is properly configured with [id & secret you created](adding-custom-cloud-credentials.md#d-create-new-aws-keys). These are not shared with Grid.
 
 ```bash
 unset AWS_ACCESS_KEY_ID
@@ -154,7 +154,7 @@ Default region name [None]:
 Default output format [None]:
 ```
 
-* Verify AWS Access Key 
+* Verify AWS Access Key
 
 ```bash
 aws sts get-caller-identity
@@ -217,7 +217,7 @@ From the last command you'll get the following output:
 }
 ```
 
-* Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid). 
+* Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid).
 
 ```bash
 export EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
@@ -228,7 +228,7 @@ export ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
 
-* Login to Grid.  Please reference the detailed [steps](https://docs.grid.ai/products/global-cli-configs#install-the-cli) as required. 
+* Login to Grid. Please reference the detailed [steps](https://docs.grid.ai/products/global-cli-configs#install-the-cli) as required.
 
 ```bash
 pip install lightning_grid --upgrade 
@@ -268,13 +268,13 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 
 ### Step 5: Wait for cluster to be provisioned
 
-```text
+```
 grid clusters
 ```
 
 And wait for your cluster status be `running`:
 
-```text
+```
 ┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
 ┃ id                 ┃ name               ┃ status  ┃
 ┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
@@ -283,11 +283,11 @@ And wait for your cluster status be `running`:
 └────────────────────┴────────────────────┴─────────┘
 ```
 
-It can take some time to provision a new cluster, ~20-30 minutes
+It can take some time to provision a new cluster, \~20-30 minutes
 
 ### Step 6: Run your workloads in your new cluster
 
-```text
+```
 grid run --cluster <cluster name>
 grid session create --cluster <cluster name>
 ```
@@ -296,11 +296,11 @@ Or if you're using config file set the `.compute.provider.cluster` field to the 
 
 ### Step 7: Enjoy!
 
-Your cluster will be available for use on Grid, so use it \(or any other cluster\) as you wish. 
+Your cluster will be available for use on Grid, so use it (or any other cluster) as you wish.
 
 ## Editing and Deleting Clusters
 
-Use `grid edit` to see instance types available and update as necessary. You can also switch between cost-savings and default mode of operation. 
+Use `grid edit` to see instance types available and update as necessary. You can also switch between cost-savings and default mode of operation.
 
 ```bash
 grid edit cluster <cluster name>
@@ -318,8 +318,7 @@ grid delete cluster <cluster name>
 
 ## Cost saving mode
 
-There are two cluster management modes you can pick, depending on your expected cluster size and latency/cost preferences.
-They are easily switched using the `--cost-savings` flag when creating the cluster.
+There are two cluster management modes you can pick, depending on your expected cluster size and latency/cost preferences. They are easily switched using the `--cost-savings` flag when creating the cluster.
 
 * default(performance)
 
@@ -333,7 +332,6 @@ They are easily switched using the `--cost-savings` flag when creating the clust
   "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_COST_SAVING",
 ```
 
-
 In the cost savings mode you're trading startup latency for lower cost. Grid has some background processes:
 
 * VPC/EKS cluster/ELBs/CloudWatch Logs
@@ -342,8 +340,7 @@ which are the same in both modes. Some are variable:
 
 * EC2 instances types & count for the management/skeleton crew purposes.
 
-In the cost-savings mode we're running management workloads on a single server, while some components are scaled down to 0 replicas, and only booted when needed. In a performance (default) we run management nodes in HA (highly available) configuration, and certain components are persistently running to improve start-up latency. 
-Depending on the region these costs are around ~$10/day, compared to ~$50/day for the default mode.
+In the cost-savings mode we're running management workloads on a single server, while some components are scaled down to 0 replicas, and only booted when needed. In a performance (default) we run management nodes in HA (highly available) configuration, and certain components are persistently running to improve start-up latency. Depending on the region these costs are around \~$10/day, compared to \~$50/day for the default mode.
 
 ### Trade-offs
 
@@ -363,7 +360,7 @@ Depending on the region these costs are around ~$10/day, compared to ~$50/day fo
 
 #### Operational risks
 
-* There's a higher, small but non-negligible risk of cluster malfunction. This is due to a  single point of failure concerning the single management node. This node runs gridlet agent & cluster-autoscaler responsible for dynamic scale up and down. 
+* There's a higher, small but non-negligible risk of cluster malfunction. This is due to a single point of failure concerning the single management node. This node runs gridlet agent & cluster-autoscaler responsible for dynamic scale up and down.
 * Maximum concurrent experiment/session count is smaller. This means the cluster could experience issues with bigger node counts; especially with workload scheduling and scaling up & down the nodes. Mostly due to resource constraints imposed on gridlet & cluster-autoscaler.
 
 By the way, you can also overprovision certain instance types that experiments & sessions start even faster for those instances:
@@ -379,21 +376,20 @@ By the way, you can also overprovision certain instance types that experiments &
 ],
 ```
 
-Be warned you're paying for those spare capacities despite being unused most of the time. 
-Use `grid edit cluster <cluster name>` or `grid clusters aws --edit-before-creation <cluster name>` to access these advance options.
+Be warned you're paying for those spare capacities despite being unused most of the time. Use `grid edit cluster <cluster name>` or `grid clusters aws --edit-before-creation <cluster name>` to access these advance options.
 
 ## Installing 3rd Party Tools
 
 Cluster setup requires the following tools, so make sure you have them installed.
 
-* [git](https://git-scm.com/)
+* [git](https://git-scm.com)
 * [jq](https://stedolan.github.io/jq/)
-* [terraform](https://www.terraform.io/) 
-* [AWS CLI](https://aws.amazon.com/cli/) 
+* [terraform](https://www.terraform.io)
+* [AWS CLI](https://aws.amazon.com/cli/)
 
 ### MacOS
 
-[brew](https://brew.sh/) and [pip3](https://packaging.python.org/guides/tool-recommendations/) are used in this example.
+[brew](https://brew.sh) and [pip3](https://packaging.python.org/guides/tool-recommendations/) are used in this example.
 
 ```bash
 brew install git
@@ -402,7 +398,7 @@ brew install jq
 pip3 install awscli --upgrade --user
 ```
 
-### Linux \(Debian/Ubuntu\)
+### Linux (Debian/Ubuntu)
 
 [Grid Session SSH](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session) can be used to run the below example. [apt-get](http://manpages.ubuntu.com/manpages/cosmic/man8/apt-get.8.html) and [repository configuration](https://www.terraform.io/docs/cli/install/apt.html#repository-configuration) are used in this example.
 
@@ -419,4 +415,3 @@ sudo apt-get install terraform
 sudo apt-get install jq
 sudo apt-get install awscli
 ```
-

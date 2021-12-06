@@ -4,8 +4,9 @@
 
 ## Start Here
 
-* [Typical workflow \(Web user\)](start-here/typical-workflow-web-user.md)
-* [Typical workflow \(CLI user\)](start-here/typical-workflow-cli-user.md)
+* [Github Integration](start-here/private-repos.md)
+* [Typical workflow (Web user)](start-here/typical-workflow-web-user.md)
+* [Typical workflow (CLI user)](start-here/typical-workflow-cli-user.md)
 
 ## Products
 
@@ -51,53 +52,38 @@
   * [SSH into a Session](products/sessions/how-to-ssh-into-a-session.md)
   * [Julia and R languages in Sessions](products/sessions/using-julia-and-r-languages-in-sessions.md)
   * [VSCode with Sessions](products/sessions/vscode-with-sessions.md)
+  * [FAQ](products/sessions/faq.md)
 * [⚡Runs](products/run-run-and-sweep-github-files/README.md)
-  * [Running Experiments With a Dockerfile](products/run-run-and-sweep-github-files/running-experiments-with-a-dockerfile.md)
-  * [Actions](products/run-run-and-sweep-github-files/actions.md)
-  * [Artifacts](products/run-run-and-sweep-github-files/artifacts.md)
-  * [Attaching Datastores](products/run-run-and-sweep-github-files/attaching-datastores.md)
-  * [Clone Runs or Experiments](products/run-run-and-sweep-github-files/cloning-runs-or-experiments.md)
-  * [Failed jobs](products/run-run-and-sweep-github-files/failed-jobs.md)
   * [Hyperparameter Sweeps](products/run-run-and-sweep-github-files/sweep-syntax.md)
-  * [Lowering costs \(BETA\)](products/run-run-and-sweep-github-files/interruptible-machines.md)
-  * [Machines](products/run-run-and-sweep-github-files/machines.md)
-  * [Metrics \(charts\)](products/run-run-and-sweep-github-files/metrics-charts.md)
-  * [Private Repos](products/run-run-and-sweep-github-files/private-repos.md)
-  * [Sharing Runs](products/run-run-and-sweep-github-files/sharing-runs.md)
   * [Script dependencies](products/run-run-and-sweep-github-files/script-dependencies.md)
-  * [Viewing logs](products/run-run-and-sweep-github-files/viewing-logs.md)
+  * [Spot Instances](products/run-run-and-sweep-github-files/interruptible-machines.md)
+  * [Auto-Restart Experiments](products/run-run-and-sweep-github-files/auto-restart-experiments.md)
+  * [Machines](products/run-run-and-sweep-github-files/machines.md)
+  * [Attaching Datastores](products/run-run-and-sweep-github-files/attaching-datastores.md)
+  * [Running Experiments With a Dockerfile](products/run-run-and-sweep-github-files/running-experiments-with-a-dockerfile.md)
   * [YAML configs](products/run-run-and-sweep-github-files/yaml-configs/README.md)
     * [Using YAML](products/run-run-and-sweep-github-files/yaml-configs/yaml-api.md)
+  * [Actions](products/run-run-and-sweep-github-files/actions.md)
+  * [Viewing logs](products/run-run-and-sweep-github-files/viewing-logs.md)
+  * [Artifacts](products/run-run-and-sweep-github-files/artifacts.md)
+  * [Failed jobs](products/run-run-and-sweep-github-files/failed-jobs.md)
+  * [Metrics (charts)](products/run-run-and-sweep-github-files/metrics-charts.md)
   * [FAQ](products/run-run-and-sweep-github-files/faq.md)
-  * [Running PyTorch Lightning](products/run-run-and-sweep-github-files/running-pytorch-lightning.md)
-  * [Running Tensorflow or Keras](products/run-run-and-sweep-github-files/running-tensorflow-or-keras.md)
-  * [Running Julia programs](products/run-run-and-sweep-github-files/running-julia-programs.md)
 
 ## Examples
 
-* [Vision](examples/vision/README.md)
-  * [Coco Object Detection](examples/vision/coco.md)
-  * [ImageNet classification](examples/vision/image-classification-with-imagenet.md)
-  * [Kinetics Video Classification](examples/vision/kinetics-video-classification.md)
-  * [MosMedData 3D Image Classification](examples/vision/mosmeddata-3d-image-classification.md)
-  * [GANs using PyTorch Lightning](examples/vision/gans-using-pytorch-lightning.md)
-* [NLP](examples/nlp/README.md)
-  * [GPT 10B+ params \(8 GPUs\)](examples/nlp/gpt-10b+-params-8-gpus.md)
-  * [XSum Text Summarization](examples/nlp/xsum-text-summarization.md)
-  * [Text Classification](examples/nlp/text-classification.md)
-* [Time Series](examples/time-series/README.md)
-  * [Coin Market Cap Price Forecasting](examples/time-series/price-forecasting.md)
-* [Self-supervised learning](examples/self-supervised-learning-1/README.md)
-  * [SIMCLR](examples/self-supervised-learning-1/self-supervised-learning.md)
+* [Running PyTorch Lightning](examples/running-pytorch-lightning.md)
+* [Running Tensorflow or Keras](examples/running-tensorflow-or-keras.md)
+* [Running Julia Programs](examples/running-julia-programs.md)
 
 ## Platform
 
 * [Billing rates](platform/billing-rates.md)
 * [Upgrades](platform/upgrades/README.md)
   * [Creating a New Cluster](platform/upgrades/adding-custom-cloud-credentials.md)
+  * [Team Collaboration](platform/upgrades/team-collaboration.md)
 * [Early Access Features](platform/about-these-features/README.md)
   * [Multi-node training](platform/about-these-features/multi-node.md)
-  * [Teams features](platform/about-these-features/teams-features.md)
 * [Report issues](platform/report-issues/README.md)
   * [Feature Requests](platform/report-issues/feature-requests.md)
 * [Supporting Workflows](platform/supporting-workflows-1/README.md)
@@ -107,10 +93,9 @@
 * [Tips & Tricks](platform/tips-and-tricks.md)
 * [Changelog](platform/changelog.md)
 * [Security & Privacy](platform/security-and-privacy.md)
-* [Single Sign-On \(SSO\)](platform/sso.md)
+* [Single Sign-On (SSO)](platform/sso.md)
 
 ## LINKS
 
 * [Grid.ai Website](https://grid.ai)
 * [Platform](https://platform.grid.ai)
-
