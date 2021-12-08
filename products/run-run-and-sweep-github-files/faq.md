@@ -4,6 +4,10 @@ description: Frequently asked questions about Runs
 
 # FAQ
 
+## Windows support
+
+Try running your commands with your path as '\\' instead of '\'.
+
 ## The cost changed during a run?
 
 Grid provides estimates of ongoing costs. Once a run terminates we compute the final cost.
@@ -31,4 +35,3 @@ Grid supports Linux based operating systems. We recommend using virtual environm
 ## Experiments are queued for a long time
 
 If experiments are queued for a long time it could be a sign that instance type requested is not available; reach out on slack or open a github issue if you see this: [https://github.com/gridai/gridai/issues](https://github.com/gridai/gridai/issues). Choosing another instance type may help in some cases.
-
