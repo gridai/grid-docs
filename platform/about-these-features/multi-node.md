@@ -4,12 +4,12 @@ description: >-
   multiple devices for parallel execution
 ---
 
-# Multi-node training
+# Multi-node training (Beta)
 
-Multi-node or distributed training allows you to train a single model across more than one machine.
+This is a currently an experimental feature. We welcome the community to try it out and provide feedback to <Product email here>. Multi-node or distributed training allows you to train a single model across more than one machine.
 
 {% hint style="info" %}
-**Note:** At this time multi-node training is only supported for the Lightning framework.&#x20;
+**Note:** At this time multi-node training is only supported for the Lightning framework.
 {% endhint %}
 
 Early access to multi-node is now available, send us a message on community slack: gridai-community.slack.com or email at support@grid.ai with feedback
@@ -30,16 +30,43 @@ Starting a multi node run in CLI is the same as how you run any other script, Gr
 
 For example --gpus 5 --instance\_type 4\_v100\_32gb will automatically trigger multi node training
 
-Example of 1 node 4 GPUs :
+Prior to being able to run the below you will need to clone a fork of the Pytorch-lightning repo (https://github.com/filintod/pytorch-lightning). For convenience the code to do so is below.
 
-```bash
-grid run --instance_type 4_v100_16gb --framework lightning --gpus 4 torch_elastic_vae.py --data_path grid:stl10:1
+```
+git clone https://github.com/filintod/pytorch-lightning.git
+cd pytorch_lightning
 ```
 
-Example of 2 nodes 8 GPUs:
+Example of 1 node 1 GPU :
 
 ```bash
-grid run --instance_type 4_v100_16gb --framework lightning --gpus 8 torch_elastic_vae.py --data_path grid:stl10:1
+grid run \
+--name spectral-wildebeest-859 \
+--strategy grid_search \
+--instance_type g4dn.xlarge \
+--framework lightning \
+--credential_id remove-me \
+--gpus 1 \
+pl_examples/basic_examples/mnist_examples/image_classifier_5_lightning_datamodule.py \
+--trainer.gpus 1 \
+--trainer.strategy 'ddp'
+--trainer.max_epochs 50
+```
+
+Example of 4 nodes 4 GPUs:
+
+```bash
+grid run \
+--name spectral-wildebeest-860 \
+--strategy grid_search \
+--instance_type g4dn.xlarge \
+--framework lightning \
+--credential_id remove-me \
+--gpus 4 \
+pl_examples/basic_examples/mnist_examples/image_classifier_5_lightning_datamodule.py \
+--trainer.gpus 4 \
+--trainer.strategy 'ddp'\
+--trainer.max_epochs 50
 ```
 
 ## Step 0: Start a Run using Web UI
@@ -50,7 +77,7 @@ Paste the Github script in Run dialog as you would normally
 
 Select the machine and specify GPUs per experiment
 
-![](https://lh5.googleusercontent.com/SFa4W\_pTQZsnAevsho\_gX8VxoH9qtKfcoTB-8hsR6QECZw-Q1R7TT0ecGMYTvwIwZN7Z1kFNd7OsAI1HmreacwMLOi994u74buj0BX6GOZfeqZ59yLmQ2pGIMJPqSJJACjTpa-Ny)
+![](https://lh5.googleusercontent.com/SFa4W_pTQZsnAevsho_gX8VxoH9qtKfcoTB-8hsR6QECZw-Q1R7TT0ecGMYTvwIwZN7Z1kFNd7OsAI1HmreacwMLOi994u74buj0BX6GOZfeqZ59yLmQ2pGIMJPqSJJACjTpa-Ny)
 
 ## Step 1: Visualize Results
 
@@ -58,4 +85,4 @@ In the same way as you would for a single node run. If tensorboard logs are avai
 
 Verify how many GPUs were run in the Experiment Details
 
-![](../../.gitbook/assets/Multinode.png)
+![](../../.gitbook/assets/multinode.png)
