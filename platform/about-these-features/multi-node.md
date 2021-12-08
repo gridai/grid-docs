@@ -35,6 +35,7 @@ Prior to being able to run the below you will need to clone a fork of the Pytorc
 ```
 git clone https://github.com/PyTorchLightning/pytorch-lightning.git
 cd pytorch_lightning
+printf "torchvision==0.11.1 \njsonargparse==4.1.0" >> requirements.txt
 ```
 
 Example of 1 node 1 GPU :
