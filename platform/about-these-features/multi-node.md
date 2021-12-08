@@ -33,7 +33,7 @@ For example --gpus 5 --instance\_type 4\_v100\_32gb will automatically trigger m
 Prior to being able to run the below you will need to clone a fork of the Pytorch-lightning repo (https://github.com/filintod/pytorch-lightning). For convenience the code to do so is below.
 
 ```
-git clone https://github.com/filintod/pytorch-lightning.git
+git clone https://github.com/PyTorchLightning/pytorch-lightning.git
 cd pytorch_lightning
 ```
 
