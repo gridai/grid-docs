@@ -41,15 +41,14 @@ Example of 1 node 1 GPU :
 
 ```bash
 grid run \
---name spectral-wildebeest-859 \
+--name single-node-test \
 --strategy grid_search \
 --instance_type g4dn.xlarge \
 --framework lightning \
---credential_id remove-me \
 --gpus 1 \
 pl_examples/basic_examples/mnist_examples/image_classifier_5_lightning_datamodule.py \
 --trainer.gpus 1 \
---trainer.strategy 'ddp'
+--trainer.strategy 'ddp' \
 --trainer.max_epochs 50
 ```
 
@@ -57,15 +56,14 @@ Example of 4 nodes 4 GPUs:
 
 ```bash
 grid run \
---name spectral-wildebeest-860 \
+--name 4-node-test \
 --strategy grid_search \
 --instance_type g4dn.xlarge \
 --framework lightning \
---credential_id remove-me \
 --gpus 4 \
 pl_examples/basic_examples/mnist_examples/image_classifier_5_lightning_datamodule.py \
 --trainer.gpus 4 \
---trainer.strategy 'ddp'\
+--trainer.strategy 'ddp' \
 --trainer.max_epochs 50
 ```
 
