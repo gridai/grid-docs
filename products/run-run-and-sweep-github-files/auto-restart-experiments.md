@@ -1,10 +1,10 @@
 ---
 description: >-
   Resumable experiments can be configured to automatically restart if a spot
-  instances becomes unavailable.
+  instance becomes unavailable.
 ---
 
-# Auto-Restart Experiments
+# 🆕 Auto-Restart Experiments
 
 ## Auto-restart Experiments
 
@@ -21,6 +21,7 @@ The lifecycle of a resumable experiment is as follows:
 * Grid receives a notification of pending interruption. It will send your experiment process Linux signal SIGTERM
 * Your process is expected to terminate orderly, that is dump checkpoints/any state to disk, and exit with status code 0
 * Grid will automatically reschedule your experiment on a different instance, albeit it may take a while until a new preemptible/spot instance is available
+  * During this time, the experiment is in the `pending` status &#x20;
 * New preemptible/spot instance is booted, and we schedule your experiment on it
 * Before your experiment begins Grid resumes any artifacts (including your last checkpoint)
 * We resume your experiment with the same run command
