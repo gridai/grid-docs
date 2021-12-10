@@ -4,9 +4,9 @@ description: >-
   instance becomes unavailable.
 ---
 
-# 🆕 Auto-Restart Experiments
+# 🆕 Auto-Resume Experiments
 
-## Auto-restart Experiments
+## Auto-resume Experiments
 
 ### What are resumable experiments?
 
