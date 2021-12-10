@@ -307,7 +307,7 @@ Install requirements + project
 ```yaml
 cd cifar5
 
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 pip install -e .
 ```
 
