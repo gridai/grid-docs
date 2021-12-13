@@ -68,20 +68,4 @@ pl_examples/basic_examples/mnist_examples/image_classifier_5_lightning_datamodul
 --trainer.max_epochs 50
 ```
 
-## Step 0: Start a Run using Web UI
-
-Start a new run
-
-Paste the Github script in Run dialog as you would normally
-
-Select the machine and specify GPUs per experiment
-
-![](https://lh5.googleusercontent.com/SFa4W_pTQZsnAevsho_gX8VxoH9qtKfcoTB-8hsR6QECZw-Q1R7TT0ecGMYTvwIwZN7Z1kFNd7OsAI1HmreacwMLOi994u74buj0BX6GOZfeqZ59yLmQ2pGIMJPqSJJACjTpa-Ny)
-
-## Step 1: Visualize Results
-
-In the same way as you would for a single node run. If tensorboard logs are available, scalars will be visible and artifacts such as checkpoints and configurations can be downloaded
-
-Verify how many GPUs were run in the Experiment Details
-
-![](../../.gitbook/assets/multinode.png)
+The results can be viewed in the same fashion as grid runs.
