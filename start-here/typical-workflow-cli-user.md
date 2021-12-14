@@ -2,11 +2,11 @@
 description: Using the command line interface
 ---
 
-# Typical workflow (CLI user)
+# Typical workflow \(CLI user\)
 
 ## Goal
 
-The goal of this tutorial is to walk through a typical workflow using the Grid command-line (CLI) package.
+The goal of this tutorial is to walk through a typical workflow using the Grid command-line \(CLI\) package.
 
 For users who prefer the web app [this is the mirror tutorial for the web app.](typical-workflow-web-user.md)
 
@@ -16,54 +16,53 @@ The Grid CLI app has a 1:1 match in functionality with the Web app.
 
 We'll use image classification as the example to illustrate the key ideas. The typical workflow goes like this:
 
-![](<../.gitbook/assets/image (69).png>)
+![](../.gitbook/assets/image%20%28135%29.png)
 
 Note a few things:
 
 * The dataset is small so the tutorial can be quick. But the workflow doesn't change for large-scale data.
 * We'll use PyTorch Lightning for simplicity, but the framework can be any of your choice.
-* If you are signed into Grid with Google, make sure to [link a Github account](https://docs.grid.ai/start-here/private-repos) to your profile before launching your first run!
 
 ## **Tutorial time: 19 minutes**
 
-| time      | step                       |
-| --------- | -------------------------- |
-| 1 minute  | Installing the Grid CLI    |
-| 2 minutes | Preparing the dataset      |
-| 2 minutes | Creating a **Datastore**   |
-| 2 minutes | Starting a **Session**     |
-| 1 minute  | ssh connect to the Session |
-| 5 minutes | prototype the model        |
-| 1 minute  | Pause the **Session**      |
-| 1 minute  | Run (hyperparameter sweep) |
+| time | step |
+| :--- | :--- |
+| 1 minute | Installing the Grid CLI |
+| 2 minutes | Preparing the dataset |
+| 2 minutes | Creating a **Datastore** |
+| 2 minutes | Starting a **Session** |
+| 1 minute | ssh connect to the Session |
+| 5 minutes | prototype the model |
+| 1 minute | Pause the **Session** |
+| 1 minute | Run \(hyperparameter sweep\) |
 | 3 minutes | Bonus: Become a power user |
 
 ## Terminology Glossary
 
-| Term               | Description                                                         |
-| ------------------ | ------------------------------------------------------------------- |
-| CIFAR-5            | A dataset with 5 classes (airplane, automobile, ship, truck, bird). |
-| grid **datastore** | High-performance, low-latency, auto-versioned dataset.              |
-| grid **run**       | Runs a model (or many models) on a cloud machine (hyperparam sweep) |
-| grid **session**   | A LIVE machine with 1 or more GPUs for developing models            |
-| An experiment      | A single model with a given configuration                           |
-| A run              | A collection of experiments                                         |
-| ssh                | A way to connect from a local machine to a remote machine           |
+| Term | Description |
+| :--- | :--- |
+| CIFAR-5 | A dataset with 5 classes \(airplane, automobile, ship, truck, bird\). |
+| grid **datastore** | High-performance, low-latency, auto-versioned dataset. |
+| grid **run** | Runs a model \(or many models\) on a cloud machine \(hyperparam sweep\) |
+| grid **session** | A LIVE machine with 1 or more GPUs for developing models |
+| An experiment | A single model with a given configuration |
+| A run | A collection of experiments |
+| ssh | A way to connect from a local machine to a remote machine |
 
 ## The dataset
 
-For this tutorial we'll be using CIFAR-5. This is a subset of [CIFAR-10](https://www.cs.toronto.edu/\~kriz/cifar.html) that we've chosen to make the models train faster.
+For this tutorial we'll be using CIFAR-5. This is a subset of [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) that we've chosen to make the models train faster.
 
-![CIFAR-5 (modified from CIFAR-10)](<../.gitbook/assets/image (56).png>)
+![CIFAR-5 \(modified from CIFAR-10\)](../.gitbook/assets/image%20%28109%29.png)
 
 The goal is to teach a small neural network to classify these 5 sets of classes.
 
 ## Step 0: Install the Grid CLI
 
-(Time: **1 minute**)
+\(Time: **1 minute**\)
 
-It's recommended to use a virtual environment to run with Grid.\
-You can use [conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands) or [venv](https://docs.python.org/3/library/venv.html) (If you're using MacOS, we recommend using venv).
+It's recommended to use a virtual environment to run with Grid.  
+You can use [conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands) or [venv](https://docs.python.org/3/library/venv.html) \(If you're using MacOS, we recommend using venv\).
 
 ```yaml
 pip install lightning-grid --upgrade
@@ -77,7 +76,7 @@ grid login
 
 This will open the browser to your settings. If you signed up to Grid with Google, your username is your email address. If you used Github your username is your Github username.
 
-If your machine doesn't support browsers, use this ([get your username and key here](https://platform.grid.ai/#/settings?tabId=apikey))
+If your machine doesn't support browsers, use this \([get your username and key here](https://platform.grid.ai/#/settings?tabId=apikey)\)
 
 ```bash
 grid login --username YOUR_USERNAME --key YOUR_API_KEY
@@ -89,15 +88,15 @@ You'll only have to do this once!
 
 ## Step 1: Prepare the dataset
 
-![](<../.gitbook/assets/image (65).png>)
+![](../.gitbook/assets/image%20%2832%29.png)
 
-(Time: 2 **minutes**)
+\(Time: 2 **minutes**\)
 
 In a **real** workflow, you would already have the data locally or on a cluster. To make sure we are all using the same data, download the dataset to your machine and unzip it.
 
 ```yaml
 # download
-curl https://pl-flash-data.s3.amazonaws.com/cifar5.zip -O cifar5.zip
+curl https://pl-flash-data.s3.amazonaws.com/cifar5.zip -o cifar5.zip
 
 # unzip
 unzip cifar5.zip
@@ -105,7 +104,7 @@ unzip cifar5.zip
 
 This should create a folder with this structure:
 
-![](<../.gitbook/assets/image (57).png>)
+![](../.gitbook/assets/image%20%2870%29.png)
 
 Now that we all have the same data, let's start the real tutorial!
 
@@ -115,9 +114,9 @@ Hint: The UI can create a datastore from a .zip... this is just for tutorial pur
 
 ## Step 2: Create a datastore
 
-![](<../.gitbook/assets/image (66).png>)
+![](../.gitbook/assets/image%20%2831%29.png)
 
-(Time: 2 **minutes**)
+\(Time: 2 **minutes**\)
 
 In a realistic workflow, we would start here. The first thing you want to do is to create a **DATASTORE** on Grid with your dataset. The datastore will optimize your data for low-latency, and high-availability to any machine you run on Grid.
 
@@ -133,7 +132,7 @@ make sure it was created
 grid datastore list
 ```
 
-![Once it's succeeded, it's ready to be used](<../.gitbook/assets/image (58).png>)
+![Once it&apos;s succeeded, it&apos;s ready to be used](../.gitbook/assets/image%20%2836%29.png)
 
 Note: The datastore status moves through as series of statuses while it is being optimized. When it moves to "Succeeded" it's ready to be used.
 
@@ -153,9 +152,9 @@ crontab mycron
 rm mycron
 ```
 
-## Step 3: Create ssh keys (optional)
+## Step 3: Create ssh keys \(optional\)
 
-(Time: **1 minute**)
+\(Time: **1 minute**\)
 
 This is optional, but enables you to
 
@@ -178,7 +177,7 @@ grid ssh-keys add key_1 ~/.ssh/grid_ssh_creds
 
 ## Step 4: Start a Session
 
-(Time: 3 **minutes**)
+\(Time: 3 **minutes**\)
 
 Now that your data has been uploaded the next step in a real workflow is to spend time doing any of the following:
 
@@ -208,15 +207,15 @@ See if it's ready
 grid status
 ```
 
-![](<../.gitbook/assets/image (80).png>)
+![](../.gitbook/assets/image%20%28120%29.png)
 
 ## Step 5: Connect to the Session
 
-(Time: **1 minute**)
+\(Time: **1 minute**\)
 
 Once the session is ready, you have three options to interact with it:
 
-* Jupyter lab (via the web UI) ([see the web tutorial](typical-workflow-web-user.md))
+* Jupyter lab \(via the web UI\) \([see the web tutorial](typical-workflow-web-user.md)\)
 * ssh from your local
 * ssh + VSCode
 
@@ -252,9 +251,9 @@ git push
 
 ## Step 6: Develop the model
 
-![](<../.gitbook/assets/image (68).png>)
+![](../.gitbook/assets/image%20%2869%29.png)
 
-(Time: **5 minutes**)
+\(Time: **5 minutes**\)
 
 Now that you have your data, code, and 2 GPUs, we get to the fun part! Let's develop the model
 
@@ -262,11 +261,11 @@ At the end of the last section you used ssh to make model changes. However, I ac
 
 First, launch VSCode.
 
-![](<../.gitbook/assets/image (82).png>)
+![](../.gitbook/assets/image%20%28138%29.png)
 
 Install the Remote Development extension
 
-![](<../.gitbook/assets/image (93) (2) (2) (2) (2) (2) (2) (2) (2) (8) (3) (8).png>)
+![](../.gitbook/assets/image%20%2893%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29%20%288%29%20%283%29.png)
 
 ssh into the interactive
 
@@ -282,15 +281,15 @@ grid session ssh vscode
 
 **The model**
 
-For this tutorial, I'm going to use a non-trivial project structure that is representative of realistic use cases \[[code link](https://github.com/williamFalcon/cifar5)].
+For this tutorial, I'm going to use a non-trivial project structure that is representative of realistic use cases \[[code link](https://github.com/williamFalcon/cifar5)\].
 
 The project has this structure
 
-![](<../.gitbook/assets/image (73).png>)
+![](../.gitbook/assets/image%20%28133%29.png)
 
-This folder is complicated on purpose to showcase that Grid is designed for realistic deep learning workloads. I'm purposely avoiding simple projects ([code reference](https://github.com/williamFalcon/cifar5-simple)) that look like this (since those are trivial for Grid to handle.)
+This folder is complicated on purpose to showcase that Grid is designed for realistic deep learning workloads. I'm purposely avoiding simple projects \([code reference](https://github.com/williamFalcon/cifar5-simple)\) that look like this \(since those are trivial for Grid to handle.\)
 
-![](<../.gitbook/assets/image (74).png>)
+![](../.gitbook/assets/image%20%289%29.png)
 
 {% hint style="info" %}
 For best practices structuring machine learning projects in general, stay tuned for a best practices guide
@@ -321,7 +320,7 @@ python project/lit_image_classifier.py \
                 --backbone resnet50
 ```
 
-You should see the results (the script is designed to overfit the val split)
+You should see the results \(the script is designed to overfit the val split\)
 
 ```yaml
 --------------------------------------------------------------------------------
@@ -330,7 +329,7 @@ DATALOADER:0 TEST RESULTS
 --------------------------------------------------------------------------------
 ```
 
-At this step (in a real workflow) you would code the model, debug, etc... using the remote GPUs from your local VSCode :)
+At this step \(in a real workflow\) you would code the model, debug, etc... using the remote GPUs from your local VSCode :\)
 
 Once you're ready, commit your changes so we can train at scale
 
@@ -341,7 +340,7 @@ git push
 
 ## Step 7: Pause the Session
 
-(Time: **1 minute**)
+\(Time: **1 minute**\)
 
 Great! now that our model is ready to run at scale, we can pause the session.
 
@@ -349,27 +348,27 @@ Great! now that our model is ready to run at scale, we can pause the session.
 grid session pause resnet-debugging
 ```
 
-![](<../.gitbook/assets/image (81).png>)
+![](../.gitbook/assets/image%20%2879%29.png)
 
 If you're tired of rebuilding environments every time you want to do a little bit of work, then pausing is your saving grace. Pausing:
 
 * Saves your files
 * Data
-* Environment (installed packages, etc)
+* Environment \(installed packages, etc\)
 
 In addition, a paused session **STOPS THE COST OF THE SESSION!**
 
-## Step 8: RUN (hyperparam sweep)
+## Step 8: RUN \(hyperparam sweep\)
 
-![](<../.gitbook/assets/image (72).png>)
+![](../.gitbook/assets/image%20%28125%29.png)
 
-(Time: **1 minute**)
+\(Time: **1 minute**\)
 
 Once your model is ready to go, you usually want to train it to convergence. If you already know a good set of hyperparameters then your run will be very simple since it will train a single model.
 
 If you'd like to find better hyperparameters for your model, a RUN can launch multiple variations of your model to try all hyperparameters at once.
 
-**First** always commit changes and push to GitHub. Grid runs the latest version of your code (based on whatever your local branch is).
+**First** always commit changes and push to GitHub. Grid runs the latest version of your code \(based on whatever your local branch is\). It also looks to locate the requirements.txt from the projects root directory, if you'd like to customize this behavior use the `--dependency_file` flag.
 
 ```bash
 git commit -am "ready to run"
@@ -405,7 +404,7 @@ grid run \
 ```
 
 {% hint style="info" %}
-You can do this from the Session or your local machine (but you'll need to clone the project locally)
+You can do this from the Session or your local machine \(but you'll need to clone the project locally\)
 {% endhint %}
 
 ## **Bonus: Use a YAML for common runs**
