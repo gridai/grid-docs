@@ -4,6 +4,19 @@ description: Frequently asked questions about Runs
 
 # FAQ
 
+## How do I retain my run data?
+The downloadable artifacts are how you get data out of the runs.  For IxNodes, there are a few options:
+1. You can download straight from JupyterHub
+2. You can mount the data locally with `grid interactive mount`
+3. You can `scp`
+4. You can simply 'pause' the node and restart it any time you need it (if you don't require downloading the data locally)
+
+## Where are artifacts stored?
+Artifacts are currently stored on s3 and the download links are available for them to download for 24 hours after creation
+
+## Why isn't Grid locating my requirements.txt file?
+Grid by default will look for a requirements.txt file in the root directory of your project. To customize this behavior try using the `--dependency_file` flag
+
 ## Windows support
 
 Try running your commands with your path as '\\' instead of '\'.
