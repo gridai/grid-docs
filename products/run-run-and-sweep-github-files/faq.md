@@ -4,7 +4,20 @@ description: Frequently asked questions about Runs
 
 # FAQ
 
-## How doz I retain my run data?
+## Why does my code work locally but fail with Grid Run?
+This is likely a environment mismatch. For Python users we recommend testing your code in a virtual environment with Python or Conda and then doing running a pip freeze to get all the necessary packages. For example:
+```
+# Create conda environment
+conda create --name test-environment
+pip install -r requirments.txt
+
+# ensure code works
+
+# copy dependencies to requirements.txt
+pip freeze > requirements.txt
+```
+
+## How do I retain my run data?
 The downloadable artifacts are how you get data out of the runs.  For IxNodes, there are a few options:
 1. You can download straight from JupyterHub
 2. You can mount the data locally with `grid interactive mount`
