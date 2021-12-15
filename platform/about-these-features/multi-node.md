@@ -6,7 +6,7 @@ description: >-
 
 # Multi-node training (Beta)
 
-This is a currently an experimental feature. We welcome the community to try it out and provide feedback to <Product email here>. Multi-node or distributed training allows you to train a single model across more than one machine.
+This is a currently an experimental feature. We welcome the community to try it out and provide feedback to product@grid.ai. Multi-node or distributed training allows you to train a single model across more than one machine.
 
 {% hint style="info" %}
 **Note:** At this time multi-node training is only supported for the Lightning framework.
@@ -28,7 +28,7 @@ We recommend you try out multi-node with a few epochs and see if the speed up is
 
 Starting a multi node run in CLI is the same as how you run any other script, Grid calculates number of gpus and nodes for you. simply specify how many GPUs you will use per experiment.
 
-For example --gpus 5 --instance\_type 4\_v100\_32gb will automatically trigger multi node training
+For example --gpus 8 --instance\_type 4\_v100\_32gb will automatically trigger multi node training
 
 Prior to being able to run the below you will need to clone a fork of the Pytorch-lightning repo (https://github.com/filintod/pytorch-lightning). For convenience the code to do so is below.
 
