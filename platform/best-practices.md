@@ -7,5 +7,6 @@ description: Some best practices for using Grid
     1. Click "file"
     2. Click "download as"
     3. Select "Python (.py)"
-  
-https://www.loom.com/share/39c7e4233b634a5fbf84d03fc28f6be5
+
+https://user-images.githubusercontent.com/47154698/146114392-7864e073-f332-4512-9a02-bec98f5e48e0.mp4
+
