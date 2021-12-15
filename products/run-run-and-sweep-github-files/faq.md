@@ -4,7 +4,7 @@ description: Frequently asked questions about Runs
 
 # FAQ
 
-## How do I retain my run data?
+## How doz I retain my run data?
 The downloadable artifacts are how you get data out of the runs.  For IxNodes, there are a few options:
 1. You can download straight from JupyterHub
 2. You can mount the data locally with `grid interactive mount`
@@ -17,9 +17,10 @@ Artifacts are currently stored on s3 and the download links are available for th
 ## Why isn't Grid locating my requirements.txt file?
 Grid by default will look for a requirements.txt file in the root directory of your project. To customize this behavior try using the `--dependency_file` flag
 
-## Windows support
-
-Try running your commands with your path as '\\' instead of '\'.
+## How can I resolve Windows pathing issues when using grid?
+There are two options users can try:
+1. default to the Windows Subsystem for Linux
+2. Try running your commands with by replacing '\' characters with '\\' in your path. 
 
 ## The cost changed during a run?
 
