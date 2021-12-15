@@ -11,8 +11,8 @@ The downloadable artifacts are how you get data out of the runs.  For IxNodes, t
 3. You can `scp`
 4. You can simply 'pause' the node and restart it any time you need it (if you don't require downloading the data locally)
 
-## Where are artifacts stored?
-Artifacts are currently stored on s3 and the download links are available for them to download for 24 hours after creation
+## How long are artifacts stored?
+Artifacts are downloadable for 24 hours after creation.
 
 ## Why isn't Grid locating my requirements.txt file?
 Grid by default will look for a requirements.txt file in the root directory of your project. To customize this behavior try using the `--dependency_file` flag
