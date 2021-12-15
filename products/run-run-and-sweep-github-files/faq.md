@@ -15,12 +15,13 @@ The downloadable artifacts are how you get data out of the runs.  For IxNodes, t
 Artifacts are downloadable for 24 hours after creation.
 
 ## Why isn't Grid locating my requirements.txt file?
-Grid by default will look for a requirements.txt file in the root directory of your project. To customize this behavior try using the `--dependency_file` flag
+Grid by default will look for a requirements.txt file in the root directory of your project. To customize this behavior try using the `--dependency_file` flag. An example is below:
+`grid run --dependency_file ./path/to/requirements.txt model.py`
 
 ## How can I resolve Windows pathing issues when using grid?
 There are two options users can try:
 1. default to the Windows Subsystem for Linux
-2. Try running your commands with by replacing '\' characters with '\\' in your path. 
+2. Try running your commands with by replacing '\' characters with '\\' in your path.
 
 ## The cost changed during a run?
 
