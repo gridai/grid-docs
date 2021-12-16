@@ -19,6 +19,12 @@ grid run --datastore_name my_datastore_name \
            --my_data /opt/datastore
 ```
 
+List all the available datastores with:
+
+```bash
+grid datastore
+```
+
 ## create
 
 Creates a datastore. Datastores are directories that are compressed into and mounted into your experiment environment.
