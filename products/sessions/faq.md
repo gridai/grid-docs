@@ -4,7 +4,7 @@ description: Frequently asked questions about Sessions
 
 # FAQ
 ## Why can't I push to my remote repository?
-If you're having trouble pushing to the repo the recommended solution is to clone the repo via https and try again. 
+If you're having trouble pushing to the repo the recommended solution is to clone the repo via https and try pushing again. 
 
 ## "I can't access my private Github repository"
 If you're having trouble with access to private Github repos, try the following:&#x20;
