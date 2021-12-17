@@ -11,8 +11,7 @@ Shows the status of runs and sessions
 ```text
 grid status
 ```
-
-![](../../../.gitbook/assets/image%20%28123%29.png)
+![](<../../../.gitbook/assets/image (117).png>)
 
 ## Status of experiments
 
@@ -23,7 +22,7 @@ To see details of completed runs you use grid status <run name>.
 grid status the-run-name
 ```
 
-![](../../../.gitbook/assets/image%20%281%29.png)
+![](<../../../.gitbook/assets/image (118).png>)
 
 ## Command parameters
 
