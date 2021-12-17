@@ -17,12 +17,8 @@ pip install -r requirments.txt
 pip freeze > requirements.txt
 ```
 
-## How do I retain my run data?
-The downloadable artifacts are how you get data out of the runs.  For IxNodes, there are a few options:
-1. You can download straight from JupyterHub
-2. You can mount the data locally with `grid interactive mount`
-3. You can `scp`
-4. You can simply 'pause' the node and restart it any time you need it (if you don't require downloading the data locally)
+## How do I download my run/experiment artifacts?
+https://user-images.githubusercontent.com/47154698/146597173-30a6f5af-4ecc-4958-866a-95ddb1ba70e0.mp4
 
 ## How long are artifacts stored?
 Artifacts are downloadable for 24 hours after creation.
