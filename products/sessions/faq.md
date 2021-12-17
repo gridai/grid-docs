@@ -3,9 +3,10 @@ description: Frequently asked questions about Sessions
 ---
 
 # FAQ
+## Why can't I push to my remote repository?
+If you're having trouble pushing to the repo the recommended solution is to clone the repo via https and try again. 
 
 ## "I can't access my private Github repository"
-
 If you're having trouble with access to private Github repos, try the following:&#x20;
 
 *   If you're logged into Grid with Google and have not linked a Github account already, **then link your Github account to Grid in the Grid UI in Settings** > **Integrations.**
