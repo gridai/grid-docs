@@ -57,7 +57,6 @@
   * [Hyperparameter Sweeps](products/run-run-and-sweep-github-files/sweep-syntax.md)
   * [Script dependencies](products/run-run-and-sweep-github-files/script-dependencies.md)
   * [Spot Instances](products/run-run-and-sweep-github-files/interruptible-machines.md)
-  * [🆕 Auto-Resume Experiments](products/run-run-and-sweep-github-files/auto-resume-experiments.md)
   * [Machines](products/run-run-and-sweep-github-files/machines.md)
   * [Attaching Datastores](products/run-run-and-sweep-github-files/attaching-datastores.md)
   * [Running Experiments With a Dockerfile](products/run-run-and-sweep-github-files/running-experiments-with-a-dockerfile.md)
