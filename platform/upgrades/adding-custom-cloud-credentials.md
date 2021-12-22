@@ -287,12 +287,13 @@ It can take some time to provision a new cluster, \~20-30 minutes
 
 ### Step 6: Run your workloads in your new cluster
 
-```
-grid run --cluster <cluster name>
-grid session create --cluster <cluster name>
-```
+Recommended way of running workloads in any cluster is by setting the cluster context. Cluster context can be set by 
+every user using the below command. This will make the CLI only see resources in this cluster context. Every actions from
+the CLI from that point onwards will be against this cluster context. More information is availble [here](../../products/global-cli-configs/cli-api/grid-cluster-context.md)
 
-Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
+```
+grid user set-cluster-context <cluster-name>
+```
 
 ### Step 7: Enjoy!
 
