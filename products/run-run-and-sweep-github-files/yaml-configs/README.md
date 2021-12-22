@@ -1,28 +1,5 @@
 # YAML configs
 
-## Running Sweeps using YML
-
-You can run a hyper parameter sweep using the Grid YML file by passing the hyper\_params key. There are two sub-keys you can configure:
-
-* **`settings`**: use to choose between different 
-* **`params`**: use to configure which command-line flags are passed to your script and which values are passed
-
-You can pass any of the supported Python or NumPy expressions to each `params` key. For example, you can pass the following:
-
-```yaml
-hyper_params:
-
-  settings:
-    strategy: random_search     # either random_search or grid_search
-    trials: 2                   # only used in random_search
-
-  params:
-    learning_rate: uniform(0.001, 0.008, 20)
-    gamma: 0.234
-```
-
-That will generate 20 values for the `learning_rate`.
-
 ## Using Environment Variables
 
 You can pass in environment variables to be used by your experiment by using the **`environment`** key. Pass any values and those values will be available in your experiment context. For example:
@@ -60,20 +37,13 @@ compute:
 
   # Add cloud configuration here.
   provider:
-
-    credentials: XXXXXX           # Cloud key ID
-    region: us-east-1             # Cloud region
-    vendor: aws                   # Vendor, only aws
+    cluster: XXXXXX           # Cluster ID
 
   # Training configuration.
   train:
-
     cpus: 1                       # Number of CPUs
     gpus: 0                       # Number of GPUs
     instance: t2.xlarge           # AWS instance type
-    memory: null                  # RAM memory
-    nodes: 0                      # Nodes to start with
-    scale_down_seconds: 1800      # Second in between every scaling down evaluation
 
     # Your environment variables
     environment:
@@ -83,13 +53,5 @@ compute:
     dependency_file_info:
       package_manager: pip
       path: ./requirements/requirements.txt # can have any name 
-
-hyper_params:
-  settings:
-    strategy: random_search
-    trials: 2
-  params:
-    learning_rate: uniform(0.001, 0.008, 20)
-    gamma: 0.234
 ```
 

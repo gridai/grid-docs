@@ -408,8 +408,3 @@ grid run \
 You can do this from the Session or your local machine (but you'll need to clone the project locally)
 {% endhint %}
 
-## **Bonus: Use a YAML for common runs**
-
-When your runs get repetitive or if they have a lot of hyperparameters, use a YAML to save the run configuration.
-
-Check out the [YML documentation](../products/run-run-and-sweep-github-files/yaml-configs/)
