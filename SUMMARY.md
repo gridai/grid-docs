@@ -54,6 +54,7 @@
   * [VSCode with Sessions](products/sessions/vscode-with-sessions.md)
   * [FAQ](products/sessions/faq.md)
 * [⚡Runs](products/run-run-and-sweep-github-files/README.md)
+  * [🆕 Auto Resume Experiments](products/run-run-and-sweep-github-files/auto-resume-experiments.md)
   * [Hyperparameter Sweeps](products/run-run-and-sweep-github-files/sweep-syntax.md)
   * [Script dependencies](products/run-run-and-sweep-github-files/script-dependencies.md)
   * [Spot Instances](products/run-run-and-sweep-github-files/interruptible-machines.md)
