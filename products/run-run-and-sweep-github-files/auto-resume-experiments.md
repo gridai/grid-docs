@@ -39,12 +39,6 @@ Use `--auto_resume` flag to indicate this experiment is safe to resume.
 grid run --use_spot --auto_resume --instance_type p3.2xlarge mnist.py
 ```
 
-#### SDK
-
-```python
-Run(auto_resume=True, ...)
-```
-
 #### UI
 
 ![image](https://user-images.githubusercontent.com/13732925/148102089-f540356a-a2e6-4e9d-ac1f-51de26691086.png)
