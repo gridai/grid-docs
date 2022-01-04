@@ -42,4 +42,4 @@ Run(auto_resume=True, ...)
 
 ### UI
 
-![](../../images/runs/ui-autoresume.png)
+![image](https://user-images.githubusercontent.com/13732925/148102089-f540356a-a2e6-4e9d-ac1f-51de26691086.png)
