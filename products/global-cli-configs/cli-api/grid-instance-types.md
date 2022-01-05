@@ -7,7 +7,7 @@ description: Shows configured instances for a given cluster.
 When using different clusters we want to know which instance types are available or user in a given cluster. 
 
 ```text
-$ grid instance-types --cluster prod-2
+$ grid instance-types
 ┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━┳━━━━━┳━━━━━━━━━━┓
 ┃ Name          ┃ On-demand Cost ┃ Spot Cost ┃ CPU ┃ GPU ┃   Memory ┃
 ┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━╇━━━━━╇━━━━━━━━━━┩
@@ -45,5 +45,7 @@ $ grid instance-types --cluster prod-2
 
 ### `--cluster`
 
-Cluster ID for the cluster you want to see instance types for. You can find the cluster ID with `grid clusters` . 
+By default, it looks for the instance types in the [cluster context](./grid-cluster-context.md) but if you want know about a 
+specific cluster, use `--cluster` with cluster ID for the cluster you want to see instance types for. 
+You can find the cluster ID with `grid clusters` . 
 
