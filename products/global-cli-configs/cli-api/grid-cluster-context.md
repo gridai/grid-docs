@@ -8,7 +8,7 @@ With multi-cluster availability, if you are working against a particular cluster
 cluster context so all your CLI actions (including creation of a resource such as Run or Session) are going
 against that cluster. Apart from the easiness this command brings, it also help you avoid mistakes such
 as scheduling to a wrong cluster. 
-
+*Please Note: This feature will evolve to include more elaborate cluster management in the near-term future.
 ```text
 $ grid user set-cluster-context <cluster-name>
 ```
