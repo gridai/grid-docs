@@ -17,25 +17,38 @@ Example uses of actions:
 
 ## Available Actions
 
-### on\_image\_build
+### on\_build\_start
 
-These are executed as your project image is built. We cache these commands on every git SHA. This is useful for installing dependencies and other system setup tasks.
+These are executed as your Run's image is built. We cache these commands on every git SHA. This is useful for installing dependencies and other system setup tasks.
 
 ```yaml
 compute:
   train:
 
     actions:
-      on_image_build:
+      on_build_start:
         - apt-get install wget -y
         - pip install tqdm
+```
+
+### on\_build\_end
+
+These are executed as at the end of building Run's image.
+
+```yaml
+compute:
+  train:
+
+    actions:
+      on_build_end:
+        - apt update
 ```
 
 {% hint style="info" %}
 Commands automatically run as sudo
 {% endhint %}
 
-### on\_before\_training\_start
+### on\_exeperiment\_start
 
 Arbitrary commands that run just before your training process starts. This is useful for downloading and preparing data, etc.
 
@@ -44,11 +57,11 @@ compute:
   train:
 
     actions:
-      on_before_training_start:
+      on_experiment_start:
         - bash download_dataset.sh
 ```
 
-### on\_after\_training\_end
+### on\_experiment\_end
 
 Runs after your script stops. This is useful for post-processing data, sending alerts and notifications to your systems, etc.
 
@@ -57,7 +70,7 @@ compute:
   train:
 
     actions:
-      on_after_training_end:
+      on_experiment_end:
         - apt-get install curl -y
         - curl -X GET http://webhook.com?success=true
 ```
@@ -65,12 +78,6 @@ compute:
 ## Configuring Actions
 
 You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](../yaml-configs/).
-
-The Grid YAML spec supports three actions:
-
-* `on_image_build` commands passed to the image builder which are interpreted as RUN commands in a [Dockerfile](https://docs.docker.com/engine/reference/builder/).
-* `on_before_training_start` which allows users to specify commands that need to be executed sequentially before the main experiment process starts.
-* `on_after_training_end` same as above, but executed after the main process ends. 
 
 Here's a full example of a Grid configuration using actions:
 
@@ -89,14 +96,14 @@ compute:
     # Actions need to be passed as one command
     # per line.
     actions:
-      on_image_build:
+      on_build_start:
         - apt-get install wget -y
         - pip install tqdm
 
-      on_before_training_start:
+      on_experiment_start:
         - bash download_dataset.sh
 
-      on_after_training_end:
+      on_experiment_end:
         - apt-get install curl -y
         - curl -X GET http://webhook.com?success=true
 ```
@@ -105,7 +112,7 @@ As you can see, you can pass one command per line. You can pass as many commands
 
 ### Environment variable substitution
 
-Grid allows environment variable substitution for `on_before_training_start` and `on_before_training_start` actions. All declared environment variables for the run are available in the substitution \(as well as some Grid predefined variables\). Example config:
+Grid allows environment variable substitution for `on_experiment_start` and `on_experiment_end` actions. All declared environment variables for the run are available in the substitution \(as well as some Grid predefined variables\). Example config:
 
 ```yaml
 compute:
@@ -122,13 +129,13 @@ compute:
     # Actions need to be passed as one command
     # per line.
     actions:
-      on_image_build:
+      on_build_start:
         - apt-get update
         - apt-get install curl -y
-      on_before_training_start:
+      on_experiment_start:
         - bash before.sh
 
-      on_after_training_end:        
+      on_experiment_end:        
         - |
             curl -X POST -d '{"name": "${GRID_EXPERIMENT_ID}", "instance_type": "${GRID_INSTANCE_TYPE}", "status": "status", "step": "after"}' ${WEBHOOK_URL}
             
@@ -151,7 +158,7 @@ Grid provides partial emulation for bash string operations. This can be used to 
 * Example variable substitution with substring:
 
 ```yaml
-on_after_training_end:        
+on_experiment_end:        
 - |
     echo ${GRID_EXPERIMENT_ID:0:4} # Getting first 4 symbols
             
