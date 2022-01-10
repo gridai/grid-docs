@@ -4,7 +4,6 @@
 
 ## Start Here
 
-* [Github Integration](start-here/private-repos.md)
 * [Typical workflow (Web user)](start-here/typical-workflow-web-user.md)
 * [Typical workflow (CLI user)](start-here/typical-workflow-cli-user.md)
 
