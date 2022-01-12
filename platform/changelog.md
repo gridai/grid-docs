@@ -8,7 +8,17 @@ description: What's new and improved in Grid.
 **Archived release notes can be found on** [**this page**](https://github.com/gridai/gridai/discussions) **in Github.**&#x20;
 {% endhint %}
 
-## January 5, 2022
+## :wrench:January 12, 2022
+
+CLI version: 0.7.3\
+\
+A maintenance release has been issued with the following :
+
+* resolves an issue that was causing experiments to remain queued for 1 hour+
+* fixes issue where Datastores and Runs couldn’t be viewed from the UI
+* addresses an issue with Multinode Runs that were not running
+
+## :partying\_face:January 5, 2022
 
 **CLI version: 0.7.1**
 
