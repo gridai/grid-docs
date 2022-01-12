@@ -10,13 +10,27 @@ description: What's new and improved in Grid.
 
 ## :wrench:January 12, 2022
 
-CLI version: 0.7.3\
+**CLI version: 0.7.3**\
 \
 A maintenance release has been issued with the following :
 
 * resolves an issue that was causing experiments to remain queued for 1 hour+
 * fixes issue where Datastores and Runs couldn’t be viewed from the UI
 * addresses an issue with Multinode Runs that were not running
+
+### Cluster Contexts &#x20;
+
+For users **B**ringing **Y**our **O**wn **C**loud, we've introduced the concept of cluster contexts. You can set the cluster context so that all your CLI actions (including creation of a resource such as Run or Session) are made against that cluster.
+
+By default, the cluster context is set to the global cluster. You can change the context at anytime `~/.grid/settings.json` to the cluster you'd like to us.
+
+Find out which cluster context is currently set by using the `grid user`command.
+
+More information in the documentation on how to 'Run Workloads in Your New Cluster'.
+
+
+
+
 
 ## :partying\_face:January 5, 2022
 
