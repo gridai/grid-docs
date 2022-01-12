@@ -22,7 +22,7 @@ A maintenance release has been issued with the following :
 
 For users **B**ringing **Y**our **O**wn **C**loud, we've introduced the concept of cluster contexts. You can set the cluster context so that all your CLI actions (including creation of a resource such as Run or Session) are made against that cluster.
 
-By default, the cluster context is set to the global cluster. You can change the context at anytime `~/.grid/settings.json` to the cluster you'd like to us.
+By default, the cluster context is set to the global cluster. You can change the context at anytime  by using the command: `grid user set-cluster-context` or by specifying the cluster name in `~/.grid/settings.json.`
 
 Find out which cluster context is currently set by using the `grid user`command.
 
