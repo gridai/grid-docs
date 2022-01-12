@@ -26,7 +26,7 @@ By default, the cluster context is set to the global cluster. You can change the
 
 Find out which cluster context is currently set by using the `grid user`command.
 
-More information in the documentation on how to 'Run Workloads in Your New Cluster'.
+More information in the documentation on how to '[Run Workloads in Your New Cluster](https://docs.grid.ai/platform/upgrades/adding-custom-cloud-credentials#step-6-run-your-workloads-in-your-new-cluster)'.
 
 
 
