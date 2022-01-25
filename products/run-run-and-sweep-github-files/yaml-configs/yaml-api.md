@@ -7,7 +7,7 @@ In addition to CLI parameters, Grid supports the use of YML files so you don't h
 The following YML file contains a commented version of every YML key. You need to provide these keys when writing a config file and change the properties to what you need.
 
 {% hint style="danger" %}
-Use either [cluster context](../global-cli-configs/cli-api/grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
+Use either [cluster context](../../global-cli-configs/cli-api/grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
 {% endhint %}
 
 ```text
