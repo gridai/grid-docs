@@ -1,0 +1,4 @@
+div.admonition_heading :global(.admonition){
+  display: flex;
+
+}

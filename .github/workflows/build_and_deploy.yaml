@@ -1,0 +1,24 @@
+name: build and deploy docs
+
+on:
+  pull_request: # deploy to dev
+    branches:
+      - master
+  push: # deploy to prod
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+          key: my-cache-node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: build and deploy docs
+        run: echo make upload-docs

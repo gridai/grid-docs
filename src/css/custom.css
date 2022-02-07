@@ -1,0 +1,95 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+:root {
+  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-code-font-size: 95%;
+  --ifm-menu-link-padding-vertical: 0.75rem;
+  --ifm-menu-link-sublist-icon: url("data:image/svg+xml;utf8,<svg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M8 4H0L4 0L8 4Z' fill='%23A4C6FF'/> </svg>");
+  --ifm-navbar-background-color: #ebedf3;
+  --ifm-menu-color-background-hover: #fff;
+  --docsearch-searchbox-background: #fff !important;
+}
+html[data-theme="dark"] {
+  --ifm-color-primary: #8ad99c;
+  --ifm-color-primary-dark: #6fd085;
+  --ifm-color-primary-darker: #62cc7a;
+  --ifm-color-primary-darkest: #3dbc5a;
+  --ifm-color-primary-light: #a5e2b3;
+  --ifm-color-primary-lighter: #b2e6be;
+  --ifm-color-primary-lightest: #daf3e0;
+  --ifm-navbar-background-color: #000;
+  --ifm-menu-color-background-hover: #2c2c30;
+  --docsearch-searchbox-background: #2c2c30 !important;
+}
+
+aside {
+  background-color: var(--ifm-navbar-background-color);
+}
+.col-12 {
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu__list-item-collapsible {
+  border-radius: 0;
+}
+.menu__link,
+.menu__caret {
+  border-radius: 0;
+}
+.menu__caret:before,
+.menu__link--sublist:after {
+  /* custom x-offset */
+  background: var(--ifm-menu-link-sublist-icon) 50% / 0.8rem 2rem;
+  background-repeat: no-repeat;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+body {
+  /* toggling searchbar should not change viewport width */
+  overflow-y: overlay;
+}
+@media (min-width: 750px) {
+  /* hide searchbar from navbar on md+ screens */
+  .navbar button.DocSearch-Button {
+    display: none;
+  }
+}
+.navbar a[href="https://platform.grid.ai"]
+{
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 40px;
+  position: relative;
+}
+.footer__links {
+  margin-bottom: 0;
+}

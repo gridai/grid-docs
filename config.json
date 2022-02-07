@@ -1,0 +1,13 @@
+{
+  "index_name": "grid_docs",
+  "start_urls": ["https://apidocs.grid.ai/"],
+  "selectors": {
+    "lvl0": "header h1",
+    "lvl1": "article h1",
+    "lvl2": "h3",
+    "lvl3": "h4",
+    "lvl4": "h5",
+    "lvl5": "h6",
+    "text": "body a, body ol, body p, body li, body span"
+  }
+}
