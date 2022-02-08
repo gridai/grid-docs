@@ -38,6 +38,20 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      /**@type {import('@docusaurus/plugin-client-redirects').PluginOptions} */
+      {
+        redirects: [
+          {
+            to: "/platform/custom-cloud-credentials/adding-custom-cloud-credentials",
+            from: "/platform/upgrades/adding-custom-cloud-credentials",
+          },
+        ],
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -99,16 +113,31 @@ const config = {
       },
       footer: {
         links: [
-          { label: "fontawesome-brands-twitter", href: "https://twitter.com/gridai_" },
-          { label: "fontawesome-brands-youtube", href: "https://www.youtube.com/channel/UCZYvMtnyzp0hrV2VXWUWL5w" },
-          { label: "fontawesome-brands-linkedin", href: "https://www.linkedin.com/company/grid-ai" },
-          { label: "fontawesome-brands-facebook", href: "https://www.facebook.com/grid.ai.1" },
+          {
+            label: "fontawesome-brands-twitter",
+            href: "https://twitter.com/gridai_",
+          },
+          {
+            label: "fontawesome-brands-youtube",
+            href: "https://www.youtube.com/channel/UCZYvMtnyzp0hrV2VXWUWL5w",
+          },
+          {
+            label: "fontawesome-brands-linkedin",
+            href: "https://www.linkedin.com/company/grid-ai",
+          },
+          {
+            label: "fontawesome-brands-facebook",
+            href: "https://www.facebook.com/grid.ai.1",
+          },
           {
             label: "fontawesome-brands-slack",
             href: "https://join.slack.com/t/gridai-community/shared_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg",
           },
           { label: "fontawesome-solid-globe", href: "https://grid.ai" },
-          { label: "fontawesome-solid-envelope", href: "mailto:support@grid.ai" },
+          {
+            label: "fontawesome-solid-envelope",
+            href: "mailto:support@grid.ai",
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} GRID AI`,
       },
