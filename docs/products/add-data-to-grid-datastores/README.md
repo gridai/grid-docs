@@ -21,8 +21,9 @@ We don't charge for data storage!
 
 We only recommend using private S3 buckets for BYOC users. This can be accomplished with the following steps:
 
-1. follow the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/) to provide cross account access.
-2. If you wish to grant access to all your buckets contents use the following bucket policy:
+1. Follow the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/) to provide Grid access to your desired buckets.
+
+As a convenience we provide a bucket policy that grants Grid access to all the contents of your specified bucket.
 ```
 {
     "Version": "2012-10-17",
@@ -45,6 +46,7 @@ We only recommend using private S3 buckets for BYOC users. This can be accomplis
     ]
 }
 ```
+
 ### Known limitations:
 
 Currently, we cannot guarantee the privacy of datastores connected to a public grid cloud account. It is on the roadmap and will be implemented in a future release. However, if you would like to test this feature out you can replace the principal id with 302180240179.
