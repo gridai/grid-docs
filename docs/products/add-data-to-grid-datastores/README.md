@@ -21,8 +21,8 @@ We don't charge for data storage!
 
 We only recommend using private S3 buckets for BYOC users. This can be accomplished with the following steps:
 
-1. follow the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
-2. Use the following policy to give access to all the contents within your bucket:
+1. follow the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/) to provide cross account access.
+2. If you wish to grant access to all your buckets contents use the following bucket policy:
 ```
 {
     "Version": "2012-10-17",
