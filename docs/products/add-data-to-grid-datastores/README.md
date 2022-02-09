@@ -17,6 +17,37 @@ Datastores can be attached to Runs or Sessions and preserve the file format and 
 We don't charge for data storage!
 :::
 
+## Datastores with Private S3 Buckets
+
+We only recommend using private S3 buckets for BYOC users. This can be accomplished with the following steps:
+
+1. follow the aws official documentation - https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/.
+2. Use this for the principal field: "Principal": { "AWS": "arn:aws:iam::aws-account-id-associated-with-byoc:root" }
+3. Use the following policy to give access to all the contents within your bucket:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::302180240179:root"
+            },
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": [
+               "arn:aws:s3:::your-bucket/*",
+               "arn:aws:s3:::your-bucket"
+           ]               
+        }
+    ]
+}
+
+### Known limitations:
+
+Currently, we cannot guarantee the privacy of datastores connected to a public grid cloud account. It is on the roadmap and will be implemented in a future release. However, if you would like to test this feature out you can replaced the principal id with 302180240179.
 
 ## Product Tour
 
