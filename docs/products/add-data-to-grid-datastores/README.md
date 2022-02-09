@@ -19,7 +19,7 @@ We don't charge for data storage!
 
 ## Datastores with Private S3 Buckets
 
-We only recommend using private S3 buckets for BYOC users. You can't grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
+We only recommend using private S3 buckets for BYOC users. You can grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 
 As a convenience we provide a bucket policy that grants Grid access to all the contents of your specified bucket.
 ```
