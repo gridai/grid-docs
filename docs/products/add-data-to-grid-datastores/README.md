@@ -37,8 +37,8 @@ As a convenience we provide a bucket policy that grants Grid access to all the c
                 "s3:GetBucketLocation"
             ],
             "Resource": [
-               "arn:aws:s3:::your-bucket/*",
-               "arn:aws:s3:::your-bucket"
+               "arn:aws:s3:::<your-bucket>/*",
+               "arn:aws:s3:::<your-bucket>"
            ]               
         }
     ]
