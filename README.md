@@ -1,11 +1,3 @@
----
-sidebar_position: 1
-# sidebar_label: Introduction
-sidebar_label: Gird in 3 minutes
----
-
-import Video from "@site/src/components/Video";
-
 # Grid in 3 minutes
 
 ## **Introduction**
@@ -20,15 +12,16 @@ The TL;DR of using Grid is this:
 
 This 3-minute video shows you how to execute code on cloud instances with zero code changes and how to debug/prototype and develop models with multi-GPU cloud instances.
 
-<Video src="https://grid-docs.s3.us-east-2.amazonaws.com/intro_video_mp42.mp4" type="video/mp4" />
+https://user-images.githubusercontent.com/23050213/153156339-0f803a2b-ce13-4ef1-abaa-a9a827843b14.mp4
+
 
 Here is a quick overview of:
 
-[**Datastores**](docs/products/add-data-to-grid-datastores/README.md)
+[**Datastores**](docs/products/add-data-to-grid-datastores/README.md#datastores-scalable-datasets)
 
-[**Sessions**](docs/products/sessions/README.md)
+[**Sessions**](docs/products/sessions/README.md#sessions)
 
-[**Runs**](docs/products/runs/README.md)
+[**Runs**](docs/products/runs/README.md#runs)
 
 ## **Infrastructure is gone**
 
@@ -57,11 +50,11 @@ No need to change your code!
 
 In Grid, we've introduced _Datastores_, high-performance, low-latency, versioned datasets.
 
-![](/images/datastores/jobs.jpg)
+![image](./static/images/datastores/jobs.jpg)
 
 The UI supports creating Datastores of &lt; 1 GB
 
-<Video src="https://grid-docs.s3.us-east-2.amazonaws.com/datastore.mp4" type="video/mp4" />
+https://user-images.githubusercontent.com/23050213/153156559-2ef0a745-4367-4df8-b64b-23e78869ae6c.mp4
 
 Use the CLI for larger datastores
 
@@ -75,9 +68,11 @@ For prototyping/debugging/analyzing, sometimes you need a LIVE machine. We call 
 
 **Web UI: Starting a new session**
 
-![](/images/sessions/session.jpg)
+![](./static/images/sessions/session.jpg)
 
-<Video src="https://grid-docs.s3.us-east-2.amazonaws.com/session_3.mp4" type="video/mp4" />
+
+https://user-images.githubusercontent.com/23050213/153156641-6ffd9c0c-8a23-4ec6-8e83-dc3c6054e5c6.mp4
+
 
 **CLI: Starting a new session**
 
@@ -90,10 +85,14 @@ grid session create --instance_type 2_m60_8gb
 
 RUN **any** public or private repository with Grid in 5 steps:
 
-![](/images/runs/how-to-launch-experiments.jpg)
+![](./static/images/runs/how-to-launch-experiments.jpg)
 
 This 1-minute video shows how to RUN from the web app:
-<Video src="https://grid-docs.s3.us-east-2.amazonaws.com/run.mp4" type="video/mp4" />
+
+
+https://user-images.githubusercontent.com/23050213/153156700-2a7a30a7-8d5f-4e73-aa65-5aa4e3ef9d4e.mp4
+
+
 
 If you prefer to use the CLI simply replace python with grid run.
 
@@ -140,4 +139,4 @@ That's all you need to know about Grid!
 
 ## Next!
 
-Now try our [first tutorial](docs/start-here/typical-workflow-web-user)
+Now try our [first tutorial](/docs/start-here/typical-workflow-web-user.md)
