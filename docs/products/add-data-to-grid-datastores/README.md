@@ -21,7 +21,7 @@ We don't charge for data storage!
 
 We only recommend using private S3 buckets for BYOC users. This can be accomplished with the following steps:
 
-1. follow the official aws documentation - https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/.
+1. follow the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 2. Use this for the principal field: "Principal": { "AWS": "arn:aws:iam::aws-account-id-associated-with-byoc:root" }
 3. Use the following policy to give access to all the contents within your bucket:
 {
