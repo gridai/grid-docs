@@ -29,7 +29,7 @@ As a convenience we provide a bucket policy that grants Grid access to all the c
         {
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::aws-account-id-associated-with-byoc:root"
+                "AWS": "arn:aws:iam::<aws-account-id-associated-with-byoc>:root"
             },
             "Action": [
                 "s3:ListBucket",
