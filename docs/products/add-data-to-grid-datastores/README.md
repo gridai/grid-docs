@@ -19,7 +19,7 @@ We don't charge for data storage!
 
 ## Datastores with Private S3 Buckets
 
-We only recommend using private S3 buckets for BYOC users. You can grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
+At this time we are only supporting usage of private S3 buckets as datastores for BYOC users. You can grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 
 As a convenience we provide a bucket policy that grants Grid access to all the contents of your specified bucket.
 ```
@@ -47,7 +47,7 @@ As a convenience we provide a bucket policy that grants Grid access to all the c
 
 ### Known limitations:
 
-Currently, we cannot guarantee the privacy of datastores connected to a public grid cloud account. It is on the roadmap and will be implemented in a future release. However, if you would like to test this feature out you can replace the principal id with 302180240179.
+Currently, we cannot guarantee the privacy of datastores connected to a public grid cloud account. It is on the roadmap and will be implemented in a future release. There are limited circumstances under which testing of a private aws s3 bucket is possible on the grid public cloud. Please reach out to support@grid.ai if you are interested."
 
 ## Product Tour
 
