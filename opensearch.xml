@@ -5,7 +5,7 @@
   <Description>Search Grid AI</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">https://docs.grid.ai/images/logos/favicon-32x32.png</Image>
-  <Url type="text/html" method="get" template="https://docs.grid.ai//search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.grid.ai//opensearch.xml" />
-  <moz:SearchForm>https://docs.grid.ai//</moz:SearchForm>
+  <Url type="text/html" method="get" template="https://docs.grid.ai/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.grid.ai/opensearch.xml" />
+  <moz:SearchForm>https://docs.grid.ai/</moz:SearchForm>
 </OpenSearchDescription>
