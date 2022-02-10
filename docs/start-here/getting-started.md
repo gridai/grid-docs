@@ -13,6 +13,16 @@ sidebar_position: 1
 The following steps will install the Grid cli tool. Grid commands can then be invoked by calling `grid <grid command> <grid command parameters>`.
 
 1. `pip install lightning-grid --upgrade`
+2. sshfs
+
+### Install sshfs Linux (Debian/Ubuntu)
+```
+sudo apt-get install sshfs
+```
+
+### Install sshfs MacOs
+This is dependent on MacFuse and will yield an error with a vanilla brew install. See [here](https://github.com/telepresenceio/telepresence/issues/1654#issuecomment-873538291) for resolution. 
+
 
 ## Login steps
 
