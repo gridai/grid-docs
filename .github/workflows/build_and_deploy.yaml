@@ -21,4 +21,4 @@ jobs:
           key: my-cache-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: build and deploy docs
-        run: echo make upload-docs
+        run: make upload-docs

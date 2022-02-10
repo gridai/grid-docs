@@ -25,8 +25,7 @@ green="\\033[32m"
 yellow="\\033[33m"
 cyan="\\033[36m"
 white="\\033[37m"
-# bucket_url="s3://test-apidocs-delete-when-finished.grid.ai/"
-bucket_url=s3://apidocs.grid.ai/
+
 all: develop
 
 setup:
@@ -49,11 +48,9 @@ develop: setup
 	@printf "${white}     source venv/bin/activate ${reset} \n";
 
 
-build-docs: develop
+prepare-build: develop
 	@printf "${white}\n> ${magenta}Starting documentation building ... ${reset} \n";
 	python main.py;
-	yarn build;
-	@printf "${white}\n> ${green}Successfully built documentation.${reset} \n";
 
 serve-docs: setup
 	@printf "${white}\n> ${magenta}Starting live documentation serving ... ${reset} \n";
@@ -66,7 +63,8 @@ clean:
 	rm -rf sdk/;
 	rm -rf grid/;
 
-upload-docs: build-docs
-	aws s3 sync build/ ${bucket_url} --profile grid-ai --acl public-read
-
-# http://test-apidocs-delete-when-finished.grid.ai.s3-website-us-east-1.amazonaws.com/cli/api/
+upload-docs: prepare-build
+	export USE_SSH=true;
+	export CURRENT_BRANCH=master;
+	GIT_USER=gridai yarn deploy;
+	@printf "${white}\n> ${green}Successfully deployed documentation.${reset} \n";
