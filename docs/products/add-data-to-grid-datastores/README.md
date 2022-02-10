@@ -19,7 +19,7 @@ We don't charge for data storage!
 
 ## Datastores with Private S3 Buckets
 
-At this time we are only supporting usage of private S3 buckets as datastores for BYOC users. You can grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
+At this time we are only supporting usage of private S3 buckets as datastores for BYOC users, who have connected Grid to a custom AWS cluster. You can grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 
 As a convenience, below we provided a bucket policy that grants Grid access to all the contents of your specified bucket. It assumes that you modified the tfvars role_arn field. If you have not then you can use `<aws-account-id-associated-with-byoc>:root` instead. You can follow this official aws [documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) to get your account id.
 ```
