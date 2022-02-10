@@ -21,7 +21,7 @@ We don't charge for data storage!
 
 At this time we are only supporting usage of private S3 buckets as datastores for BYOC users. You can grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 
-As a convenience, below we provided a bucket policy that grants Grid access to all the contents of your specified bucket. You can follow this official aws [documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) to get your account id.
+As a convenience, below we provided a bucket policy that grants Grid access to all the contents of your specified bucket. It assumes that you modified the tfvars role_arn field. If you have not then you can use <aws-account-id-associated-with-byoc>:root instead. You can follow this official aws [documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) to get your account id.
 ```
 {
     "Version": "2012-10-17",
@@ -29,7 +29,7 @@ As a convenience, below we provided a bucket policy that grants Grid access to a
         {
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::<aws-account-id-associated-with-byoc>:root"
+                "AWS": "arn:aws:iam::<aws-account-id-associated-with-byoc>:role/role-name"
             },
             "Action": [
                 "s3:ListBucket",
