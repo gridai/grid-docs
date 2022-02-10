@@ -74,7 +74,7 @@ python pl_mnist.py --root /datastore/my-dataset/1
 The datastore path has 3 parts:
 
 ```bash
-/datastore:[name]:[version]
+/datastore/[name]/[version]
 ```
 
 Example, datastore named elephant (version 3)
