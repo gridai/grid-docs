@@ -1,9 +1,9 @@
 name: build and deploy docs
 
 on:
-  pull_request: # deploy to dev
-    branches:
-      - master
+  # pull_request: # deploy to dev
+  #   branches:
+  #     - master
   push: # deploy to prod
     branches:
       - master
@@ -21,4 +21,12 @@ jobs:
           key: my-cache-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: build and deploy docs
-        run: make upload-docs
+        env:
+          GIT_USER: gridai
+          GIT_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.email "$GIT_USER@users.noreply.github.com"
+          git config --global user.name $GIT_USER
+          echo "machine github.com login $GIT_USER password $GIT_PASSWORD" > ~/.netrc
+          # deploy
+          make upload-docs
