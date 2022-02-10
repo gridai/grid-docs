@@ -44,11 +44,6 @@ As a convenience, below we provided a bucket policy that grants Grid access to a
     ]
 }
 ```
-
-### Known limitations:
-
-Currently, we cannot guarantee the privacy of datastores connected to a public grid cloud account. It is on the roadmap and will be implemented in a future release. There are limited circumstances under which testing of a private aws s3 bucket is possible on the grid public cloud. Please reach out to support@grid.ai if you are interested.
-
 ## Product Tour
 
 Upload data to Grid using Datastores. Datastores are low-latency, auto-versioned datasets.
