@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Grid AI",
   tagline: "focus on ML leave infra to us",
-  url: "https://grid.ai",
+  url: "https://docs.grid.ai",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
