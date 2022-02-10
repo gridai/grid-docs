@@ -59,5 +59,5 @@ grid session mount <your session> <created session mount dir>
 mkdir <created session mount dir>/shared_data
 
 # to share data from a session to another session
-cp -R <dir of interest in created session mount dir> ./shared_data
+cp -R <dir of interest in created session mount dir> <other session mount dir>/shared_data
 ```
