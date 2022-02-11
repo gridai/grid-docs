@@ -50,7 +50,7 @@ grid session delete $INTERACTIVE_NODE_ID
 ```
 
 ## Share Data Between Sessions
-At this time the only supported way to share data between sessions is to mount the sessions locally and copy files to the local mounts. Establishing SSH connection to your sessions is a prerequisite to this. See these [steps](https://github.com/gridai/grid-docs/blob/doc-182-share-data-between-sessions/docs/products/sessions/how-to-ssh-into-a-session.md) to set up SSH connection with your sessions. **Be sure to logout of the interactive session before attempting the next step**. After that you can do the following to create your session mounts:
+At this time the only supported way to share data between sessions is to mount the sessions locally and copy files to the local mounts. Establishing SSH connection to your sessions is a prerequisite to this. See these [steps](./how-to-ssh-into-a-session.md) to set up SSH connection with your sessions. **Be sure to logout of the interactive session before attempting the next step**. After that you can do the following to create your session mounts:
 
 ```
 # Do for each session you wish to share data between
