@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 # sidebar_label: Introduction
-sidebar_label: Gird in 3 minutes
+sidebar_label: Grid in 3 minutes
 ---
 
 import Video from "@site/src/components/Video";
