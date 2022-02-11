@@ -5,13 +5,6 @@ import Note from "@site/src/components/Note";
 
 # :partying_face: Releases
 
-## :warning: February 3, 2022
-
-### **Artifacts don't sync for fast experiments**
-
-We've detected a race condition with short-running experiments which may cause artifacts not to be properly synced. We're working on a long-term solution for this, and will be fixed in the coming days. As a workaround, we recommend ensuring your experiments last at least a minute (to be safe), and sleep if needed. **We are working on resolving this issue to be addressed in the next release.**
-
----
 ## :wrench:January 12, 2022
 
 **CLI version: 0.7.3**
@@ -31,7 +24,7 @@ Find out which cluster context is currently set by using the `grid user`command.
 
 More information in the documentation on how to '[Run Workloads in Your New Cluster](https://docs.grid.ai/platform/custom-cloud-credentials/adding-custom-cloud-credentials#step-6-run-your-workloads-in-your-new-cluster)'.
 
----
+
 ## :partying_face: January 5, 2022
 
 **CLI version: 0.7.1**
