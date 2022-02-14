@@ -1,6 +1,6 @@
 # Machines
 
-These are the options of available machines. The syntax for this is numberOfAccelerators_acceleratorType_availableMemory. Below is an example utilizing this syntax to a machine with 8 v100 gpus ans 32 GB memory.
+These are the options of available machines. The syntax for this is numberOfAccelerators_acceleratorType_availableMemory. Below is an example utilizing this syntax to create a run on a machine with 8 v100 gpus and 32 GB memory.
 
 ```bash
 grid run --instance_type 8_v100_32gb hello.py --gpus 8
