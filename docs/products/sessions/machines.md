@@ -4,7 +4,7 @@ description: Choice of machines  for Sessions
 
 # Machines
 
-Here are the machines you can use to start up sessions. The syntax for this is numberOfAccelerators_acceleratorType_availableMemory.
+Here are the machines you can use to start up sessions. The syntax for this is numberOfAccelerators_acceleratorType_availableMemory. Below is an example utilizing this syntax to create a session on a machine with 8 v100 gpus and 32 GB memory.
 
 ```text
 grid session create --instance_type 8_v100_32gb
