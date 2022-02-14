@@ -132,7 +132,7 @@ grid datastore create --source cifar5/ --name cifar5
 make sure it was created
 
 ```bash
-grid datastore list
+grid datastore
 ```
 
 ![Once it's succeeded, it's ready to be used](/images/examples/cli-datastore-list.png)

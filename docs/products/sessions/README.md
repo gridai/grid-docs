@@ -46,6 +46,6 @@ grid session create --instance_type 2_m60_8gb
 The equivalent CLI command:
 
 ```text
-grid session delete $INTERACTIVE_NODE_ID
+grid session delete $SESSION_NAME
 ```
 

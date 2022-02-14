@@ -71,7 +71,7 @@ Version of the datastore to delete. You will also need to supply a `--name`.
 Lists all available datastores.
 
 ```bash
-grid datastore list
+grid datastore
 ```
 
 ## resume
