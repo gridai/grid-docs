@@ -1,6 +1,6 @@
 # Machines
 
-These are the options of available machines
+These are the options of available machines. The syntax for this is numberOfAccelerators_acceleratorType_availableMemory.
 
 ```bash
 grid run --instance_type 8_v100_32gb hello.py --gpus 8
