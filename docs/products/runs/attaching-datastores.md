@@ -7,7 +7,7 @@
 You can mount a datastore to a run to make your experiments run faster! By default, the datastore is mounted at /datastore. When attaching datastores to a run, take note of the path your script uses. For example if your script takes an argument _my_data_path_ and you want to mount the _cats_ datastore:
 
 ```bash
-grid run main.py --my_data_path /datastore/cats/1
+grid run main.py --my_data_path /datastores/cats/1
 ```
 
 ## Datastore paths
@@ -65,20 +65,20 @@ which is equivalent to calling your script like so:
 
 ```bash
 # python
-python pl_mnist.py --root /datastore
+python pl_mnist.py --root /datastores
 
 # with grid
-python pl_mnist.py --root /datastore/my-dataset/1
+python pl_mnist.py --root /datastores/my-dataset/1
 ```
 
 The datastore path has 3 parts:
 
 ```bash
-/datastore/[name]/[version]
+/datastores/[name]/[version]
 ```
 
 Example, datastore named elephant (version 3)
 
 ```bash
-/datastore/elephant/3
+/datastores/elephant/3
 ```
