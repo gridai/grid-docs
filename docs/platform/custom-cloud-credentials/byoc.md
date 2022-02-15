@@ -1,4 +1,4 @@
-# Bring Your Own Cluster Options
+# Bring Your Own Cloud Options
 
 !!! note
 
