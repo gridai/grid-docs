@@ -137,15 +137,15 @@ aws sts get-caller-identity
 We advise performing the following steps before continuing deployment
 1. Copy nmiculinic.tfvars from terraform-aws-grid-byoc-full/example
 2. Update the cluster and hostname cluster_name. For example:
-  i. cluster_name = "foo-01"
-  ii. hostname    = "foo-01.doom.gridai.dev"
+	  - cluster_name = "foo-01"
+	  - hostname    = "foo-01.doom.gridai.dev"
 *It is recommended to run "grid clusters" and make sure that the cluster_name in the .tfvars file you are using does not match an existing name cluster name. Else you will receive an error.*
 3. Set:
-  i. role_arn = ""
-  ii. testing_cluster = false
-  iii. guard_duty_integration = false
-  iv. builder_ami_name_override = ""
-	v. bastion_ami_override = ""
+	  - role_arn = ""
+	  - testing_cluster = false
+	  - guard_duty_integration = false
+	  - builder_ami_name_override = ""
+	  - bastion_ami_override = ""
   
 Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid)
 
