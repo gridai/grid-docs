@@ -105,7 +105,7 @@ For the next step you're going to create role we're going to assume into. For th
 This version allows you to customize our terraform module to create your own BYOC infrastructure and set appropriate configurations for it via exposed variables **Make sure your AWS CLI is properly configured with [id & secret you created](adding-custom-cloud-credentials.md#d-create-new-aws-keys).  These are not shared with Grid.**
 
 ```bash
-Clone the repo
+#Clone the repo
 git clone https://github.com/gridai/terraform-aws-grid-byoc-full.git
 cd terraform-aws-grid-byoc-full
 ```
