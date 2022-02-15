@@ -31,13 +31,14 @@ sidebar_label: GRID CLI REFERENCE
 with open("docs/cli/api.md", "w") as _cli:
     next(r)
     _cli.write(INTRO)
-    for file in r:
-        file = file.replace('_required', '')
-        if file.startswith("### "):
-            file = file.replace("### ", "### grid ")
-        file = file.replace("<", "`<").replace(">", ">`")
-        _cli.write(file)
-        _cli.write("\n")
+    for row in r:
+        row = row.replace('_required', '')
+        if row.startswith("### "):
+            row = row.replace("### ", "### grid ")
+        if '`g2.8xlarge,g3.16xlarge,' in row:
+            row = row.replace(",", ", ")
+        row = row.replace("<", "`<").replace(">", ">`")
+        _cli.write(row + "\n")
 
 
 # changelog
