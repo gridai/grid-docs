@@ -26,7 +26,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           showLastUpdateTime: true,
           showLastUpdateAuthor: false,
-          editUrl: "https://github.com/gridai/grid-docs/tree/main/",
+          editUrl: "https://github.com/gridai/grid-docs/edit/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -41,15 +41,15 @@ const config = {
   plugins: [
     [
       "@docusaurus/plugin-client-redirects",
-      /**@type {import('@docusaurus/plugin-client-redirects').PluginOptions} */
-      {
+      /** @type {import('@docusaurus/plugin-client-redirects').Options} */
+      ({
         redirects: [
           {
             to: "/platform/custom-cloud-credentials/adding-custom-cloud-credentials",
             from: "/platform/upgrades/adding-custom-cloud-credentials",
           },
         ],
-      },
+      }),
     ],
   ],
 
