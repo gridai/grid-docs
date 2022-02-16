@@ -20,4 +20,4 @@ As the experiments start running, view the metrics and artifacts as well as invo
 
 ![](/images/examples/lightning-metrics.png)
 
-If using CLI is your preference, you can follow the CLI [tutorial ](../../start-here/typical-workflow-cli-user.md)
+If using CLI is your preference, you can follow the CLI [tutorial ](../../getting-started/typical-workflow-cli-user.md)

@@ -140,4 +140,4 @@ That's all you need to know about Grid!
 
 ## Next!
 
-Now try our [first tutorial](/start-here/typical-workflow-web-user)
+Now try our [first tutorial](/getting-started/typical-workflow-web-user)
