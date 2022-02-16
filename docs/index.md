@@ -24,7 +24,7 @@ This 3-minute video shows you how to execute code on cloud instances with zero c
 
 Here is a quick overview of:
 
-[**Datastores**](products/add-data-to-grid-datastores/#datastores-scalable-datasets)
+[**Datastores**](products/datastores/#datastores-scalable-datasets)
 
 [**Sessions**](products/sessions/#sessions)
 
