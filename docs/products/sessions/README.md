@@ -54,9 +54,9 @@ At this time the only supported way to share data between sessions is to mount t
 
 ```
 # Do for each session you wish to share data between
-mkdir <dir for each session mount>
-grid session mount <your session> <created session mount dir>
-mkdir <created session mount dir>/shared_data
+mkdir <dir for SessionA>
+grid session mount <SessionA> <dir for SessionA>
+mkdir <dir for SessionA>/shared_data
 
 # to share data from a session to another session
 cp -R <source> <destination>/shared_data
