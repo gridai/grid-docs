@@ -154,9 +154,9 @@ const sidebars = {
           type: "category",
           label: "Running With Different Frameworks",
           items: [
-            { type: "doc", id: "examples/frameworks/running-pytorch-lightning", label: "PyTorch Lightning" },
-            { type: "doc", id: "examples/frameworks/running-tensorflow-or-keras", label: "Tensorflow or Keras" },
-            { type: "doc", id: "examples/frameworks/running-julia-programs", label: "Julia" },
+            { type: "doc", id: "examples/running-with-different-frameworks/running-pytorch-lightning", label: "PyTorch Lightning" },
+            { type: "doc", id: "examples/running-with-different-frameworks/running-tensorflow-or-keras", label: "Tensorflow or Keras" },
+            { type: "doc", id: "examples/running-with-different-frameworks/running-julia-programs", label: "Julia" },
           ],
         },
       ],
