@@ -19,7 +19,7 @@ When ever a BYOC is deployed there is a one time startup process it must go thro
 
 #### Awaiting AWS Provisioning
 
-BYOC will request instances from AWS. Once the isntances have been requested you will have to wait for AWS to grant access to the resources. In Customer-managed BYOC mode you can easily affecct the provisioning time by overprovisioning the instance types of interest. This will effectiviley put the instances on standby, thus increasing costs. However, by overprovisioning instances you will not have to wait for AWS to provision the instances for you as they are requested during BYOC creation.
+BYOC will request instances from AWS. Once the isntances have been requested you will have to wait for AWS to provison the resources. In Customer-managed BYOC mode you can easily affecct the provisioning time by overprovisioning the instance types of interest. This will effectiviley put the instances on standby, thus increasing costs. However, by overprovisioning instances you will not have to wait for AWS to provision the instances for you as they are requested during BYOC creation.
 
 #### Requested Instances not Wihtin Your Availability Zones
 
