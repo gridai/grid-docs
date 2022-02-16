@@ -1,4 +1,4 @@
-# Creating a New Cluster
+# Deploying Customer Managed Bring Your Own Cluster (BYOC) Mode
 !!! note
 
     To request access to this feature send an email to [support@grid.ai](mailto:support@grid.ai) with the subject "Request Access to BYOC Feature".
