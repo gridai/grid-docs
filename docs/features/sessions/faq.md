@@ -12,7 +12,7 @@ If you're having trouble with access to private Github repos, try the following:
 *   If you're logged into Grid with Google and have not linked a Github account already, **then link your Github account to Grid in the Grid UI in Settings** > **Integrations.**
 
     ****
-* If you've already linked your Github account to Grid, but have not granted private repo access to Grid, then [grant private repo access to Github in your Grid Settings.](https://docs.grid.ai/products/sessions/github-login#access-private-github-repos)
+* If you've already linked your Github account to Grid, but have not granted private repo access to Grid, then [grant private repo access to Github in your Grid Settings.](https://docs.grid.ai/features/sessions/github-login#access-private-github-repos)
   *   Make sure to **log out and log back in after granting access.**
 
       ****

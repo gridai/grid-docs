@@ -18,7 +18,7 @@ time_idx,Symbol,Date,High,Low,Open,Close,Volume,Marketcap
 ```
 
 We will training a series of models on Grid. Now, in order to make the process of updating
-the dataset easier we will be creating a [Grid Datastore](https://docs.grid.ai/products/add-data-to-grid-datastores). Datstores are collections of files that are versioned and can
+the dataset easier we will be creating a [Grid Datastore](https://docs.grid.ai/features/add-data-to-grid-datastores). Datstores are collections of files that are versioned and can
 be mounted anywhere in the experiment context.
 
 We'll be creating a new Datastore using the Grid CLI with the following command:
@@ -82,7 +82,7 @@ Using default cloud credentials cc-bwhth to run on AWS.
 
 ### Bonus: Run a Hyperparameter Sweep
 
-Grid AI makes it trivial to run a [hyperparameter sweep](https://docs.grid.ai/products/global-cli-configs/cli-api/grid-train#hyperparameter-sweeps)
+Grid AI makes it trivial to run a [hyperparameter sweep](https://docs.grid.ai/features/global-cli-configs/cli-api/grid-train#hyperparameter-sweeps)
 without having to change anything in your scripts. Let's experiment with a number of different learning rates for our model:
 
 ```shell

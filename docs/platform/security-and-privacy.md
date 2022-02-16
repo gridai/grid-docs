@@ -18,5 +18,5 @@ You can choose to share your work with a team of collaborators working in a [col
 
 ### Authorization
 
-By default you can only access and run scripts from public Github repositories on Grid. To grant access to your private repositories, you will need to enable it in Grid [see here for more details on how to do that](https://docs.grid.ai/products/sessions/github-login). It is user responsibility to ensure they have permissions to grant access to private repos. Accessing code from local directories and using own images is a premium feature, [contact us](mailto:support@grid.ai) to learn more.
+By default you can only access and run scripts from public Github repositories on Grid. To grant access to your private repositories, you will need to enable it in Grid [see here for more details on how to do that](https://docs.grid.ai/features/sessions/github-login). It is user responsibility to ensure they have permissions to grant access to private repos. Accessing code from local directories and using own images is a premium feature, [contact us](mailto:support@grid.ai) to learn more.
 

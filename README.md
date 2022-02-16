@@ -17,11 +17,11 @@ https://user-images.githubusercontent.com/23050213/153156339-0f803a2b-ce13-4ef1-
 
 Here is a quick overview of:
 
-[**Datastores**](docs/products/add-data-to-grid-datastores/README.md#datastores-scalable-datasets)
+[**Datastores**](docs/features/add-data-to-grid-datastores/README.md#datastores-scalable-datasets)
 
-[**Sessions**](docs/products/sessions/README.md#sessions)
+[**Sessions**](docs/features/sessions/README.md#sessions)
 
-[**Runs**](docs/products/runs/README.md#runs)
+[**Runs**](docs/features/runs/README.md#runs)
 
 ## **Infrastructure is gone**
 

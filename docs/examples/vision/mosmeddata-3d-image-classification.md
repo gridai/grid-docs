@@ -118,7 +118,7 @@ Here's a video of using Keras/TF example in Web UI
 
 ## Advanced Keras/TF Cuda Version Configuration <a id="bonus-cli-equivalent"></a>
 
-Grid currently supports native Cuda integration for TensorFlow version 2.2.0. Support for more versions is on the roadmap however if you need to train with a different version of TensorFlow or Keras and use Cuda you can configure your run as follows using an [Actions](../../products/runs/actions.md) YAML configuration as follows.
+Grid currently supports native Cuda integration for TensorFlow version 2.2.0. Support for more versions is on the roadmap however if you need to train with a different version of TensorFlow or Keras and use Cuda you can configure your run as follows using an [Actions](../../features/runs/actions.md) YAML configuration as follows.
 
 ### 1. Identify the Corresponding Compatible Tensorflow/Keras Cuda Version
 
