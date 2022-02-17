@@ -7,7 +7,7 @@
 
 ### Requirements
 
-Grid will create clusters designed for large AI workloads. In order to do so, your AWS account needs to have the **right permissions** and **quotas**. We'll cover both optional and required configurations as follows.
+Grid will create clusters designed for large AI workloads. However, the product is versatile and can handle other workloads. We recommend testing small workloads with Grid first in cost-savings mode. You can always transition to performance mode later if quicker startup times are desired for Grid features. Your AWS account needs to have the **right permissions** and **quotas**, in order for Grid to create clusters on your behalf. We'll cover both optional and required configurations as follows.
 
 | Configuration | Recommendation |
 | :--- | :--- |
