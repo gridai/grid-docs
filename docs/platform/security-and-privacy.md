@@ -6,7 +6,7 @@ Any data you upload to Grid or generate while using the platform such as logs, m
 
 ### Cloud hosted service Access
 
-Access to grid platform is through your registered email address or Github user name. Grid uses two factor authentication with phone validation to ensure secure access. Grid credentials and API key are unique to every user. The API key and credentials can be found on the Settings page in the web application, see [here](https://docs.grid.ai/start-here/your-login-credentials) for more information.
+Access to grid platform is through your registered email address or Github user name. Grid uses two factor authentication with phone validation to ensure secure access. Grid credentials and API key are unique to every user. The API key and credentials can be found on the Settings page in the web application, see [here](https://docs.grid.ai/getting-started/your-login-credentials) for more information.
 
 ### Self hosted and Private cloud
 
@@ -18,5 +18,5 @@ You can choose to share your work with a team of collaborators working in a [col
 
 ### Authorization
 
-By default you can only access and run scripts from public Github repositories on Grid. To grant access to your private repositories, you will need to enable it in Grid [see here for more details on how to do that](https://docs.grid.ai/products/sessions/github-login). It is user responsibility to ensure they have permissions to grant access to private repos. Accessing code from local directories and using own images is a premium feature, [contact us](mailto:support@grid.ai) to learn more.
+By default you can only access and run scripts from public Github repositories on Grid. To grant access to your private repositories, you will need to enable it in Grid [see here for more details on how to do that](https://docs.grid.ai/features/sessions/github-login). It is user responsibility to ensure they have permissions to grant access to private repos. Accessing code from local directories and using own images is a premium feature, [contact us](mailto:support@grid.ai) to learn more.
 

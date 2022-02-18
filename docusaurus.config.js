@@ -46,7 +46,15 @@ const config = {
         redirects: [
           {
             to: "/platform/custom-cloud-credentials/adding-custom-cloud-credentials",
-            from: "/platform/upgrades/adding-custom-cloud-credentials",
+            from: "/platform/upgrades/adding-custom-cloud-credentials"
+          },
+          {
+            to:"/features/runs",
+            from:"/products/run-run-and-sweep-github-files"
+          },
+          {
+            to:"/features/datastores",
+            from:"/products/add-data-to-grid-datastores"
           },
         ],
       }),
@@ -84,19 +92,19 @@ const config = {
           },
           {
             type: "doc",
-            docId: "products/runs/README",
+            docId: "features/runs/README",
             label: "Runs",
             position: "right",
           },
           {
             type: "doc",
-            docId: "products/sessions/README",
+            docId: "features/sessions/README",
             label: "Sessions",
             position: "right",
           },
           {
             type: "doc",
-            docId: "products/add-data-to-grid-datastores/README",
+            docId: "features/datastores/README",
             label: "Datastores",
             position: "right",
           },

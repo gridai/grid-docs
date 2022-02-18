@@ -24,11 +24,11 @@ This 3-minute video shows you how to execute code on cloud instances with zero c
 
 Here is a quick overview of:
 
-[**Datastores**](products/add-data-to-grid-datastores/#datastores-scalable-datasets)
+[**Datastores**](features/datastores#datastores-scalable-datasets)
 
-[**Sessions**](products/sessions/#sessions)
+[**Sessions**](features/sessions#sessions)
 
-[**Runs**](products/runs/#runs)
+[**Runs**](features/runs#runs)
 
 ## **Infrastructure is gone**
 
@@ -140,4 +140,4 @@ That's all you need to know about Grid!
 
 ## Next!
 
-Now try our [first tutorial](/start-here/typical-workflow-web-user)
+Now try our [first tutorial](/getting-started/typical-workflow-web-user)

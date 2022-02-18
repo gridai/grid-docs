@@ -47,7 +47,3 @@ grid datastore create --source imagenet_folder --name imagenet
 :::note
 Grid CLI is auto-installed on sessions and logged in under your credentials.
 :::
-
-## ImageNet Example
-
-To see it in action, check out [this tutorial](../../examples/vision/image-classification-with-imagenet.md)

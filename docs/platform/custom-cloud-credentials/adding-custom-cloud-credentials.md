@@ -233,7 +233,7 @@ export ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
 
-* Login to Grid.  Please reference the detailed [steps](https://docs.grid.ai/products/global-cli-configs#install-the-cli) as required.
+* Login to Grid.  Please reference the detailed [steps](../../getting-started/typical-workflow-cli-user.md#step-0-install-the-grid-cli) as required.
 
 ```bash
 pip install lightning_grid --upgrade
@@ -331,7 +331,7 @@ pip3 install awscli --upgrade --user
 
 ### Linux \(Debian/Ubuntu\)
 
-[Grid Session SSH](https://docs.grid.ai/products/sessions/how-to-ssh-into-a-session) can be used to run the below example. [apt-get](http://manpages.ubuntu.com/manpages/cosmic/man8/apt-get.8.html) and [repository configuration](https://www.terraform.io/docs/cli/install/apt.html#repository-configuration) are used in this example.
+[Grid Session SSH](https://docs.grid.ai/features/sessions/how-to-ssh-into-a-session) can be used to run the below example. [apt-get](http://manpages.ubuntu.com/manpages/cosmic/man8/apt-get.8.html) and [repository configuration](https://www.terraform.io/docs/cli/install/apt.html#repository-configuration) are used in this example.
 
 ```bash
 # add hashicorp repo

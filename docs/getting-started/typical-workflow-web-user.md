@@ -24,7 +24,7 @@ Note a few things:
 
 - The dataset is small so the tutorial can be quick. But the workflow doesn't change for large-scale data.
 - We'll use PyTorch Lightning for simplicity, but the framework can be any of your choice.
-- If you are signed into Grid with Google, make sure to [link a Github account](../products/runs/private-repos.md) to your profile before launching your first run!
+- If you are signed into Grid with Google, make sure to [link a Github account](../features/runs/private-repos.md) to your profile before launching your first run!
 
 ## **Tutorial time: 16 minutes**
 
@@ -92,7 +92,7 @@ Let's create the datastore:
 ![](/images/examples/cifar-create-datastore.gif)
 
 :::note
-For datasets 1 GB or larger, use the [CLI](../products/global-cli-configs/cli-api/grid-datastores.md)
+For datasets 1 GB or larger, use the [CLI](../cli/api.md#grid-datastore)
 :::
 
 ## Step 2: Start a session
@@ -192,7 +192,7 @@ DATALOADER:0 TEST RESULTS
 
 At this step \(in a real workflow\) you would code the model, debug, tune batch size, etc...
 
-Grid even lets you do this from your local VSCode \([read this guide to set that up](../products/sessions/vscode-with-sessions.md)\).
+Grid even lets you do this from your local VSCode \([read this guide to set that up](../features/sessions/vscode-with-sessions.md)\).
 
 Once you're ready, commit your changes so we can train at scale
 

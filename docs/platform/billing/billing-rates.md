@@ -63,7 +63,7 @@ Here are the prices by machine type _per hour_ when running on Grid cloud \(Buil
 
 Read more about interruptible machines here
 
-[ ](../../products/runs/interruptible-machines.md)
+[ ](../../features/runs/interruptible-machines.md)
 
 ## Machine specs
 
