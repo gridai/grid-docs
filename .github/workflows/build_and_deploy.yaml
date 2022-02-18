@@ -1,9 +1,9 @@
 name: build and deploy docs
 
 on:
-  # pull_request: # deploy to dev
-  #   branches:
-  #     - master
+  pull_request: # deploy to dev
+    branches:
+      - master
   push: # deploy to prod
     branches:
       - master
@@ -21,6 +21,7 @@ jobs:
           key: my-cache-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: build and deploy docs
+        if: ${{ github.event_name == 'push' && github.ref_name == 'master' }}
         env:
           GIT_USER: gridai
           GIT_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
@@ -30,3 +31,8 @@ jobs:
           echo "machine github.com login $GIT_USER password $GIT_PASSWORD" > ~/.netrc
           # deploy
           make upload-docs
+
+      - name: build docs
+        if: ${{ github.event_name == 'pull_request'}}
+        run: |
+          make build
