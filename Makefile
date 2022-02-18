@@ -52,6 +52,9 @@ prepare-build: develop
 	@printf "${white}\n> ${magenta}Starting documentation building ... ${reset} \n";
 	python main.py;
 
+build: prepare-build
+	yarn build;
+
 serve-docs: setup
 	@printf "${white}\n> ${magenta}Starting live documentation serving ... ${reset} \n";
 	python main.py;
