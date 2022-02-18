@@ -76,7 +76,7 @@ compute:
 
 ## Configuring Actions
 
-You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](../yaml-configs/).
+You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](./yaml-configs).
 
 Here's a full example of a Grid configuration using actions:
 
@@ -134,10 +134,10 @@ compute:
       on_experiment_start:
         - bash before.sh
 
-      on_experiment_end:        
+      on_experiment_end:
         - |
             curl -X POST -d '{"name": "${GRID_EXPERIMENT_ID}", "instance_type": "${GRID_INSTANCE_TYPE}", "status": "status", "step": "after"}' ${WEBHOOK_URL}
-            
+
 ```
 
 ### Default environment variables
@@ -157,10 +157,10 @@ Grid provides partial emulation for bash string operations. This can be used to 
 * Example variable substitution with substring:
 
 ```yaml
-on_experiment_end:        
+on_experiment_end:
 - |
     echo ${GRID_EXPERIMENT_ID:0:4} # Getting first 4 symbols
-            
+
 ```
 
 Grid emulates the below string operations:

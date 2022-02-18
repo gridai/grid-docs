@@ -24,11 +24,11 @@ This 3-minute video shows you how to execute code on cloud instances with zero c
 
 Here is a quick overview of:
 
-[**Datastores**](products/datastores/#datastores-scalable-datasets)
+[**Datastores**](features/datastores#datastores-scalable-datasets)
 
-[**Sessions**](products/sessions/#sessions)
+[**Sessions**](features/sessions#sessions)
 
-[**Runs**](products/runs/#runs)
+[**Runs**](features/runs#runs)
 
 ## **Infrastructure is gone**
 
