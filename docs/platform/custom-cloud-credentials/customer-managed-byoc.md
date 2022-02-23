@@ -74,9 +74,9 @@ Make sure that your user name has the right policies attached in order to user G
 
 The user you just created, and fetched credentials for should have AdministratorAccess privileges.
 
-!!! note
-
+<note>
     Reach out to us via [Slack](slack:gridai-community.slack.com) or [email](mailto:support@grid.ai) if you have any issues creating the following AWS roles and policies. We're happy to help!
+</note>
 
 **Add Policies to Your Account**
 
@@ -94,11 +94,9 @@ The final step is to add all the necessary permissions to your account to provis
 
 For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#prerequisites).
 
-!!! note
-
+<note>
     Customer-managed BYOC Infrastructure Mode only gives Grid the following permissions:
-
-!!!
+</note>
   * "eks:\*", # only for the cluster it creates
   * "s3:\*", # only for the buckets it creates
 
