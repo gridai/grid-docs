@@ -1,3 +1,4 @@
+import Note from "@site/src/components/Note";
 # Bring Your Own Cloud (BYOC) Options
 
 <note>
