@@ -64,9 +64,9 @@ Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
 4. Click on "Create access key"
 5. Copy both the "Access key ID" and the "Secret access key" values
 
-!!! note
-
+<note>
     The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
+</note>
 
 Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](https://docs.grid.ai/platform/about-these-features/adding-custom-cloud-credentials#step-2-add-iam-permissions-to-your-account) for more details.
 
@@ -242,9 +242,9 @@ grid edit cluster <cluster name>
 
 Use `grid delete` to delete cluster. Deleting a cluster will delete its resources, including runing resources. Use with care!
 
-!!! note
-
+<note>
     Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!
+</note>
 
 ```bash
 grid delete cluster <cluster name>
