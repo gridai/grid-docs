@@ -1,3 +1,6 @@
+[Grid Managed BYOC](./adding-custom-cloud-credentials.md)  
+[Customer Managed BYOC](./customer-managed-byoc.md)
+
 # Prerequisites
 
 To install either the Grid-managed BYOC or Customer-managed BYOC modes the following tools are required:
@@ -60,3 +63,8 @@ sudo apt-get install git
 sudo apt-get install jq
 sudo apt-get install awscli
 ```
+
+# Next Steps
+See:
+1. [Grid Managed BYOC](./adding-custom-cloud-credentials.md) - for Grid Managed BYOC mode deployment instructions
+2. [Customer Managed BYOC](./customer-managed-byoc.md) - for Customer Managed BYOC mode deployment instructions
