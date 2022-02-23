@@ -36,19 +36,19 @@ You can request a quota by doing
 
 Login into your AWS account. You will then use the search bar to find "IAM" \(user management\).
 
-![](../../images/platform/IAM.png)
+![](/images/platform/IAM.png)
 
 **B: Click on "Users"**
 
 Click on the "Users" panel. You will be able to see a list of users. If you already have a user, click on your user name. If you don't, move to the next step to create a new user.
 
-![](../../images/byoc/aws-list-users.png)
+![](/images/byoc/aws-list-users.png)
 
 **C: Create New User \(optional\)**
 
 If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
 
-![](../../images/byoc/aws-create-user.png)
+![](/images/byoc/aws-create-user.png)
 
 Click on "Next: Permissions" &gt;
 
@@ -68,7 +68,7 @@ Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
     The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
 </note>
 
-Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](https://docs.grid.ai/platform/about-these-features/adding-custom-cloud-credentials#step-2-add-iam-permissions-to-your-account) for more details.
+Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md#step-2-add-iam-permissions-to-your-account) for more details.
 
 ### Step 2: Add IAM permissions to your account
 
@@ -88,11 +88,11 @@ The final step is to add all the necessary permissions to your account to provis
 4. Click on "Add permissions"
 5. Click on "Attach existing policies directly"
 
-![Granting permissions to an user.](../../images/byoc/aws-add-permissions.png)
+![Granting permissions to an user.](/images/byoc/aws-add-permissions.png)
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#prerequisites).
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./adding-custom-cloud-credentials.md#prerequisites).
 
 <note>
     Customer-managed BYOC Infrastructure Mode only gives Grid the following permissions:
@@ -102,7 +102,7 @@ For the next step you're going to create role we're going to assume into. For th
 
 
 #### Set Up
-This version allows you to customize our terraform module to create your own BYOC infrastructure and set appropriate configurations for it via exposed variables **Make sure your AWS CLI is properly configured with [id & secret you created](adding-custom-cloud-credentials.md#d-create-new-aws-keys).  These are not shared with Grid.**
+This version allows you to customize our terraform module to create your own BYOC infrastructure and set appropriate configurations for it via exposed variables **Make sure your AWS CLI is properly configured with [id & secret you created](./adding-custom-cloud-credentials.md#d-create-new-aws-keys).  These are not shared with Grid.**
 
 ```bash
 #Clone the repo
@@ -147,7 +147,7 @@ We advise performing the following steps before continuing deployment
 	  - builder_ami_name_override = ""
 	  - bastion_ami_override = ""
   
-Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid)
+Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](./adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid)
 
 ```bash
 terraform init
@@ -175,7 +175,7 @@ terraform output -json | jq -r '.gridv1_cluster.value'
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
 
-* Login to Grid.  Please reference the detailed [steps](../../start-here/getting-started.md#login-steps) as required.
+* Login to Grid.  Please reference the detailed [steps](../../getting-started/getting-started.md#login-steps) as required.
 
 ```bash
 pip install lightning_grid --upgrade
