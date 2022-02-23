@@ -1,8 +1,10 @@
-# Deploying Customer Managed Bring Your Own Cluster (BYOC) Mode
-!!! note
+import Note from "@site/src/components/Note";
 
-    To request access to this feature send an email to [support@grid.ai](mailto:support@grid.ai) with the subject "Request Access to BYOC Feature".
-    
+# Deploying Customer Managed Bring Your Own Cluster (BYOC) Mode
+<note>
+    To request access to this feature send an email to [support@grid.ai](mailto:support@grid.ai) with the subject "Request Access to BYOC Feature".  
+</note>
+
 ## Amazon Web Services \(AWS\)
 
 ### Requirements
