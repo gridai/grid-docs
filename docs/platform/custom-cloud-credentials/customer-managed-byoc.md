@@ -175,7 +175,7 @@ terraform output -json | jq -r '.gridv1_cluster.value'
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
 
-* Login to Grid.  Please reference the detailed [steps](https://github.com/gridai/grid-docs/blob/master/docs/start-here/getting-started.md#login-steps) as required.
+* Login to Grid.  Please reference the detailed [steps](../../start-here/getting-started.md#login-steps) as required.
 
 ```bash
 pip install lightning_grid --upgrade
