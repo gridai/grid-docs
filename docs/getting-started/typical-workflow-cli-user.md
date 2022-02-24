@@ -99,7 +99,7 @@ In a **real** workflow, you would already have the data locally or on a cluster.
 
 ```yaml
 # download
-curl https://pl-flash-data.s3.amazonaws.com/cifar5.zip -O cifar5.zip
+curl https://pl-flash-data.s3.amazonaws.com/cifar5.zip -o cifar5.zip
 
 # unzip
 unzip cifar5.zip
