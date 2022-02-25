@@ -2,6 +2,7 @@ import Note from "@site/src/components/Note";
 
 This documentation assumes you have followed our [prereq installation steps](./prereq-installation.md).
 
+
 ---
 description: >-
   Grid allows you to create a cluster inside your own infrastructure. Using this
@@ -9,7 +10,7 @@ description: >-
   secure.
 ---
 
-# Creating a New Cluster
+# Deploying Grid Managed Bring Your Own Cluster (BYOC) Mode
 
 :::note
 Request access to this feature! Send us a message to our [community Slack](https://gridai-community.slack.com) or send email to [support@grid.ai](mailto:support@grid.ai)
