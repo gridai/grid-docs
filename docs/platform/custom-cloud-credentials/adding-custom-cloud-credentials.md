@@ -313,3 +313,5 @@ Grid attempts to delete all cluster resources when a delete operation is initiat
 grid delete cluster <cluster name>
 ```
 
+# Next Steps
+Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Customer Managed BYOC Mode](./customer-managed-byoc.md).
