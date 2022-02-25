@@ -1,5 +1,7 @@
 import Note from "@site/src/components/Note";
 
+This documentation assumes you have followed our [prereq installation steps](./prereq-installation.md).
+
 ---
 description: >-
   Grid allows you to create a cluster inside your own infrastructure. Using this
