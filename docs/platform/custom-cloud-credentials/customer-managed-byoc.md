@@ -1,9 +1,10 @@
 import Note from "@site/src/components/Note";
 
 # Deploying Customer Managed Bring Your Own Cluster (BYOC) Mode
-<note>
-    To request access to this feature send an email to [support@grid.ai](mailto:support@grid.ai) with the subject "Request Access to BYOC Feature".  
-</note>
+
+:::note
+To request access to this feature send an email to [support@grid.ai](mailto:support@grid.ai) with the subject "Request Access to BYOC Feature".
+:::
 
 ## Amazon Web Services \(AWS\)
 
@@ -64,9 +65,9 @@ Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
 4. Click on "Create access key"
 5. Copy both the "Access key ID" and the "Secret access key" values
 
-<note>
+<Note>
     The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
-</note>
+</Note>
 
 Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md#step-2-add-iam-permissions-to-your-account) for more details.
 
@@ -74,9 +75,9 @@ Make sure that your user name has the right policies attached in order to user G
 
 The user you just created, and fetched credentials for should have AdministratorAccess privileges.
 
-<note>
-    Reach out to us via [Slack](slack:gridai-community.slack.com) or [email](mailto:support@grid.ai) if you have any issues creating the following AWS roles and policies. We're happy to help!
-</note>
+:::note
+Reach out to us via [Slack](slack:gridai-community.slack.com) or [email](mailto:support@grid.ai) if you have any issues creating the following AWS roles and policies. We're happy to help!
+:::
 
 **Add Policies to Your Account**
 
@@ -94,9 +95,9 @@ The final step is to add all the necessary permissions to your account to provis
 
 For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./adding-custom-cloud-credentials.md#prerequisites).
 
-<note>
+<Note>
     Customer-managed BYOC Infrastructure Mode only gives Grid the following permissions:
-</note>
+</Note>
   * "eks:\*", # only for the cluster it creates
   * "s3:\*", # only for the buckets it creates
 
@@ -146,7 +147,7 @@ We advise performing the following steps before continuing deployment
 	  - guard_duty_integration = false
 	  - builder_ami_name_override = ""
 	  - bastion_ami_override = ""
-  
+
 Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](./adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid)
 
 ```bash

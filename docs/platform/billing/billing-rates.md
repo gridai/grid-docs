@@ -2,7 +2,7 @@
 
 Grid charges based on consumption of compute.
 
-:::
+:::note
 Costs are **estimates** until experiments or Sessions have finished, then Grid reports the final costs
 :::
 
@@ -27,7 +27,7 @@ grid run --use_spot main.py
 ```
 
 :::note
-    Interruptible machines are only available for Runs at the moment \(Sessions coming soon\)
+Interruptible machines are only available for Runs at the moment \(Sessions coming soon\)
 :::
 
 ## Individual Tier hourly rates
