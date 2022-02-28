@@ -4,8 +4,55 @@ description: What's new and improved in Grid.
 import Note from "@site/src/components/Note";
 
 # :partying_face: Releases
+Upgrade your CLI with `pip install lightning-grid --upgrade`
+## :mage: February 28, 2022
 
-**Archived release notes can be found on** [**this page**](https://github.com/gridai/gridai/discussions) **in Github.**&#x20;
+**CLI version: 0.7.8**
+
+Spring cleaning came early. This release features a lot of backend magic that improves overall stability and UX with Grid. 
+
+We’re also excited to announce a dazzling new enhancement to Sessions. You can now change the instance type of an active Session! That means there’s no need for you to destroy and recreate your Session on a new instance! More details and information on how to use the feature are below.
+
+Upgrade your CLI to `v0.7.8` with `pip install lightning-grid --upgrade`  
+
+Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
+
+### Change Instance Type in Sessions
+
+This allows you to upgrade or downgrade the compute capability of the session nodes while keeping all of your work in progress untouched. The following operations are supported:
+
+- Change to a spot instance from an on-demand instance and vice versa
+- Change to a CPU instance from a GPU instance and vice versa
+    
+    <aside>
+    💡 Switching between CPUs and GPUs might require some additional package installation and may increase Session resume time
+    
+    </aside>
+    
+
+#### Change instance type in the UI
+
+Navigate to Session details to edit the instance type. Save changes to proceed.
+
+![](/images/sessions/change-instance-type.gif)
+
+#### Change instance type in the CLI
+
+`grid session change-instance-type [OPTIONS] SESSION_NAME INSTANCE_TYPE`
+
+- The session must be PAUSED in order for this command to succeed
+- Specifying `--spot` allows you to change the instance to an interruptible spot instance
+- specifying `--on_demand` changes the instance to an on-demand type, which cannot be interrupted but is more expensive.
+
+(Extracted from [Grid CLI Reference](https://docs.grid.ai/cli/api#change-instance-type))
+
+## Fixes and Enhancements
+
+- `grid run` help menu includes additional information about the  `--localdir` option
+- newly created datastores with total size <1 MiB will report as 1 MiB total size
+- improvements to costs reporting for runs and experiments
+
+---
 ## :warning: February 3, 2022
 
 ### **Artifacts don't sync for fast experiments**
