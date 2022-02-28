@@ -7,13 +7,13 @@ import Note from "@site/src/components/Note";
 Upgrade your CLI with `pip install lightning-grid --upgrade`
 ## :mage: February 28, 2022
 
-**CLI version: 0.7.8**
+**CLI version: 0.8.0**
 
 Spring cleaning came early. This release features a lot of backend magic that improves overall stability and UX with Grid. 
 
 We’re also excited to announce a dazzling new enhancement to Sessions. You can now change the instance type of an active Session! That means there’s no need for you to destroy and recreate your Session on a new instance! More details and information on how to use the feature are below.
 
-Upgrade your CLI to `v0.7.8` with `pip install lightning-grid --upgrade`  
+Upgrade your CLI to `v0.8.0` with `pip install lightning-grid --upgrade`  
 
 Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
 
@@ -46,7 +46,7 @@ Navigate to Session details to edit the instance type. Save changes to proceed.
 
 (Extracted from [Grid CLI Reference](https://docs.grid.ai/cli/api#change-instance-type))
 
-## Fixes and Enhancements
+### Fixes and Enhancements
 
 - `grid run` help menu includes additional information about the  `--localdir` option
 - newly created datastores with total size <1 MiB will report as 1 MiB total size
