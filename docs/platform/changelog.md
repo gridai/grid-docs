@@ -7,11 +7,11 @@ import Note from "@site/src/components/Note";
 Upgrade your CLI with `pip install lightning-grid --upgrade`
 ## :wrench: February 28, 2022
 
-**CLI version: 0.8.0**
+**CLI version: 0.8.1**
 
 Spring cleaning came early. This release features a lot of backend magic that improves overall stability and UX with Grid. 
 
-Upgrade your CLI to `v0.8.0` with `pip install lightning-grid --upgrade`  
+Upgrade your CLI to `v0.8.1` with `pip install lightning-grid --upgrade`  
 
 Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
 
