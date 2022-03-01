@@ -213,7 +213,7 @@ Using [Random Search](https://jmlr.csail.mit.edu/papers/volume13/bergstra12a/ber
 
 ```text
 grid run --strategy random_search \
-         --trials 3 \
+         --num_trials 3 \
          main.py \
          --alpha "uniform(1e-5, 1e-1, 3)" \
          --beta "[1, 2, 3, 4]"
