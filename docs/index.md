@@ -66,7 +66,7 @@ The UI supports creating Datastores of &lt; 1 GB
 Use the CLI for larger datastores
 
 ```bash
-grid datastores create --source imagenet_folder --name imagenet
+grid datastore create imagenet_folder --name imagenet
 ```
 
 ## Sessions (Interactive machines)

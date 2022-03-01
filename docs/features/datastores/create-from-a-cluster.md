@@ -32,7 +32,7 @@ grid login --username YOUR_USERNAME --key YOUR_KEY
 Next, use the Datastores command to upload any folder:
 
 ```bash
-grid datastores create --source imagenet_folder --name imagenet
+grid datastore create imagenet_folder --name imagenet
 ```
 
 You can safely close your ssh connection to the cluster (the screen will keep things running in the background).

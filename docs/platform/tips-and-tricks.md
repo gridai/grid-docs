@@ -139,7 +139,7 @@ crontab -l &gt; mycron
 #### run datastore upload every hour every day
 
 ```bash
-echo "0  **** grid datastores create --source data/path --name dataset" &gt;&gt; mycron
+echo "0  **** grid datastore create --source data/path --name dataset" &gt;&gt; mycron
 ```
 
 #### install new cron file
