@@ -148,7 +148,7 @@ In certain cases your data might change every few hours. In these cases, you can
 crontab -l > mycron
 
 #run datastore upload every hour every day
-echo "0 * * * * grid datastores create cifar5/ --name cifar5" >> mycron
+echo "0 * * * * grid datastore create cifar5/ --name cifar5" >> mycron
 
 #install new cron file
 crontab mycron

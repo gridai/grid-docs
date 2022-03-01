@@ -59,7 +59,7 @@ https://user-images.githubusercontent.com/23050213/153156559-2ef0a745-4367-4df8-
 Use the CLI for larger datastores
 
 ```bash
-grid datastores create --source imagenet_folder --name imagenet
+grid datastore create imagenet_folder --name imagenet
 ```
 
 ## Sessions (Interactive machines)
