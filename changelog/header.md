@@ -7,3 +7,5 @@ import Note from "@site/src/components/Note";
 Upgrade your CLI with `pip install lightning-grid --upgrade`
 
 :heart: Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
+
+---

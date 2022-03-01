@@ -809,7 +809,7 @@ grid status [OPTIONS] [RUN]
 
 ### grid stop
 
-Stop Runs or Experiments
+Stop Runs, Experiments, or Sessions.
 
 **Usage:**
 
@@ -861,7 +861,24 @@ grid stop run [OPTIONS] RUN_NAMES...
 | ---- | ---- | ----------- | ------- |
 | `--help` | boolean | Show this message and exit. | `False` |
 
+#### session
 
+Stop one or more SESSION_NAMES.
+
+NOTE: stopping a session permanently removes not only the record of the session,
+      but all generated artifacts, metrics, logs, etc.
+
+**Usage:**
+
+```
+grid stop session [OPTIONS] SESSION_NAMES...
+```
+
+**Options:**
+
+| Name | Type | Description | Default |
+| ---- | ---- | ----------- | ------- |
+| `--help` | boolean | Show this message and exit. | `False` |
 
 ### grid sync-env
 
