@@ -12,7 +12,7 @@ Available features include and not limited to:
 | Activity | Yes/No |
 | :--- | :--- |
 | Using your own cloud credentials | Yes |
-| Download team member’s artifacts | Yes |
+| Download team member’s artifacts  | Yes |
 | Visualize metrics of team member’s Run | Yes |
 | Clone or share a team member’s Run/Experiment | Yes |
 | View logs of team member’s Runs | Yes |
@@ -23,3 +23,5 @@ Available features include and not limited to:
 | Run with a Datastore created by you or any team member | Yes |
 | Mount a Datastore created by team member when creating session | Yes |
 
+## Team Collaboration CLI commands
+At this time artifacts 
