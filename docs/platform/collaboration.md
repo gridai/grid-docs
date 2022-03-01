@@ -44,7 +44,7 @@ Use the following command to get information on users in the team
 grid teams <team-name>
 
 Use the following command to use team members datastore for a run
-grid run --datastore_name <username>:/datastores/[name]/[version]
+grid run --datastore_name <username>:/datastores/[name]/[version] script.py
 
 Use the following command to use team members datastore to attach to a session
 grid session create --datastore_name <username>:<datastorename>
