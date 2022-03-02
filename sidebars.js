@@ -105,7 +105,7 @@ const sidebars = {
                 { type: "doc", id: "features/runs/machines", label: "Machines" },
                 { type: "doc", id: "features/runs/interruptible-machines", label: "Spot Instances" },
                 { type: "doc", id: "features/runs/auto-resume-experiments", label: "Auto-Resume Experiments" },
-                { type: "doc", id: "features/runs/localdir.md", label: "Run Experiments from Local Directory" },
+                { type: "doc", id: "features/runs/localdir", label: "Run Experiments from Local Directory" },
               ],
             },
             {
@@ -122,7 +122,7 @@ const sidebars = {
               type: "category",
               label: "Advanced",
               items: [
-                { type: "doc", id: "features/runs/yaml-configs/README.md", label: "YAML Configs" },
+                { type: "doc", id: "features/runs/yaml-configs/README", label: "YAML Configs" },
                 { type: "doc", id: "features/runs/actions", label: "Actions" },
                 { type: "doc", id: "features/runs/yaml-configs/yaml-api", label: "YAML API" },
                 {
