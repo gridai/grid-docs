@@ -25,6 +25,10 @@ grid run main.py --do_something
 
 Alternatively, your script can be written in such a way that it takes integers and acts on them as booleans. For instance, using a 1 or 0 will default to True or False respectively.
 
+```text
+grid run foo.py --bar 1 --barry 0
+```
+
 ### float
 
 Grid supports standard float notation and scientific notation
