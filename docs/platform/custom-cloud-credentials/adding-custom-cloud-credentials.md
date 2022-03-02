@@ -4,8 +4,12 @@ description: >-
   approach allows you to control where your data sits and keeping that data
   secure.
 ---
+import Note from "@site/src/components/Note";
 
-# Creating a New Cluster
+This documentation assumes you have followed our [prereq installation steps](./prereq-installation.md).
+
+
+# Deploying Grid Managed Bring Your Own Cluster (BYOC) Mode
 
 :::note
 Request access to this feature! Send us a message to our [community Slack](https://gridai-community.slack.com) or send email to [support@grid.ai](mailto:support@grid.ai)
@@ -28,9 +32,9 @@ Grid will create clusters designed for large AI workloads. In order to do so, yo
 
 AWS STS regional endpoints have to be enabled in the target region. Go to https://console.aws.amazon.com/iam/home#/account_settings and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled -> https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html
 
-!!! note
+<note>
     Skipping this step will cause difficult to debug issues. The kubelet will be unable to authenticate against the kubernetes API server, and nothing will work.
-
+</note>
 #### Requesting Quotas
 
 All AWS accounts have "service quotas". These are limits for the utilization of service provided by AWS. In order to increase your quotas, you have to request a quota increase to a specific service. That will open a ticket with AWS support. You may need to follow-up on the ticket in order for the quota to be granted.
@@ -309,41 +313,5 @@ Grid attempts to delete all cluster resources when a delete operation is initiat
 grid delete cluster <cluster name>
 ```
 
-## Installing 3rd Party Tools
-
-Cluster setup requires the following tools, so make sure you have them installed.
-
-* [git](https://git-scm.com/)
-* [jq](https://stedolan.github.io/jq/)
-* [terraform](https://www.terraform.io/)
-* [AWS CLI](https://aws.amazon.com/cli/)
-
-### MacOS
-
-[brew](https://brew.sh/) and [pip3](https://packaging.python.org/guides/tool-recommendations/) are used in this example.
-
-```bash
-brew install git
-brew install terraform
-brew install jq
-pip3 install awscli --upgrade --user
-```
-
-### Linux \(Debian/Ubuntu\)
-
-[Grid Session SSH](https://docs.grid.ai/features/sessions/how-to-ssh-into-a-session) can be used to run the below example. [apt-get](http://manpages.ubuntu.com/manpages/cosmic/man8/apt-get.8.html) and [repository configuration](https://www.terraform.io/docs/cli/install/apt.html#repository-configuration) are used in this example.
-
-```bash
-# add hashicorp repo
-sudo apt-get install gpg
-sudo apt-get install software-properties-common
-curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-
-# install the tools
-sudo apt-get install git
-sudo apt-get install terraform
-sudo apt-get install jq
-sudo apt-get install awscli
-```
-
+# Next Steps
+Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Customer Managed BYOC Mode](./customer-managed-byoc.md).
