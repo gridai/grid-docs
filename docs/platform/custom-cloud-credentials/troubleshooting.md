@@ -5,7 +5,7 @@ import Note from "@site/src/components/Note";
 ## Deploying BYOC
 
 ### Kubernetes API Authentication Errors
-AWS STS regional endpoints have to be enabled in the target region. Go to https://console.aws.amazon.com/iam/home#/account_settings and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled -> https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html
+To ensure proper authentication of the Kubernetes API it is necessary to have AWS STS regional endpoints enabled in the target region. See the official aws [documentation](https://console.aws.amazon.com/iam/home#/account_settings) to verify that the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled. See the official [Managing AWS STS in an AWS Region documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html).
 
 <note>
     Skipping this step will cause issues which are difficult to debug. The kubelet will be unable to authenticate against the Kubernetes API server, breaking core functionality.
@@ -16,7 +16,7 @@ AWS STS regional endpoints have to be enabled in the target region. Go to https:
 ### Stuck in Pending State
 There are usually three scenarios for why a session or Run will be stuck in a pending state: 
 1. Awaiting AWS provisioning
-2. One time start-up process **(Dessions only)**
+2. One time start-up process **(Sessions only)**
 3. The instance type is not available in the availability zones your BYOC cluster has access to. 
 
 We will cover each of the three scenarios in detail below.
