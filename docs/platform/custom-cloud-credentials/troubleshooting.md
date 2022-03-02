@@ -19,7 +19,7 @@ There are usually three scenarios for why a session or Run will be stuck in a pe
 2. One time start-up process **(Dessions only)**
 3. The instance type is not available in the availability zones your BYOC cluster has access to. 
 
-We will cover each of the three scenarios in detail here.
+We will cover each of the three scenarios in detail below.
 
 #### Sessions One Time Startup Process
 
@@ -27,7 +27,7 @@ When ever a BYOC is deployed there is a one time startup process it must go thro
 
 #### Awaiting AWS Provisioning
 
-BYOC will request instances from AWS. Once the isntances have been requested you will have to wait for AWS to provison the resources. In Customer-managed BYOC mode you can easily affecct the provisioning time by overprovisioning the instance types of interest. This will effectiviley put the instances on standby, thus increasing costs. However, by overprovisioning instances you will not have to wait for AWS to provision the instances for you as they are requested during BYOC creation.
+BYOC will request instances from AWS. Once the instances have been requested you will have to wait for AWS to provison the resources. In Customer-managed BYOC mode you can easily affecct the provisioning time by overprovisioning the instance types of interest. This will effectiviley put the instances on standby, thus increasing costs. However, by overprovisioning instances you will not have to wait for AWS to provision the instances for you as they are requested during BYOC creation.
 
 #### Requested Instances not Wihtin Your Availability Zones
 
