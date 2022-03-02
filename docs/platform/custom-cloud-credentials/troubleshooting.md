@@ -14,7 +14,12 @@ AWS STS regional endpoints have to be enabled in the target region. Go to https:
 ## Deploying Workloads 
 
 ### Stuck in Pending State
-There are usually three scenarios for why a session or run will be stuck in a pending state: awaiting AWS provisioning, one time start-up process **(sessions only)**, or the instance type is not available in the availability zones your BYOC cluster has access to. We will cover each of the three scenarios in detail here.
+There are usually three scenarios for why a session or Run will be stuck in a pending state: 
+1. Awaiting AWS provisioning
+2. One time start-up process **(Dessions only)**
+3. The instance type is not available in the availability zones your BYOC cluster has access to. 
+
+We will cover each of the three scenarios in detail here.
 
 #### Sessions One Time Startup Process
 
