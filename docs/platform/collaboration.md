@@ -31,22 +31,22 @@ Available features include and not limited to:
 | Add Credit for the team Payments | No |
 
 ## Team Collaboration CLI commands
-Use the following command for checking out runs and experiments in the team
+check status of runs in your team
 grid status --global
 
-Use the following command for checking out other sessions in the team:
+check sessions in your team:
 grid session --global
 
-Use the following command for checking out datastores in the team
+check datastores in your team
 grid datastore --global
 
-Use the following command to get information on users in the team
+Check users in your team
 grid teams <team-name>
 
-Use the following command to use team members datastore for a run
+Use team members datastore for a run
 grid run --datastore_name <username>:/datastores/[name]/[version] script.py
 
-Use the following command to use team members datastore to attach to a session
+Use team members datastore to attach to a session
 grid session create --datastore_name <username>:<datastorename>
 
 At this time downnloading artifacts and view logs for the team mates is not supported from the CLI, please use the UI as a workaround.
