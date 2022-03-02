@@ -1,3 +1,5 @@
+import Note from "@site/src/components/Note";
+
 # Hyperparameter Sweeps
 
 Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments:
@@ -6,11 +8,12 @@ Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperpa
 python main.py --layers 32 --learning_rate 0.01
 ```
 
-:::note
+<note>
 This page provides a list of arguments specific to running hyperparameter sweeps. For the full Grid CLI API reference, visit [this page. ](../../cli/api.md)
-:::
+</note>
 
 ## Python flags
+Under the hood we are using Argparse for parsing of Python flags and consequently inherit the same limitations it has. For example, there is a known limitation with parsing boolean values. See the official Argparse [documentation](https://docs.python.org/3/library/argparse.html#type). However, Grid still provides a way to easily pass in Boolean flags.
 
 ### boolean
 
@@ -19,6 +22,8 @@ Passing in a flag without values is treated like a boolean
 ```text
 grid run main.py --do_something
 ```
+
+Alternatively, your script can be written in such a way that it takes integers and acts on them as booleans. For instance, using a 1 or 0 will default to True or False respectively.
 
 ### float
 
