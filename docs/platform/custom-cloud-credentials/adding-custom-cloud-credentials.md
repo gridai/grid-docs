@@ -1,14 +1,13 @@
-import Note from "@site/src/components/Note";
-
-This documentation assumes you have followed our [prereq installation steps](./prereq-installation.md).
-
-
 ---
 description: >-
   Grid allows you to create a cluster inside your own infrastructure. Using this
   approach allows you to control where your data sits and keeping that data
   secure.
 ---
+import Note from "@site/src/components/Note";
+
+This documentation assumes you have followed our [prereq installation steps](./prereq-installation.md).
+
 
 # Deploying Grid Managed Bring Your Own Cluster (BYOC) Mode
 
