@@ -35,6 +35,9 @@ This is a living, breathing document. If you have suggestions on how to improve 
 
 This project and everyone participating in it is governed by the [Grid.AI Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [product@grid.ai](mailto:product@grid.ai).
 
+## License
+[Apache License Version 2.0](LICENSE) 
+
 ## What should I know before I get started?
 
 Docasaurus
