@@ -87,7 +87,7 @@ Now that we all have the same data, let's start the real tutorial!
 
 In a realistic workflow, we would start here. The first thing you want to do is to create a **DATASTORE** on Grid with your dataset. The datastore will optimize your data for low-latency, and high-availability to any machine you run on Grid.
 
-Let's create the datastore. **Name it cifar5-demo**:
+Let's create the datastore. **Name it cifar5**:
 
 ![](/images/examples/cifar-create-datastore.gif)
 
@@ -171,7 +171,7 @@ now run the following command to train a resnet50 on 2 GPUs
 
 ```bash
 python project/lit_image_classifier.py \
-                --data_dir /datastores/cifar5-demo/ \
+                --data_dir /datastores/cifar5/ \
                 --gpus 2 \
                 --accelerator 'ddp' \
                 --backbone resnet50
@@ -235,14 +235,14 @@ Now let's kick off the RUN.
 ```bash
 https://github.com/PyTorchLightning/cifar5/blob/master/project/lit_image_classifier.py
 ```
-2. Select the 'cifar5-demo' datastore.
+2. Select the 'cifar5' datastore.
 
 3. Select the 2xM60 instance type.
 
 4. Add the following args to spin up 10 different experiments
 
 ```bash
---data_dir /datastores/cifar5-demo/ \
+--data_dir /datastores/cifar5/ \
 --gpus 2 \
 --accelerator 'ddp' \
 --learning_rate "uniform(1e-5, 1e-2, 5)" \
