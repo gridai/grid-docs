@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Prerequisites
 
-1. Python
+1. [Python 3.8+](https://www.python.org/downloads/)
 
 ## Installation steps
 
