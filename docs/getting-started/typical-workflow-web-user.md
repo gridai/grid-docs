@@ -230,13 +230,16 @@ git push
 
 Now let's kick off the RUN.
 
-First, paste this link in the run page.
+1. Paste this link in the run page.
 
 ```bash
 https://github.com/PyTorchLightning/cifar5/blob/master/project/lit_image_classifier.py
 ```
+2. Select the 'cifar5-demo' datastore.
 
-Add the following args to spin up 10 different experiments
+3. Select the 2xM60 instance type.
+
+4. Add the following args to spin up 10 different experiments
 
 ```bash
 --data_dir /datastores/cifar5-demo/ \
@@ -253,12 +256,6 @@ Add the following args to spin up 10 different experiments
 \(Time: 3 **minutes**\)
 
 Here are some tricks to get you beyond the basic user status.
-
-### Clone
-
-Let's say you want to start a run again but only change a few arguments. Use the clone button
-
-![](/images/runs/click-clone-run-button.gif)
 
 ### Log to tensorboard
 
