@@ -1,3 +1,5 @@
+import Note from "@site/src/components/Note";
+
 # Collaboration
 
 Team Collaboration allows you to work on Grid projects with your team members. When using Collaboraton, individual team members have the advantages of:
@@ -31,19 +33,20 @@ Available features include and not limited to:
 | Add Credit for the team Payments | No |
 
 ## Team Collaboration CLI commands
-Check status of Runs in your team
+
+#### Check status of Runs in your team
 `grid status --global`
 
-List Sessions in your team:
+#### List Sessions in your team:
 `grid session --global`
 
-List Datastores in your team
+#### List Datastores in your team
 `grid datastore --global`
 
-Use a team member's Datastore for a run
+#### Use a team member's Datastore for a run
 `grid run --datastore_name <username>:/datastores/[name]/[version] script.py`
 
-Use a team member's Datastore to attach to a Session
+#### Use a team member's Datastore to attach to a Session
 `grid session create --datastore_name <username>:<datastorename>`
 
 <note>At this time downloading artifacts and viewing logs from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.</note>
