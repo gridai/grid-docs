@@ -316,7 +316,7 @@ now run the following command to train a resnet50 on 2 GPUs
 
 ```bash
 python project/lit_image_classifier.py \
-                --data_dir /datastores/cifar5/ \
+                --data_dir /datastores/cifar5 \
                 --gpus 2 \
                 --accelerator 'ddp' \
                 --backbone resnet50
@@ -339,6 +339,8 @@ Once you're ready, commit your changes so we can train at scale
 git commit -am "changes"
 git push
 ```
+
+You can now log out of the ssh session. 
 
 ## Step 7: Pause the Session
 
@@ -391,16 +393,17 @@ Now kick off the run with grid run
 
 ```bash
 grid run \
-  --datastore_name cifar5 \
+  --name third-attempt \
+  --datastore_name cifar \
   --datastore_version 1 \
-  --datastore_mount_dir /cifar5 \
+  --datastore_mount_dir /datastores/cifar \
   --instance_type 2_m60_8gb \
   --framework lightning \
   --gpus 2 \
   lit_image_classifier.py \
   --backbone "['resnet50', 'resnet34', 'resnet18']" \
   --learning_rate "uniform(1e-5, 1e-1, 5)" \
-  --data_dir /cifar5 \
+  --data_dir /datastores/cifar \
   --gpus 2
 ```
 
