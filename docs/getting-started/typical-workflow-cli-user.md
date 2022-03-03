@@ -192,7 +192,7 @@ Now that your data has been uploaded the next step in a real workflow is to spen
 
 This is exactly what _Sessions_ were created for.
 
-Start a Session named _**resnet-debugging**_ **\*\*with 2 M60 GPUs on it and attach our** CIFAR-5\*\* dataset.
+Start a Session named _**resnet-debugging**_ with 2 M60 GPUs on it and attach our CIFAR-5 dataset.
 
 **Note: A credit card needs to be added to use GPU machines**
 
@@ -237,7 +237,7 @@ nvidia-smi
 List the datastore
 
 ```yaml
-ls /datastore
+ls /datastores
 ```
 
 Now you can code away!
@@ -316,7 +316,7 @@ now run the following command to train a resnet50 on 2 GPUs
 
 ```bash
 python project/lit_image_classifier.py \
-                --data_dir /datastore \
+                --data_dir /datastores/cifar5/ \
                 --gpus 2 \
                 --accelerator 'ddp' \
                 --backbone resnet50
