@@ -141,10 +141,6 @@ This folder is complicated on purpose to showcase that Grid is designed for real
 
 ![](/images/examples/cifar-requirements.png)
 
-:::note
-For best practices structuring machine learning projects in general, [read our guide](https://appgitbook.com/@grid-ai/s/grid-cli/~/drafts/-MV7NJIqFCxJS-A3u0w3/deep-learning-at-scale/structuring-code-repositories). \(Coming Soon\)
-:::
-
 On the session you would normally:
 
 - debug
@@ -156,7 +152,7 @@ We're going to run the model using the following instructions. This GIF illustra
 
 ![](/images/examples/run.gif)
 
-Clone the project **on the interactive Session**
+Inside the Session, open up the terminal and clone the project **on the interactive Session**
 
 ```yaml
 git clone https://github.com/williamFalcon/cifar5
@@ -175,7 +171,7 @@ now run the following command to train a resnet50 on 2 GPUs
 
 ```bash
 python project/lit_image_classifier.py \
-                --data_dir /datastore \
+                --data_dir /datastores \
                 --gpus 2 \
                 --accelerator 'ddp' \
                 --backbone resnet50
