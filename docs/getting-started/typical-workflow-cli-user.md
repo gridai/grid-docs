@@ -243,7 +243,7 @@ ls /datastore
 Now you can code away!
 
 ```yaml
-git clone https://github.com/williamFalcon/cifar5
+git clone https://github.com/PyTorchLightning/cifar5
 
 # debug, prototype, etc...
 
@@ -284,7 +284,7 @@ grid session ssh vscode
 
 **The model**
 
-For this tutorial, I'm going to use a non-trivial project structure that is representative of realistic use cases \[[code link](https://github.com/williamFalcon/cifar5)\].
+For this tutorial, I'm going to use a non-trivial project structure that is representative of realistic use cases \[[code link](https://github.com/PyTorchLightning/cifar5)\].
 
 The project has this structure
 
@@ -300,7 +300,7 @@ For best practices structuring machine learning projects in general, stay tuned 
 Clone the project **on the interactive Session**
 
 ```yaml
-git clone https://github.com/williamFalcon/cifar5
+git clone https://github.com/PyTorchLightning/cifar5
 ```
 
 Install requirements + project
