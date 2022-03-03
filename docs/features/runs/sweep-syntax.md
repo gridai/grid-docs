@@ -13,7 +13,6 @@ This page provides a list of arguments specific to running hyperparameter sweeps
 </note>
 
 ## Python flags
-Under the hood we are using Argparse for parsing of Python flags and consequently inherit the same limitations it has. For example, there is a known limitation with parsing boolean values. See the official Argparse [documentation](https://docs.python.org/3/library/argparse.html#type). However, Grid still provides a way to easily pass in Boolean flags.
 
 ### boolean
 
