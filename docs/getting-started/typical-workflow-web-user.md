@@ -131,7 +131,7 @@ TIP: If you prefer to ssh directly or use VSCode \(instead of using JupyterLab\)
 
 Now that you have your data, code, and 2 GPUs, we get to the fun part! Let's develop the model
 
-For this tutorial, I'm going to use a non-trivial project structure that is representative of realistic use cases \[[code link](https://github.com/williamFalcon/cifar5)\].
+For this tutorial, I'm going to use a non-trivial project structure that is representative of realistic use cases \[[code link](https://github.com/PyTorchLightning/cifar5)\].
 
 The project has this structure
 
@@ -155,7 +155,7 @@ We're going to run the model using the following instructions. This GIF illustra
 Inside the Session, open up the terminal and clone the project **on the interactive Session**
 
 ```yaml
-git clone https://github.com/williamFalcon/cifar5
+git clone https://github.com/PyTorchLightning/cifar5
 ```
 
 Install requirements + project
@@ -233,13 +233,13 @@ Now let's kick off the RUN.
 First, paste this link in the run page.
 
 ```bash
-https://github.com/williamFalcon/cifar5/blob/master/project/lit_image_classifier.py
+https://github.com/PyTorchLightning/cifar5/blob/master/project/lit_image_classifier.py
 ```
 
 Add the following args to spin up 10 different experiments
 
 ```bash
---data_dir /datastore \
+--data_dir /datastores/cifar5-demo/ \
 --gpus 2 \
 --accelerator 'ddp' \
 --learning_rate "uniform(1e-5, 1e-2, 5)" \
