@@ -476,7 +476,8 @@ grid run [OPTIONS] [RUN_COMMAND]...
 | `--description` | text | Run description; useful for note-keeping | None |
 | `--cluster` | text | N/A | `prod-2` |
 | `--strategy` | choice (`grid_search` &#x7C; `random_search`) | Hyper-parameter search strategy | None |
-| `--trials` | integer | Number of trials to run hyper parameter search | None |
+| `--num_trials` | integer | Number of samples from full search space that are used by the random_search strategy | None |
+| `--seed` | integer | Seed value for the `random_search` strategy | None |
 | `--instance_type` | text | Instance type to start training session in | `t2.medium` |
 | `--gpus` | integer | Number of GPUs to allocate per experiment | `0` |
 | `--cpus` | integer | Number of CPUs to allocate per experiment | `1` |
