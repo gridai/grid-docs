@@ -12,6 +12,8 @@ This video shows how we attach an ImageNet Datastore to a Session.
 
 In Sessions datastores are mounted to /datastores. However, since juypyter notebooks use /home/joyvan as the default working directory we provide a symlink from /home/jovyan/datastores to /datastore so you can access your datastore easily upon opening up a Session.
 
+<note> Note: Datastores can only be mounted to a Session at Session creation time </note>
+
 Once in the Session, view the data with:
 
 ```bash

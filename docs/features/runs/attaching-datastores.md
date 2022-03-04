@@ -9,6 +9,7 @@ You can mount a datastore to a run to make your experiments run faster! By defau
 ```bash
 grid run main.py --my_data_path /datastores/cats/1
 ```
+<note> Note: Datastores can only be mounted to a Run at Run creation time </note>
 
 ## Datastore paths
 
