@@ -50,7 +50,7 @@ grid session delete $SESSION_NAME
 ```
 ## Change instance Type of a session
 
-This allows you to upgrade or downgrade the compute capability of the session nodes while keeping all of your work in progress untouched. It is particularly useful if you want to increase/decrease the resource capacity of an existing session.
+This allows you to vertically scale the compute capacity of the session nodes while keeping all of your work in progress untouched. It is particularly useful if you want to increase/decrease the resource capacity of an existing session.
 
 Currently Changing the instance is only supported using the CLI. 
 
