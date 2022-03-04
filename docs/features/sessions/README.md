@@ -50,11 +50,12 @@ grid session delete $SESSION_NAME
 ```
 ## Change instance Type of a session
 
-This allows you to upgrade or downgrade the compute capability of the session nodes while keeping all of your work in progress untouched.
+This allows you to upgrade or downgrade the compute capability of the session nodes while keeping all of your work in progress untouched. It is particularly useful if you want to increase/decrease the resource capacity of an existing session.
 
-Curretnly Changing the instance is only supported using the CLI. 
-The CLI command:
+Currently Changing the instance is only supported using the CLI. 
 
+```text
 grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarge
+```
 
 The session must be PAUSED in order for this command to succeed.
