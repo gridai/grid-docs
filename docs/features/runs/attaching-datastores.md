@@ -1,3 +1,5 @@
+import Note from "@site/src/components/Note";
+
 # Attaching Datastores
 
 ## Attach to a RUN
