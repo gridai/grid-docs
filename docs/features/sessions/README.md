@@ -48,14 +48,19 @@ The equivalent CLI command:
 ```text
 grid session delete $SESSION_NAME
 ```
-## Change instance Type of a session
+## Change Instance Type of a Session
 
-This allows you to vertically scale the compute capacity of the session nodes while keeping all of your work in progress untouched. It is particularly useful if you want to increase/decrease the resource capacity of an existing session.
+Change instance type allows you to upgrade or downgrade the compute capability of the session node while keeping all of your work in progress untouched. It is particularly useful if you want to increase/decrease the resource capacity of an existing session.
 
-Currently Changing the instance is only supported using the CLI. 
+You can change the instance type of the session when it is PAUSED
+1. CPU to CPU
+2. CPU to GPU (risky, we should warn the user)
+3. GPU to CPU
+4. GPU to GPU
+5. spot to on-demand
+6. on-demand to spot
 
 ```text
 grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarge
 ```
 
-The session must be PAUSED in order for this command to succeed.
