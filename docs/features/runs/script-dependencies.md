@@ -18,4 +18,7 @@ You can specify which dependency file you want to use to setup your environment 
 grid run --dependency_file ./path/to/requirements.txt model.py
 ```
 
+<Note>
+  If you create an environment.yml file from running conda export it is important to do this on a Linux machine. The dependencies outputted by this command will be compatible with your operating system. This will be problematic if done on a Windows or Mac, as we use Linux machines for runs.
+</Note>
 You can also use a [YAML config](yaml-configs) file.
