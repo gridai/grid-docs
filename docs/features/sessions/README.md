@@ -52,6 +52,8 @@ grid session delete $SESSION_NAME
 
 Change instance type allows you to upgrade or downgrade the compute capability of the session node while keeping all of your work in progress untouched. It is particularly useful if you want to increase/decrease the resource capacity of an existing session.
 
+![](/images/sessions/change-instance-type.gif)
+
 You can change the instance type of the session when it is PAUSED
 1. CPU to CPU
 2. CPU to GPU (risky, we should warn the user)
