@@ -64,7 +64,7 @@ const sidebars = {
             { type: "doc", id: "features/sessions/README", label: "Overview" },
             {
               type: "category",
-              label: "Setup",
+              label: "Setup Sessions",
               items: [
                 { type: "doc", id: "features/sessions/github-login", label: "Github login" },
                 { type: "doc", id: "features/sessions/pause", label: "Pause" },
@@ -74,8 +74,9 @@ const sidebars = {
             },
             {
               type: "category",
-              label: "Connecting To a Session",
+              label: "Use Sessions",
               items: [
+                { type: "doc", id: "features/sessions/changing-instance-type", label: "Changing Session Instance Type" },
                 { type: "doc", id: "features/sessions/jupyterlab-with-sessions", label: "JupyterLab with Sessions" },
                 { type: "doc", id: "features/sessions/how-to-ssh-into-a-session", label: "SSH into a Session" },
                 { type: "doc", id: "features/sessions/vscode-with-sessions", label: "VSCode with Sessions" },
