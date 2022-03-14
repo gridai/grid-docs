@@ -10,6 +10,11 @@ You can mount a datastore to a run to make your experiments run faster! By defau
 grid run main.py --my_data_path /datastores/cats/1
 ```
 
+<note>
+  When using datastores the data are requested from S3 and loaded on and demand. These data results are then cached to local disk. Because of this you will see slower data
+  retrieval times during the first epoch of a run.
+</note>
+
 ## Datastore paths
 
 Say you have a dataset with this structure:
