@@ -56,11 +56,11 @@ Change instance type allows you to upgrade or downgrade the compute capability o
 
 You can change the instance type of the session when it is PAUSED
 1. CPU to CPU
-2. CPU to GPU (risky, we should warn the user)
+2. CPU to GPU (This does not work currently)
 3. GPU to CPU
 4. GPU to GPU
-5. spot to on-demand
-6. on-demand to spot
+5. Spot to On Demand
+6. On Demand to Spot
 
 ```text
 grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarge
