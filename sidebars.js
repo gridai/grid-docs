@@ -172,6 +172,9 @@ const sidebars = {
       type: "doc",
       id: "platform/changelog",
       label: "CHANGELOG",
+      items: [
+            { type: "doc", id: "platform/changelog/known-limitations", label: "Known Limitations" },
+        },
     },
     {
       type: "category",
