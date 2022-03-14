@@ -2,7 +2,7 @@
 description: Sets the cluster context for the user.
 ---
 
-# grid user set-cluster-context
+# Setting Cluster Contexts
 
 With multi-cluster availability, if you are working against a particular cluster, it's easier to set the
 cluster context so all your CLI actions (including creation of a resource such as Run or Session) are going

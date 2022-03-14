@@ -206,7 +206,7 @@ const sidebars = {
             {
               type: "doc",
               id: "platform/custom-cloud-credentials/troubleshooting",
-              label: "Cluster Context",
+              label: "Troubleshooting BYOC",
             }
           ],
         },

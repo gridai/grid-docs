@@ -1,6 +1,6 @@
 import Note from "@site/src/components/Note";
 
-# Bring Your Own Cluster (BYOC) Troubleshooting
+# Troubleshooting Bring Your Own Cluster (BYOC) 
 
 ## Deploying BYOC
 
@@ -33,6 +33,6 @@ When ever a BYOC is deployed there is a one time startup process it must go thro
 
 The instances requested are AWS instances and thus you will be limited to all AWS instance provisioning limitations. One such limitation is that you will not be able to get instances that are not within your availability zones. There are two ways around this assuming the instances are available within the deployed region:
 
-1. Run `grid edit cluster <cluster name>` and update the "xMultiAzCount" field
-2. If using **Customer-managed BYOC mode** increase the "multi_az_count" variable in <your.tfvars>
+1. Run `grid edit cluster [cluster name]` and update the "xMultiAzCount" field
+2. If using **Customer-managed BYOC mode** increase the "multi_az_count" variable in `your.tfvars`
 
