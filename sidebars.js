@@ -204,6 +204,11 @@ const sidebars = {
               type: "doc",
               id: "platform/custom-cloud-credentials/grid-cluster-context",
               label: "Cluster Context",
+            },
+            {
+              type: "doc",
+              id: "platform/custom-cloud-credentials/troubleshooting",
+              label: "Troubleshooting BYOC",
             }
           ],
         },
