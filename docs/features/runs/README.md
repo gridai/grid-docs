@@ -19,7 +19,7 @@ cd hello
 grid run hello.py --number "[1, 2]" --food_item "['pizza', 'hotdog']"
 ```
 
-The Grid CLI also enables the following syntax: grid run -- <script> <script args>. As an example:
+The Grid CLI also enables seperation of the grid command line arguments from script arguments with the '--' flag. As an example:
  ```
   grid run --config config.yml -- myscript.py --config /tmp/doesnotexists
  ```
