@@ -61,13 +61,14 @@ Cluster context : c220309-165349
 
 - Run `grid user set-cluster-context "Grid Cloud"` to switch the context back to the global cluster.  
 
-**Please Note:** `Grid Cloud` is case senstive and will fail if the case is not preserved as shown below. <br>
-**Please Note:** `Cluster context` below shows the corresponding cluster id `prod-2` and **NOT** the cluster name `Grid Cloud`.
-
+**Please Note:** `Grid Cloud` is case senstive and will fail if the case is not preserved as shown below.
 ```bash
 % grid user set-cluster-context "grid cloud"
 Error: Cluster with name grid cloud not found
+```
 
+**Please Note:** `Cluster context` below shows the corresponding cluster id `prod-2` and **NOT** the cluster name `Grid Cloud`.
+```bash
 % grid user set-cluster-context "Grid Cloud"
 ✔ Successfully set the cluster context to Grid Cloud
 % grid user
