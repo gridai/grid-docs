@@ -18,7 +18,7 @@ The equivalent via the CLI command:
 
 ![](/images/sessions/change-instance-type.png)
 
-You can change the instance type of the session when it is PAUSED
+You should PAUSE the session to change the instance type or if you change the instance type when the session is running, you should PAUSE and RESUME the session for the changes to take effect.
 
 The following scenarios are supported: 
 1. Changing from a CPU instance to another CPU instance
