@@ -19,6 +19,12 @@ cd hello
 grid run hello.py --number "[1, 2]" --food_item "['pizza', 'hotdog']"
 ```
 
+The Grid CLI accepts "--" as a separator between grid arguments and script arguments. This is useful under situations where the Grid CLI arguments have the same name as your script arguments, preventing name clashing. As an example:
+
+```
+grid run --grid_param argument --grid_param argument -- train.py --script_param argument --script_param argument
+```
+
 **⚡️⚡️Forget about infrastructure ⚡️⚡️**
 
 Runs are "serverless" which means you only pay for the time your scripts are actually running. When running on your own infrastructure this amounts to massive cost savings as well.
