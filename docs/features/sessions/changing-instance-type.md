@@ -13,6 +13,8 @@ Changing Sessison instance type allows you to upgrade or downgrade the compute c
 
 ![](/images/sessions/change-instance-type.gif)
 
+![](/images/sessions/change-instance-type.png)
+
 You can change the instance type of the session when it is PAUSED
 
 The following scenarios are supported: 
