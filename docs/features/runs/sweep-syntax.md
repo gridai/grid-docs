@@ -22,7 +22,7 @@ Passing in a flag without values is treated like a boolean
 grid run main.py --do_something
 ```
 
-Alternatively, your script can be written in such a way that it takes integers and acts on them as booleans. For instance, using a 1 or 0 will default to True or False respectively.
+Alternatively, your script can be written in such a way that it takes an arbitrary value and acts on them as booleans. For example, your script can be written in such a way that it treats 1/0, True, False, 'yes', 'no', etc as boolean values. This allows you to utilize arbitrary indicator hyperparameters in the Grid Search and Random Search features.
 
 ```text
 grid run foo.py --bar 1 --barry 0
