@@ -22,9 +22,7 @@ You should PAUSE the session to change the instance type or if you change the in
 
 The following scenarios are supported: 
 1. Changing from a CPU instance to another CPU instance
-2. Changing from a GPU instance to another GPU instance
-3. Changing from a GPU instance to a CPU instance
-4. Changing an On-Demand instance to a Spot Instance
-5. Changing from a Spot Instance to an On-Demand Instance
+2. Changing an On-Demand instance to a Spot Instance
+3. Changing from a Spot Instance to an On-Demand Instance
 
 <note>Changing from a CPU to GPU is not currently supported</note>
