@@ -2,9 +2,9 @@ import Note from "@site/src/components/Note";
 
 # Collaboration
 
-The collaboration features within the Grid platform allow you to share work seamlessly with team members aiding in reproducibility and creating opportunities for knowledge exchange.
+The collaboration features within the Grid platform allow you to share work seamlessly with team members, aiding in reproducibility and creating opportunities for knowledge exchange.
 
-This is feature is part of our [Teams plan](https://www.grid.ai/upgrade/) – if you're interested in enabling Collaboration for your team or to learn more, please email us at sales@grid.ai.
+This feature is part of our [Teams plan](https://www.grid.ai/upgrade/) – if you're interested in enabling Collaboration for your team or in learning more, please email us at sales@grid.ai.
 
 Current features include:
 
