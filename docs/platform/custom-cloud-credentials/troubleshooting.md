@@ -29,7 +29,7 @@ BYOC will request instances from AWS. Once the instances have been requested you
 
 When ever a BYOC is deployed there is a one time startup process it must go through before it can deploy sessions. Regardless of the instance type selected this process can take up to 30 minutes. Once completed your BYOC will never have to undergo the startup process again before deploying sessions.
 
-#### Requested Instances not Wihtin Your Availability Zones
+#### Requested Instances not Within Your Availability Zones
 
 The instances requested are AWS instances and thus you will be limited to all AWS instance provisioning limitations. One such limitation is that you will not be able to get instances that are not within your availability zones. There are two ways around this assuming the instances are available within the deployed region:
 
