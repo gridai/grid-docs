@@ -25,4 +25,4 @@ The following scenarios are supported:
 2. Changing an On-Demand instance to a Spot Instance
 3. Changing from a Spot Instance to an On-Demand Instance
 
-<note>Changing from a CPU to GPU is not currently supported</note>
+<note>Changing from a CPU instance to GPU instance and GPU instance to GPU instance is not currently supported</note>
