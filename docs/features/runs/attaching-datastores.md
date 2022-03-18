@@ -1,3 +1,7 @@
+import Note from "@site/src/components/Note";
+
+<note> Note: Datastore can only be mounted to a Run at Run creation time </note>
+
 # Attaching Datastores
 
 ## Attach to a RUN
@@ -9,6 +13,7 @@ You can mount a datastore to a run to make your experiments run faster! By defau
 ```bash
 grid run main.py --my_data_path /datastores/cats/1
 ```
+
 
 ## Datastore paths
 
