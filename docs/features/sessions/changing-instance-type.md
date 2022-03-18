@@ -11,7 +11,7 @@ grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarg
 
 Changing Sessison instance type allows you to upgrade or downgrade the compute capacity of the Session while keeping all of your work in progress untouched.
 
-![](/images/sessions/change-instance-type.gif)
+![](/images/sessions/change-instance-type.mp4)
 
 
 The equivalent via the CLI command:
