@@ -50,7 +50,7 @@ grid run --use_spot --auto_resume --instance_type p3.2xlarge mnist.py
 
 ![image](https://user-images.githubusercontent.com/13732925/148102089-f540356a-a2e6-4e9d-ac1f-51de26691086.png)
 
-#### PyTorch Lightning Fault Tolerance
+### PyTorch Lightning Fault Tolerance
 
 PyTorch Lightning provides a built-in auto-resume mechanism. This would enable you to run your experiments at the cheapest cost without worrying about your experiments being terminated before they should be.  
 
