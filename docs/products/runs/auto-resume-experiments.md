@@ -50,6 +50,7 @@ Use `--auto_resume` flag to indicate this experiment is safe to resume.
 grid run --use_spot --auto_resume --instance_type p3.2xlarge mnist.py
 ```
 
+
 ### PyTorch Lightning Fault Tolerance
 
 PyTorch Lightning provides a built-in auto-resume mechanism. This would enable you to run your experiments at the cheapest cost without worrying about your experiments being terminated before they should be.  
