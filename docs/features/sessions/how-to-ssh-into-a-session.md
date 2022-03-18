@@ -50,7 +50,7 @@ grid session ssh happy-owl-123
 
 :::note
 If trying to use session with ssh and asked for a password: 
-- make sure to Step 0: Create an SSH Key and Step 1: Add the SSH key to Grid
+- make sure to do the above Step 0: Create an SSH Key and Step 1: Add the SSH key to Grid
 - make sure that ~/.ssh/config file doesn't have a rule that conflicts with Grid settings
 :::
 
