@@ -2,19 +2,16 @@ import Note from "@site/src/components/Note";
 
 # Collaboration
 
-Team Collaboration allows you to work on Grid projects with your team members. When using Collaboraton, individual team members have the advantages of:
+The collaboration features within the Grid platform allow you to share work seamlessly with team members aiding in reproducibility and creating opportunities for knowledge exchange.
 
-* Sharing Runs, Sessions, Datastores
-* Shared billing
+This is feature is part of our [Teams plan](https://www.grid.ai/upgrade/) – if you're interested in enabling Collaboration for your team or to learn more, please email us at sales@grid.ai.
 
-This is a premium feature; refer to our plans page [here](https://www.grid.ai/pricing/). REQUEST early access by messaging us on community slack channel: gridai-community.slack.com or contact us at [support@grid.ai](mailto:support@grid.ai)
-
-Available features include and not limited to:
+Current features include:
 
 | Activity | Yes/No |
 | :--- | :--- |
 | Using your own cloud credentials | Yes |
-| View the team information | Yes |
+| View team information | Yes |
 | Download team member’s artifacts  | Yes |
 | Visualize metrics of team member’s Run | Yes |
 | View logs of team member’s Runs | Yes |
