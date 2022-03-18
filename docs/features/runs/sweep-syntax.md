@@ -28,7 +28,11 @@ Alternatively, your script can be written in such a way that it takes an arbitra
 grid run foo.py --bar 1 --barry 0
 ```
 
-This is the recommended syntax because it allows you to utilize arbitrary indicator hyperparameters in the Grid Search and Random Search features.
+This is the recommended syntax because it allows you to utilize arbitrary indicator hyperparameters in the Grid Search and Random Search features. For example, the following will invoke a grid search.
+
+```text
+grid run foo.py --bar '[True, False]'
+```
 
 ### float
 
