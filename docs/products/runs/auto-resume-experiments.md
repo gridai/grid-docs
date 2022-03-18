@@ -38,6 +38,10 @@ In order for experiments to resume from last checkpoint, the following prerequis
 - The process needs to save checkpoint and exit with status code 0
 - On resuming we'll restore all artifacts and code is responsible for resuming from last checkpoint in the file system
 
+#### UI
+
+![image](https://user-images.githubusercontent.com/13732925/148102089-f540356a-a2e6-4e9d-ac1f-51de26691086.png)
+
 #### CLI
 
 Use `--auto_resume` flag to indicate this experiment is safe to resume.
@@ -45,10 +49,6 @@ Use `--auto_resume` flag to indicate this experiment is safe to resume.
 ```bash
 grid run --use_spot --auto_resume --instance_type p3.2xlarge mnist.py
 ```
-
-#### UI
-
-![image](https://user-images.githubusercontent.com/13732925/148102089-f540356a-a2e6-4e9d-ac1f-51de26691086.png)
 
 ### PyTorch Lightning Fault Tolerance
 
