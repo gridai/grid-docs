@@ -49,5 +49,11 @@ grid session ssh happy-owl-123
 ![](/images/sessions/how-to-ssh-into-session.gif)
 
 :::note
+If trying to use session with ssh and asked for a password: 
+- make sure to create ssh key and add that key to Grid
+- make sure that host file doesn't have a rule that conflicts with Grid settings
+:::
+
+:::note
 You can clone any Github repositories into a Session using the [HTTPS cloning method](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-using-the-command-line) (SSH method of cloning will not work).
 :::
