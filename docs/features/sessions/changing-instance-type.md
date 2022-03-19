@@ -9,7 +9,7 @@ import Note from "@site/src/components/Note";
 grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarge
 ```
 
-Changing Sessison instance type allows you to upgrade or downgrade the compute capacity of the Session while keeping all of your work in progress untouched.
+Changing Sesssion instance type allows you to upgrade or downgrade the compute capacity of the Session while keeping all of your work in progress untouched.
 
 ![](/images/sessions/change-instance-type.gif)
 
@@ -18,7 +18,7 @@ The equivalent via the CLI command:
 
 ![](/images/sessions/change-instance-type.png)
 
-You should PAUSE the session to change the instance type or if you change the instance type when the session is running, you should PAUSE and RESUME the session for the changes to take effect.
+You should PAUSE the session to change the instance type. You can change the instance type when the session is running, but you should PAUSE and RESUME the session for the changes to take effect.
 
 The following scenarios are supported: 
 1. Changing from a CPU instance to another CPU instance
