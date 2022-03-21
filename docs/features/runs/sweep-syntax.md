@@ -22,13 +22,13 @@ Passing in a flag without values is treated like a boolean
 grid run main.py --do_something
 ```
 
-Alternatively, your script can be written in such a way that it takes an arbitrary value and acts on them as booleans. For example, your script can be written in such a way that it treats 1/0, True, False, 'yes', 'no', etc as boolean values. For example:
+Alternatively, your script can be written in such a way that it takes an arbitrary value and acts on them as booleans. For example, your script can be written in such a way that it treats 1/0, True/False, 'yes'/'no', etc as boolean values. For example:
 
 ```text
 grid run foo.py --bar 1 --barry 0
 ```
 
-This is the recommended syntax because it allows you to utilize arbitrary indicator hyperparameters in the [grid search](https://docs.grid.ai/features/runs/sweep-syntax#grid-search) and [random search](https://docs.grid.ai/features/runs/sweep-syntax#random-search) features. For example, the following will invoke a grid search.
+This is the recommended syntax because it allows you to utilize arbitrary indicator hyperparameters in the [grid search](https://docs.grid.ai/features/runs/sweep-syntax#grid-search) and [random search](https://docs.grid.ai/features/runs/sweep-syntax#random-search) features. For example, the following will invoke a grid search:
 
 ```text
 grid run foo.py --bar '[True, False]'
