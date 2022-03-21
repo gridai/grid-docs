@@ -1,4 +1,7 @@
 ---
+sidebar_position: 6
+title: Changelog
+sidebar_label: CHANGELOG
 description: What's new and improved in Grid.
 ---
 import Note from "@site/src/components/Note";

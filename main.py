@@ -21,14 +21,14 @@ def to_id(arg: str):
 
 
 INTRO = """---
-sidebar_position: 2
+sidebar_position: 5
 title: GRID CLI REFERENCE
 sidebar_label: GRID CLI REFERENCE
 ---
 
 """
 
-with open("docs/cli/api.md", "w") as _cli:
+with open("docs/cli.md", "w") as _cli:
     next(r)
     _cli.write(INTRO)
     for row in r:
@@ -44,7 +44,7 @@ with open("docs/cli/api.md", "w") as _cli:
 
 
 # changelog
-with open("docs/platform/changelog.md", "w") as w:
+with open("docs/changelog.md", "w") as w:
     with open("changelog/header.md") as f:
         w.write(f.read())
     for file in sorted(Path("changelog").glob("*.md"), reverse=True):

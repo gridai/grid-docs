@@ -90,7 +90,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "platform/changelog",
+            docId: "changelog",
             label: "Changelog",
             position: "left",
           },

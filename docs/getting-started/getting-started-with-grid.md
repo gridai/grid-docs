@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+title: Getting Started with Grid
 ---
 
 # Grid Installation
@@ -21,7 +22,7 @@ sudo apt-get install sshfs
 ```
 
 ### Install sshfs MacOs
-This is dependent on MacFuse and will yield an error with a vanilla brew install. See [here](https://github.com/telepresenceio/telepresence/issues/1654#issuecomment-873538291) for resolution. 
+This is dependent on MacFuse and will yield an error with a vanilla brew install. See [here](https://github.com/telepresenceio/telepresence/issues/1654#issuecomment-873538291) for resolution.
 
 
 ## Login steps

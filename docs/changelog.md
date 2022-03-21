@@ -1,4 +1,7 @@
 ---
+sidebar_position: 6
+title: Changelog
+sidebar_label: CHANGELOG
 description: What's new and improved in Grid.
 ---
 import Note from "@site/src/components/Note";
@@ -9,6 +12,18 @@ Upgrade your CLI with `pip install lightning-grid --upgrade`
 :heart: Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
 
 ---
+
+## :partying_face: March 15, 2022
+
+**CLI version: 0.8.7**
+
+:exploding_head: GRID_SESSION_ID and GRID_SESSION_NAME environment variables 
+
+We've added two environment variables that allow you to programmatically reference a Session from within the Session itself. 
+
+
+---
+
 ## :wrench: March 10, 2022
 
 **CLI version: 0.8.4**

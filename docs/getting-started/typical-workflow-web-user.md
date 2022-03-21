@@ -92,7 +92,7 @@ Let's create the datastore:
 ![](/images/examples/cifar-create-datastore.gif)
 
 :::note
-For datasets 1 GB or larger, use the [CLI](../cli/api.md#grid-datastore)
+For datasets 1 GB or larger, use the [CLI](../cli.md#grid-datastore)
 :::
 
 ## Step 2: Start a session
