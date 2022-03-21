@@ -15,8 +15,7 @@ grid run main.py --my_data_path /datastores/cats/1
 ```
 
 :::note
-  When using datastores the data are requested from S3 and loaded on demand. These data results are then cached to local disk. Because of this you will see slower data
-  retrieval times during the first epoch of a run.
+  When using datastores the data are requested from S3 and loaded on demand. These data results are then cached to local disk. Because of this you will see faster retrieval times after the first epoch of a run.
 :::note
 
 ## Datastore paths
