@@ -1,3 +1,7 @@
+import Note from "@site/src/components/Note";
+
+<note> Note: Datastore can only be mounted to a Run at Run creation time </note>
+
 # Attaching Datastores
 
 ## Attach to a RUN

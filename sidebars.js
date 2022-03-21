@@ -197,13 +197,33 @@ const sidebars = {
           items: [
             {
               type: "doc",
+              id: "platform/custom-cloud-credentials/byoc",
+              label: "BYOC Overview",
+            },
+            {
+              type: "doc",
+              id: "platform/custom-cloud-credentials/prereq-installation",
+              label: "BYOC Prerequisites",
+            },
+            {
+              type: "doc",
               id: "platform/custom-cloud-credentials/adding-custom-cloud-credentials",
-              label: "Creating a New Cluster",
+              label: "Grid-Managed BYOC",
+            },
+            {
+              type: "doc",
+              id: "platform/custom-cloud-credentials/customer-managed-byoc",
+              label: "Customer-Managed BYOC",
             },
             {
               type: "doc",
               id: "platform/custom-cloud-credentials/grid-cluster-context",
               label: "Cluster Context",
+            },
+            {
+              type: "doc",
+              id: "platform/custom-cloud-credentials/troubleshooting",
+              label: "Troubleshooting BYOC",
             }
           ],
         },

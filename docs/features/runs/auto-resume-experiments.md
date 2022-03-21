@@ -38,6 +38,10 @@ In order for experiments to resume from last checkpoint, the following prerequis
 - The process needs to save checkpoint and exit with status code 0
 - On resuming we'll restore all artifacts and code is responsible for resuming from last checkpoint in the file system
 
+#### UI
+
+![image](https://user-images.githubusercontent.com/13732925/148102089-f540356a-a2e6-4e9d-ac1f-51de26691086.png)
+
 #### CLI
 
 Use `--auto_resume` flag to indicate this experiment is safe to resume.
@@ -46,6 +50,11 @@ Use `--auto_resume` flag to indicate this experiment is safe to resume.
 grid run --use_spot --auto_resume --instance_type p3.2xlarge mnist.py
 ```
 
-#### UI
 
-![image](https://user-images.githubusercontent.com/13732925/148102089-f540356a-a2e6-4e9d-ac1f-51de26691086.png)
+### PyTorch Lightning Fault Tolerance
+
+PyTorch Lightning provides a built-in auto-resume mechanism. This would enable you to run your experiments at the cheapest cost without worrying about your experiments being terminated before they should be.  
+
+You can learn more about the PyTorch Lightning Fault Tolerance mechanism [here](https://pytorch-lightning.readthedocs.io/en/latest/advanced/fault_tolerant_training.html#:~:text=Fault%2Dtolerant%20Training%20is%20an,a%20hardware%20or%20software%20failure.&text=fit()%20fails%20in%20the,and%20everything%20will%20be%20restored.).
+
+Furthermore, PyTorch Lightning provides a reproducible script that you can find [here](https://github.com/PyTorchLightning/pytorch-lightning/blob/master/pl_examples/fault_tolerant/automatic.py) which is tested end-to-end on Grid with the Auto-Resume feature and can be used as a reference for you to get started.
