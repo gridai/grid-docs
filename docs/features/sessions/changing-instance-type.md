@@ -18,11 +18,11 @@ The equivalent via the CLI command:
 
 ![](/images/sessions/change-instance-type.png)
 
-You should PAUSE the session to change the instance type. You can change the instance type when the session is running, but you should PAUSE and RESUME the session for the changes to take effect.
+You should PAUSE the session to change the instance type. RESUME the session for the changes to take effect.
 
-The following scenarios are supported: 
+Currently the following scenarios are supported: 
 1. Changing from a CPU instance to another CPU instance
 2. Changing an On-Demand instance to a Spot Instance
 3. Changing from a Spot Instance to an On-Demand Instance
 
-<note>Changing from a CPU instance to GPU instance and GPU instance to GPU instance is not currently supported</note>
+<note>Upscaling to a GPU instance from a CPU or smaller GPU instance is not yet supported</note>
