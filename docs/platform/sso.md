@@ -4,14 +4,17 @@ description: Grid provides an enterprise-ready SAML based Single Sign-On (SSO)
 
 # Single Sign-On \(SSO\)
 
+Please contact our team at [sales@grid.ai](mailto:sales@grid.ai if are interested in using SAML with Grid for your team.
+
 ## Prerequisites
 
-Please contact Grid support with your SAML identity provider details. Details that we require:
+
+Details that we require:
 
 * Your SAML metadata endpoint
 * Domain names used by your organization \(e.g. `grid.ai`\)
 
-Below you can find instructions on how to setup [Okta](https://www.okta.com/) authentication with Grid. Other SAML providers are also supported, however you will need to know where to get and set several settings.
+Below you can find instructions on how to setup [Okta](https://www.okta.com/) authentication with Grid.
 
 :::note
 Interested in using another SSO / SAML provider? Reach out to use at [support@grid.ai](mailto:support@grid.ai) and we'll write specific instructions.
@@ -40,4 +43,3 @@ Edit your SSO application and set these details:
 ![Okta Edit SAML Integration page.](/images/platform/saml-config.png)
 
 Done! Now you can visit the [https://platform.grid.ai](https://platform.grid.ai) and use your organization's email address to login.
-
