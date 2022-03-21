@@ -26,5 +26,4 @@
 /platform/billing                           @EricChea
 /platform/custom-cloud-credentials          @dmitsf @nmiculinic
 
-
-/.github/CODEOWNERS              @essiequoi
+/.github/CODEOWNERS                         @essiequoi
