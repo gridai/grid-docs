@@ -43,7 +43,7 @@ grid login
 Next, use the datastores command to upload any folder:
 
 ```bash
-grid datastore create --source imagenet_folder --name imagenet
+grid datastore create imagenet_folder --name imagenet
 ```
 
 Note that you will need at least as much free space as the size of your dataset on the disk hosting your home folder, for the internal preparation of the upload.
@@ -138,7 +138,7 @@ bash process.sh
 when you're done, upload to Grid via the CLI (on the Interactive Session):
 
 ```bash
-grid datastore create --source imagenet_folder --name imagenet
+grid datastore create imagenet_folder --name imagenet
 ```
 
 :::note
@@ -276,7 +276,7 @@ Here's an example that uploads a new version of a datastore every hour:
 crontab -l > mycron
 
 #run datastore upload every hour every day
-echo "0 * * * * grid datastore create --source data/path --name dataset" >> mycron    
+echo "0 * * * * grid datastore create data/path --name dataset" >> mycron    
 
 #install new cron file
 crontab mycron
