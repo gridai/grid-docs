@@ -102,6 +102,30 @@ $ grid logs divergent-piculet-508-exp0 -l 10 --show-build-logs
 [experiment] [2021-06-30T22:12:07.252150+00:00] Loop 99
 ```
 
+## Reuse Cached Docker Images
+After creating a Run Grid will cache the image. This is especially useful when your Run image has a lot of dependencies and takes a long time to build. You can take full advantage of the cache by taking the push ref and using it in the FROM statement within your Dockerfile. Be sure to include the mandatory lines as noted below in the example. You can find the push ref with the following syntax.
+
+`grid logs --show-build-logs <run-name>-exp0 | grep "pushing manifest" | head -n 1`
+
+For example with a run named "foo" you can extract the image reference with the following code.
+
+`grid logs --show-build-logs foo-exp0 | grep "pushing manifest" | head -n 1`
+
+This will result in output similar to the following:
+
+`[build] [2022-03-21T18:21:12.800584+00:00] #8 pushing manifest for 302180240179.dkr.ecr.us-east-1.amazonaws.com/prod-2:01fyptkm18naj1mdye64eqws2p@sha256:e142c254d19c8c858bf52b938858d047d13a015998b9bf3f5d2baadce9a187ea`
+
+Take the full ECR address as the FROM reference within your Dockerfile. In this example your Dockerfile would be:
+
+```
+FROM 302180240179.dkr.ecr.us-east-1.amazonaws.com/prod-2:01fyptkm18naj1mdye64eqws2p@sha256:e142c254d19c8c858bf52b938858d047d13a015998b9bf3f5d2baadce9a187ea
+
+# these two lines are mandatory
+WORKDIR /gridai/project
+COPY . .
+```
+
+
 ## Testing Your Dockerfile Locally
 
 It is a good idea to test that your `Dockerfile` builds locally before sending it to Grid. This may allow you to iterate quickly over a set of configurations that work before submitting experiments.
