@@ -112,16 +112,6 @@ With this trick you can better manage your training budget and invest it into mo
 * [Grid Run Docs](https://bit.ly/3fyBRgT)
 * [Max Time Docs](https://pytorch-lightning.readthedocs.io/en/1.3.1/common/trainer.html?utm_source=social&utm_medium=slack&utm_campaign=tip_of_week#max-time)
 
-### Reproducible Runs
-
-Have you ever wanted to share or reproduce the results of your run? Grid Runs make it simple to reproduce, share and embed run configurations as badges for GitHub and or Medium. Here is how to create your own exportable Grid Run badge that you can use to embed and share your work.
-
-Start a Run on Grid. Once it is completed, just go to the Run details, click on the Grid Run button and copy and paste that url inside any Github repository markdown file so your friends run the same configuration
-
-![](/images/platform/share-run.png)
-
-Here is a [video of how to create a Grid Run badge for a reproducible run](../features/runs/sharing-runs.md#generate-a-run-badge-for-github)
-
 ### Periodic Uploads of Datasets to Datastores
 
 Did you know the you can schedule periodic uploading Datasets to Datastores ?
