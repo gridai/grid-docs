@@ -8,13 +8,9 @@ Any data you upload to Grid, or generate while using the platform, such as logs,
 
 Access to the Grid platform is through your registered email address or Github user name. Grid uses two factor authentication with phone validation to ensure secure access. Grid credentials and API key are unique to every user. The API key and credentials can be found on the Settings page in the web application, see [here](https://docs.grid.ai/getting-started/your-login-credentials) for more information.
 
-This is a paid feature, to learn more please [contact us](mailto:sales@grid.ai).
-
 ### Self hosted and Private cloud
 
-We follow best practices for security and encryption in our cloud hosted service. Grid also offers private cloud and self hosted installations. You can use Grid to orchestrate infrastructure on your own private cloud. Please [contact us](mailto:support@grid.ai) to learn more about options for your business. 
-
-This is a paid feature, to learn more please [contact us](mailto:sales@grid.ai).
+We follow best practices for security and encryption in our cloud hosted service. Grid also offers private cloud and self hosted installations. You can use Grid to orchestrate infrastructure on your own private cloud. To learn more about options for your business, you can [connect with our Sales Team](mailto:sales@grid.ai).
 
 ### Teams Collaboration
 
