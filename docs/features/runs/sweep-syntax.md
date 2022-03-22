@@ -1,3 +1,5 @@
+import Note from "@site/src/components/Note";
+
 # Hyperparameter Sweeps
 
 Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments:
@@ -6,9 +8,9 @@ Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperpa
 python main.py --layers 32 --learning_rate 0.01
 ```
 
-:::note
-This page provides a list of arguments specific to running hyperparameter sweeps. For the full Grid CLI API reference, visit [this page. ](../../cli/api.md)
-:::
+<note>
+This page provides a list of arguments specific to running hyperparameter sweeps. For the full Grid CLI API reference, visit [this page](../../cli/api.md).
+</note>
 
 ## Python flags
 
@@ -18,6 +20,18 @@ Passing in a flag without values is treated like a boolean
 
 ```text
 grid run main.py --do_something
+```
+
+Alternatively, your script can be written in such a way that it takes an arbitrary value and acts on them as booleans. For example, your script can be written in such a way that it treats 1/0, True/False, 'yes'/'no', etc as boolean values. For example:
+
+```text
+grid run foo.py --bar 1 --barry 0
+```
+
+This is the recommended syntax because it allows you to utilize arbitrary indicator hyperparameters in the [grid search](https://docs.grid.ai/features/runs/sweep-syntax#grid-search) and [random search](https://docs.grid.ai/features/runs/sweep-syntax#random-search) features. For example, the following will invoke a grid search:
+
+```text
+grid run foo.py --bar '[True, False]'
 ```
 
 ### float
