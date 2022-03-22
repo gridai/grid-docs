@@ -14,5 +14,5 @@ Datastores are zero cost datasets backed by cloud storage. **Add additional cont
 Datastores today have 3 main capabilities:
 1. Can be created from private S3 buckets in both Grid Cloud and Bring Your Own Cloud environments
 2. Attachable to Runs and Sessions
-3. Creatable from Runs, Sessions, or your localmachine
+3. Creatable from your local machine, Sessions, or your Cluster
 
