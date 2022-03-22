@@ -2,11 +2,11 @@
 
 ### Data Privacy
 
-Any data you upload to Grid or generate while using the platform such as logs, model checkpoints, configuration files, metrics is private to you. You can choose to save, export or delete your data at any time. Grid does not see your code or compromise its privacy in any way. When receiving support, you will not have to share any code to help debug. If you choose to share code, make sure you have the rights to and share non-critical parts of the code. We treat your data as private and confidential in accordance with our [Terms of Service](https://www.grid.ai/terms-of-service/) and [Privacy policy](https://www.grid.ai/privacy-policy/).
+Any data you upload to Grid, or generate while using the platform, such as logs, model checkpoints, configuration files, metrics is private to you. You can choose to save, export or delete your data at any time. Grid does not see your code or compromise its privacy in any way. When receiving support, you will not have to share any code to help debug. If you choose to share code, make sure you have the rights to and share non-critical parts of the code. We treat your data as private and confidential in accordance with our [Terms of Service](https://www.grid.ai/terms-of-service/) and [Privacy policy](https://www.grid.ai/privacy-policy/).
 
 ### Cloud hosted service Access
 
-Access to grid platform is through your registered email address or Github user name. Grid uses two factor authentication with phone validation to ensure secure access. Grid credentials and API key are unique to every user. The API key and credentials can be found on the Settings page in the web application, see [here](https://docs.grid.ai/getting-started/your-login-credentials) for more information.
+Access to the Grid platform is through your registered email address or Github user name. Grid uses two factor authentication with phone validation to ensure secure access. Grid credentials and API key are unique to every user. The API key and credentials can be found on the Settings page in the web application, see [here](https://docs.grid.ai/getting-started/your-login-credentials) for more information.
 
 This is a paid feature, to learn more please [contact us](mailto:sales@grid.ai).
 
