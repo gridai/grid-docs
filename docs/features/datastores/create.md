@@ -35,7 +35,7 @@ grid login
 Next, use the datastores command to upload any folder:
 
 ```bash
-grid datastore create --source imagenet_folder --name imagenet
+grid datastore create imagenet_folder --name imagenet
 ```
 
 Note that you will need at least as much free space as the size of your dataset on the disk hosting your home folder, for the internal preparation of the upload.
