@@ -191,7 +191,6 @@ grid datastore create [OPTIONS]
 
 | Name | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
-| `--source` | text | Source to create datastore from. This could either be a local directory (e.g: /opt/local_folder) or a remote HTTP URL pointing to a TAR file (e.g: http://some_domain/data.tar.gz). |  |
 | `--name` | text | Name of the datastore | None |
 | `--compression` | boolean | Compresses datastores with GZIP when flag is passed. | `False` |
 | `--cluster` | text | cluster id to create the datastore on. (Bring Your Own Cloud Customers Only). | None |
