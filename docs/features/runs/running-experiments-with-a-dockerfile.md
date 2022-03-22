@@ -111,7 +111,7 @@ For example with a run named "foo" you can extract the image reference with the 
 
 `grid logs --show-build-logs foo-exp0 | grep "pushing manifest" | head -n 1`
 
-This will result in the following output
+This will result in output similar to the following:
 
 `[build] [2022-03-21T18:21:12.800584+00:00] #8 pushing manifest for 302180240179.dkr.ecr.us-east-1.amazonaws.com/prod-2:01fyptkm18naj1mdye64eqws2p@sha256:e142c254d19c8c858bf52b938858d047d13a015998b9bf3f5d2baadce9a187ea`
 
