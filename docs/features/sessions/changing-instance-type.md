@@ -22,7 +22,7 @@ You should PAUSE the session to change the instance type. RESUME the session for
 
 Currently the following scenarios are supported: 
 1. Changing from a CPU instance to another CPU instance
-2. Changing an On-Demand instance to a Spot Instance
+2. Changing an On-Demand instance to a [Spot Instance](https://docs.grid.ai/features/runs/interruptible-machines#interruptible-machines)
 3. Changing from a Spot Instance to an On-Demand Instance
 
 <note>Upscaling to a GPU instance from a CPU or smaller GPU instance is not yet supported</note>
