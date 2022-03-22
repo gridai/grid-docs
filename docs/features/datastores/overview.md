@@ -16,3 +16,8 @@ Datastores today have 3 main capabilities:
 2. Attachable to Runs and Sessions
 3. Creatable from your local machine, Sessions, or your Cluster
 
+### Convention
+#### Datastore paths
+
+1. Stored at /datastore/<datastore name>/<version> on both Runs and Sessions
+
