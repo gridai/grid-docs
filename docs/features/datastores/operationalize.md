@@ -1,0 +1,214 @@
+# How to operationalize Datastores
+
+There are many ways to operationalize a Datastore in Grid. Below we provide some examples to get you started with working with this core feature.
+
+## Examples
+
+### Create from your machine
+#### Small datasets
+
+You can use the UI to create datastores for datasets smaller than 1GB (files or folder).
+
+Select the file or folder and click upload.
+
+![](/images/datastores/ds_upload.gif)
+
+:::note
+You can still use the CLI for these datastores!
+:::
+
+#### Large datasets (1 GB+)
+
+For datasets larger than 1 GB, use the CLI.
+
+
+:::note
+If you have a datastore that is 1Gb+, we suggest creating an Interactive Session and uploading the datastore from there. Internet speed is much faster in Interactive Sessions, so upload times will be shorter.
+:::
+
+First, install the grid CLI and login
+
+```bash
+pip install lightning-grid --upgrade
+grid login
+```
+
+Next, use the datastores command to upload any folder:
+
+```bash
+grid datastore create --source imagenet_folder --name imagenet
+```
+
+Note that you will need at least as much free space as the size of your dataset on the disk hosting your home folder, for the internal preparation of the upload.
+
+This method can work from:
+
+* A laptop.
+* An interactive session.
+* Any machine with an internet connection and Grid installed.
+* A Corporate cluster.
+* An Academic cluster.
+
+#### Datastores from .zip
+
+For any datasets from a .zip, .tar or tar.gz that DO NOT require any post-processing, feel free to use the Web UI.
+
+The link will be downloaded, extracted and automatically mounted for you. You can use an interactive Session to verify for yourself.
+
+![](/images/datastores/zip_ds.gif)
+
+:::note
+You can still use the CLI for these datastores!
+:::
+
+Datastores go through a number of statuses such as optimizing, processing uploading. These are internal and a status of "succeeded" indicates that datastore is ready to be used.
+
+On the CLI, grid datastore command shows which Datastores are available to be used.
+
+
+### Periodic Upload
+#### Upload on a timer
+
+In certain cases, your data might change hourly and you might want to update your datastore. You can configure your crontab to do this automatically.
+
+Here's an example that uploads a new version of a datastore every hour:
+
+```bash
+#write out current crontab
+crontab -l > mycron
+
+#run datastore upload every hour every day
+echo "0 * * * * grid datastore create --source data/path --name dataset" >> mycron    
+
+#install new cron file
+crontab mycron
+rm mycron
+```
+
+### Create from a Session
+#### Upload via Interactive Session
+
+For huge datasets that need processing or a lot of manual work, we recommend this flow:
+
+* launch an Interactive Session
+* download the data
+* process it
+* upload
+
+![](/images/datastores/upload_datastore_from_session.gif)
+
+#### Screen
+
+When you are in the interactive Session, use Screen to make sure you don't lose your progress.
+
+```bash
+# start screen (lets you close the tab without killing the process)
+screen -S some_name
+```
+
+now do whatever processing you need:
+
+```bash
+# download, etc...
+curl http://a_dataset
+unzip a_dataset
+
+# process
+do_something
+something_else
+bash process.sh
+...
+```
+
+when you're done, upload to Grid via the CLI (on the Interactive Session):
+
+```bash
+grid datastore create --source imagenet_folder --name imagenet
+```
+
+:::note
+Grid CLI is auto-installed on sessions and logged in under your credentials.
+:::
+
+
+### Attaching Datastores
+Datastores can be attached to both Runs and Sessions. Below are examples on how to do that.
+
+#### Runs
+
+<!-- ![](/images/data.gif) -->
+
+You can mount a datastore to a run to make your experiments run faster! By default, the datastore is mounted at /datastores. When attaching datastores to a run, take note of the path your script uses. For example if your script takes an argument _my_data_path_ and you want to mount the _cats_ datastore:
+
+```bash
+grid run main.py --my_data_path /datastores/cats/1
+```
+
+
+##### Datastore paths
+
+Say you have a dataset with this structure:
+
+```bash
+my_dataset /
+  train/
+    ...
+  val/
+    ...
+```
+
+on your local machine, you call the script like so,
+
+```bash
+python main.py --root my_dataset/
+```
+
+your script uses the dataset like this,
+
+```python
+args.add_argument('-root')
+root = args.parse_args()
+
+train = load(root + 'train')
+val = load(root + 'val')
+```
+
+When you upload a datastore to Grid:
+
+```bash
+grid datastore create my_dataset
+```
+
+it is available under this structure:
+
+```bash
+train/
+  ...
+val/
+  ...
+```
+
+To run on this datastore, select the datastore from the dropdown
+
+![](/images/runs/runs-select-datastore.png)
+
+Now pass the name of the datastore to your command
+
+![](/images/runs/script-arguments.png)
+to Run + Sessions (perhaps this can be used as a link for the subsequent Run + Session redesigned pages)
+
+#### Sessions
+This video shows how we attach an ImageNet Datastore to a Session.
+
+![](/images/datastores/attach_datastore_to_session.gif)
+
+In Sessions datastores are mounted to /datastores. However, since juypyter notebooks use /home/joyvan as the default working directory we provide a symlink from /home/jovyan/datastores to /datastore so you can access your datastore easily upon opening up a Session.
+
+
+Once in the Session, view the data with:
+
+```bash
+cd /datastores
+ls
+```
+
