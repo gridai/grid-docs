@@ -1,4 +1,10 @@
-# Bring Your Own Cloud (BYOC) Options
+---
+sidebar_position: 2.1
+title: Bring Your Own Cloud (BYOC) Overview
+sidebar_label: Bring Your Own Cloud (BYOC) Overview
+---
+
+# Bring Your Own Cloud (BYOC) Overview
 
 :::note
 This feature is part of our Teams plan. If you're interested in learning more, please fill out this [form](https://www.grid.ai/upgrade/).
