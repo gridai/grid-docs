@@ -2,11 +2,12 @@
 
 There are many ways to operationalize a Datastore in Grid. Below we provide some examples to get you started with working with this core feature. The examples cover the following:
 1. Create Datastores from your machine
-2. Periodically upload datastores
+2. Create from private S3 Bucket
 3. Create from a Session
 4. Create from a Run
 5. Create from a Cluster
 6. Attaching Datastores
+7. Periodically upload datastores
 
 ## Examples
 
@@ -71,24 +72,32 @@ Datastores go through a number of statuses such as optimizing, processing upload
 
 On the CLI, grid datastore command shows which Datastores are available to be used.
 
+### Create from a Private S3 Bucket
 
-### Periodic Upload
-#### Upload on a timer
+At this time we are only supporting usage of private S3 buckets as datastores for BYOC users, who have connected Grid to a custom AWS cluster. You can grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 
-In certain cases, your data might change hourly and you might want to update your datastore. You can configure your crontab to do this automatically.
-
-Here's an example that uploads a new version of a datastore every hour:
-
-```bash
-#write out current crontab
-crontab -l > mycron
-
-#run datastore upload every hour every day
-echo "0 * * * * grid datastore create --source data/path --name dataset" >> mycron    
-
-#install new cron file
-crontab mycron
-rm mycron
+As a convenience, below we provided a bucket policy that grants Grid access to all the contents of your specified bucket. It assumes that you modified the tfvars role_arn field. If you have not then you can use `<aws-account-id-associated-with-byoc>:root` instead. You can follow this official aws [documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) to get your account id.
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::<aws-account-id-associated-with-byoc>:role/role-name"
+            },
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": [
+               "arn:aws:s3:::<your-bucket>/*",
+               "arn:aws:s3:::<your-bucket>"
+           ]               
+        }
+    ]
+}
 ```
 
 ### Create from a Session
@@ -255,3 +264,21 @@ cd /datastores
 ls
 ```
 
+### Periodic Upload
+#### Upload on a timer
+
+In certain cases, your data might change hourly and you might want to update your datastore. You can configure your crontab to do this automatically.
+
+Here's an example that uploads a new version of a datastore every hour:
+
+```bash
+#write out current crontab
+crontab -l > mycron
+
+#run datastore upload every hour every day
+echo "0 * * * * grid datastore create --source data/path --name dataset" >> mycron    
+
+#install new cron file
+crontab mycron
+rm mycron
+```
