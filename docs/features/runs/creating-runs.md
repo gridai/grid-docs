@@ -42,10 +42,7 @@ cd grid-tutorials
 grid run --name attaching-datastore datastore.py --data_dir /datastore/cifar5/1
 ```
 
-The above code is passing a script named datastore.py to the Run. The script will print the datastore directory contents. It should print the following:
-```text
-
-```
+The above code is passing a script named datastore.py to the Run. The script will print the datastore directory contents. It should print the directory structure of the Datastore.
 
 ## Creating Runs with script dependencies
 If you peaked at the grid-tutorials repo you may have noticed three things:
