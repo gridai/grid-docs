@@ -14,7 +14,8 @@ Because Runs are "serverless" compute you only pay for the time your script is r
 3. Attach Datastores
 4. [Auto-resume experiments](https://docs.grid.ai/features/runs/auto-resume-experiments)
 5. [Hyperparameter Search Optimizations](https://docs.grid.ai/features/runs/sweep-syntax)
-6. [Localdir](https://docs.grid.ai/features/runs/localdir)
+6. [Localdir](https://docs.grid.ai/features/runs/localdir)  
+7. [Utilize Interruptable Machines](https://docs.grid.ai/features/runs/interruptible-machines)
 
 
 ## Runs Primer
