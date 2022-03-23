@@ -1,3 +1,5 @@
+import Video from "@site/src/components/Video";
+
 # Runs Demystified
 
 ## What are Runs
