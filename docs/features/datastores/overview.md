@@ -1,4 +1,4 @@
-# Demystifying Datastores
+# Demystifying Datastorses
 
 ## What are Datastores
 
@@ -19,7 +19,7 @@ Datastores today have 3 main capabilities:
 ### Convention
 #### Datastore paths
 
-1. Stored at /datastore/[datastore name]/[version] on both Runs and Sessions
+1. Stored at /datastores/[datastore name]/[version] on both Runs and Sessions
 
 # Next Steps
 We recommend going to the next section of our Datastores tutorial, "Using Datastores". More advanced users can feel free to skip to any of the other tutorials that are
