@@ -8,4 +8,4 @@ There are many ways to operationalize a Datastore in Grid. Below we provide some
     1.4. Create from a Run  
     1.5. Create from a Cluster  
 2. [Attaching Datastores](https://docs.grid.ai/features/datastores/attaching-datastores)
-3. [Periodically uploading Datastores]((https://docs.grid.ai/features/datastores/periodically-uploading-datastores)   
+3. [Periodically uploading Datastores](https://docs.grid.ai/features/datastores/periodically-uploading-datastores)   
