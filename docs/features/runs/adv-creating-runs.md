@@ -2,4 +2,5 @@
 Runs are highly customizable "serverless" compute. For advanced users we offer two additional methods for customizing Runs. The examples cover the following:
 1. [Creating Runs with Dockerfiles](https://docs.grid.ai/features/runs/creating-runs-with-dockerfiles)
 2. [Creating Runs with config.yaml](https://docs.grid.ai/features/runs/creating-runs-with-config.yaml)
+3. [Multi Node Runs](https://docs.grid.ai/features/runs/multi-node)
 
