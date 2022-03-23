@@ -4,3 +4,6 @@ Runs are highly customizable "serverless" compute. For advanced users we offer t
 2. [Creating Runs with config.yaml](https://docs.grid.ai/features/runs/creating-runs-with-config.yaml)
 3. [Multi Node Runs](https://docs.grid.ai/features/runs/multi-node)
 
+# Next Steps
+Checkout our [sharing runs](https://docs.grid.ai/features/runs/sharing-runs) page to learn how to share your Runs!
+
