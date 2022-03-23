@@ -2,16 +2,17 @@
 The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page
 :::
 
-# How to create Runs
+# How to Create Runs
 Runs are highly customizable "serverless" compute. Here we will cover all the methods made available to customize Runs for your usecases. The examples cover the following:
 1. [Creating vanilla Runs](https://docs.grid.ai/features/runs#creating-vanilla-runs)
 2. [Attaching Datastores to Runs](https://docs.grid.ai/features/runs#attaching-datastores-to-runs)
 3. [Creating Runs with script dependencies](https://docs.grid.ai/features/runs#creating-runs-with-script-dependencies)  
-  3.1 Runs with specified requirements.txt  
-  3.2 Runs with specified environment.yml
+  3.1 Handeling requirements
+  3.2 Runs with specified requirements.txt  
+  3.3 Runs with specified environment.yml
 
 The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page
-## Creating vanilla Runs
+## Creating Vanilla Runs
 A "vanilla" Run is simply a Run that only runs a script. This hello_world [repo](https://github.com/oojo12/hello_world/tree/main) will be used in the following example.
 
 ```text
@@ -46,7 +47,7 @@ grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 
 
 The above code is passing a script named datastore.py to the Run. The script will print the datastore directory contents. It should print the directory structure of the Datastore.
 
-## Creating Runs with script dependencies
+## Creating Runs with Script Dependencies
 If you peaked at the grid-tutorials repo you may have noticed three things:
 1. It has a requirements.txt in the root directory
 2. There is a pip folder
@@ -61,7 +62,7 @@ However, we recommend that your projects have a `requirements.txt` file in the r
 
 ![](/images/runs/requirements.png)
 
-### Runs with specified requirements.txt
+### Runs with Specified requirements.txt
 Runs allow you to specify the requirements.txt you want to use for package installation. This especially useful when your directory isn't ordered in such a way that the
 requirements.txt resides at the root project level. In such cases you can use the below example as a template for specifying which requirements.txt file should be used
 for package installation.
@@ -76,7 +77,7 @@ You will notice we did something different here than in prior examples. We used 
 should be used for package installation in the Run. See the build logs to see the difference between this and the Creating vanilla Runs example above.
 For instructions on how to view the logs check out [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
 
-### Runs with specified environment.yml
+### Runs with Specified environment.yml
 Runs allow you to specify the environment.yml you want to use for package installation. This is the only way to get Runs to use the Conda package manager without using a config file.
 Because `conda export` will output dependencies specfiically for your operating system, this can cause issues when run on a non-Linux machine. In such cases we recommend using
 `conda env export --from-history` as mentioned in the [official docoumentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms).
