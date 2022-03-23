@@ -12,7 +12,7 @@ This page describes community edition pricing; refer to plans [here](https://www
 
 ## List pricing
 
-If you need to run jobs for a long time and they cannot be interrupted, then use the default way of running. This will use list pricing
+If you need to run jobs for a long time and they cannot be interrupted, then use the default way of running. This will use the list pricing.
 
 ```text
 grid run main.py
@@ -20,15 +20,11 @@ grid run main.py
 
 ## Interruptible pricing
 
-If your jobs can be interrupted and you want to save $$$$ then enable spot. Whenever the cloud provider needs that machine, the job will be killed automatically
+If your jobs can be interrupted and you want to save money then enable spot. Whenever the cloud provider needs that machine, the job will be killed automatically.
 
 ```text
 grid run --use_spot main.py
 ```
-
-:::note
-Interruptible machines are only available for Runs at the moment \(Sessions coming soon\)
-:::
 
 ## Individual Tier hourly rates
 
