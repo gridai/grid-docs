@@ -9,9 +9,9 @@ Runs are "serverless" compute dedicated to executing the scripts you provide the
 Because Runs are "serverless" compute you only pay for the time your script is running. This amounts to massive cost savings whether you use Runs in Grid Cloud or in Bring Your Own Cloud.
 
 ### Capabilities
-1. Access to a variety of machine types available on AWS
-2. [GitHub Integration](https://docs.grid.ai/platformgithub-integration)
-3. Attach Datastores
+1. [Utilize a Variety of AWS Machines](https://docs.grid.ai/platform/machines)
+2. [GitHub Integration](https://docs.grid.ai/platform/github-integration)
+3. [Attach Datastores](https://docs.grid.ai/features/runs#attaching-datastores-to-runs)
 4. [Auto-resume experiments](https://docs.grid.ai/features/runs/auto-resume-experiments)
 5. [Hyperparameter Search Optimizations](https://docs.grid.ai/features/runs/sweep-syntax)
 6. [Localdir](https://docs.grid.ai/features/runs/localdir)  
