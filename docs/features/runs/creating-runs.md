@@ -88,3 +88,9 @@ grid run --name specified-requirements --dependency_file ./conda/environemnt.yml
 
 See the build logs to see the difference between this and the Creating vanilla Runs example above.
 For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
+
+# Next Steps
+Please checkout the following tutorials:
+1. [Primer on Grid Sweep Syntax](https://docs.grid.ai/features/runs/sweep-syntax)
+2. [Analyzing Runs](https://docs.grid.ai/features/runs/analyzing-runs)
+3. [Advanced Run Creation](https://docs.grid.ai/features/runs/adv-creating-runs)
