@@ -3,8 +3,8 @@ Runs are highly customizable "serverless" compute. Here we will cover all the me
 1. Creating vanilla Runs
 2. Attaching Datastores to Runs
 3. Creating Runs with script dependencies
-  - Requirements.txt
-  - Environement.yml
+  1 Runs with specified requirements.txt
+  2 Runs with specified environment.yml
 4. Creating Runs with Dockerfiles
 5. Creating Runs with config.yaml
 
