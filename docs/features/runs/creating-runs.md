@@ -69,7 +69,7 @@ grid run --name specified-requirements --dependency_file ./pip/requirements.txt 
 
 You will notice we did something different here than in prior examples. We used the `--dependency_file` flag. This flag tells Grid what file
 should be used for package installation in the Run. See the build logs to see the difference between this and the Creating vanilla Runs example above.
-For instructions on how to view the logs check out the next section [Viewing logs produced by Runs]().
+For instructions on how to view the logs check out the next section [Viewing logs produced by Runs](https://docs.grid.ai/runs/viewing-run-logs).
 
 ### Runs with specified environment.yml
 Runs allow you to specify the environment.yml you want to use for package installation. This is the only way to get Runs to use the Conda package manager without using a config file.
@@ -85,4 +85,4 @@ grid run --name specified-requirements --dependency_file ./conda/environemnt.yml
 ```
 
 See the build logs to see the difference between this and the Creating vanilla Runs example above.
-For instructions on how to view the logs check out the next section [Viewing logs produced by Runs]().
+For instructions on how to view the logs check out the next section [Viewing logs produced by Runs](https://docs.grid.ai/runs/viewing-run-logs).
