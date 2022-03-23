@@ -6,7 +6,7 @@ description: The dashboard shows all running sessions and the cost of activities
 
 ## Dashboard View
 
-The dashboard page shows a graph of runs and sessions and associated costs. You can also see what is currently active.
+The dashboard page shows a graph of Runs and Sessions and associated costs. You can also see what is currently active.
 
 :::note
 All costs are estimates until Runs or Sessions are complete.
