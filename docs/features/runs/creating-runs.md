@@ -42,7 +42,7 @@ Now that is done we can test attaching a Datastore to a Run
 ```text
 git clone https://github.com/oojo12/grid-tutorials.git
 cd grid-tutorials
-grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastore/cifar5/1
+grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastores/cifar5/1
 ```
 
 The above code is passing a script named datastore.py to the Run. The script will print the datastore directory contents. It should print the directory structure of the Datastore.
