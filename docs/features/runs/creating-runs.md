@@ -52,11 +52,14 @@ If you peaked at the grid-tutorials repo you may have noticed three things:
 2. There is a pip folder
 3. There is a conda folder
 
-We will touch on why those three are the case in this section of the tutorial.
+We will touch on why those three are the case in this section of the tutorial. But first let's speak about how Runs handle requirements.
 
-### Runs by default
-By default Runs will look for a requirements.txt in the project root directory and install that prior to executing the provided script. Since, this an uninteresting 
-example and nothing changes there is no example provided in this case.
+### Handling Requirements
+Anytime you run a project with Grid, we attempt to resolve as many dependencies as we can automatically for you. At this time nested requirements are not supported.
+
+However, we recommend that your projects have a `requirements.txt` file in the root.
+
+![](/images/runs/requirements.png)
 
 ### Runs with specified requirements.txt
 Runs allow you to specify the requirements.txt you want to use for package installation. This especially useful when your directory isn't ordered in such a way that the
