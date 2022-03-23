@@ -45,7 +45,14 @@ cd grid-tutorials
 grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastores/cifar5/1
 ```
 
-The above code is passing a script named datastore.py to the Run. The script will print the datastore directory contents. It should print the directory structure of the Datastore.
+The above code is passing a script named datastore.py to the Run. The script will print the contents of the Datastores root directory. You should see the following
+output in your stdout logs.
+
+```text
+['test', 'train']
+```
+
+For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
 
 ## Creating Runs with Script Dependencies
 If you peaked at the grid-tutorials repo you may have noticed three things:
