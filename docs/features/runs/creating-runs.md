@@ -6,7 +6,7 @@ The examples assume you have already installed and setup Grid. If you haven't al
 Runs are highly customizable "serverless" compute. Here we will cover all the methods made available to customize Runs for your usecases. The examples cover the following:
 1. [Creating vanilla Runs](https://docs.grid.ai/features/runs#creating-vanilla-runs)
 2. [Attaching Datastores to Runs](https://docs.grid.ai/features/runs#attaching-datastores-to-runs)
-3. [Creating Runs with script dependencies](https://docs.grid.ai/features/runs#creating-runs-with-script-dependencies)
+3. [Creating Runs with script dependencies](https://docs.grid.ai/features/runs#creating-runs-with-script-dependencies)  
   3.1 Runs with specified requirements.txt  
   3.2 Runs with specified environment.yml
 
