@@ -1,6 +1,6 @@
 import Video from "@site/src/components/Video";
 
-# Runs Demystified
+# Demystifying Runs
 
 ## What are Runs
 Runs are "serverless" compute dedicated to executing the scripts you provide them.  
@@ -10,10 +10,10 @@ Because Runs are "serverless" compute you only pay for the time your script is r
 
 ### Capabilities
 1. Access to a variety of machine types available on AWS
-2. GitHub Integration
+2. [GitHub Integration](https://docs.grid.ai/platformgithub-integration)
 3. Attach Datastores
-4. Auto-resume experiments
-5. Hyperparameter Search Optimizations
+4. [Auto-resume experiments](https://docs.grid.ai/features/runs/auto-resume-experiments)
+5. [Hyperparameter Search Optimizations](https://docs.grid.ai/features/runs/sweep-syntax)
 
 
 ## Runs Primer
