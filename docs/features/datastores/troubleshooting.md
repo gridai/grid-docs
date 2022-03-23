@@ -67,4 +67,3 @@ Grid will have access to your account data for operational purposes. If we do ne
 </table>
 
 If the following FAQ didn't help resolve your issue please file a support ticket at [support@grid.ai](mailto:support@grid.ai) or reach out to the community at [community Slack](https://gridai-community.slack.com).
-:::
