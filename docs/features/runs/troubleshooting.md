@@ -59,3 +59,5 @@ Grid supports Linux based operating systems. We recommend using virtual environm
 ## Experiments are queued for a long time
 
 If experiments are queued for a long time it could be a sign that instance type requested is not available; reach out on slack or open a github issue if you see this: [https://github.com/gridai/gridai/issues](https://github.com/gridai/gridai/issues). Choosing another instance type may help in some cases.
+
+If the following FAQ didn't help resolve your issue please file a support ticket at [support@grid.ai](mailto:support@grid.ai) or reach out to the community at [community Slack](https://gridai-community.slack.com).
