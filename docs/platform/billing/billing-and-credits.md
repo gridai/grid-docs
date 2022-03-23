@@ -9,11 +9,8 @@ To add credits click at the bottom left in navigation bar.
 
 ## Payment options
 
-Grid accepts payment via credit card at this time. Add credits and pay for what you need!
+Grid accepts payment via credit card at this time. 
 
 ## Using AWS Credits with Grid
 
-![](/images/platform/aws-logo.png)
-
-This feature is in an upgraded plan. See [this section](../custom-cloud-credentials/adding-custom-cloud-credentials.md).
-
+To use AWS credits with Grid is possible using our Teams Plan. [Contact us](mailto:support@grid.ai) to learn more.
