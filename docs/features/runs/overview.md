@@ -96,3 +96,6 @@ A RUN is a collection of experiments (the run has 4 experiments in this example)
 ### **Option 2: Start via the web UI**
 
 ![](/images/runs/run_start.gif)
+
+# Next Steps
+Checkout our documentation on [using runs](https://docs.grid.ai/features/runs/using-runs)
