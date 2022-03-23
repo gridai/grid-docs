@@ -1,5 +1,5 @@
 # Sharing Runs
-Grid offers a few ways to collaborate with Runs. This is a paid feature, for more details please see our [collaboration page](https://docs.grid.ai/platform/collaboration).
+Grid offers a few ways to share Runs. This is a paid feature, for more details please see our [collaboration page](https://docs.grid.ai/platform/collaboration).
 
 ## Sharing Reproducible Runs
 
