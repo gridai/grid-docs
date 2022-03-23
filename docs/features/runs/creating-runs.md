@@ -2,9 +2,9 @@
 Runs are highly customizable "serverless" compute. Here we will cover all the methods made available to customize Runs for your usecases. The examples cover the following:
 1. Creating vanilla Runs
 2. Attaching Datastores to Runs
-3. Creating Runs with script dependencies
-  1 Runs with specified requirements.txt
-  2 Runs with specified environment.yml
+3. Creating Runs with script dependencies  
+  3.1 Runs with specified requirements.txt  
+  3.2 Runs with specified environment.yml
 4. Creating Runs with Dockerfiles
 5. Creating Runs with config.yaml
 
