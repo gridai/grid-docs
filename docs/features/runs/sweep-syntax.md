@@ -1,5 +1,7 @@
 import Note from "@site/src/components/Note";
-
+:::note
+If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/troubleshooting.md). We periodically update this with user questions.
+:::
 # Hyperparameter Sweeps
 
 Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments:
