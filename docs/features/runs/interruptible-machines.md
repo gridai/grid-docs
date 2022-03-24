@@ -1,7 +1,9 @@
 ---
 description: Use this to save money on runs
 ---
-
+:::note
+If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/troubleshooting.md). We periodically update this with user questions.
+:::
 # Lowering costs (BETA)
 
 ## Interruptible machines
