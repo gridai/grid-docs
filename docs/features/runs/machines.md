@@ -1,3 +1,9 @@
+---
+sidebar_position: 2.2
+title: Machines
+sidebar_label: Machines
+---
+
 # Machines
 
 These are the options of available machines. The syntax for this is numberOfAccelerators_acceleratorType_availableMemory. Below is an example utilizing this syntax to create a run on a machine with 8 v100 gpus and 32 GB memory.

@@ -1,3 +1,8 @@
+---
+sidebar_position: 2.0
+title: Metrics
+sidebar_label: Metrics
+---
 # Metrics (charts)
 
 ## Web Interface view

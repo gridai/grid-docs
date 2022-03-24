@@ -1,5 +1,7 @@
 ---
-description: Flexibility when using command line
+sidebar_position: 2.6
+title: Actions
+sidebar_label: Actions
 ---
 import Note from "@site/src/components/Note";
 

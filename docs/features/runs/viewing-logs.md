@@ -1,3 +1,8 @@
+---
+sidebar_position: 1.9
+title: Viewing Logs
+sidebar_label: Viewing Logs
+---
 # Viewing logs
 
 ## Stdout logs <a id="stdout-logs"></a>
@@ -43,4 +48,3 @@ See the CLI [command](../../cli.md#logs) for more information
 ## New Streaming Logs on UI
 
 The Web UI now shows streaming logs as you execute runs, just click on experiment details and check out the Build logs and Stdout logs
-

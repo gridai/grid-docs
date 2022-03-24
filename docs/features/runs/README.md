@@ -1,5 +1,7 @@
 ---
-description: Run (and sweep) any private or public Github repository.
+sidebar_position: 1.1
+title: Overview
+sidebar_label: Overview
 ---
 
 import Video from "@site/src/components/Video";

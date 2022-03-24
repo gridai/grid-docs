@@ -1,6 +1,10 @@
-import Note from "@site/src/components/Note";
+---
+sidebar_position: 1.7
+title: Attaching Datastores
+sidebar_label: Attaching Datastores
+---
 
-<note> Note: Datastore can only be mounted to a Run at Run creation time </note>
+:::note Datastore can only be mounted to a Run at Run creation time:::
 
 # Attaching Datastores
 

@@ -1,4 +1,8 @@
-import Note from "@site/src/components/Note";
+---
+sidebar_position: 1.2
+title: Hyperparameter Sweep Syntax
+sidebar_label: Hyperparameter Sweep Syntax
+---
 
 # Hyperparameter Sweeps
 

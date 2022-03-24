@@ -1,8 +1,7 @@
 ---
-description: >-
-  When running experiments on interruptible spot instances, Grid can
-  automatically resume your experiment from the last saved checkpoint when a new
-  instance becomes available.
+sidebar_position: 2.4
+title: Auto-Resume Experiments
+sidebar_label: Auto-Resume Experiments
 ---
 
 # 🆕 Auto Resume Experiments

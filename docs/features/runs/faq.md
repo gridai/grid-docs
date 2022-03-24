@@ -1,5 +1,7 @@
 ---
-description: Frequently asked questions about Runs
+sidebar_position: 2.8
+title: FAQ
+sidebar_label: FAQ
 ---
 
 # FAQ

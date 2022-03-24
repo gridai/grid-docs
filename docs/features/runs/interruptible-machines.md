@@ -1,5 +1,7 @@
 ---
-description: Use this to save money on runs
+sidebar_position: 2.3
+title: Spot Instances
+sidebar_label: Spot Instances
 ---
 
 # Lowering costs (BETA)

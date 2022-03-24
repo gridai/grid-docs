@@ -1,3 +1,9 @@
+---
+sidebar_position: 2.1
+title: Failed Jobs
+sidebar_label: Failed Jobs
+---
+
 # Failed jobs
 
 When your jobs fail it could be for 2 reasons, something failed during build or something failed while running

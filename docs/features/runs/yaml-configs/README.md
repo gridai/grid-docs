@@ -1,3 +1,8 @@
+---
+sidebar_position: 2.6
+title: YAML
+sidebar_label: YAML
+---
 # YAML configs
 
 ## Using Environment Variables
@@ -15,7 +20,7 @@ The environment variable **`MY_ENVIRONMENT_VARIABLE`** will be injected into you
 
 ## Specifying Requirement Files
 
-Grid will automatically install dependencies into your project using either `pip` or `conda`. It does that automatically by finding files either named `requirements.txt` or `environment.yml` in your project's root. 
+Grid will automatically install dependencies into your project using either `pip` or `conda`. It does that automatically by finding files either named `requirements.txt` or `environment.yml` in your project's root.
 
 If your dependencies live elsewhere, you can specify their location using the `dependency_file_info` attribute in the Grid YAML config.
 
@@ -24,7 +29,7 @@ compute:
   train:
     dependency_file_info:
       package_manager: pip
-      path: ./requirements/requirements.txt # can have any name 
+      path: ./requirements/requirements.txt # can have any name
 ```
 
 ## Full Example
@@ -48,9 +53,9 @@ compute:
     # Your environment variables
     environment:
       MY_ENVIRONMENT_VARIABLE: "example"
-      
+
     # Dependency file specification
     dependency_file_info:
       package_manager: pip
-      path: ./requirements/requirements.txt # can have any name 
+      path: ./requirements/requirements.txt # can have any name
 ```

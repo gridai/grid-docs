@@ -1,7 +1,7 @@
 ---
-description: >-
-  Distributed (Multi node) training is a method of scaling models and data to
-  multiple devices for parallel execution
+sidebar_position: 2.7
+title: Multi-node
+sidebar_label: Multi-node
 ---
 
 # Multi-node training (Beta)
