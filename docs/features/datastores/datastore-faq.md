@@ -4,10 +4,6 @@ title: FAQ
 sidebar_label: FAQ
 ---
 
----
-description: Frequently asked questions regarding Datastores
----
-
 # FAQ
 
 ## Data is private

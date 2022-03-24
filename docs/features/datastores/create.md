@@ -3,11 +3,6 @@ sidebar_position: 1.1
 title: Creating Datastores
 sidebar_label: Creating Datastores
 ---
-
----
-description: How to create datastores.
----
-
 # Create
 
 ## Small datasets
