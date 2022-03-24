@@ -1,3 +1,6 @@
+:::note
+If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/troubleshooting.md). We periodically update this with user questions.
+:::
 # Private Repos
 
 Grid Runs offers two solutions for using private repos:
