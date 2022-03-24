@@ -1,5 +1,8 @@
 import Note from "@site/src/components/Note";
-
+:::note
+The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
+Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/troubleshooting.md). We periodically update this with user questions.
+:::
 # Using YAML
 
 In addition to CLI parameters, Grid supports the use of YML files so you don't have to pass in many parameters in all occasions. If you don't change compute parameters often, we suggest you create a Grid config file and use that instead.
