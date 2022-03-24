@@ -1,3 +1,6 @@
+:::note
+If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/troubleshooting.md). We periodically update this with user questions.
+:::
 # Sharing Runs
 Grid offers a few ways to share Runs. This is a paid feature, for more details please see our [collaboration page](https://docs.grid.ai/platform/collaboration).
 
