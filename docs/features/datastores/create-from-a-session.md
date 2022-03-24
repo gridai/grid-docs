@@ -1,4 +1,10 @@
 ---
+sidebar_position: 1.2
+title: Creating Datastores from Session
+sidebar_label: Creating Datastores from Session
+---
+
+---
 description: Upload datasets from within a session into Datastore
 ---
 
