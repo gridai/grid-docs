@@ -41,3 +41,25 @@ This is so that you don't lose your work!
 When you have added credits, just resume the session and carry on with your work. The left navigation bar always shows credits remaining.
 
 ![](/images/sessions/autopausing.gif)
+
+## Pause a session using a cron job
+
+You can use Github Action cron to pause a session 
+
+To pause a session in cron fashion. Below is scheduled-SessionPause.yml.
+
+```
+jobs:
+  gridai-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: gridai-actions/gridai-login@v0
+        with:
+          gridai-username: ${{ secrets.GRIDAI_USERNAME }} 
+          gridai-key: ${{ secrets.GRIDAI_KEY }}
+      - run: |
+          grid session pause ${{ secrets.SESSION_NAME }} 
+  ```
+
+For example look at the [Github repository](https://github.com/sunitaprakash/grid-session-env).
