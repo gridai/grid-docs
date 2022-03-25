@@ -6,11 +6,11 @@ Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/featur
 # How to Create Runs
 Runs are highly customizable "serverless" compute. Here we will cover all the methods made available to customize Runs for your usecases. The examples cover the following:
 1. [Creating vanilla Runs](https://docs.grid.ai/features/runs#creating-vanilla-runs)
-2. [Attaching Datastores to Runs](https://docs.grid.ai/features/runs#attaching-datastores-to-runs)
-3. [Creating Runs with script dependencies](https://docs.grid.ai/features/runs#creating-runs-with-script-dependencies)  
-  3.1 Handeling requirements
+2. [Creating Runs with script dependencies](https://docs.grid.ai/features/runs#creating-runs-with-script-dependencies)  
+  3.1 Handeling requirements  
   3.2 Runs with specified requirements.txt  
   3.3 Runs with specified environment.yml
+3. [Attaching Datastores to Runs](https://docs.grid.ai/features/runs#attaching-datastores-to-runs)
 
 The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page
 ## Creating Vanilla Runs
@@ -23,37 +23,7 @@ grid run --name hello hello.py
 ```
 
 The above code is passing a script named hello.py to the Run. The script will print out 'hello_world'. For instructions on how to view the logs check out the
-next section [Viewing logs produced by Runs]().
-
-## Attaching Datastores to Runs
-There are many times when attaching a Datastore to a Run will be desireable. For instance, if you have large scale data it may be easier to house that in a datastore than on your local machine. 
-In such situations Datastores may resolve blockers to your workflow. Now let's dive right in we will be using a different repository called grid-tutorials for this and the 
-remaining examples. 
-
-If you haven't already followed the Getting Started page you will need to create a Datastore with the below commands first.
-```text
-# download
-curl https://pl-flash-data.s3.amazonaws.com/cifar5.zip -o cifar5.zip
-# unzip
-unzip cifar5.zip
-grid datastore create cifar5/ --name cifar5
-```
-
-Now that is done we can test attaching a Datastore to a Run
-```text
-git clone https://github.com/oojo12/grid-tutorials.git
-cd grid-tutorials
-grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastores/cifar5/1
-```
-
-The above code is passing a script named datastore.py to the Run. The script will print the contents of the Datastores root directory. You should see the following
-output in your stdout logs.
-
-```text
-['test', 'train']
-```
-
-For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
+next section [Viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
 
 ## Creating Runs with Script Dependencies
 If you peaked at the grid-tutorials repo you may have noticed three things:
@@ -99,6 +69,36 @@ grid run --name specified-requirements --dependency_file ./conda/environemnt.yml
 ```
 
 See the build logs to see the difference between this and the Creating vanilla Runs example above.
+For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
+
+## Attaching Datastores to Runs
+There are many times when attaching a Datastore to a Run will be desireable. For instance, if you have large scale data it may be easier to house that in a datastore than on your local machine. 
+In such situations Datastores may resolve blockers to your workflow. Now let's dive right in we will be using a different repository called grid-tutorials for this and the 
+remaining examples. 
+
+If you haven't already followed the Getting Started page you will need to create a Datastore with the below commands first.
+```text
+# download
+curl https://pl-flash-data.s3.amazonaws.com/cifar5.zip -o cifar5.zip
+# unzip
+unzip cifar5.zip
+grid datastore create cifar5/ --name cifar5
+```
+
+Now that is done we can test attaching a Datastore to a Run
+```text
+git clone https://github.com/oojo12/grid-tutorials.git
+cd grid-tutorials
+grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastores/cifar5/1
+```
+
+The above code is passing a script named datastore.py to the Run. The script will print the contents of the Datastores root directory. You should see the following
+output in your stdout logs.
+
+```text
+['test', 'train']
+```
+
 For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
 
 # Next Steps
