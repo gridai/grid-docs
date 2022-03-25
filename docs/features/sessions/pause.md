@@ -42,7 +42,7 @@ When you have added credits, just resume the session and carry on with your work
 
 ![](/images/sessions/autopausing.gif)
 
-## Pause a session using a cron job
+## Pause a Session Using a Cron Job
 
 You can use Github Action cron to pause a session 
 
