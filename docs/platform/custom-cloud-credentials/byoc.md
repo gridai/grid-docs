@@ -1,7 +1,7 @@
 # Bring Your Own Cloud (BYOC) Options
 
 :::note
-To request access to this feature send an email to [support@grid.ai](mailto:support@grid.ai) with the subject "Request Access to BYOC Feature".
+To request access to this feature fill out the [form](https://www.grid.ai/upgrade/).
 :::
 
 Grid creates clusters inside your own cloud account allowing you to keep complete control of the resources that you need. We offer two options for BYOC: Grid-managed BYOC Infrastructure mode and Customer-managed-Infrastructure mode.
