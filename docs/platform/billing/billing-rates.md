@@ -20,11 +20,13 @@ grid run main.py
 
 ## Interruptible pricing
 
-If your jobs can be interrupted and you want to save money then enable spot. Whenever the cloud provider needs that machine, the job will be killed automatically.
+If your jobs (Sessions or Runs) can be interrupted and you want to save money then enable [Spot Instances](https://docs.grid.ai/features/runs/interruptible-machines#interruptible-machines). Whenever the cloud provider needs that machine, the job will be killed automatically.
 
 ```text
 grid run --use_spot main.py
 ```
+
+```grid session create --use_spot```
 
 ## Individual Tier hourly rates
 
