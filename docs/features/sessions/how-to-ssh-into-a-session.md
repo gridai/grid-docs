@@ -53,6 +53,7 @@ If trying to use session with ssh and asked for a password:
 - Do the above [Step 0: Create an SSH Key](https://github.com/gridai/grid-docs/blob/doc-118-docs-add-troubleshooting-tip-to-ssh-docs/docs/features/sessions/how-to-ssh-into-a-session.md#step-0-create-an-ssh-key) and [Step 1: Add the SSH key](https://github.com/gridai/grid-docs/blob/doc-118-docs-add-troubleshooting-tip-to-ssh-docs/docs/features/sessions/how-to-ssh-into-a-session.md#step-1-add-the-ssh-key) to Grid
 - Make sure that ~/.ssh/config file doesn't have a rule that conflicts with Grid settings
 - Make sure that the below line is at the top of the ~/.ssh/config file.
+  
   ###grid.ai managed BEGIN do not edit manually### is at the top of the config file.
 :::
 
