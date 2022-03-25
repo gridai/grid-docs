@@ -27,10 +27,10 @@ Artifacts are downloadable for 24 hours after creation.
 Grid by default will look for a requirements.txt file in the root directory of your project. To customize this behavior try using the `--dependency_file` flag. An example is below:
 `grid run --dependency_file ./path/to/requirements.txt model.py`
 
-## How can I resolve Windows pathing issues when using grid?
+## How can I resolve Windows pathing issues when using Grid?
 There are two options users can try:
 1. default to the Windows Subsystem for Linux
-2. Try running your commands with by replacing `\` characters with `\\` in your path.
+2. Try running your commands by replacing `\` characters with `\\` in your path.
 
 ## The cost changed during a run?
 
