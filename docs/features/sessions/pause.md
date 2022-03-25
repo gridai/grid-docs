@@ -42,13 +42,17 @@ When you have added credits, just resume the session and carry on with your work
 
 ![](/images/sessions/autopausing.gif)
 
-## Pause a Session Using a Cron Job
+## Pause a Session Using a Github Action
 
-You can use Github Action cron to pause a session 
+You can use Github Action to pause a session. Every day when you are done for the work day.  
 
-To pause a session in cron fashion. Below is scheduled-SessionPause.yml.
+Below is scheduled-SessionPause.yml:
 
 ```
+on:
+  schedule:
+    # Runs "at 8:25pm" everyday
+    - cron: '25 8 * * *'
 jobs:
   gridai-actions:
     runs-on: ubuntu-latest
