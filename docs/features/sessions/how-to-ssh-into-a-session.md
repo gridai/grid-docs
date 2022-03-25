@@ -50,9 +50,9 @@ grid session ssh happy-owl-123
 
 :::note
 If trying to use session with ssh and asked for a password: 
-- make sure to do the above Step 0: Create an SSH Key and Step 1: Add the SSH key to Grid
-- make sure that ~/.ssh/config file doesn't have a rule that conflicts with Grid settings
-- Can you make sure that that below line is at the top of the ~/.ssh/config file.
+- Do the above [Step 0: Create an SSH Key](## Step 0: Create an SSH Key) and [Step 1: Add the SSH key](## Step 1: Add the SSH key) to Grid
+- Make sure that ~/.ssh/config file doesn't have a rule that conflicts with Grid settings
+- Make sure that the below line is at the top of the ~/.ssh/config file.
 ## grid.ai managed BEGIN do not edit manually### is at the top of the config file.
 :::
 
