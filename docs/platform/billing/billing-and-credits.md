@@ -13,4 +13,4 @@ Grid accepts payment via credit card at this time.
 
 ## Using AWS Credits with Grid
 
-To use AWS credits with Grid is possible using our Teams Plan. [Contact us](mailto:support@grid.ai) to learn more.
+You can use AWS credits with Grid by using our Teams Plan. [Contact us](https://www.grid.ai/upgrade/) to learn more.
