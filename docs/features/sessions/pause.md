@@ -44,7 +44,7 @@ When you have added credits, just resume the session and carry on with your work
 
 ## Pause a Session Using a Github Action
 
-You can use Github Action to pause a session. Every day when you are done for the work day.  
+When you are done with your work day, you can setup Github Action to pause your session.  
 
 Below is scheduled-SessionPause.yml:
 
