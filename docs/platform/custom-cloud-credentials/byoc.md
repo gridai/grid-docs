@@ -1,7 +1,7 @@
 # Bring Your Own Cloud (BYOC) Options
 
 :::note
-"This feature is part of our Teams plan. If you're interested in learning more, please fill out this [form](https://www.grid.ai/upgrade/).
+This feature is part of our Teams plan. If you're interested in learning more, please fill out this [form](https://www.grid.ai/upgrade/).
 :::
 
 Grid creates clusters inside your own cloud account allowing you to keep complete control of the resources that you need. We offer two options for BYOC: Grid-managed BYOC Infrastructure mode and Customer-managed-Infrastructure mode.
