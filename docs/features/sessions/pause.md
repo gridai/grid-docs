@@ -44,5 +44,4 @@ When you have added credits, just resume the session and carry on with your work
 
 ## Pause a Session Using a Github Action
 
-When you are not using your session, You can pause it using the Github Action.
-For example look at the [Github repository](https://github.com/sunitaprakash/grid-session-env).
+As a convenience, we provide a [GitHub Action](https://github.com/sunitaprakash/grid-session-env) for pausing Sessions.
