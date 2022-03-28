@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1.2
 title: Environment Variables
-sidebar_label: Actions
+sidebar_label: Environment Variables
 ---
 
 # Environmental Variables
