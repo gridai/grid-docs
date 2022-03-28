@@ -4,7 +4,7 @@ description: Use your own Dockerfile files when creating experiments in Grid.
 
 # Running Experiments With a Dockerfile
 
-Grid supports the creation of Runs using `Dockerfile` files. Dockerfiles are a container specification that determines how images are be built. You can find documentation about Dockerfiles [here](https://docs.docker.com/engine/reference/builder). When using this option the requirements.txt in the root project directory is ignored. Unless explicity mentioned in a RUN command within the Dockerfile.
+Grid supports the creation of Runs using `Dockerfile` files. Dockerfiles are a container specification that determines how images are be built. You can find documentation about Dockerfiles [here](https://docs.docker.com/engine/reference/builder). When using this option, the requirements.txt file in the root project directory is ignored unless explicity stated in a RUN command within the Dockerfile.
 
 ### Step 0: Create a Dockerfile
 
