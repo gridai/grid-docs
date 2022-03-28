@@ -40,22 +40,7 @@ To get the full power of Grid, it is important to integrate your Github account 
 
 ## Github Integration
 
-By default, if you've logged in with Github, you can only access public Github repositories on Grid.&#x20;
-
-To grant read access to your private code navigate to **Settings** > **Integrations** > **Grant access**.
-
-:::note
-If you've logged in for the first time with Google, you will need to link a Github account and grant access to repos.
-:::
-![](/images/platform/grant_github_access.gif)
-
-![Make sure the Integrations tab in settings shows private repos are connected](/images/runs/ui-integrations.png)
-
-## About private code
-
-Grid does not save your code, look at it or compromise its privacy in any way.
-
-When receiving support, you will not have to share any code to help debug. If you choose to share code, make sure you have the rights to and share non-critical parts of the code.
+See [here](https://docs.grid.ai/platform/github-integration) for detailed steps on how to integrate Grid with GitHub.
 
 # Tutorials
 
