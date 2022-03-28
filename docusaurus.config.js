@@ -56,6 +56,10 @@ const config = {
             to:"/features/datastores",
             from:"/products/add-data-to-grid-datastores"
           },
+          {
+            to:"/getting-started",
+            from:"/start-here"
+          },
         ],
       }),
     ],

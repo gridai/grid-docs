@@ -3,10 +3,10 @@
 Grid charges based on consumption of compute.
 
 :::note
-Costs are **estimates** until experiments or Sessions have finished, then Grid reports the final costs
+Costs are **estimates** until Runs have completed or Sessions are paused, then Grid reports the final costs
 :::
 
-To use GPU machines, a temporary hold of $1 is placed on credit card, this expires within 7 days.
+To use GPU machines, a temporary hold of $1 is placed on credit card, this falls off within 5-7 business days.
 
 This page describes community edition pricing; refer to plans [here](https://www.grid.ai/pricing/)
 
@@ -20,6 +20,7 @@ grid run main.py
 
 ## Interruptible pricing
 
+
 If your jobs (Sessions or Runs) can be interrupted and you want to save money then enable [Spot Instances](https://docs.grid.ai/features/runs/interruptible-machines#interruptible-machines). Whenever the cloud provider needs that machine, the job will be killed automatically.
 
 ```text
@@ -30,7 +31,7 @@ grid run --use_spot main.py
 
 ## Individual Tier hourly rates
 
-Here are the prices by machine type _per hour_ when running on Grid cloud \(Built on top of AWS\).
+Below you will find prices by machine type _per hour_ when running on Grid cloud \(Built on top of AWS\).
 
 \_\*\_Prices will vary slightly.
 
@@ -59,13 +60,9 @@ Here are the prices by machine type _per hour_ when running on Grid cloud \(Buil
 | 8xV100 \(16 GB\) | [p3.16xlarge](https://aws.amazon.com/ec2/instance-types/p3/) | ~ $25.70 | ~ $7.71 |
 | 8xV100 \(32 GB\) | [p3dn.24xlarge](https://aws.amazon.com/ec2/instance-types/p3/) | ~ $32.77 | ~ $11.11 |
 
-Read more about interruptible machines here
-
-[ ](../../features/runs/interruptible-machines.md)
-
 ## Machine specs
 
-If you're curious about the machine specs, here's the list.
+If you're curious about the machine specs, see below.
 
 ### P2 instance types
 
@@ -92,6 +89,5 @@ Please note: Costs seen in the various screens in product are an estimation
 ## **Credit card authorization**
 
 To use GPU machines you must authenticate your account with a credit card. A temporary $1 hold on the card will be placed. The hold expires after 7 days.
-
 Credit card information and processing is handled by [Stripe](https://stripe.com/).
 

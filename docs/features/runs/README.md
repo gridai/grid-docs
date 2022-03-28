@@ -25,6 +25,10 @@ The Grid CLI accepts "--" as a separator between grid arguments and script argum
 grid run --grid_param argument --grid_param argument -- train.py --script_param argument --script_param argument
 ```
 
+:::note
+Grid Run respects the use of .ignore files; these files are used to tell a program which files it should ignore during execution. Grid gives preference to the .gridignore file. In the absence of a .gridignore file Grid will concatenate the .gitignore and .dockerignore files to determine which files should be ignored. These files do not have to be provided to the CLI or UI and are expected to reside in the project root directory.
+:::
+
 **⚡️⚡️Forget about infrastructure ⚡️⚡️**
 
 Runs are "serverless" which means you only pay for the time your scripts are actually running. When running on your own infrastructure this amounts to massive cost savings as well.
