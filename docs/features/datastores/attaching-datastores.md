@@ -13,7 +13,22 @@ grid run main.py --my_data_path /datastores/cats/1
 ```
 
 
-### Datastore paths
+## Sessions
+This video shows how we attach an ImageNet Datastore to a Session.
+
+![](/images/datastores/attach_datastore_to_session.gif)
+
+In Sessions datastores are mounted to /datastores. However, since juypyter notebooks use /home/joyvan as the default working directory we provide a symlink from /home/jovyan/datastores to /datastore so you can access your datastore easily upon opening up a Session.
+
+
+Once in the Session, view the data with:
+
+```bash
+cd /datastores
+ls
+```
+
+## Datastore paths
 
 Say you have a dataset with this structure:
 
@@ -65,17 +80,3 @@ Now pass the name of the datastore to your command
 ![](/images/runs/script-arguments.png)
 to Run + Sessions (perhaps this can be used as a link for the subsequent Run + Session redesigned pages)
 
-## Sessions
-This video shows how we attach an ImageNet Datastore to a Session.
-
-![](/images/datastores/attach_datastore_to_session.gif)
-
-In Sessions datastores are mounted to /datastores. However, since juypyter notebooks use /home/joyvan as the default working directory we provide a symlink from /home/jovyan/datastores to /datastore so you can access your datastore easily upon opening up a Session.
-
-
-Once in the Session, view the data with:
-
-```bash
-cd /datastores
-ls
-```
