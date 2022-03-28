@@ -4,7 +4,7 @@ description: Grid provides an enterprise-ready SAML based Single Sign-On (SSO)
 
 # Single Sign-On \(SSO\)
 
-Please contact our team at [sales@grid.ai](mailto:sales@grid.ai if are interested in using SAML with Grid for your team.
+Please contact our team at [sales@grid.ai](mailto:sales@grid.ai if you are interested in using SAML with Grid for your team.
 
 ## Prerequisites
 
