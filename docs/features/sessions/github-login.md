@@ -3,7 +3,7 @@ description: Automatic login to Github in a Session
 ---
 
 # GitHub Integration
-See [here](https://docs.grid.ai/platformgithub-integration) for detailed steps on how to integrate GitHub with Grid.
+See [here](https://docs.grid.ai/platform/github-integration) for detailed steps on how to integrate GitHub with Grid.
 
 # Github login
 

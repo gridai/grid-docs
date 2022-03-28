@@ -40,7 +40,7 @@ To get the full power of Grid, it is important to integrate your Github account 
 
 ## Github Integration
 
-See [here](https://docs.grid.ai/platformgithub-integration) for detailed steps on how to integrate Grid with GitHub.
+See [here](https://docs.grid.ai/platform/github-integration) for detailed steps on how to integrate Grid with GitHub.
 
 # Tutorials
 
