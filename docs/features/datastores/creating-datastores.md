@@ -1,4 +1,5 @@
-# Create Datastores from your machine
+# Create Datastores
+
 ## Small datasets
 
 You can use the UI to create datastores for datasets smaller than 1GB (files or folder).
