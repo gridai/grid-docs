@@ -17,8 +17,8 @@ The examples assume you have already installed and setup Grid. If you haven't al
 A "vanilla" Run is simply a Run that only runs a script. This hello_world [repo](https://github.com/oojo12/hello_world/tree/main) will be used in the following example.
 
 ```text
-git clone https://github.com/oojo12/hello_world.git
-cd hello_world
+git clone https://github.com/PyTorchLightning/grid-tutorials.git
+cd features-intro
 grid run --name hello hello.py
 ```
 
@@ -46,9 +46,9 @@ requirements.txt resides at the root project level. In such cases you can use th
 for package installation.
 
 ```text
-git clone https://github.com/oojo12/grid-tutorials.git
-cd grid-tutorials
-grid run --name specified-requirements --dependency_file ./pip/requirements.txt hello.py
+git clone https://github.com/PyTorchLightning/grid-tutorials.git
+cd features-intro
+grid run --name specified-requirements-pip --dependency_file ./pip/requirements.txt hello.py
 ```
 
 You will notice we did something different here than in prior examples. We used the `--dependency_file` flag. This flag tells Grid what file
@@ -63,9 +63,9 @@ In such cases you can use the below example as a template for specifying which r
 for package installation.
 
 ```text
-git clone https://github.com/oojo12/grid-tutorials.git
-cd grid-tutorials
-grid run --name specified-requirements --dependency_file ./conda/environemnt.yml hello.py
+git clone https://github.com/PyTorchLightning/grid-tutorials.git
+cd features-intro
+grid run --name specified-requirements-conda --dependency_file ./conda/environemnt.yml hello.py
 ```
 
 See the build logs to see the difference between this and the Creating vanilla Runs example above.
@@ -87,8 +87,8 @@ grid datastore create cifar5/ --name cifar5
 
 Now that is done we can test attaching a Datastore to a Run
 ```text
-git clone https://github.com/oojo12/grid-tutorials.git
-cd grid-tutorials
+git clone https://github.com/PyTorchLightning/grid-tutorials.git
+cd features-intro
 grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastores/cifar5/1
 ```
 
