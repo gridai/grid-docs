@@ -20,10 +20,11 @@ description: known issue in the Grid Platform
 
 ### [Datastore](https://docs.grid.ai/features/datastores)
 * grid datastore [create](https://docs.grid.ai/features/datastores/create) ./cifar10
-When you are creating the datastore and if some of file in the datastore directory are symlink it will not work. You can create hardlink to those file and create a datastore. 
+When you are creating the Gridai datastore. The data directory has some files that are symlinks, if symlinks are softlinks the datastore upload will fail. You need to create a hardlink to those files to upload the datastore.
+
 
 ### [Runs](https://docs.grid.ai/features/runs)
-* For runs with CPU specify --cpu flag: When you run an experiment on CPU instance type, you need to specify the no --cpu flag in the run command or the run will use only 1 cpu. The cpu no should be 1 less cpu than maximum CPUs on the instance. 
+* For runs with CPU specify --cpu flag: When you run an experiment on CPU instance type, you need to specify the no of --cpu flag in the run command or the run will use only 1 cpu. The cpu no should be 1 less cpu than maximum CPUs on the instance, since Grid uses 1 cpu for its processing. (we need confirm this with engineering)
 
 * Folder size for [--localdir](https://docs.grid.ai/features/runs/localdir): When using the `--localdir` option the folder sizes are recommended to stay under 50MB
 
