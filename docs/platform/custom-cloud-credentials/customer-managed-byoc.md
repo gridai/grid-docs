@@ -239,7 +239,7 @@ Use `grid edit` to see instance types available and update as necessary.
 grid edit cluster <cluster name>
 ```
 
-Use `grid delete` to delete cluster. Deleting a cluster will delete its resources, including runing resources. Use with care!
+Use `grid delete` to delete cluster. Deleting a cluster will delete the resources created by Grid. In Customer Managed BYOC mode this will be the S3 buckets and EKS resources created by Grid. Use with care!
 
 <note>
     Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!
@@ -247,4 +247,10 @@ Use `grid delete` to delete cluster. Deleting a cluster will delete its resource
 
 ```bash
 grid delete cluster <cluster name>
+```
+
+Next use terraform to delete the AWS resources you created as part of the install process.
+
+```bash
+terraform destroy -var-file <your modified version of nmiculinic.tfvars>
 ```
