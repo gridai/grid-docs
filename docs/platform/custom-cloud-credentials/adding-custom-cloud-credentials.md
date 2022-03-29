@@ -105,7 +105,7 @@ The final step is to add all the Grid policies to your account. That means that 
 4. Click on "Add permissions"
 5. Click on "Attach existing policies directly"
 
-![Granting permissions to an user.](/images/byoc/aws-add-permissions.png)
+![Granting permissions to an user.](/images/byoc/aws-add-permissions.png) 
 
 1. Search for the policy IAMFullAccess:
 2. Click the Check Box to the left of `IAMFullAccess`
