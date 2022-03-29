@@ -36,7 +36,7 @@ with open("docs/cli/api.md", "w") as _cli:
         if row.startswith("### "):
             row = row.replace("### ", "## grid ")
         if row.startswith("#### "):
-            row = row.replace("#### ", "### --")
+            row = row.replace("#### ", "### ")
         if '`g2.8xlarge,g3.16xlarge,' in row:
             row = row.replace(",", ", ")
         row = row.replace("<", "`<").replace(">", ">`")
