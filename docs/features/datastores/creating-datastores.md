@@ -4,7 +4,7 @@ Datastores can be created from any file type and also accept HTTP URL's and S3 U
 
 ## Small datasets
 
-You can use the UI to create Datastores for datasets smaller than 1GB (files or folder). We have noticed that when the Datastore sizes are 1GB+ you start to hit the browser limit for uploading data. In such situations we advise using the CLI to upload Datastores.
+You can use the UI to create Datastores for datasets smaller than 1GB (files or folder). We have noticed that when the Datastore sizes are 1GB+ you start to hit the browser limit for uploading data. In such situations we advise using the CLI to create Datastores.
 
 Select the file or folder and click upload.
 
