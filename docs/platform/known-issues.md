@@ -30,10 +30,3 @@ When you are creating the datastore and if some of file in the datastore directo
 ### [Session](https://docs.grid.ai/features/sessions)
 * Cloning a Github repo with SSH is currenlty not supported. Insead, use Github's HTTPS clone method. 
 
-### [Grid Ignore](https://docs.grid.ai/features/runs)
-* Gridignore currently fails when there are two entries that map to the same directory.
-```
-For example:
-Helloworld
-Helloworld/src
-```
