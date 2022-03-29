@@ -1,5 +1,7 @@
 # Create Datastores
 
+Datastores can be created from any file type and also accept HTTP URL's and S3 URLS. 
+
 ## Small datasets
 
 You can use the UI to create datastores for datasets smaller than 1GB (files or folder).
@@ -43,22 +45,6 @@ This method can work from:
 * Any machine with an internet connection and Grid installed.
 * A Corporate cluster.
 * An Academic cluster.
-
-## Datastores from .zip
-
-For any datasets from a .zip, .tar or tar.gz that DO NOT require any post-processing, feel free to use the Web UI.
-
-The link will be downloaded, extracted and automatically mounted for you. You can use an interactive Session to verify for yourself.
-
-![](/images/datastores/zip_ds.gif)
-
-:::note
-You can still use the CLI for these datastores!
-:::
-
-Datastores go through a number of statuses such as optimizing, processing uploading. These are internal and a status of "succeeded" indicates that datastore is ready to be used.
-
-On the CLI, grid datastore command shows which Datastores are available to be used.
 
 # Create from a Private S3 Bucket
 
