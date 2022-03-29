@@ -14,11 +14,11 @@ Runs are highly customizable "serverless" compute. Here we will cover all the me
 
 The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page
 ## Creating Vanilla Runs
-A "vanilla" Run is simply a Run that only runs a script. This hello_world [repo](https://github.com/oojo12/hello_world/tree/main) will be used in the following example.
+A "vanilla" Run is simply a Run that only runs a hello world style script. It is taken from this [repo](https://github.com/PyTorchLightning/grid-tutorials/tree/main/features-intro/runs) will be used in the following example.
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
-cd features-intro
+cd features-intro/runs
 grid run --name hello hello.py
 ```
 
@@ -47,7 +47,7 @@ for package installation.
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
-cd features-intro
+cd features-intro/runs
 grid run --name specified-requirements-pip --dependency_file ./pip/requirements.txt hello.py
 ```
 
@@ -64,7 +64,7 @@ for package installation.
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
-cd features-intro
+cd features-intro/runs
 grid run --name specified-requirements-conda --dependency_file ./conda/environemnt.yml hello.py
 ```
 
@@ -88,7 +88,7 @@ grid datastore create cifar5/ --name cifar5
 Now that is done we can test attaching a Datastore to a Run
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
-cd features-intro
+cd features-intro/runs
 grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastores/cifar5/1
 ```
 
