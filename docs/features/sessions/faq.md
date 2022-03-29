@@ -25,5 +25,5 @@ In some cases, you may need to approve the application in Github. Follow [these 
 ## How to use Tensorboard in Session
 You can use port forwarding to use tensorboard in a Session. This can be accomplished with the following code
 
-`ssh -N -f -L localhost:8009:localhost:8009 <sessionname>`
+`ssh -N -f -L localhost:8009:localhost:8009 <sessionname>`  
 We also recommend checking out the official [tensorboard documentation](https://www.tensorflow.org/tensorboard/tensorboard_in_notebooks).
