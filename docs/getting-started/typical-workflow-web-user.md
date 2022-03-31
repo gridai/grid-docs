@@ -159,13 +159,13 @@ We're going to run the model using the following instructions. This GIF illustra
 Clone the project **on the interactive Session**
 
 ```yaml
-git clone https://github.com/williamFalcon/cifar5
+git clone https://github.com/PyTorchLightning/grid-tutorials.git
 ```
 
 Install requirements + project
 
 ```yaml
-cd cifar5
+cd getting-started
 
 pip install -r requirements.txt
 pip install -e .
@@ -174,20 +174,10 @@ pip install -e .
 now run the following command to train a resnet50 on 2 GPUs
 
 ```bash
-python project/lit_image_classifier.py \
-                --data_dir /datastore \
-                --gpus 2 \
-                --accelerator 'ddp' \
-                --backbone resnet50
-```
-
-You should see the results \(the script is designed to overfit the val split\)
-
-```yaml
---------------------------------------------------------------------------------
-DATALOADER:0 TEST RESULTS
-{'test_acc': 1.0, 'test_loss': 1.2107692956924438}
---------------------------------------------------------------------------------
+python flash-image-classifier.py \
+      --data_dir ../cifar5
+      --gpus 2 \
+      --epochs 4
 ```
 
 At this step \(in a real workflow\) you would code the model, debug, tune batch size, etc...
@@ -237,17 +227,16 @@ Now let's kick off the RUN.
 First, paste this link in the run page.
 
 ```bash
-https://github.com/williamFalcon/cifar5/blob/master/project/lit_image_classifier.py
+https://github.com/PyTorchLightning/grid-tutorials/blob/main/getting-started/flash-image-classifier.py
 ```
 
-Add the following args to spin up 10 different experiments
+Add the following args to spin up 5 different experiments
 
 ```bash
---data_dir /datastore \
+--data_dir /datastores/cifar5 \
 --gpus 2 \
---accelerator 'ddp' \
---learning_rate "uniform(1e-5, 1e-2, 5)" \
---backbone "['resnet18', 'resnet50']"
+--epochs 4 \
+--learning_rate "uniform(1e-5, 1e-1, 5)"
 ```
 
 <Video src="https://grid-docs.s3.us-east-2.amazonaws.com/run_cifar5.mp4" />
@@ -278,6 +267,4 @@ Anything your model produces can be viewed on Grid.
 
 ### CLI
 
-Finally... there is a really amazing experience with interactive sessions and run submission via the CLI. Feel free to check out the [Typical Workflow for a CLI](typical-workflow-cli-user.md) user. 
-
-
+Finally... there is a really amazing experience with interactive sessions and run submission via the CLI. Feel free to check out the [Typical Workflow for a CLI](typical-workflow-cli-user.md) user.
