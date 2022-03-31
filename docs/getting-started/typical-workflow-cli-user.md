@@ -243,7 +243,7 @@ ls /datastore
 Now you can code away!
 
 ```yaml
-git clone https://github.com/williamFalcon/cifar5
+git clone https://github.com/PyTorchLightning/grid-tutorials.git
 
 # debug, prototype, etc...
 
