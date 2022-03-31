@@ -103,7 +103,7 @@ $ grid logs divergent-piculet-508-exp0 -l 10 --show-build-logs
 ```
 
 ## Reuse Docker Images
-After creating a Run Grid will store the image for 1 week. This is especially useful when your Run image has a lot of dependencies and takes a long time to build. You can take full advantage of this by taking the push ref and using it in the FROM statement within your Dockerfile. Be sure to include the mandatory lines as noted below in the example. You can find the push ref with the following syntax.
+After creating a Run, Grid will store the image for 1 week. This is especially useful when your Run image has a lot of dependencies and takes a long time to build. You can take full advantage of this by taking the push ref and using it in the FROM statement within your Dockerfile. Be sure to include the mandatory lines as noted below in the example. You can find the push ref with the following syntax.
 
 `grid logs --show-build-logs <run-name>-exp0 | grep "pushing manifest" | head -n 1`
 
