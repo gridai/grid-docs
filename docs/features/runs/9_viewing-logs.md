@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.9
 title: Viewing Logs
 sidebar_label: Viewing Logs
 ---

@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2.6
 title: Actions
 sidebar_label: Actions
 ---

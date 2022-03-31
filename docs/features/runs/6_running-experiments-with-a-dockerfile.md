@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.6
 title: Runs with Dockerfile
 sidebar_label: Runs with Dockerfile
 ---

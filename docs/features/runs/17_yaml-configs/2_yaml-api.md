@@ -1,9 +1,3 @@
----
-sidebar_position: 2.7
-title: YAML API
-sidebar_label: YAML API
----
-
 # Using YAML
 
 In addition to CLI parameters, Grid supports the use of YML files so you don't have to pass in many parameters in all occasions. If you don't change compute parameters often, we suggest you create a Grid config file and use that instead.

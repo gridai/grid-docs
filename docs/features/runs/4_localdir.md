@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.4
 title: Localdir
 sidebar_label: Localdir
 ---

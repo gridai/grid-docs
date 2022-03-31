@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.3
 title: GitHub Integration
 sidebar_label: GitHub Integration
 ---

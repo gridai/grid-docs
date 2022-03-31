@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.2
 title: Hyperparameter Sweep Syntax
 sidebar_label: Hyperparameter Sweep Syntax
 ---

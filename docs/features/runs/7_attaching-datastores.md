@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.7
 title: Attaching Datastores
 sidebar_label: Attaching Datastores
 ---

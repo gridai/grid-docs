@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2.8
 title: FAQ
 sidebar_label: FAQ
 ---
@@ -32,6 +31,7 @@ Grid by default will look for a requirements.txt file in the root directory of y
 ## How can I resolve Windows pathing issues when using Grid?
 There are two options users can try:
 1. default to the Windows Subsystem for Linux
+
 2. Try running your commands by replacing `\` characters with `\\` in your path.
 
 ## The cost changed during a run?

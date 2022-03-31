@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2.5
 title: Sharing Runs
 sidebar_label: Sharing Runs
 ---

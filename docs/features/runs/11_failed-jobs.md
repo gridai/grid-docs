@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2.1
 title: Failed Jobs
 sidebar_label: Failed Jobs
 ---

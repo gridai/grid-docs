@@ -1,8 +1,3 @@
----
-sidebar_position: 2.6
-title: YAML
-sidebar_label: YAML
----
 # YAML configs
 
 ## Using Environment Variables

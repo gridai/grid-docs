@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2.3
 title: Spot Instances
 sidebar_label: Spot Instances
 ---

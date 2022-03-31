@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2.4
 title: Auto-Resume Experiments
 sidebar_label: Auto-Resume Experiments
 ---

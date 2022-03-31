@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2.7
 title: Multi-node
 sidebar_label: Multi-node
 ---

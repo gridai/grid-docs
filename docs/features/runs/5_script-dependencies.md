@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.5
 title: Script Dependencies
 sidebar_label: Script Dependencies
 ---

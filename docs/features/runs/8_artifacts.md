@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.8
 title: Accessing Artifacts
 sidebar_label: Accessing Artifacts
 ---
