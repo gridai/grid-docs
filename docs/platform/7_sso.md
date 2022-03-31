@@ -1,5 +1,6 @@
 ---
-description: Grid provides an enterprise-ready SAML based Single Sign-On (SSO)
+title: Single Sign On (SSO)
+sidebar_label: SSO
 ---
 
 # Single Sign-On \(SSO\)

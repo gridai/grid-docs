@@ -1,3 +1,8 @@
+---
+title: Security and Privacy
+sidebar_label: Security and Privacy
+---
+
 # Security & Privacy
 
 ### Data Privacy
@@ -18,4 +23,4 @@ You can choose to share your work with a team of collaborators working in a [col
 
 ### Authorization
 
-By default you can only access and run scripts from public Github repositories on Grid. To grant access to your private repositories, you will need to enable it in Grid [see here for more details on how to do that](https://docs.grid.ai/features/sessions/github-login). It is user responsibility to ensure they have permissions to grant access to private repos. 
+By default you can only access and run scripts from public Github repositories on Grid. To grant access to your private repositories, you will need to enable it in Grid [see here for more details on how to do that](https://docs.grid.ai/features/sessions/github-login). It is user responsibility to ensure they have permissions to grant access to private repos.

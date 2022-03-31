@@ -1,3 +1,8 @@
+---
+title: Collaboration
+sidebar_label: Collaboration
+---
+
 import Note from "@site/src/components/Note";
 
 # Collaboration

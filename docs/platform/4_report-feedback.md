@@ -1,3 +1,8 @@
+---
+title: Report Feedback
+sidebar_label: Report Feedback
+---
+
 # Report Feedback
 
 ## Speed
@@ -6,17 +11,17 @@ Grid is in the early days. We're working as hard as we can to improve user exper
 
 ## Your feedback
 
-Please report your feedback on features, demos, improvements in the product. 
+Please report your feedback on features, demos, improvements in the product.
 
-Feel free to message us on [Slack](https://join.slack.com/t/gridai-community/shared_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg) 
+Feel free to message us on [Slack](https://join.slack.com/t/gridai-community/shared_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg)
 
 Also send us feature requests at[ ](https://github.com/gridai/gridai/issues)[https://github.com/gridai/gridai/issues](https://github.com/gridai/gridai/issues)
 
 ## Support
 
-If you run into bugs, we're here to help! You can open issues here [https://github.com/gridai/gridai/issues](https://github.com/gridai/gridai/issues) 
+If you run into bugs, we're here to help! You can open issues here [https://github.com/gridai/gridai/issues](https://github.com/gridai/gridai/issues)
 
-If you prefer, contact us on [Slack](https://join.slack.com/t/gridai-community/shared_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg) and we can set up a live debugging session with you. 
+If you prefer, contact us on [Slack](https://join.slack.com/t/gridai-community/shared_invite/zt-ozqiwuif-UYK6rZGVmTTpMfPcVSdicg) and we can set up a live debugging session with you.
 
 You can also email us at [support@grid.ai](mailto:support@grid.ai)
 
@@ -27,4 +32,3 @@ Please note, our engineers cannot access your code, or data, and so you might ha
 Grid CLI works on Linux and Mac OS.
 
 Web interface is supported on Chrome and Firefox browsers
-

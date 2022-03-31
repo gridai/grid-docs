@@ -1,5 +1,6 @@
 ---
-description: Some best practices for using Grid
+title: Best Practices
+sidebar_label: Best Practices
 ---
 
 

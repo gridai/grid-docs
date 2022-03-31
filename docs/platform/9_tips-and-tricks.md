@@ -1,5 +1,6 @@
 ---
-description: Some cool Tips and Tricks using Grid Platform
+title: Tips and Tricks
+sidebar_label: Tips and Tricks
 ---
 
 # Tips & Tricks
@@ -137,4 +138,3 @@ echo "0  **** grid datastore create --source data/path --name dataset" &gt;&gt; 
 ```bash
 crontab mycron rm mycron
 ```
-
