@@ -1,9 +1,11 @@
 ---
-title: Failed Jobs
-sidebar_label: Failed Jobs
+title: Failed Runs
+sidebar_label: Failed Runs
 ---
-
-# Failed jobs
+:::note
+If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+:::
+# Failed Runs
 
 When your jobs fail it could be for 2 reasons, something failed during build or something failed while running
 
@@ -19,7 +21,7 @@ Failures at this stage can happen because:
 * An action can fail
 * Something goes wrong when executing your script
 
-## Script failures
+## Script Failures
 
 If the build completes but your script has a failure (ie: bug that causes exception) view the Stdout logs here
 

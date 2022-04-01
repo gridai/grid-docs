@@ -3,6 +3,9 @@ title: Hyperparameter Sweep Syntax
 sidebar_label: Hyperparameter Sweep Syntax
 ---
 
+:::note
+If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+:::
 # Hyperparameter Sweeps
 
 Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments:

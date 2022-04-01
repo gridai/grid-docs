@@ -2,6 +2,10 @@
 title: Viewing Logs
 sidebar_label: Viewing Logs
 ---
+:::note
+If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+:::
+
 # Viewing logs
 
 ## Stdout logs <a id="stdout-logs"></a>

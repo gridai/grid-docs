@@ -1,9 +1,14 @@
 ---
-title: Runs with Dockerfile
-sidebar_label: Runs with Dockerfile
+title: Creating Runs from Dockerfile
+sidebar_label: Creating Runs from Dockerfile
 ---
+:::note
+The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
+Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+:::
 
-# Running Experiments With a Dockerfile
+# Creating Runs from a Dockerfile
+## Running Experiments With a Dockerfile
 
 Grid supports the creation of Runs using `Dockerfile` files. Dockerfiles are a container specification that determines how images are be built. You can find documentation about Dockerfiles [here](https://docs.docker.com/engine/reference/builder). When using this option, the requirements.txt file in the root project directory is ignored unless explicity stated in a RUN command within the Dockerfile.
 
@@ -71,7 +76,7 @@ upload ━━━━━━━━━━━━━━━━━━━━━━━━�
                     datastore_mount_dir:     None
 ```
 
-### Step 2: View Build Logs
+#### Step 2: View Build Logs
 
 Then you are able to follow both build and experiment logs with the CLI or web UI.
 

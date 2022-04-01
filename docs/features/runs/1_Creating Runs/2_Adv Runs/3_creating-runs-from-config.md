@@ -1,14 +1,66 @@
 ---
-title: Actions
-sidebar_label: Actions
+title: Creating Runs from Config File
+sidebar_label: Creating Runs from Config File
 ---
-import Note from "@site/src/components/Note";
 
-# Actions
+:::note
+The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
+Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+:::
+# Using YAML
 
-## About Actions
+In addition to CLI parameters, Grid supports the use of YML files so you don't have to pass in many parameters in all occasions. If you don't change compute parameters often, we suggest you create a Grid config file and use that instead.
 
-Grid Actions give you the flexibility of adding steps to your training workflow without having to change your training script.
+## Grid Spec Overview
+
+The following YML file contains a commented version of every YML key. You need to provide these keys when writing a config file and change the properties to what you need.
+
+:::note
+Use either [cluster context](../../../platform/custom-cloud-credentials/grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
+:::
+
+```text
+# Main compute configuration.
+compute:
+
+  # Add cloud configuration here.
+  provider:
+
+    cluster: XXXXXX           # Cluster ID
+
+  # Training configuration.
+  train:
+
+    cpus: 1                       # Number of CPUs
+    gpus: 0                       # Number of GPUs
+    instance: t2.xlarge           # AWS instance type
+    datastore_name: null          # Datastore name to use
+    datastore_version: null       # Datastore version number
+    datastore_mount_dir: null     # Where to mount the datastore
+    use_spot: false               # If we should use spot instances
+    framework: "lightning"        # Which framework to use
+
+    # Pass in environment variables
+    environment:                
+      MY_ENVIRONMENT_VARIABLE: "example"
+```
+
+:::note
+Flags in grid YML files have a 1-to-1 mapping with `grid run` flags
+:::
+
+In addition to the parameters above, you can also run arbitrary commands on different stages of you training operation.
+
+## Creating Runs With a Config File
+
+You can create a Run with a config file instead of passing CLI arguments. For example:
+
+```text
+grid run --config my_config.yml script.py
+```
+
+## Config Files with Actions
+Config files also allow the use of a special feature called Actions. Grid Actions give you the flexibility of adding steps to your training workflow without having to change your training script.
 
 Example uses of actions:
 

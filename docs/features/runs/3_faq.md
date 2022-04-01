@@ -31,8 +31,7 @@ Grid by default will look for a requirements.txt file in the root directory of y
 ## How can I resolve Windows pathing issues when using Grid?
 There are two options users can try:
 1. default to the Windows Subsystem for Linux
-
-2. Try running your commands by replacing `\` characters with `\\` in your path.
+2. Try running your commands with by replacing `\` characters with `\\` in your path.
 
 ## The cost changed during a run?
 
@@ -61,3 +60,5 @@ Grid supports Linux based operating systems. We recommend using virtual environm
 ## Experiments are queued for a long time
 
 If experiments are queued for a long time it could be a sign that instance type requested is not available; reach out on slack or open a github issue if you see this: [https://github.com/gridai/gridai/issues](https://github.com/gridai/gridai/issues). Choosing another instance type may help in some cases.
+
+If the following FAQ didn't help resolve your issue please file a support ticket at [support@grid.ai](mailto:support@grid.ai) or reach out to the community at [community Slack](https://gridai-community.slack.com).

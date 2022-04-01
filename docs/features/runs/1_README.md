@@ -5,9 +5,27 @@ sidebar_label: Overview
 
 import Video from "@site/src/components/Video";
 
-# ⚡Runs
+# Demystifying Runs
 
-## Runs and sweeps
+## What are Runs
+Runs are "serverless" compute dedicated to executing the scripts you provide them.  
+
+## Why use Runs
+Because Runs are "serverless" compute you only pay for the time your script is running. This amounts to massive cost savings whether you use Runs in Grid Cloud or in Bring Your Own Cloud.
+
+### Capabilities Highlights
+1. [Utilize a Variety of AWS Machines](https://docs.grid.ai/platform/machines)
+2. [GitHub Integration](https://docs.grid.ai/platform/github-integration)
+3. [Attach Datastores](https://docs.grid.ai/features/runs#attaching-datastores-to-runs)
+4. [Auto-resume experiments](https://docs.grid.ai/features/runs/auto-resume-experiments)
+5. [Hyperparameter Search Optimizations](https://docs.grid.ai/features/runs/sweep-syntax)
+6. [Localdir](https://docs.grid.ai/features/runs/localdir)  
+7. [Utilize Interruptable Machines](https://docs.grid.ai/features/runs/interruptible-machines)
+
+
+## Runs Primer
+
+### Runs and sweeps
 
 Run (**and sweep**) any private or public Github repository on the cloud.
 
@@ -34,19 +52,19 @@ Grid Run respects the use of .ignore files; these files are used to tell a progr
 
 Runs are "serverless" which means you only pay for the time your scripts are actually running. When running on your own infrastructure this amounts to massive cost savings as well.
 
-## 1 minute overview
+### 1 minute overview
 
 In this video we're going to run an arbitrary model (from the pytorch examples github repo) across 4 GPUs (4 experiments each on 2 GPUs)
 
 <Video src="https://grid-docs.s3.us-east-2.amazonaws.com/intro_video_docs_run.mp4"/>
 
-## Product Tour
+### Product Tour
 
 [Click here for a 2-minute tour of RUN](https://platform.grid.ai/#/dashboard?product_tour_id=226810)
 
 ![](/images/runs/runs-product-tour.png)
 
-## Option 1: Run via the CLI
+### Option 1: Run via the CLI
 
 RUN **any** GitHub file with Grid in 4 steps:
 
@@ -84,6 +102,9 @@ python hello.py --number 2 --food_item 'hotdog'
 A RUN is a collection of experiments (the run has 4 experiments in this example).
 :::
 
-## **Option 2: Start via the web UI**
+### **Option 2: Start via the web UI**
 
 ![](/images/runs/run_start.gif)
+
+# Next Steps
+Checkout our documentation on [using runs](https://docs.grid.ai/features/runs/creating-basic-runs)

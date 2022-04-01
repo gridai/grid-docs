@@ -2,7 +2,9 @@
 title: Auto-Resume Experiments
 sidebar_label: Auto-Resume Experiments
 ---
-
+:::note
+If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+:::
 # 🆕 Auto Resume Experiments
 
 ### What are resumable experiments?
