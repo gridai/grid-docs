@@ -49,5 +49,15 @@ grid session ssh happy-owl-123
 ![](/images/sessions/how-to-ssh-into-session.gif)
 
 :::note
+If prompted for a password while attempting to connect to a Session:
+- [Create an SSH Key](https://github.com/gridai/grid-docs/blob/doc-118-docs-add-troubleshooting-tip-to-ssh-docs/docs/features/sessions/how-to-ssh-into-a-session.md#step-0-create-an-ssh-key)
+- [Add the SSH key to Grid](https://github.com/gridai/grid-docs/blob/doc-118-docs-add-troubleshooting-tip-to-ssh-docs/docs/features/sessions/how-to-ssh-into-a-session.md#step-1-add-the-ssh-key).
+- Make sure that ~/.ssh/config file doesn't have a rule that conflicts with Gridai settings
+- Make sure that the below line is at the top of the ~/.ssh/config file.
+  
+  ###grid.ai managed BEGIN do not edit manually### is at the top of the config file.
+:::
+
+:::note
 You can clone any Github repositories into a Session using the [HTTPS cloning method](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-using-the-command-line) (SSH method of cloning will not work).
 :::
