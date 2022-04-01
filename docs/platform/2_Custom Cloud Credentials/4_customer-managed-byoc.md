@@ -248,8 +248,9 @@ Use `grid delete` to delete cluster. Deleting a cluster will delete the resource
     Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!
 :::
 
+The below example will be a blocking call that freezes your CLI until the cluster has been successfully deleted. To do regular cluster deletion simply remove the `--wait` flag from the call.
 ```bash
-grid delete cluster <cluster name>
+grid delete cluster <cluster name> --wait
 ```
 
 Next use terraform to delete the AWS resources you created as part of the install process.
