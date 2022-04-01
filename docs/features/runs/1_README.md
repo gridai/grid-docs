@@ -57,7 +57,7 @@ Runs are "serverless" which means you only pay for the time your scripts are act
 In this video we're going to run an arbitrary model (from the pytorch examples github repo) across 4 GPUs (4 experiments each on 2 GPUs)
 
 <!-- This is out of date -->
-<!-- 1. the CLI args are incorrect: we don't use the `g_` prefix anymore -->
+<!-- 1. the CLI args are old: we deprecated the use of the `g_` prefix -->
 <!-- 2. the UI is out of date: we don't have a badge for reproducable runs anymore -->
 <Video src="https://grid-docs.s3.us-east-2.amazonaws.com/intro_video_docs_run.mp4"/>
 
