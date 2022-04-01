@@ -45,7 +45,7 @@ To view both build logs and stdout logs on the CLI simply find the experiment na
 grid logs enlightened-bullfinch-868-exp0 --use_pager
 ```
 
-See the CLI [command](../../cli.md#logs) for more information
+See the CLI [command](https://docs.grid.ai/cli#grid-logs) for more information
 
 
 ## New Streaming Logs on UI
