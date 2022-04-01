@@ -4,9 +4,14 @@ sidebar_label: Creating Datastores
 ---
 # Create Datastores
 
-Datastores can be created from any file type and also accept HTTP URL's and S3 URLS.
+Datastores can be created from a number of sources (on both the CLI and UI)
 
-## Small datasets
+- Uploading files stored on your computer.
+- From an HTTP URL which downloads a `.zip` or `.tar.gz` file. These files are automatically extracted by the Grid Platform before they are attached to a Run or Session
+- From an S3 Bucket using the syntax `s3://bucket-name/path/` 
+
+## Uploading Files from a Computer
+### Small datasets
 
 You can use the UI to create Datastores for datasets smaller than 1GB (files or folder). We have noticed that when the Datastore sizes are 1GB+ you start to hit the browser limit for uploading data. In such situations we advise using the CLI to create Datastores.
 
@@ -18,7 +23,7 @@ Select the file or folder and click upload.
 You can still use the CLI for these datastores!
 :::
 
-## Large datasets (1 GB+)
+### Large datasets (1 GB+)
 
 For datasets larger than 1 GB, use the CLI.
 
@@ -50,7 +55,8 @@ This method can work from:
 * A Corporate cluster.
 * An Academic cluster.
 
-# Create from a Private S3 Bucket
+# Creating Datastores from an S3 Bucket
+## Create from a Private S3 Bucket
 
 At this time we are only supporting usage of private S3 buckets as Datastores for BYOC users, who have connected Grid to a custom AWS cluster. You can grant Grid access to your desired buckets by following the official aws [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 
