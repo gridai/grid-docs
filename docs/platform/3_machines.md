@@ -30,12 +30,12 @@ Below are examples utilizing the numberOfAccelerators_acceleratorType_availableM
 
 numberOfAccelerators_acceleratorType_availableMemory syntax
 ```bash
-grid session create --instance_type 8_v100_32gb hello.py --gpus 8
+grid session create --instance_type 8_v100_32gb
 ```
 
 Instance.size synax
 ```bash
-grid session create --instance_type p3.16xlarge hello.py --gpus 8
+grid session create --instance_type p3.16xlarge
 ```
 
 ### Runs
