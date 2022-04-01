@@ -1,5 +1,7 @@
 ---
-description: Frequently asked questions regarding Datastores
+sidebar_position: 1.5
+title: FAQ
+sidebar_label: FAQ
 ---
 
 # FAQ
@@ -65,4 +67,3 @@ Grid will have access to your account data for operational purposes. If we do ne
     </tr>
   </tbody>
 </table>
-

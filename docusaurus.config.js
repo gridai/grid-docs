@@ -49,12 +49,16 @@ const config = {
             from: "/platform/upgrades/adding-custom-cloud-credentials"
           },
           {
-            to:"/features/runs",
+            to:"/features/runs/README",
             from:"/products/run-run-and-sweep-github-files"
           },
           {
             to:"/features/datastores",
             from:"/products/add-data-to-grid-datastores"
+          },
+          {
+            to:"/features/sessions",
+            from:"/products/sessions"
           },
         ],
       }),
@@ -86,7 +90,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "platform/changelog",
+            docId: "changelog",
             label: "Changelog",
             position: "left",
           },

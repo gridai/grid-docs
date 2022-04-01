@@ -1,5 +1,7 @@
 ---
-description: Choice of machines  for Sessions
+sidebar_position: 1.5
+title: Machines
+sidebar_label: Machines
 ---
 
 # Machines

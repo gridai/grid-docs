@@ -1,5 +1,7 @@
 ---
-description: List of the environmental variables available in Sessions
+sidebar_position: 1.2
+title: Environment Variables
+sidebar_label: Environment Variables
 ---
 
 # Environmental Variables
