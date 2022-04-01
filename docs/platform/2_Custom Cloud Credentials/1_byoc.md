@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2.1
 title: Bring Your Own Cloud (BYOC) Overview
 sidebar_label: Bring Your Own Cloud (BYOC) Overview
 ---
