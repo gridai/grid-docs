@@ -381,7 +381,7 @@ grid run --dependency_file ./requirements.txt \
          --localdir \
          --datastore_version 1 \
          -- \
-         cifar10-baseline.py \
+         flash-image-classifier.py \
          --data_dir /datastores/cifar5 \
          --gpus 2 \
          --epochs 4 \
