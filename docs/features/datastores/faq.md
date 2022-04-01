@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1.5
 title: FAQ
 sidebar_label: FAQ
 ---
@@ -27,7 +26,7 @@ Grid does not charge for storing data. However, there is a limit of 25 datastore
 Yes Grid DataStore max size is 1.5 TB. For security reasons, we only allow you to upload data for 12 hours continuously. If your data is too big to upload in a 12 hour period, it will stop uploading. Initiating `grid datastore create <args...>` again will resume the upload.
 
 ## Where does Grid mount my Datastore in a Session or Run?
-By default Grid mounts datastores to `/datastores`. This can be customized via cli with the  `--datastore_mount_dir` arugment.
+By default Grid mounts datastores to `/datastores/[datastore-name]`. This can be customized via cli with the  `--datastore_mount_dir` arugment.
 
 ## Is there a way to see what files are in a datastore?
 
@@ -67,3 +66,6 @@ Grid will have access to your account data for operational purposes. If we do ne
     </tr>
   </tbody>
 </table>
+
+
+If the following FAQ didn't help resolve your issue please file a support ticket at [support@grid.ai](mailto:support@grid.ai) or reach out to the community at [community Slack](https://gridai-community.slack.com).
