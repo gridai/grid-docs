@@ -24,7 +24,7 @@ Note a few things:
 
 - The dataset is small so the tutorial can be quick. But the workflow doesn't change for large-scale data.
 - We'll use PyTorch Lightning for simplicity, but the framework can be any of your choice.
-- If you are signed into Grid with Google, make sure to [link a Github account](../features/runs/private-repos.md) to your profile before launching your first run!
+- If you are signed into Grid with Google, make sure to [link a Github account](../features/runs/3_private-repos.md) to your profile before launching your first run!
 
 ## **Tutorial time: 16 minutes**
 
@@ -92,7 +92,7 @@ Let's create the datastore:
 ![](/images/examples/cifar-create-datastore.gif)
 
 :::note
-For datasets 1 GB or larger, use the [CLI](../cli/api.md#grid-datastore)
+For datasets 1 GB or larger, use the [CLI](../cli.md#grid-datastore)
 :::
 
 ## Step 2: Start a session

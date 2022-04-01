@@ -1,3 +1,9 @@
+---
+sidebar_position: 1.3
+title: Creating Datastores from a Cluster
+sidebar_label: Creating Datastores from a Cluster
+---
+
 # Create from a cluster
 
 ## Upload from a cluster

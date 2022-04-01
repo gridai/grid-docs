@@ -1,8 +1,7 @@
 ---
-description: >-
-  Visual studio code is a source-code editor made by Microsoft for Windows,
-  Linux and macOS. Features include support for debugging, syntax highlighting
-  etc.
+sidebar_position: 1.9
+title: VSCode with Sessions
+sidebar_label: VSCode with Sessions
 ---
 
 # VSCode with Sessions

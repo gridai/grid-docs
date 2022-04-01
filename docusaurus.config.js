@@ -49,7 +49,7 @@ const config = {
             from: "/platform/upgrades/adding-custom-cloud-credentials"
           },
           {
-            to:"/features/runs",
+            to:"/features/runs/README",
             from:"/products/run-run-and-sweep-github-files"
           },
           {
@@ -90,7 +90,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "platform/changelog",
+            docId: "changelog",
             label: "Changelog",
             position: "left",
           },

@@ -1,5 +1,7 @@
 ---
-description: Automatic login to Github in a Session
+sidebar_position: 1.1
+title: GitHub Login
+sidebar_label: GitHub Login
 ---
 
 # GitHub Integration

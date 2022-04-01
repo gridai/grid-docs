@@ -1,5 +1,7 @@
 ---
-description: 'ssh to an interactive session to carry out prototyping, debugging workflows'
+sidebar_position: 1.8
+title: SSH into Sessions
+sidebar_label: SSH into Sessions
 ---
 
 # SSH into a Session

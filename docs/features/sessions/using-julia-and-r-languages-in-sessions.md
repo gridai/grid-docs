@@ -1,5 +1,7 @@
 ---
-description: Easy access of consoles
+sidebar_position: 2.0
+title: Julia and R Languages in Sessions
+sidebar_label: Julia and R Languages in Sessions
 ---
 
 # Julia and R languages in Sessions
@@ -17,4 +19,3 @@ Create a session as you would normally
 Click on JupyterLab icon in the session, you are now able to use Julia and R programming languages in addition to python
 
 ![](/images/sessions/julia-jupyter.png)
-

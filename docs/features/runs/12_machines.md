@@ -1,15 +1,14 @@
 ---
-sidebar_position: 1.5
 title: Machines
 sidebar_label: Machines
 ---
 
 # Machines
 
-Here are the machines you can use to start up sessions. The syntax for this is numberOfAccelerators_acceleratorType_availableMemory. Below is an example utilizing this syntax to create a session on a machine with 8 v100 gpus and 32 GB memory.
+These are the options of available machines. The syntax for this is numberOfAccelerators_acceleratorType_availableMemory. Below is an example utilizing this syntax to create a run on a machine with 8 v100 gpus and 32 GB memory.
 
-```text
-grid session create --instance_type 8_v100_32gb
+```bash
+grid run --instance_type 8_v100_32gb hello.py --gpus 8
 ```
 
 | Name | Accelerator type |
@@ -28,3 +27,5 @@ grid session create --instance_type 8_v100_32gb
 | 1_M60_8gb | M60 |
 | 2_CPU_8gb | CPU |
 | 2_CPU_4gb | CPU |
+
+**Note: A credit card needs to be added to use GPU machines**
