@@ -1,8 +1,6 @@
 ---
-description: >-
-  Grid allows you to create a cluster inside your own infrastructure. Using this
-  approach allows you to control where your data sits and keeping that data
-  secure.
+title: Grid Managed BYOC
+sidebar_label: Grid Managed BYOC
 ---
 import Note from "@site/src/components/Note";
 

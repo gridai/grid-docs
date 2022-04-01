@@ -1,5 +1,10 @@
 import Note from "@site/src/components/Note";
 
+---
+title: Customer Managed BYOC
+sidebar_label: Customer Managed BYOC
+---
+
 # Deploying Customer Managed Bring Your Own Cluster (BYOC) Mode
 
 :::note
