@@ -9,12 +9,12 @@ Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/featur
 
 # How to Create Runs
 Runs are highly customizable "serverless" compute. Here we will cover all the methods made available to customize Runs for your usecases. The examples cover the following:
-1. [Creating vanilla Runs](https://docs.grid.ai/features/runs/creating-runs/basic-runs#creating-vanilla-runs)
-2. [Creating Runs with script dependencies](https://docs.grid.ai/features/creating-runs/basic-runs#creating-runs-with-script-dependencies)  
+1. [Creating vanilla Runs](https://docs.grid.ai/features/runs/creating-runs/basic-runs/basic-runs#creating-vanilla-runs)
+2. [Creating Runs with script dependencies](https://docs.grid.ai/features/creating-runs/basic-runs/basic-runs#creating-runs-with-script-dependencies)  
   3.1 Handeling requirements  
   3.2 Runs with specified requirements.txt  
   3.3 Runs with specified environment.yml
-3. [Attaching Datastores to Runs](https://docs.grid.ai/features/creating-runs/basic-runs#attaching-datastores-to-runs)
+3. [Attaching Datastores to Runs](https://docs.grid.ai/features/creating-runs/basic-runs/basic-runs#attaching-datastores-to-runs)
 
 The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page
 ## Creating Vanilla Runs
@@ -27,7 +27,7 @@ grid run --name hello hello.py
 ```
 
 The above code is passing a script named hello.py to the Run. The script will print out 'hello_world'. For instructions on how to view the logs check out the
-next section [Viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
+next section [Viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
 
 ## Creating Runs with Script Dependencies
 If you peaked at the grid-tutorials repo you may have noticed three things:
@@ -57,7 +57,7 @@ grid run --name specified-requirements-pip --dependency_file ./pip/requirements.
 
 You will notice we did something different here than in prior examples. We used the `--dependency_file` flag. This flag tells Grid what file
 should be used for package installation in the Run. See the build logs to see the difference between this and the Creating vanilla Runs example above.
-For instructions on how to view the logs check out [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
+For instructions on how to view the logs check out [viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
 
 ### Runs with Specified environment.yml
 Runs allow you to specify the environment.yml you want to use for package installation. This is the only way to get Runs to use the Conda package manager without using a config file.
@@ -73,7 +73,7 @@ grid run --name specified-requirements-conda --dependency_file ./conda/environem
 ```
 
 See the build logs to see the difference between this and the Creating vanilla Runs example above.
-For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
+For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
 
 ## Attaching Datastores to Runs
 There are many times when attaching a Datastore to a Run will be desirable. For instance, if you have large scale data it may be easier to house that in a datastore than on your local machine.
@@ -118,7 +118,7 @@ output in your stdout logs.
 ['test', 'train']
 ```
 
-For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/runs/analyzing-runs#viewing-logs).
+For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
 
 # Next Steps
 Please checkout the following tutorials:
