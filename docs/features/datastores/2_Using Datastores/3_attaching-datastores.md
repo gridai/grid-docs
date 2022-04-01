@@ -9,12 +9,21 @@ Datastores can be attached to both Runs and Sessions. Below are examples on how 
 
 <!-- ![](/images/data.gif) -->
 
-You can mount a datastore to a run to make your experiments run faster! By default, the datastore is mounted at /datastores. When attaching datastores to a run, take note of the path your script uses. For example if your script takes an argument _my_data_path_ and you want to mount the _cats_ datastore:
+You can mount a datastore to a run to make your experiments run faster! By default, the datastore is mounted at /datastores. When attaching datastores to a run, take note of the path your script uses. Grid will use the following syntax for kicking off Runs with Datastores:
 
 ```bash
-grid run main.py --my_data_path /datastores/cats/1
+grid run --datastore_name [datastore_name] --datastore_version [datastore_version] -- main.py my_data_path /datastores/[datastore_name]/[datastore_version]
 ```
 
+For example if your script takes an argument _my_data_path_ and you want to mount the _cats_ datastore:
+
+```bash
+grid run --datastore_name cats --datastore_version 1 -- main.py --my_data_path /datastores/cats/1
+```
+
+:::note
+We provide a working example show casing this on the [basic runs creation page](https://docs.grid.ai/features/creating-runs/basic-runs/basic-runs#attaching-datastores-to-runs)
+:::
 
 ## Sessions
 This video shows how we attach an ImageNet Datastore to a Session.
