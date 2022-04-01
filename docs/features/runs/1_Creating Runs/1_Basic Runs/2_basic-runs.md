@@ -16,6 +16,11 @@ Runs are highly customizable "serverless" compute. Here we will cover all the me
   3.3 Runs with specified environment.yml
 3. [Attaching Datastores to Runs](https://docs.grid.ai/features/creating-runs/basic-runs/basic-runs#attaching-datastores-to-runs)
 
+:::note
+We encourage users to checkout the [grid run CLI documentation](https://docs.grid.ai/cli#grid-run) for more customization details. Additionally, please see our
+[machines page](https://docs.grid.ai/platform/machines) for details on the machines available for use within Runs.
+:::
+
 The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page
 ## Creating Vanilla Runs
 A "vanilla" Run is simply a Run that only runs a hello world style script. It is taken from this [repo](https://github.com/PyTorchLightning/grid-tutorials/tree/main/features-intro/runs) will be used in the following example.
