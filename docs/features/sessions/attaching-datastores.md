@@ -1,6 +1,10 @@
-import Note from "@site/src/components/Note";
+---
+sidebar_position: 1.4
+title: Attaching Datastores
+sidebar_label: Attaching Datastores
+---
 
-<note> Note: Datastore can only be mounted to a Session at Session creation time </note>
+:::note: Datastore can only be mounted to a Session at Session creation time:::
 
 ---
 description: Mount a datastore before starting the Session
@@ -23,4 +27,3 @@ Once in the Session, view the data with:
 cd /datastores
 ls
 ```
-

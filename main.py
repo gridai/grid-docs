@@ -21,20 +21,22 @@ def to_id(arg: str):
 
 
 INTRO = """---
-sidebar_position: 2
+sidebar_position: 5
 title: GRID CLI REFERENCE
 sidebar_label: GRID CLI REFERENCE
 ---
 
 """
 
-with open("docs/cli/api.md", "w") as _cli:
+with open("docs/cli.md", "w") as _cli:
     next(r)
     _cli.write(INTRO)
     for row in r:
         row = row.replace('_required', '')
         if row.startswith("### "):
-            row = row.replace("### ", "### grid ")
+            row = row.replace("### ", "## grid ")
+        if row.startswith("#### "):
+            row = row.replace("#### ", "### ")
         if '`g2.8xlarge,g3.16xlarge,' in row:
             row = row.replace(",", ", ")
         row = row.replace("<", "`<").replace(">", ">`")
@@ -42,7 +44,7 @@ with open("docs/cli/api.md", "w") as _cli:
 
 
 # changelog
-with open("docs/platform/changelog.md", "w") as w:
+with open("docs/changelog.md", "w") as w:
     with open("changelog/header.md") as f:
         w.write(f.read())
     for file in sorted(Path("changelog").glob("*.md"), reverse=True):

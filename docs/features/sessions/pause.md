@@ -1,7 +1,8 @@
 ---
-description: Pause a live session
+sidebar_position: 1.3
+title: Pause Sessions
+sidebar_label: Pause Sessions
 ---
-
 # Pause
 
 ## Pause a Session

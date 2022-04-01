@@ -28,7 +28,7 @@ Here is a quick overview of:
 
 [**Sessions**](features/sessions#sessions)
 
-[**Runs**](features/runs#runs)
+[**Runs**](features/runs/1_README.md#runs)
 
 ## **Infrastructure is gone**
 
