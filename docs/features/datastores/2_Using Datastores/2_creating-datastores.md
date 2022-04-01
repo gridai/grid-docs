@@ -1,6 +1,10 @@
+---
+title: Creating Datastores
+sidebar_label: Creating Datastores
+---
 # Create Datastores
 
-Datastores can be created from any file type and also accept HTTP URL's and S3 URLS. 
+Datastores can be created from any file type and also accept HTTP URL's and S3 URLS.
 
 ## Small datasets
 

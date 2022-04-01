@@ -1,4 +1,7 @@
-
+---
+title: Attaching Datastores
+sidebar_label: Attaching Datastores
+---
 # Attaching Datastores
 Datastores can be attached to both Runs and Sessions. Below are examples on how to do that.
 
@@ -79,4 +82,3 @@ Now pass the name of the datastore to your command
 
 ![](/images/runs/script-arguments.png)
 to Run + Sessions (perhaps this can be used as a link for the subsequent Run + Session redesigned pages)
-
