@@ -99,7 +99,7 @@ If you prefer to use the CLI simply replace python with grid run.
 
 ![](/images/runs/hello-cifar-command.png)
 
-First, install Grid and login
+## Install Grid and login
 
 ```bash
 pip install lightning-grid --upgrade
