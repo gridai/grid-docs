@@ -48,19 +48,19 @@ You can request a quota by doing
 
 ### Step 1: Get AWS Credentials
 
-**A: Login to AWS and search for IAM**
+#### A: Login to AWS and search for IAM
 
 Login into your AWS account. You will then use the search bar to find "IAM" \(user management\).
 
 ![](/static/images/platform/IAM.png)
 
-**B: Click on "Users"**
+#### B: Click on "Users"
 
 Click on the "Users" panel. You will be able to see a list of users. If you already have a user, click on your user name. If you don't, move to the next step to create a new user.
 
 ![](/static/images/byoc/aws-list-users.png)
 
-**C: Create New User \(optional\)**
+#### C: Create New User \(optional\)
 
 If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
 
@@ -72,7 +72,7 @@ The user should have IAMFullAccess privileges.
 
 Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
 
-**D: Create New AWS Keys**
+#### D: Create New AWS Keys
 
 1. Navigate to the "Users" page
 2. Click on your user name
@@ -94,7 +94,7 @@ The user you just created, and fetched credentials for should have IAMFullAccess
 Reach out to us via Slack or email if you have any issues creating the following AWS roles and policies. We're happy to help!
 :::
 
-**A: Add Policies to Your Account**
+#### A: Add Policies to Your Account
 
 The final step is to add all the Grid policies to your account. That means that your AWS keys will now be able to perform the operations required by Grid.
 
@@ -115,7 +115,7 @@ Now that you have added the right permissions to your user name, you can use the
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies, [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc). This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest).
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./2_prereq-installation.md#installation-steps). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies, [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc). This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest).
 
 :::note
 The script needs following list of permissions:
@@ -145,7 +145,7 @@ git clone https://github.com/gridai/terraform-aws-gridbyoc.git
 cd terraform-aws-gridbyoc/quick-start
 ```
 
-* Make sure your AWS CLI is properly configured with [id & secret you created](#d--create-new-aws-keys). These are not shared with Grid.
+* Make sure your AWS CLI is properly configured with [id & secret you created](#d-create-new-aws-keys). These are not shared with Grid.
 
 ```bash
 unset AWS_ACCESS_KEY_ID
