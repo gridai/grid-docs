@@ -306,17 +306,16 @@ git clone https://github.com/PyTorchLightning/grid-tutorials.git
 Install requirements + project
 
 ```yaml
-cd getting-started
+cd grid-tutorials/getting-started
 
 pip install -r requirements.txt
-pip install -e .
 ```
 
 now run the following command to train a resnet18 on 2 GPUs
 
 ```bash
 python flash-image-classifier.py \
-      --data_dir ../cifar5
+      --data_dir ../cifar5 \
       --gpus 2 \
       --epochs 4
 ```
