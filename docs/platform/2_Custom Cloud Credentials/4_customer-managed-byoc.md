@@ -72,7 +72,7 @@ Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
     The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
 :::
 
-Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md#step-2-add-iam-permissions-to-your-account) for more details.
+Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](./3_adding-custom-cloud-credentials.md#step-2-add-iam-permissions-to-your-account) for more details.
 
 ### Step 2: Add IAM permissions to your account
 
@@ -96,7 +96,7 @@ The final step is to add all the necessary permissions to your account to provis
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./adding-custom-cloud-credentials.md#prerequisites).
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./2_prereq-installation.md#prerequisites).
 
 :::note
     Customer-managed BYOC Infrastructure Mode only gives Grid the following permissions:
@@ -106,7 +106,7 @@ For the next step you're going to create role we're going to assume into. For th
 
 
 #### Set Up
-This version allows you to customize our terraform module to create your own BYOC infrastructure and set appropriate configurations for it via exposed variables **Make sure your AWS CLI is properly configured with [id & secret you created](./adding-custom-cloud-credentials.md#d-create-new-aws-keys).  These are not shared with Grid.**
+This version allows you to customize our terraform module to create your own BYOC infrastructure and set appropriate configurations for it via exposed variables **Make sure your AWS CLI is properly configured with [id & secret you created](./3_adding-custom-cloud-credentials.md#d-create-new-aws-keys).  These are not shared with Grid.**
 
 ```bash
 #Clone the repo
