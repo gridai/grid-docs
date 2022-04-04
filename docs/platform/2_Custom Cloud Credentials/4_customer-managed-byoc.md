@@ -92,7 +92,7 @@ The final step is to add all the necessary permissions to your account to provis
 4. Click on "Add permissions"
 5. Click on "Attach existing policies directly"
 
-![Granting permissions to an user.](/images/byoc/aws-add-permissions.png)
+![Granting permissions to an user.](/static/images/byoc/aws-add-permissions.png)
 
 ### Step 3: Create Role & Policy grid requires
 
