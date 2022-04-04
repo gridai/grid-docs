@@ -2,10 +2,14 @@
 title: Grid Managed BYOC
 sidebar_label: Grid Managed BYOC
 ---
+
+# Overview
+
 import Note from "@site/src/components/Note";
 
-This documentation assumes you have followed our [prereq installation steps](./2_prereq-installation.md).
+This page describes BYOC creation in Grid-managed Infrastructure Mode - Grid manages and provisions AWS infrastructure on your behalf in a fully automated fashion. To achieve this we require more permission (including iam:FullAccess) over customer-managed BYOC.
 
+This documentation assumes you have followed our [prereq installation steps](./2_prereq-installation.md).
 
 # Deploying Grid Managed Bring Your Own Cluster (BYOC) Mode
 

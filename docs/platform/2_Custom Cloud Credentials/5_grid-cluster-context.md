@@ -13,9 +13,14 @@ against that cluster. Apart from the easiness this command brings, it also help 
 as scheduling to a wrong cluster.
 
 
-<note>**Please Note:** This feature will evolve to include more elaborate cluster management in the near-term future.
-```text $ grid user set-cluster-context [cluster-name]```
-</note>
+:::note**Please Note:**
+This feature will evolve to include more elaborate cluster management in the near-term future.
+:::
+
+To set cluster context, you shuld use:
+```text
+$ grid user set-cluster-context [cluster-name]
+```
 
 Note that by default, the cluster context is set to the global cluster. The global cluster name is `Grid Cloud`. The global cluster id is `prod-2`.
 You can find what's the currently
