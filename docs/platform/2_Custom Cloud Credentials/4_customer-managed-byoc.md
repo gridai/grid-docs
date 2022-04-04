@@ -196,6 +196,8 @@ In edit paste the terraform output field you've just copied.
 
 ### Step 5: Wait for cluster to be provisioned
 
+After, you can check the cluster state by running:
+
 ```text
 grid clusters
 ```

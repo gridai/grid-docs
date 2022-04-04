@@ -264,6 +264,8 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 
 ### Step 5: Wait for cluster to be provisioned
 
+After, you can check the cluster state by running:
+
 ```text
 grid clusters
 ```
