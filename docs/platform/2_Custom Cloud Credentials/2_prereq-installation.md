@@ -71,5 +71,5 @@ sudo apt-get install awscli
 
 # Next Steps
 See:
-1. [Grid Managed BYOC](./adding-custom-cloud-credentials.md) - for Grid Managed BYOC mode deployment instructions
-2. [Customer Managed BYOC](./customer-managed-byoc.md) - for Customer Managed BYOC mode deployment instructions
+1. [Grid Managed BYOC](./3_adding-custom-cloud-credentials.md) - for Grid Managed BYOC mode deployment instructions
+2. [Customer Managed BYOC](./4_customer-managed-byoc.md) - for Customer Managed BYOC mode deployment instructions
