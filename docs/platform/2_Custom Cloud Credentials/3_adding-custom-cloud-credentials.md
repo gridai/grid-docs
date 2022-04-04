@@ -52,7 +52,7 @@ You can request a quota by doing
 
 Login into your AWS account. You will then use the search bar to find "IAM" \(user management\).
 
-![](/images/platform/IAM.png)
+![](/static/images/platform/IAM.png)
 
 **B: Click on "Users"**
 
