@@ -203,15 +203,15 @@ grid clusters
 And wait for your cluster status be `running`:
 
 ```text
-┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
-┃ id                 ┃ name               ┃ status  ┃
-┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
-│ grid-cloud-prod    │ grid-cloud-prod    │ running │
-│ <cluster name>     │ <cluster name>     │ running │
-└────────────────────┴────────────────────┴─────────┘
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ id                 ┃ name               ┃ type       ┃ status  ┃ created       ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ grid-cloud-prod    │ grid-prod-cloud    │ grid-cloud │ running │ 2 days ago    │
+│ <cluster name>     │ <cluster name>     │ byoc       │ running │ a hour ago    │
+└────────────────────┴────────────────────┴────────────┴─────────┴───────────────┘
 ```
 
-It can take some time to provision a new cluster, ~20-30 minutes
+It can take some time to provision a new cluster, ~20-30 minutes. Optionally, you can use `--wait` flag on the cluster creation step, and grid CLI will wait until the cluster is running.
 
 ### Step 6: Run your workloads in your new cluster
 
@@ -242,7 +242,7 @@ Use `grid edit` to see instance types available and update as necessary.
 grid edit cluster <cluster name>
 ```
 
-Use `grid delete` to delete cluster. Deleting a cluster will delete the resources created by Grid. In Customer Managed BYOC mode this will be the S3 buckets and EKS resources created by Grid. Use with care!
+Use `grid delete` to delete cluster. Deleting a cluster will delete the resources created by Grid. The deletion will take ~10-20 minutes. The flag --wait is also available here, in the case of using, grid CLI will wait until the cluster is deleted. In Customer Managed BYOC mode this will be the S3 buckets and EKS resources created by Grid. Use with care!
 
 :::note
     Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!
