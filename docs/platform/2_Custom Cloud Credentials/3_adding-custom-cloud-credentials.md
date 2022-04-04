@@ -4,7 +4,7 @@ sidebar_label: Grid Managed BYOC
 ---
 import Note from "@site/src/components/Note";
 
-This documentation assumes you have followed our [prereq installation steps](./prereq-installation.md).
+This documentation assumes you have followed our [prereq installation steps](./2_prereq-installation.md).
 
 
 # Deploying Grid Managed Bring Your Own Cluster (BYOC) Mode
@@ -28,7 +28,7 @@ Grid will create clusters designed for large AI workloads. In order to do so, yo
 | EC2 Spot \(instance family you are interested in\) | 1000+ |
 | EC2 On-demand \(instance family you are interested in\) | 1000+ |
 
-AWS STS regional endpoints have to be enabled in the target region. Go to https://console.aws.amazon.com/iam/home#/account_settings and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html.
+AWS STS regional endpoints have to be enabled in the target region. Go to [AWS account settings](https://console.aws.amazon.com/iam/home#/account_settings) and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled, see [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html).
 
 <note>
     Skipping this step will cause difficult to debug issues. The kubelet will be unable to authenticate against the kubernetes API server, and nothing will work.
@@ -115,7 +115,7 @@ Now that you have added the right permissions to your user name, you can use the
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](adding-custom-cloud-credentials.md#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](3_adding-custom-cloud-credentials.md#installing-3rd-party-tools). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies. [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc) This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest)
 
 :::note
 The script needs following list of permissions:
@@ -175,7 +175,7 @@ aws sts get-caller-identity
 }
 ```
 
-* Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid)
+* Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step](3_adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid).
 
 ```bash
 terraform init
@@ -225,7 +225,7 @@ From the last command you'll get the following output:
 }
 ```
 
-* Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid).
+* Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](3_adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid).
 
 ```bash
 export EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
@@ -279,7 +279,7 @@ And wait for your cluster status be `running`:
 └────────────────────┴────────────────────┴────────────┴─────────┴───────────────┘
 ```
 
-It can take some time to provision a new cluster, ~30-50 minutes. Optionally, you can add `--wait` flag on the cluster creation step, and grid CLI will wait until the cluster is runnung.
+It can take some time to provision a new cluster, ~30-50 minutes. Optionally, you can add `--wait` flag on the cluster creation step, and grid CLI will wait until the cluster is running.
 
 ### Step 6: Run your workloads in your new cluster
 
@@ -288,7 +288,7 @@ grid run --cluster <cluster name>
 grid session create --cluster <cluster name>
 ```
 
-Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned
+Or if you're using config file set the `.compute.provider.cluster` field to the cluster name you've just provisioned.
 
 ### Step 7: Enjoy!
 
@@ -302,7 +302,7 @@ Use `grid edit` to see instance types available and update as necessary.
 grid edit cluster <cluster name>
 ```
 
-Use `grid delete` to delete cluster. Deleting a cluster will delete its resources, including runing resources. Use with care! The flag `--wait` is also available here, in the case of using, grid CLI will wait until the cluster is deleted.
+Use `grid delete` to delete cluster. Deleting a cluster will delete its resources, including runing resources. The deletion will take ~20-30 minutes. Use with care! The flag `--wait` is also available here, in the case of using, grid CLI will wait until the cluster is deleted.
 
 :::note
 Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!
@@ -319,4 +319,4 @@ terraform destroy
 ```
 
 # Next Steps
-Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Customer Managed BYOC Mode](./customer-managed-byoc.md).
+Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Customer Managed BYOC Mode](./4_customer-managed-byoc.md).
