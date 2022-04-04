@@ -306,7 +306,7 @@ git clone https://github.com/PyTorchLightning/grid-tutorials.git
 Install requirements + project
 
 ```yaml
-cd getting-started
+cd grid-tutorials/getting-started
 
 pip install -r requirements.txt
 pip install -e .
