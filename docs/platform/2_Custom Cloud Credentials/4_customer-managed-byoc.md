@@ -40,19 +40,19 @@ You can request a quota by doing
 
 Login into your AWS account. You will then use the search bar to find "IAM" \(user management\).
 
-![](/static/images/platform/IAM.png)
+![](/images/platform/IAM.png)
 
 **B: Click on "Users"**
 
 Click on the "Users" panel. You will be able to see a list of users. If you already have a user, click on your user name. If you don't, move to the next step to create a new user.
 
-![](/static/images/byoc/aws-list-users.png)
+![](/images/byoc/aws-list-users.png)
 
 **C: Create New User \(optional\)**
 
 If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
 
-![](/static/images/byoc/aws-create-user.png)
+![](/images/byoc/aws-create-user.png)
 
 Click on "Next: Permissions" &gt;
 
@@ -92,7 +92,7 @@ The final step is to add all the necessary permissions to your account to provis
 4. Click on "Add permissions"
 5. Click on "Attach existing policies directly"
 
-![Granting permissions to an user.](/static/images/byoc/aws-add-permissions.png)
+![Granting permissions to an user.](/images/byoc/aws-add-permissions.png)
 
 ### Step 3: Create Role & Policy grid requires
 
