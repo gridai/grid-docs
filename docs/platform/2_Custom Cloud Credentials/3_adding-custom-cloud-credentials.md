@@ -7,7 +7,7 @@ sidebar_label: Grid Managed BYOC
 
 import Note from "@site/src/components/Note";
 
-This page describes BYOC creation in Grid-managed Infrastructure Mode - Grid manages and provisions AWS infrastructure on your behalf in a fully automated fashion. To achieve this we require more permission (including iam:FullAccess) over customer-managed BYOC.
+This page describes BYOC creation in Grid-managed Infrastructure Mode - Grid manages and provisions AWS infrastructure on your behalf in a fully automated fashion. To achieve this we require more permission (including iam:FullAccess) over self-managed BYOC.
 
 This documentation assumes you have followed our [prereq installation steps](./2_prereq-installation.md).
 
@@ -325,4 +325,4 @@ terraform destroy
 ```
 
 # Next Steps
-Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Customer Managed BYOC Mode](./4_customer-managed-byoc.md).
+Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Customer Managed BYOC Mode](./4_self-managed-byoc.md).

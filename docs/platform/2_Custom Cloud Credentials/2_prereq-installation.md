@@ -8,7 +8,7 @@ sidebar_label: BYOC Prereqs
 This page describes the pre-requisites needed to create a BYOC and the steps to install them.
 
 [Grid Managed BYOC](./adding-custom-cloud-credentials.md)  
-[Customer Managed BYOC](./customer-managed-byoc.md)
+[Customer Managed BYOC](./self-managed-byoc.md)
 
 # Prerequisites
 
@@ -76,4 +76,4 @@ sudo apt-get install awscli
 # Next Steps
 See:
 1. [Grid Managed BYOC](./3_adding-custom-cloud-credentials.md) - for Grid Managed BYOC mode deployment instructions
-2. [Customer Managed BYOC](./4_customer-managed-byoc.md) - for Customer Managed BYOC mode deployment instructions
+2. [Customer Managed BYOC](./4_self-managed-byoc.md) - for Customer Managed BYOC mode deployment instructions

@@ -40,7 +40,7 @@ Or if you're using config file set the `.compute.provider.cluster` field to the 
 
 # Examples
 
-- Run `grid clusters` show a Grid [BYOC](https://docs.grid.ai/platform/custom-cloud-credentials/customer-managed-byoc) cluster named `c220309-165349` whose cluster id is `c220309-165349`.
+- Run `grid clusters` show a Grid [BYOC](https://docs.grid.ai/platform/custom-cloud-credentials/self-managed-byoc) cluster named `c220309-165349` whose cluster id is `c220309-165349`.
 Also shown is the the global cluster named `Grid Cloud` whose cluster id is `prod-2`.
 
 ```bash
