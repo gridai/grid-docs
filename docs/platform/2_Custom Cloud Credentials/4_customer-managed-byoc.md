@@ -143,7 +143,7 @@ aws sts get-caller-identity
 ```
 
 We advise performing the following steps before continuing deployment
-1. Copy dev.tfvars from terraform-aws-grid-byoc-full/example
+1. Copy example.tfvars from terraform-aws-grid-byoc-full/example
 2. Update the cluster and hostname cluster_name. For example:
 	  - cluster_name = "foo-01"
 	  - hostname    = "foo-01.doom.gridai.dev"
@@ -159,7 +159,7 @@ Run the Terraform script and enter the AWS Region when prompted. The region wher
 
 ```bash
 terraform init
-terraform apply -var-file <your modified version of dev.tfvars>
+terraform apply -var-file <your modified version of example.tfvars>
 ```
 
 Copy the output from the last command. The following code snippets may help you copy the output to your clipboard:
@@ -261,5 +261,5 @@ grid delete cluster <cluster name>
 Next use terraform to delete the AWS resources you created as part of the install process.
 
 ```bash
-terraform destroy -var-file <your modified version of dev.tfvars>
+terraform destroy -var-file <your modified version of example.tfvars>
 ```
