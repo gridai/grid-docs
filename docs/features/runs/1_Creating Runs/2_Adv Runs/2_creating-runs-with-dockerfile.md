@@ -3,8 +3,8 @@ title: Creating Runs from Dockerfile
 sidebar_label: Creating Runs from Dockerfile
 ---
 :::note
-The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
-Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](../../../../getting-started/getting-started-with-grid.md) page.
+Also, if you encounter issues please check the [FAQ](../../3_faq.md). We periodically update this with user questions.
 :::
 
 # Creating Runs from a Dockerfile

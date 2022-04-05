@@ -4,8 +4,8 @@ sidebar_label: Creating Runs from Config File
 ---
 
 :::note
-The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
-Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](../../../../getting-started/getting-started-with-grid.md) page.
+Also, if you encounter issues please check the [FAQ](../../3_faq.md). We periodically update this with user questions.
 :::
 # Using YAML
 
@@ -16,7 +16,7 @@ In addition to CLI parameters, Grid supports the use of YML files so you don't h
 The following YML file contains a commented version of every YML key. You need to provide these keys when writing a config file and change the properties to what you need.
 
 :::note
-Use either [cluster context](../../../platform/custom-cloud-credentials/grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
+Use either [cluster context](../../../../platform/2_custom-cloud-credentials/grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
 :::
 
 ```text
@@ -41,7 +41,7 @@ compute:
     framework: "lightning"        # Which framework to use
 
     # Pass in environment variables
-    environment:                
+    environment:
       MY_ENVIRONMENT_VARIABLE: "example"
 ```
 
@@ -71,7 +71,7 @@ Example uses of actions:
 
 ## Available Actions
 
-### on\_build\_start
+### on_build_start
 
 These are executed as your Run's image is built. We cache these commands on every git SHA. This is useful for installing dependencies and other system setup tasks.
 
@@ -85,7 +85,7 @@ compute:
         - pip install tqdm
 ```
 
-### on\_build\_end
+### on_build_end
 
 These are executed as at the end of building Run's image.
 
@@ -100,7 +100,7 @@ compute:
 
 <Note> Commands automatically run as sudo </Note>
 
-### on\_exeperiment\_start
+### on_exeperiment_start
 
 Arbitrary commands that run just before your training process starts. This is useful for downloading and preparing data, etc.
 
@@ -113,7 +113,7 @@ compute:
         - bash download_dataset.sh
 ```
 
-### on\_experiment\_end
+### on_experiment_end
 
 Runs after your script stops. This is useful for post-processing data, sending alerts and notifications to your systems, etc.
 
@@ -129,7 +129,7 @@ compute:
 
 ## Configuring Actions
 
-You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](./17_yaml-configs/2_yaml-api.md).
+You can configure Grid Actions by using a Grid config file (see details on [Grid YML)](./17_yaml-configs/2_yaml-api.md).
 
 Here's a full example of a Grid configuration using actions:
 
@@ -164,7 +164,7 @@ As you can see, you can pass one command per line. You can pass as many commands
 
 ### Environment variable substitution
 
-Grid allows environment variable substitution for `on_experiment_start` and `on_experiment_end` actions. All declared environment variables for the run are available in the substitution \(as well as some Grid predefined variables\). Example config:
+Grid allows environment variable substitution for `on_experiment_start` and `on_experiment_end` actions. All declared environment variables for the run are available in the substitution (as well as some Grid predefined variables). Example config:
 
 ```yaml
 compute:
@@ -197,11 +197,11 @@ compute:
 
 Grid sets several environment variables by default for all experiments:
 
-* **GRID\_EXPERIMENT\_ID** - experiment's ID
-* **GRID\_EXPERIMENT\_NAME** - experiment name
-* **GRID\_USER\_ID** - ID of the user who created the experiment
-* **GRID\_CLUSTER\_ID** - ID of the cluster where experiment is running
-* **GRID\_INSTANCE\_TYPE** - machine type \(_t2.medium,_ _g4dn.xlarge,_ etc.\)
+* **GRID_EXPERIMENT_ID** - experiment's ID
+* **GRID_EXPERIMENT_NAME** - experiment name
+* **GRID_USER_ID** - ID of the user who created the experiment
+* **GRID_CLUSTER_ID** - ID of the cluster where experiment is running
+* **GRID_INSTANCE_TYPE** - machine type (_t2.medium,_ _g4dn.xlarge,_ etc.)
 
 ### String operations
 

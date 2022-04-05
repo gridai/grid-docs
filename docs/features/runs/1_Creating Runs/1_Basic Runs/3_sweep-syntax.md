@@ -4,7 +4,7 @@ sidebar_label: Hyperparameter Sweep Syntax
 ---
 
 :::note
-If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+If you encounter issues please check the [FAQ](../../3_faq.md). We periodically update this with user questions.
 :::
 # Hyperparameter Sweeps
 
@@ -34,7 +34,7 @@ Alternatively, your script can be written in such a way that it takes an arbitra
 grid run foo.py --bar 1 --barry 0
 ```
 
-This is the recommended syntax because it allows you to utilize arbitrary indicator hyperparameters in the [grid search](https://docs.grid.ai/features/runs/sweep-syntax#grid-search) and [random search](https://docs.grid.ai/features/runs/sweep-syntax#random-search) features. For example, the following will invoke a grid search:
+This is the recommended syntax because it allows you to utilize arbitrary indicator hyperparameters in the [grid search](#grid-search) and [random search](#random-search) features. For example, the following will invoke a grid search:
 
 ```text
 grid run foo.py --bar '[True, False]'
