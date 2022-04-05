@@ -1,9 +1,9 @@
 ---
-title: FAQ
+title: DatastoreFAQ
 sidebar_label: FAQ
 ---
 
-# FAQ
+# Datastore FAQ
 
 ## Data is private
 
@@ -17,7 +17,8 @@ and permanently.
 
 ## Public vs private data
 
-a more appropriate usage tierhave access to your datastore. It's up to you to make sure you have the rights to access
+When you create a datastore, you certify that you have the rights to that data. Only you
+have access to your datastore. It's up to you to make sure you have the rights to access
 that data. 
 
 **_PRODUCT TEAM: WE NEED A LINK TO OUR TERMS OF SERVICE HERE_**

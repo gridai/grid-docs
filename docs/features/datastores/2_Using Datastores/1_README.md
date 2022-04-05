@@ -21,11 +21,13 @@ to get you started with working with this core feature. The examples cover the f
     
     1.6. Create from a Cluster
 
-2. [Attaching Datastores To a Session or Run](./4_attaching-datastores.md)
+2. [Inspecting Status of a Datastore](./3_inspecting_status.md) 
+
+3. [Attaching Datastores To a Session or Run](./4_attaching-datastores.md)
    
-3. [Periodically uploading Datastores](./5_periodically-uploading-datastores.md)
+4. [Periodically uploading Datastores](./5_periodically-uploading-datastores.md)
    
-4. [Deleting Datastores](./6_deleting-datastores.md)
+5. [Deleting Datastores](./6_deleting-datastores.md)
 
 ## Further Information
 

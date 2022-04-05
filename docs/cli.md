@@ -155,7 +155,7 @@ grid datastore [OPTIONS] COMMAND [ARGS]...
 | Name | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
 | `--global` | boolean | Fetch sessions from everyone in the team when flag is passed | `False` |
-| `--cluster` | text | The cluster id to list datastores for. | `dev-6` |
+| `--cluster` | text | The cluster id to list datastores for. | `prod-2` |
 | `--show-incomplete` | boolean | Show any datastore uploads which were started, but killed or errored before they finished uploading all data and became "viewable" on the grid datastore user interface. | `False` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
@@ -197,7 +197,7 @@ grid datastore create [OPTIONS] [SOURCE]
 | ---- | ---- | ----------- | ------- |
 | `--source` | text | N/A | None |
 | `--name` | text | Name of the datastore | None |
-| `--cluster` | text | cluster id to create the datastore on. (Bring Your Own Cloud Customers Only). | `dev-6` |
+| `--cluster` | text | cluster id to create the datastore on. (Bring Your Own Cloud Customers Only). | `prod-2` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
 ### delete
@@ -219,7 +219,7 @@ grid datastore delete [OPTIONS]
 | ---- | ---- | ----------- | ------- |
 | `--name` | text | Name of the datastore |  |
 | `--version` | integer | Version of the datastore |  |
-| `--cluster` | text | cluster id to delete the datastore from. (Bring Your Own Cloud Customers Only). | `dev-6` |
+| `--cluster` | text | cluster id to delete the datastore from. (Bring Your Own Cloud Customers Only). | `prod-2` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
 ### resume
@@ -404,7 +404,7 @@ grid instance-types [OPTIONS]
 
 | Name | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
-| `--cluster` | text | Cluster ID whence the instance types needs to be fetched. (Bring Your Own Cloud Customers Only). | `dev-6` |
+| `--cluster` | text | Cluster ID whence the instance types needs to be fetched. (Bring Your Own Cloud Customers Only). | `prod-2` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
 ## grid login
@@ -475,7 +475,7 @@ grid run [OPTIONS] [RUN_COMMAND]...
 | ---- | ---- | ----------- | ------- |
 | `--config` | Path | Path to Grid config YML. | None |
 | `--name` | text | Name for this run | None |
-| `--cluster` | text | N/A | `dev-6` |
+| `--cluster` | text | N/A | `prod-2` |
 | `--strategy` | choice (`grid_search` &#x7C; `random_search`) | Hyper-parameter search strategy | None |
 | `--num_trials` | text | Number of samples from full search space that are used by the random_search strategy | None |
 | `--seed` | text | Seed value for the `random_search` strategy | None |
@@ -582,7 +582,7 @@ grid session create [OPTIONS]
 
 | Name | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
-| `--cluster` | text | Cluster to run on | `dev-6` |
+| `--cluster` | text | Cluster to run on | `prod-2` |
 | `--instance_type` | text | Instance type to start session in. | `t2.medium` |
 | `--use_spot` | boolean | Use spot instance. The spot instances, or preemptive instance can be shut down at will | `False` |
 | `--disk_size` | integer | The disk size in GB to allocate to the session. | `200` |
