@@ -1,9 +1,10 @@
 ---
-description: Run (and sweep) any private or public Github repository.
+sidebar_position: 2.1
+title: Changing Session Instance Type
+sidebar_label: Change Instance Type
 ---
-import Note from "@site/src/components/Note";
 
-# Change Instance Type of a Session
+# Change Session Instance Type
 
 ```text
 grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarge
@@ -18,11 +19,4 @@ The equivalent via the CLI command:
 
 ![](/images/sessions/change-instance-type.png)
 
-You should PAUSE the session to change the instance type. RESUME the session for the changes to take effect.
-
-Currently the following scenarios are supported: 
-1. Changing from a CPU instance to another CPU instance
-2. Changing an On-Demand instance to a [Spot Instance](https://docs.grid.ai/features/runs/interruptible-machines#interruptible-machines)
-3. Changing from a Spot Instance to an On-Demand Instance
-
-<note>Upscaling to a GPU instance from a CPU or smaller GPU instance is not yet supported</note>
+__You should PAUSE__ the session before changing the instance type. RESUME the session for the changes to take effect.

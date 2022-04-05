@@ -33,7 +33,7 @@ numberOfAccelerators_acceleratorType_availableMemory syntax
 grid session create --instance_type 8_v100_32gb
 ```
 
-Instance.size synax
+Instance.size syntax
 ```bash
 grid session create --instance_type p3.16xlarge
 ```
@@ -46,7 +46,18 @@ numberOfAccelerators_acceleratorType_availableMemory syntax
 grid run --instance_type 8_v100_32gb hello.py --gpus 8
 ```
 
-Instance.size synax
+Instance.size syntax
 ```bash
 grid run --instance_type p3.16xlarge hello.py --gpus 8
 ```
+
+### Show Instance Types available in Cluster
+
+To show all the available instance types you can select from the CLI you can execute:
+
+```bash
+grid instance-types
+```
+
+This will provide the instance size names from AWS convention that, as mentioned above, can be used
+in Runs and Sessions.
