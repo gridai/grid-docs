@@ -17,7 +17,8 @@ To install either the Grid-managed BYOC or Customer-managed BYOC modes the follo
 * [git](https://git-scm.com/)
 * [jq](https://stedolan.github.io/jq/)
 * [terraform](https://www.terraform.io/)
-* [AWS CLI](https://aws.amazon.com/cli/)
+* [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) - you need version 2
+* [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) - you need version 0.5.3
 
 ## Installation Steps
 
