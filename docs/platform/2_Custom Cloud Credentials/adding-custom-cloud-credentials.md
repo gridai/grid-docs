@@ -1,5 +1,3 @@
-import Note from "@site/src/components/Note";
-
 ---
 sidebar_position: 2.3
 title: Grid Managed BYOC
@@ -32,9 +30,9 @@ Grid will create clusters designed for large AI workloads. In order to do so, yo
 
 AWS STS regional endpoints have to be enabled in the target region. Go to https://console.aws.amazon.com/iam/home#/account_settings and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled -> https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html
 
-<note>
+:::note
     Skipping this step will cause difficult to debug issues. The kubelet will be unable to authenticate against the kubernetes API server, and nothing will work.
-</note>
+:::
 #### Requesting Quotas
 
 All AWS accounts have "service quotas". These are limits for the utilization of service provided by AWS. In order to increase your quotas, you have to request a quota increase to a specific service. That will open a ticket with AWS support. You may need to follow-up on the ticket in order for the quota to be granted.

@@ -1,5 +1,3 @@
-import Note from "@site/src/components/Note";
-
 ---
 sidebar_position: 2.6
 title: FAQ
@@ -13,9 +11,9 @@ sidebar_label: FAQ
 ### Kubernetes API Authentication Errors
 To ensure proper authentication of the Kubernetes API it is necessary to have AWS STS regional endpoints enabled in the target region. See the official aws [documentation](https://console.aws.amazon.com/iam/home#/account_settings) to verify that the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled. See the official [Managing AWS STS in an AWS Region documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html) for more details.
 
-<note>
+:::note
     Skipping this step will cause issues which are difficult to debug. The kubelet will be unable to authenticate against the Kubernetes API server, breaking core functionality.
-</note>
+:::
 
 ## Deploying Workloads
 

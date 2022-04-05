@@ -4,9 +4,6 @@ title: Cluster Context
 sidebar_label: Cluster Context
 ---
 
-
-import Note from "@site/src/components/Note";
-
 # Setting Cluster Context
 
 With multi-cluster availability, if you are working against a particular cluster, it's easier to set the
