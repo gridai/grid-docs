@@ -9,7 +9,7 @@ import Note from "@site/src/components/Note";
 
 This page describes BYOC creation in Grid-managed Infrastructure Mode - Grid manages and provisions AWS infrastructure on your behalf in a fully automated fashion. To achieve this we require more permission (including iam:FullAccess) over self-managed BYOC.
 
-This documentation assumes you have followed our [prereq installation steps](./2_prereq-installation.md).
+This documentation assumes you have followed our [prereq installation steps](./prereq-installation).
 
 # Deploying Grid Managed Bring Your Own Cluster (BYOC) Mode
 
@@ -119,7 +119,7 @@ Now that you have added the right permissions to your user name, you can use the
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./2_prereq-installation.md#installation-steps). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies, [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc). This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest).
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./prereq-installation#installation-steps). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies, [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc). This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest).
 
 :::note
 The script needs following list of permissions:
@@ -179,7 +179,7 @@ aws sts get-caller-identity
 }
 ```
 
-* Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step](3_adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid).
+* Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step](./adding-custom-cloud-credentials#step-4-register-your-role-in-grid).
 
 ```bash
 terraform init
@@ -229,7 +229,7 @@ From the last command you'll get the following output:
 }
 ```
 
-* Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](3_adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid).
+* Save `EXTERNAL_ID` and `ROLE_ARN` for use in [later steps](adding-custom-cloud-credentials#step-4-register-your-role-in-grid).
 
 ```bash
 export EXTERNAL_ID=$(terraform output -json | jq -r '.external_id.value')
@@ -240,7 +240,7 @@ export ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 
 By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
 
-* Login to Grid.  Please reference the detailed [steps](../../getting-started/typical-workflow-cli-user.md#step-0-install-the-grid-cli) as required.
+* Login to Grid.  Please reference the detailed [steps](../../getting-started/typical-workflow-cli-user#step-0-install-the-grid-cli) as required.
 
 ```bash
 pip install lightning-grid --upgrade
@@ -325,4 +325,4 @@ terraform destroy
 ```
 
 # Next Steps
-Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Self Managed BYOC Mode](./4_self-managed-byoc.md).
+Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Self Managed BYOC Mode](./self-managed-byoc).

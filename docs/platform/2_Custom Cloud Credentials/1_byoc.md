@@ -14,8 +14,8 @@ Grid creates clusters inside your own cloud account allowing you to keep complet
 2. Self-managed BYOC Infrastructure Mode - You manage and provision your AWS infrastructure using our terraform module, which you can audit and run on your infrastructure. This version requires Grid to have minimal permissions to your AWS account (only access to created EKS cluster & S3 bucket).
 
 # Next Steps
-1. [Prerequisite installation](https://docs.grid.ai/platform/custom-cloud-credentials/prereq-installation)
-2. [Grid managed byoc](https://docs.grid.ai/platform/custom-cloud-credentials/adding-custom-cloud-credentials)
-3. [Self managed byoc](https://docs.grid.ai/platform/custom-cloud-credentials/self-managed-byoc)
-4. [Setting cluster context](https://docs.grid.ai/platform/custom-cloud-credentials/grid-cluster-context)
-5. [Troubleshooting](https://docs.grid.ai/platform/custom-cloud-credentials/troubleshooting)
+1. [Prerequisite installation](./prereq-installation)
+2. [Grid managed byoc](./adding-custom-cloud-credentials)
+3. [Self managed byoc](./self-managed-byoc)
+4. [Setting cluster context](./grid-cluster-context)
+5. [Troubleshooting](./faq)
