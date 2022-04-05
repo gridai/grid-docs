@@ -325,4 +325,4 @@ terraform destroy
 ```
 
 # Next Steps
-Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Customer Managed BYOC Mode](./4_self-managed-byoc.md).
+Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Self Managed BYOC Mode](./4_self-managed-byoc.md).

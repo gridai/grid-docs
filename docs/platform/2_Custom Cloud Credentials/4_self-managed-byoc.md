@@ -1,13 +1,13 @@
 ---
-title: Customer Managed BYOC
-sidebar_label: Customer Managed BYOC
+title: Self Managed BYOC
+sidebar_label: Self Managed BYOC
 ---
 
 # Overview
 
 This page describes BYOC creation in Customer-managed Infrastructure Mode. You manage and provision your AWS infrastructure using our terraform module, which you can audit and run on your infrastructure. This version requires Grid to have minimal permissions to your AWS account (only access to created EKS cluster & S3 bucket).
 
-# Deploying Customer Managed Bring Your Own Cluster (BYOC) Mode
+# Deploying Self Managed Bring Your Own Cluster (BYOC) Mode
 
 :::note
 To request access to this feature send an email to [support@grid.ai](mailto:support@grid.ai) with the subject "Request Access to BYOC Feature".
@@ -248,7 +248,7 @@ Use `grid edit` to see instance types available and update as necessary.
 grid edit cluster <cluster name>
 ```
 
-Use `grid delete` to delete cluster. The deletion will take ~10-20 minutes. The flag --wait is also available here, in the case of using, grid CLI will wait until the cluster is deleted. Deleting a cluster will delete the resources created by Grid. In Customer Managed BYOC mode this will be the S3 buckets and EKS resources created by Grid. Use with care!
+Use `grid delete` to delete cluster. The deletion will take ~10-20 minutes. The flag --wait is also available here, in the case of using, grid CLI will wait until the cluster is deleted. Deleting a cluster will delete the resources created by Grid. In Self Managed BYOC mode this will be the S3 buckets and EKS resources created by Grid. Use with care!
 
 :::note
     Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!

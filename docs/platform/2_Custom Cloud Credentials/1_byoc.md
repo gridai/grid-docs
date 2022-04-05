@@ -16,6 +16,6 @@ Grid creates clusters inside your own cloud account allowing you to keep complet
 # Next Steps
 1. [Prerequisite installation](https://docs.grid.ai/platform/custom-cloud-credentials/prereq-installation)
 2. [Grid managed byoc](https://docs.grid.ai/platform/custom-cloud-credentials/adding-custom-cloud-credentials)
-3. [Customer managed byoc](https://docs.grid.ai/platform/custom-cloud-credentials/self-managed-byoc)
+3. [Self managed byoc](https://docs.grid.ai/platform/custom-cloud-credentials/self-managed-byoc)
 4. [Setting cluster context](https://docs.grid.ai/platform/custom-cloud-credentials/grid-cluster-context)
 5. [Troubleshooting](https://docs.grid.ai/platform/custom-cloud-credentials/troubleshooting)
