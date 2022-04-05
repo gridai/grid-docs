@@ -1,7 +1,9 @@
 ---
+sidebar_position: 2.5
 title: Cluster Context
 sidebar_label: Cluster Context
 ---
+
 
 import Note from "@site/src/components/Note";
 

@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2.2
 title: BYOC Prereqs
 sidebar_label: BYOC Prereqs
 ---

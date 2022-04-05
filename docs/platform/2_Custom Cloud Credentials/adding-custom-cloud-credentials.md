@@ -1,8 +1,10 @@
+import Note from "@site/src/components/Note";
+
 ---
+sidebar_position: 2.3
 title: Grid Managed BYOC
 sidebar_label: Grid Managed BYOC
 ---
-import Note from "@site/src/components/Note";
 
 This documentation assumes you have followed our [prereq installation steps](./prereq-installation.md).
 

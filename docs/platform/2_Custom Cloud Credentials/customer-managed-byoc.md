@@ -1,4 +1,7 @@
+import Note from "@site/src/components/Note";
+
 ---
+sidebar_position: 2.4
 title: Customer Managed BYOC
 sidebar_label: Customer Managed BYOC
 ---
@@ -68,9 +71,9 @@ Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
 4. Click on "Create access key"
 5. Copy both the "Access key ID" and the "Secret access key" values
 
-:::note
+<Note>
     The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
-:::
+</Note>
 
 Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md#step-2-add-iam-permissions-to-your-account) for more details.
 
@@ -98,9 +101,9 @@ The final step is to add all the necessary permissions to your account to provis
 
 For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./adding-custom-cloud-credentials.md#prerequisites).
 
-:::note
+<Note>
     Customer-managed BYOC Infrastructure Mode only gives Grid the following permissions:
-:::
+</Note>
   * "eks:\*", # only for the cluster it creates
   * "s3:\*", # only for the buckets it creates
 
@@ -244,9 +247,9 @@ grid edit cluster <cluster name>
 
 Use `grid delete` to delete cluster. Deleting a cluster will delete the resources created by Grid. In Customer Managed BYOC mode this will be the S3 buckets and EKS resources created by Grid. Use with care!
 
-:::note
+<note>
     Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!
-:::
+</note>
 
 ```bash
 grid delete cluster <cluster name>
