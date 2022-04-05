@@ -7,7 +7,7 @@ sidebar_label: BYOC Prereqs
 
 This page describes the pre-requisites needed to create a BYOC and the steps to install them.
 
-[Grid Managed BYOC](./adding-custom-cloud-credentials)
+[Grid Managed BYOC](./adding-custom-cloud-credentials)  
 [Self Managed BYOC](./self-managed-byoc)
 
 # Prerequisites
