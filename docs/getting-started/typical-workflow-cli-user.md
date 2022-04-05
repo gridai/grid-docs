@@ -378,7 +378,8 @@ grid run --dependency_file ./requirements.txt \
          --name cifar-tut-hpo \
          --instance_type 2_m60_8gb \
          --datastore_name cifar5 \
-         --datastore_version 1 -- \
+         --datastore_version 1 \
+         -- \
          flash-image-classifier.py \
          --data_dir /datastores/cifar5 \
          --gpus 2 \
