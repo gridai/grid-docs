@@ -42,3 +42,11 @@ Your work will not be lost.
 When you have added credits, just resume the session and carry on with your work. The left navigation bar always shows credits remaining.
 
 ![](/images/sessions/autopausing.gif)
+
+---
+
+:::note
+Even though pausing is immediate, a final snapshot of your session is started after you click pause. 
+One consequence of this process is that resuming the session immediately after pausing it will incur into a 
+delay of a few minutes for your session to be resumed until this process is done.  This ensures your data is properly
+saved and avoids any corruption.

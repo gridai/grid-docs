@@ -50,6 +50,9 @@ grid session ssh happy-owl-123
 
 ![](/images/sessions/how-to-ssh-into-session.gif)
 
+You can also use direct `ssh` commands, for example to port forward remote or local ports, 
+as well as `sftp` if needed to transfer any files.
+
 :::note
 If prompted for a password while attempting to connect to a Session:
 - [Create an SSH Key](https://github.com/gridai/grid-docs/blob/doc-118-docs-add-troubleshooting-tip-to-ssh-docs/docs/features/sessions/how-to-ssh-into-a-session.md#step-0-create-an-ssh-key)
