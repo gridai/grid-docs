@@ -12,7 +12,7 @@ This page describes the pre-requisites needed to create a BYOC and the steps to 
 
 # Prerequisites
 
-To install either the Grid-managed BYOC or Customer-managed BYOC modes the following tools are required:
+To install either the Grid-managed BYOC or Self-managed BYOC modes the following tools are required:
 
 * [git](https://git-scm.com/)
 * [jq](https://stedolan.github.io/jq/)

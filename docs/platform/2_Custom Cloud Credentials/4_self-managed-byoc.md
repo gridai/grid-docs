@@ -5,7 +5,7 @@ sidebar_label: Self Managed BYOC
 
 # Overview
 
-This page describes BYOC creation in Customer-managed Infrastructure Mode. You manage and provision your AWS infrastructure using our terraform module, which you can audit and run on your infrastructure. This version requires Grid to have minimal permissions to your AWS account (only access to created EKS cluster & S3 bucket).
+This page describes BYOC creation in Self-managed Infrastructure Mode. You manage and provision your AWS infrastructure using our terraform module, which you can audit and run on your infrastructure. This version requires Grid to have minimal permissions to your AWS account (only access to created EKS cluster & S3 bucket).
 
 # Deploying Self Managed Bring Your Own Cluster (BYOC) Mode
 
@@ -88,7 +88,7 @@ Reach out to us via [Slack](slack:gridai-community.slack.com) or [email](mailto:
 
 **Add Policies to Your Account**
 
-The final step is to add all the necessary permissions to your account to provision the necessary infrastructure. Customer-managed BYOC infrastructure Mode you own your infrastructure provisioning.
+The final step is to add all the necessary permissions to your account to provision the necessary infrastructure. Self-managed BYOC infrastructure Mode you own your infrastructure provisioning.
 
 1. First, log in to AWS and navigate to IAM
 2. Click on "Users"
@@ -103,7 +103,7 @@ The final step is to add all the necessary permissions to your account to provis
 For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./2_prereq-installation.md#prerequisites).
 
 :::note
-    Customer-managed BYOC Infrastructure Mode only gives Grid the following permissions:
+    Self-managed BYOC Infrastructure Mode only gives Grid the following permissions:
 :::
   * "eks:\*", # only for the cluster it creates
   * "s3:\*", # only for the buckets it creates
