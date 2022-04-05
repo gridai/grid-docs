@@ -303,13 +303,12 @@ Clone the project **on the interactive Session**
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
 ```
 
-Install requirements + project
+Install requirements
 
 ```yaml
 cd grid-tutorials/getting-started
 
 pip install -r requirements.txt
-pip install -e .
 ```
 
 now run the following command to train a resnet18 on 2 GPUs
