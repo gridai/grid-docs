@@ -22,6 +22,9 @@ The equivalent via the CLI command:
 
 ### Change to spot instance
 
+In the UI you can set the Spot checkbox or in the CLI add `--spot` flag.
+You still need to provide the instance type even if just changing from on demand to spot.
+
 ```bash
 grid session change-instance-type sassy-crane-892 --spot g4dn.xlarge
 ```
