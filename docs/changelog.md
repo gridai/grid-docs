@@ -13,6 +13,31 @@ Upgrade your CLI with `pip install lightning-grid --upgrade`
 
 ---
 
+## :partying_face: March 30, 2022
+
+**CLI version: 0.8.17 **
+
+This release includes bug fixes and stability improvements. 
+
+We've deprecated the following CLI options:
+
+`grid run --description`
+`grid stop session`
+
+--
+
+
+## :partying_face: March 29, 2022
+
+**CLI version: 0.8.16 **
+
+We've deprecated the following CLI options:
+
+`grid run --description`
+`grid stop session`
+
+---
+
 ## :partying_face: March 15, 2022
 
 **CLI version: 0.8.7**
