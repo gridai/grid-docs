@@ -50,3 +50,4 @@ Even though pausing is immediate, a final snapshot of your session is started af
 One consequence of this process is that resuming the session immediately after pausing it will incur into a 
 delay of a few minutes for your session to be resumed until this process is done.  This ensures your data is properly
 saved and avoids any corruption.
+:::

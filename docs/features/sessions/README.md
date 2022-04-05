@@ -77,7 +77,7 @@ grid session resume SESSIONNAME
 # Note: at the moment it is required that you first pause the session
 grid session pause SESSION_NAME
 
-grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarge
+grid session change-instance-type SESSION_NAME g4dn.xlarge
 ```
 
 More details on how to change Session instance type can be found [here](./changing-instance-type.md)
