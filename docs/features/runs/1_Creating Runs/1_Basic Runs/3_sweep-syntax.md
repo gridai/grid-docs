@@ -8,7 +8,7 @@ If you encounter issues please check the [FAQ](https://docs.grid.ai/features/run
 :::
 # Hyperparameter Sweeps
 
-Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments:
+Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments from the CLI:
 
 ```bash
 python main.py --layers 32 --learning_rate 0.01
@@ -22,23 +22,40 @@ This page provides a list of arguments specific to running hyperparameter sweeps
 
 ### boolean
 
-Passing in a flag without values is treated like a boolean
+To create a hyperparameter sweep over boolean values, do NOT use toggleable flags.
 
 ```text
+# DO NOT take booleans like this
 grid run main.py --do_something
 ```
 
-Alternatively, your script can be written in such a way that it takes an arbitrary value and acts on them as booleans. For example, your script can be written in such a way that it treats 1/0, True/False, 'yes'/'no', etc as boolean values. For example:
+Instead, your script should be written such that it takes its value explicitly. For example, your script could take `1`/`0`, `True`/`False`, `'yes'`/`'no'`, etc. as boolean values:
 
 ```text
-grid run foo.py --bar 1 --barry 0
+# take booleans like this
+grid run foo.py --bool_flag_one True --bool_flag_two f
 ```
 
-This is the recommended syntax because it allows you to utilize arbitrary indicator hyperparameters in the [grid search](https://docs.grid.ai/features/runs/sweep-syntax#grid-search) and [random search](https://docs.grid.ai/features/runs/sweep-syntax#random-search) features. For example, the following will invoke a grid search:
-
+This way, grid can perform a hyperparameter sweep over your bool values: (see the [Grid Search](#grid-search) section below)
 ```text
 grid run foo.py --bar '[True, False]'
 ```
+
+:::note
+If you are using python / argparse, use the following template:
+```python
+from distutils.utils import strtobool
+parser.add_argument(
+    '--my_bool_flag',
+    dest='my_flag',
+    type=lambda x: bool(strtobool(x)),
+    # or, more simply:
+    # type=lambda x: x == 'True',
+)
+```
+
+Using `type=bool` is [not what you want](https://stackoverflow.com/questions/15008758/parsing-boolean-values-with-argparse)
+:::
 
 ### float
 

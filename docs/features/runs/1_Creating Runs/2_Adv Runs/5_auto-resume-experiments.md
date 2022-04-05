@@ -11,7 +11,7 @@ If you encounter issues please check the [FAQ](https://docs.grid.ai/features/run
 
 When running experiments on interruptible spot instances, Grid can automatically resume your experiment from the last saved checkpoint when a new instance becomes available. Grid will also recover all artifacts, including the last saved checkpoints. The local filesystem will be preserved between experiment interruption and experiment resumption.
 
-PyTorch Lightning offers out-of-the-box fault-tolerant training, which will automatically preserve any mid-epoch progress. When not using PyTorch Lightning, you will need to make sure your script is resumable.
+PyTorch Lightning offers out-of-the-box fault-tolerant training, which will automatically preserve any mid-epoch progress. **When not using PyTorch Lightning, you will need to make sure your script is resumable.**
 
 The lifecycle of a resumable experiment is as follows:
 

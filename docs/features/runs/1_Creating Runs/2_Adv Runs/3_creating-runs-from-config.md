@@ -45,6 +45,7 @@ compute:
       MY_ENVIRONMENT_VARIABLE: "example"
 ```
 
+<!-- As an aside: We need to add e2e tests around the config file experience -->
 :::note
 Flags in grid YML files have a 1-to-1 mapping with `grid run` flags
 :::

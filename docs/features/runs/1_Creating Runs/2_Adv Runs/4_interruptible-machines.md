@@ -23,7 +23,7 @@ Cloud machines are normally expensive. However, if your job can support being in
 grid run --use_spot pl_mnist.py
 ```
 
-## Prepare code for interruptible
+## Prepare code for interruption
 
 To take advantage of interruptible machines, make sure your code does a few things:
 
@@ -38,7 +38,7 @@ Once the machine is interrupted, your job on Grid will stop. If you want to cont
 2. copy the link to the state files (or checkpoint) that you need.
 3. Resubmit the job with the path to that file.
 
-For example, assume your script has an argument called **--ck_path**
+For example, assume your script has an argument called `--ck_path`
 
 ```bash
 grid run --use_spot main.py --ck_path https://grid.ai/url/to/checkpoint.ckpt

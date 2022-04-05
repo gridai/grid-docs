@@ -9,13 +9,18 @@ If you encounter issues please check the [FAQ](https://docs.grid.ai/features/run
 
 Grid Runs offers two solutions for using private repos:
 1. Grant Grid access to your private GitHub repos
-2. Utilize the grid run --localdir option
+2. Utilize the `--localdir` CLI option when creating a Run
 
 ## Integrating with GitHub
 See [here](https://docs.grid.ai/platform/github-integration) for detailed steps for integrating GitHub with Grid.
 
-## Grid Run localdir Option
-Currently, Grid has a native Github integration to allow running code from public or private repositories. There is currently no support for integration with other code repository providers like BitBucket, Gitlab, etc. We provide the --localdir feature within Grid run to allow users to run scripts from an arbitrary local directory, regardless of where that code is hosted. The main benefit of this feature is for users that do not need to grant Grid access to their code repository accounts. Below is an example usage of the grid run --local dir option.
+## The --localdir Option
+Currently, Grid has a native Github integration to allow running code from public or private repositories. There is currently no support for integration with other code repository providers like BitBucket, Gitlab, etc. We provide the `--localdir` feature within Grid run to allow users to run scripts from an arbitrary local directory, regardless of where that code is hosted. The main benefit of this feature is for users that do not need to grant Grid access to their code repository accounts. Below is an example usage of the grid run `--localdir` option.
+
+<!-- We need docs on the .gridignore file if they don't already exist -->
+:::note
+Grid will upload the entire contents of your directory to our system. Make a `.gridignore` file to limit what we upload!
+:::
 
 ```
 grid run --localdir run.py
