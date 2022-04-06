@@ -45,7 +45,7 @@ const config = {
       ({
         redirects: [
           {
-            to: "/platform/custom-cloud-credentials/adding-custom-cloud-credentials",
+            to: "/platform/Custom Cloud Credentials/adding-custom-cloud-credentials",
             from: "/platform/upgrades/adding-custom-cloud-credentials"
           },
           {
