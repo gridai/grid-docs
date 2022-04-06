@@ -1,6 +1,6 @@
 # How to use Runs
 :::note
-Grid Runs support the use of Private PyPi repositories. However, to do this you will have to use Grid's advanced Runs features.
+Grid Runs support the use of Private PyPi repositories. Please see the following [documentation](https://docs.readthedocs.io/en/stable/guides/private-python-packages.html) for various methods of pip installing from private sources. 
 :::
 
 There are many ways to use Runs in Grid. Below we provide some examples to get you started with working with this core feature. The examples cover the following:
