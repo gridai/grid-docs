@@ -1,21 +1,22 @@
 ---
-description: Sets the cluster context for the user.
+sidebar_position: 2.5
+title: Cluster Context
+sidebar_label: Cluster Context
 ---
-import Note from "@site/src/components/Note";
 
 # Setting Cluster Context
 
 With multi-cluster availability, if you are working against a particular cluster, it's easier to set the
 cluster context so all your CLI actions (including creation of a resource such as Datastore, Run or Session) are going
 against that cluster. Apart from the easiness this command brings, it also help you avoid mistakes such
-as scheduling to a wrong cluster. 
+as scheduling to a wrong cluster.
 
 
 <note>**Please Note:** This feature will evolve to include more elaborate cluster management in the near-term future.
-```text $ grid user set-cluster-context [cluster-name]``` 
+```text $ grid user set-cluster-context [cluster-name]```
 </note>
 
-Note that by default, the cluster context is set to the global cluster. The global cluster name is `Grid Cloud`. The global cluster id is `prod-2`. 
+Note that by default, the cluster context is set to the global cluster. The global cluster name is `Grid Cloud`. The global cluster id is `prod-2`.
 You can find what's the currently
 set cluster context by the `grid user` command which should print the user information along with the current
 context into the terminal. Also, For finding the cluster name, you  can use `grid clusters` to list all the
@@ -77,4 +78,3 @@ Username        : xxxxxxxx
 Email           : xxxxxxxx
 Cluster context : prod-2
 ```  
-
