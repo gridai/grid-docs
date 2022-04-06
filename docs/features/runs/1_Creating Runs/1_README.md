@@ -1,4 +1,8 @@
 # How to use Runs
+:::note
+Grid Runs support the use of Private PyPi repositories. However, to do this you will have to use Grid's advanced Runs features.
+:::
+
 There are many ways to use Runs in Grid. Below we provide some examples to get you started with working with this core feature. The examples cover the following:
 1. [Creating Basic Runs](https://docs.grid.ai/runs/creating-basic-runs/)
 2. [Analyzing Runs](https://docs.grid.ai/features/runs/analyzing-runs/)
