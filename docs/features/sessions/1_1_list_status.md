@@ -8,25 +8,24 @@ sidebar_label: List Sessions
 
 ## List Sessions 
 
-On the [Sessions](https://platform.grid.ai/#/sessions) page you can see all your sessions, the ones that are running and the ones
-that are paused.
+From the Grid UI, you can see all your sessions on the [Sessions](https://platform.grid.ai/#/sessions) page. This view shows you both running and paused sessions. 
 
 ![](/images/sessions/sessions-list.png)
 
-In the CLI you can see them with:
+In the CLI you can list sessions with:
 
 ```bash
 grid session
 ```
 
 
-## Team Members Sessions
+## Team Sessions
 
-You can also see your team member's sessions if you are part of a team.
+If you've been added to a team, you can see sessions created by everyone on your team in the Grid UI. 
 
 ![](/images/sessions/team-member-sessions.gif)
 
-In the CLI you can see them with: 
+Using the CLI, you can list all sessions created by your team with: 
 
 ```bash
 grid session --global
@@ -34,8 +33,8 @@ grid session --global
 
 ## Session Details
 
-You can quickly check any session detail by clicking on the three dots on the right.
-It will show a page with the Instance information and there is also a tab with a history
+From the Grid UI, you can quickly check a Session's details by clicking on the option menu associated with the Session. 
+The session details page shows instance information and status history
 of the session, where you can see when it was created, paused and resumed.
 
 ![](/images/sessions/session-details-history.gif)
