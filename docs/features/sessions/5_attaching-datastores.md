@@ -38,9 +38,9 @@ grid session create --datastore_name DATASTORE_NAME
 
 ## Attach a team datastore to a Session
 
-This is completely transparent, and you can attach a datastore uploaded by a team member to your session.
+You can attach a datastore uploaded by a team member to your session.
 
-Check datastores available to you in the [UI](https://platform.grid.ai/#/datastores). Or in the CLI: 
+Check datastores available to your team in the [UI](https://platform.grid.ai/#/datastores). Or in the CLI with: 
 
 ```bash
 grid datastore --global
