@@ -5,7 +5,7 @@ sidebar_label: GitHub Login
 ---
 
 # GitHub Integration
-See [here](https://docs.grid.ai/platform/github-integration) for detailed steps on how to integrate GitHub with Grid.
+See [here](../../platform/2_github-integration.md) for detailed steps on how to integrate GitHub with Grid.
 
 # Github login
 

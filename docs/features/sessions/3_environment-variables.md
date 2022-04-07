@@ -4,8 +4,8 @@ title: Environment Variables
 sidebar_label: Environment Variables
 ---
 
-# Environmental Variables
-Sessions come with a couple environmental variables available for community use. Thesse variables can be accessed via $ENV-VAR.
+# Environment Variables
+Sessions come with a couple environment variables available for community use. Thesse variables can be accessed via $ENV-VAR.
 
 | Environment Variable | Description|
 | -------------------- | -----------|
