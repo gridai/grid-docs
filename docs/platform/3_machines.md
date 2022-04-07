@@ -61,3 +61,19 @@ grid instance-types
 
 This will provide the instance size names from AWS convention that, as mentioned above, can be used
 in Runs and Sessions.
+
+### Spot Instances
+
+Spot instances gives you the best bang for your credits, but they can
+get longer to obtain depending on how popular they are at the moment requested.
+
+Even though they could make more sense for Runs where you don't mind letting it wait
+to obtain an instance, you can try obtaining one for Sessions. Set the checkbox in the UI:
+
+![](/images/sessions/spot-create.gif)
+
+In the cli add the option `--use_spot` to your `session create` command:
+
+```bash
+grid session create --use_spot
+```
