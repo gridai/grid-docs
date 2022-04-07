@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1.5
-title: Attaching Datastores
-sidebar_label: Attaching Datastores
+title: Attaching Datastores to a Session
+sidebar_label: Attaching Datastores to a Session
 ---
 
 :::note: Datastore can only be mounted to a Session at Session creation time:::
@@ -10,18 +10,17 @@ sidebar_label: Attaching Datastores
 description: Mount a datastore before starting the Session
 ---
 
-# Attaching Datastores
+# Attaching Datastores to a Session
 
 ## Attach to a Session
 
-This video shows how we attach an ImageNet Datastore to a Session.
+This video shows how we mount an ImageNet Datastore to a Session.
 
 ![](/images/datastores/attach_datastore_to_session.gif)
 
 In Sessions datastores are mounted to `/datastores`. 
 However, since juypyter notebooks use `/home/joyvan` as the default working directory, 
-we provide a symlink from `/home/jovyan/datastores` to `/datastore` so you can access your datastore easily upon 
-opening up a Session.
+we provide a symlink from `/home/jovyan/datastores` to `/datastore` so you can access your datastore easily upon opening up a Session.
 
 
 Once in the Session, view the data with:
@@ -31,8 +30,7 @@ cd /datastores
 ls
 ```
 
-To create a session with a datastore in the CLI, you can do the following to get the latest version of the
-datastore name `DATASTORE_NAME`:
+To create a session with a datastore in the CLI, you can do the following to get the latest version of the datastore name `DATASTORE_NAME`:
 
 ```bash
 grid session create --datastore_name DATASTORE_NAME
