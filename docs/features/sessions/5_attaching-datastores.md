@@ -30,7 +30,7 @@ cd /datastores
 ls
 ```
 
-To create a session with a datastore in the CLI, you can do the following to get the latest version of the datastore name `DATASTORE_NAME`:
+To create a session with a datastore in the CLI, you can do the following to attach the latest version of the named datastore:
 
 ```bash
 grid session create --datastore_name DATASTORE_NAME
