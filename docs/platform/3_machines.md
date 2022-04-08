@@ -1,7 +1,8 @@
 # Machines
 ## Available Machines
-These are the options of available machines. These can be specified by using the `--instance_type` flag. Later we will cover examples utilitizing this for both
-Runs and Sessions.
+These are the options of available machines. These can be specified by using the `--instance_type` flag. Later we will cover examples utilitizing this for both Runs and Sessions
+
+::: note The table below is just an example of some machine types available on Grid. Additional machine types are available on the platform. :::
 
 | Name | Accelerator type |
 | :--- | :--- |
