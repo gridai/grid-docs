@@ -18,13 +18,13 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 grid ssh-keys add lit_key ~/.ssh/id_ed25519.pub
 ```
 
-## Step 1: launch the session
+## Step 1: Launch a session
 
 ```bash
 grid session create --name fun-bear-259
 ```
 
-## Step 2: login to the interactive session
+## Step 2: Login to the interactive session
 
 ```bash
 grid session ssh fun-bear-259
