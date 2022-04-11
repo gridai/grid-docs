@@ -1,10 +1,21 @@
 ---
 sidebar_position: 1.1
-title: List Sessions
-sidebar_label: List Sessions
+title: Create and List Sessions
+sidebar_label: Create and List Sessions
 ---
 
-# List Sessions 
+# Create and List Sessions
+
+## Create Sessions
+
+From the Grid UI, you can create a Session by navigating to New --> Session. 
+![](/images/sessions/new-session.gif)
+
+You can also create a Session using the CLI with the command: 
+
+`grid session create` 
+
+Use the `help` option to see all of the arguments available to `grid session` and `grid session create`. You can also check out the `grid session` [CLI docs](../../cli.md#grid-session). 
 
 ## List Sessions 
 

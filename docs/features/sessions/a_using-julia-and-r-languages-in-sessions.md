@@ -6,13 +6,15 @@ sidebar_label: Julia and R Languages in Sessions
 
 # Julia and R languages in Sessions
 
-## Julia and R languages in addition to Python
-
 Sessions are now updated with support for Julia and R programming languages
 
 ## Step 0: Create a Session
 
-Create a session as you would normally
+Create a session
+
+`grid session create`
+
+More details on how to create a session can be found [here](../sessions/1_1_list_create_sessions.md#create-sessions)
 
 ## Step 1: Open Jupyterlab
 
