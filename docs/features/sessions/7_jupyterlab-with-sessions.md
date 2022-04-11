@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1.7
-title: Jupyter with Sessions
-sidebar_label: Jupyter with Sessions
+title: JupyterLab with Sessions
+sidebar_label: JupyterLab with Sessions
 ---
 
 # JupyterLab with Sessions
