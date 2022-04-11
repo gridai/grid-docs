@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2.1
+sidebar_position: 2.2
 title: FAQ
 sidebar_label: FAQ
 ---
