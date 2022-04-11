@@ -7,7 +7,7 @@ New features, enhancements, and fixes are released during scheduled maintenance 
 
 ## During Maintenance
 
-Experiments and Sessions that are in-progress will continue to run and complete during when the platform is undergoing maintenance.
+Experiments and Sessions that are in-progress will continue to run and complete while the platform is undergoing maintenance.
 New and in-progress CLI, SSH, and WebUI connectivity could be degraded, intermittent, or unavailable.
 Grid.ai is committed to continually minimizing the customer impact during the maintenance windows.
 
