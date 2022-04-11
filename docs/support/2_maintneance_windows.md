@@ -5,23 +5,23 @@ sidebar_label: Maintenance Windows
 
 New features, enhancements, and fixes are released during scheduled maintenance windows.
 
-## During the Maintenance
+## During Maintenance
 
 In-progress Experiments and Sessions will continue to run and complete during the maintenance.
 New and in-progress CLI, SSH, and WebUI connectivity could be degraded, intermittent, or unavailable.
 Grid.ai is committed to continually minimizing the customer impact during the maintenance windows.
 
-The current maintenance window are:
+The current maintenance window is:
 
 - 9 AM - 10 AM Eastern Mon - Fri
 
 :::note
-The maintenance windows can be shorter than the published maintenance window without notice.
+The maintenance window can be shorter than the published maintenance window without notice.
 A maintenance window that is longer than published will be reported in the [Incident History](3_service_levels.md).
 :::
 
-## After the maintenance
-The upgrade components may require additional actions:
+## After Maintenance
+The upgraded components may require additional actions:
   
 - Grid.ai CLI command will prompt for the suggested CLI upgrade below.  Please upgrade the CLI to continue. 
   ```

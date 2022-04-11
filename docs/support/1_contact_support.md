@@ -4,7 +4,7 @@ sidebar_label: Contact Support
 ---
 
 Grid.ai is committed to providing service customers can rely on.
-Support will Respond, Partner, and Communicate with you to reach successful outcomes.
+Support will **respond**, **partner**, and **communicate** with you to reach successful outcomes.
 
 ## Contact Support
 
@@ -12,17 +12,17 @@ To contact Support, please use one or more of the following methods:
 
 - Join [Grid Slack Community](https://gridai-community.slack.com)
   
-  The community of Grid.ai users and the Support can help with your issue. 
+  The community of Grid.ai users and the Grid.ai Support team can help with your questions. 
 
-- [e-Mail](mailto:support@grid.ai) Grid Support
+- [E-Mail](mailto:support@grid.ai) Grid Support
 
-  The Support can help with your issue. Sending an email will automatically open a Support Ticket that can be viewed in the Support Portal.
+  The Support team can help with your questions. Sending an email will automatically open a Support Ticket that can be viewed by the team in our Support Portal.
 
 - Track via [Support Portal](https://support.grid.ai)
 
-  Commercial customers are entitled to an agreed SLA via the portal. Please create a Support Portal login ID to holistically track against the SLA and manage requests.
+  Commercial customers are entitled to an agreed upon SLA via the portal. Please create a Support Portal login ID to holistically track against the SLA and manage requests.
 
-## Information In Support Request
+## Information to Provie in Support Request
 
 Please include the following information in the Support requests.
 
