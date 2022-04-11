@@ -3,16 +3,16 @@
 Grid charges based on consumption of compute.
 
 :::note
-Costs are **estimates** until Runs have completed or Sessions are paused, then Grid reports the final costs
+Costs are **estimates** until Runs have completed or Sessions are paused, then Grid reports the final costs.
 :::
 
-A temporary hold of $1 will be placed on your credit card for  5-7 business days when using GPU machines.
+A temporary hold of $1 will be placed on your credit card for 5-7 business days when using GPU machines.
 
-This page describes community edition pricing; refer to plans [here](https://www.grid.ai/pricing/)
+This page describes community edition pricing; refer to plans [here](https://www.grid.ai/pricing/).
 
 ## List pricing
 
-If you need to run jobs for a long time and they cannot be interrupted, then use the default way of running. This will use the list pricing.
+If you need to run jobs for a long time and they cannot be interrupted, then use on-demand runs (this is the default option). This will use the list pricing.
 
 ```text
 grid run main.py
