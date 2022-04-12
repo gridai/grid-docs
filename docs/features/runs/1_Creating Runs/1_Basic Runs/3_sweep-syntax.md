@@ -4,14 +4,15 @@ sidebar_label: Hyperparameter Sweep Syntax
 ---
 
 :::note
-If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+Check the [Runs FAQ](https://docs.grid.ai/features/runs/faq.md) for common questions about how to use Runs. This page is periodically updated with questions from the Grid community.
 :::
+
 # Hyperparameter Sweeps
 
-Grid allows running [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments from the CLI:
+Grid Runs offer the abilty to launch [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments from the CLI:
 
 ```bash
-python main.py --layers 32 --learning_rate 0.01
+grid run main.py --layers 32 --learning_rate 0.01
 ```
 
 :::note
@@ -22,7 +23,7 @@ This page provides a list of arguments specific to running hyperparameter sweeps
 
 ### boolean
 
-To create a hyperparameter sweep over boolean values, do NOT use toggleable flags.
+To create a hyperparameter sweep over boolean values, do NOT use toggle flags.
 
 ```text
 # DO NOT take booleans like this
@@ -36,7 +37,7 @@ Instead, your script should be written such that it takes its value explicitly. 
 grid run foo.py --bool_flag_one True --bool_flag_two f
 ```
 
-This way, grid can perform a hyperparameter sweep over your bool values: (see the [Grid Search](#grid-search) section below)
+This way, grid can perform a hyperparameter sweep over your boolean values: (see the [Grid Search](#grid-search) section below)
 ```text
 grid run foo.py --bar '[True, False]'
 ```
@@ -246,7 +247,7 @@ grid run main.py --alpha 0.05200016 --beta 3
 grid run main.py --alpha 0.05200016 --beta 4
 ```
 
-Using [Random Search](https://jmlr.csail.mit.edu/papers/volume13/bergstra12a/bergstra12a.pdf) you can get close to optimal performance without needing to run all possible combinations. To use random search with Grid, simply choose that option
+Using [Random Search](https://jmlr.csail.mit.edu/papers/volume13/bergstra12a/bergstra12a.pdf) you can get close to optimal performance without needing to run all possible combinations. To use random search with Grid, simply choose that option using the `--strategy` option of `grid run`. 
 
 ```text
 grid run --strategy random_search \
