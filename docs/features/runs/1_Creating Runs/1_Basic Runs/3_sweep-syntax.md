@@ -257,18 +257,3 @@ grid run main.py --alpha 0.05200016 --beta 2
 grid run main.py --alpha 0.05200016 --beta 3
 grid run main.py --alpha 0.05200016 --beta 4
 ```
-
-## Skipping Parameter Evaluation
-
-Grid's syntax for scheduling multiple experiments with combinations of arguments (ie. Grid Search or Random Search) 
-sometimes might confilict with the expected script arguments.
-That's when you can use `none` strategy for parameter evaluation.
-
-```text
-grid run --strategy none \
-         main.py \
-         --alpha "uniform(1e-5, 1e-1, 3)" \
-         --beta "[1, 2, 3, 4]"
-```
-
-This will schedule exactly one experiment and pass each script argument as-is without evaluation. 
