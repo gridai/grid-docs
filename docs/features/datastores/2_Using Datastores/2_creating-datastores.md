@@ -4,9 +4,9 @@ sidebar_label: Creating Datastores
 ---
 # Create Datastores
 
-Datastores can be created from a number of sources (on both the CLI and UI)
+Datastores can be created from a number of sources (on both the CLI and UI):
 
-- Uploading files stored on your computer.
+- Uploading files stored on your computer
 - From an HTTP URL which downloads a `.zip` or `.tar.gz` file. These files are
   automatically extracted by the Grid Platform before they are attached to a Run or
   Session
@@ -14,6 +14,7 @@ Datastores can be created from a number of sources (on both the CLI and UI)
 - (BYOC-users only) From a private S3 bucket using the syntax `s3://bucket-name/path/`
 
 ## Uploading Files from a Computer
+
 ### Small datasets
 
 You can use the UI to create Datastores for datasets smaller than 1GB (files or folder).
@@ -26,7 +27,7 @@ Select the file or folder and click upload.
 
 :::note 
 
-You can still use the CLI for these datastores!
+You can also use the CLI for uploading these datastores!
 
 :::
 
@@ -37,13 +38,11 @@ For datasets larger than 1 GB, use the CLI.
 
 :::note 
 
-If you have a dataset that is 1Gb+, we suggest creating an Interactive Session and
-creating the Datastore from there. Internet speed is much faster in Interactive Sessions,
-so upload times will be shorter. 
+If you have a dataset that is 1Gb+ and poor-average internet connection, we suggest starting an Interactive Session and creating the Datastore from there. Internet speed is much faster in Interactive Sessions, so upload times will be shorter. 
 
 :::
 
-First, install the grid CLI and login
+First, install the grid CLI and login:
 
 ```bash
 pip install lightning-grid --upgrade
@@ -61,19 +60,20 @@ This method can work from:
 * A laptop.
 * An interactive session.
 * Any machine with an internet connection and Grid installed.
-* A Corporate cluster.
-* An Academic cluster.
+* A corporate cluster.
+* An academic cluster.
 
 # Creating Datastores from an S3 Bucket
 
 ## Create From a Public S3 Bucket
 
 Any public [AWS S3](https://aws.amazon.com/s3/) bucket can be used to create datastores on
-the grid public cloud or a BYOC cluster using either the grid CLI or UI. 
+the grid public cloud or on a BYOC cluster by using the grid CLI or UI. 
 
 ### Using the UI
 
-**_TODO: CAPTURE SCREEN RECORDING SHOWING STEPS OF CREATING DATASTORE FROM S3 VIA UI_**
+Click New --> Datastore and choose "URL" as the upload mechanism. 
+Provide the S3 bucket URL as the source. 
 
 ### Using the CLI
 
@@ -111,14 +111,14 @@ grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightnin
 
 ## Create from a Private S3 Bucket
 
-At this time we are only supporting usage of private S3 buckets as Datastores for BYOC
-users, who have connected Grid to a custom AWS cluster. You can grant Grid access to your
-desired buckets by following the official aws
+At this time Datastore creation from Private S3 buckets is only available to BYOC users
+users, who have connected Grid to a custom AWS cluster. 
+BYOC users can grant Grid access to desired buckets by following the official aws
 [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 
-As a convenience, below we provided a bucket policy that grants Grid access to all the
+As a convenience, we provide a bucket policy below that grants Grid access to all the
 contents of your specified bucket. It assumes that you modified the tfvars role_arn field.
-If you have not then you can use `<aws-account-id-associated-with-byoc>:root` instead. You
+If you have not modified this field, then you can use `<aws-account-id-associated-with-byoc>:root` instead. You
 can follow this official aws
 [documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html)
 to get your account id.

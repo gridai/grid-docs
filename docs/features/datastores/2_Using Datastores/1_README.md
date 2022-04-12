@@ -25,12 +25,10 @@ to get you started with working with this core feature. The examples cover the f
 
 3. [Attaching Datastores To a Session or Run](./4_attaching-datastores.md)
    
-4. [Periodically uploading Datastores](./5_periodically-uploading-datastores.md)
+4. [Periodically Uploading Datastores](./5_periodically-uploading-datastores.md)
    
 5. [Deleting Datastores](./6_deleting-datastores.md)
 
 ## Further Information
 
-For more information, please refer to the [Datastore capabilities
-reference](../1_Capabilities/1_README.md) or the [Datastore Frequently Asked
-Questions](../faq.md) page.
+For more information, please refer to the [Datastore Frequently Asked Questions](../faq.md) page.
