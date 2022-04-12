@@ -1,12 +1,12 @@
 ---
-title: Viewing Status
-sidebar_label: Viewing Status
+title: Viewing Datastore Status
+sidebar_label: Viewing Datastore Status
 ---
 
 # Viewing Datastore Status
 
-Depending on the source of the data used to create the Datastore, there may be some delay
-between requesting the Datastore be created and when the Datastore is actually available
+Depending on the source of the data used to create a Datastore, there may be some delay
+between the Datastore creation request and the point at which the Datastore is actually available
 for use. 
 
 ## Processing Times
@@ -45,7 +45,7 @@ $ grid datastore
 
 ## Inspecting Status Using the UI
 
-Navigating to the [Grid Platform Datastores Tab](https://platform.grid.ai/#/datastores) in
+Navigate to the [Grid Platform Datastores Tab](https://platform.grid.ai/#/datastores) in
 order to view the current status of your datastores in a graphical format.
 
 ![](../../../../static/images/datastores/datastore-status-via-ui.png)
