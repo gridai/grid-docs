@@ -261,7 +261,7 @@ grid run main.py --alpha 0.05200016 --beta 4
 ## Skipping Parameter Evaluation
 
 Grid's syntax for scheduling multiple experiments with combinations of arguments (ie. Grid Search or Random Search) 
-sometimes might confilict with the expected script arguments.
+sometimes might conflict with the expected script arguments.
 That's when you can use `none` strategy for parameter evaluation.
 
 ```text
