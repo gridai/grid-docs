@@ -2,10 +2,7 @@
 title: Auto-Resume Experiments
 sidebar_label: Auto-Resume Experiments
 ---
-:::note
-If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
-:::
-# 🆕 Auto Resume Experiments
+# Auto Resume Experiments
 
 ### What are resumable experiments?
 
@@ -58,3 +55,7 @@ PyTorch Lightning provides a built-in auto-resume mechanism. This would enable y
 You can learn more about the PyTorch Lightning Fault Tolerance mechanism [here](https://pytorch-lightning.readthedocs.io/en/latest/advanced/fault_tolerant_training.html#:~:text=Fault%2Dtolerant%20Training%20is%20an,a%20hardware%20or%20software%20failure.&text=fit()%20fails%20in%20the,and%20everything%20will%20be%20restored.).
 
 Furthermore, PyTorch Lightning provides a reproducible script that you can find [here](https://github.com/PyTorchLightning/pytorch-lightning/blob/master/pl_examples/fault_tolerant/automatic.py) which is tested end-to-end on Grid with the Auto-Resume feature and can be used as a reference for you to get started.
+
+:::note
+If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq.md). The section is periodically updated this with common questions from the Grid community.
+:::

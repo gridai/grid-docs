@@ -4,12 +4,20 @@ sidebar_label: Creating Runs from Config File
 ---
 
 :::note
-The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
-Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+The following examples assume you have already installed and setup Grid. If you haven't, please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
 :::
+
 # Using YAML
 
-In addition to CLI parameters, Grid supports the use of YML files so you don't have to pass in many parameters in all occasions. If you don't change compute parameters often, we suggest you create a Grid config file and use that instead.
+In addition to CLI parameters, Grid supports the use of YML files for passing configuration properties to a Grid Run. This eliminates the need to specify a long list of parameters at the command-line during frequent Run iterations. If compute parameters do not change often, we suggest you create a Grid config file and use that instead of specifying parameters at the command-line.
+
+## Creating Runs With a Config File
+
+You can create a Run with a config file instead of passing CLI arguments. For example:
+
+```text
+grid run --config my_config.yml script.py
+```
 
 ## Grid Spec Overview
 
@@ -45,25 +53,14 @@ compute:
       MY_ENVIRONMENT_VARIABLE: "example"
 ```
 
-<!-- As an aside: We need to add e2e tests around the config file experience -->
 :::note
-Flags in grid YML files have a 1-to-1 mapping with `grid run` flags
+Flags in grid YML files have a 1-1 mapping with `grid run` flags
 :::
-
-In addition to the parameters above, you can also run arbitrary commands on different stages of you training operation.
-
-## Creating Runs With a Config File
-
-You can create a Run with a config file instead of passing CLI arguments. For example:
-
-```text
-grid run --config my_config.yml script.py
-```
 
 ## Config Files with Actions
 Config files also allow the use of a special feature called Actions. Grid Actions give you the flexibility of adding steps to your training workflow without having to change your training script.
 
-Example uses of actions:
+Example uses of Actions:
 
 * Installing libraries like Apex
 * Downloading data
@@ -239,3 +236,7 @@ ${parameter=default}
 ${parameter:=default}
 ${parameter:-default}
 ```
+
+:::note
+If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq.md). The section is periodically updated this with common questions from the Grid community.
+:::
