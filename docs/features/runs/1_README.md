@@ -44,9 +44,26 @@ The Grid CLI accepts "--" as a separator between grid arguments and script argum
 grid run --grid_param argument --grid_param argument -- train.py --script_param argument --script_param argument
 ```
 
-:::note
-Grid Run respects the use of .ignore files; these files are used to tell a program which files it should ignore during execution. Grid gives preference to the .gridignore file. In the absence of a .gridignore file Grid will concatenate the .gitignore and .dockerignore files to determine which files should be ignored. These files do not have to be provided to the CLI or UI and are expected to reside in the project root directory.
-:::
+### Local directory upload and .gridignore file
+Currently, Grid has only a native Github integration to allow running code from public or private repositories. We provide `--localdir` option to allow users to run scripts from arbitrary local directory. When using local directory option CLI will upload all files from current directory with exclusion of those defined by rules of .gridignore file.
+
+Here is an example .gridignore file:
+
+```text
+# Ignore all *.pyc files and __pycache__ directories in all directories (nested)
+*.pyc
+__pycache__/
+
+
+# Exclude files only in given directory
+/*.md
+/nested/*.md
+```
+
+`.gridignore` uses glob expressions to exclude any file that matches. Lines starting with `#` are comments and will be ignored. All directories with name `__pycache__` will not get uploaded as well as any file (even inside nested directories) with `.pyc` extension. To exclude files only on particular directory level use `/` separator - also on the Windows platform. 
+
+If the `.gridignore` is not found then CLI excludes files based on the `.gitignore` and `.dockerignore` files combined. At this moment only `.gridignore` located in project root directory is supported, any ignore file in nested directories will be ignored. 
+
 
 **⚡️⚡️Forget about infrastructure ⚡️⚡️**
 
