@@ -112,7 +112,7 @@ grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightnin
 ## Create from a Private S3 Bucket
 
 At this time Datastore creation from Private S3 buckets is only available to BYOC users
-users, who have connected Grid to a custom AWS cluster. 
+usersnwho have connected Grid to a custom AWS cluster. 
 BYOC users can grant Grid access to desired buckets by following the official aws
 [documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
 
@@ -196,7 +196,8 @@ methods, you would get a `.zip` file in the Datastore mount path.
 
 ### Using the UI
 
-**_TODO: CAPTURE SCREEN RECORDING SHOWING STEPS OF CREATING DATASTORE FROM S3 VIA UI_**
+Click New --> Datastore and choose "URL" as the upload mechanism. 
+Provide the HTTP URL as the source. 
 
 ### From the CLI
 
@@ -212,18 +213,15 @@ we simply execute:
 grid datastore create https://datastore-public-bucket-access-test-bucket.s3.amazonaws.com/subfolder/trainingSet.tar.gz
 ```
 
-Which will copy the files from the source bucket into the managed Grid Datastore storage
-system. 
-
 :::tip
 
 In the above example, you'll see that we omitted the `--name` option in the CLI command.
 When the `--name` option is omitted, the datastore name is assigned from the last `path`
-component of the URL (with suffixes stripped) So in the case above, the datastore would be named
+component of the URL (with suffixes stripped). So in the case above, the datastore would be named
 `"trainingset"` (the name is converted to all lowercase ASCII non-space characters). 
 
-If we we wanted to use a different name, we can override the implicit naming by passing
-the `--name` option / value parameter explicitly. As an example, if we wanted to create a
+If we wanted to use a different name, we could override the implicit naming by passing
+the `--name` option explicitly. As an example, if we wanted to create a
 datastore from this bucket named `"lightning-train-data"` we could execute:
 
 ```bash
@@ -238,10 +236,10 @@ grid datastore create https://datastore-public-bucket-access-test-bucket.s3.amaz
 
 For huge datasets that need processing or a lot of manual work, we recommend this flow:
 
-* launch an Interactive Session
-* download the data
-* process it
-* upload
+* Launch an [Interactive Session](../../../features/sessions/README.md)
+* Download the data
+* Process it
+* Upload
 
 ![](/images/datastores/upload_datastore_from_session.gif)
 
@@ -271,7 +269,7 @@ bash process.sh
 ...
 ```
 
-when you're done, upload to Grid via the CLI (on the Interactive Session):
+When you're done, upload to Grid via the CLI (on the Interactive Session):
 
 ```bash
 grid datastore create imagenet_folder --name imagenet
@@ -279,7 +277,7 @@ grid datastore create imagenet_folder --name imagenet
 
 :::note 
 
-Grid CLI is auto-installed on sessions and logged in under your credentials. 
+Grid CLI is auto-installed on sessions and you are automatically logged in with your Grid credentials. 
 
 :::
 
@@ -289,8 +287,8 @@ Grid CLI is auto-installed on sessions and logged in under your credentials.
 
 Use these instructions to upload from:
 
-* Corporate cluster.
-* Academic cluster.
+* A corporate cluster.
+* An academic cluster.
 
 First, start screen on the jump node (to run jobs in the background).
 
@@ -323,7 +321,7 @@ Next, use the Datastores command to upload any folder:
 grid datastore create ./imagenet_folder/ --name imagenet
 ```
 
-You can safely close your ssh connection to the cluster (the screen will keep things
+You can safely close your SSH connection to the cluster (the screen will keep things
 running in the background).
 
 
