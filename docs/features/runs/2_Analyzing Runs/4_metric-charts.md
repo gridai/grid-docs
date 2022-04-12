@@ -2,23 +2,25 @@
 title: Metrics
 sidebar_label: Metrics
 ---
-:::note
-If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
-:::
-# Metrics (charts)
+
+# Metrics (Charts)
 
 ## Web Interface view
 
-View the metrics of experiments by choosing Run then experiments
+View the metrics of experiments by choosing "Run", then "Experiments".
 
 ![](/images/runs/experiment-metrics.gif)
 
 ## Tensorboard
 
-Tensorboard can be launched in a new tab in the browser by selecting Tensorboard -&gt;refresh
+Tensorboard can be launched in a new tab in the browser by selecting Tensorboard refresh.
 
 ![](/images/runs/tensorboard.gif)
 
-In the Experiments table view, select hyper parameters used to run experiments
+In the Experiments table view, select hyperparameters that you'd like to view to analyze your experiments.
 
 ![](/images/runs/hyperparameter-explorer.gif)
+
+:::note
+If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq.md). The section is periodically updated this with common questions from the Grid community.
+:::

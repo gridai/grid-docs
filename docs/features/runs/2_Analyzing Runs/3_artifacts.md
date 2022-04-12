@@ -2,22 +2,19 @@
 title: Accessing Artifacts
 sidebar_label: Accessing Artifacts
 ---
-:::note
-If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
-:::
+
 # Artifacts
+Artifacts are the output produced by the training process.
 
 ## Saving artifacts
 
-Anytime your script saves artifacts, Grid captures those for you. It does not matter which folder you save artifacts to... Grid will automatically detect those.
+Anytime your script saves artifacts, Grid captures those for you. It does not matter which folder you save artifacts to... Grid will automatically detect them.
 
-Try [hello.py](https://github.com/williamFalcon/hello/blob/main/hello.py) for an example
+Try [hello.py](https://github.com/williamFalcon/hello/blob/main/hello.py) as an example, to see how artifacts are generated and saved. 
 
 ![](/images/runs/runs-artifacts.png)
 
 ## Access artifacts via the UI
-
-Artifacts are the output produced by the training process.
 
 To access artifacts:
 
@@ -72,3 +69,6 @@ get the artifacts
 # N in expN means the ith experiment (ie: exp0, exp1, exp3, ..., expN)
 grid artifacts runname-expN
 ```
+:::note
+If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq.md). The section is periodically updated this with common questions from the Grid community.
+:::
