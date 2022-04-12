@@ -3,17 +3,15 @@ title: Creating Runs from Dockerfile
 sidebar_label: Creating Runs from Dockerfile
 ---
 :::note
-The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
-Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+The following examples assume you have already installed and setup Grid. If you haven't, please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
 :::
 
 # Creating Runs from a Dockerfile
-## Running Experiments With a Dockerfile
 
-Grid supports the creation of Runs using `Dockerfile` files. Dockerfiles are a container specification that determines how images are be built. You can find documentation about Dockerfiles [here](https://docs.docker.com/engine/reference/builder). 
+Grid supports the creation of Runs using `Dockerfile` files. Dockerfiles are a container specification that determines how images are to be built. You can find documentation about Dockerfiles [from the official Docker documentation](https://docs.docker.com/engine/reference/builder). 
 
 :::note
-When using this option, the requirements.txt file in the root project directory is ignored unless explicity stated in a `RUN` command within the Dockerfile.
+When using the dockerfile option, the requirements.txt file in the root project directory is ignored by Grid unless explicity referenced in a `RUN` command within the Dockerfile.
 :::
 
 ### Step 0: Create a Dockerfile
@@ -47,42 +45,21 @@ RUN pip install pytorch-lightning && \
 :::note
 Two lines are mandatory:
 
-* **`WORKDIR /gridai/project`** : determines which WORKDIR to use. Grid expects your executable to be found in this directory.
+* **`WORKDIR`** : determines which working directory to use. Grid expects your executable to be found in this directory.
 * **`COPY . .` :** copies all your repository files into the image.
-
-Everything else is up to you.
 :::
 
 ### Step 1: Create a Run
 
-You will need to create a run using the flag `--dockerfile` where you pass the location of your Dockerfile.
+First, create a run using the `--dockerfile` flag to specify the location of your Dockerfile.
 
 ```text
 $ grid run --dockerfile Dockerfile --localdir run.py
-⠙ Submitting Run divergent-piculet-508 ...
-upload ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0%
-⠦ Making query to Grid
-                    Run submitted!
-                    `grid status` to list all runs
-                    `grid status divergent-piculet-508` to see all experiments for this run
-
-                    ----------------------
-                    Submission summary
-                    ----------------------
-                    script:                  run.py
-                    instance_type:           t2.medium
-                    use_spot:                False
-                    cloud_provider:          aws
-                    cloud_credentials:       cc-grv4f
-                    grid_name:               divergent-piculet-508
-                    datastore_name:          None
-                    datastore_version:       None
-                    datastore_mount_dir:     None
 ```
 
 #### Step 2: View Build Logs
 
-Then you are able to follow both build and experiment logs with the CLI or web UI.
+You can view build logs while the images are built. Here is a preview of the build logs for a Run:
 
 ```text
 # shows last 10 lines
@@ -113,11 +90,11 @@ $ grid logs divergent-piculet-508-exp0 -l 10 --show-build-logs
 ```
 
 ## Reuse Docker Images
-After creating a Run, Grid will store the image for **1 week**. This is especially useful when your Run image has a lot of dependencies and takes a long time to build. You can take full advantage of this by taking the push ref and using it in the FROM statement within your Dockerfile. Be sure to include the mandatory lines as noted below in the example. You can find the push ref with the following syntax.
+After creating a Run, Grid stores the image for **1 week**, making subsequent runs faster to create. This is especially useful when your Run image has a lot of dependencies and takes a long time to build. You can take full advantage of this by taking the push ref and using it in the FROM statement within your Dockerfile. Be sure to include the mandatory lines as noted below in the example. You can find the push ref with the following syntax:
 
 `grid logs --show-build-logs <run-name>-exp0 | grep "pushing manifest" | head -n 1`
 
-For example with a run named "foo" you can extract the image reference with the following code.
+For example with a run named "foo" you can extract the image reference with the following code:
 
 `grid logs --show-build-logs foo-exp0 | grep "pushing manifest" | head -n 1`
 
@@ -140,7 +117,7 @@ COPY . .
 
 It is a good idea to test that your `Dockerfile` builds locally before sending it to Grid. This may allow you to iterate quickly over a set of configurations that work before submitting experiments.
 
-You can do that by building it with Docker:
+You can do that by building your image with Docker:
 
 ```text
 docker build --tag test-image .
@@ -154,4 +131,9 @@ After building your image, make sure to also test that your script works as expe
 docker run test-image python model.py
 ```
 
-Grid will be running a similar process in the backend, so if this works locally in our machine chances are that it will also run successfully on Grid.
+Grid runs a similar process in the backend, so if this works locally in our machine chances are that it will also run successfully on Grid.
+
+
+:::note
+If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq.md). The section is periodically updated this with common questions from the Grid community.
+:::
