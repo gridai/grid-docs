@@ -14,7 +14,7 @@ as scheduling to a wrong cluster.
 
 
 :::note**Please Note:**
-This feature will evolve to include more elaborate cluster management in the near-term future.
+This feature will evolve to include more elaborate cluster management in the future.
 :::
 
 To set cluster context, you shuld use:
