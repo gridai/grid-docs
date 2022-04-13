@@ -11,15 +11,13 @@ to get you started with working with this core feature. The examples cover the f
    
     1.1. Datastores from your machine
 
-    1.2. Create from a public S3 Bucket
+    1.2. Create from a public S3 Bucket 
 
-    1.3. Create from private S3 Bucket  
+    1.3. Create from an HTTP URL
 
-    1.4. Create from an HTTP URL
-
-    1.5. Create from a Session  
+    1.4. Create from a Session  
     
-    1.6. Create from a Cluster
+    1.5. Create from a Cluster
 
 2. [Inspecting Status of a Datastore](./3_inspecting_status.md) 
 

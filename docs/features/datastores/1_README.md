@@ -62,7 +62,7 @@ simplicity and experience of using them!
 
 Datastores today have 3 main capabilities:
 
-1. Can be created from private S3 buckets in both Grid Cloud and Bring Your Own Cloud
+1. Can be created from S3 buckets in both Grid Cloud and Bring Your Own Cloud
    environments
 2. Attachable to [Runs](../../features/runs/1_README.md) and 
    [Sessions](../../features/sessions/README.md)

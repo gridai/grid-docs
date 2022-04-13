@@ -11,7 +11,6 @@ Datastores can be created from a number of sources (on both the CLI and UI):
   automatically extracted by the Grid Platform before they are attached to a Run or
   Session
 - From a public S3 Bucket using the syntax `s3://bucket-name/path/` 
-- (BYOC-users only) From a private S3 bucket using the syntax `s3://bucket-name/path/`
 
 ## Uploading Files from a Computer
 
@@ -108,67 +107,6 @@ grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightnin
 ```
 
 :::
-
-## Create from a Private S3 Bucket
-
-At this time Datastore creation from Private S3 buckets is only available to BYOC users
-usersnwho have connected Grid to a custom AWS cluster. 
-BYOC users can grant Grid access to desired buckets by following the official aws
-[documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/).
-
-As a convenience, we provide a bucket policy below that grants Grid access to all the
-contents of your specified bucket. It assumes that you modified the tfvars role_arn field.
-If you have not modified this field, then you can use `<aws-account-id-associated-with-byoc>:root` instead. You
-can follow this official aws
-[documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html)
-to get your account id.
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::<aws-account-id-associated-with-byoc>:role/role-name"
-            },
-            "Action": [
-                "s3:ListBucket",
-                "s3:GetObject",
-                "s3:GetBucketLocation"
-            ],
-            "Resource": [
-               "arn:aws:s3:::<your-bucket>/*",
-               "arn:aws:s3:::<your-bucket>"
-           ]               
-        }
-    ]
-}
-```
-
-### Using the UI & CLI
-
-Once appropriate permissions have been assigned to the BYOC cluster, a Datastore can be
-created from the appropriate (private) S3 bucket in the same way Datastores are created
-from public S3 buckets. The only differences are:
-
-* On the CLI, you must either have your default cluster set to the BYOC cluster of
-  interest (see the [`grid user set-default-cluster` CLI
-  reference](../../../cli.md#set-default-cluster) for details), or you must must pass 
-  the `--cluster` option to the [`grid datastore create` command](../../../cli.md#create) 
-  with the appropriate value. For example, to create datastore on the
-  `"my-first-byoc-cluster"` cluster:
-
-  ```bash
-  grid datastore create s3://my-private-bucket/data/ --cluster my-first-byoc-cluster
-  ```
-
-* On the UI, you must ensure that the selected cluster name (as shown in the screenshot
-  below in the dropdown at the top left of any main page) is appropriate before clicking
-  the "New Datastore" button. 
-
-  ![](../../../../static/images/datastores/datastore-creation-cluster-selection-on-ui.png)
-
 
 ## Create from an HTTP URL
 
