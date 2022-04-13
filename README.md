@@ -7,7 +7,7 @@ Grid is designed for developing and training deep learning models at scale.
 The TL;DR of using Grid is this:
 
 - Create a **DATASTORE** with your dataset.
-- Spin up an interactive **SESSION** to develop, analyze and prototype models/ideas.
+- Spin up a **SESSION** to develop, analyze and prototype models/ideas.
 - When you have something that works, train it at scale via **RUN.**
 
 This 3-minute video shows you how to execute code on cloud instances with zero code changes and how to debug/prototype and develop models with multi-GPU cloud instances.
@@ -36,7 +36,6 @@ Grid handles all the other parts of developing and training at scale:
 - Artifacts
 - Logs
 - Metrics
-- etc...
 
 Just run your files and watch the magic happen
 
