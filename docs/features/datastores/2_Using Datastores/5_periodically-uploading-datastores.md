@@ -23,5 +23,3 @@ echo "0 * * * * grid datastore create data/path --name dataset" >> mycron
 crontab mycron
 rm mycron
 ```
-
-### TODO: Trigger Via Github Actions
