@@ -1,8 +1,4 @@
 ---
-<<<<<<< HEAD:docs/platform/2_Custom Cloud Credentials/3_adding-custom-cloud-credentials.md
-=======
-sidebar_position: 2.3
->>>>>>> origin/master:docs/platform/2_Custom Cloud Credentials/adding-custom-cloud-credentials.md
 title: Grid Managed BYOC
 sidebar_label: Grid Managed BYOC
 ---

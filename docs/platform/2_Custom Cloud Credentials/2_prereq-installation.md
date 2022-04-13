@@ -1,8 +1,4 @@
 ---
-<<<<<<< HEAD:docs/platform/2_Custom Cloud Credentials/2_prereq-installation.md
-=======
-sidebar_position: 2.2
->>>>>>> origin/master:docs/platform/2_Custom Cloud Credentials/prereq-installation.md
 title: BYOC Prereqs
 sidebar_label: BYOC Prereqs
 ---

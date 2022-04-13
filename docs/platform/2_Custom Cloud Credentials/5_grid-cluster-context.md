@@ -1,16 +1,9 @@
 ---
-<<<<<<< HEAD:docs/platform/2_Custom Cloud Credentials/5_grid-cluster-context.md
 title: Cluster Context
 sidebar_label: Cluster Context
 ---
 
 import Note from "@site/src/components/Note";
-=======
-sidebar_position: 2.5
-title: Cluster Context
-sidebar_label: Cluster Context
----
->>>>>>> origin/master:docs/platform/2_Custom Cloud Credentials/grid-cluster-context.md
 
 # Setting Cluster Context
 

@@ -1,8 +1,4 @@
 ---
-<<<<<<< HEAD:docs/platform/2_Custom Cloud Credentials/4_customer-managed-byoc.md
-=======
-sidebar_position: 2.4
->>>>>>> origin/master:docs/platform/2_Custom Cloud Credentials/customer-managed-byoc.md
 title: Customer Managed BYOC
 sidebar_label: Customer Managed BYOC
 ---
