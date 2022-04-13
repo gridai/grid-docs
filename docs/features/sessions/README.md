@@ -12,6 +12,8 @@ For prototyping/debugging/analyzing, sometimes you need a LIVE machine. We call 
 
 Session features:
 
+* Change Machine Instance Type
+* Use Spot Instance
 * Mount multiple GPUs
 * Auto-mount datastores
 * Pre-installed JupyterLab
@@ -51,7 +53,7 @@ grid session
 The equivalent CLI command:
 
 ```text
-grid session delete $SESSION_NAME
+grid session delete $GRID_SESSION_NAME
 ```
 
 ## Pausing/Resuming a Session
@@ -62,22 +64,22 @@ our credits.  Resuming will bring back your session with all packages you have i
 ### Pausing
 
 ```bash
-grid session pause SESSIONNAME
+grid session pause $GRID_SESSION_NAME
 ```
 
 ### Resuming
 
 ```bash
-grid session resume SESSIONNAME
+grid session resume $GRID_SESSION_NAME
 ```
 
 ## Change Session Instance Type
 
 ```text
 # Note: at the moment it is required that you first pause the session
-grid session pause SESSION_NAME
+grid session pause $GRID_SESSION_NAME
 
-grid session change-instance-type SESSION_NAME g4dn.xlarge
+grid session change-instance-type $GRID_SESSION_NAME g4dn.xlarge
 ```
 
 More details on how to change Session instance type can be found [here](./changing-instance-type.md)
