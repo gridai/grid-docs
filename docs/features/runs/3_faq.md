@@ -19,6 +19,10 @@ pip freeze > requirements.txt
 ```
 
 ## How do I download my run/experiment artifacts?
+### From the CLI
+It's as easy as running `grid artifacts my-run-name`! This will download all artifacts fromthe run into a new directory called `grid_artifacts`.
+
+### From the UI
 https://user-images.githubusercontent.com/47154698/146597173-30a6f5af-4ecc-4958-866a-95ddb1ba70e0.mp4
 
 ## How long are artifacts stored?
