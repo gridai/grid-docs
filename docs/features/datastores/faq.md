@@ -21,7 +21,7 @@ When you create a datastore, you certify that you have the rights to that data. 
 have access to your datastore. It's up to you to make sure you have the rights to access
 that data. 
 
-**_PRODUCT TEAM: WE NEED A LINK TO OUR TERMS OF SERVICE HERE_**
+For additional information, please refer to our [Terms of Service](https://www.grid.ai/terms-of-service/).
 
 ## Does Grid charge for Data Storage? {#datastore-charging-and-limits}
 
@@ -34,15 +34,6 @@ Please reach out to use at [support@grid.ai](mailto:support@grid.ai) or on the [
 Slack](https://gridai-community.slack.com) if this limit poses challenges for your
 workflow; we're happy to assist with alternatives or discuss what a more appropriate usage
 tier would look like for your usage.
-
-## Does Grid have a limit on Datastore size? {#datastore-size-limit}
-
-Yes, Grid DataStore max size is 1.5 TB. For security reasons, we only allow you to upload
-data for 12 hours continuously. If your data is too big to upload in a 12 hour period, it
-will stop uploading. Initiating `grid datastore create <args...>` again will resume the
-upload.
-
-**_PRODUCT TEAM: LITERALLY NONE OF THIS IS TRUE. WHERE DID THIS COME FROM??!_**
 
 ## Where does Grid mount my Datastore in a Session or Run?
 
@@ -91,6 +82,5 @@ to your account for debugging purposes, we will notify you.
 </table>
 
 
-If the following FAQ didn't help resolve your issue please file a support ticket at
-[support@grid.ai](mailto:support@grid.ai) or reach out to the community at [community
-Slack](https://gridai-community.slack.com).
+If the following FAQ didn't help resolve your issue please contact our support team at 
+[support@grid.ai](mailto:support@grid.ai) or reach out to the community in our [Community Slack](https://gridai-community.slack.com).

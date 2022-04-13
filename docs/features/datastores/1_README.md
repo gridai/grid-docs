@@ -8,7 +8,7 @@ Datastores are high-performance, low-latency, versioned, and scalable datasets w
 be instantly mounted into any [Session](../../features/sessions/README.md) or
 [Run](../../features/runs/1_README.md).
 
-## What files can be accepted
+## What file types are supported
 
 Datastores can be created from any file type. Grid treats each file as a collection of
 bytes which exist with a particular name within a directory structure (e.g.
@@ -17,22 +17,22 @@ bytes which exist with a particular name within a directory structure (e.g.
 :::info
 
 In order to ensure complete data privacy & flexibility of use, Grid never attempts to
-process the contents of the files or infer/optimize for  particular usage behaviors based
-off of file contents. 
+process the contents of the files or infer/optimize for any particular usage behaviors based
+on file contents. 
 
 :::
 
 ## Why use Datastores
 
 Datastores are zero-cost datasets (yes, we really do mean that they are free too you -
-free as in "free beer"!) backed by cloud storage which are made instantly available to
+free as in "free beer"!) backed by cloud storage. They are made instantly available to
 compute jobs as part of a read-only filesystem. If you have a compute script which reads
-files in a directory structure on you local computer, then the only thing you need to
+files in a directory structure on your local computer, then the only thing you need to
 change when running on Grid is the location of the `data` directory! 
 
 Datastores are *a necessity when dealing with data at scale* (e.g. data which cannot be
 reasonably downloaded from some HTTP URL when a compute job starts up) by providing a
-**singular & immutable datasets resource of near unlimited scale.** 
+**singular & immutable dataset resource of near unlimited scale.** 
 
 :::tip
 
@@ -42,9 +42,7 @@ download, extract, or otherwise "process" before you can move on to the real wor
 
 :::
 
-We know how important a role your data plays in everything you run on Grid; and as the
-heart of our users work we've purpose build Grid Datastores to be so much more than a
-simple filesystem mount to a cloud bucket you'll see anywhere else. We've put an
+We know how important a role your data plays in everything you run on Grid. We've put an
 incredible amount of time and effort into creating a truly unique *optimization pipeline*
 which removes every bit of latency possible from the point your program calls `with
 open(filename, 'r') as f:` to the instant that data is provided to you. You'll find
@@ -70,9 +68,6 @@ Datastores today have 3 main capabilities:
    [Sessions](../../features/sessions/README.md)
 3. Create-able from your local machine, Sessions, or Cluster!
 
-Please see our [capabilities](./1_Capabilities/1_README.md) page for more details on each
-of the above capabilities.
-
 ### How do I access the data in a datastore? 
 
 By default, datastores are mounted at `/datastores/<datastore-name>/` on both 
@@ -83,11 +78,10 @@ manually specify the Datastore mount path when using the CLI. Please refer to
 
 ## Next Steps
 
-For more information about how datastores can fit into your current workflow please see 
-our [Datastore capabilities reference](./1_Capabilities/1_README.md).
 
-For more information on using Datastores, starting the first section of the 
+For more information on using Datastores, start with the first section of the 
 [Using Datastores](./2_Using%20Datastores/1_README.md) tutorial. 
+
 More advanced users can feel free to skip to any of the other tutorials which may be of
 interest. These are linked in the [Sidebar](./2_Using%20Datastores/1_README.md)
 
