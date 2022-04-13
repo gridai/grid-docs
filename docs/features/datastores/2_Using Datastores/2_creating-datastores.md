@@ -45,7 +45,7 @@ grid login
 Next, use the Datastores command to upload any folder:
 
 ```bash
-grid datastore create ./imagenet_folder/ --name imagenet
+grid datastore create --name imagenet ./imagenet_folder/ 
 ```
 
 This method can work from:
