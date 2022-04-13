@@ -34,14 +34,14 @@ Grid creates clusters designed for large AI workloads. In order to do so, your A
 AWS STS regional endpoints have to be enabled in the target region. Go to [AWS account settings](https://console.aws.amazon.com/iam/home#/account_settings) and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled, see [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html).
 
 <note>
-    Skipping this step will cause difficult to debug issues. The kubelet will be unable to authenticate against the kubernetes API server, and nothing will work.
+    Skipping this step will cause issues that are difficult to debug. The kubelet will be unable to authenticate against the kubernetes API server and nothing will work.
 </note>
 
 #### Requesting Quotas
 
 All AWS accounts have "service quotas". These are limits for the utilization of service provided by AWS. In order to increase your quotas, you have to request a quota increase to a specific service. That will open a ticket with AWS support. You may need to follow-up on the ticket in order for the quota to be granted.
 
-You can request a quota by doing
+You can request a quota by doing the following:
 
 1. Login into your AWS console
 2. Search for "[Service Quotas](https://console.aws.amazon.com/servicequotas/home)" and click on the result
@@ -53,7 +53,7 @@ You can request a quota by doing
 
 #### A: Login to AWS and search for IAM
 
-Login into your AWS account. You will then use the search bar to find "IAM" \(user management\).
+Login to your AWS account. You will then use the search bar to find "IAM" \(user management\).
 
 ![](/images/platform/IAM.png)
 
@@ -65,7 +65,7 @@ Click on the "Users" panel. You will be able to see a list of users. If you alre
 
 #### C: Create New User \(optional\)
 
-If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
+If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the username of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
 
 ![](/images/byoc/aws-create-user.png)
 
@@ -87,14 +87,14 @@ Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
 The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
 :::
 
-Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](#step-2-add-iam-permissions-to-your-account) for more details.
+Make sure that your username has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](#step-2-add-iam-permissions-to-your-account) for more details.
 
 ### Step 2: Add IAM permissions to your account
 
-The user you just created, and fetched credentials for should have IAMFullAccess privileges.
+The created user and fetched credentials for should have IAMFullAccess privileges.
 
 :::note
-Reach out to us via Slack or email if you have any issues creating the following AWS roles and policies. We're happy to help!
+Reach out to us via [Slack](http://gridai-community.slack.com) or [email](support@grid.ai) if you have any issues creating the following AWS roles and policies. We're happy to help!
 :::
 
 #### A: Add Policies to Your Account
@@ -107,18 +107,18 @@ The final step is to add all the Grid policies to your account. That means that 
 4. Click on "Add permissions"
 5. Click on "Attach existing policies directly"
 
-![Granting permissions to an user.](/images/byoc/aws-add-permissions.png)
+![Granting permissions to a user.](/images/byoc/aws-add-permissions.png)
 
 1. Search for the policy IAMFullAccess:
 2. Click the Check Box to the left of `IAMFullAccess`
 3. Click on "Next:Review"
 4. Click on "Add permissions"
 
-Now that you have added the right permissions to your user name, you can use the user's AWS API keys with Grid.
+Now that you have added the right permissions to your username, you can use the user's AWS API keys with Grid.
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./prereq-installation#installation-steps). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies, [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc). This module is published on official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest).
+For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available here](./prereq-installation#installation-steps). If you're familiar with terraform we recommend you check the terraform module we'll be using to create necessary roles & policies, [https://github.com/gridai/terraform-aws-gridbyoc](https://github.com/gridai/terraform-aws-gridbyoc). This module is published on the official terraform registry for your convenience [https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest](https://registry.terraform.io/modules/gridai/gridbyoc/aws/latest).
 
 :::note
 The script needs following list of permissions:
@@ -178,7 +178,7 @@ aws sts get-caller-identity
 }
 ```
 
-* Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step](./adding-custom-cloud-credentials#step-4-register-your-role-in-grid).
+* Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered in the [later step](./adding-custom-cloud-credentials#step-4-register-your-role-in-grid).
 
 ```bash
 terraform init
@@ -200,13 +200,13 @@ Do you want to perform these actions?
   Enter a value: yes
 ```
 
-* Get the output from terraform. By default terraform hides the sensitive secret output
+* Get the output from terraform. By default terraform hides the sensitive secret output.
 
 ```bash
 terraform output -json | jq
 ```
 
-From the last command you'll get the following output:
+From the previous command, you should get the following output:
 
 ```javascript
 {
@@ -237,7 +237,7 @@ export ROLE_ARN=$(terraform output -json | jq -r '.role_arn.value')
 
 ### Step 4: Register Your Role in Grid
 
-By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
+By default, Grid Sessions and Runs are spun up in Availability Zone `a`. Only specify the AWS region and not the AZ in the `--region` argument.
 
 * Login to Grid.  Please reference the detailed [steps](../../getting-started/typical-workflow-cli-user#step-0-install-the-grid-cli) as required.
 
@@ -267,7 +267,7 @@ grid clusters aws --role-arn $ROLE_ARN --external-id $EXTERNAL_ID --region us-we
 
 ### Step 5: Wait for cluster to be provisioned
 
-After, you can check the cluster state by running:
+After submitting the cluster creation request, you can check the cluster state by running:
 
 ```text
 grid clusters
@@ -317,11 +317,11 @@ Grid attempts to delete all cluster resources when a delete operation is initiat
 grid delete cluster <cluster name>
 ```
 
-Next use terraform to delete the AWS resources you created as part of the install process.
+Next, use terraform to delete the AWS resources you created as part of the install process.
 
 ```bash
 terraform destroy
 ```
 
 # Next Steps
-Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you our enterprise ready mode called [Self Managed BYOC Mode](./self-managed-byoc).
+Now that you have gotten a feel for deploying Grid Managed BYOC Mode, we would like to show you the Enterprise-ready mode called [Self Managed BYOC Mode](./self-managed-byoc).
