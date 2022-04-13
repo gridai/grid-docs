@@ -25,5 +25,6 @@
 /features/datastores                        @rlizzo
 /platform/billing                           @EricChea
 /platform/custom-cloud-credentials          @dmitsf @nmiculinic
+/support                                    @oojo12
 
 /.github/CODEOWNERS                         @essiequoi
