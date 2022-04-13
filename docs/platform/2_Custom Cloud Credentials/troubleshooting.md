@@ -1,8 +1,4 @@
 ---
-<<<<<<< HEAD:docs/platform/2_Custom Cloud Credentials/6_faq.md
-=======
-sidebar_position: 2.6
->>>>>>> origin/master:docs/platform/2_Custom Cloud Credentials/troubleshooting.md
 title: FAQ
 sidebar_label: FAQ
 ---
