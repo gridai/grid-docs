@@ -4,13 +4,7 @@ sidebar_label: Creating Datastores
 ---
 # Create Datastores
 
-Datastores can be created from a number of sources (on both the CLI and UI):
-
-- Uploading files stored on your computer
-- From an HTTP URL which downloads a `.zip` or `.tar.gz` file. These files are
-  automatically extracted by the Grid Platform before they are attached to a Run or
-  Session
-- From a public S3 Bucket using the syntax `s3://bucket-name/path/` 
+Datastores can be created from a local filesystem, HTTP URL, and S3 Bucket. 
 
 ## Uploading Files from a Computer
 
