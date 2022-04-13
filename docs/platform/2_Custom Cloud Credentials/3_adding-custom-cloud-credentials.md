@@ -1,29 +1,28 @@
 ---
-title: Grid Managed BYOC
-sidebar_label: Grid Managed BYOC
+title: Grid-Managed BYOC
+sidebar_label: Grid-Managed BYOC
 ---
+import Note from "@site/src/components/Note";
 
 # Overview
 
-import Note from "@site/src/components/Note";
+This page describes BYOC cluster creation in Grid-Managed infrastructure mode. In this mode, Grid manages and provisions AWS infrastructure on your behalf in a fully automated fashion. To achieve this, Grid requires more permissions (including iam:FullAccess) than the self-managed BYOC mode requires.
 
-This page describes BYOC creation in Grid-managed Infrastructure Mode - Grid manages and provisions AWS infrastructure on your behalf in a fully automated fashion. To achieve this we require more permission (including iam:FullAccess) over self-managed BYOC.
+This documentation assumes you have followed our [pre-requisites installation steps](./prereq-installation).
 
-This documentation assumes you have followed our [prereq installation steps](./prereq-installation).
-
-# Deploying Grid Managed Bring Your Own Cluster (BYOC) Mode
+# Deploying Grid-Managed Bring Your Own Cluster (BYOC) Mode
 
 :::note
 Request access to this feature! Send us a message to our [community Slack](https://gridai-community.slack.com) or send email to [support@grid.ai](mailto:support@grid.ai)
 :::
 
-Grid creates clusters inside your own cloud account allowing you to keep complete control of the resources that you need. We'll guide you through the setup process for each of the supported cloud providers.
+Grid creates clusters inside your own cloud account, allowing you to maintain complete control over the resources that you need. We'll guide you through the setup process for each of the supported cloud providers.
 
 ## Amazon Web Services \(AWS\)
 
 ### Requirements
 
-Grid will create clusters designed for large AI workloads. In order to do so, your AWS account needs to have the **right permissions** and **quotas**. We'll cover both optional and required configurations as follows.
+Grid creates clusters designed for large AI workloads. In order to do so, your AWS account needs to have the **right permissions** and **quotas**. We'll cover both optional and required configurations as follows.
 
 | Configuration | Recommendation |
 | :--- | :--- |

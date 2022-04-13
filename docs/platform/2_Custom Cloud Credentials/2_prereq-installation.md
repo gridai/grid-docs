@@ -5,14 +5,14 @@ sidebar_label: BYOC Prereqs
 
 # Overview
 
-This page describes the pre-requisites needed to create a BYOC and the steps to install them.
+This page describes the pre-requisites needed to create a BYOC cluster and the installation steps.
 
-[Grid Managed BYOC](./adding-custom-cloud-credentials)  
-[Self Managed BYOC](./self-managed-byoc)
+[Grid-Managed BYOC](./adding-custom-cloud-credentials)  
+[Self-Managed BYOC](./self-managed-byoc)
 
 # Prerequisites
 
-To install either the Grid-managed BYOC or Self-managed BYOC modes the following tools are required:
+To install either the Grid-Managed BYOC or Self-Managed BYOC modes, the following tools are required:
 
 * [git](https://git-scm.com/)
 * [jq](https://stedolan.github.io/jq/)
@@ -75,5 +75,5 @@ sudo apt-get install awscli
 
 # Next Steps
 See:
-1. [Grid Managed BYOC](./adding-custom-cloud-credentials) - for Grid Managed BYOC mode deployment instructions
-2. [Self Managed BYOC](./self-managed-byoc) - for Self Managed BYOC mode deployment instructions
+1. [Grid-Managed BYOC](./adding-custom-cloud-credentials) - for Grid Managed BYOC mode deployment instructions
+2. [Self-Managed BYOC](./self-managed-byoc) - for Self Managed BYOC mode deployment instructions
