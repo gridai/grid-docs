@@ -3,22 +3,24 @@ title: Basic Run Creation
 sidebar_label: Basic Run Creation
 ---
 :::note
-The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page.
-Also, if you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
+The following examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](../../../../getting-started/getting-started-with-grid.md) page.
+Also, if you encounter issues please check the [FAQ](../../3_faq.md). We periodically update this page with user questions.
 :::
 
 # How to Create Runs
-Runs are highly customizable "serverless" compute. Here we will cover all the methods made available to customize Runs for your usecases. The examples cover the following:
-1. [Creating vanilla Runs](https://docs.grid.ai/features/runs/creating-runs/basic-runs/basic-runs#creating-vanilla-runs)
+Runs are highly customizable "serverless" compute instances. Here we will cover all the methods made available to customize Runs for common use cases. The examples below cover the following:
+1. [Creating "vanilla" Runs](https://docs.grid.ai/features/runs/creating-runs/basic-runs/basic-runs#creating-vanilla-runs)
 2. [Creating Runs with script dependencies](https://docs.grid.ai/features/creating-runs/basic-runs/basic-runs#creating-runs-with-script-dependencies)  
-  3.1 Handeling requirements  
+  3.1 Handling requirements  
   3.2 Runs with specified requirements.txt  
   3.3 Runs with specified environment.yml
 3. [Attaching Datastores to Runs](https://docs.grid.ai/features/creating-runs/basic-runs/basic-runs#attaching-datastores-to-runs)
 
-The examples assume you have already installed and setup Grid. If you haven't already please visit the [Getting Started](https://docs.grid.ai/getting-started) page
+
 ## Creating Vanilla Runs
-A "vanilla" Run is simply a Run that only runs a hello world style script. It is taken from this [repo](https://github.com/PyTorchLightning/grid-tutorials/tree/main/features-intro/runs) will be used in the following example.
+A "vanilla" Run is a Run that runs a simple script, such as the classic "hello world" example. The vanialla run in the example below is taken from the [grid-tutorials repo](https://github.com/PyTorchLightning/grid-tutorials/tree/main/features-intro/runs).
+
+First, clone the repo, navigate to the `features-intro/runs` directory, and create a simple run using the `hello.py` script.
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
@@ -26,28 +28,31 @@ cd features-intro/runs
 grid run --name hello hello.py
 ```
 
-The above code is passing a script named hello.py to the Run. The script will print out 'hello_world'. For instructions on how to view the logs check out the
+The above code is passing a script named `hello.py` to the run. The script will print out 'hello_world'. 
+
+For instructions on how to view run and experiment logs, check out the
 next section [Viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
 
 ## Creating Runs with Script Dependencies
-If you peaked at the grid-tutorials repo you may have noticed three things:
+If you've taken a peak at the grid-tutorials repo, you may have noticed three things:
 1. It has a requirements.txt in the root directory
-2. There is a pip folder
-3. There is a conda folder
+2. There is a directory called `pip` 
+3. There is a directory called `conda`
 
-We will touch on why those three are the case in this section of the tutorial. But first let's speak about how Runs handle requirements.
+In sections below, you'll see why these three points are important, but first let's explore how runs handle requirements.
 
 ### Handling Requirements
-Anytime you run a project with Grid, we attempt to resolve as many dependencies as we can automatically for you. At this time nested requirements are not supported.
+Anytime you submit a Grid run, we attempt to resolve as many dependencies as we can automatically for you. However, we recommend that your projects have a `requirements.txt` file in the root.
 
-However, we recommend that your projects have a `requirements.txt` file in the root.
+:::note
+At this time, nested requirements are not supported.
+:::
 
 ![](/images/runs/requirements.png)
 
+When creating a run, you can explicitly specify a requirements file using the `--dependency_file` property. This flag tells Grid which file should be used for package installation in the Run. Supported requirements files are `requirements.txt` and `environment.yml`. This is especially useful when your directory isn't structured in such a way that the requirements file resides at the root of the project. In such cases, you can use the below examples for specifying which requirements.txt or environment.yml file should be used by your run. 
+
 ### Runs with Specified requirements.txt
-Runs allow you to specify the requirements.txt you want to use for package installation. This especially useful when your directory isn't ordered in such a way that the
-requirements.txt resides at the root project level. In such cases you can use the below example as a template for specifying which requirements.txt file should be used
-for package installation.
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
@@ -55,47 +60,33 @@ cd features-intro/runs
 grid run --name specified-requirements-pip --dependency_file ./pip/requirements.txt hello.py
 ```
 
-You will notice we did something different here than in prior examples. We used the `--dependency_file` flag. This flag tells Grid what file
-should be used for package installation in the Run. See the build logs to see the difference between this and the Creating vanilla Runs example above.
-For instructions on how to view the logs check out [viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
-
 ### Runs with Specified environment.yml
-Runs allow you to specify the environment.yml you want to use for package installation. This is the only way to get Runs to use the Conda package manager without using a config file.
-Because `conda export` will output dependencies specfiically for your operating system, this can cause issues when run on a non-Linux machine. In such cases we recommend using
+
+Specifying an environment.yml file is the only way to get Runs to use the Conda package manager without using a config file. Because `conda export` will output dependencies specfiically for your operating system, this can cause issues when running on a non-Linux machine. In such cases we recommend using
 `conda env export --from-history` as mentioned in the [official docoumentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms).
-In such cases you can use the below example as a template for specifying which requirements.txt file should be used
-for package installation.
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
 cd features-intro/runs
 grid run --name specified-requirements-conda --dependency_file ./conda/environemnt.yml hello.py
 ```
-
-See the build logs to see the difference between this and the Creating vanilla Runs example above.
-For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
+### Viewing Logs
+Explore the build logs to compare the logs of this Run to that of the vanilla Run we created in the example above. 
+For instructions on how to view the logs check out [viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
 
 ## Attaching Datastores to Runs
-There are many times when attaching a Datastore to a Run will be desirable. For instance, if you have large scale data it may be easier to house that in a datastore than on your local machine.
-In such situations Datastores may resolve blockers to your workflow. Now let's dive right in we will be using a different repository called grid-tutorials for this and the
-remaining examples.
+When working with large datasets, it may be faster and easier to store your data in a [Datastore](../../../datastores/1_README.md). Datastores are high-performance, low-latency, versioned, and scalable datasets which can be instantly mounted to any Session or Run.
 
 :::note
-By default, the datastore is mounted at /datastores.
-The datastore path has 3 parts:
+By default, Datastores are mounted at /datastores on a Session or Run.
+A Satastore path has 3 parts:
 
 ```bash
 /datastores/[name]/[version]
 ```
 
-Example, datastore named elephant (version 3)
+If you've never created a Datastore before, you can follow this example from the [Getting Started with Grid](../../../../getting-started/getting-started-with-grid.md) tutorial to create a Datastore from the popular [cifar dataset](https://www.cs.toronto.edu/~kriz/cifar.html). 
 
-```bash
-/datastores/elephant/3
-```
-:::
-
-If you haven't already followed the Getting Started page you will need to create a Datastore with the below commands first.
 ```text
 # download
 curl https://pl-flash-data.s3.amazonaws.com/cifar5.zip -o cifar5.zip
@@ -104,24 +95,22 @@ unzip cifar5.zip
 grid datastore create cifar5/ --name cifar5
 ```
 
-Now that is done we can test attaching a Datastore to a Run
+Once the datastore has been successfully created, you can mount it to a Run using the `--datastore_name` and `--datastore_version` properties. 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
 cd features-intro/runs
 grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastores/cifar5/1
 ```
 
-The above code is passing a script named datastore.py to the Run. The script will print the contents of the Datastores root directory. You should see the following
-output in your stdout logs.
+The above code passes a script named `datastore.py` to the Run. This script prints the contents of the Datastores root directory. You should see the following output in your stdout logs.
 
 ```text
 ['test', 'train']
 ```
 
-For instructions on how to view the logs check out the next section [viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
 
 # Next Steps
-Please checkout the following tutorials:
+To learn more about Runs, please check out the following tutorials:
 1. [Primer on Grid Sweep Syntax](https://docs.grid.ai/features/runs/sweep-syntax)
 2. [Analyzing Runs](https://docs.grid.ai/features/runs/analyzing-runs)
 3. [Advanced Run Creation](https://docs.grid.ai/features/runs/adv-creating-runs)

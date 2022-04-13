@@ -39,6 +39,11 @@ The equivalent via the CLI command:
 grid session create --instance_type 2_m60_8gb
 ```
 
+Listing sessions in the CLI:
+```bash
+grid session
+```
+
 ## Delete a Session
 
 ![](/images/sessions/delete-session.gif)
@@ -49,10 +54,30 @@ The equivalent CLI command:
 grid session delete $SESSION_NAME
 ```
 
-## Change Instance Type of a Session
+## Pausing/Resuming a Session
+
+As we will not be working 24/7 on our sessions it is important to pause them to not consume 
+our credits.  Resuming will bring back your session with all packages you have installed previously.
+
+### Pausing
+
+```bash
+grid session pause SESSIONNAME
+```
+
+### Resuming
+
+```bash
+grid session resume SESSIONNAME
+```
+
+## Change Session Instance Type
 
 ```text
-grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarge
+# Note: at the moment it is required that you first pause the session
+grid session pause SESSION_NAME
+
+grid session change-instance-type SESSION_NAME g4dn.xlarge
 ```
 
 More details on how to change Session instance type can be found [here](./changing-instance-type.md)
