@@ -24,8 +24,7 @@ on file contents.
 
 ## Why use Datastores
 
-Datastores are zero-cost datasets (yes, we really do mean that they are free too you -
-free as in "free beer"!) backed by cloud storage. They are made instantly available to
+Datastores are backed by cloud storage. They are made available to
 compute jobs as part of a read-only filesystem. If you have a compute script which reads
 files in a directory structure on your local computer, then the only thing you need to
 change when running on Grid is the location of the `data` directory! 
@@ -49,8 +48,8 @@ open(filename, 'r') as f:` to the instant that data is provided to you. You'll f
 traversing the data directory structure in a [session](../../features/sessions/README.md)
 indistinguishable from the experience of `cd`-ing around your local workstation.
 
-Grid Datastores are the easiest (and free-est!) way to deal with data in the cloud. Our
-capabilities and performances are constantly evolving, and we believe you'll love the
+Grid Datastores are an easy way to deal with data in the cloud. Our
+capabilities and performances are constantly evolving.  We believe you'll love the
 simplicity and experience of using them! 
 
 
@@ -81,7 +80,7 @@ For more information on using Datastores, start with the first section of the
 More advanced users can feel free to skip to any of the other tutorials which may be of
 interest. These are linked in the [Sidebar](./2_Using%20Datastores/1_README.md)
 
-1. [Using Datastores](./2_Using Datastores/1_How-to-use-datastores.md)
+1. [Using Datastores](./2_Using%20Datastores/1_How-to-use-datastores.md)
 
   1.1. [Creating Datastores](./2_Using%20Datastores/2_creating-datastores.md)  
 
