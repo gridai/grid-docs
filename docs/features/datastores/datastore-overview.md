@@ -76,21 +76,21 @@ manually specify the Datastore mount path when using the CLI. Please refer to
 
 
 For more information on using Datastores, start with the first section of the 
-[Using Datastores](./2_Using%20Datastores/1_README.md) tutorial. 
+[Using Datastores](./Using%20Datastores/1_README.md) tutorial. 
 
 More advanced users can feel free to skip to any of the other tutorials which may be of
-interest. These are linked in the [Sidebar](./2_Using%20Datastores/1_README.md)
+interest. These are linked in the [Sidebar](./Using%20Datastores/1_README.md)
 
-1. [Using Datastores](./2_Using%20Datastores/1_README.md)
+1. [Using Datastores](./Using%20Datastores/1_README.md)
 
-  1.1. [Creating Datastores](./2_Using%20Datastores/2_creating-datastores.md)  
+  1.1. [Creating Datastores](./Using%20Datastores/2_creating-datastores.md)  
 
-  1.2. [Inspecting Status](./2_Using%20Datastores/3_inspecting_status.md)
+  1.2. [Inspecting Status](./Using%20Datastores/3_inspecting_status.md)
 
-  1.3. [Attaching Datastores](./2_Using%20Datastores/4_attaching-datastores.md)  
+  1.3. [Attaching Datastores](./Using%20Datastores/4_attaching-datastores.md)  
 
-  1.4. [Periodically Uploading Datastores](./2_Using%20Datastores/5_periodically-uploading-datastores.md)
+  1.4. [Periodically Uploading Datastores](./Using%20Datastores/5_periodically-uploading-datastores.md)
   
-  1.5. [Deleting Datastores](./2_Using%20Datastores/6_deleting-datastores.md)
+  1.5. [Deleting Datastores](./Using%20Datastores/6_deleting-datastores.md)
 
 2. [Troubleshooting Datastores](./faq.md)
