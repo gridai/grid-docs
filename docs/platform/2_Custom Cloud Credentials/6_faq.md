@@ -1,8 +1,4 @@
 ---
-<<<<<<< HEAD:docs/platform/2_Custom Cloud Credentials/6_faq.md
-=======
-sidebar_position: 2.6
->>>>>>> origin/master:docs/platform/2_Custom Cloud Credentials/troubleshooting.md
 title: FAQ
 sidebar_label: FAQ
 ---
@@ -30,7 +26,7 @@ We will cover each of the three scenarios in detail below.
 
 #### Awaiting AWS Provisioning
 
-BYOC will request instances from AWS. Once the instances have been requested you will have to wait for AWS to provision the resources. In Customer-managed BYOC mode you can easily affect the provisioning time by overprovisioning the instance types of interest. This will effectively put the instances on standby, thus increasing costs. However, by overprovisioning instances you will not have to wait for AWS to provision the instances for you as they are requested during BYOC creation.
+BYOC will request instances from AWS. Once the instances have been requested you will have to wait for AWS to provision the resources. In Self-managed BYOC mode you can easily affect the provisioning time by overprovisioning the instance types of interest. This will effectively put the instances on standby, thus increasing costs. However, by overprovisioning instances you will not have to wait for AWS to provision the instances for you as they are requested during BYOC creation.
 
 #### Sessions One Time Startup Process
 
@@ -41,4 +37,4 @@ When ever a BYOC is deployed there is a one time startup process it must go thro
 The instances requested are AWS instances and thus you will be limited to all AWS instance provisioning limitations. One such limitation is that you will not be able to get instances that are not within your availability zones. There are two ways around this assuming the instances are available within the deployed region:
 
 1. Run `grid edit cluster [cluster name]` and update the "xMultiAzCount" field
-2. If using **Customer-managed BYOC mode** increase the "multi_az_count" variable in `your.tfvars`
+2. If using **Self-managed BYOC mode** increase the "multi_az_count" variable in `your.tfvars`

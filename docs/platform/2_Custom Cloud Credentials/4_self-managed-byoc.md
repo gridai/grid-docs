@@ -1,13 +1,13 @@
 ---
-<<<<<<< HEAD:docs/platform/2_Custom Cloud Credentials/4_customer-managed-byoc.md
-=======
-sidebar_position: 2.4
->>>>>>> origin/master:docs/platform/2_Custom Cloud Credentials/customer-managed-byoc.md
-title: Customer Managed BYOC
-sidebar_label: Customer Managed BYOC
+title: Self-Managed BYOC
+sidebar_label: Self-Managed BYOC
 ---
 
-# Deploying Customer Managed Bring Your Own Cluster (BYOC) Mode
+# Overview
+
+This page describes BYOC creation in Self-managed infrastructure mode. With Self-managed BYOC, you manage and provision your AWS infrastructure using our terraform module, which you can audit and run on your infrastructure. This version requires Grid to have minimal permissions to your AWS account (only access to created EKS cluster & S3 bucket).
+
+# Deploying Self-Managed Bring Your Own Cluster (BYOC) Mode
 
 :::note
 To request access to this feature send an email to [support@grid.ai](mailto:support@grid.ai) with the subject "Request Access to BYOC Feature".
@@ -17,7 +17,7 @@ To request access to this feature send an email to [support@grid.ai](mailto:supp
 
 ### Requirements
 
-Grid will create clusters designed for large AI workloads. However, the product is versatile and can handle other workloads. We recommend testing small workloads with Grid first in cost-savings mode. You can always transition to performance mode later if quicker startup times are desired for Grid features. Your AWS account needs to have the **right permissions** and **quotas**, in order for Grid to create clusters on your behalf. We'll cover both optional and required configurations as follows.
+Grid creates clusters designed for large AI workloads. However, the product is versatile and can handle other workloads. We recommend testing small workloads with Grid first in cost-savings mode. You can always transition to performance mode later if quicker startup times are desired for Grid features. Your AWS account needs to have the **right permissions** and **quotas**, in order for Grid to create clusters on your behalf. We'll cover both optional and required configurations as follows.
 
 | Configuration | Recommendation |
 | :--- | :--- |
@@ -54,13 +54,13 @@ Click on the "Users" panel. You will be able to see a list of users. If you alre
 
 **C: Create New User \(optional\)**
 
-If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the user name of your preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
+If you don't have a user available and would like to create one, on the "Users" page click on "Add user". Fill in the username of preference and make sure to check "Programmatic access" \(this allows you to use AWS keys\).
 
 ![](/images/byoc/aws-create-user.png)
 
 Click on "Next: Permissions" &gt;
 
-The user can be given AdministratorAccess priveleges as the user is only used to provision the AWS infrastructure needed by Grid. Grid itself will use a limited permission set.
+The user can be given AdministratorAccess priveleges as the user is only used to provision the AWS infrastructure needed by Grid. Grid will use a limited permission set for its operations.
 
 Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
 
@@ -76,11 +76,11 @@ Click on "Next: Tags" &gt; "Next: Review" &gt; "Create user".
     The "Secret access key" value will only be shown once. Make sure you copy that value and store it in a safe location.
 :::
 
-Make sure that your user name has the right policies attached in order to user Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](adding-custom-cloud-credentials.md#step-2-add-iam-permissions-to-your-account) for more details.
+Make sure that your username has the right policies in order to use Grid correctly. Refer to the section [Adding Grid AWS Policies & Roles](./adding-custom-cloud-credentials#step-2-add-iam-permissions-to-your-account) for more details.
 
 ### Step 2: Add IAM permissions to your account
 
-The user you just created, and fetched credentials for should have AdministratorAccess privileges.
+The creataed user and fetched credentials should have AdministratorAccess privileges.
 
 :::note
 Reach out to us via [Slack](slack:gridai-community.slack.com) or [email](mailto:support@grid.ai) if you have any issues creating the following AWS roles and policies. We're happy to help!
@@ -88,7 +88,7 @@ Reach out to us via [Slack](slack:gridai-community.slack.com) or [email](mailto:
 
 **Add Policies to Your Account**
 
-The final step is to add all the necessary permissions to your account to provision the necessary infrastructure. Customer-managed BYOC infrastructure Mode you own your infrastructure provisioning.
+The final step is to add all the necessary permissions to your account to provision the necessary infrastructure. In self-managed BYOC infrastructure mode, you own your infrastructure provisioning.
 
 1. First, log in to AWS and navigate to IAM
 2. Click on "Users"
@@ -100,17 +100,18 @@ The final step is to add all the necessary permissions to your account to provis
 
 ### Step 3: Create Role & Policy grid requires
 
-For the next step you're going to create role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./adding-custom-cloud-credentials.md#prerequisites).
+For the next step you're going to create the role we're going to assume into. For this you'll be using terraform. Make sure you have `git`, `terraform`, `jq` and `AWS CLI` installed on your machine. Installation instruction of these tools are [available](./prereq-installation#prerequisites).
 
 :::note
-    Customer-managed BYOC Infrastructure Mode only gives Grid the following permissions:
+    Self-managed BYOC Infrastructure Mode only gives Grid the following permissions:
+    * "eks:\*", # only for the cluster it creates
+    * "s3:\*", # only for the buckets it creates
 :::
-  * "eks:\*", # only for the cluster it creates
-  * "s3:\*", # only for the buckets it creates
+
 
 
 #### Set Up
-This version allows you to customize our terraform module to create your own BYOC infrastructure and set appropriate configurations for it via exposed variables **Make sure your AWS CLI is properly configured with [id & secret you created](./adding-custom-cloud-credentials.md#d-create-new-aws-keys).  These are not shared with Grid.**
+This version allows you to customize our terraform module to create your own BYOC infrastructure and set appropriate configurations for it via exposed variables **Make sure your AWS CLI is properly configured with [id & secret you created](./adding-custom-cloud-credentials#d-create-new-aws-keys).  These are not shared with Grid.**
 
 ```bash
 #Clone the repo
@@ -142,8 +143,8 @@ aws sts get-caller-identity
 }
 ```
 
-We advise performing the following steps before continuing deployment
-1. Copy nmiculinic.tfvars from terraform-aws-grid-byoc-full/example
+We advise performing the following steps before continuing deployment:
+1. Copy example.tfvars from terraform-aws-grid-byoc-full/example
 2. Update the cluster and hostname cluster_name. For example:
 	  - cluster_name = "foo-01"
 	  - hostname    = "foo-01.doom.gridai.dev"
@@ -155,11 +156,11 @@ We advise performing the following steps before continuing deployment
 	  - builder_ami_name_override = ""
 	  - bastion_ami_override = ""
 
-Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered during the in the [later step.](./adding-custom-cloud-credentials.md#step-4-register-your-role-in-grid)
+Run the Terraform script and enter the AWS Region when prompted. The region where the VPC is located is entered in a [later step.](./adding-custom-cloud-credentials#step-4-register-your-role-in-grid)
 
 ```bash
 terraform init
-terraform apply -var-file <your modified version of nmiculinic.tfvars>
+terraform apply -var-file <your modified version of example.tfvars>
 ```
 
 Copy the output from the last command. The following code snippets may help you copy the output to your clipboard:
@@ -174,16 +175,16 @@ Mac:
 terraform output -json | jq -r '.gridv1_cluster.value' | tee /dev/stderr | pbcopy
 ```
 
-Alternatively, if those commands do not work you can manually copy the output by running the below command. By default terraform hides the sensitive secret output.
+Alternatively, if those commands do not work, you can manually copy the output by running the below command. By default terraform hides the sensitive secret output.
 ```bash
 terraform output -json | jq -r '.gridv1_cluster.value'
 ```
 
 ### Step 4: Register your role in grid
 
-By default, Grid Sessions and Runs are spun up in Availability Zone `a` currently. Only specify the AWS region and not the AZ in the `--region` argument.
+By default, Grid Sessions and Runs are spun up in Availability Zone `a`. Only specify the AWS region and not the AZ in the `--region` argument.
 
-* Login to Grid.  Please reference the detailed [steps](../../getting-started/getting-started-with-grid.md#login-steps) as required.
+* Login to Grid.  Please reference the detailed [steps](../../getting-started/getting-started-with-grid#login-steps) as required.
 
 ```bash
 pip install lightning_grid --upgrade
@@ -196,9 +197,11 @@ grid login --username <Grid user name> --key <Grid API Key>
 ```
 grid clusters aws <name> --role-arn <doesn't matter> --external-id <doesn't matter> --edit-before-creation
 ```
-In edit paste the terraform output field you've just copied.
+In edit, paste the terraform output field you've just copied.
 
 ### Step 5: Wait for cluster to be provisioned
+
+After submitting the cluster creation request, you can check the cluster state by running:
 
 ```text
 grid clusters
@@ -207,15 +210,15 @@ grid clusters
 And wait for your cluster status be `running`:
 
 ```text
-┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
-┃ id                 ┃ name               ┃ status  ┃
-┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
-│ grid-cloud-prod    │ grid-cloud-prod    │ running │
-│ <cluster name>     │ <cluster name>     │ running │
-└────────────────────┴────────────────────┴─────────┘
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ id                 ┃ name               ┃ type       ┃ status  ┃ created       ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ grid-cloud-prod    │ grid-prod-cloud    │ grid-cloud │ running │ 2 days ago    │
+│ <cluster name>     │ <cluster name>     │ byoc       │ running │ a hour ago    │
+└────────────────────┴────────────────────┴────────────┴─────────┴───────────────┘
 ```
 
-It can take some time to provision a new cluster, ~20-30 minutes
+It can take some time to provision a new cluster, ~20-30 minutes. Optionally, you can use `--wait` flag on the cluster creation step, and grid CLI will wait until the cluster is running.
 
 ### Step 6: Run your workloads in your new cluster
 
@@ -225,7 +228,7 @@ At this point you can update your cluster context so Grid runs commands against 
 grid user set-cluster-context <cluster-name>
 ```
 
-Now you can run workloads against your cluster as you normally would against grid-cloud-prod.
+Now you can run workloads against your cluster as you normally would against the Grid cloud. 
 
 ```text
 grid run --cluster <cluster name>
@@ -246,7 +249,7 @@ Use `grid edit` to see instance types available and update as necessary.
 grid edit cluster <cluster name>
 ```
 
-Use `grid delete` to delete cluster. Deleting a cluster will delete the resources created by Grid. In Customer Managed BYOC mode this will be the S3 buckets and EKS resources created by Grid. Use with care!
+Use `grid delete` to delete cluster. The deletion will take ~10-20 minutes. The flag --wait is also available here, in the case of using, grid CLI will wait until the cluster is deleted. Deleting a cluster will delete the resources created by Grid. In Self-Managed BYOC mode this will be the S3 buckets and EKS resources created by Grid. Use with care!
 
 :::note
     Grid attempts to delete all cluster resources when a delete operation is initiated. However, sometimes there are dangling resources left behind. Make sure to inspect your account for dangling resources and delete them manually if that is the case. Reach out to support if you have any issues -- we are happy to help!
@@ -259,5 +262,5 @@ grid delete cluster <cluster name>
 Next use terraform to delete the AWS resources you created as part of the install process.
 
 ```bash
-terraform destroy -var-file <your modified version of nmiculinic.tfvars>
+terraform destroy -var-file <your modified version of example.tfvars>
 ```

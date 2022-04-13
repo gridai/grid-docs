@@ -1,5 +1,4 @@
----
-sidebar_position: 
+--- 
 title: Machines
 sidebar_label: Machines
 ---

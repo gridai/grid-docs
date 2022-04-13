@@ -1,16 +1,9 @@
 ---
-<<<<<<< HEAD:docs/platform/2_Custom Cloud Credentials/5_grid-cluster-context.md
 title: Cluster Context
 sidebar_label: Cluster Context
 ---
 
 import Note from "@site/src/components/Note";
-=======
-sidebar_position: 2.5
-title: Cluster Context
-sidebar_label: Cluster Context
----
->>>>>>> origin/master:docs/platform/2_Custom Cloud Credentials/grid-cluster-context.md
 
 # Setting Cluster Context
 
@@ -20,9 +13,14 @@ against that cluster. Apart from the easiness this command brings, it also help 
 as scheduling to a wrong cluster.
 
 
-<note>**Please Note:** This feature will evolve to include more elaborate cluster management in the near-term future.
-```text $ grid user set-cluster-context [cluster-name]```
-</note>
+:::note**Please Note:**
+This feature will evolve to include more elaborate cluster management in the future.
+:::
+
+To set cluster context, you shuld use:
+```text
+$ grid user set-cluster-context [cluster-name]
+```
 
 Note that by default, the cluster context is set to the global cluster. The global cluster name is `Grid Cloud`. The global cluster id is `prod-2`.
 You can find what's the currently
@@ -42,7 +40,7 @@ Or if you're using config file set the `.compute.provider.cluster` field to the 
 
 # Examples
 
-- Run `grid clusters` show a Grid [BYOC](https://docs.grid.ai/platform/custom-cloud-credentials/customer-managed-byoc) cluster named `c220309-165349` whose cluster id is `c220309-165349`.
+- Run `grid clusters` show a Grid [BYOC](./self-managed-byoc) cluster named `c220309-165349` whose cluster id is `c220309-165349`.
 Also shown is the the global cluster named `Grid Cloud` whose cluster id is `prod-2`.
 
 ```bash
