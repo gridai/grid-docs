@@ -3,16 +3,16 @@
 Grid charges based on consumption of compute.
 
 :::note
-Costs are **estimates** until Runs have completed or Sessions are paused, then Grid reports the final costs
+Costs are **estimates** until Runs have completed or Sessions are paused, then Grid reports the final costs.
 :::
 
-To use GPU machines, a temporary hold of $1 is placed on credit card, this falls off within 5-7 business days.
+A temporary hold of $1 will be placed on your credit card for 5-7 business days when using GPU machines.
 
-This page describes community edition pricing; refer to plans [here](https://www.grid.ai/pricing/)
+This page describes community edition pricing; refer to plans [here](https://www.grid.ai/pricing/).
 
 ## List pricing
 
-If you need to run jobs for a long time and they cannot be interrupted, then use the default way of running. This will use the list pricing.
+If you need to run jobs for a long time and they cannot be interrupted, then use on-demand runs (this is the default option). This will use the list pricing.
 
 ```text
 grid run main.py
@@ -21,13 +21,18 @@ grid run main.py
 ## Interruptible pricing
 
 
-If your jobs (Sessions or Runs) can be interrupted and you want to save money then enable [Spot Instances](https://docs.grid.ai/features/runs/interruptible-machines#interruptible-machines). Whenever the cloud provider needs that machine, the job will be killed automatically.
+If your jobs (Sessions or Runs) can be interrupted and you want to save money, enable [Spot Instances](https://docs.grid.ai/features/runs/interruptible-machines#interruptible-machines). There is no uptime guarantee when using spot instances, so a job is terminated when the cloud provider needs the machine.
 
+
+To start a run using spot instances:
 ```text
 grid run --use_spot main.py
 ```
 
-```grid session create --use_spot```
+To start a session using spot instances use:
+```shell
+grid session create --use_spot
+```
 
 ## Individual Tier hourly rates
 

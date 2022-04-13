@@ -3,17 +3,21 @@ title: BYOC Prereqs
 sidebar_label: BYOC Prereqs
 ---
 
-[Grid Managed BYOC](./adding-custom-cloud-credentials.md)  
-[Customer Managed BYOC](./customer-managed-byoc.md)
+# Overview
+
+This page describes the pre-requisites needed to create a BYOC cluster and the installation steps.
+
+[Grid-Managed BYOC](./adding-custom-cloud-credentials)  
+[Self-Managed BYOC](./self-managed-byoc)
 
 # Prerequisites
 
-To install either the Grid-managed BYOC or Customer-managed BYOC modes the following tools are required:
+To install either the Grid-Managed BYOC or Self-Managed BYOC modes, the following tools are required:
 
 * [git](https://git-scm.com/)
 * [jq](https://stedolan.github.io/jq/)
 * [terraform](https://www.terraform.io/)
-* [AWS CLI](https://aws.amazon.com/cli/)
+* [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) - you need version 2, this is important
 
 ## Installation Steps
 
@@ -71,5 +75,5 @@ sudo apt-get install awscli
 
 # Next Steps
 See:
-1. [Grid Managed BYOC](./adding-custom-cloud-credentials.md) - for Grid Managed BYOC mode deployment instructions
-2. [Customer Managed BYOC](./customer-managed-byoc.md) - for Customer Managed BYOC mode deployment instructions
+1. [Grid-Managed BYOC](./adding-custom-cloud-credentials) - for Grid Managed BYOC mode deployment instructions
+2. [Self-Managed BYOC](./self-managed-byoc) - for Self Managed BYOC mode deployment instructions

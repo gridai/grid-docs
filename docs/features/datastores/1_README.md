@@ -47,11 +47,7 @@ incredible amount of time and effort into creating a truly unique *optimization 
 which removes every bit of latency possible from the point your program calls `with
 open(filename, 'r') as f:` to the instant that data is provided to you. You'll find
 traversing the data directory structure in a [session](../../features/sessions/README.md)
-indistinguishable from the experience of `cd`-ing around your local workstation. File
-access is on par with some of the fastest systems a cloud can provide, and for your most
-commonly accessed files, you'll find that reading them occurs nearly at the light-speed of
-reading data from working memory, not the slow Sunday-stroll across a park which occurs
-when you typically want to access data across a network as you pull from an object store. 
+indistinguishable from the experience of `cd`-ing around your local workstation.
 
 Grid Datastores are the easiest (and free-est!) way to deal with data in the cloud. Our
 capabilities and performances are constantly evolving, and we believe you'll love the
