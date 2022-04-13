@@ -2,15 +2,12 @@
 title: Viewing Logs
 sidebar_label: Viewing Logs
 ---
-:::note
-If you encounter issues please check the [FAQ](https://docs.grid.ai/features/runs/faq.md). We periodically update this with user questions.
-:::
 
 # Viewing logs
 
 ## Stdout logs <a id="stdout-logs"></a>
 
-When you run a script through a terminal, it usually generates logs like so:
+When you run a script through a terminal, it usually generates logs like this:
 
 ```bash
 GPU available: False, used: False
@@ -33,7 +30,7 @@ These logs can be viewed on Grid via the UI or CLI.‌
 
 ## View logs on the UI <a id="view-logs-on-the-ui"></a>
 
-View the logs output of each script by looking at each experiment's details menu:‌
+The Web UI now shows streaming logs as you execute runs, just click on experiment details and check out the Build logs and Stdout logs.
 
 ![](/images/runs/experiment-logs.gif)
 
@@ -48,6 +45,7 @@ grid logs enlightened-bullfinch-868-exp0 --use_pager
 See the CLI [command](https://docs.grid.ai/cli#grid-logs) for more information
 
 
-## New Streaming Logs on UI
 
-The Web UI now shows streaming logs as you execute runs, just click on experiment details and check out the Build logs and Stdout logs
+:::note
+If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq.md). The section is periodically updated this with common questions from the Grid community.
+:::
