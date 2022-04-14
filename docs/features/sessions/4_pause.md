@@ -18,7 +18,7 @@ You will NOT be charged for paused Sessions.
 The equivalent via the CLI
 
 ```bash
-grid session pause the-session-name
+grid session pause GRID_SESSION_NAME
 ```
 
 ## Resume a Session
@@ -30,7 +30,7 @@ When you're ready to rebuild your session environment, press resume.
 The equivalent via the CLI
 
 ```bash
-grid session resume the-session-name
+grid session resume GRID_SESSION_NAME
 ```
 
 ## Automatic Pausing on Zero Balance
@@ -47,5 +47,9 @@ When you have added credits, just resume the session and carry on with your work
 
 :::note
 Even though pausing is immediate, a final snapshot of your session is started after you click pause. 
-One consequence of this process is that resuming the session immediately after pausing it will incur a delay of a few minutes for your session to be resumed until this process is done.  This ensures your data is properly saved and avoids any corruption.
+One consequence of this process is that resuming the session immediately after pausing it will incur a delay of a few minutes for your session to be resumed until this process is done.  This ensures your data is properly saved and avoids any corruption.  
+
+The time required to take the snapshot for the pause and restore the snapshot for resume is dependent on:
+- The number of objects and size of the snapshot.  More object and bigger snapshot will take longer
+- The machine instance type.  Fewer and slower CPU and smaller RAM machine will take longer
 :::
