@@ -13,7 +13,6 @@ description: known issue in the Grid Platform
 
 * Canceling download of Artifacts: When downloading the artifacts, Ctrl-C does not cancel the download. As a workaround, use Ctrl-Z followed by `kill -9 $(jobs -p)`.
 
-* Artifacts are not saved in a subdirectory: Grid artifacts are not saved in a subdirectory for run name and experiment name. This will overwrite files if two experiments have artifacts with the same file name. Workaround would be to put the artifacts in separate folders before downloading artifacts again.
 
 ### [Collaboration](https://docs.grid.ai/platform/collaboration)
 * Downloading artifacts and/or viewing logs from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.
