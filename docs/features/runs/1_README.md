@@ -43,8 +43,6 @@ __pycache__/
 
 `.gridignore` uses glob expressions to exclude any file that matches. Lines starting with `#` are comments and will be ignored. All directories with name `__pycache__` will not get uploaded as well as any file (even inside nested directories) with `.pyc` extension. To exclude files only on particular directory level use `/` separator - also on the Windows platform. 
 
-If the `.gridignore` is not found then CLI excludes files based on the `.gitignore` and `.dockerignore` files combined. At this moment only `.gridignore` located in project root directory is supported, any ignore file in nested directories will be ignored. 
-
 If there's no `.gridignore` in project root directory then CLI combines all existing `.gitignore` and `.dockerignore` files from all nested directories and excludes files based on rules defined in them. It's important to note that currently we do not support explicit inclusion patterns ie. `!` sign at the beginning of the pattern to directly include file that might have been exluded by other pattern.
 
 
