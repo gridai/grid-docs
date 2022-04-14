@@ -4,7 +4,7 @@ title: Attaching Datastores to a Session
 sidebar_label: Attaching Datastores to a Session
 ---
 
-:::note: Datastore can only be mounted to a Session at Session creation time:::
+:::note Datastore can only be mounted to a Session at Session creation time
 
 # Attaching Datastores
 
