@@ -25,6 +25,27 @@ Also, Runs help you train your models faster by enabling [parallelized hyperpara
 7. [Run Experiments using Spot Instances](https://docs.grid.ai/features/runs/interruptible-machines)
 
 
+### Local directory upload and .gridignore file
+Currently, Grid has only a native Github integration to allow running code from public or private repositories. We provide `--localdir` option to allow users to run scripts from arbitrary local directory. When using local directory option CLI will upload all files from current directory with exclusion of those defined by rules of .gridignore file.
+
+Here is an example .gridignore file:
+
+```text
+# Ignore all *.pyc files and __pycache__ directories in all directories (nested)
+*.pyc
+__pycache__/
+
+
+# Exclude files only in given directory
+/*.md
+/nested/*.md
+```
+
+`.gridignore` uses glob expressions to exclude any file that matches. Lines starting with `#` are comments and will be ignored. All directories with name `__pycache__` will not get uploaded as well as any file (even inside nested directories) with `.pyc` extension. To exclude files only on particular directory level use `/` separator - also on the Windows platform. 
+
+If there's no `.gridignore` in project root directory then CLI combines all existing `.gitignore` and `.dockerignore` files from all nested directories and excludes files based on rules defined in them. It's important to note that currently we do not support explicit inclusion patterns ie. `!` sign at the beginning of the pattern to directly include file that might have been exluded by other pattern.
+
+
 ## ⚡️⚡ ️Forget about infrastructure ⚡️⚡️
 
 Runs are "serverless" which means you only pay for the time your scripts are actually running. When running on your own infrastructure this amounts to massive cost savings as well.
