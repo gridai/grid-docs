@@ -11,5 +11,4 @@ sidebar_label: JupyterLab with Sessions
 ![](/images/sessions/new-session.gif)
 
 ## Step 1: Click on the Jupyter icon
-
-![](/images/runs/click-clone-run-button.gif)
+![](/images/sessions/jupyterlab.gif)
