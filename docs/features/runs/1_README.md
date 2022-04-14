@@ -45,6 +45,8 @@ __pycache__/
 
 If the `.gridignore` is not found then CLI excludes files based on the `.gitignore` and `.dockerignore` files combined. At this moment only `.gridignore` located in project root directory is supported, any ignore file in nested directories will be ignored. 
 
+If there's no `.gridignore` in project root directory then CLI combines all existing `.gitignore` and `.dockerignore` files from all nested directories and excludes files based on rules defined in them. It's important to note that currently we do not support explicit inclusion patterns ie. `!` sign at the beginning of the pattern to directly include file that might have been exluded by other pattern.
+
 
 ## ⚡️⚡ ️Forget about infrastructure ⚡️⚡️
 
