@@ -8,7 +8,7 @@ sidebar_label: Bring Your Own Cloud (BYOC) Overview
 **BYOC = Bring Your Own Cloud**
 
 :::note
-This feature is part of our Team Collaboration plan. If you're interested in learning more, please fill out this [form](https://www.grid.ai/upgrade/).
+This feature is part of our Teams plan. If you're interested in learning more, please fill out this [form](https://www.grid.ai/upgrade/).
 :::
 
 Grid can create clusters inside of your own cloud account, allowing you to keep complete control over the resources that you need. We offer two modes for cluster creation: Grid-Managed Infrastructure mode and Self-Managed Infrastructure mode.
