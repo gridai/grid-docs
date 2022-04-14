@@ -33,6 +33,8 @@ with open("docs/cli.md", "w") as _cli:
     _cli.write(INTRO)
     for row in r:
         row = row.replace('_required', '')
+        if '\n' in row:
+            row = row.replace('\n', "")
         if row.startswith("### "):
             row = row.replace("### ", "## grid ")
         if row.startswith("#### "):
