@@ -1,4 +1,4 @@
-# Viewing login credentials
+# Viewing Login Credentials
 
 ## Settings
 

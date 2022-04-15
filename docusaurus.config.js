@@ -45,11 +45,11 @@ const config = {
       ({
         redirects: [
           {
-            to: "/platform/custom-cloud-credentials/adding-custom-cloud-credentials",
+            to: "/platform/Custom Cloud Credentials/adding-custom-cloud-credentials",
             from: "/platform/upgrades/adding-custom-cloud-credentials"
           },
           {
-            to:"/features/runs",
+            to:"/features/runs/README",
             from:"/products/run-run-and-sweep-github-files"
           },
           {
@@ -57,8 +57,8 @@ const config = {
             from:"/products/add-data-to-grid-datastores"
           },
           {
-            to:"/getting-started",
-            from:"/start-here"
+            to:"/features/sessions",
+            from:"/products/sessions"
           },
         ],
       }),
@@ -90,7 +90,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "platform/changelog",
+            docId: "changelog",
             label: "Changelog",
             position: "left",
           },

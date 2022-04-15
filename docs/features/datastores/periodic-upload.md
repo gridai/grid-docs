@@ -1,3 +1,9 @@
+---
+sidebar_position: 1.4
+title: Periodic Upload
+sidebar_label: Periodic Upload
+---
+
 # Periodic upload
 
 ## Upload on a timer
@@ -17,4 +23,3 @@ echo "0 * * * * grid datastore create --source data/path --name dataset" >> mycr
 crontab mycron
 rm mycron
 ```
-
