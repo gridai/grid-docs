@@ -104,6 +104,9 @@ grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightnin
 
 ### Using the `--no-copy` option via the CLI
 
+Example: 
+`grid datastore create S3://ruff-public-sample-data/esRedditJson --no-copy`
+
 In certain cases, your s3 bucket may fit one (or both) of the following criteria: (1)
 the bucket is continually updating with new data which you want included in a Grid datastore (2) the bucket is
 particularly large (leading to long Datastore creation times). In these cases,
