@@ -75,10 +75,10 @@ manually specify the Datastore mount path when using the CLI. Please refer to
 
 
 For more information on using Datastores, start with the first section of the 
-[Using Datastores](./2_Using%20Datastores/1_README.md) tutorial. 
+[Using Datastores](./2_Using%20Datastores/1_How-to-use-datastores.md) tutorial. 
 
 More advanced users can feel free to skip to any of the other tutorials which may be of
-interest. These are linked in the [Sidebar](./2_Using%20Datastores/1_README.md)
+interest. These are linked in the [Sidebar](./2_Using%20Datastores/1_How-to-use-datastores.md)
 
 1. [Using Datastores](./2_Using%20Datastores/1_How-to-use-datastores.md)
 
