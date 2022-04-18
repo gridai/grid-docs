@@ -50,8 +50,8 @@ grid session ssh happy-owl-123
 
 ![](/images/sessions/how-to-ssh-into-session.gif)
 
-You can also use direct `ssh` commands, for example to port forward remote or local ports, 
-as well as `sftp` if needed to transfer any files.
+After `grid session ssh`, you can also use direct `ssh` commands, for example to port forward remote or local ports, 
+as well as `scp` and `sftp` if needed to transfer any files.
 
 :::note
 If prompted for a password while attempting to connect to a Session:
