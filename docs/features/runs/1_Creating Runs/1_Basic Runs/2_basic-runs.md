@@ -9,12 +9,12 @@ Also, if you encounter issues please check the [FAQ](../../3_faq.md). We periodi
 
 # How to Create Runs
 Runs are highly customizable "serverless" compute instances. Here we will cover all the methods made available to customize Runs for common use cases. The examples below cover the following:
-1. [Creating "vanilla" Runs](https://docs.grid.ai/features/runs/creating-runs/basic-runs/basic-runs#creating-vanilla-runs)
-2. [Creating Runs with script dependencies](https://docs.grid.ai/features/creating-runs/basic-runs/basic-runs#creating-runs-with-script-dependencies)  
+1. [Creating "vanilla" Runs](https://docs.grid.ai/features/runs/Creating%20Runs/Basic%20Runs/basic-runs#creating-vanilla-runs)
+2. [Creating Runs with script dependencies](https://docs.grid.ai/features/runs/Creating%20Runs/Basic%20Runs/basic-runs#creating-runs-with-script-dependencies)  
   3.1 Handling requirements  
   3.2 Runs with specified requirements.txt  
   3.3 Runs with specified environment.yml
-3. [Attaching Datastores to Runs](https://docs.grid.ai/features/creating-runs/basic-runs/basic-runs#attaching-datastores-to-runs)
+3. [Attaching Datastores to Runs](https://docs.grid.ai/features/runs/Creating%20Runs/Basic%20Runs/basic-runs#attaching-datastores-to-runs)
 
 
 ## Creating Vanilla Runs
@@ -31,7 +31,7 @@ grid run --name hello hello.py
 The above code is passing a script named `hello.py` to the run. The script will print out 'hello_world'. 
 
 For instructions on how to view run and experiment logs, check out the
-next section [Viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
+next section [Viewing logs produced by Runs](https://docs.grid.ai/features/runs/Analyzing%20Runs/viewing-logs).
 
 ## Creating Runs with Script Dependencies
 If you've taken a peak at the grid-tutorials repo, you may have noticed three things:
@@ -72,7 +72,7 @@ grid run --name specified-requirements-conda --dependency_file ./conda/environem
 ```
 ### Viewing Logs
 Explore the build logs to compare the logs of this Run to that of the vanilla Run we created in the example above. 
-For instructions on how to view the logs check out [viewing logs produced by Runs](https://docs.grid.ai/features/creating-runs/analyzing-runs/viewing-logs).
+For instructions on how to view the logs check out [viewing logs produced by Runs](https://docs.grid.ai/features/runs/Analyzing%20Runs/viewing-logs).
 
 ## Attaching Datastores to Runs
 When working with large datasets, it may be faster and easier to store your data in a [Datastore](../../../datastores/1_README.md). Datastores are high-performance, low-latency, versioned, and scalable datasets which can be instantly mounted to any Session or Run.
@@ -111,6 +111,6 @@ The above code passes a script named `datastore.py` to the Run. This script prin
 
 # Next Steps
 To learn more about Runs, please check out the following tutorials:
-1. [Primer on Grid Sweep Syntax](https://docs.grid.ai/features/runs/sweep-syntax)
-2. [Analyzing Runs](https://docs.grid.ai/features/runs/analyzing-runs)
-3. [Advanced Run Creation](https://docs.grid.ai/features/runs/adv-creating-runs)
+1. [Primer on Grid Sweep Syntax](https://docs.grid.ai/features/runs/Creating%20Runs/Basic%20Runs/sweep-syntax)
+2. [Analyzing Runs](https://docs.grid.ai/features/runs/Analyzing%20Runs/README)
+3. [Advanced Run Creation](https://docs.grid.ai/features/runs/Creating%20Runs/Adv%20Runs/README)
