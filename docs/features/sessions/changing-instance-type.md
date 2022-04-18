@@ -1,12 +1,14 @@
 ---
-description: Run (and sweep) any private or public Github repository.
+sidebar_position: 2.1
+title: Changing Session Instance Type
+sidebar_label: Change Instance Type
 ---
-import Note from "@site/src/components/Note";
 
-# Change Instance Type of a Session
+# Change Session Instance Type
 
 ```text
-grid session change-instance-type [--spot , --on_demand] SESSION_NAME g4dn.xlarge
+# change instance type
+grid session change-instance-type SESSION_NAME g4dn.xlarge
 ```
 
 Changing Sesssion instance type allows you to upgrade or downgrade the compute capacity of the Session while keeping all of your work in progress untouched.
@@ -18,11 +20,15 @@ The equivalent via the CLI command:
 
 ![](/images/sessions/change-instance-type.png)
 
-You should PAUSE the session to change the instance type. RESUME the session for the changes to take effect.
+### Change to spot instance
 
-Currently the following scenarios are supported: 
-1. Changing from a CPU instance to another CPU instance
-2. Changing an On-Demand instance to a [Spot Instance](https://docs.grid.ai/features/runs/interruptible-machines#interruptible-machines)
-3. Changing from a Spot Instance to an On-Demand Instance
+In the UI you can set the Spot checkbox or in the CLI add `--spot` flag.
+You still need to provide the instance type even if just changing from on demand to spot.
 
-<note>Upscaling to a GPU instance from a CPU or smaller GPU instance is not yet supported</note>
+```bash
+grid session change-instance-type sassy-crane-892 --spot g4dn.xlarge
+```
+
+:::note 
+__PAUSE__ the session before changing the instance type. Then RESUME the session for the changes to take effect.
+:::

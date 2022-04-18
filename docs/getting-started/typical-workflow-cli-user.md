@@ -126,7 +126,7 @@ In a realistic workflow, we would start here. The first thing you want to do is 
 Now create the datastore which will upload your dataset and optimize it
 
 ```bash
-grid datastore create cifar5/ --name cifar5
+grid datastore create cifar5/
 ```
 
 make sure it was created
@@ -148,7 +148,7 @@ In certain cases your data might change every few hours. In these cases, you can
 crontab -l > mycron
 
 #run datastore upload every hour every day
-echo "0 * * * * grid datastore create cifar5/ --name cifar5" >> mycron
+echo "0 * * * * grid datastore create cifar5/" >> mycron
 
 #install new cron file
 crontab mycron
@@ -306,17 +306,16 @@ git clone https://github.com/PyTorchLightning/grid-tutorials.git
 Install requirements + project
 
 ```yaml
-cd getting-started
+cd grid-tutorials/getting-started
 
 pip install -r requirements.txt
-pip install -e .
 ```
 
 now run the following command to train a resnet18 on 2 GPUs
 
 ```bash
 python flash-image-classifier.py \
-      --data_dir ../cifar5
+      --data_dir ../cifar5 \
       --gpus 2 \
       --epochs 4
 ```
@@ -377,11 +376,10 @@ Now kick off the run with grid run
 grid run --dependency_file ./requirements.txt \
          --name cifar-tut-hpo \
          --instance_type 2_m60_8gb \
-         --datastore_name cifar5 \  
-         --localdir \
+         --datastore_name cifar5 \
          --datastore_version 1 \
          -- \
-         cifar10-baseline.py \
+         flash-image-classifier.py \
          --data_dir /datastores/cifar5 \
          --gpus 2 \
          --epochs 4 \

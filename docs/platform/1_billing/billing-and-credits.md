@@ -3,11 +3,11 @@
 
 ## Adding Credits
 
-To add credits click at the bottom left in navigation bar.
+To add credits, click on "Credits" in the bottom of the navigation bar in the Grid UI.
 
 ![](/images/platform/bill.gif)
 
-## Payment options
+## Payment Options
 
 Grid accepts payment via credit card at this time. 
 
