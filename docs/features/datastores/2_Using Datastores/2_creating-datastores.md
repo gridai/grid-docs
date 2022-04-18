@@ -31,7 +31,7 @@ For datasets larger than 1 GB, use the CLI.
 
 :::note 
 
-If you have a dataset that is 1Gb+ and poor-average internet connection, we suggest starting an Interactive Session and creating the Datastore from there. Internet speed is much faster in Interactive Sessions, so upload times will be shorter. 
+If you have a dataset that is 1GB+ and poor-average internet connection, we suggest starting an Interactive Session and creating the Datastore from there. Internet speed is much faster in Interactive Sessions, so upload times will be shorter. 
 
 :::
 
@@ -99,6 +99,26 @@ datastore from this bucket named `"lightning-train-data"` we could execute:
 ```bash
 grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightning-train-data
 ```
+
+:::
+
+#### Using the `--no-copy` option
+
+In certain cases you you may be presented with an s3 bucket which is either: (1)
+continually updating with new data you want included in a Grid datastore (2) is
+particularly large (taking a long time to create via the normal method). In these cases,
+you can pass the `--no-copy` flag to the `grid datastore create` command. This flag will
+prevent grid from making a copy of the dataset, speeding up datastore creation time
+significantly when working with large buckets. 
+
+::: note 
+
+When using this flag, you cannot remove files from your bucket. If you'd like to add.
+files, please create a new version of the datastore after you've added files to your.
+bucket. Please note that Grid does not currently support private S3 buckets. If using this
+flag via the grid public cloud, then the source bucket should be in the AWS `us-east-1`
+region or there will be significant latency when you attempt to access the datastore files
+in a run / session. 
 
 :::
 
