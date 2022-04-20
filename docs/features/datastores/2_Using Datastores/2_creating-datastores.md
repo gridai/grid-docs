@@ -31,7 +31,13 @@ For datasets larger than 1 GB, use the CLI.
 
 :::note 
 
-If you have a dataset that is 1GB+ and poor-average internet connection, we suggest starting an Interactive Session and creating the Datastore from there. Internet speed is much faster in Interactive Sessions, so upload times will be shorter. 
+We suggest starting an Interactive Session and creating your Datastore from there in the following instances:
+
+- Your dataset is larger than 1GB
+- You do not have a strong internet connection
+
+Using an Interactive Session in this scenario will improve your upload speed.
+
 
 :::
 
@@ -107,18 +113,21 @@ grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightnin
 Example: 
 `grid datastore create S3://ruff-public-sample-data/esRedditJson --no-copy`
 
-In certain cases, your s3 bucket may fit one (or both) of the following criteria: (1)
-the bucket is continually updating with new data which you want included in a Grid datastore (2) the bucket is
-particularly large (leading to long Datastore creation times). In these cases,
-you can pass the `--no-copy` flag to the `grid datastore create` command. This flag will
-prevent grid from making a copy of the dataset, speeding up datastore creation time
-significantly when working with large buckets. 
+In certain cases, your S3 bucket may fit one (or both) of the following criteria:
+
+(1) the bucket is continually updating with new data which you want included in a Grid Datastore 
+(2) the bucket is particularly large (leading to long Datastore creation times)
+
+In these cases, you can pass the `--no-copy` flag to the `grid datastore create` command. This flag will
+prevent Grid from making a copy of the dataset, which significantly speeds up Datastore creation time.
 
 :::info 
 
-When using this flag, you cannot remove files from your bucket. If you'd like to add files, please create a new version of the datastore after you've added files to your bucket. Please note that Grid does not currently support private S3 buckets. 
+When using this flag, you cannot remove files from your bucket. If you'd like to add files, please create a new version of the Datastore after you've added files to your bucket. 
 
-If using this flag via the grid public cloud, then the source bucket should be in the  AWS `us-east-1` region or there will be significant latency when you attempt to access the datastore files in a run / session. 
+Please note that Grid does not currently support private S3 buckets. 
+
+If you are using this flag via the Grid public cloud, then the source bucket should be in the  AWS `us-east-1` region or there will be significant latency when you attempt to access the Datastore files in a Run or Session.
 
 :::
 
