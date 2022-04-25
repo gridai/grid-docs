@@ -315,7 +315,7 @@ now run the following command to train a resnet18 on 2 GPUs
 
 ```bash
 python flash-image-classifier.py \
-      --data_dir ../cifar5 \
+      --data_dir path/to/cifar5 \
       --gpus 2 \
       --epochs 4
 ```
