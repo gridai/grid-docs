@@ -56,4 +56,4 @@ The time required to take the snapshot for the pause and restore the snapshot fo
 
 ## Pause a Session Using a Github Action
 
-As a convenience, we provide a [GitHub Action](https://github.com/sunitaprakash/grid-session-env) for pausing Sessions.
+As a convenience, we provide a [GitHub Action](https://github.com/PyTorchLightning/grid-session-env) for pausing Sessions.
