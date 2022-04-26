@@ -23,7 +23,7 @@ Note a few things:
 
 - The dataset is small so the tutorial can be quick. But the workflow doesn't change for large-scale data.
 - We'll use PyTorch Lightning for simplicity, but the framework can be any of your choice.
-- If you are signed into Grid with Google, make sure to [link a Github account](../features/runs/private-repos.md) to your profile before launching your first run!
+- If you are signed into Grid with Google, make sure to [link a Github account](../features/runs/2_private-repos.md) to your profile before launching your first run!
 
 ## **Tutorial time: 19 minutes**
 
@@ -126,7 +126,7 @@ In a realistic workflow, we would start here. The first thing you want to do is 
 Now create the datastore which will upload your dataset and optimize it
 
 ```bash
-grid datastore create cifar5/ --name cifar5
+grid datastore create cifar5/
 ```
 
 make sure it was created
@@ -148,7 +148,7 @@ In certain cases your data might change every few hours. In these cases, you can
 crontab -l > mycron
 
 #run datastore upload every hour every day
-echo "0 * * * * grid datastore create cifar5/ --name cifar5" >> mycron
+echo "0 * * * * grid datastore create cifar5/" >> mycron
 
 #install new cron file
 crontab mycron
@@ -243,7 +243,7 @@ ls /datastore
 Now you can code away!
 
 ```yaml
-git clone https://github.com/williamFalcon/cifar5
+git clone https://github.com/PyTorchLightning/grid-tutorials.git
 
 # debug, prototype, etc...
 
@@ -300,35 +300,24 @@ For best practices structuring machine learning projects in general, stay tuned 
 Clone the project **on the interactive Session**
 
 ```yaml
-git clone https://github.com/williamFalcon/cifar5
+git clone https://github.com/PyTorchLightning/grid-tutorials.git
 ```
 
 Install requirements + project
 
 ```yaml
-cd cifar5
+cd grid-tutorials/getting-started
 
-sudo pip install -r requirements.txt
-pip install -e .
+pip install -r requirements.txt
 ```
 
-now run the following command to train a resnet50 on 2 GPUs
+now run the following command to train a resnet18 on 2 GPUs
 
 ```bash
-python project/lit_image_classifier.py \
-                --data_dir /datastore \
-                --gpus 2 \
-                --accelerator 'ddp' \
-                --backbone resnet50
-```
-
-You should see the results \(the script is designed to overfit the val split\)
-
-```yaml
---------------------------------------------------------------------------------
-DATALOADER:0 TEST RESULTS
-{'test_acc': 1.0, 'test_loss': 1.2107692956924438}
---------------------------------------------------------------------------------
+python flash-image-classifier.py \
+      --data_dir /datastores/cifar5 \
+      --gpus 2 \
+      --epochs 4
 ```
 
 At this step \(in a real workflow\) you would code the model, debug, etc... using the remote GPUs from your local VSCode :\)
@@ -379,29 +368,22 @@ git push
 
 Now let's kick off a RUN.
 
-First make sure we're all in the same folder for the tutorial
-
-```yaml
-cd cifar5/project
-ls
-# __init__.py             lit_image_classifier.py
-```
+Make sure you are in the /grid-tutorials/getting-started directory for the tutorial
 
 Now kick off the run with grid run
 
 ```bash
-grid run \
-  --datastore_name cifar5 \
-  --datastore_version 1 \
-  --datastore_mount_dir /cifar5 \
-  --instance_type 2_m60_8gb \
-  --framework lightning \
-  --gpus 2 \
-  lit_image_classifier.py \
-  --backbone "['resnet50', 'resnet34', 'resnet18']" \
-  --learning_rate "uniform(1e-5, 1e-1, 5)" \
-  --data_dir /cifar5 \
-  --gpus 2
+grid run --dependency_file ./requirements.txt \
+         --name cifar-tut-hpo \
+         --instance_type 2_m60_8gb \
+         --datastore_name cifar5 \
+         --datastore_version 1 \
+         -- \
+         flash-image-classifier.py \
+         --data_dir /datastores/cifar5 \
+         --gpus 2 \
+         --epochs 4 \
+         --learning_rate "uniform(1e-5, 1e-1, 5)"
 ```
 
 :::note
@@ -412,4 +394,4 @@ You can do this from the Session or your local machine \(but you'll need to clon
 
 When your runs get repetitive or if they have a lot of hyperparameters, use a YAML to save the run configuration.
 
-Check out the [YML documentation](../features/runs/yaml-configs/)
+Check out the [YML documentation](../features/runs/17_yaml-configs/2_yaml-api.md)

@@ -33,7 +33,7 @@ const config = {
         },
         googleAnalytics: {
           anonymizeIP: true,
-          trackingID: "G-GW8EJHVZ6P",
+          trackingID: "UA-176087655-2",
         },
       }),
     ],
@@ -45,11 +45,11 @@ const config = {
       ({
         redirects: [
           {
-            to: "/platform/custom-cloud-credentials/adding-custom-cloud-credentials",
+            to: "/platform/Custom Cloud Credentials/adding-custom-cloud-credentials",
             from: "/platform/upgrades/adding-custom-cloud-credentials"
           },
           {
-            to:"/features/runs",
+            to:"/features/runs/README",
             from:"/products/run-run-and-sweep-github-files"
           },
           {
@@ -59,6 +59,10 @@ const config = {
           {
             to:"/features/sessions",
             from:"/products/sessions"
+          },
+          {
+            to:"/platform/billing/billing-rates",
+            from:"/platform/billing-rates"
           },
         ],
       }),
@@ -90,7 +94,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "platform/changelog",
+            docId: "changelog",
             label: "Changelog",
             position: "left",
           },
