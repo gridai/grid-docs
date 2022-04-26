@@ -60,6 +60,10 @@ const config = {
             to:"/features/sessions",
             from:"/products/sessions"
           },
+          {
+            to:"/platform/billing/billing-rates",
+            from:"/platform/billing-rates"
+          },
         ],
       }),
     ],

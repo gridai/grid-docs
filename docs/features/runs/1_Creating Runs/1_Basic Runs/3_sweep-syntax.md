@@ -16,7 +16,7 @@ grid run main.py --layers 32 --learning_rate 0.01
 ```
 
 :::note
-This page provides a list of arguments specific to running hyperparameter sweeps. For the full Grid CLI API reference, visit [this page. ](../../cli.md)
+This page provides a list of arguments specific to running hyperparameter sweeps. For the full Grid CLI API reference, visit [this page. ](../../../../cli.md)
 :::
 
 ## Python flags

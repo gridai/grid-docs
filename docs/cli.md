@@ -491,20 +491,10 @@ grid run [OPTIONS] [RUN_COMMAND]...
 | `--ignore_warnings` | boolean | If we should ignore warning when executing commands | `False` |
 | `--scratch_size` | integer | The size in GB of the scratch space attached to the experiment | `100` |
 | `--scratch_mount_path` | text | The mount path to mount the scratch space | `/tmp/scratch` |
-| `-l`, `--localdir` | boolean | Upload source code from the local directory instead of having Grid clone the repo from GitHub (default).
-This option is particularly useful for users that do not host their source code on GitHub. | `False` |
+| `-l`, `--localdir` | boolean | Upload source code from the local directory instead of having Grid clone the repo from GitHub (default).This option is particularly useful for users that do not host their source code on GitHub. | `False` |
 | `-d`, `--dockerfile` | text | Dockerfile for the image building | None |
-| `--dependency_file` | text | Dependency file path. 
-
-If not provided and a `requirements.txt`, `environment.yml`, or `Project.toml`
-file is present in the current-working-directory, then we will automatically
-install dependencies from according to the inferred file. | None |
-| `--auto_resume` | boolean | Mark this run as auto-resumable. 
-
-If underlying node/instance/VM is terminated, the experiment will be
-automatically resumed, with all artifacts restores from the last
-known state. The experiment code will receive SIGTERM signal and it
-must exit with status code 0 upon properly dumping its state to disk. | `False` |
+| `--dependency_file` | text | Dependency file path. If not provided and a `requirements.txt`, `environment.yml`, or `Project.toml`file is present in the current-working-directory, then we will automaticallyinstall dependencies from according to the inferred file. | None |
+| `--auto_resume` | boolean | Mark this run as auto-resumable. If underlying node/instance/VM is terminated, the experiment will beautomatically resumed, with all artifacts restores from the lastknown state. The experiment code will receive SIGTERM signal and itmust exit with status code 0 upon properly dumping its state to disk. | `False` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
 ## grid session

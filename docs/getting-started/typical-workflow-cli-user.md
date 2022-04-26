@@ -23,7 +23,7 @@ Note a few things:
 
 - The dataset is small so the tutorial can be quick. But the workflow doesn't change for large-scale data.
 - We'll use PyTorch Lightning for simplicity, but the framework can be any of your choice.
-- If you are signed into Grid with Google, make sure to [link a Github account](../features/runs/3_private-repos.md) to your profile before launching your first run!
+- If you are signed into Grid with Google, make sure to [link a Github account](../features/runs/2_private-repos.md) to your profile before launching your first run!
 
 ## **Tutorial time: 19 minutes**
 
@@ -394,4 +394,4 @@ You can do this from the Session or your local machine \(but you'll need to clon
 
 When your runs get repetitive or if they have a lot of hyperparameters, use a YAML to save the run configuration.
 
-Check out the [YML documentation](../features/runs/17_yaml-configs/1_README.md)
+Check out the [YML documentation](../features/runs/17_yaml-configs/2_yaml-api.md)

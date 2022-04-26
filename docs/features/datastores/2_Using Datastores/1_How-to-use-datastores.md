@@ -19,4 +19,4 @@ to get you started with working with this core feature. The examples cover the f
 
 ## Further Information
 
-For more information, please refer to the [Datastore Frequently Asked Questions](../faq.md) page.
+For more information, please refer to the [Datastore Frequently Asked Questions](../3_faq.md) page.
