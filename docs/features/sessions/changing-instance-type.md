@@ -1,7 +1,6 @@
 ---
 description: Run (and sweep) any private or public Github repository.
 ---
-import Note from "@site/src/components/Note";
 
 # Change Instance Type of a Session [BETA]
 
