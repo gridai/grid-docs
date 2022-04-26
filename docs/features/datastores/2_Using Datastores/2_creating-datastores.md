@@ -38,7 +38,6 @@ We suggest starting an Interactive Session and creating your Datastore from ther
 
 Using an Interactive Session in this scenario will improve your upload speed.
 
-
 :::
 
 First, install the grid CLI and login:
