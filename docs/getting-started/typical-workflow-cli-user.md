@@ -175,7 +175,7 @@ You need to do this step **only once**
 ssh-keygen -b 2048 -t rsa -f ~/.ssh/grid_ssh_creds -q -N ""
 
 # add the keys to grid
-grid ssh-keys add key_1 ~/.ssh/grid_ssh_creds
+grid ssh-keys add key_1 ~/.ssh/grid_ssh_creds.pub
 ```
 
 ## Step 4: Start a Session
