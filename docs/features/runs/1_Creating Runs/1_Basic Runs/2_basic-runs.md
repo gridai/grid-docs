@@ -24,7 +24,7 @@ First, clone the repo, navigate to the `features-intro/runs` directory, and crea
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
-cd features-intro/runs
+cd grid-tutorials/features-intro/runs
 grid run --name hello hello.py
 ```
 
@@ -56,7 +56,7 @@ When creating a run, you can explicitly specify a requirements file using the `-
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
-cd features-intro/runs
+cd grid-tutorials/features-intro/runs
 grid run --name specified-requirements-pip --dependency_file ./pip/requirements.txt hello.py
 ```
 
@@ -67,7 +67,7 @@ Specifying an environment.yml file is the only way to get Runs to use the Conda 
 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
-cd features-intro/runs
+cd grid-tutorials/features-intro/runs
 grid run --name specified-requirements-conda --dependency_file ./conda/environemnt.yml hello.py
 ```
 ### Viewing Logs
@@ -98,7 +98,7 @@ grid datastore create cifar5/ --name cifar5
 Once the datastore has been successfully created, you can mount it to a Run using the `--datastore_name` and `--datastore_version` properties. 
 ```text
 git clone https://github.com/PyTorchLightning/grid-tutorials.git
-cd features-intro/runs
+cd grid-tutorials/features-intro/runs
 grid run --name attaching-datastore --datastore_name cifar5 --datastore_version 1 datastore.py --data_dir /datastores/cifar5/1
 ```
 

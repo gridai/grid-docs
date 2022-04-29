@@ -5,8 +5,7 @@ sidebar_label: Deleting Datastores
 
 # Deleting Datastores
 
-Once you are finished using a dataset (or if you have hit the [maximum datastore user
-quota](../faq.md#datastore-charging-and-limits), you may wish to remove a particular
+Once you are finished using a dataset, you may wish to remove a particular
 version of a datastore. 
 
 :::danger 

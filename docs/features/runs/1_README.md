@@ -11,7 +11,7 @@ import Video from "@site/src/components/Video";
 Runs are "serverless" compute optimized for training ML models.
 
 ## Why use Runs
-Because Runs are "serverless", you only pay for the time your script is running. This amounts to massive cost savings whether you use Runs in Grid Cloud or in [a custom cluster](../../platform/2_custom-cloud-credentials/byoc.md).
+Because Runs are "serverless", you only pay for the time your script is running. This amounts to massive cost savings whether you use Runs in Grid Cloud or in [a custom cluster](../../platform/2_Custom%20Cloud%20Credentials/1_byoc.md).
 
 Also, Runs help you train your models faster by enabling [parallelized hyperparameter sweeps](https://docs.grid.ai/features/runs/sweep-syntax). In other words, you can run multiple experiments at the same time in the cloud!
 
