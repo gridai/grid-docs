@@ -11,18 +11,18 @@ import Video from "@site/src/components/Video";
 Runs are "serverless" compute optimized for training ML models.
 
 ## Why use Runs
-Because Runs are "serverless", you only pay for the time your script is running. This amounts to massive cost savings whether you use Runs in Grid Cloud or in [a custom cluster](../../platform/2_custom-cloud-credentials/byoc.md).
+Because Runs are "serverless", you only pay for the time your script is running. This amounts to massive cost savings whether you use Runs in Grid Cloud or in [a custom cluster](../../platform/2_Custom%20Cloud%20Credentials/1_byoc.md).
 
 Also, Runs help you train your models faster by enabling [parallelized hyperparameter sweeps](https://docs.grid.ai/features/runs/sweep-syntax). In other words, you can run multiple experiments at the same time in the cloud!
 
 ### Capabilities Highlights
 1. [Utilize a Variety of AWS Machines](https://docs.grid.ai/platform/machines)
 2. [GitHub Integration](https://docs.grid.ai/platform/github-integration)
-3. [Attach Datastores](https://docs.grid.ai/features/runs#attaching-datastores-to-runs)
-4. [Auto-resume Experiments](https://docs.grid.ai/features/runs/auto-resume-experiments)
-5. [Hyperparameter Search Optimizations](https://docs.grid.ai/features/runs/sweep-syntax)
-6. [Run Experiments from a Local Directory](https://docs.grid.ai/features/runs/localdir)  
-7. [Run Experiments using Spot Instances](https://docs.grid.ai/features/runs/interruptible-machines)
+3. [Attach Datastores](https://docs.grid.ai/features/runs/Creating%20Runs/Basic%20Runs/basic-runs#attaching-datastores-to-runs)
+4. [Auto-resume Experiments](https://docs.grid.ai/features/runs/Creating%20Runs/Adv%20Runs/auto-resume-experiments)
+5. [Hyperparameter Search Optimizations](https://docs.grid.ai/features/runs/Creating%20Runs/Basic%20Runs/sweep-syntax)
+6. [Run Experiments from a Local Directory](https://docs.grid.ai/features/runs/private-repos#the---localdir-option)  
+7. [Run Experiments using Spot Instances](https://docs.grid.ai/features/runs/Creating%20Runs/Adv%20Runs/interruptible-machines)
 
 
 ### Local directory upload and .gridignore file

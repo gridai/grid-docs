@@ -24,7 +24,7 @@ grid run --config my_config.yml script.py
 The following YML file contains a commented version of every YML key. You need to provide these keys when writing a config file and change the properties to what you need.
 
 :::note
-Use either [cluster context](../../../platform/custom-cloud-credentials/grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
+Use either [cluster context](../../../../platform/2_Custom%20Cloud%20Credentials/5_grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
 :::
 
 ```text
@@ -127,7 +127,7 @@ compute:
 
 ## Configuring Actions
 
-You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](./17_yaml-configs/2_yaml-api.md).
+You can configure Grid Actions by using a Grid config file \(see details on [Grid YML\)](../../17_yaml-configs/2_yaml-api.md).
 
 Here's a full example of a Grid configuration using actions:
 
@@ -238,5 +238,5 @@ ${parameter:-default}
 ```
 
 :::note
-If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq.md). The section is periodically updated this with common questions from the Grid community.
+If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq). The section is periodically updated this with common questions from the Grid community.
 :::

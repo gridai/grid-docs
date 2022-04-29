@@ -33,7 +33,7 @@ const config = {
         },
         googleAnalytics: {
           anonymizeIP: true,
-          trackingID: "G-GW8EJHVZ6P",
+          trackingID: "UA-176087655-2",
         },
       }),
     ],
@@ -59,6 +59,10 @@ const config = {
           {
             to:"/features/sessions",
             from:"/products/sessions"
+          },
+          {
+            to:"/platform/billing/billing-rates",
+            from:"/platform/billing-rates"
           },
         ],
       }),

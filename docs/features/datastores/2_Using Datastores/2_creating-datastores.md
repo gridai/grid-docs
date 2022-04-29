@@ -107,29 +107,6 @@ grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightnin
 
 :::
 
-### Using the `--no-copy` option via the CLI
-
-Example: 
-`grid datastore create S3://ruff-public-sample-data/esRedditJson --no-copy`
-
-In certain cases, your S3 bucket may fit one (or both) of the following criteria:
-
-(1) the bucket is continually updating with new data which you want included in a Grid Datastore 
-(2) the bucket is particularly large (leading to long Datastore creation times)
-
-In these cases, you can pass the `--no-copy` flag to the `grid datastore create` command. This flag will
-prevent Grid from making a copy of the dataset, which significantly speeds up Datastore creation time.
-
-:::info 
-
-When using this flag, you cannot remove files from your bucket. If you'd like to add files, please create a new version of the Datastore after you've added files to your bucket. 
-
-Please note that Grid does not currently support private S3 buckets. 
-
-If you are using this flag via the Grid public cloud, then the source bucket should be in the  AWS `us-east-1` region or there will be significant latency when you attempt to access the Datastore files in a Run or Session.
-
-:::
-
 ## Create from an HTTP URL
 
 Datastores can be created from a `.zip` or `.tar.gz` file accessible at an unauthenticated
