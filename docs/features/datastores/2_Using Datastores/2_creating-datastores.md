@@ -31,7 +31,12 @@ For datasets larger than 1 GB, use the CLI.
 
 :::note 
 
-If you have a dataset that is 1Gb+ and poor-average internet connection, we suggest starting an Interactive Session and creating the Datastore from there. Internet speed is much faster in Interactive Sessions, so upload times will be shorter. 
+We suggest starting an Interactive Session and creating your Datastore from there in the following instances:
+
+- Your dataset is larger than 1GB
+- You do not have a strong internet connection
+
+Using an Interactive Session in this scenario will improve your upload speed.
 
 :::
 
