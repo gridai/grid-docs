@@ -237,7 +237,7 @@ nvidia-smi
 List the datastore
 
 ```yaml
-ls /datastore
+ls /datastores
 ```
 
 Now you can code away!
