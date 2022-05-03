@@ -12,6 +12,53 @@ Upgrade your CLI with `pip install lightning-grid --upgrade`
 :heart: Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
 
 ---
+## :wrench: April 29, 2022
+
+**CLI version: 0.8.35**
+
+### Datastore Enhancements
+
+#### :star: Faster S3 Datastores!
+
+We are happy to announce that, as of today, creating datastores from S3 buckets is almost instant!
+
+In most cases, your S3 bucket will fit one (or both) of the following criteria:
+1. the bucket is continually updating with new data which you want included in a Grid datastore 
+2. the bucket is particularly large (leading to long datastore creation times)
+
+In both of these cases, you can pass the `--no-copy` flag to the `grid datastore create` command. This flag will prevent Grid from making a copy of the dataset, which significantly speeds up datastore creation time when working with large buckets or when you intend to make incremental changes to your bucket and do not want to re-upload the entire dataset each time you add a new file.
+
+Here's an example:
+`grid datastore create S3://ruff-public-sample-data/esRedditJson --no-copy` 
+
+:::note
+Please note that direct access to private S3 buckets is not currently supported.
+:::
+
+### Fixes and Enhancements
+
+- **[Enhancement]** When specifying instance types with the `grid session change-instance-type` command, you can use either the instance name (ex: `grid session change-instance-type splendid-banzai-981 2_CPU_4GB ` ) or instance nickname (ex:`grid session change-instance-type splendid-banzai-981 t2.medium` ) interchangeably
+
+- **[Enhancement]** Grid's syntax for scheduling multiple experiments with combinations of arguments (ie. Grid Search or Random Search) sometimes might conflict with the expected script arguments. That's when you can use none strategy for parameter evaluation. More details can be found [here](../docs/features/runs/1_Creating%20Runs/1_Basic%20Runs/3_sweep-syntax.md#skipping-parameter-evaluation)
+
+- **[Fix]** Resolves an issue with creating Runs from the UI using the random search strategy when the nunmber of trials > experiments.
+
+- **[Deprecated]** Changing Session instance type from the UI is currently not supported. 
+
+
+---
+
+## :partying_face: April 13, 2022
+
+**CLI version: 0.8.26**
+
+### Notable Fixes and Enhancements
+
+- Adds a new option for skipping parameter evaluation when not using the grid search or random search HPO features. More details [here](../docs/features/runs/1_Creating%20Runs/1_Basic%20Runs/3_sweep-syntax.md)
+- Resolves issues with artifacts not saving correctly to experiment sub-directories 
+ 
+---
+
 
 ## :partying_face: March 30, 2022
 
@@ -26,17 +73,6 @@ We've deprecated the following CLI options:
 
 --
 
-
-## :partying_face: March 29, 2022
-
-**CLI version: 0.8.16 **
-
-We've deprecated the following CLI options:
-
-`grid run --description`
-`grid stop session`
-
----
 
 ## :partying_face: March 15, 2022
 
