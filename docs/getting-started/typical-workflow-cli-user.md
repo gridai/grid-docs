@@ -375,13 +375,13 @@ Now kick off the run with grid run
 ```bash
 grid run --dependency_file ./requirements.txt \
          --name cifar-tut-hpo \
-         --instance_type 2_m60_8gb \
+         --instance_type g4dn.12xlarge \
          --datastore_name cifar5 \
          --datastore_version 1 \
          -- \
          flash-image-classifier.py \
          --data_dir /datastores/cifar5 \
-         --gpus 2 \
+         --gpus 4 \
          --epochs 4 \
          --learning_rate "uniform(1e-5, 1e-1, 5)"
 ```
