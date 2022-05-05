@@ -3,6 +3,13 @@ sidebar_position: 1
 title: Getting Started with Grid
 ---
 
+:::tip
+For all code snippets you can modify the instance type yo suit your needs. Please see the
+[billings page](../platform/1_billing/billing-rates.md) for machine options and price and
+the [machines page](../platform/3_machines.md#recommended-instance-types) for recommended
+ machine types.
+:::
+
 # Grid Installation
 
 ## Prerequisites
