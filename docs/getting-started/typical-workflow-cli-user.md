@@ -387,9 +387,7 @@ grid run --dependency_file ./requirements.txt \
 ```
 
 :::note
-You can do this from the Session or your local machine \(but you'll need to clone the project locally\). In the above code you can
-also change the instance type to any one that suits your needs. Please see the [billings page](../platform/1_billing/billing-rates.md)
-for machine options and price. Additionally, ensure that the gpu field matches the number of GPU's available for the machine selected.
+You can do this from the Session or your local machine \(but you'll need to clone the project locally\). 
 :::
 
 ## **Bonus: Use a YAML for common runs**
