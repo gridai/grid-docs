@@ -61,7 +61,7 @@ const config = {
             from:"/products/sessions"
           },
           {
-            to:"/platform/billing/billing-rates",
+            to:"/platform/Billing/billing-rates",
             from:"/platform/billing-rates"
           },
         ],
