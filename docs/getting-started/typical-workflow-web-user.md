@@ -85,7 +85,7 @@ Now that we all have the same data, let's start the real tutorial!
 
 \(Time: **2 minutes**\)
 :::note
-Name the datastore cifar5 for it to work with the rest of the tutorial.
+Use the datastore name `cifar5` in order to complete the tutorial successfully.
 :::
 
 In a realistic workflow, we would start here. The first thing you want to do is to create a **DATASTORE** on Grid with your dataset. The datastore will optimize your data for low-latency, and high-availability to any machine you run on Grid.
