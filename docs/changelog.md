@@ -41,9 +41,9 @@ Please note that direct access to private S3 buckets is not currently supported.
 
 - **[Enhancement]** Grid's syntax for scheduling multiple experiments with combinations of arguments (ie. Grid Search or Random Search) sometimes might conflict with the expected script arguments. That's when you can use none strategy for parameter evaluation. More details can be found [here](../docs/features/runs/1_Creating%20Runs/1_Basic%20Runs/3_sweep-syntax.md#skipping-parameter-evaluation)
 
-- **[Fix]** Resolves an issue with creating Runs from the UI using the random search strategy when the nunmber of trials > experiments.
+- **[Fix]** Resolves an issue with creating Runs from the UI using the random search strategy when the number of trials > experiments.
 
-- **[Deprecated]** Changing Session instance type from the UI is currently not supported. 
+- **[Deprecated]** Changing Session instance type from the UI is currently not supported.
 
 
 ---
