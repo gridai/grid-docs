@@ -22,7 +22,7 @@ Processing times follow these general trends for each source type:
   the source bucket and the total size of the datastore. For small datastore sizes,
   (1-30GB), this process generally completes in less than 5 minutes. For larger, yet
   reasonably sized datasets (less than the [current maximum datastore
-  size](../faq.md#datastore-size-limit)), this process can take up to half an hour.
+  size](../3_faq.md#datastore-size-limit)), this process can take up to half an hour.
 
 
 ## Inspecting Datastore Status Using the CLI
