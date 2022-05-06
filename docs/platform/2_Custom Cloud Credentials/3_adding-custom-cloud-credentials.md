@@ -93,7 +93,7 @@ Make sure that your username has the right policies attached in order to user Gr
 The created user and fetched credentials for should have IAMFullAccess privileges.
 
 :::note
-Reach out to us via [Slack](http://gridai-community.slack.com) or [email](support@grid.ai) if you have any issues creating the following AWS roles and policies. We're happy to help!
+Reach out to us via [Slack](http://gridai-community.slack.com) or [email](mailto:support@grid.ai) if you have any issues creating the following AWS roles and policies. We're happy to help!
 :::
 
 #### A: Add Policies to Your Account
