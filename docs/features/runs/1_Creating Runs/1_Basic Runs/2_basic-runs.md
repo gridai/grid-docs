@@ -75,7 +75,7 @@ Explore the build logs to compare the logs of this Run to that of the vanilla Ru
 For instructions on how to view the logs check out [viewing logs produced by Runs](https://docs.grid.ai/features/runs/Analyzing%20Runs/viewing-logs).
 
 ## Attaching Datastores to Runs
-When working with large datasets, it may be faster and easier to store your data in a [Datastore](../../../datastores/1_README.md). Datastores are high-performance, low-latency, versioned, and scalable datasets which can be instantly mounted to any Session or Run.
+When working with large datasets, it may be faster and easier to store your data in a [Datastore](../../../datastores/README.md). Datastores are high-performance, low-latency, versioned, and scalable datasets which can be instantly mounted to any Session or Run.
 
 :::note
 By default, Datastores are mounted at /datastores on a Session or Run.

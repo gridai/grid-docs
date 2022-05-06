@@ -84,6 +84,9 @@ Now that we all have the same data, let's start the real tutorial!
 ![](/images/examples/web-create-datastore.png)
 
 \(Time: **2 minutes**\)
+:::note
+Use the datastore name `cifar5` in order to complete the tutorial successfully.
+:::
 
 In a realistic workflow, we would start here. The first thing you want to do is to create a **DATASTORE** on Grid with your dataset. The datastore will optimize your data for low-latency, and high-availability to any machine you run on Grid.
 
@@ -165,7 +168,7 @@ git clone https://github.com/PyTorchLightning/grid-tutorials.git
 Install requirements + project
 
 ```yaml
-cd getting-started
+cd grid-tutorials/getting-started
 
 pip install -r requirements.txt
 pip install -e .
@@ -175,7 +178,7 @@ now run the following command to train a resnet50 on 2 GPUs
 
 ```bash
 python flash-image-classifier.py \
-      --data_dir ../cifar5
+      --data_dir /datastores/cifar5
       --gpus 2 \
       --epochs 4
 ```
