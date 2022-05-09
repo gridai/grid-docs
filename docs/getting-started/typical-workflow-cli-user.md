@@ -205,7 +205,7 @@ Start a Session named _**resnet-debugging**_ **\*\*with 2 M60 GPUs on it and att
 
 ```yaml
 grid session create \
---instance_type g3.8xlarge \
+--instance_type g4dn.xlarge \
 --name resnet-debugging \
 --datastore_name cifar5 \
 --datastore_version 1
@@ -265,7 +265,7 @@ git push
 
 \(Time: **5 minutes**\)
 
-Now that you have your data, code, and 2 GPUs, we get to the fun part! Let's develop the model
+Now that you have your data, code, and 1 GPU, we get to the fun part! Let's develop the model
 
 At the end of the last section you used ssh to make model changes. However, I actually prefer to use VSCode for this. Let's set up VSCode to code directly on the remote machine.
 
@@ -323,7 +323,8 @@ now run the following command to train a resnet18 on 2 GPUs
 ```bash
 python flash-image-classifier.py \
       --data_dir /datastores/cifar5 \
-      --gpus 2 \
+      --instance_type g4dn.xlarge \
+      --gpus 1 \
       --epochs 4
 ```
 
@@ -382,13 +383,13 @@ Now kick off the run with grid run
 ```bash
 grid run --dependency_file ./requirements.txt \
          --name cifar-tut-hpo \
-         --instance_type g4dn.12xlarge \
+         --instance_type g4dn.xlarge \
          --datastore_name cifar5 \
          --datastore_version 1 \
          -- \
          flash-image-classifier.py \
          --data_dir /datastores/cifar5 \
-         --gpus 4 \
+         --gpus 1 \
          --epochs 4 \
          --learning_rate "uniform(1e-5, 1e-1, 5)"
 ```
