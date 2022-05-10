@@ -43,7 +43,7 @@ If prompted for a password while attempting to connect to a Session:
   ###grid.ai managed BEGIN do not edit manually### is at the top of the config file.
 :::
 
-## Why ssh to session fail with returned non-zero exit status 255
+## Why does ssh to a Session fail with returned non-zero exit status 255?
 - Make sure that the below line is at the top of the ~/.ssh/config file.
   
   ###grid.ai managed BEGIN do not edit manually### is at the top of the config file.
