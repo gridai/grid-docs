@@ -222,10 +222,10 @@ Once the session is ready, you have three options to interact with it:
 - ssh from your local
 - ssh + VSCode
 
-Let's login to the Session via SSH.
+Let's login to the Session via SSH using previously added key.
 
 ```yaml
-grid session ssh resnet-debugging
+grid session ssh resnet-debugging -- -i ~/.ssh/grid_ssh_creds
 ```
 
 Now you're on the cloud machine! See how many GPUs you have
