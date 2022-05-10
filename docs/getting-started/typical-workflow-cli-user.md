@@ -222,7 +222,7 @@ Once the session is ready, you have three options to interact with it:
 - ssh from your local
 - ssh + VSCode
 
-Let's login to the Session via SSH using previously added key.
+Let's login to the Session via SSH using the previously added key.
 
 ```yaml
 grid session ssh resnet-debugging -- -i ~/.ssh/grid_ssh_creds
