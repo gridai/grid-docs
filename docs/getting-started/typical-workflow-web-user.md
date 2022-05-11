@@ -4,6 +4,13 @@ description: "Using the web based application https://platform.grid.ai"
 ---
 import Video from "@site/src/components/Video";
 
+:::tip
+For all code snippets you can modify the instance type yo suit your needs. Please see the
+[billings page](../platform/1_billing/Billing-rates.md) for machine options and price and
+the [machines page](../platform/3_machines.md#recommended-instance-types) for recommended
+ machine types.
+:::
+
 # Typical workflow (Web user)
 
 ## Goal

@@ -3,6 +3,13 @@ sidebar_position: 11
 description: Using the command line interface
 ---
 
+:::tip
+For all code snippets you can modify the instance type to suit your needs. Please see the
+[billings page](../platform/1_Billing/billing-rates.md) for machine options and price and
+the [machines page](../platform/3_machines.md#recommended-instance-types) for recommended
+ machine types.
+:::
+
 # Typical workflow (CLI user)
 
 ## Goal
@@ -198,7 +205,7 @@ Start a Session named _**resnet-debugging**_ **\*\*with 2 M60 GPUs on it and att
 
 ```yaml
 grid session create \
---instance_type g3.8xlarge \
+--instance_type g4dn.xlarge \
 --name resnet-debugging \
 --datastore_name cifar5 \
 --datastore_version 1
@@ -258,7 +265,7 @@ git push
 
 \(Time: **5 minutes**\)
 
-Now that you have your data, code, and 2 GPUs, we get to the fun part! Let's develop the model
+Now that you have your data, code, and 1 GPU, we get to the fun part! Let's develop the model
 
 At the end of the last section you used ssh to make model changes. However, I actually prefer to use VSCode for this. Let's set up VSCode to code directly on the remote machine.
 
@@ -316,7 +323,8 @@ now run the following command to train a resnet18 on 2 GPUs
 ```bash
 python flash-image-classifier.py \
       --data_dir /datastores/cifar5 \
-      --gpus 2 \
+      --instance_type g4dn.xlarge \
+      --gpus 1 \
       --epochs 4
 ```
 
@@ -375,19 +383,19 @@ Now kick off the run with grid run
 ```bash
 grid run --dependency_file ./requirements.txt \
          --name cifar-tut-hpo \
-         --instance_type 2_m60_8gb \
+         --instance_type g4dn.xlarge \
          --datastore_name cifar5 \
          --datastore_version 1 \
          -- \
          flash-image-classifier.py \
          --data_dir /datastores/cifar5 \
-         --gpus 2 \
+         --gpus 1 \
          --epochs 4 \
          --learning_rate "uniform(1e-5, 1e-1, 5)"
 ```
 
 :::note
-You can do this from the Session or your local machine \(but you'll need to clone the project locally\)
+You can do this from the Session or your local machine \(but you'll need to clone the project locally\). 
 :::
 
 ## **Bonus: Use a YAML for common runs**
