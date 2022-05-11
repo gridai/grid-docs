@@ -10,7 +10,19 @@ Artifacts are the output produced by the training process.
 
 Anytime your script saves artifacts, Grid captures those for you. It does not matter which folder you save artifacts to... Grid will automatically detect them.
 
-Grid uploads your artifacts to long-term storage at the end of your experiment. Once your experiment has the status `done`, Grid has finished saving your artifacts.
+Grid uploads your artifacts to long-term storage while your experiment is running *and* at the end of your experiment. This is to ensure that even if your experiment crashes, your artifacts will be saved.
+
+:::note
+This may have two side effects, depending on how large and how many artifacts your code generates:
+
+- Grid may need to use extra memory while your experiment is running to sync your artifacts to long term storage
+  - Grid will only use extra memory to sync artifacts larger than 1 Gib
+  - Grid will use 50 Mi of extra memory to sync artifacts larger than 1 Gib
+  - Grid will not use more than 200 Mi of extra memory
+  - If you are running memory intensive experiments *and* are generating artifacts over 1 Gib, it is recommended to use a larger instance type
+- Your experiment will not be marked `done` until Grid has finished syncing your artifacts to long-term storage
+  - If you are generating lots of artifacts per experiment, this may increase your experiment run times
+:::
 
 Try [hello.py](https://github.com/williamFalcon/hello/blob/main/hello.py) as an example, to see how artifacts are generated and saved. 
 
