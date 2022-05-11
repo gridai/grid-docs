@@ -10,6 +10,8 @@ Artifacts are the output produced by the training process.
 
 Anytime your script saves artifacts, Grid captures those for you. It does not matter which folder you save artifacts to... Grid will automatically detect them.
 
+Grid uploads your artifacts to long-term storage at the end of your experiment. Once your experiment has the status `done`, Grid has finished saving your artifacts.
+
 Try [hello.py](https://github.com/williamFalcon/hello/blob/main/hello.py) as an example, to see how artifacts are generated and saved. 
 
 ![](/images/runs/runs-artifacts.png)
