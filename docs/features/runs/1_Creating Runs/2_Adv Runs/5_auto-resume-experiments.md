@@ -44,7 +44,7 @@ In order for experiments to resume from last checkpoint, the following prerequis
 Use `--auto_resume` flag to indicate this experiment is safe to resume.
 
 ```bash
-grid run --use_spot --auto_resume --instance_type p3.2xlarge mnist.py
+grid run --name [run-to-resume] --use_spot --auto_resume --instance_type p3.2xlarge mnist.py
 ```
 
 
