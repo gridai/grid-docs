@@ -1,6 +1,7 @@
 ---
 sidebar_position: 12
 description: "Using the web based application https://platform.grid.ai"
+title: Typical Workflow (Web User)
 ---
 import Video from "@site/src/components/Video";
 
