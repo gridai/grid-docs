@@ -29,6 +29,10 @@ For more information check out
 * [Grid Artifacts](https://docs.grid.ai/features/runs/artifacts)
 * [Lightning Loading Checkpoints](https://pytorch-lightning.readthedocs.io/en/latest/common/weights_loading.html)
 
+### Stop a Run after X hours
+As a convenience, we provide a [GitHub Action](https://github.com/sunitaprakash/gridai-stop-run) for stopping a Run that has been running for X no of hours.
+
+
 ### AutoStructuring Deep Learning Training
 
 The recent 1.3 Release of PyTorch Lightning provides a new Lightning CLI \[beta\] for [Auto Structuring Deep Learning Training](https://devblog.pytorchlightning.ai/auto-structuring-deep-learning-projects-with-the-lightning-cli-9f40f1ef8b36).
