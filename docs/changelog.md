@@ -12,9 +12,35 @@ Upgrade your CLI with `pip install lightning-grid --upgrade`
 :heart: Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
 
 ---
-## :wrench: April 29, 2022
+## :partying_face: May 11, 2022
 
-**CLI version: 0.8.35**
+**CLI version: 0.8.43**
+
+### New and Improved Artifacts!
+
+Today, we release an update to Artifacts which greatly improves stability and UX in the following ways:
+
+- Ensures syncing of artifacts for fast-running experiments
+- Ensures all artifacts that are produced by experiments are copied by Grid
+- When the experiment stops running, the instance will not shut down until all artifacts have been copied
+
+:::note
+Note: With this change, a portion of instance CPU and RAM will be dedicated to artifact syncing processes. For users with memory-intensive code, if your code generates artifacts of size >= 1GB, you may experience a decrease in performance. In these scenarios, we recommend using an instance with more CPU/RAM.
+:::
+
+Learn more about Artifacts and these new improvments [here](../docs/features/runs/2_Analyzing%20Runs/3_artifacts.md).  
+
+
+
+### Additional Fixes and Enhancements
+
+- Fixes issue with calculating pricing estimate during new run creation
+- Improves handling of Session in the event that a process goes out of memory
+
+---
+## :wrench: May 3, 2022
+
+**CLI version: 0.8.37**
 
 ### Datastore Enhancements
 
@@ -41,9 +67,9 @@ Please note that direct access to private S3 buckets is not currently supported.
 
 - **[Enhancement]** Grid's syntax for scheduling multiple experiments with combinations of arguments (ie. Grid Search or Random Search) sometimes might conflict with the expected script arguments. That's when you can use none strategy for parameter evaluation. More details can be found [here](../docs/features/runs/1_Creating%20Runs/1_Basic%20Runs/3_sweep-syntax.md#skipping-parameter-evaluation)
 
-- **[Fix]** Resolves an issue with creating Runs from the UI using the random search strategy when the number of trials > experiments.
+- **[Fix]** Resolves an issue with creating Runs from the UI using the random search strategy when the nunmber of trials > experiments.
 
-- **[Deprecated]** Changing Session instance type from the UI is currently not supported.
+- **[Deprecated]** Changing Session instance type from the UI is currently not supported. 
 
 
 ---
@@ -71,7 +97,7 @@ We've deprecated the following CLI options:
 `grid run --description`
 `grid stop session`
 
---
+---
 
 
 ## :partying_face: March 15, 2022
