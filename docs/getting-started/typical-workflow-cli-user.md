@@ -1,6 +1,7 @@
 ---
 sidebar_position: 11
 description: Using the command line interface
+title: Typical Workflow (CLI User)
 ---
 
 :::tip
