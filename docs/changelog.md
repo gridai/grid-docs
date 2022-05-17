@@ -12,9 +12,46 @@ Upgrade your CLI with `pip install lightning-grid --upgrade`
 :heart: Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
 
 ---
-## :partying_face: May 11, 2022
+## :partying_face: May 17, 2022
 
-**CLI version: 0.8.43**
+**CLI version: 0.8.47** 
+
+Today's release includes several bug fixes to improve the overall experience with Grid. 
+
+### Fixes and Enhancements: 
+
+- Faster experiment failing when errors are encountered during build or code execution
+
+- Improves the Run-creation flow in the Web UI by fixing error messages reported due to insufficient repo acess or invalid repos
+
+- Stability improvements to the UI and event reloading
+
+- Fixes experience with the drop-down in the experiments table which allows you to add hyperparameter columns
+
+- Allows support for nested requirements.txt files:
+Ex: 
+```# install all mandatory dependencies
+-r ./base.txt
+
+# install all extra dependencies for full package testing
+-r ./extra.txt
+
+# install all loggers for full package testing
+-r ./loggers.txt
+
+# extended list of dependencies for development and run lint and tests
+-r ./test.txt
+
+# install all extra dependencies for running examples
+-r ./examples.txt
+``` 
+
+---
+
+
+## :partying_face: May 12, 2022
+
+**CLI version: 0.8.45**
 
 ### New and Improved Artifacts!
 
@@ -34,8 +71,8 @@ Learn more about Artifacts and these new improvments [here](../docs/features/run
 
 ### Additional Fixes and Enhancements
 
-- Fixes issue with calculating pricing estimate during new run creation
-- Improves handling of Session in the event that a process goes out of memory
+- Fixes issue with calculating pricing estimate during new run creation.
+- Improves handling of Session in the event that a process goes out of memory. In these events, the process will be terminated but the Session will remain running. 
 
 ---
 ## :wrench: May 3, 2022
