@@ -8,7 +8,8 @@ sidebar_label: FAQ
 ## How to Improve Datastore Upload Times
 In some circumstances Datastore uploads will be slower than network bandwidth allows. The known instance
 of this occuring is when you have files < .5MB in size. One way to get around this is to upload your 
-Datastore as a compressed file and use a Grid Action to decompress it. One such example with Runs is below:
+Datastore as a compressed file and use a [Grid on_experiment_start Action](https://docs.grid.ai/features/runs/Creating%20Runs/Adv%20Runs/creating-runs-from-config#on_exeperiment_start).
+to decompress it. One such example with Runs is below:
 
 ```
 # Get Data
