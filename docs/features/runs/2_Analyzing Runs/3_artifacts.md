@@ -3,7 +3,9 @@ title: Accessing Artifacts
 sidebar_label: Accessing Artifacts
 ---
 
-:::note Artifacts name should be ascii code characters (special characters are not supported at this time).
+:::note
+Please avoid using special characters in your artifact names. Grid may not be able to sync artifacts to long-term storage if the name contains percent signs, ampersands, or other special characters. The safest characters to use in your artifact names are alphanumerics, the hyphen, the underscore, and the period.
+:::
 
 # Artifacts
 Artifacts are the output produced by the training process.
