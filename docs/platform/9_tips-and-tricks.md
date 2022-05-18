@@ -30,7 +30,7 @@ For more information check out
 * [Lightning Loading Checkpoints](https://pytorch-lightning.readthedocs.io/en/latest/common/weights_loading.html)
 
 ### Stop a Run after X hours
-As a convenience, we provide a [GitHub Action](https://github.com/sunitaprakash/gridai-stop-run) for stopping a Run that has been running for X no of hours.
+As a convenience, we provide a [GitHub Action](https://github.com/PyTorchLightning/gridai-stop-run) for stopping a Run that has been running for X no of hours.
 
 
 ### AutoStructuring Deep Learning Training
