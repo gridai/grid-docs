@@ -182,6 +182,12 @@ You need to do this step **only once**
 # make the ssh key (if you don't have one)
 ssh-keygen -b 2048 -t rsa -f ~/.ssh/grid_ssh_creds -q -N ""
 
+# add the key to the ssh-agent (to avoid having to explicitly state key on each connection)
+# to start the agent, run the following
+eval $(ssh-agent)
+# then add the key
+ssh-add  ~/.ssh/grid_ssh_creds
+
 # add the keys to grid
 grid ssh-keys add key_1 ~/.ssh/grid_ssh_creds.pub
 ```
@@ -230,7 +236,7 @@ Once the session is ready, you have three options to interact with it:
 - ssh from your local
 - ssh + VSCode
 
-Let's login to the Session via SSH.
+Let's login to the Session via SSH. 
 
 ```yaml
 grid session ssh resnet-debugging
