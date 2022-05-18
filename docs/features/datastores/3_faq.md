@@ -20,7 +20,7 @@ grid datastore create /cifar5.zip --name cifar5
 
 # Create Run and unzip that Datastore
 git clone git@github.com:PyTorchLightning/grid-tutorials.git
-cd grid-tutorials\\getting-started
+cd grid-tutorials//getting-started
 grid run --config config.yml --dependency_file requirements.txt -- flash-image-classifier.py --data_dir /tmp/scratch/cifar5
 ```
 
