@@ -3,6 +3,8 @@ title: Accessing Artifacts
 sidebar_label: Accessing Artifacts
 ---
 
+:::note Artifacts name should be ascii code characters (special characters are not supported at this time).
+
 # Artifacts
 Artifacts are the output produced by the training process.
 
