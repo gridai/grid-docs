@@ -45,7 +45,7 @@ In sections below, you'll see why these three points are important, but first le
 Anytime you submit a Grid run, we attempt to resolve as many dependencies as we can automatically for you. However, we recommend that your projects have a `requirements.txt` file in the root.
 
 :::note
-At this time, nested requirements are not supported.
+Grid also allows the pip installation of private packages. Many acceptable ways for accomplishing this are detailed [here](https://docs.readthedocs.io/en/stable/guides/private-python-packages.html). You also have the ability to customize this behavior a bit by combining either the advanced Dockerfile or config.yaml + Actions features. These will allow you to use a setup.py for installation or keep the regular pip installation.
 :::
 
 ![](/images/runs/requirements.png)
