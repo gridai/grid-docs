@@ -9,6 +9,7 @@ sidebar_label: Known Issues
 
 ### [BYOC](https://docs.grid.ai/platform/custom-cloud-credentials/byoc)
 * Creating runs with the same name across two cluster is currenly supported, but prohibits certain operations against runs/experiments.
+* BYOC can only support instance types with the x86_64 architecture.
 
 ### [Artifacts](https://docs.grid.ai/features/runs/artifacts)
 * Artifacts don't sync for fast experiments: We have detected a race condition with short-running experiments, which may cause artifacts not to be properly synced. We recommend ensuring your experiments last at least a minute (to be safe). You can add sleep if needed as a workaround.
