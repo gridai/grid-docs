@@ -92,7 +92,7 @@ get the artifacts
 grid artifacts runname-expN
 ```
 :::note
-If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq). The section is periodically updated this with common questions from the Grid community.
+If you have additional questions about Runs, please visit the [FAQ](https://docs.grid.ai/features/runs/faq). This section is periodically updated with common questions from the Grid community.
 :::
 
 
