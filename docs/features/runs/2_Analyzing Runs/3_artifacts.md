@@ -102,7 +102,7 @@ If you launched a run on a [BYOC cluster](../../../platform/2_Custom%20Cloud%20C
 and would like to retrieve the cloud storage location for the artifacts rather than download them,
 use the `grid artifacts --bucket_path <run or experiment>` command.
 
-It will display a table showing where each experiment stored its artifacts:
+That command will display a table showing where each experiment stored its artifacts:
 ```bash
 ➜ grid artifacts --bucket_path my-run-000
 ┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
