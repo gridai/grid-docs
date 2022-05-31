@@ -99,7 +99,7 @@ If you have additional questions about Runs, please visit the [FAQ](https://docs
 ### See where your artifacts are stored in the cloud (BYOC clusters only)
 
 If you launched a run on a [BYOC cluster](../../../platform/2_Custom%20Cloud%20Credentials/1_byoc.md)
-and would like to get the cloud storage location for the artifacts instead of downloading them,
+and would like to retrieve the cloud storage location for the artifacts rather than download them,
 use the `grid artifacts --bucket_path <run or experiment>`.
 
 It will display a table showing where each experiment stored its artifacts:
