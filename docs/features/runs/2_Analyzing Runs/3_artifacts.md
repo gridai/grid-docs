@@ -92,5 +92,29 @@ get the artifacts
 grid artifacts runname-expN
 ```
 :::note
-If you have additional questions about Runs, visit the [FAQ](https://docs.grid.ai/features/runs/faq). The section is periodically updated this with common questions from the Grid community.
+If you have additional questions about Runs, please visit the [FAQ](https://docs.grid.ai/features/runs/faq). This section is periodically updated with common questions from the Grid community.
 :::
+
+
+### See where your artifacts are stored in the cloud (BYOC clusters only)
+
+If you launched a run on a [BYOC cluster](../../../platform/2_Custom%20Cloud%20Credentials/1_byoc.md)
+and would like to retrieve the cloud storage location for the artifacts rather than download them,
+use the `grid artifacts --bucket_path <run or experiment>` command.
+
+That command will display a table showing where each experiment stored its artifacts:
+```bash
+➜ grid artifacts --bucket_path my-run-000
+┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ experiment name ┃                                                         bucket path to artifacts ┃
+┡━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ my-run-000-exp0 │ s3://my-cluster-storage-bucket/experiments/01g40mbzw89j19p20000000000/artifacts/ │
+│ my-run-000-exp1 │ s3://my-cluster-storage-bucket/experiments/01g40mbzw8arz3ds0000000001/artifacts/ │
+│ my-run-000-exp2 │ s3://my-cluster-storage-bucket/experiments/01g40mbzw8g8xdtz0000000002/artifacts/ │
+└─────────────────┴──────────────────────────────────────────────────────────────────────────────────┘
+```
+
+Then, to list the artifacts for an experiment (`my-run-000-exp0` as an example):
+```bash
+aws s3 ls s3://my-cluster-storage-bucket/experiments/01g40mbzw89j19p20000000000/artifacts/
+```
