@@ -6,9 +6,7 @@ Grid charges based on consumption of compute.
 Costs are **estimates** until Runs have completed or Sessions are paused, then Grid reports the final costs.
 :::
 
-A temporary hold of $1 will be placed on your credit card for 5-7 business days when using GPU machines.
-
-This page describes community edition pricing; refer to plans [here](https://www.grid.ai/pricing/).
+This page describes community tier pricing; refer to plans [here](https://www.grid.ai/pricing/).
 
 ## List pricing
 
@@ -90,9 +88,3 @@ If you're curious about the machine specs, see below.
 ![](/images/platform/t2-instance-types.png)
 
 Please note: Costs seen in the various screens in product are an estimation
-
-## **Credit card authorization**
-
-To use GPU machines you must authenticate your account with a credit card. A temporary $1 hold on the card will be placed. The hold expires after 7 days.
-Credit card information and processing is handled by [Stripe](https://stripe.com/).
-
