@@ -90,9 +90,3 @@ If you're curious about the machine specs, see below.
 ![](/images/platform/t2-instance-types.png)
 
 Please note: Costs seen in the various screens in product are an estimation
-
-## **Credit card authorization**
-
-To use GPU machines you must authenticate your account with a credit card. A temporary $1 hold on the card will be placed. The hold expires after 7 days.
-Credit card information and processing is handled by [Stripe](https://stripe.com/).
-
