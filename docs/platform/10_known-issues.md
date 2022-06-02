@@ -20,8 +20,7 @@ sidebar_label: Known Issues
 * Downloading artifacts and/or viewing logs from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.
 
 ### [Datastore](https://docs.grid.ai/features/datastores)
-* grid datastore [create](https://docs.grid.ai/features/datastores/create) ./cifar10
-When you are creating the Gridai datastore. The data directory has some files that are symlinks, if symlinks are softlinks the datastore upload will fail. You need to create a hardlink to those files to upload the datastore.
+* When you are creating the Gridai datastore if the data directory has files that are symlinks, the symlinks that are softlinks will cause the datastore upload to fail. You will need to update to hardlinks to upload to the datastore.
 
 
 ### [Runs](https://docs.grid.ai/features/runs)
