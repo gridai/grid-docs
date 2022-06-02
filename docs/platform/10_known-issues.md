@@ -13,8 +13,9 @@ sidebar_label: Known Issues
 ### [Artifacts](https://docs.grid.ai/features/runs/artifacts)
 * Artifacts don't sync for fast experiments: We have detected a race condition with short-running experiments, which may cause artifacts not to be properly synced. We recommend ensuring your experiments last at least a minute (to be safe). You can add sleep if needed as a workaround.
 
+
 ### [Collaboration](https://docs.grid.ai/platform/collaboration)
-* Downloading artifacts and/or viewing logs from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.
+* Downloading artifacts from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.
 
 ### [Datastore](https://docs.grid.ai/features/datastores)
 * grid datastore [create](https://docs.grid.ai/features/datastores/create) ./cifar10
