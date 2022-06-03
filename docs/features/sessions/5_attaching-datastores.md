@@ -44,6 +44,6 @@ grid datastore --global
 
 # Mount Data Without Using a Datastore
 
-If you'd like to mount data to a Session without using a datastore, you can use the the `grid session mount [session name]` command. As a prerequisite you will need to have set up SSH keys for your session,
+If you'd like to mount data to a Session without using a datastore, you can use the the `grid session mount [session_name] [mount_dir]` command. As a prerequisite you will need to have set up SSH keys for your session,
 ssh'd into the session, and don't forget to exit the session. SSH'ing into and exiting the session is a one time operation. Please see this documentation 
 [SSH into Session](./8_how-to-ssh-into-a-session.md) for help creating your SSH keys.
