@@ -5,6 +5,25 @@ sidebar_label: FAQ
 
 # Datastore FAQ
 
+## How to Improve Datastore Upload Times
+In some circumstances Datastore uploads will be slower than network bandwidth allows. The known instance
+of this occuring is when you have files < .5MB in size. One way to get around this is to upload your 
+Datastore as a compressed file and use a [Grid on_experiment_start Action](https://docs.grid.ai/features/runs/Creating%20Runs/Adv%20Runs/creating-runs-from-config#on_exeperiment_start).
+to decompress it. One such example with Runs is below:
+
+```
+# Get Data
+curl https://pl-flash-data.s3.amazonaws.com/cifar5.zip -o cifar5.zip
+
+# Create Datastore
+grid datastore create /cifar5.zip --name cifar5
+
+# Create Run and unzip that Datastore
+git clone git@github.com:PyTorchLightning/grid-tutorials.git
+cd grid-tutorials//getting-started
+grid run --config config.yml --dependency_file requirements.txt -- flash-image-classifier.py --data_dir /tmp/scratch/cifar5
+```
+
 ## Data is private
 
 Any datastore you upload to Grid can only be accessed **by you**. Grid does not look at or

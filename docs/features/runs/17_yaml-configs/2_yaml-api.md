@@ -30,10 +30,20 @@ compute:
     datastore_mount_dir: null     # Where to mount the datastore
     use_spot: false               # If we should use spot instances
     framework: "lightning"        # Which framework to use
+    dependency_file_info:         
+      package_manager: pip        # Either conda or pip
+      path: null                  # Path to the reqs or conda env
 
     # Pass in environment variables
     environment:
       MY_ENVIRONMENT_VARIABLE: "example"
+  
+hyper_params:
+  # your hyper params here
+  params:
+    # your params here
+    --foo: 1
+    -bar: 2
 ```
 
 :::note

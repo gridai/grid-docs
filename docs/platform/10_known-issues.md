@@ -9,19 +9,13 @@ sidebar_label: Known Issues
 
 ### [BYOC](https://docs.grid.ai/platform/custom-cloud-credentials/byoc)
 * Creating runs with the same name across two cluster is currenly supported, but prohibits certain operations against runs/experiments.
-
-### [Artifacts](https://docs.grid.ai/features/runs/artifacts)
-* Artifacts don't sync for fast experiments: We have detected a race condition with short-running experiments, which may cause artifacts not to be properly synced. We recommend ensuring your experiments last at least a minute (to be safe). You can add sleep if needed as a workaround.
-
-* Canceling download of Artifacts: When downloading the artifacts, Ctrl-C does not cancel the download. As a workaround, use Ctrl-Z followed by `kill -9 $(jobs -p)`.
-
+* BYOC can only support instance types with the x86_64 architecture. The instance families of the following instance types are known to not be supported due to their architecture: A1, T4g, M6g, C6g, and R6g.
 
 ### [Collaboration](https://docs.grid.ai/platform/collaboration)
-* Downloading artifacts and/or viewing logs from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.
+* Downloading artifacts from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.
 
 ### [Datastore](https://docs.grid.ai/features/datastores)
-* grid datastore [create](https://docs.grid.ai/features/datastores/create) ./cifar10
-When you are creating the Gridai datastore. The data directory has some files that are symlinks, if symlinks are softlinks the datastore upload will fail. You need to create a hardlink to those files to upload the datastore.
+* When creating a Datastore, data directories that contain soft symlinks files will cause the Datastore upload to fail. To prevent this failure, update soft symlinks to hard links.
 
 
 ### [Runs](https://docs.grid.ai/features/runs)
