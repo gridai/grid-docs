@@ -5,6 +5,11 @@ sidebar_label: FAQ
 ---
 
 # FAQ
+## How can I mount data to my session without using a datastore
+You can accomplish this by using the `grid session mount [session name]` command. As a prerequisite you will need to have set up SSH keys for your session,
+ssh'd into the session, and don't forget to exit the session. SSH'ing into and exiting the session is a one time operation. Please see this documentation 
+[SSH into Session](./8_how-to-ssh-into-a-session.md) for help creating your SSH keys.
+
 ## Why can't I push to my remote repository?
 If you're having trouble pushing to the repo the recommended solution is to clone the repo via https and try pushing again.
 
