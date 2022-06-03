@@ -10,10 +10,6 @@ sidebar_label: Known Issues
 ### [BYOC](https://docs.grid.ai/platform/custom-cloud-credentials/byoc)
 * Creating runs with the same name across two cluster is currenly supported, but prohibits certain operations against runs/experiments.
 
-### [Artifacts](https://docs.grid.ai/features/runs/artifacts)
-* Canceling download of Artifacts: When downloading the artifacts, Ctrl-C does not cancel the download. As a workaround, use Ctrl-Z followed by `kill -9 $(jobs -p)`.
-
-
 ### [Collaboration](https://docs.grid.ai/platform/collaboration)
 * Downloading artifacts from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.
 
