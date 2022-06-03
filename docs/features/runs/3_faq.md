@@ -26,7 +26,7 @@ It's as easy as running `grid artifacts my-run-name`! This will download all art
 https://user-images.githubusercontent.com/47154698/146597173-30a6f5af-4ecc-4958-866a-95ddb1ba70e0.mp4
 
 ## How long are artifacts stored?
-Artifacts are downloadable for 24 hours after creation.
+Artifacts are stored until the run or experiment that generated the artifacts is deleted. 
 
 ## Why isn't Grid locating my requirements.txt file?
 Grid by default will look for a requirements.txt file in the root directory of your project. To customize this behavior try using the `--dependency_file` flag. An example is below:
