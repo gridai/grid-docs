@@ -481,8 +481,8 @@ grid run [OPTIONS] [RUN_COMMAND]...
 | `--seed` | text | Seed value for the `random_search` strategy | None |
 | `--instance_type` | text | Instance type to start training session in | `t2.medium` |
 | `--gpus` | integer | Number of GPUs to allocate per experiment | `0` |
-| `--cpus` | integer | Number of CPUs to allocate per experiment | `1` |
-| `--memory` | text | How much memory an experiment needs | `100` |
+| `--cpus` | integer | Number of CPUs to allocate per experiment. This parameter also affects memory (RAM) allocating for your experiment using the following rule: the amount of memory for the experiments will be allocated in the same proportion as the CPU allocated for the instance type chosen for the experiments. For example, if you plan to choose a machine with 16 CPUs and 64 Gb RAM and use a default value of CPUs (1 CPU) for your experiments, 1/16 * 64 Gb = 4 Gb of RAM will be allocated per each experiment. | `1` |
+| `--memory` | text | How much disk memory (storage) an experiment needs, Gb | `100` |
 | `--datastore_name` | text | Datastore name to be mounted in training | None |
 | `--datastore_version` | integer | Datastore version to be mounted in training | None |
 | `--datastore_mount_dir` | text | Directory to mount Datastore in training job. The default datastore mount location is /datastores | None |
