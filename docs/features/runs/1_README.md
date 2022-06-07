@@ -107,4 +107,4 @@ Grid Run respects the use of .ignore files; these files are used to tell a progr
 ![](/images/runs/run_start.gif)
 
 # Next Steps
-Check out our documentation on [using runs](https://docs.grid.ai/features/runs/creating-basic-runs)
+Check out our documentation on [using runs](https://docs.grid.ai/features/runs/Creating%20Runs/Basic%20Runs/basic-runs)
