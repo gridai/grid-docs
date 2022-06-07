@@ -23,7 +23,7 @@ sidebar_label: Known Issues
 
 * Folder size for [--localdir](https://docs.grid.ai/features/runs/localdir): When using the `--localdir` option the folder sizes are recommended to stay under 50MB
 
-* Running a script from the UI is not working currently, the workaround is to use the base of the github repo and then navigate to the script.
+* When creating a run in the UI, specify the github repo where the script is located. Providing the URL to the specific script in Github is not currently supported. 
 
 ### [Session](https://docs.grid.ai/features/sessions)
 * Cloning a Github repo with SSH is currenlty not supported. Insead, use Github's HTTPS clone method.
