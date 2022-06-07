@@ -13,7 +13,7 @@ Grid.ai is committed to continually minimizing the customer impact during the ma
 
 The current maintenance window is:
 
-- 9 AM - 10 AM Eastern Mon - Fri
+- 10 AM - 11 AM Eastern Mon - Fri
 
 :::note
 The maintenance window can be shorter than the published maintenance window without notice.
