@@ -16,15 +16,15 @@ Upgrade your CLI with `pip install lightning-grid --upgrade`
 
 **CLI version: 0.8.58** 
 
-Today's release includes several bug fixes to improve the overall experience with Grid. 
+Today's release includes several bug fixes that improve the Grid experience.
 
 ## Grid Cloud Instance Types
 
 We've made some changes to the platform that will impact start times for Sessions and Runs.
 
-As a result of these changes, you'll experience longer start times for Sessions and Runs that use the p3.2xlarge instance type. If you're looking for a faster start time, we suggest using the g4dn.xlarge instance type instead.
+As a result of these changes, you'll experience longer start times for Sessions and Runs that use the `p3.2xlarge` instance type. If you're looking for a faster start time, we suggest using the `g4dn.xlarge instance type instead`.
 
-In future Grid releases, the following instance types will be supported:
+**In future Grid releases, the following instance types will be supported:**
 
 |	Name	|	CPU	|	GPU	|	Memory	|	Accelerator	|	numberOfAccelerators acceleratorType availableMemory 	|
 |	:---	|	:---	|	:---	|	:---	|	:---	|	:---	|
@@ -36,14 +36,33 @@ In future Grid releases, the following instance types will be supported:
 
 
 
-## Why have we made these changes?
+### Why have we made these changes?
 
 We closely monitor usage of Grid and are always looking for improvements that will make the platform more straightforward, easier to use, and cost-effective.
 In changing how we manage certain instance types, we're able to offer faster start times on cheaper instances. Managing these instance types is a key area that will make Grid more sustainable and less expensive to use in the long term. We always want to ensure that Grid users are getting the compute resources they need at a price that is fair and transparent.
 
+### BYOC Instance Types
+
+If you are currently using the BYOC feature, you will continue to have access to the full list of [supported AWS instance types](../docs/platform/3_machines.md#machines). If you are not currently using BYOC and want access to or information about additional instance types, reach out to us at support@grid.ai. 
+
+
 If you've got questions about these changes, reach out to us at support@grid.ai.
 
 ## Fixes and Enhancements
+
+- Improvements to the process of integrating Grid with public and private Github organizations
+
+- BYOC users: Fixes issue with starting runs with unavailable instance types. If the default instance type is not available, the first instance in the specified list of instances will be used instead. 
+
+- Better error messaging in the CLI!
+
+- Fixes CLI issue where users could only retrieve the 50 most recent runs. To request details for a specific run in your run history, use `grid status RUN_NAME`.
+
+## :warning: Known Issues
+
+- When creating a run in the UI, specify the path to the Github repo where the script is located. Providing the URL to the specific script is not currently supported.
+
+- When creating a Datastore, data directories that contain soft symlinks files will cause the Datastore upload to fail. To prevent this failure, update soft symlinks to hard links.
 
 
 ---
