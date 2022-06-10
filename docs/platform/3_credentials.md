@@ -24,7 +24,7 @@ who created the credential and any member of the User's team (for our `teams` ti
 
 At the moment, the following credential types are supported:
 
-- `s3` (access for datastore creation from a private bucket)
+- `s3` (access for datastore creation from a private s3 bucket)
 
 ## Creating an `s3` Credential to Create Datastores from private AWS S3 Buckets 
 
