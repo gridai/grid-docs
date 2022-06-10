@@ -134,14 +134,14 @@ If you are using this flag via the Grid public cloud, then the source bucket sho
 
 ### Creating Datastore From Private AWS S3 Buckets
 
-Grid now supports the ability to create datastores from private AWS s3 buckets when using
-the `--no-copy` mode via the CLI. In order to allow Grid to access your private buckets
-you should create an authorized AWS Role using the `grid credential create --type s3`
-command (explained in detail below), after which you can run the
-`grid datastore create S3://<private-bucket-name-here> --no-copy` command as usual (no
-modifications needed). If any of your registered `s3` credentials can access the s3 bucket
-path specified, then Grid will automatically use them when creating the datastore (and
-when using that datastore in a `run` or `session`)
+Grid now supports the ability to create Datastores from private AWS s3 buckets by using
+the `--no-copy` mode via the CLI. In order to allow Grid to access your private buckets,
+you'll need to create an authorized AWS Role using the `grid credential create --type s3`
+command (explained in detail below). After, you can run the
+`grid datastore create S3://<private-bucket-name-here> --no-copy` command as usual - no
+modifications needed. If any of your registered `s3` credentials can access the s3 bucket
+path specified, then Grid will automatically use them when creating the Datastore (and
+when using that Datastore in a `run` or `session`)
 
 **[Refer To Page: Credentials](../../../platform/3_credentials.md) for more information.**
 
