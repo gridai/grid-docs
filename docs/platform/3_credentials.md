@@ -18,7 +18,7 @@ their own workflow (for example, while creating a Datastore from a private s3 bu
 
 Sensitive credential type values can never be retrieved from Grid via the CLI. However,
 the values of non-private credential types (such as `--type s3`) can be viewed by the user
-who created the credential and any member of the User's team (for our `teams` tier users.)
+who created the credential and any member of the user's team (for our `teams` tier users.)
 
 # Credential Types
 
