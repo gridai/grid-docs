@@ -35,7 +35,7 @@ command (explained in detail below). After, you can run the
 `grid datastore create S3://<private-bucket-name-here> --no-copy` command as usual - no
 modifications needed. If any of your registered `s3` credentials can access the s3 bucket
 path specified, then Grid will automatically use them when creating the Datastore (and
-when using that Datastore in a `run` or `session`)
+when using that Datastore in a `run` or `session`).
 
 In order to provide Grid access to a private S3 bucket, you must first set up an AWS IAM Role configured with the appropriate permission policy. This is the absolute minimum permission Grid requires in order to list and retrieve files from an s3 bucket of your choice. The `grid credential create` command will dynamically generate the IAM Role Trust Policy based on the cluster on which you are creating the Datastore. While all users will need to authorize the AWS account ID on which the Grid Platform controlplane runs, [bring-your-own-cloud (`BYOC`) users](./2_Custom%20Cloud%20Credentials/1_byoc.md) will also need to include the AWS account ID on which the `BYOC` cluster runs. 
 
