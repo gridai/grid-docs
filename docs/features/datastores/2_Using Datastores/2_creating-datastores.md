@@ -141,7 +141,7 @@ command (explained in detail below). After, you can run the
 `grid datastore create S3://<private-bucket-name-here> --no-copy` command as usual - no
 modifications needed. If any of your registered `s3` credentials can access the s3 bucket
 path specified, then Grid will automatically use them when creating the Datastore (and
-when using that Datastore in a `run` or `session`)
+when using that Datastore in a `run` or `session`).
 
 **[Refer To Page: Credentials](../../../platform/3_credentials.md) for more information.**
 
