@@ -16,21 +16,20 @@ Upgrade your CLI with `pip install lightning-grid --upgrade`
 
 **CLI version: 0.8.58** 
 
-Today's release includes several bug fixes that improve the Grid experience.
 
 ## Grid Cloud Instance Types
 
 We've made some changes to the platform that will impact start times for Sessions and Runs.
 
-As a result of these changes, you'll experience longer start times for Sessions and Runs that use the `p3.2xlarge` instance type. If you're looking for a faster start time, we suggest using the `g4dn.xlarge instance type instead`.
+As a result of these changes, you'll experience longer start times for Sessions and Runs that use the `p3.2xlarge` instance type. If you're looking for a faster start time, we suggest using the `g4dn.xlarge` instance type instead.
 
 **In future Grid releases, the following instance types will be supported:**
 
 |	Name	|	CPU	|	GPU	|	Memory	|	Accelerator	|	numberOfAccelerators acceleratorType availableMemory 	|
 |	:---	|	:---	|	:---	|	:---	|	:---	|	:---	|
-|	m5a.large (recommended  for fast startup times)	|	2	|	0	|	8	|	CPU	|	2_CPU_8GB	|
+|	**m5a.large (recommended  for fast startup times)**	|	2	|	0	|	8	|	CPU	|	2_CPU_8GB	|
 |	m5a.2xlarge	|	8	|	0	|	32	|	CPU	|	8_CPU_32GB	|
-|	g4dn.xlarge (recommended  for fast startup times)	|	4	|	1	|	16	|	T4	|	1_T4_16GB	|
+|	**g4dn.xlarge (recommended  for fast startup times)**	|	4	|	1	|	16	|	T4	|	1_T4_16GB	|
 |	p3.2xlarge	|	8	|	1	|	61	|	V100	|	1_V100_61GB	|
 |	p3.8xlarge	|	32	|	4	|	244	|	V100	|	4_V100_244GB	|
 
@@ -50,13 +49,17 @@ If you've got questions about these changes, reach out to us at support@grid.ai.
 
 ## Fixes and Enhancements
 
+- Adds UI support for [skipping parameter evaluation](../docs/features/runs/1_Creating%20Runs/1_Basic%20Runs/3_sweep-syntax.md#skipping-parameter-evaluation) when running hyperparemeter sweeps
+
 - Improvements to the process of integrating Grid with public and private Github organizations
 
-- BYOC users: Fixes issue with starting runs with unavailable instance types. If the default instance type is not available, the first instance in the specified list of instances will be used instead. 
+- BYOC users: Fixes issue with starting runs with unavailable instance types. If the default instance type is not available, the first instance in the specified list of instances will be used instead
 
-- Better error messaging in the CLI!
+- Stability improvements in the UI to make analzying experiment results a better experience
 
-- Fixes CLI issue where users could only retrieve the 50 most recent runs. To request details for a specific run in your run history, use `grid status RUN_NAME`.
+- Better error messaging in the CLI
+
+- Fixes CLI issue where users could only retrieve the 50 most recent runs. To request details for a specific run in your run history, use `grid status RUN_NAME`
 
 ## :warning: Known Issues
 
