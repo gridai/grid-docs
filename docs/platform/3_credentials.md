@@ -13,7 +13,7 @@ systems, and are only decrypted immediately prior to use.
 
 Credentials can be created by any Grid user, with a limit of 50
 Credentials per account. Only the user who created a credential (the owner) can
-delete that Credential. All of the User's team members are able to utilize the credential in
+delete that credential. All of the user's team members are able to utilize the credential in
 their own workflow (for example, while creating a Datastore from a private s3 bucket)
 
 Sensitive credential type values can never be retrieved from Grid via the CLI. However,
