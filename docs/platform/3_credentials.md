@@ -31,7 +31,7 @@ At the moment, the following credential types are supported:
 Grid now supports the ability to create Datastores from private AWS s3 buckets by using
 the `--no-copy` mode via the CLI. In order to allow Grid to access your private buckets,
 you'll need to create an authorized AWS Role using the `grid credential create --type s3`
-command (explained in detail below). After, you can run the
+command (explained in detail below). After creating a role, you can run the
 `grid datastore create S3://<private-bucket-name-here> --no-copy` command as usual - no
 modifications needed. If any of your registered `s3` credentials can access the s3 bucket
 path specified, then Grid will automatically use them when creating the Datastore (and
