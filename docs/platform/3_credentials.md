@@ -3,13 +3,13 @@ title: Credentials
 sidebar_label: Credentials
 ---
 
-# About
+# Grid Credentials
 
 Credentials are secret values that you can use to securely inject sensitive information into the
 Grid platform. Credentials are encrypted in the Grid-backend storage
 systems and are only decrypted immediately prior to use.
 
-## Access to Secrets (Teams Users)
+### Access to Secrets (Teams Users)
 
 Credentials can be created by any Grid user, with a limit of 50
 Credentials per account. Only the user who created a credential (the owner) can
@@ -20,7 +20,7 @@ Sensitive credential type values can never be retrieved from Grid via the CLI. H
 the values of non-sensitive credential types (such as `--type s3`) can be viewed by the user
 who created the credential and any member of the user's team (for our `teams` tier users.)
 
-# Credential Types
+### Credential Types
 
 At the moment, the following credential types are supported:
 
@@ -38,7 +38,7 @@ modifications needed. If any of your registered `s3` credentials can access the 
 path specified, then Grid will automatically use them when creating the Datastore (and
 when using that Datastore in a `run` or `session`).
 
-### Register IAM Role with Grid
+## Prerequisite: Configure IAM Role in AWS
 
 In order to provide Grid access to a private S3 bucket, you must first set up an AWS IAM Role configured with the appropriate permission policy. This is the absolute minimum permission Grid requires in order to list and retrieve files from an s3 bucket of your choice. The `grid credential create` command will dynamically generate the IAM Role Trust Policy based on the cluster on which you are creating the Datastore. While all users will need to authorize the AWS account ID on which the Grid Platform controlplane runs, [bring-your-own-cloud (`BYOC`) users](./2_Custom%20Cloud%20Credentials/1_byoc.md) will also need to include the AWS account ID on which the `BYOC` cluster runs. 
 
@@ -52,7 +52,6 @@ detailed information.
 
 :::
 
-### Create an AWS IAM Role
 
 We will illustrate the process of registering an IAM Role with Grid using the following
 example:
@@ -63,7 +62,7 @@ example:
 
 ![](../../static/images/credentials/demo_bucket_contents.png)
 
-**1. Generate trust and permision policies**
+### 1. Generate Trust and Permission Policiess
 
 First: run the `grid credentials create --type s3` command in order to find the required trust and
 permission policies. 
@@ -121,50 +120,52 @@ prefix.
 When complete, please enter the role ARN:
 ```
 
-**2. Add the trust and permission policies to AWS**
+### 2. Add Trust and Permission Policies to AWS
 
-The command will output the required trust and permission policies. 
+The `grid credential create` command will output the required trust and permission policies. 
 
-1. Leave this prompt open while visiting the [AWS IAM Role
-Console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/roles) 
+  a. Leave the command prompt open while visiting the [AWS IAM Role
+  Console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/roles) 
 
-2. Click "Create Role"
+  b. Click "Create Role"
 
-![](../../static/images/credentials/role-console.png)
+  ![](../../static/images/credentials/role-console.png)
 
-3. Select the "custom trust policy" setting, and copy/paste the trust policy output
-from the CLI into the `json` editor:
+  c. Select the "custom trust policy" setting, and copy/paste the trust policy output
+  from the CLI into the `json` editor:
 
-![](../../static/images/credentials/select_trusted_entity.png)
+  ![](../../static/images/credentials/select_trusted_entity.png)
 
-4. When prompted with the "add permissions to role" tab, click "Create Policy" to  create a new permission
-policy
+  d.  When prompted with the "add permissions to role" tab, click "Create Policy" to  create a new permission
+  policy
 
-![](../../static/images/credentials/add_permissions_to_role.png)
+  ![](../../static/images/credentials/add_permissions_to_role.png)
 
-5. A new tab will open. Select the `json` tab, and
-copy/paste the permission policy into the editor. Also replace the text
-`<replace-with-bucket-name>` with the name of the private bucket to provide access to
-(i.e. `gridai-demo-bucket`). 
+  e.  A new tab will open. Select the `json` tab, and
+  copy/paste the permission policy into the editor. Also replace the text
+  `<replace-with-bucket-name>` with the name of the private bucket to provide access to
+  (i.e. `gridai-demo-bucket`). 
 
-![](../../static/images/credentials/aws_permission_policy.png)
+  ![](../../static/images/credentials/aws_permission_policy.png)
 
-6. Click next until reaching the "permission policy naming" tab. Enter an appropriate
-name, for example: `my-permission-policy-for-grid`. 
+  f. Click "next" until reaching the "permission policy naming" tab. Enter an appropriate
+  name, for example: `my-permission-policy-for-grid`. 
 
-![](../../static/images/credentials/permission_policy_naming.png)
+  ![](../../static/images/credentials/permission_policy_naming.png)
 
-7. Click "create policy".
+  g. Click "create policy".
 
-8. Success!
+  ![](../../static/images/credentials/permission_policy_created.png)
 
-![](../../static/images/credentials/permission_policy_created.png)
+  h. Go back to the previous tab for attaching a permission policy to the role 
 
-At this point, I go back to the previous tab for attaching a permission policy to the Role which
-I had been at before. I "refresh" the list of policies by clicking the refresh symbol, and
-then select the `my-permission-policy-for-grid` policy name and click next.
+  i. Refresh the list of policies by clicking the refresh symbol
+
+  j. Select the `my-permission-policy-for-grid` policy name and click "next".
 
 ![](../../static/images/credentials/attach_permission_policy.png)
+
+### 4. Create AWS Role Name
 
 I then navigate through the prompts until I am presented with the "role naming" screen. At
 this point, I create a role name **keeping in mind that the role must begin with the
@@ -173,7 +174,10 @@ prefix: `grid-s3-access-`**. In this case I name the role
 
 ![](../../static/images/credentials/role_naming.png)
 
+
 I am then presented with a success screen! The role has been created. 
+
+### 5. Input role ARN in Grid
 
 ![](../../static/images/credentials/role_created.png)
 
