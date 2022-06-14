@@ -60,7 +60,13 @@ example:
 > `gridai-demo-bucket` and I would like to create a Datastore from any file
 > prefix (folder) in the bucket. 
 
+<div style={{textAlign: 'center'}}>
+
 ![](../../static/images/credentials/demo_bucket_contents.png)
+
+</div>
+
+
 
 ### 1. Generate Trust and Permission Policiess
 
@@ -165,7 +171,7 @@ The `grid credential create` command will output the required trust and permissi
 
 ![](../../static/images/credentials/attach_permission_policy.png)
 
-### 4. Create AWS Role Name
+### 3. Create AWS Role Name
 
 I then navigate through the prompts until I am presented with the "role naming" screen. At
 this point, I create a role name **keeping in mind that the role must begin with the
@@ -177,7 +183,7 @@ prefix: `grid-s3-access-`**. In this case I name the role
 
 I am then presented with a success screen! The role has been created. 
 
-### 5. Input role ARN in Grid
+### 4. Input role ARN in Grid
 
 ![](../../static/images/credentials/role_created.png)
 
