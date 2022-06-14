@@ -134,7 +134,7 @@ If you are using this flag via the Grid public cloud, then the source bucket sho
 
 ### Creating Datastore From Private AWS S3 Buckets
 
-Grid now supports the ability to create Datastores from private AWS s3 buckets by using
+Grid now supports the ability to create Datastores from private AWS S3 buckets by using
 the `--no-copy` mode via the CLI. In order to allow Grid to access your private buckets,
 you'll need to create an authorized AWS Role using the `grid credential create --type s3`
 command (explained in detail below). After creating a role, you can run the
