@@ -9,7 +9,9 @@ Check the [Runs FAQ](https://docs.grid.ai/features/runs/faq.md) for common quest
 
 # Hyperparameter Sweeps
 
-Grid Runs offer the abilty to launch [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code! Just make sure your script can take arguments from the CLI:
+Grid Runs offer the abilty to launch [hyperparameter sweeps](https://www.grid.ai/what-are-hyperparameter-sweeps-and-why-are-they-important-to-production-machine-learning) without changing a single line of code!
+This feature will allow you to run multiple permutations of your training script (i.e. an experiment) on different machines in parallel.
+Just make sure your training script can take arguments from the CLI:
 
 ```bash
 grid run main.py --layers 32 --learning_rate 0.01
