@@ -25,3 +25,6 @@ sidebar_label: Known Issues
 
 ### [Session](https://docs.grid.ai/features/sessions)
 * Cloning a Github repo with SSH is currenlty not supported. Insead, use Github's HTTPS clone method.
+
+### [Artifacts](https://docs.grid.ai/features/runs/Analyzing%20Runs/artifacts)
+* Currently, artifact downloads are not optimized for a large number of files. This can lead to excessively long download times.
