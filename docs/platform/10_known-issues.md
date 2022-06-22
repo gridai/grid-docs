@@ -9,7 +9,7 @@ sidebar_label: Known Issues
 
 ### [BYOC](https://docs.grid.ai/platform/custom-cloud-credentials/byoc)
 * Creating runs with the same name across two cluster is currenly supported, but prohibits certain operations against runs/experiments.
-* BYOC can only support instance types with the x86_64 architecture. The instance families of the following instance types are known to not be supported due to their architecture: A1, T4g, M6g, C6g, and R6g.
+* BYOC can only support instance types with the x86_64 architecture. The instance families of the following instance types are known to not be supported due to their architecture: A1, T4g, M6g, C6g, G5g, and R6g.
 
 ### [Collaboration](https://docs.grid.ai/platform/collaboration)
 * Downloading artifacts from a teammate's experiments is not supported from the CLI. Please use the UI as a workaround.
@@ -27,3 +27,6 @@ sidebar_label: Known Issues
 
 ### [Session](https://docs.grid.ai/features/sessions)
 * Cloning a Github repo with SSH is currenlty not supported. Insead, use Github's HTTPS clone method.
+
+### [Artifacts](https://docs.grid.ai/features/runs/Analyzing%20Runs/artifacts)
+* Currently, artifact downloads are not optimized for a large number of files. This can lead to excessively long download times.
