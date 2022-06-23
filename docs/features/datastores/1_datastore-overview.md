@@ -63,6 +63,12 @@ Datastores today have 3 main capabilities:
    [Sessions](../../features/sessions/README.md)
 3. Create-able from your local machine, Sessions, or Cluster!
 
+### High-Performance Datastores
+
+High Performance Datastores (HPDS) allow Bring Yoru Own Cloud customers who have requirements for scaling large datasets to optimize latency and significantly speed up data access. Currently, HPDS are backed by the FSx for Lustre service and offer more scalability and higher throughput than conventional Grid datastores that are backed by AWS S3. 
+
+Such datastores are most useful for very large datasets (>1TB) or when a dataset is going to be using by a large number of experiments or sessions concurrently.
+
 ### How do I access the data in a datastore? 
 
 By default, datastores are mounted at `/datastores/<datastore-name>/` on both 
@@ -72,7 +78,6 @@ manually specify the Datastore mount path when using the CLI. Please refer to
 [CLI commands reference](../../cli.md) for assistance specifying the desired configuration. 
 
 ## Next Steps
-
 
 For more information on using Datastores, start with the first section of the 
 [Using Datastores](./2_Using%20Datastores/1_How-to-use-datastores.md) tutorial. 
