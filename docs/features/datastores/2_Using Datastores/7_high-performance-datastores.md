@@ -21,6 +21,45 @@ that has a maximum capacity of 1.2TiB will cost 174\\$ per month, while a 12TiB 
 
 In addition to the monetary cost, HPDSs can only be provision by utilizing a pre-existing S3 bucket that is owned by the same AWS account in which your BYOC cluster is located and require some more involved configuration by your cluster administrator to enable access to specific S3 buckets.
 
+# Configuring Access
+
+Once this feature has been enabled for your BYOC cluster, you will need to provide access to the corresponding S3 buckets that you want to create HPDSs for before actually doing so. This is a relatively simple process that requires that you add a bucket policy for each bucket you wish to access.
+
+You can do this via the AWS webui or the CLI:
+
+1. If you’re using the AWS webui head to the S3 service at https://s3.console.aws.amazon.com/s3/buckets, select the desired bucket, click on the permissions tab and select "Edit" on the bucket policy field to add the new policy.
+
+2. If you’re using the AWS CLI, simply create a file containing this policy and then use the following command: 
+
+`aws s3api put-bucket-policy --bucket <YOUR_BUCKET_NAME> --policy file://policy.json`
+
+The policy to add should be the following:
+```
+{
+  "Statement": [{
+    "Sid": "localdev-access-permissions",
+    "Effect": "Allow",
+    "Principal": {
+      "AWS": "arn:aws:iam::<YOUR_AWS_ACCOUNT_ID>:role/grid-s3-access-<YOUR_CLUSTER_NAME>-fsx-global-role"
+    },
+    "Action": [
+      "s3:AbortMultipartUpload",
+      "s3:DeleteObject",
+      "s3:PutObject",
+      "s3:Get*",
+      "s3:List*",
+      "s3:PutBucketNotification",
+      "s3:PutBucketPolicy",
+      "s3:DeleteBucketPolicy"
+    ],
+    "Resource": [
+      "arn:aws:s3:::<YOUR_BUCKET_NAME>",
+      "arn:aws:s3:::<YOUR_BUCKET_NAME>/*"
+    ]
+  }]
+}
+```
+
 # Creating High-Performance Datastores
 
 After configuring access you can create a high performance datastore by passing the `--hpds` flag to the CLI when executing the `grid datastore create` command. 
