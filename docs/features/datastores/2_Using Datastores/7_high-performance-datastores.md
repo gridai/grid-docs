@@ -37,5 +37,9 @@ Do note that on single-instance usage (For example for a single experiment or se
 
 Finally it's worth noting that there is a period of time after the datastore becomes available to attach and use in sessions during which you will observe reduced performance - this is because the files are being preloaded to the filesystem to ensure consistent performance. This process may take a few hours for particularly high volume datastores.
 
+# Using High-Performance Datastores
+To use an HPDS datastore simply attach it to an experiment or session in the same way as any other kind of datastore. As conventional datastores, HPDS datastores can be attached to multiple experiments or sessions at the same time.
 
+At the time, updating an HPDS datastore to use a different capacity or throughput is not possible, although we are exploring the possibility of implementing such functionality in the future. You can create multiple versions of HPDS datastores, but since each datastore is automatically updated to track the underlying S3 bucket, this means that all versions will have the same content. They will however use different FSx file systems thus incurring higher costs, for this reason maintaining multiple versions of such datastores is not advised unless you specifically need each datastore to be completely performance independent from the others.
 
+Deleting an HPDS datastore can be done with grid datastore delete as with any conventional datastore. You do not incur any charges for failed or deleted HPDS datastores.
