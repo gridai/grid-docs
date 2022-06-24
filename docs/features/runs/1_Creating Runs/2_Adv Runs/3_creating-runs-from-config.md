@@ -9,7 +9,7 @@ The following examples assume you have already installed and setup Grid. If you 
 
 # Using YAML
 
-In addition to CLI parameters, Grid supports the use of YML files for passing configuration properties to a Grid Run. This eliminates the need to specify a long list of parameters at the command-line during frequent Run iterations. If compute parameters do not change often, we suggest you create a Grid config file and use that instead of specifying parameters at the command-line.
+In addition to CLI parameters, Grid supports the use of YML files for passing configuration properties to a Grid Run. This eliminates the need to specify a long list of parameters at the command-line during frequent Run iterations. If compute parameters do not change often, we suggest you create a Grid config file and use that instead of specifying parameters at the command-line. Full yaml specification is available [here](../../17_yaml-configs/2_yaml-api.md).
 
 ## Creating Runs With a Config File
 
@@ -18,44 +18,6 @@ You can create a Run with a config file instead of passing CLI arguments. For ex
 ```text
 grid run --config my_config.yml script.py
 ```
-
-## Grid Spec Overview
-
-The following YML file contains a commented version of every YML key. You need to provide these keys when writing a config file and change the properties to what you need.
-
-:::note
-Use either [cluster context](../../../../platform/2_Custom%20Cloud%20Credentials/5_grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
-:::
-
-```text
-# Main compute configuration.
-compute:
-
-  # Add cloud configuration here.
-  provider:
-
-    cluster: XXXXXX           # Cluster ID
-
-  # Training configuration.
-  train:
-
-    cpus: 1                       # Number of CPUs
-    gpus: 0                       # Number of GPUs
-    instance: t2.xlarge           # AWS instance type
-    datastore_name: null          # Datastore name to use
-    datastore_version: null       # Datastore version number
-    datastore_mount_dir: null     # Where to mount the datastore
-    use_spot: false               # If we should use spot instances
-    framework: "lightning"        # Which framework to use
-
-    # Pass in environment variables
-    environment:                
-      MY_ENVIRONMENT_VARIABLE: "example"
-```
-
-:::note
-Flags in grid YML files have a 1-1 mapping with `grid run` flags
-:::
 
 ## Config Files with Actions
 Config files also allow the use of a special feature called Actions. Grid Actions give you the flexibility of adding steps to your training workflow without having to change your training script.
