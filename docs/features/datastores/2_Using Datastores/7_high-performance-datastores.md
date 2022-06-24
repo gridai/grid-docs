@@ -64,7 +64,7 @@ The policy to add should be the following:
 
 After configuring access, you can create a High Performance Datastore by passing the `--hpd` flag to the CLI when executing the `grid datastore create` command. 
 
-For example: `grid datastore create s3://my-s3-bucket/ --cluster my-byoc-cluster --hpds`
+For example: `grid datastore create s3://my-s3-bucket/ --cluster my-byoc-cluster --hpd`
 
 This will create the Datastore using the default capacity of 1200GiB and the default throughput of 125MB/s/TiB. After a brief wait (between 15 minutes and 2 hours depending on the number of files in your S3 bucket), the Datastore will be available to use. You can monitor the Datastore state normally by using the grid datastore command.
 
