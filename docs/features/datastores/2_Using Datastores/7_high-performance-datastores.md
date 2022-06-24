@@ -70,7 +70,7 @@ This will create the Datastore using the default capacity of 1200GiB and the def
 
 ### Setting HPD Capacity
 
-If your dataset is larger than 1200GiB you can use the `--hpds-capacity` flag to specify a higher capacity up to 64,800GiB. Note that capacity must be 1200, 2400 or a multiple of 2400.
+If your dataset is larger than 1200GiB you can use the `--hpd-capacity` flag to specify a higher capacity up to 64,800GiB. Note that capacity must be 1200, 2400 or a multiple of 2400.
 
 ### Setting HPD Throughput
 
