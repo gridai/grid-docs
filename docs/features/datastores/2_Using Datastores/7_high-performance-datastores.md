@@ -68,6 +68,8 @@ For example: `grid datastore create s3://my-s3-bucket/ --cluster my-byoc-cluster
 
 This will create the Datastore using the default capacity of 1200GiB and the default throughput of 125MB/s/TiB. After a brief wait (between 15 minutes and 2 hours depending on the number of files in your S3 bucket), the Datastore will be available to use. You can monitor the Datastore state normally by using the grid datastore command.
 
+### Setting HPD Capacity
+
 If your dataset is larger than 1200GiB you can use the `--hpds-capacity` flag to specify a higher capacity up to 64,800GiB. Note that capacity must be 1200, 2400 or a multiple of 2400.
 
 ### Setting HPD Throughput
