@@ -67,7 +67,7 @@ Datastores today have 3 main capabilities:
 
 High Performance Datastores (HPDs) allow Bring Your Own Cloud customers who are looking to scale large datasets to optimize latency and significantly speed up data access. Currently, HPDs are backed by the FSx for Lustre service and offer more scalability and higher throughput than conventional Grid datastores backed by AWS S3. 
 
-Such datastores are most useful for very large datasets (>1TB) or when a dataset is going to be using by a large number of experiments or sessions concurrently.
+HPDs are most useful for very large datasets (>1TB) or when a dataset is going to be using by a large number of concurrent experiments or sessions.
 
 ### How do I access the data in a datastore? 
 
