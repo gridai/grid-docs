@@ -13,7 +13,7 @@ Use either [cluster context](../../../platform/2_Custom%20Cloud%20Credentials/5_
 
 Config can be used to specify arguments that will be used to run experiments. 
 Apart from parametrization config allows to define custom `actions` executed in given moments of the experitment lifecycle, and pass environment variables.
-Tutorial on how to create runs from config file and fully leverage it's capabilities is available [here](../1_Creating Runs/2_Adv Runs/3_creating-runs-from-config.md)
+Tutorial on how to create runs from config file and fully leverage its capabilities is available [here](../1_Creating Runs/2_Adv Runs/3_creating-runs-from-config.md)
 To check the defaults please refer to the CLI docs [here](../../cli.md).
 
 
