@@ -9,7 +9,7 @@ High Performance Datastores (HPDs) allow Grid BYOC customers who are looking to 
 
 # Advantages & Limitations
 
-There's a multitude of advantages to utilizing the HPDS datastore class when scaling processing to very large datasets. 
+Using the High Performance Datastore class when processing very large datasets provides several significant benefits:
 
 1. **Higher data scalability:** HPDSs can scale up to 64 terabytes of data while maintaining high performance regardless of the file distribution in the datastore. This is especially relevant when a dataset contains many smaller files, as while conventional Grid datastores have nearly unlimited scale in regards to data volume, their performance is reduced when accessing datasets with millions or tens of millions of files.
 2. **Improved performance for single-user sessions:** Up to 6x performance against conventional datastores when used by a single client. The performance improvement may vary depending on the workload and instance type chosen, as HPDSs are still accessed through the network.
