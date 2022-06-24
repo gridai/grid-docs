@@ -62,7 +62,7 @@ The policy to add should be the following:
 
 # Creating High-Performance Datastores
 
-After configuring access, you can create a High Performance Datastore by passing the `--hpds` flag to the CLI when executing the `grid datastore create` command. 
+After configuring access, you can create a High Performance Datastore by passing the `--hpd` flag to the CLI when executing the `grid datastore create` command. 
 
 For example: `grid datastore create s3://my-s3-bucket/ --cluster my-byoc-cluster --hpds`
 
