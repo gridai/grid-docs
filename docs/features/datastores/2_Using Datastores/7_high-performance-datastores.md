@@ -70,7 +70,7 @@ This will create the Datastore using the default capacity of 1200GiB and the def
 
 If your dataset is larger than 1200GiB you can use the `--hpds-capacity` flag to specify a higher capacity up to 64,800GiB. Note that capacity must be 1200, 2400 or a multiple of 2400.
 
-If you’re going to be using your datastore with a high number (>20) of experiments or sessions at the same time you can also specify a higher throughput parameter by using the `--hpds-throughput` flag. You may choose between the low (125MB/s/TiB), medium (500MB/s/TiB) or high (1000MB/s/TiB) options.
+If you’re going to be using your Datastore with a high number (>20) of experiments or sessions at the same time, you can also specify a higher throughput parameter by using the `--hpds-throughput` flag. You may choose between the low (125MB/s/TiB), medium (500MB/s/TiB) or high (1000MB/s/TiB) options.
 
 Do note that on single-instance usage (For example for a single experiment or session) the higher throughput options have heavily diminishing returns (Especially as these datastores can burst to speeds higher than their nominal throughput for sustained periods) and we advise using the low option in this use case in order to reduce costs. 
 
