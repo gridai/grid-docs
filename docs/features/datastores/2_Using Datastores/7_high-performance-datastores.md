@@ -86,4 +86,6 @@ To use an HPD, simply attach it to an experiment or session in the same way as a
 ### Updating HPDs
 Currently, updating an HPD to use a different capacity or throughput is not possible. You can create multiple versions of HPDs, but because each Datastore is automatically updated to track the underlying S3 bucket, this means that all versions will have the same content. They will, however, use different FSx file systems, and thus incur higher costs. For this reason, maintaining multiple versions of HPDs is not advised unless you specifically need each Datastore to be completely performance independent from the others.
 
+### Deleting HPDs
+
 Deleting an HPD can be done with grid datastore delete as with any conventional Datastore. You do not incur any charges for failed or deleted HPDs.
