@@ -81,7 +81,7 @@ Do note that on single-instance usage (e.g., for a single experiment or session)
 Finally, after the Datastore becomes available to attach and use in sessions, you may observe a period of reduced performance. This is because the files are being preloaded to the filesystem to ensure consistent performance. This process may take a few hours for particularly high volume datastores.
 
 # Using High-Performance Datastores
-To use an HPD, simply attach it to an experiment or session in the same way as any other kind of datastore. As conventional datastores, HPDs can be attached to multiple experiments or sessions at the same time.
+To use an HPD, simply attach it to an experiment or session in the same way as any other kind of datastore. Similar to conventional datastores, HPDs can be attached to multiple experiments or sessions at the same time.
 
 ### Updating HPDs
 Currently, updating an HPD to use a different capacity or throughput is not possible. You can create multiple versions of HPDs, but because each Datastore is automatically updated to track the underlying S3 bucket, this means that all versions will have the same content. They will, however, use different FSx file systems, and thus incur higher costs. For this reason, maintaining multiple versions of HPDs is not advised unless you specifically need each Datastore to be completely performance independent from the others.
