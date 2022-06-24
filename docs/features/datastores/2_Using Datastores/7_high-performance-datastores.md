@@ -74,7 +74,7 @@ If you’re going to be using your Datastore with a high number (>20) of experim
 
 Do note that on single-instance usage (e.g., for a single experiment or session), the higher throughput options have heavily diminishing returns (especially as these Datastores can burst to speeds higher than their nominal throughput for sustained periods). In these cases, we advise using the low option in order to reduce costs. 
 
-Finally it's worth noting that there is a period of time after the datastore becomes available to attach and use in sessions during which you will observe reduced performance - this is because the files are being preloaded to the filesystem to ensure consistent performance. This process may take a few hours for particularly high volume datastores.
+Finally, after the Datastore becomes available to attach and use in sessions, you may observe a period of reduced performance. This is because the files are being preloaded to the filesystem to ensure consistent performance. This process may take a few hours for particularly high volume datastores.
 
 # Using High-Performance Datastores
 To use an HPDS datastore simply attach it to an experiment or session in the same way as any other kind of datastore. As conventional datastores, HPDS datastores can be attached to multiple experiments or sessions at the same time.
