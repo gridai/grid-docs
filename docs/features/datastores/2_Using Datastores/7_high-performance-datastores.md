@@ -19,7 +19,7 @@ Using the High Performance Datastore class when processing very large datasets p
 Given their immense benefit to performance, HPDs with high performance specs can cost up to several thousand dollars per month. For reference, a baseline HPDS datastore in the `us-east` AWS region
 with a maximum capacity of 1.2TiB will cost 174\\$ per month, while a 12TiB datastore with the high throughput setting will cost 7200\\$ per month. For detailed pricing, please refer to the AWS pricing page: https://aws.amazon.com/fsx/lustre/pricing/
 
-Additionally, HPDs can only be provisioned by utilizing a pre-existing S3 bucket that is owned by the same AWS account in which your BYOC cluster is located. This requires additional configuration by your cluster administrator to enable access to specific S3 buckets.
+**Additionally, HPDs can only be provisioned by utilizing a pre-existing S3 bucket that is owned by the same AWS account in which your BYOC cluster is located. This requires additional configuration by your cluster administrator to enable access to specific S3 buckets.**
 
 # Configuring Access
 
