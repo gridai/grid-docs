@@ -72,7 +72,7 @@ If your dataset is larger than 1200GiB you can use the `--hpds-capacity` flag to
 
 If you’re going to be using your Datastore with a high number (>20) of experiments or sessions at the same time, you can also specify a higher throughput parameter by using the `--hpds-throughput` flag. You may choose between the low (125MB/s/TiB), medium (500MB/s/TiB) or high (1000MB/s/TiB) options.
 
-Do note that on single-instance usage (For example for a single experiment or session) the higher throughput options have heavily diminishing returns (Especially as these datastores can burst to speeds higher than their nominal throughput for sustained periods) and we advise using the low option in this use case in order to reduce costs. 
+Do note that on single-instance usage (e.g., for a single experiment or session), the higher throughput options have heavily diminishing returns (especially as these Datastores can burst to speeds higher than their nominal throughput for sustained periods). In these cases, we advise using the low option in order to reduce costs. 
 
 Finally it's worth noting that there is a period of time after the datastore becomes available to attach and use in sessions during which you will observe reduced performance - this is because the files are being preloaded to the filesystem to ensure consistent performance. This process may take a few hours for particularly high volume datastores.
 
