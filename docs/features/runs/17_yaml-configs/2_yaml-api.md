@@ -4,7 +4,7 @@ In addition to CLI parameters, Grid supports the use of YML files so you don't h
 
 ## Grid Run Spec Overview 
 
-The following YML file contains a commented version of every YML key. When writing config file you only need to provide keys and values for the parameters that You actually want to change to what you need. There is no need to have all keys in the config, the ones missing will have the default CLI values.
+The following YML file contains a commented version of every YML key. When writing config file you only need to provide keys and values for the parameters that you actually want to change to what you need. There is no need to have all keys in the config, the ones missing will have the default CLI values.
 
 :::note
 Use either [cluster context](../../../platform/2_Custom%20Cloud%20Credentials/5_grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **prod-2** value.
