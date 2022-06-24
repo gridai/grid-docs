@@ -5,7 +5,7 @@ sidebar_label: High-Performance Datastores
 
 # Introduction
 
-High Performance Datastores (HPDS) allow Grid BYOC customers who have requirements for scaling large datasets to optimize latency and significantly speed up data access. Currently, HPDS are backed by the FSx for Lustre service and offer more scalability and higher throughput than conventional Grid datastores that are backed by AWS S3.
+High Performance Datastores (HPDs) allow Grid BYOC customers who are looking to scale large datasets to optimize latency and significantly speed up data access. Currently, HPDs are backed by the FSx for Lustre service and offer more scalability and higher throughput than conventional Grid Datastores backed by AWS S3.
 
 # Advantages & Limitations
 
