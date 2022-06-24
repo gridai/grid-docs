@@ -13,7 +13,7 @@ Using the High Performance Datastore class when processing very large datasets p
 
 1. **Higher data scalability:** HPDs can scale up to 64 terabytes of data while maintaining high performance regardless of the file distribution within the datastore. This is especially relevant when a dataset contains many smaller files: while conventional Grid Datastores have nearly unlimited scale with regards to data volume, their performance is reduced when accessing datasets with millions or tens of millions of files.
 2. **Improved performance for single-user sessions:** Up to 6x performance against conventional Datastores when used by a single client. The performance improvement may vary depending on the workload and instance type chosen, as HPDs are still accessed through the network.
-3. **Higher multi-consumer scalability:** HPDSs can be used by a larger number of experiments or sessions at the same time.
+3. **Higher multi-consumer scalability:** HPDs can be used by a larger number of concurrent experiments or sessions.
 4. **Automatic updating:** An HPDS will automatically update its contents to track the underlying S3 bucket data.
 
 At the same time however, the HPDS comes with its own share of disadvantages, especially when it comes to cost and flexibility when compared with conventional Grid datastores. Regarding cost, the FSx file systems are provisioned in your AWS account similarly to the machines running your compute workloads and highly specced HPDSs can cost up to several thousand dollars per month. For reference, a baseline HPDS datastore in the `us-east` AWS region
