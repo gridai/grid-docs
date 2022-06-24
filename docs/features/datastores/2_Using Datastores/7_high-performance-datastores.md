@@ -23,7 +23,7 @@ Additionally, HPDs can only be provisioned by utilizing a pre-existing S3 bucket
 
 # Configuring Access
 
-Once this feature has been enabled for your BYOC cluster, you will need to provide access to the corresponding S3 buckets that you want to create HPDSs for before actually doing so. This is a relatively simple process that requires that you add a bucket policy for each bucket you wish to access.
+Once this feature has been enabled for your BYOC cluster, you will need to provide access to the corresponding S3 buckets for which you'd like to create a High Performance Datastore. This process requires that you add a bucket policy for each bucket you wish to access.
 
 You can do this via the AWS webui or the CLI:
 
