@@ -2,54 +2,18 @@
 
 In addition to CLI parameters, Grid supports the use of YML files so you don't have to pass in many parameters in all occasions. If you don't change compute parameters often, we suggest you create a Grid config file and use that instead.
 
-## Grid Spec Overview
+## Grid Run Spec Overview 
 
-The following YML file contains a commented version of every YML key. You need to provide these keys when writing a config file and change the properties to what you need.
+The following YML file contains a commented version of every YML key. When writing config file you only need to provide keys and values for the parameters that you actually want to change to what you need. There is no need to have all keys in the config, the ones missing will have the default CLI values.
 
 :::note
-Use either [cluster context](../../../platform/2_Custom%20Cloud%20Credentials/5_grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **XXXXXX** placeholder.
+Use either [cluster context](../../../platform/2_Custom%20Cloud%20Credentials/5_grid-cluster-context.md) or make sure to place your cluster ID in the `cluster` field, replacing the **prod-2** value.
 :::
-
-<!-- ```text
-# Main compute configuration.
-compute:
-
-  # Add cloud configuration here.
-  provider:
-
-    cluster: XXXXXX           # Cluster ID
-
-  # Training configuration.
-  train:
-
-    cpus: 1                       # Number of CPUs
-    gpus: 0                       # Number of GPUs
-    instance: t2.xlarge           # AWS instance type
-    datastore_name: null          # Datastore name to use
-    datastore_version: null       # Datastore version number
-    datastore_mount_dir: null     # Where to mount the datastore
-    use_spot: false               # If we should use spot instances
-    framework: "lightning"        # Which framework to use
-    dependency_file_info:         
-      package_manager: pip        # Either conda or pip
-      path: null                  # Path to the reqs or conda env
-
-    # Pass in environment variables
-    environment:
-      MY_ENVIRONMENT_VARIABLE: "example"
-  
-hyper_params:
-  # your hyper params here
-  params:
-    # your params here
-    --foo: 1
-    -bar: 2
-``` -->
 
 
 Config can be used to specify arguments that will be used to run experiments. 
 Apart from parametrization config allows to define custom `actions` executed in given moments of the experitment lifecycle, and pass environment variables.
-You don't have to define more parameters than you actually want to override, missing ones from config we have the default CLI values.
+Tutorial on how to create runs from config file and fully leverage its capabilities is available [here](../1_Creating Runs/2_Adv Runs/3_creating-runs-from-config.md)
 To check the defaults please refer to the CLI docs [here](../../cli.md).
 
 
@@ -70,10 +34,6 @@ compute:
       path: null                            # [str] --dependency_file
     instance: m5a.large                     # [enum] --instance_type
     use_spot: False                         # [str] --use_spot
-
-# We should ideally remove those are we hope to depricate gpus/cpus
-#    cpus: int 1                            # --cpus - cannot be more than available in the `instance`
-#    gpus: int 0                            # --gpus - cannot be more than available in the `instance`
     storage_gb: 100                         # [int] --memory [should be greater than 100Gb]
     localdir: False                         # [bool] --localdir
     dockerfile: null                        # [str] --dockerfile
@@ -108,10 +68,40 @@ hyper_params:
 ```
 
 
-## Creating Runs With a Config File
+### Creating Runs With a Config File
 
 You can create a Run with a config file instead of passing CLI arguments. For example:
 
 ```text
 grid run --config my_config.yml script.py
+```
+
+
+## Grid Session Spec Overview 
+
+It's also possible to use config files to define parameters for Grid Sessions.
+
+```text
+# Main compute configuration. Defines parameters for `grid session` command. 
+compute:
+
+  # For BYOC users, we can specify directly which cluster to run experiments on.
+  provider:
+    cluster: prod-2                         # [str] --cluster
+  train:
+    instance_type: m5a.large                # [str] --instance_type
+    disk_size: 200                          # [int] --disk_size
+    use_spot: False                         # [bool] --use_spot
+    datastore_name: null                    # [str] --datastore_name
+    datastore_version: null                 # [int] --datastore_version
+    datastore_mount_dir: null               # [str] --datastore_mount_dir
+```
+
+
+### Creating Sessions With a Config File
+
+To create a new Session defined in `my_session_config.yml` file, just run:
+
+```text
+grid session create --config my_session_config.yml
 ```
