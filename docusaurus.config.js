@@ -79,10 +79,6 @@ const config = {
       docs: {
         versionPersistence: "localStorage",
       },
-      announcementBar: {
-        id: "v0",
-        content: "Welcome to the new and improved Grid Documentation site!",
-      },
       hideableSidebar: true,
       navbar: {
         title: "",
