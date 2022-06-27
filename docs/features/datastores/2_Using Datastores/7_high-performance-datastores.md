@@ -78,7 +78,11 @@ If you’re going to be using your Datastore with a high number (>20) of experim
 
 Do note that on single-instance usage (e.g., for a single experiment or session), the higher throughput options have heavily diminishing returns (especially as these Datastores can burst to speeds higher than their nominal throughput for sustained periods). In these cases, we advise using the low option in order to reduce costs. 
 
-Finally, after the Datastore becomes available to attach and use in sessions, you may observe a period of reduced performance. This is because the files are being preloaded to the filesystem to ensure consistent performance. This process may take a few hours for particularly high volume datastores.
+### Enabling data preloading
+
+For cases where immediate access to the datastore is not required, you can use the `--hpd-preload` flag to instruct Grid to automatically load and cache all data from the S3 bucket to the datastore. This ensures that you will have maximum performance even on the first data access (Without this flag, the first data access for any file will be done at conventional datastore speed). This process may take from a few minutes to a few hours or even more for very high volume datastores and while its ongoing you will not be able to access data in the datastore.
+
+We suggest using this flag when you're going to traverse the entire datastore for a low number of iterations or when the additional time this process takes will not affect your workflow.
 
 # Using High-Performance Datastores
 To use an HPD, simply attach it to an experiment or session in the same way as any other kind of datastore. Similar to conventional datastores, HPDs can be attached to multiple experiments or sessions at the same time.
