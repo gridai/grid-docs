@@ -14,7 +14,7 @@ path your script uses. For example if your script takes an argument _my_data_pat
 want to mount the _cats_ datastore:
 
 ```bash
-grid run --datastore_name cats --datastore_version 1 -- main.py --my_data_path /datastores/cats/1
+grid run --datastore_name cats --datastore_version 1 -- main.py --my_data_path /datastores/cats
 ```
 
 :::note
