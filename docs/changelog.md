@@ -100,7 +100,7 @@ In changing how we manage certain instance types, we're able to offer faster sta
 
 ### BYOC Instance Types
 
-If you are currently using the BYOC feature, you will continue to have access to the full list of [supported AWS instance types](../docs/platform/3_machines.md#machines). If you are not currently using BYOC and want access to or information about additional instance types, reach out to us at support@grid.ai. 
+If you are currently using the BYOC feature, you will continue to have access to the full list of [supported AWS instance types](../docs/platform/4_machines.md#machines). If you are not currently using BYOC and want access to or information about additional instance types, reach out to us at support@grid.ai. 
 
 
 If you've got questions about these changes, reach out to us at support@grid.ai.
