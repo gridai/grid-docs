@@ -125,11 +125,24 @@ prevent Grid from making a copy of the dataset, which significantly speeds up Da
 
 When using this flag, you cannot remove files from your bucket. If you'd like to add files, please create a new version of the Datastore after you've added files to your bucket. 
 
-Please note that Grid does not currently support private S3 buckets. 
 
 If you are using this flag via the Grid public cloud, then the source bucket should be in the  AWS `us-east-1` region or there will be significant latency when you attempt to access the Datastore files in a Run or Session.
 
 :::
+
+
+### Creating Datastore From Private AWS S3 Buckets (BYOC users only)
+
+Grid now supports the ability to create Datastores from private AWS S3 buckets by using
+the `--no-copy` mode via the CLI. In order to allow Grid to access your private buckets,
+you'll need to create an authorized AWS Role using the `grid credential create --type s3`
+command (explained in detail below). After creating a role, you can run the
+`grid datastore create S3://<private-bucket-name-here> --no-copy` command as usual - no
+modifications needed. If any of your registered `s3` credentials can access the s3 bucket
+path specified, then Grid will automatically use them when creating the Datastore (and
+when using that Datastore in a `run` or `session`).
+
+**[Refer To Page: Credentials](../../../platform/3_credentials.md) for more information.**
 
 ## Create from an HTTP URL
 
