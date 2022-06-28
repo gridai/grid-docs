@@ -80,14 +80,16 @@ grid run hello.py --number "[1, 2]" --food_item "['pizza', 'hotdog']"
 The above is equivalent to running each of the following lines on a separate machine:
 
 ```bash
-python hello.py --number 1 --food_item 'pizza'
-python hello.py --number 2 --food_item 'pizza'
-python hello.py --number 1 --food_item 'hotdog'
-python hello.py --number 2 --food_item 'hotdog'
+python hello.py --number 1 --food_item 'pizza'  # will run on machine 1
+python hello.py --number 2 --food_item 'pizza'  # will run on machine 2
+python hello.py --number 1 --food_item 'hotdog' # will run on machine 3
+python hello.py --number 2 --food_item 'hotdog' # will run on machine 4
 ```
 
 :::note
-A RUN is a collection of experiments (the run has 4 experiments in this example).
+A RUN is a collection of EXPERIMENTS (the run has 4 experiments in this example).
+
+Each experiment will execute on it's own machine!
 :::
 
 To see the status of your Run and all associated experiments, run the `grid status <my-run-name>` command. (More details can be found [here](https://docs.grid.ai/cli#grid-status)).
