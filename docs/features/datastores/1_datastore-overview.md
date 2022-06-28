@@ -63,7 +63,7 @@ Datastores today have 3 main capabilities:
    [Sessions](../../features/sessions/README.md)
 3. Create-able from your local machine, Sessions, or Cluster!
 
-### High-Performance Datastores
+### High-Performance Datastores (BYOC users only)
 
 High Performance Datastores (HPDs) allow Bring Your Own Cloud customers who are looking to scale large datasets to optimize latency and significantly speed up data access. Currently, HPDs are backed by the FSx for Lustre service and offer more scalability and higher throughput than conventional Grid datastores backed by AWS S3. 
 
