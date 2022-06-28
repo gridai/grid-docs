@@ -27,11 +27,12 @@ the `--no-copy` mode via the CLI. This is particularly valuable for incrementall
 
 In order to allow Grid to access your private buckets,
 you'll need to create an authorized AWS Role using the `grid credential create --type s3`
-command (explained in detail below). After creating a role, you can run the
+command (explained in detail in the linkbelow). After creating a role, you can run the
 `grid datastore create S3://<private-bucket-name-here> --no-copy` command as usual - no
 modifications needed. 
 
 [Create a credential](../docs/platform/3_credentials.md)
+
 [Create a Datastore from a private S3 bucket](../docs/features/datastores/2_Using%20Datastores/2_creating-datastores.md#creating-datastore-from-private-aws-s3-buckets-byoc-users-only)
 
 ### High-Performance Datastores (BYOC Users Only)
@@ -100,7 +101,7 @@ In changing how we manage certain instance types, we're able to offer faster sta
 
 ### BYOC Instance Types
 
-If you are currently using the BYOC feature, you will continue to have access to the full list of [supported AWS instance types](../docs/platform/3_machines.md#machines). If you are not currently using BYOC and want access to or information about additional instance types, reach out to us at support@grid.ai. 
+If you are currently using the BYOC feature, you will continue to have access to the full list of [supported AWS instance types](../docs/platform/4_machines.md#machines). If you are not currently using BYOC and want access to or information about additional instance types, reach out to us at support@grid.ai. 
 
 
 If you've got questions about these changes, reach out to us at support@grid.ai.
