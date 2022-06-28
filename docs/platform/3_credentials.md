@@ -26,7 +26,7 @@ At the moment, the following credential types are supported:
 
 - `s3` (access for datastore creation from a private s3 bucket)
 
-## How to Create an `s3` Credential for Private S3 Access
+## How to Create an `s3` Credential for Private S3 Access (BYOC users only)
 
 
 Grid now supports the ability to create Datastores from private AWS s3 buckets by using
