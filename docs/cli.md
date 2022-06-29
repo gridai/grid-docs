@@ -155,7 +155,7 @@ grid datastore [OPTIONS] COMMAND [ARGS]...
 | Name | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
 | `--global` | boolean | Fetch sessions from everyone in the team when flag is passed | `False` |
-| `--cluster` | text | The cluster id to list datastores for. | `prod-2` |
+| `--cluster` | text | The cluster id to list datastores for. | `test-7` |
 | `--show-incomplete` | boolean | Show any datastore uploads which were started, but killed or errored before they finished uploading all data and became "viewable" on the grid datastore user interface. | `False` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
@@ -197,7 +197,7 @@ grid datastore create [OPTIONS] [SOURCE]
 | ---- | ---- | ----------- | ------- |
 | `--source` | text | N/A | None |
 | `--name` | text | Name of the datastore | None |
-| `--cluster` | text | cluster id to create the datastore on. (Bring Your Own Cloud Customers Only). | `prod-2` |
+| `--cluster` | text | cluster id to create the datastore on. (Bring Your Own Cloud Customers Only). | `test-7` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
 ### delete
@@ -219,7 +219,7 @@ grid datastore delete [OPTIONS]
 | ---- | ---- | ----------- | ------- |
 | `--name` | text | Name of the datastore |  |
 | `--version` | integer | Version of the datastore |  |
-| `--cluster` | text | cluster id to delete the datastore from. (Bring Your Own Cloud Customers Only). | `prod-2` |
+| `--cluster` | text | cluster id to delete the datastore from. (Bring Your Own Cloud Customers Only). | `test-7` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
 ### resume
@@ -404,7 +404,7 @@ grid instance-types [OPTIONS]
 
 | Name | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
-| `--cluster` | text | Cluster ID whence the instance types needs to be fetched. (Bring Your Own Cloud Customers Only). | `prod-2` |
+| `--cluster` | text | Cluster ID whence the instance types needs to be fetched. (Bring Your Own Cloud Customers Only). | `test-7` |
 | `--help` | boolean | Show this message and exit. | `False` |
 
 ## grid login
@@ -475,14 +475,14 @@ grid run [OPTIONS] [RUN_COMMAND]...
 | ---- | ---- | ----------- | ------- |
 | `--config` | Path | Path to Grid config YML. | None |
 | `--name` | text | Name for this run | None |
-| `--cluster` | text | N/A | `prod-2` |
+| `--cluster` | text | N/A | `test-7` |
 | `--strategy` | choice (`grid_search` &#x7C; `random_search`) | Hyper-parameter search strategy | None |
 | `--num_trials` | text | Number of samples from full search space that are used by the random_search strategy | None |
 | `--seed` | text | Seed value for the `random_search` strategy | None |
 | `--instance_type` | text | Instance type to start training session in | `t2.medium` |
 | `--gpus` | integer | Number of GPUs to allocate per experiment | `0` |
-| `--cpus` | integer | Number of CPUs to allocate per experiment. This parameter also affects memory (RAM) allocating for your experiment using the following rule: the amount of memory for the experiments will be allocated in the same proportion as the CPU allocated for the instance type chosen for the experiments. For example, if you plan to choose a machine with 16 CPUs and 64 Gb RAM and use a default value of CPUs (1 CPU) for your experiments, 1/16 * 64 Gb = 4 Gb of RAM will be allocated per each experiment. | `1` |
-| `--memory` | text | How much disk memory (storage) an experiment needs, Gb | `100` |
+| `--cpus` | integer | Number of CPUs to allocate per experiment | `1` |
+| `--memory` | text | How much memory an experiment needs | `100` |
 | `--datastore_name` | text | Datastore name to be mounted in training | None |
 | `--datastore_version` | integer | Datastore version to be mounted in training | None |
 | `--datastore_mount_dir` | text | Directory to mount Datastore in training job. The default datastore mount location is /datastores | None |
@@ -572,7 +572,7 @@ grid session create [OPTIONS]
 
 | Name | Type | Description | Default |
 | ---- | ---- | ----------- | ------- |
-| `--cluster` | text | Cluster to run on | `prod-2` |
+| `--cluster` | text | Cluster to run on | `test-7` |
 | `--instance_type` | text | Instance type to start session in. | `t2.medium` |
 | `--use_spot` | boolean | Use spot instance. The spot instances, or preemptive instance can be shut down at will | `False` |
 | `--disk_size` | integer | The disk size in GB to allocate to the session. | `200` |

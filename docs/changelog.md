@@ -12,25 +12,82 @@ Upgrade your CLI with `pip install lightning-grid --upgrade`
 :heart: Find us in our [Slack Community](http://gridai-community.slack.com) to say hi and/or to express your thoughts/questions.
 
 ---
+## :zap: June 28, 2022
+
+**CLI version: 0.8.67** 
+
+In addition to several stabilty improvements, this release introduces two very exciting new Datastores features for our BYOC users! If you're not a BYOC user, but would like to learn more or try out these features, don't hesitate to reach out to us at support@grid.ai
+
+## :file_cabinet: What's New with Datastores
+
+### Private S3 Mounting  (BYOC Users Only)
+
+Grid now supports the ability to create Datastores from private AWS S3 buckets by using
+the `--no-copy` mode via the CLI. This is particularly valuable for incrementally adding data to the source bucket and for speeding up datastore creation when working with large buckets. 
+
+In order to allow Grid to access your private buckets,
+you'll need to create an authorized AWS Role using the `grid credential create --type s3`
+command (explained in detail below). After creating a role, you can run the
+`grid datastore create S3://<private-bucket-name-here> --no-copy` command as usual - no
+modifications needed. 
+
+[Create a credential](../docs/platform/3_credentials.md)
+[Create a Datastore from a private S3 bucket](../docs/features/datastores/2_Using%20Datastores/2_creating-datastores.md#creating-datastore-from-private-aws-s3-buckets-byoc-users-only)
+
+### High-Performance Datastores (BYOC Users Only)
+
+High Performance Datastores (HPDs) allow Bring Your Own Cloud customers who are looking to scale large datasets to optimize latency and significantly speed up data access. Currently, HPDs are backed by the FSx for Lustre service and offer more scalability and higher throughput than conventional Grid datastores backed by AWS S3. 
+
+HPDs are most useful for very large datasets (>1TB) or when a dataset is going to be using by a large number of concurrent experiments or sessions.
+
+[Create a High-Performance Datastore](../docs/features/datastores/2_Using%20Datastores/7_high-performance-datastores.md)
+
+:::note
+If you are interested in learning more, or enabling either of these features, you can contact support@grid.ai
+:::
+
+## Session Memory Improvements
+
+- Disabled virtual memory limiting for GPU machines in Sessions, preventing out of memory failures
+- Grid Runs now default to 0 CPUs. We recently discovered an issue with runs where setting `--cpus` to 1 would also reduce the memory, causing lots of OOM issues. In previous versions of Grid, this was the default behavior. We've updated this behavior to set `--cpus` to 0 by default. By setting `--cpus` to 0, Grid will allocate all available CPU and memory to the experiment.
+
+
+---
+
+
+## :warning: June 24, 2022
+
+**CLI version: 0.8.65 **
+
+This release includes an important update to how CPU and memory are allocated to experiments.  
+
+Prior to this release, Grid would set the default number of CPUs to 1 when creating runs and not explictly specifying `--cpus`.
+
+We recently discovered an issue with runs where setting `--cpus` to 1 would also reduce the memory, causing lots of OOM issues.
+
+So we've updated this behavior to set `--cpus` to 0 by default. This applies when creating runs with GPUs as well. By setting `--cpus` to 0, the backend will allocate all available CPU and memory to the experiment.
+
+
+---
+
 ## :zap: June 7, 2022
 
 **CLI version: 0.8.58** 
 
-Today's release includes several bug fixes that improve the Grid experience.
 
 ## Grid Cloud Instance Types
 
 We've made some changes to the platform that will impact start times for Sessions and Runs.
 
-As a result of these changes, you'll experience longer start times for Sessions and Runs that use the `p3.2xlarge` instance type. If you're looking for a faster start time, we suggest using the `g4dn.xlarge instance type instead`.
+As a result of these changes, you'll experience longer start times for Sessions and Runs that use the `p3.2xlarge` instance type. If you're looking for a faster start time, we suggest using the `g4dn.xlarge` instance type instead.
 
 **In future Grid releases, the following instance types will be supported:**
 
 |	Name	|	CPU	|	GPU	|	Memory	|	Accelerator	|	numberOfAccelerators acceleratorType availableMemory 	|
 |	:---	|	:---	|	:---	|	:---	|	:---	|	:---	|
-|	m5a.large (recommended  for fast startup times)	|	2	|	0	|	8	|	CPU	|	2_CPU_8GB	|
+|	**m5a.large (recommended  for fast startup times)**	|	2	|	0	|	8	|	CPU	|	2_CPU_8GB	|
 |	m5a.2xlarge	|	8	|	0	|	32	|	CPU	|	8_CPU_32GB	|
-|	g4dn.xlarge (recommended  for fast startup times)	|	4	|	1	|	16	|	T4	|	1_T4_16GB	|
+|	**g4dn.xlarge (recommended  for fast startup times)**	|	4	|	1	|	16	|	T4	|	1_T4_16GB	|
 |	p3.2xlarge	|	8	|	1	|	61	|	V100	|	1_V100_61GB	|
 |	p3.8xlarge	|	32	|	4	|	244	|	V100	|	4_V100_244GB	|
 
@@ -43,20 +100,24 @@ In changing how we manage certain instance types, we're able to offer faster sta
 
 ### BYOC Instance Types
 
-If you are currently using the BYOC feature, you will continue to have access to the full list of [supported AWS instance types](../docs/platform/3_machines.md#machines). If you are not currently using BYOC and want access to or information about additional instance types, reach out to us at support@grid.ai. 
+If you are currently using the BYOC feature, you will continue to have access to the full list of [supported AWS instance types](../docs/platform/4_machines.md#machines). If you are not currently using BYOC and want access to or information about additional instance types, reach out to us at support@grid.ai. 
 
 
 If you've got questions about these changes, reach out to us at support@grid.ai.
 
 ## Fixes and Enhancements
 
+- Adds UI support for [skipping parameter evaluation](../docs/features/runs/1_Creating%20Runs/1_Basic%20Runs/3_sweep-syntax.md#skipping-parameter-evaluation) when running hyperparemeter sweeps
+
 - Improvements to the process of integrating Grid with public and private Github organizations
 
-- BYOC users: Fixes issue with starting runs with unavailable instance types. If the default instance type is not available, the first instance in the specified list of instances will be used instead. 
+- BYOC users: Fixes issue with starting runs with unavailable instance types. If the default instance type is not available, the first instance in the specified list of instances will be used instead
 
-- Better error messaging in the CLI!
+- Stability improvements in the UI to make analzying experiment results a better experience
 
-- Fixes CLI issue where users could only retrieve the 50 most recent runs. To request details for a specific run in your run history, use `grid status RUN_NAME`.
+- Better error messaging in the CLI
+
+- Fixes CLI issue where users could only retrieve the 50 most recent runs. To request details for a specific run in your run history, use `grid status RUN_NAME`
 
 ## :warning: Known Issues
 
