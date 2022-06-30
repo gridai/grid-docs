@@ -70,11 +70,11 @@ example:
 
 ### 1. Generate Trust and Permission Policiess
 
-First: run the `grid credentials create --type s3` command in order to find the required trust and
+First: run the `grid credential create --type s3` command in order to find the required trust and
 permission policies. 
 
 ```
-$ grid credentials create --type s3
+$ grid credential create --type s3
 Please refer the the the documentation for how to create an AWS role and 
 permission policy.
 
