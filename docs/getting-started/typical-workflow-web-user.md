@@ -177,16 +177,14 @@ Install requirements + project
 
 ```yaml
 cd grid-tutorials/getting-started
-
 pip install -r requirements.txt
-pip install -e .
 ```
 
 now run the following command to train a resnet50 on 2 GPUs
 
 ```bash
 python flash-image-classifier.py \
-      --data_dir /datastores/cifar5
+      --data_dir /datastores/cifar5 \
       --gpus 2 \
       --epochs 4
 ```
