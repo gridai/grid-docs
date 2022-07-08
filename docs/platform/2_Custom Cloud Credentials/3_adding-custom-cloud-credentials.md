@@ -29,6 +29,8 @@ Grid creates clusters designed for large AI workloads. In order to do so, your A
 | Launch configurations per region | 600 |
 | EC2 Spot \(instance family you are interested in\) | 1000+ |
 | EC2 On-demand \(instance family you are interested in\) | 1000+ |
+| S3 Bucket Quota | 5+ |
+| AWS VPC Quota | 5+ |
 
 AWS STS regional endpoints have to be enabled in the target region. Go to [AWS account settings](https://console.aws.amazon.com/iam/home#/account_settings) and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled, see [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html).
 
