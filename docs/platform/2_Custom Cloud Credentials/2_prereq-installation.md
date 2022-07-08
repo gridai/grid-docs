@@ -1,6 +1,6 @@
 ---
-title: BYOC Prereqs
-sidebar_label: BYOC Prereqs
+title: BYOC Prerequisites
+sidebar_label: BYOC Prerequisites
 ---
 
 # Overview
