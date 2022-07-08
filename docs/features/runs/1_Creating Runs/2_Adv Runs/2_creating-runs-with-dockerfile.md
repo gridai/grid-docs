@@ -36,6 +36,9 @@ FROM python:3.9.6-slim
 WORKDIR /gridai/project
 COPY . .
 
+# Update package list
+RUN apt-get update
+
 # any RUN commands you'd like to run
 # use this to install dependencies
 RUN pip install pytorch-lightning && \
