@@ -292,4 +292,5 @@ grid run --strategy none \
          --beta "[1, 2, 3, 4]"
 ```
 
-This will schedule exactly one experiment and pass each script argument as-is without evaluation. 
+This will schedule exactly one experiment and pass each script argument as-is without evaluation. Another example is when you want to  
+pass extra arguments via the CLI with [Hydra](https://github.com/facebookresearch/hydra).
