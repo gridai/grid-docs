@@ -66,7 +66,12 @@ example:
 
 </div>
 
+### 0. Change from deault cluster context
+By default the [cluster context](./2_Custom%20Cloud%20Credentials/5_grid-cluster-context.md) is set to `Grid Cloud`. Change this to your BYOC cluster you created. 
 
+```
+grid user set-default-cluster <byoc cluster name>
+```
 
 ### 1. Generate Trust and Permission Policiess
 
