@@ -31,7 +31,7 @@ Grid creates clusters designed for large AI workloads. In order to do so, your A
 | EC2 On-demand \(instance family you are interested in\) | 1000+ |
 
 Recommended available configuration below for a BYOC cluster, If unavailable please increase your quotas.
-| Configuration | Recommendation |
+| Resource | Required Quota |
 | :--- | :--- |
 | AWS IAM roles | 15 |
 | AWS IAM policies | 15 |
