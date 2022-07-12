@@ -70,7 +70,7 @@ example:
 By default the [cluster context](./2_Custom%20Cloud%20Credentials/5_grid-cluster-context.md) is set to `Grid Cloud`. Change this to your BYOC cluster you created. 
 
 ```
-grid user set-default-cluster <byoc cluster name>
+grid user set-cluster-context <byoc cluster name>
 ```
 
 ### 1. Generate Trust and Permission Policiess
