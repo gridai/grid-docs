@@ -30,6 +30,14 @@ Grid creates clusters designed for large AI workloads. In order to do so, your A
 | EC2 Spot \(instance family you are interested in\) | 1000+ |
 | EC2 On-demand \(instance family you are interested in\) | 1000+ |
 
+Recommended available configuration below for a BYOC cluster, If unavailable please increase your quotas.
+| Configuration | Recommendation |
+| :--- | :--- |
+| AWS IAM roles | 15 |
+| AWS IAM policies | 15 |
+| VPC | 5 |
+| S3 Buckets | 5 |
+
 AWS STS regional endpoints have to be enabled in the target region. Go to [AWS account settings](https://console.aws.amazon.com/iam/home#/account_settings) and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled, see [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html).
 
 :::note
