@@ -122,7 +122,6 @@ This is exactly what _Sessions_ were created for.
 
 Start a Session named _resnet-debugging_ with 2 M60 GPUs on it and attach our **CIFAR-5** dataset.
 
-**Note: A credit card needs to be added to use GPU machines**
 
 ![](/images/examples/cifar-session.gif)
 
