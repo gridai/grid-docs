@@ -30,6 +30,15 @@ Grid creates clusters designed for large AI workloads. In order to do so, your A
 | EC2 Spot \(instance family you are interested in\) | 1000+ |
 | EC2 On-demand \(instance family you are interested in\) | 1000+ |
 
+Grid will create a number of AWS resources in order to provision your BYOC cluster as seen in the table below. If creating these resources would exceed your quota then the BYOC cluster creation process will fail. In order to address this issue you should either delete existing unused resources or increase your AWS quotas.
+
+| Resource | Required Quota |
+| :--- | :--- |
+| AWS IAM roles | 15 |
+| AWS IAM policies | 15 |
+| VPC | 5 |
+| S3 Buckets | 5 |
+
 AWS STS regional endpoints have to be enabled in the target region. Go to [AWS account settings](https://console.aws.amazon.com/iam/home#/account_settings) and verify the regional endpoint is activated. In most cases your region already has AWS STS regional endpoint enabled, see [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html).
 
 :::note
@@ -298,13 +307,51 @@ Or if you're using config file set the `.compute.provider.cluster` field to the 
 
 Your cluster will be available for use on Grid, so use it \(or any other cluster\) as you wish.
 
-## Editing and Deleting Clusters
+## Editing Clusters
 
 Use `grid edit` to see instance types available and update as necessary.
 
 ```bash
 grid edit cluster <cluster name>
 ```
+
+An editor in your command line will show the json configuration for the Cluster like the one below (we have omitted with ellipsis `...` some attributes to make this section easier to understand)
+```
+{
+  "cluster_type": "CLUSTER_TYPE_BYOC",
+  "cost_factor": "",
+  "desired_state": "CLUSTER_STATE_RUNNING",
+  "driver": {
+    "external": null,
+    "kubernetes": {
+      "aws": {
+        ...
+        "instance_types": [
+          {
+            "name": "g4dn.xlarge",
+            "overprovisioned_ondemand_count": 0,
+          },
+          {
+            "name": "m5ad.xlarge",
+            "overprovisioned_ondemand_count": 0,
+          },
+        ],
+        ...
+      },
+      ...
+    },
+  },
+  ...
+  "performance_profile": "CLUSTER_PERFORMANCE_PROFILE_DEFAULT"
+}
+```
+Some important attributes you can chagne:
+- __instance_types__: Here you can add or remove Instance Type following AWS naming, but at the moment only instances that are amd64 compatible can be used.  You can also change the `overprovisioned_ondemand_count` for the instance if you want to pre-allocate instances for faster start but that will also make you incur in extra costs.
+- __performance_profile__: You can change the profile for the cluster. It can either be
+  - `CLUSTER_PERFORMANCE_PROFILE_DEFAULT` with extra nodes for larger clusters and metrics and monitoring capabilities 
+  - `CLUSTER_PERFORMANCE_PROFILE_COST_SAVING` for smaller clusters but also without metrics and monitoring capabilities but also less expensive to run.
+
+## Deleting Clusters
 
 Use `grid delete` to delete cluster. Deleting a cluster will delete its resources, including runing resources. The deletion will take ~20-30 minutes. Use with care! The flag `--wait` is also available here, in the case of using, grid CLI will wait until the cluster is deleted.
 
