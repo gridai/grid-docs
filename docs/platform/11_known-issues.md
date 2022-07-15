@@ -5,7 +5,11 @@ sidebar_label: Known Issues
 
 
 # Known Issues
-#### Last Updated: April 1, 2022
+#### Last Updated: July 15, 2022
+
+* The "Description" field for Runs and Sessions has been deprecated and removed from Run and Session configuration. However, the field still appears in Run/Session details as editable and will be removed in a future release.
+
+![](/images/platform/description-deprecation.png)
 
 ### [BYOC](https://docs.grid.ai/platform/custom-cloud-credentials/byoc)
 * Creating runs with the same name across two cluster is currenly supported, but prohibits certain operations against runs/experiments.
