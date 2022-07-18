@@ -325,7 +325,7 @@ cd grid-tutorials/getting-started
 pip install -r requirements.txt
 ```
 
-now run the following command to train a resnet18 on 2 GPUs
+now run the following command to train a resnet18 on 1 GPU
 
 ```bash
 python flash-image-classifier.py \
@@ -386,6 +386,11 @@ Now let's kick off a RUN.
 Make sure you are in the /grid-tutorials/getting-started directory for the tutorial
 
 Now kick off the run with grid run
+
+:::note
+To convert the below run into a multi-gpu Run please set the `--instance_type` parameter to a machine with multiple gpus
+and update the `--gpus` argument to the desired number of GPUs. See [here](../platform/4_machines.md) for a list of machine types and their hardware specs.
+:::
 
 ```bash
 grid run --dependency_file ./requirements.txt \
