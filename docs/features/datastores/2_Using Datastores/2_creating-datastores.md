@@ -113,7 +113,7 @@ grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightnin
 Example: 
 `grid datastore create S3://ruff-public-sample-data/esRedditJson --no-copy`
 
-Use `--no-copy` when you want to avoid creating dupicate copy of this data in your cluster account. Using this flag can significantly speed up Datastore creation time, It will prevent grid from making a copy of the dataset. We 
+Use `--no-copy` when you want to avoid creating dupicate copy of this data in your cluster account. Using this flag can significantly speed up Datastore creation time, It will prevent grid from making a copy of the dataset. 
 
 :::info 
 We recommend that you use this flag when creating a private S3 Datastore within a BYOC cluster.
