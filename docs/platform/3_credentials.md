@@ -135,65 +135,37 @@ When complete, please enter the role ARN:
 
 The `grid credential create` command will output the required trust and permission policies. 
 
-  a. Leave the command prompt open while visiting the [AWS IAM Role
-  Console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/roles) 
+  a. Naviagte to AWS WebUI -> IAM -> [Role](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/roles) 
 
-  b. Click "Create Role"
+  b. Create Role -> Custom trust policy
 
   ![](../../static/images/credentials/role-console.png)
 
-  c. Select the "custom trust policy" setting, and copy/paste the trust policy output
-  from the CLI into the `json` editor:
+  c. Paste the output of the `trust policy` from the CLI into the `json` editor and click Next
 
   ![](../../static/images/credentials/select_trusted_entity.png)
 
-  d.  When prompted with the "add permissions to role" tab, click "Create Policy" to  create a new permission
-  policy
+  d. In the `Add permissions` page click Next
+  
+  e. The role name must begin with `grid-s3-access-` and click on Create role
+  
+  ![](../../static/images/credentials/role_naming.png)
+  
+  f. You will be redirected to IAM -> Roles. Select your just created
+  
+  g. Click on Add Permissions -> Create Inline Policy. Paste the output `permission policy` from the CLI output after replacing your bucket name and click on Review Policy
+  
+   ![](../../static/images/credentials/permission_policy_naming.png)
+
+  h. Enter an appropriate name, for example: my-permission-policy-for-grid
 
   ![](../../static/images/credentials/add_permissions_to_role.png)
-
-  e.  A new tab will open. Select the `json` tab, and
-  copy/paste the permission policy into the editor. Also replace the text
-  `<replace-with-bucket-name>` with the name of the private bucket to provide access to
-  (i.e. `gridai-demo-bucket`). 
-
-  ![](../../static/images/credentials/aws_permission_policy.png)
-
-  f. Click "next" until reaching the "permission policy naming" tab. Enter an appropriate
-  name, for example: `my-permission-policy-for-grid`. 
-
-  ![](../../static/images/credentials/permission_policy_naming.png)
-
-  g. Click "create policy".
-
-  ![](../../static/images/credentials/permission_policy_created.png)
-
-  h. Go back to the previous tab for attaching a permission policy to the role 
-
-  i. Refresh the list of policies by clicking the refresh symbol
-
-  j. Select the `my-permission-policy-for-grid` policy name and click "next".
-
-![](../../static/images/credentials/attach_permission_policy.png)
-
-### 3. Create AWS Role Name
-
-I then navigate through the prompts until I am presented with the "role naming" screen. At
-this point, I create a role name **keeping in mind that the role must begin with the
-prefix: `grid-s3-access-`**. In this case I name the role
-`grid-s3-access-for-my-demo-bucket` and click create.
-
-![](../../static/images/credentials/role_naming.png)
-
-
-I am then presented with a success screen! The role has been created. 
+ 
 
 ### 4. Input role ARN in Grid
 
-![](../../static/images/credentials/role_created.png)
-
-I select the role and click on the icon next to the "role ARN" in order to
-copy the value to my clipboard:
+Within Roles -> Search for the role you created that began with `grid-s3-access-` and click on it
+Click on the icon next to the "role ARN" in order to copy the value to my clipboard:
 
 ![](../../static/images/credentials/arn_copy.png)
 
