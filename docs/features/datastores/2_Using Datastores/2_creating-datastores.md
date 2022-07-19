@@ -120,7 +120,7 @@ We recommend that you use this flag when creating a private S3 Datastore within 
 
 Also consider using this option when the your dataset size is greater than `500 GB`. 
 
-If your Datastore was from a public S3 bucket, having a copy in the cluster can be advantageous if someone deletes or modifys the public bucket.
+If your Datastore was from a public S3 bucket, having a copy in the cluster can be advantageous if someone deletes or modifys the public bucket. `--no-copy` does not prevent you from deleting the file in S3 as thats managed by the user. If thats done the Datastore will show that the file still exists since the metadata is cached, On access S3 will indicate that the file does not exist anymore.
 
 When using this flag, you cannot remove files from your bucket. If you'd like to add files, please create a new version of the Datastore after you've added files to your bucket. 
 
