@@ -113,15 +113,14 @@ grid datastore create s3://ryft-public-sample-data/esRedditJson/ --name lightnin
 Example: 
 `grid datastore create S3://ruff-public-sample-data/esRedditJson --no-copy`
 
-In certain cases, your S3 bucket may fit one (or both) of the following criteria:
-
-(1) the bucket is continually updating with new data which you want included in a Grid Datastore 
-(2) the bucket is particularly large (leading to long Datastore creation times)
-
-In these cases, you can pass the `--no-copy` flag to the `grid datastore create` command. This flag will
-prevent Grid from making a copy of the dataset, which significantly speeds up Datastore creation time.
+Use --no-copy when you want to avoid creating a duplicate copy of the data in your cluster account. Using this flag can significantly speed up Datastore creation time by preventing the copy process.
 
 :::info 
+We recommend that you use this flag when creating a private S3 Datastore within a BYOC cluster.
+
+Also consider using this option when the your dataset size is greater than `500 GB`. 
+
+If your Datastore was from a public S3 bucket, having a copy in the cluster can be advantageous if someone deletes or modifys the public bucket. `--no-copy` does not prevent you from deleting the file in S3 as thats managed by the user. If thats done the Datastore will show that the file still exists since the metadata is cached, On access S3 will indicate that the file does not exist anymore.
 
 When using this flag, you cannot remove files from your bucket. If you'd like to add files, please create a new version of the Datastore after you've added files to your bucket. 
 
