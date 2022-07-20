@@ -12,7 +12,7 @@ Artifacts are the output produced by the training process.
 
 ## Saving artifacts
 
-Anytime your script saves artifacts, Grid captures those for you. It does not matter which folder you save artifacts to... Grid will automatically detect them.
+Anytime your script saves new artifacts, Grid captures those for you. It does not matter which folder you save artifacts to... Grid will automatically detect them.  Grid only saves new artifacts, and any file that existed before training starts, even if modified during training, will not be saved.
 
 Grid uploads your artifacts to long-term storage while your experiment is running *and* at the end of your experiment. This is to ensure that even if your experiment crashes, your artifacts will be saved.
 
