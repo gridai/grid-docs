@@ -12,22 +12,22 @@ Create an SSH key from the computer you'd like to connect from (skip this step i
 
 ```yaml
 # make the ssh key (if you don't have one)
-ssh-keygen -t ed25519 -C "your_email@example.com"
-or
-ssh-keygen -b 2048 -t rsa -q -N ""
+ssh-keygen -b 2048 -t rsa -f ~/.ssh/grid_ssh_creds -q -N ""
 ```
 
 ## Step 1: Add the SSH key
 
-Here we assume to have SSH keys named _ed25519.pub_, which are the default used by the command above.
-
-We're going to add the key and name it _lit_key_
+Here we use the ssh-agent to manage the keys and will add them to Grid.
 
 ```yaml
+# add the key to the ssh-agent (to avoid having to explicitly state key on each connection)
+# to start the agent, run the following
+eval $(ssh-agent)
+# then add the key
+ssh-add  ~/.ssh/grid_ssh_creds
+
 # add the keys to grid
-grid ssh-keys add lit_key ~/.ssh/id_ed25519.pub
-or
-grid ssh-keys add key_1 ~/.ssh/id_rsa.pub
+grid ssh-keys add key_1 ~/.ssh/grid_ssh_creds.pub
 ```
 
 If you go to [Grid settings](https://platform.grid.ai/#/settings?tabId=ssh), you'll see SSH keys you've added to Grid
