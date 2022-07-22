@@ -290,11 +290,14 @@ ssh into the interactive
 grid session ssh resnet-debugging
 ```
 
-Now link up VSCode with the Session
+Install remote ssh extension
+![](/images/sessions/remote-ssh.png)
 
-```yaml
-grid session ssh vscode
-```
+Now link up VSCode with the Session
+![](/images/sessions/vscode-remote.gif)
+
+Now VSCode is connected to the remote Session..
+![](/images/sessions/vscode-open-session.gif)
 
 **The model**
 
