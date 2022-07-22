@@ -12,10 +12,16 @@ Create an ssh key from the computer you'd like to connect from (skip this step i
 
 ```yaml
 # make the ssh key (if you don't have one)
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -b 2048 -t rsa -f ~/.ssh/grid_ssh_creds -q -N ""
+
+# add the key to the ssh-agent (to avoid having to explicitly state key on each connection)
+# to start the agent, run the following
+eval $(ssh-agent)
+# then add the key
+ssh-add  ~/.ssh/grid_ssh_creds
 
 # add the keys to grid
-grid ssh-keys add lit_key ~/.ssh/id_ed25519.pub
+grid ssh-keys add key_1 ~/.ssh/grid_ssh_creds.pub
 ```
 
 ## Step 1: Launch a session

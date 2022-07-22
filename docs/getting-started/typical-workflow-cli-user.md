@@ -291,10 +291,7 @@ grid session ssh resnet-debugging
 ```
 
 Now link up VSCode with the Session
-
-```yaml
-grid session ssh vscode
-```
+![](/images/sessions/vscode-remote.gif)
 
 **The model**
 
